@@ -45,21 +45,30 @@ Rules:
 
 The pause length enters every model (M1-M4), so the model learns "a complete sentence plus 150 ms of silence is probably done".
 
+**External baselines** (not trained here, evaluated the same way):
+- **LiveKit turn-detector** (text-based end-of-turn model).
+- **Pipecat Smart Turn** (audio-based end-of-turn model).
+- Before using either, check and record its licence and the current version (pin the exact version/commit).
+- Evaluate both on the gold set and in the simulated-conversation eval, and add them to the trade-off plot.
+
 ## 4. Evaluation (`evals/`)
 
 **Offline, on the gold set:**
 - PR-AUC, F1 at the chosen threshold, precision and recall for END.
 - **Calibration:** expected calibration error and a reliability diagram. Probabilities drive a threshold, so they must mean something.
-- **Slices:** language (English / Hindi / Hinglish), hard negatives, utterances with digits, short utterances.
+- **Slices:** language (English / Hindi / Hinglish), hard negatives, utterances with digits, short utterances, code-mixed Hindi.
 - **LLM-as-judge check:** the teacher LLM's labels vs my labels on the gold set (agreement rate and Cohen's kappa). This shows whether synthetic labels can be trusted.
 - **Bootstrap 95% CIs** on every headline number. Model comparisons use a paired bootstrap on the same items.
+- **Gold set sizing:** report the 95% CI width for n=300 overall and for each slice next to every gold metric.
+  For a proportion near 0.5, n=300 gives about ±5.7 points, a 100-item slice ±9.8 and a 50-item slice ±13.9.
+  The eval-set size is set by the precision needed to separate the models, not by how much data is available.
 
 **Simulated conversation eval (the headline):**
 - Replay utterances with realistic pause timings (taken from my recordings plus a documented pause distribution).
 - For each policy (M0 thresholds; M1-M4 at a range of probability thresholds), measure:
   - **mean and p90 response delay** after the true end of turn;
   - **false-interruption rate:** the share of mid-turn pauses where the agent would have replied.
-- Plot the **trade-off curve** for every model against the M0 points.
+- Plot the **trade-off curve** for every model, and for the external baselines, against the M0 points.
 - **Headline:** the delay saving at an equal false-interruption rate to the 700 ms baseline.
 
 **Online (shadow mode):** see section 6.
@@ -91,9 +100,39 @@ The pause length enters every model (M1-M4), so the model learns "a complete sen
 |---|---|
 | 0 | Repo, CLAUDE.md rules, CI, empty package layout, this spec saved as `SPEC.md` |
 | 1 | Data generation + truncation + hard negatives + dedup + ID-based split + leakage tests + manifest. **Cost estimate before calling the LLM.** |
-| 2 | A labelling tool (simple CLI) so I can hand-label the gold set; agreement report vs the LLM teacher |
+| 2 | A labelling tool (simple CLI) so I can hand-label the gold set (END / NOT_END / AMBIGUOUS); agreement report vs the LLM teacher; intra-annotator re-label. See details below |
 | 3 | M0 + M1 + the evaluation library (metrics, calibration, slices, bootstrap) + the simulated-conversation eval and trade-off plot |
-| 4 | M2, the from-scratch transformer; **I write the training loop myself, with review** |
-| 5 | M3 fine-tune (+ LoRA comparison), then M4 distillation |
+| 4 | M2, the from-scratch transformer; **I write the training loop myself; Claude only reviews and points out bugs** |
+| 5 | M3 fine-tune (+ LoRA comparison), then M4 distillation; active-learning loop with honeypots. See details below |
 | 6 | ONNX + int8 + latency benchmark; Lambda deployment |
-| 7 | Shadow integration into Auvia; harness measurement; REPORT.md + MODEL_CARD.md |
+| 7 | Shadow integration into Auvia; harness measurement; implicit labels from shadow logs; REPORT.md + MODEL_CARD.md + a one-page write-up. See details below |
+
+### Stage details
+
+**Stage 2 (gold set)**
+- `data/GUIDELINE.md`, the labelling guideline, is written by me.
+- The labelling CLI supports a third label, **AMBIGUOUS**, alongside END and NOT_END.
+- After a week, 50 items are re-labelled blind, and I report intra-annotator Cohen's kappa.
+
+**Stage 4 (M2)**
+- I write the training loop myself. Claude only reviews it and points out bugs; it does not write the loop.
+
+**Stage 5 (active learning)**
+- Items where the model is uncertain, and items where the model and the teacher disagree, go to a review
+  queue in the labelling CLI.
+- Report the gain per 100 human labels from this queue vs 100 randomly chosen items.
+- Hidden honeypot items (known answers) are mixed into the queue to check labelling quality.
+
+**Stage 7 (implicit labels from shadow logs)**
+- **False interruption:** the user speaks within 500 ms of when the model would have replied.
+- **Confirmed END:** no user speech within N s of the model's decision point.
+- Document the selection bias: the logs are shaped by the current silence-threshold policy, so they only show
+  pauses that the live policy let happen.
+- An optional 1% randomised-threshold exploration flag, to reduce that bias. It is **off by default**.
+
+## 9. Release plan
+
+- Publish the **gold set as a public Hindi / Hinglish / English turn-detection benchmark on Hugging Face**,
+  with a datasheet and a licence.
+- Publish the **model** with `MODEL_CARD.md`.
+- Stage 7 adds a **one-page write-up centred on the trade-off plot**.
