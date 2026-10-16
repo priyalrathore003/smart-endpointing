@@ -55,7 +55,7 @@ class Truncator:
     def _row(self, utt: Utterance, tokens: list[str], k: int, hard: bool) -> Example:
         n = len(tokens)
         return Example(
-            utterance_id=utt.utterance_id, source=utt.source, text=" ".join(tokens[:k]),
+            utterance_id=utt.utterance_id, source=utt.source, text=" ".join(tokens[:k]), context=utt.context,
             label=Label.END if k == n else Label.NOT_END, k=k, n=n,
             hard_negative=hard,
             heuristic_complete=heuristic_complete(tokens[:k], utt.source.language),

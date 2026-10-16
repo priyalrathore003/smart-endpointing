@@ -2,6 +2,7 @@
 
 from dataclasses import dataclass
 from enum import StrEnum
+from typing import Optional
 
 
 class Language(StrEnum):
@@ -54,10 +55,21 @@ class Source:
             raise ValueError("batch_id and intent must be non-empty")
 
 
+def _is_clean_text(s: str) -> bool:
+    return bool(s) and s == " ".join(s.split())
+
+
+def dedup_key(text: str, context: Optional[str]) -> str:
+    """Identity of a turn: the same reply to a different question is a different turn.
+    Normalised text has no punctuation, so "|" cannot occur in either part."""
+    return text if context is None else f"{context} | {text}"
+
+
 @dataclass(frozen=True)
 class Utterance:
     """A complete, normalised customer turn.
 
+    context is the agent's question the turn answers (short-reply style only), else None.
     digit_spans / spelled_spans are [start, end) token ranges of digit runs; they
     are filled by DigitSpeller and used to tag prefixes cut inside a number.
     """
@@ -65,12 +77,19 @@ class Utterance:
     utterance_id: str
     source: Source
     text: str
+    context: Optional[str] = None
     digit_spans: tuple[tuple[int, int], ...] = ()
     spelled_spans: tuple[tuple[int, int], ...] = ()
 
     def __post_init__(self) -> None:
-        if not self.text or self.text != " ".join(self.text.split()):
+        if not _is_clean_text(self.text):
             raise ValueError("Utterance.text must be non-empty and whitespace-normalised")
+        if self.context is not None and not _is_clean_text(self.context):
+            raise ValueError("Utterance.context must be None or non-empty and whitespace-normalised")
+
+    @property
+    def key(self) -> str:
+        return dedup_key(self.text, self.context)
 
 
 @dataclass(frozen=True)
@@ -91,6 +110,11 @@ class Example:
     short: bool
     code_mixed: bool
     end_on_hard_negative: bool
+    context: Optional[str] = None
+
+    @property
+    def key(self) -> str:
+        return dedup_key(self.text, self.context)
 
     def __post_init__(self) -> None:
         if not 1 <= self.k <= self.n:

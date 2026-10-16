@@ -49,3 +49,17 @@ def test_jaccard_bounds():
 def test_invalid_threshold():
     with pytest.raises(ValueError):
         Deduplicator(threshold=0)
+
+
+def test_same_reply_to_different_questions_is_kept():
+    a = make_utt("haan ji", language=Language.HINGLISH, context="kya aap kal payment karenge")
+    b = make_utt("haan ji", language=Language.HINGLISH, context="kya yeh aapka registered number hai")
+    kept, rep = Deduplicator().dedupe([a, b])
+    assert kept == [a, b] and rep.exact_removed == 0
+
+
+def test_same_reply_to_same_question_is_removed():
+    a = make_utt("haan ji", language=Language.HINGLISH, context="kya aap kal payment karenge", batch_id="b1")
+    b = make_utt("Haan ji!", language=Language.HINGLISH, context="Kya aap kal payment karenge?", batch_id="b2")
+    kept, rep = Deduplicator().dedupe([a, b])
+    assert kept == [a] and rep.exact_removed == 1

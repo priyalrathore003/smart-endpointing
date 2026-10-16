@@ -1,6 +1,8 @@
 """Remove exact and near-duplicate utterances before splitting.
 
-1. Exact: identical normalised text anywhere in the set (keeps the first seen).
+Turns are compared by `key`: the text, plus the agent's question when there is one,
+so "haan ji" answering two different questions is two different turns.
+1. Exact: identical key anywhere in the set (keeps the first seen).
 2. Near: word-3-gram Jaccard >= threshold, compared only within one
    (domain, intent, language) group, where paraphrases come from.
    Cost O(sum of group_size^2): about 96 groups x 80^2 = 0.6M comparisons.
@@ -45,15 +47,15 @@ class Deduplicator:
         seen: set[str] = set()
         exact_kept = []
         for u in utts:
-            if u.text not in seen:
-                seen.add(u.text)
+            if u.key not in seen:
+                seen.add(u.key)
                 exact_kept.append(u)
 
         kept_by_group: dict[tuple, list[tuple[Utterance, frozenset]]] = defaultdict(list)
         kept, near_examples, near_removed = [], [], 0
         for u in exact_kept:
             group = kept_by_group[(u.source.domain, u.source.intent, u.source.language)]
-            sh = shingles(u.text)
+            sh = shingles(u.key)
             match = next((k for k, ksh in group if jaccard(sh, ksh) >= self.threshold), None)
             if match is None:
                 group.append((u, sh))
@@ -61,7 +63,7 @@ class Deduplicator:
             else:
                 near_removed += 1
                 if len(near_examples) < self.max_examples:
-                    near_examples.append((match.text, u.text))
+                    near_examples.append((match.key, u.key))
 
         report = DedupReport(input=len(utts), exact_removed=len(utts) - len(exact_kept),
                              near_removed=near_removed, kept=len(kept),

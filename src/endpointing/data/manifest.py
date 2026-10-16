@@ -21,6 +21,7 @@ def example_record(split: Split, ex: Example) -> dict:
     return {"split": split.value, "utterance_id": ex.utterance_id, "batch_id": ex.source.batch_id,
             "language": ex.source.language.value, "domain": ex.source.domain.value,
             "intent": ex.source.intent, "style": ex.source.style.value, "text": ex.text,
+            "context": ex.context,
             "label": ex.label.value, "k": ex.k, "n": ex.n, **{s: getattr(ex, s) for s in SLICES}}
 
 

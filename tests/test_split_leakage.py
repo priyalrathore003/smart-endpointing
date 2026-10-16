@@ -97,3 +97,23 @@ def test_label_conflicts_counted_per_language():
 
 def test_label_conflicts_empty():
     assert label_conflicts([])["overall"] == {"distinct_texts": 0, "conflicting_texts": 0, "rate": 0.0}
+
+
+def test_same_short_reply_in_two_splits_is_fine_when_questions_differ():
+    q1 = make_utt("haan ji", batch_id="b1", context="kya aap kal payment karenge")
+    q2 = make_utt("haan ji", batch_id="b2", context="kya main aapse baat kar raha hoon")
+    assert check_leakage(rows([q1, q2], {"b1": Split.TRAIN, "b2": Split.TEST})).ok
+
+
+def test_same_question_and_reply_in_two_splits_is_leakage():
+    q1 = make_utt("haan ji", batch_id="b1", context="kya aap kal payment karenge")
+    q2 = replace(q1, utterance_id="other", source=replace(q1.source, batch_id="b2"))
+    report = check_leakage(rows([q1, q2], {"b1": Split.TRAIN, "b2": Split.TEST}))
+    assert report.full_texts_in_several_splits == [q1.key]
+
+
+def test_context_is_carried_to_every_row_and_validated():
+    u = make_utt("kal tak kar dunga", language=Language.HINGLISH, context="payment kab tak karenge")
+    assert {ex.context for ex in Truncator().examples(u)} == {"payment kab tak karenge"}
+    with pytest.raises(ValueError):
+        replace(u, context="")
