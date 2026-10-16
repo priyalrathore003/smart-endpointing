@@ -23,6 +23,7 @@ class Style(StrEnum):
     FILLERS = "fillers"
     NUMBERS = "numbers"
     NAMES = "names"
+    SHORT_REPLIES = "short_replies"   # (agent question, customer reply) pairs; the question is `context`
 
 
 class Label(StrEnum):

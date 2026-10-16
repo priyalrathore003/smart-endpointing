@@ -7,14 +7,14 @@ reused by the full run and rebuilding the dataset is free.
 import hashlib
 import json
 from concurrent.futures import ThreadPoolExecutor
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
 from decimal import Decimal
 from pathlib import Path
 from typing import Sequence
 
 from .budget import SpendLedger
 from .catalogue import BatchSpec
-from .generator import UtteranceGenerator, parse_utterances
+from .generator import UtteranceGenerator, parse_response
 from .prompts import prompt_version, render
 
 WORST_CASE_INPUT_TOKENS = 1500   # rendered prompts are ~400 tokens; this is a safe ceiling
@@ -55,38 +55,40 @@ class BatchRunner:
         return summary
 
     def _run_one(self, spec: BatchSpec) -> tuple[str, str]:
-        system, user = render(spec)
+        prompt = render(spec)
         worst = self.ledger.pricing.cost(WORST_CASE_INPUT_TOKENS, self.generator.max_output_tokens)
         for attempt in range(self.max_attempts):
             if not self.ledger.try_reserve(worst):
                 return spec.batch_id, "skipped_budget"
             seed = call_seed(spec.batch_id, attempt)
             try:
-                completion = self.generator.complete(system, user, seed)
+                completion = self.generator.complete(prompt.system, prompt.user, seed, prompt.response_format)
             except Exception:
                 self.ledger.release(worst)
                 raise
             try:
-                utterances, ok = parse_utterances(completion.text), True
+                items, ok = parse_response(completion.text, spec.style), True
             except ValueError:
-                utterances, ok = [], False
+                items, ok = [], False
             self.ledger.settle(worst, spec.batch_id, completion.model, completion.input_tokens,
                                completion.output_tokens, ok)
             if ok:
-                self._write_raw(spec, system, user, seed, completion, utterances)
+                self._write_raw(spec, prompt, seed, completion, items)
                 return spec.batch_id, "called"
         return spec.batch_id, "failed"
 
-    def _write_raw(self, spec, system, user, seed, completion, utterances) -> None:
+    def _write_raw(self, spec, prompt, seed, completion, items) -> None:
         record = {
             "batch_id": spec.batch_id, "language": spec.language.value, "domain": spec.domain.value,
             "intent": spec.intent, "style": spec.style.value, "n_requested": spec.n,
+            "bucket_counts_requested": spec.bucket_counts(),
             "prompt_version": prompt_version(), "model": completion.model,
-            "request": {"system": system, "user": user, "seed": seed,
+            "request": {"system": prompt.system, "user": prompt.user, "seed": seed,
+                        "response_format": prompt.response_format["json_schema"]["name"],
                         "temperature": self.generator.temperature,
                         "max_completion_tokens": self.generator.max_output_tokens},
             "usage": {"input_tokens": completion.input_tokens, "output_tokens": completion.output_tokens},
-            "response_text": completion.text, "utterances": utterances,
+            "response_text": completion.text, "items": [asdict(i) for i in items],
         }
         path = self.raw_path(spec)
         path.parent.mkdir(parents=True, exist_ok=True)

@@ -1,7 +1,9 @@
 """What to generate: domains x intents x styles x languages, one LLM call (batch) per cell.
 
 Language mix EN 30 / HI 30 / Hinglish 40 comes from utterances per call (18/18/24)
-over the same 128 cells per language: 2,304 + 2,304 + 3,072 = 7,680.
+over the same 160 cells per language: 2,880 + 2,880 + 3,840 = 9,600.
+Every prompt asks for exact counts per length bucket: the pilot showed that "about a
+quarter short" produced no turn under 5 words.
 """
 
 from dataclasses import dataclass
@@ -53,8 +55,9 @@ INTENTS: dict[Domain, dict[str, str]] = {
 
 LANGUAGE_INSTRUCTIONS: dict[Language, str] = {
     Language.EN: "Indian English, Latin script.",
-    Language.HI: ("Hindi in Devanagari script only. Write English loanwords in Devanagari "
-                  "as people say them (अकाउंट, ओटीपी)."),
+    Language.HI: ("Hindi in Devanagari script. Write most English loanwords in Devanagari as people "
+                  "say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun "
+                  "in Latin script, as in real chats (parcel, account, OTP, payment)."),
     Language.HINGLISH: ("Hindi-English code-mixed, entirely in Latin script "
                         "(e.g. 'mera account se paise kat gaye but transfer nahi hua')."),
 }
@@ -75,7 +78,7 @@ SELF_CORRECTION_EXAMPLES: dict[Language, str] = {
 
 SCRIPT_NAMES: dict[Language, str] = {
     Language.EN: "Latin script",
-    Language.HI: "Devanagari script",
+    Language.HI: "Devanagari script, apart from that occasional English noun",
     Language.HINGLISH: "Latin script",
 }
 
@@ -86,7 +89,30 @@ STYLE_INSTRUCTIONS: dict[Style, str] = {
     Style.NUMBERS: ("with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, "
                     "with long numbers spaced in groups the way people say them"),
     Style.NAMES: "with names, addresses or places; some phrased as questions",
+    Style.SHORT_REPLIES: "short replies to a question the agent has just asked",
 }
+
+SHORT_EXAMPLES: dict[Language, str] = {
+    Language.EN: "'yes please', 'tomorrow', 'card ending 4321'",
+    Language.HI: "'हाँ जी', 'कल तक', 'ठीक है'",
+    Language.HINGLISH: "'haan ji', 'kal tak', 'theek hai'",
+}
+
+# Replies that are complete as they stand but could also start a longer answer.
+AMBIGUOUS_REPLY_EXAMPLES: dict[Language, str] = {
+    Language.EN: "'yes', 'okay', 'tomorrow', 'by friday'",
+    Language.HI: "'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं'",
+    Language.HINGLISH: "'haan ji', 'theek hai', 'kal tak', 'abhi nahi'",
+}
+
+LENGTH_BUCKETS: tuple[tuple[str, int, int], ...] = (("short", 1, 4), ("medium", 5, 12), ("long", 13, 30))
+
+
+def length_bucket(n_words: int) -> str:
+    for name, lo, hi in LENGTH_BUCKETS:
+        if lo <= n_words <= hi:
+            return name
+    return "long" if n_words > 30 else "empty"
 
 UTTERANCES_PER_CALL: dict[Language, int] = {Language.EN: 18, Language.HI: 18, Language.HINGLISH: 24}
 
@@ -96,6 +122,9 @@ PILOT_BATCH_IDS: tuple[str, ...] = (
     "hi.delivery.where_is_order.numbers",
     "hinglish.telecom.recharge_not_credited.fillers",
     "hinglish.banking.login_otp_problem.numbers",
+    "en.telecom.data_balance.short_replies",
+    "hi.collections.promise_to_pay.short_replies",
+    "hinglish.delivery.reschedule.short_replies",
 )
 
 
@@ -114,6 +143,15 @@ class BatchSpec:
     @property
     def source(self) -> Source:
         return Source(self.batch_id, self.language, self.domain, self.intent, self.style)
+
+    def bucket_counts(self) -> dict[str, int]:
+        """Exact number of turns to request per length bucket. Sums to n.
+        Turns: 25 / 50 / 25. Short replies: 75% of 1-4 words, 25% of 5-12, none long."""
+        if self.style is Style.SHORT_REPLIES:
+            medium = round(self.n / 4)
+            return {"short": self.n - medium, "medium": medium, "long": 0}
+        short = long = round(self.n / 4)
+        return {"short": short, "medium": self.n - short - long, "long": long}
 
 
 def plan_batches() -> list[BatchSpec]:

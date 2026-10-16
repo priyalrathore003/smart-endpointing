@@ -100,23 +100,31 @@ def cmd_build(args) -> int:
                                         "output": str(GPT_41_MINI.output_per_million)}}
     m = build(raw_dir, args.data_dir, args.name, BuildConfig(), meta)
     print(json.dumps({k: m[k] for k in ("data_hash", "raw", "drops", "dedup", "utterances_by_language",
-                                        "batches_by_split", "label_conflicts", "counts")},
+                                        "utterances_by_style", "length_buckets", "batches_by_split",
+                                        "label_conflicts", "counts")},
                      indent=2, ensure_ascii=False))
     return 0
 
 
 def cmd_sample(args) -> int:
+    """Random rows per group: each language (turn styles), then short replies with their question."""
     rows = []
     for p in sorted((args.data_dir / "processed" / args.name).glob("*.jsonl")):
         rows += [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines()]
     rng = random.Random(args.seed)
-    for lang in Language:
-        pool = [r for r in rows if r["language"] == lang.value]
-        print(f"\n=== {lang.value}: {min(args.per_language, len(pool))} of {len(pool)} rows ===")
-        print(f"{'label':8} {'h_comp':6} {'spelled':7} {'c_mixed':7}  text")
-        for r in sorted(rng.sample(pool, min(args.per_language, len(pool))), key=lambda r: r["label"]):
+    groups = [(lang.value, [r for r in rows if r["language"] == lang.value and r["style"] != "short_replies"])
+              for lang in Language]
+    groups.append(("short_replies", [r for r in rows if r["style"] == "short_replies"]))
+    for name, pool in groups:
+        if args.group and name not in args.group:
+            continue
+        picked = sorted(rng.sample(pool, min(args.per_group, len(pool))), key=lambda r: (r["language"], r["label"]))
+        print(f"\n=== {name}: {len(picked)} of {len(pool)} rows ===")
+        print(f"{'label':8} {'h_comp':6} {'spelled':7} {'c_mixed':7} {'end_hn':6}  text")
+        for r in picked:
+            ctx = f"   [Q: {r['context']}]" if r["context"] else ""
             print(f"{r['label']:8} {str(r['heuristic_complete']):6} {str(r['digits_spelled']):7} "
-                  f"{str(r['code_mixed']):7}  {r['text']}")
+                  f"{str(r['code_mixed']):7} {str(r['end_on_hard_negative']):6}  {r['text']}{ctx}")
     return 0
 
 
@@ -138,7 +146,8 @@ def main(argv=None) -> int:
     b.set_defaults(fn=cmd_build)
     s = sub.add_parser("sample")
     s.add_argument("--name", default="synth_v1")
-    s.add_argument("--per-language", type=int, default=20)
+    s.add_argument("--per-group", type=int, default=20)
+    s.add_argument("--group", action="append", help="en, hi, hinglish or short_replies; repeatable")
     s.add_argument("--seed", type=int, default=0)
     s.set_defaults(fn=cmd_sample)
     args = p.parse_args(argv)

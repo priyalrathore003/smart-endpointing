@@ -2,9 +2,9 @@
 
 import json
 from dataclasses import dataclass
-from typing import Protocol
+from typing import Optional, Protocol
 
-from .prompts import RESPONSE_FORMAT
+from .types import Style
 
 MODEL = "gpt-4.1-mini-2025-04-14"
 
@@ -17,12 +17,19 @@ class Completion:
     model: str
 
 
+@dataclass(frozen=True)
+class GeneratedItem:
+    text: str
+    context: Optional[str]            # the agent's question, for short replies
+    requested_bucket: Optional[str]   # length bucket asked for; None for short replies
+
+
 class UtteranceGenerator(Protocol):
     model: str
     temperature: float
     max_output_tokens: int
 
-    def complete(self, system: str, user: str, seed: int) -> Completion: ...
+    def complete(self, system: str, user: str, seed: int, response_format: dict) -> Completion: ...
 
 
 class OpenAIGenerator:
@@ -36,23 +43,45 @@ class OpenAIGenerator:
         self.client, self.model = client, model
         self.temperature, self.max_output_tokens = temperature, max_output_tokens
 
-    def complete(self, system: str, user: str, seed: int) -> Completion:
+    def complete(self, system: str, user: str, seed: int, response_format: dict) -> Completion:
         resp = self.client.chat.completions.create(
             model=self.model, temperature=self.temperature, seed=seed,
-            max_completion_tokens=self.max_output_tokens, response_format=RESPONSE_FORMAT,
+            max_completion_tokens=self.max_output_tokens, response_format=response_format,
             messages=[{"role": "system", "content": system}, {"role": "user", "content": user}])
         return Completion(text=resp.choices[0].message.content or "",
                           input_tokens=resp.usage.prompt_tokens,
                           output_tokens=resp.usage.completion_tokens, model=resp.model)
 
 
-def parse_utterances(text: str) -> list[str]:
-    """Raw JSON response -> list of non-empty strings. Raises ValueError on any other shape."""
+def _strings(value, what: str) -> list[str]:
+    if not isinstance(value, list) or not all(isinstance(x, str) for x in value):
+        raise ValueError(f"{what} must be a list of strings")
+    return value
+
+
+def parse_response(text: str, style: Style) -> list[GeneratedItem]:
+    """Raw JSON response -> items. Raises ValueError if the shape is wrong. Empty strings are skipped."""
     try:
         data = json.loads(text)
     except json.JSONDecodeError as e:
         raise ValueError(f"response is not JSON: {e}") from e
-    items = data.get("utterances") if isinstance(data, dict) else None
-    if not isinstance(items, list) or not all(isinstance(x, str) for x in items):
-        raise ValueError("response must be {\"utterances\": [string, ...]}")
-    return [x.strip() for x in items if x.strip()]
+    if not isinstance(data, dict):
+        raise ValueError("response must be a JSON object")
+    if style is Style.SHORT_REPLIES:
+        pairs = data.get("pairs")
+        if not isinstance(pairs, list) or not all(isinstance(p, dict) for p in pairs):
+            raise ValueError("response must be {\"pairs\": [{\"agent_question\", \"reply\"}, ...]}")
+        items = []
+        for p in pairs:
+            q, r = p.get("agent_question"), p.get("reply")
+            if not isinstance(q, str) or not isinstance(r, str):
+                raise ValueError("agent_question and reply must be strings")
+            if q.strip() and r.strip():
+                items.append(GeneratedItem(r.strip(), q.strip(), None))
+        return items
+    items = []
+    for bucket in ("short", "medium", "long"):
+        for s in _strings(data.get(bucket), bucket):
+            if s.strip():
+                items.append(GeneratedItem(s.strip(), None, bucket))
+    return items

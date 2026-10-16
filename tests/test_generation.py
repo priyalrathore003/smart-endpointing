@@ -1,28 +1,36 @@
 import json
+import re
 import threading
 from collections import Counter
 from decimal import Decimal
 
 import pytest
 
-import endpointing.data.build as build_module
 import endpointing.text
+import endpointing.data.build as build_module
 from endpointing.data.budget import GPT_41_MINI, Pricing, SpendLedger
 from endpointing.data.build import BuildConfig, build, script_ok
-from endpointing.data.catalogue import PILOT_BATCH_IDS, pilot_batches, plan_batches
+from endpointing.data.catalogue import PILOT_BATCH_IDS, length_bucket, pilot_batches, plan_batches
 from endpointing.data.cli import estimate, main
-from endpointing.data.generator import Completion, parse_utterances
+from endpointing.data.generator import Completion, GeneratedItem, parse_response
 from endpointing.data.prompts import prompt_version, render
 from endpointing.data.runner import BatchRunner
-from endpointing.data.types import Language
+from endpointing.data.types import Language, Style
 
-FAKE_UTTERANCES = {
+FAKE_TURNS = {
     "en": ["I want to block my card because it was stolen.", "My number is 98765 43210.",
            "Can you check my balance please?", "Yes.", "I did not make this payment of 5,000 rupees."],
-    "hi": ["मेरा कार्ड खो गया है।", "मैं कल तक पैसे जमा कर दूँगा।", "हाँ जी।", "मेरा ऑर्डर कहाँ है?",
+    "hi": ["मेरा कार्ड खो गया है।", "मैं कल तक पैसे जमा कर दूँगा।", "हाँ जी।", "मेरा parcel कहां तक पहुंचा है?",
            "Latin text in a Hindi batch"],
     "hinglish": ["mera recharge credit nahi hua", "haan ji", "otp 4521 nahi aa raha",
                  "maine complaint ki", "kal tak payment kar dunga"],
+}
+FAKE_PAIRS = {
+    "en": [("will you pay by friday", "yes"), ("when can you pay", "by friday"),
+           ("can i confirm your number", "98765 43210")],
+    "hi": [("क्या आप कल भुगतान करेंगे", "हाँ जी"), ("कब तक करेंगे", "कल तक"), ("which date", "कल")],
+    "hinglish": [("kya aap kal payment karenge", "haan ji"), ("kab tak karenge", "kal tak"),
+                 ("otp bataiye", "4521")],
 }
 
 
@@ -33,13 +41,17 @@ class FakeGenerator:
         self.calls, self.bad_left = 0, bad_responses
         self.lock = threading.Lock()
 
-    def complete(self, system, user, seed):
+    def complete(self, system, user, seed, response_format):
         with self.lock:
             self.calls += 1
             bad = self.bad_left > 0
             self.bad_left -= int(bad)
         lang = "hi" if "Devanagari" in user else "hinglish" if "code-mixed" in user else "en"
-        text = "not json" if bad else json.dumps({"utterances": FAKE_UTTERANCES[lang]})
+        if response_format["json_schema"]["name"] == "pairs":
+            body = {"pairs": [{"agent_question": q, "reply": r} for q, r in FAKE_PAIRS[lang]]}
+        else:
+            body = {"short": FAKE_TURNS[lang][:1], "medium": FAKE_TURNS[lang][1:], "long": []}
+        text = "not json" if bad else json.dumps(body, ensure_ascii=False)
         return Completion(text=text, input_tokens=400, output_tokens=600, model=self.model)
 
 
@@ -49,27 +61,56 @@ def ledger(tmp_path, cap="1.20"):
 
 # --- catalogue and prompts ---------------------------------------------------
 
-def test_plan_has_384_unique_batches_and_30_30_40_mix():
+def test_plan_has_480_unique_batches_and_30_30_40_mix():
     specs = plan_batches()
-    assert len(specs) == 384 and len({s.batch_id for s in specs}) == 384
+    assert len(specs) == 480 and len({s.batch_id for s in specs}) == 480
     by_lang = Counter()
     for s in specs:
         by_lang[s.language] += s.n
-    assert by_lang == {Language.EN: 2304, Language.HI: 2304, Language.HINGLISH: 3072}
+    assert by_lang == {Language.EN: 2880, Language.HI: 2880, Language.HINGLISH: 3840}
+    assert Counter(s.style for s in specs)[Style.SHORT_REPLIES] == 96
 
 
-def test_pilot_is_five_planned_batches_covering_all_languages():
+def test_pilot_covers_all_languages_and_both_prompt_shapes():
     pilot = pilot_batches()
-    assert [s.batch_id for s in pilot] == list(PILOT_BATCH_IDS)
+    assert [s.batch_id for s in pilot] == list(PILOT_BATCH_IDS) and len(pilot) == 8
     assert {s.language for s in pilot} == set(Language)
+    assert {s.language for s in pilot if s.style is Style.SHORT_REPLIES} == set(Language)
 
 
-def test_render_fills_every_field():
-    spec = pilot_batches()[2]
-    system, user = render(spec)
-    assert "complete customer turn" in system
-    assert "Devanagari" in user and "where_is_order" in user and "Write 18 different" in user
-    assert "{" not in user.replace('{"utterances"', "")
+@pytest.mark.parametrize("style, n, expected", [
+    (Style.PLAIN, 18, {"short": 4, "medium": 10, "long": 4}),
+    (Style.FILLERS, 24, {"short": 6, "medium": 12, "long": 6}),
+    (Style.SHORT_REPLIES, 18, {"short": 14, "medium": 4, "long": 0}),
+    (Style.SHORT_REPLIES, 24, {"short": 18, "medium": 6, "long": 0}),
+])
+def test_bucket_counts_are_exact_and_sum_to_n(style, n, expected):
+    spec = next(s for s in plan_batches() if s.style is style and s.n == n)
+    assert spec.bucket_counts() == expected and sum(expected.values()) == n
+
+
+@pytest.mark.parametrize("n_words, bucket", [(1, "short"), (4, "short"), (5, "medium"), (12, "medium"),
+                                             (13, "long"), (30, "long"), (45, "long"), (0, "empty")])
+def test_length_bucket(n_words, bucket):
+    assert length_bucket(n_words) == bucket
+
+
+def test_turn_prompt_asks_for_exact_counts_with_examples_in_script():
+    spec = next(s for s in plan_batches() if s.batch_id == "hi.delivery.where_is_order.numbers")
+    p = render(spec)
+    assert "complete customer turn" in p.system and p.response_format["json_schema"]["name"] == "turns"
+    assert "exactly 4 short turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है')" in p.user
+    assert "exactly 10 medium" in p.user and "exactly 4 long" in p.user
+    assert "1 in 4 turns keep one common English noun" in p.user
+
+
+def test_short_reply_prompt_asks_for_pairs_and_ambiguous_replies():
+    spec = next(s for s in plan_batches() if s.batch_id == "hinglish.delivery.reschedule.short_replies")
+    p = render(spec)
+    assert p.response_format["json_schema"]["name"] == "pairs"
+    assert "exactly 18 replies of 1-4 words" in p.user and "exactly 6 replies of 5-12 words" in p.user
+    assert "At least 8 replies" in p.user and "'haan ji', 'theek hai', 'kal tak'" in p.user
+    assert "bare number" in p.user
 
 
 def test_prompt_version_is_stable():
@@ -78,11 +119,26 @@ def test_prompt_version_is_stable():
 
 # --- parsing and money -------------------------------------------------------
 
-def test_parse_utterances():
-    assert parse_utterances('{"utterances": [" a ", "", "b"]}') == ["a", "b"]
-    for bad in ["not json", '{"other": []}', '{"utterances": [1, 2]}', "[]"]:
-        with pytest.raises(ValueError):
-            parse_utterances(bad)
+def test_parse_turns():
+    items = parse_response('{"short": [" haan ji ", ""], "medium": ["a b c d e"], "long": []}', Style.PLAIN)
+    assert items == [GeneratedItem("haan ji", None, "short"), GeneratedItem("a b c d e", None, "medium")]
+
+
+def test_parse_pairs():
+    items = parse_response('{"pairs": [{"agent_question": "kab tak?", "reply": "kal tak"},'
+                           ' {"agent_question": "", "reply": "x"}]}', Style.SHORT_REPLIES)
+    assert items == [GeneratedItem("kal tak", "kab tak?", None)]
+
+
+@pytest.mark.parametrize("bad, style", [
+    ("not json", Style.PLAIN), ("[]", Style.PLAIN), ('{"short": [], "medium": []}', Style.PLAIN),
+    ('{"short": [1], "medium": [], "long": []}', Style.PLAIN),
+    ('{"pairs": "x"}', Style.SHORT_REPLIES), ('{"pairs": [{"reply": 3, "agent_question": "q"}]}', Style.SHORT_REPLIES),
+    ('{"short": [], "medium": [], "long": []}', Style.SHORT_REPLIES),
+])
+def test_parse_rejects_wrong_shapes(bad, style):
+    with pytest.raises(ValueError):
+        parse_response(bad, style)
 
 
 def test_pricing_uses_exact_decimals():
@@ -113,12 +169,16 @@ def test_ledger_refuses_reservation_over_cap(tmp_path):
 def test_runner_writes_raw_and_caches(tmp_path):
     gen, l = FakeGenerator(), ledger(tmp_path)
     s1 = BatchRunner(gen, l, tmp_path / "raw").run(pilot_batches())
-    assert len(s1.called) == 5 and gen.calls == 5
+    assert len(s1.called) == 8 and gen.calls == 8
     raw = json.loads((tmp_path / "raw" / f"{PILOT_BATCH_IDS[0]}.json").read_text())
-    assert raw["utterances"] == FAKE_UTTERANCES["en"] and raw["prompt_version"] == prompt_version()
+    assert [i["text"] for i in raw["items"]] == [t.strip() for t in FAKE_TURNS["en"]]
+    assert raw["prompt_version"] == prompt_version() and raw["bucket_counts_requested"]["short"] == 4
+    pairs = json.loads((tmp_path / "raw" / "hinglish.delivery.reschedule.short_replies.json").read_text())
+    assert pairs["items"][0] == {"text": "haan ji", "context": "kya aap kal payment karenge",
+                                 "requested_bucket": None}
     s2 = BatchRunner(gen, l, tmp_path / "raw").run(pilot_batches())
-    assert len(s2.cached) == 5 and gen.calls == 5
-    assert l.spent == 5 * GPT_41_MINI.cost(400, 600)
+    assert len(s2.cached) == 8 and gen.calls == 8
+    assert l.spent == 8 * GPT_41_MINI.cost(400, 600)
 
 
 def test_runner_stops_at_budget_cap(tmp_path):
@@ -126,7 +186,7 @@ def test_runner_stops_at_budget_cap(tmp_path):
     # call 1 (0 + 0.0038 ok), call 2 (0.00112 + 0.0038 ok), call 3 (0.00224 + 0.0038 > cap) -> stop.
     gen = FakeGenerator()
     s = BatchRunner(gen, ledger(tmp_path, cap="0.005"), tmp_path / "raw", workers=1).run(pilot_batches())
-    assert len(s.called) == 2 and len(s.skipped_budget) == 3 and gen.calls == 2
+    assert len(s.called) == 2 and len(s.skipped_budget) == 6 and gen.calls == 2
 
 
 def test_concurrent_workers_never_exceed_cap(tmp_path):
@@ -153,7 +213,7 @@ def test_estimate_uses_observed_usage(tmp_path):
     assert estimate(pilot_batches(), tmp_path / "raw")["basis"]["en"] == "prior"
     BatchRunner(FakeGenerator(), ledger(tmp_path), tmp_path / "raw").run(pilot_batches())
     e = estimate(plan_batches(), tmp_path / "raw")
-    assert e["cached"] == 5 and e["calls"] == 379 and e["basis"]["hi"] == "observed over 2 calls"
+    assert e["cached"] == 8 and e["calls"] == 472 and e["basis"]["hi"] == "observed over 3 calls"
 
 
 # --- build -------------------------------------------------------------------
@@ -166,7 +226,7 @@ def run_pilot_build(tmp_path, name="pilot"):
 def test_build_end_to_end(tmp_path):
     m = run_pilot_build(tmp_path)
     assert m["leakage_checks"] == "passed"
-    assert m["drops"]["script_mismatch"] == {"hi": 2}                   # Latin line, in both hi batches
+    assert m["drops"]["script_mismatch"] == {"hi": 3}   # Latin line in 2 hi turn batches + Latin question
     assert "ends_with_hard_negative" not in m["drops"]                 # kept as END, tagged instead
     assert m["counts"]["slices"]["train"]["end_on_hard_negative"] >= 1  # "maine complaint ki"
     assert m["dedup"]["exact_removed"] > 0                             # same fake text in both batches
@@ -174,6 +234,13 @@ def test_build_end_to_end(tmp_path):
     rows = [json.loads(l) for l in (tmp_path / "processed" / "pilot" / "train.jsonl").read_text().splitlines()]
     assert all(r["text"] == endpointing.text.normalize(r["text"]) for r in rows)
     assert {r["label"] for r in rows} == {"END", "NOT_END"}
+    replies = [r for r in rows if r["style"] == "short_replies"]
+    assert replies and all(r["context"] for r in replies)
+    assert all(r["context"] is None for r in rows if r["style"] != "short_replies")
+    assert m["counts"]["slices"]["train"]["code_mixed"] >= 1               # "मेरा parcel ..."
+    lb = m["length_buckets"]
+    assert lb["short_replies"]["hinglish"]["short"] >= 2 and lb["requested_bucket_agreement"]["asked"] > 0
+    assert m["utterances_by_style"]["short_replies"] > 0
 
 
 def test_build_is_deterministic(tmp_path):
@@ -212,25 +279,25 @@ def test_generate_without_yes_makes_no_call(tmp_path, capsys):
 def test_plan_command_runs_offline(tmp_path, capsys):
     assert main(["--data-dir", str(tmp_path), "plan"]) == 0
     out = capsys.readouterr().out
-    assert "384 calls" in out and "of cap $1.20" in out
+    assert "480 calls" in out and "of cap $1.20" in out
 
 
 @pytest.mark.parametrize("batch_id, script, must_have, must_not_have", [
-    ("hi.collections.promise_to_pay.fillers", "Devanagari script", "मंगलवार, नहीं, बुधवार", "Tuesday"),
+    ("hi.collections.promise_to_pay.fillers", "Devanagari script, apart from that occasional English noun",
+     "मंगलवार, नहीं, बुधवार", "Tuesday"),
     ("hinglish.telecom.recharge_not_credited.fillers", "Latin script", "Tuesday, nahi, Wednesday", "मतलब"),
     ("en.banking.lost_card.fillers", "Latin script", "I mean", "matlab"),
 ])
 def test_filler_examples_and_script_rule_are_per_language(batch_id, script, must_have, must_not_have):
     spec = next(s for s in plan_batches() if s.batch_id == batch_id)
-    _, user = render(spec)
+    user = render(spec).user
     assert user.rstrip().endswith(f"Every turn must be in {script}.")
     assert must_have in user and must_not_have not in user
 
 
 def test_every_planned_prompt_renders_without_placeholders():
     for spec in plan_batches():
-        _, user = render(spec)
-        assert "{" not in user.replace('{"utterances"', "")
+        assert not re.search(r"\{[a-z_]+\}", render(spec).user), spec.batch_id
 
 
 def test_build_refuses_mixed_prompt_versions(tmp_path):
