@@ -1,0 +1,107 @@
+"""What to generate: domains x intents x styles x languages, one LLM call (batch) per cell.
+
+Language mix EN 30 / HI 30 / Hinglish 40 comes from utterances per call (18/18/24)
+over the same 128 cells per language: 2,304 + 2,304 + 3,072 = 7,680.
+"""
+
+from dataclasses import dataclass
+
+from .types import Domain, Language, Source, Style
+
+INTENTS: dict[Domain, dict[str, str]] = {
+    Domain.BANKING: {
+        "balance_enquiry": "asks for their account balance or recent transactions",
+        "lost_card": "reports a lost or stolen card and wants it blocked",
+        "failed_upi_refund": "a UPI or online payment failed but money was debited; wants a refund",
+        "loan_emi_query": "asks about a loan EMI amount, due date or a deduction",
+        "kyc_update": "wants to update KYC, address, PAN or Aadhaar details",
+        "cheque_book": "requests a new cheque book or asks about its delivery",
+        "unauthorised_debit": "reports a transaction they did not make",
+        "login_otp_problem": "cannot log in to net or mobile banking or is not receiving the OTP",
+    },
+    Domain.COLLECTIONS: {
+        "promise_to_pay": "replies to a payment reminder with a date or amount they will pay",
+        "dispute_amount": "says the outstanding amount or a charge is wrong",
+        "already_paid": "says they have already paid and gives details",
+        "ask_extension": "asks for more time or to split the payment",
+        "financial_hardship": "explains they cannot pay right now because of job loss, illness or similar",
+        "wrong_person": "says the agent has the wrong person or number",
+        "payment_link": "asks for a payment link or how to pay",
+        "callback_request": "asks the agent to call back at another time",
+    },
+    Domain.DELIVERY: {
+        "where_is_order": "asks where their order or parcel is",
+        "reschedule": "wants the delivery on a different day or time",
+        "change_address": "wants to change the delivery address or landmark",
+        "wrong_or_damaged": "received a wrong or damaged item",
+        "return_refund": "wants to return an item or asks about a refund",
+        "agent_unreachable": "the delivery person is not answering or cannot find the address",
+        "cancel_order": "wants to cancel an order",
+        "cod_payment": "has a problem with cash on delivery or payment at the door",
+    },
+    Domain.TELECOM: {
+        "recharge_not_credited": "recharged but the plan or balance was not credited",
+        "no_network": "has no signal, call drops or slow internet",
+        "data_balance": "asks how much data or validity is left",
+        "bill_dispute": "says a postpaid bill or charge is wrong",
+        "port_or_sim": "wants to port the number, replace or swap a SIM",
+        "plan_change": "wants to change or understand a plan",
+        "roaming": "wants to activate international or national roaming",
+        "escalate_complaint": "is unhappy that an earlier complaint was not solved and wants escalation",
+    },
+}
+
+LANGUAGE_INSTRUCTIONS: dict[Language, str] = {
+    Language.EN: "Indian English, Latin script.",
+    Language.HI: ("Hindi in Devanagari script only. Write English loanwords in Devanagari "
+                  "as people say them (अकाउंट, ओटीपी)."),
+    Language.HINGLISH: ("Hindi-English code-mixed, entirely in Latin script "
+                        "(e.g. 'mera account se paise kat gaye but transfer nahi hua')."),
+}
+
+STYLE_INSTRUCTIONS: dict[Style, str] = {
+    Style.PLAIN: "plain and direct",
+    Style.FILLERS: ("with fillers and hesitations (umm, uh, matlab, actually, woh); at least a third "
+                    "include a self-correction ('Tuesday, no, Wednesday')"),
+    Style.NUMBERS: ("with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, "
+                    "with long numbers spaced in groups the way people say them"),
+    Style.NAMES: "with names, addresses or places; some phrased as questions",
+}
+
+UTTERANCES_PER_CALL: dict[Language, int] = {Language.EN: 18, Language.HI: 18, Language.HINGLISH: 24}
+
+PILOT_BATCH_IDS: tuple[str, ...] = (
+    "en.banking.unauthorised_debit.numbers",
+    "hi.collections.promise_to_pay.fillers",
+    "hi.delivery.where_is_order.numbers",
+    "hinglish.telecom.recharge_not_credited.fillers",
+    "hinglish.banking.login_otp_problem.numbers",
+)
+
+
+@dataclass(frozen=True)
+class BatchSpec:
+    language: Language
+    domain: Domain
+    intent: str
+    style: Style
+    n: int
+
+    @property
+    def batch_id(self) -> str:
+        return f"{self.language}.{self.domain}.{self.intent}.{self.style}"
+
+    @property
+    def source(self) -> Source:
+        return Source(self.batch_id, self.language, self.domain, self.intent, self.style)
+
+
+def plan_batches() -> list[BatchSpec]:
+    specs = [BatchSpec(lang, domain, intent, style, UTTERANCES_PER_CALL[lang])
+             for lang in Language for domain in Domain for intent in INTENTS[domain] for style in Style]
+    return sorted(specs, key=lambda s: s.batch_id)
+
+
+def pilot_batches() -> list[BatchSpec]:
+    by_id = {s.batch_id: s for s in plan_batches()}
+    return [by_id[b] for b in PILOT_BATCH_IDS]
