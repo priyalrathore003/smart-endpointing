@@ -11,7 +11,7 @@ import re
 import unicodedata
 
 _DEVANAGARI_DIGITS = str.maketrans("०१२३४५६७८९", "0123456789")
-_ZERO_WIDTH = dict.fromkeys(map(ord, "​‌‍⁠﻿"))
+_ZERO_WIDTH = dict.fromkeys(map(ord, "\u200b\u200c\u200d\u2060\ufeff"))
 _APOSTROPHES = re.compile("['‘’`]")
 _DIGIT_GROUP_COMMA = re.compile(r"(?<=\d),(?=\d)")
 
