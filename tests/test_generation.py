@@ -206,3 +206,30 @@ def test_plan_command_runs_offline(tmp_path, capsys):
     assert main(["--data-dir", str(tmp_path), "plan"]) == 0
     out = capsys.readouterr().out
     assert "384 calls" in out and "of cap $1.20" in out
+
+
+@pytest.mark.parametrize("batch_id, script, must_have, must_not_have", [
+    ("hi.collections.promise_to_pay.fillers", "Devanagari script", "मंगलवार, नहीं, बुधवार", "Tuesday"),
+    ("hinglish.telecom.recharge_not_credited.fillers", "Latin script", "Tuesday, nahi, Wednesday", "मतलब"),
+    ("en.banking.lost_card.fillers", "Latin script", "I mean", "matlab"),
+])
+def test_filler_examples_and_script_rule_are_per_language(batch_id, script, must_have, must_not_have):
+    spec = next(s for s in plan_batches() if s.batch_id == batch_id)
+    _, user = render(spec)
+    assert user.rstrip().endswith(f"Every turn must be in {script}.")
+    assert must_have in user and must_not_have not in user
+
+
+def test_every_planned_prompt_renders_without_placeholders():
+    for spec in plan_batches():
+        _, user = render(spec)
+        assert "{" not in user.replace('{"utterances"', "")
+
+
+def test_build_refuses_mixed_prompt_versions(tmp_path):
+    BatchRunner(FakeGenerator(), ledger(tmp_path), tmp_path / "raw").run(pilot_batches())
+    path = tmp_path / "raw" / f"{PILOT_BATCH_IDS[0]}.json"
+    raw = json.loads(path.read_text())
+    path.write_text(json.dumps({**raw, "prompt_version": "old"}))
+    with pytest.raises(ValueError, match="mixes prompt versions"):
+        build(tmp_path / "raw", tmp_path, "x", BuildConfig())

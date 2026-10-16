@@ -13,6 +13,7 @@ __pycache__/
 runs/
 mlruns/
 data/raw/
+data/raw_pilot_v0/
 data/processed/
 *.wav
 *.onnx

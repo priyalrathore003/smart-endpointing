@@ -57,6 +57,9 @@ def load_raw(raw_dir: Path) -> list[dict]:
 def build(raw_dir: Path, data_root: Path, name: str, config: BuildConfig = BuildConfig(),
           generation_meta: dict | None = None) -> dict:
     raws = load_raw(raw_dir)
+    versions = sorted({r["prompt_version"] for r in raws})
+    if len(versions) > 1:
+        raise ValueError(f"raw data mixes prompt versions {versions}; regenerate or move the old batches")
     raw_by_lang: Counter = Counter()
     drops: dict[str, Counter] = defaultdict(Counter)
     cleaned: list[Utterance] = []
@@ -95,7 +98,8 @@ def build(raw_dir: Path, data_root: Path, name: str, config: BuildConfig = Build
     manifest = build_manifest(name, Path(data_root), files, rows, {
         "build_config": asdict(config),
         "generation": generation_meta or {},
-        "raw": {"batches": len(raws), "utterances_by_language": dict(sorted(raw_by_lang.items()))},
+        "raw": {"batches": len(raws), "prompt_versions": versions,
+                "utterances_by_language": dict(sorted(raw_by_lang.items()))},
         "drops": {k: dict(sorted(v.items())) for k, v in sorted(drops.items())},
         "dedup": {"input": dedup_report.input, "exact_removed": dedup_report.exact_removed,
                   "near_removed": dedup_report.near_removed, "kept": dedup_report.kept,

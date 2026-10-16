@@ -59,10 +59,30 @@ LANGUAGE_INSTRUCTIONS: dict[Language, str] = {
                         "(e.g. 'mera account se paise kat gaye but transfer nahi hua')."),
 }
 
+# Filler and self-correction examples are per language and in that language's script:
+# Latin-script examples in a Hindi prompt made the model answer in Hinglish (pilot v0).
+FILLER_EXAMPLES: dict[Language, str] = {
+    Language.EN: "umm, uh, like, actually, I mean",
+    Language.HI: "अम्म, मतलब, वो, अच्छा, हाँ जी",
+    Language.HINGLISH: "umm, matlab, woh, accha, haan ji",
+}
+
+SELF_CORRECTION_EXAMPLES: dict[Language, str] = {
+    Language.EN: "Tuesday, no, Wednesday",
+    Language.HI: "मंगलवार, नहीं, बुधवार",
+    Language.HINGLISH: "Tuesday, nahi, Wednesday",
+}
+
+SCRIPT_NAMES: dict[Language, str] = {
+    Language.EN: "Latin script",
+    Language.HI: "Devanagari script",
+    Language.HINGLISH: "Latin script",
+}
+
 STYLE_INSTRUCTIONS: dict[Style, str] = {
     Style.PLAIN: "plain and direct",
-    Style.FILLERS: ("with fillers and hesitations (umm, uh, matlab, actually, woh); at least a third "
-                    "include a self-correction ('Tuesday, no, Wednesday')"),
+    Style.FILLERS: ("with fillers and hesitations ({fillers}); at least a third "
+                    "include a self-correction ('{correction}')"),
     Style.NUMBERS: ("with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, "
                     "with long numbers spaced in groups the way people say them"),
     Style.NAMES: "with names, addresses or places; some phrased as questions",
