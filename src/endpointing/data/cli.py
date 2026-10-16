@@ -88,9 +88,10 @@ def cmd_generate(args) -> int:
     print("OPENAI_API_KEY: present")
     runner = BatchRunner(OpenAIGenerator(), ledger, raw_dir, workers=args.workers)
     s = runner.run(specs)
-    print(f"called {len(s.called)}, cached {len(s.cached)}, failed {s.failed}, skipped for budget {s.skipped_budget}")
+    print(f"called {len(s.called)}, cached {len(s.cached)}, failed {s.failed}, errored {s.errored}, "
+          f"skipped for budget {s.skipped_budget}")
     print(f"spent so far: ${ledger.spent:.6f} of cap ${args.cap}")
-    return 0 if not (s.failed or s.skipped_budget) else 1
+    return 0 if not (s.failed or s.skipped_budget or s.errored) else 1
 
 
 def cmd_build(args) -> int:

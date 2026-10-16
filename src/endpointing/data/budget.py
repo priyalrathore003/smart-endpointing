@@ -69,6 +69,20 @@ class SpendLedger:
                 f.write(json.dumps(entry) + "\n")
         return cost
 
+    def settle_unknown(self, reserved: Decimal, batch_id: str, model: str, error: str) -> Decimal:
+        """A call that failed in flight (e.g. a timeout) may still be billed and has no usage
+        numbers. Book the reserved worst case so the cap stays safe."""
+        entry = {"time": datetime.now(timezone.utc).isoformat(timespec="seconds"), "batch_id": batch_id,
+                 "model": model, "input_tokens": None, "output_tokens": None, "cost_usd": str(reserved),
+                 "parsed_ok": False, "error": error, "cost_is_worst_case": True}
+        with self._lock:
+            self._reserved -= reserved
+            self._spent += reserved
+            self.path.parent.mkdir(parents=True, exist_ok=True)
+            with self.path.open("a") as f:
+                f.write(json.dumps(entry) + "\n")
+        return reserved
+
     def release(self, reserved: Decimal) -> None:
         """Drop a reservation for a call that never reached the API."""
         with self._lock:

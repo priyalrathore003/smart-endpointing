@@ -30,6 +30,7 @@ class RunSummary:
     cached: list[str] = field(default_factory=list)
     failed: list[str] = field(default_factory=list)
     skipped_budget: list[str] = field(default_factory=list)
+    errored: list[str] = field(default_factory=list)   # the API call itself failed (timeout, network)
 
 
 def call_seed(batch_id: str, attempt: int) -> int:
@@ -80,9 +81,9 @@ class BatchRunner:
             seed = call_seed(spec.batch_id, attempt)
             try:
                 completion = self.generator.complete(prompt.system, prompt.user, seed, prompt.response_format)
-            except Exception:
-                self.ledger.release(worst)
-                raise
+            except Exception as e:   # one bad call must not abort the run; it may still be billed
+                self.ledger.settle_unknown(worst, spec.batch_id, self.generator.model, type(e).__name__)
+                return spec.batch_id, "errored"
             try:
                 items, ok = parse_response(completion.text, spec.style), True
             except ValueError:

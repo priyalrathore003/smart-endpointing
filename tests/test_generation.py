@@ -422,3 +422,27 @@ def test_build_caps_prefixes_in_every_split_and_writes_analysis_file(tmp_path):
     assert ps["after"]["all"]["END"] == ps["before_all_hard_plus_3_random"]["all"]["END"]
     assert ps["after"]["all"]["NOT_END"] <= ps["before_all_hard_plus_3_random"]["all"]["NOT_END"]
     assert ps["every_boundary"]["all"]["NOT_END"] >= ps["before_all_hard_plus_3_random"]["all"]["NOT_END"]
+
+
+class TimeoutOnceGenerator(FakeGenerator):
+    def complete(self, system, user, seed, response_format):
+        with self.lock:
+            first = self.calls == 0
+        if first:
+            with self.lock:
+                self.calls += 1
+            raise TimeoutError("simulated")
+        return super().complete(system, user, seed, response_format)
+
+
+def test_a_failed_call_does_not_abort_the_run_and_is_booked_at_worst_case(tmp_path):
+    gen, l = TimeoutOnceGenerator(), ledger(tmp_path)
+    s = BatchRunner(gen, l, tmp_path / "raw", workers=1).run(pilot_batches())
+    assert len(s.errored) == 1 and len(s.called) == 14
+    errored = [e for e in l.entries() if e.get("error")]
+    assert errored == [{**errored[0], "error": "TimeoutError", "cost_is_worst_case": True}]
+    worst = GPT_41_MINI.cost(1500, 2000)
+    assert l.spent == worst + 14 * GPT_41_MINI.cost(400, 600)
+    assert ledger(tmp_path).spent == l.spent                      # persisted
+    s2 = BatchRunner(FakeGenerator(), l, tmp_path / "raw").run(pilot_batches())
+    assert s2.called == s.errored                                 # resumes only the missing batch
