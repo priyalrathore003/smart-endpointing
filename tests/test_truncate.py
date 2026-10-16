@@ -40,6 +40,27 @@ def test_hard_negative_endings(text, lang, expected):
     ("please block it", EN, True),
     ("please block the", EN, False),
     ("", EN, False),
+    # added verb-final forms
+    ("मेरा रिफंड कब तक मिलेगा", HI, True),
+    ("पेमेंट कल तक हो जाएगा या नहीं पता नहीं क्या हुआ", HI, True),
+    ("ऑर्डर कब डिलीवर होगा", HI, True),
+    ("कृपया जल्दी कार्ड ब्लॉक कर दें", HI, True),
+    ("recharge karwaya par credit nahi hua", HG, True),
+    ("transfer ki thi par paise kat gaye aur refund nahi hui", HG, True),
+    ("mere bhai ke saath bhi aisa hi hue", HG, True),
+    ("refund kab tak hoga", HG, True),
+    ("naya card kab milega", HG, True),
+    ("link bhej dein", HG, True),
+    # English structural rule
+    ("i want to report an unauthorized transfer", EN, True),
+    ("there is a debit of four thousand rupees", EN, True),
+    ("i want to report an", EN, False),
+    ("i did not initiate the deduction of", EN, False),
+    ("can you explain why eighteen hundred", EN, False),
+    ("i just saw a debit of five thousand five", EN, False),
+    ("my account number is 1234", EN, False),
+    ("block card", EN, False),                       # too short for the structural rule
+    ("i want to pay because", EN, False),            # hard negative wins
 ])
 def test_heuristic_complete(text, lang, expected):
     assert heuristic_complete(text.split(), lang) is expected
