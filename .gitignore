@@ -16,3 +16,6 @@ data/raw/
 data/processed/
 *.wav
 *.onnx
+
+# Build metadata from editable installs
+*.egg-info/
