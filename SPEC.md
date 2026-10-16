@@ -14,7 +14,7 @@ A voice agent decides the user has finished speaking when silence lasts T ms (e.
 - If T is too short, it cuts people off mid-thought ("mera account number hai... [pause] ...4 2 1 5").
 - If T is too long, every reply feels slow.
 
-A model that reads **what was said so far** (is the sentence complete?) plus **the pause so far** can reply sooner when the sentence is clearly finished, and wait when it clearly isn't.
+A text model that reads **what was said so far** (is the sentence complete?), combined with **the pause so far** in a policy layer, can reply sooner when the sentence is clearly finished, and wait when it clearly isn't.
 
 ## 2. Data
 
@@ -38,12 +38,16 @@ Rules:
 | # | Model | Why it's here |
 |---|---|---|
 | M0 | **Silence threshold** (300 / 500 / 700 / 1000 ms) | The production baseline |
-| M1 | **Logistic regression** on hand-made features: last-token class, ends with a connective or filler, length, digit-run state, pause length | Classical ML; easy to interpret |
-| M2 | **Small transformer trained from random init** on characters/subwords + pause feature | Training from scratch, written by hand |
-| M3 | **A pretrained small multilingual encoder, fine-tuned** (full or LoRA), + pause feature | Fine-tuning; the expected best accuracy |
+| M1 | **Logistic regression** on hand-made features: last-token class, ends with a connective or filler, length, digit-run state | Classical ML; easy to interpret |
+| M2 | **Small transformer trained from random init** on characters/subwords | Training from scratch, written by hand |
+| M3 | **A pretrained small multilingual encoder, fine-tuned** (full or LoRA) | Fine-tuning; the expected best accuracy |
 | M4 | **Distilled student:** M3-sized or smaller, trained on soft labels from an LLM teacher | Distillation; report teacher-student agreement |
 
-The pause length enters every model (M1-M4), so the model learns "a complete sentence plus 150 ms of silence is probably done".
+**Pause lives in the policy layer, not in the models.** M1-M4 see text only (plus the agent's question, where the
+context ablation uses it) and output P(END | text). The endpointing policy combines that probability with the
+silence so far: for example, reply once the pause exceeds a threshold that falls as P(END) rises
+("a complete sentence plus 150 ms of silence is probably done"). The same text model can then be paired with
+different pause rules without retraining, and the pause distribution in training data cannot leak into the model.
 
 **External baselines** (not trained here, evaluated the same way):
 - **LiveKit turn-detector** (text-based end-of-turn model).
@@ -113,6 +117,10 @@ The pause length enters every model (M1-M4), so the model learns "a complete sen
 - `data/GUIDELINE.md`, the labelling guideline, is written by me.
 - The labelling CLI supports a third label, **AMBIGUOUS**, alongside END and NOT_END.
 - After a week, 50 items are re-labelled blind, and I report intra-annotator Cohen's kappa.
+
+**Stages 3 and 5 (context ablation)**
+- Short-reply rows carry the agent's question as `context` (null for other rows). Evaluate each model with and
+  without the context as an input, and report the difference overall and on the short-reply and ambiguous slices.
 
 **Stage 4 (M2)**
 - I write the training loop myself. Claude only reviews it and points out bugs; it does not write the loop.

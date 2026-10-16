@@ -14,6 +14,7 @@ runs/
 mlruns/
 data/raw/
 data/raw_pilot_v0/
+data/raw_pilot_v1/
 data/processed/
 *.wav
 *.onnx
