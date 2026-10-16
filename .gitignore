@@ -1,0 +1,18 @@
+# Secrets: never committed
+.env
+.env.*
+
+# Environments and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# Run outputs and generated data (manifests and datasheets are committed explicitly)
+runs/
+mlruns/
+data/raw/
+data/processed/
+*.wav
+*.onnx
