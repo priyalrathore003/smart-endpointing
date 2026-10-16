@@ -14,7 +14,8 @@ Exact counts, file hashes, drop counts and label-conflict rates are in
   self-correction examples are given per language, in that language's script.
 - **Prompt history:** in pilot v0, the Hindi prompt used Latin-script filler examples, and the model
   answered in Hinglish (18 of 18 in one batch). In pilot v1, there were no short turns and no code-mixed Hindi.
-  Both pilots are kept in `data/raw_pilot_v0/` and `data/raw_pilot_v1/` and are not part of any dataset.
+  In pilot v2, Hindi was formal and sometimes mixed topics, and Hindi short replies missed the 75/25 split.
+  The three pilots are kept in `data/raw_pilot_v0/`, `v1/` and `v2/` and are not part of any dataset.
 - **Content:** what customers say to a support voice agent in India. Four domains (banking,
   collections, delivery, telecom), with 8 intents each and 5 styles: plain, fillers and
   self-corrections, numbers, names/places, and **short replies**. Short replies are
@@ -27,6 +28,9 @@ Exact counts, file hashes, drop counts and label-conflict rates are in
   exact counts, no turn was under 5 words.
 - **Hindi code-mixing:** the Hindi prompt asks for one common English noun in Latin script in about
   1 in 4 turns (parcel, account, OTP, payment); all other text is Devanagari.
+- **Hindi register:** colloquial spoken Hindi, not formal written Hindi (avoid कृपया, श्रीमान, रकम, जमा;
+  use सर, मैडम, प्लीज़, जल्दी, पैसा), one topic per utterance. Short-reply pairs come back in `short`
+  and `medium` arrays, so the 75/25 split is enforced by the response structure, as for turns.
 - **Licence:** generated text, no third-party corpus. Use is subject to OpenAI's terms for API output.
 - **Raw responses** are stored under `data/raw/`, one file per call, together with the token
   usage and cost of every call (`data/raw/spend.jsonl`). Rebuilding never calls the API.
@@ -51,14 +55,22 @@ Exact counts, file hashes, drop counts and label-conflict rates are in
 5. **Split** by generation batch, 80/10/10 per language. A batch's utterances and all their prefixes
    are in exactly one split.
 6. **Truncate:** each complete utterance becomes one **END** row. Prefixes cut at word boundaries are
-   **NOT_END**: every prefix ending in a hard negative, plus up to 3 random others. Mid-number prefixes
-   are NOT_END and tagged `digits_mid`. A complete turn that ends on a hard-negative word ("…and i did
+   **NOT_END**, with **at most 3 per utterance**, using the same scheme for train, dev and test: one prefix ending
+   on a hard negative or filler (if there is one), one in the last 30% of the words, and one random (seeded, no
+   duplicates). **Short replies** keep only prefixes that end on a hard negative; random cuts of an answer
+   ("kal", "nahi") are usually complete given the question. The prefixes they keep are tagged `prefix_of_reply`.
+   Mid-number prefixes are NOT_END and tagged `digits_mid`.
+   Every boundary of every utterance is also written to `processed/<name>/analysis/all_prefixes.jsonl`
+   (flagged `sampled`). That file is **analysis only, never used for training**, and is outside `data_hash`.
+   The manifest's `prefix_sampling` compares the END:NOT_END ratio and the share of 1–2 word prefixes for
+   the capped scheme, the previous one (all hard negatives plus 3 random) and every boundary. A complete turn that ends on a hard-negative word ("…and i did
    not do that") stays END and is tagged `end_on_hard_negative`.
 
 **Row tags:** `hard_negative`, `heuristic_complete`, `has_digits`, `digits_mid`, `digits_spelled`,
 `short` (utterance of 4 words or fewer), `code_mixed` (a Hindi utterance that kept at least one
-Latin-script word; the tag is on all of its rows) and `end_on_hard_negative` (END rows only). Each tag is an
-evaluation slice, and so is `style == short_replies`.
+Latin-script word; the tag is on all of its rows), `end_on_hard_negative` (END rows only) and
+`prefix_of_reply` (NOT_END rows from short replies). Each tag is an evaluation slice, and so is
+`style == short_replies`.
 
 `heuristic_complete` is a rule, not a label:
 - **Hindi and Hinglish:** the prefix ends on a verb-final form (है, हुआ, होगा, मिलेगा, दें, दूंगा, सकते हो… /
@@ -76,6 +88,10 @@ evaluation slice, and so is `style == short_replies`.
 - **Primary test:** the hand-labelled gold set (Stage 2), which is not generated.
 
 ## Known biases and limits
+- **The class ratio is set by the sampling, not by real calls.** END:NOT_END here comes from the
+  prefix cap. The real ratio of finished to unfinished turns *at pauses* (what the policy faces) must
+  come from recordings: the gold set and shadow logs. Calibration and thresholds must be checked
+  against that ratio, not this one.
 - **Written by an LLM, not spoken:** the text is more fluent and regular than real speech. It has no
   ASR errors, and fillers and self-corrections are stylised.
 - **Label noise from truncation:** a prefix that is itself a complete sentence ("i want to pay")
