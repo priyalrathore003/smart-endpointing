@@ -178,3 +178,15 @@ def test_code_mixed_tag_is_utterance_level_and_hindi_only():
     assert hi_rows and all(r.code_mixed for r in hi_rows)
     assert not any(r.code_mixed for r in rows_for("मेरा पार्सल कहां तक पहुंचा है", lang=HI))
     assert not any(r.code_mixed for r in rows_for("mera parcel kahan hai", lang=HG))
+
+
+def test_complete_utterance_ending_on_hard_negative_stays_end_and_is_tagged():
+    rows = rows_for("i did not make this payment and i did not do that", max_random_prefixes=20)
+    end = [r for r in rows if r.label is Label.END]
+    assert len(end) == 1 and end[0].end_on_hard_negative and not end[0].hard_negative
+    assert not any(r.end_on_hard_negative for r in rows if r.label is Label.NOT_END)
+    assert any(r.hard_negative for r in rows if r.label is Label.NOT_END)   # "...payment and"
+
+
+def test_ordinary_end_row_is_not_tagged():
+    assert not any(r.end_on_hard_negative for r in rows_for("please block my card"))

@@ -90,6 +90,7 @@ class Example:
     digits_spelled: bool
     short: bool
     code_mixed: bool
+    end_on_hard_negative: bool
 
     def __post_init__(self) -> None:
         if not 1 <= self.k <= self.n:

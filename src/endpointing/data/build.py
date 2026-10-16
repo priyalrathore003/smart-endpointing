@@ -1,6 +1,6 @@
 """Raw LLM responses -> labelled, deduplicated, split dataset + manifest. No API calls.
 
-Order matters: normalise -> drop -> dedup -> spell digits -> split -> truncate.
+Order matters: normalise -> drop (empty, wrong script) -> dedup -> spell digits -> split -> truncate.
 Dedup runs before digit spelling so a random spelling can't hide a duplicate.
 """
 
@@ -15,7 +15,6 @@ from .conflicts import label_conflicts
 from .dedup import Deduplicator
 from .digits import DigitSpeller
 from .leakage import check_leakage
-from .lexicon import ends_with_hard_negative
 from .manifest import build_manifest, example_record, write_jsonl, write_manifest
 from .script import script_ok
 from .split import BatchSplitter
@@ -57,9 +56,7 @@ def build(raw_dir: Path, data_root: Path, name: str, config: BuildConfig = Build
         for text in raw["utterances"]:
             raw_by_lang[src.language.value] += 1
             t = normalize(text)
-            reason = ("empty" if not t else
-                      "script_mismatch" if not script_ok(t, src.language) else
-                      "ends_with_hard_negative" if ends_with_hard_negative(t.split(), src.language) else None)
+            reason = "empty" if not t else "script_mismatch" if not script_ok(t, src.language) else None
             if reason:
                 drops[reason][src.language.value] += 1
                 continue

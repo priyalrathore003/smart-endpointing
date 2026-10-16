@@ -14,7 +14,7 @@ from typing import Iterable, Sequence
 from .types import Example, Split
 
 SLICES = ("hard_negative", "heuristic_complete", "has_digits", "digits_mid", "digits_spelled", "short",
-          "code_mixed")
+          "code_mixed", "end_on_hard_negative")
 
 
 def example_record(split: Split, ex: Example) -> dict:

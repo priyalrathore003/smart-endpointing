@@ -4,6 +4,8 @@ Prefixes are cut at word boundaries. Kept per utterance:
 - the END row;
 - every prefix that ends in a hard negative (they are rare and the most useful);
 - up to `max_random_prefixes` other prefixes, sampled with a seeded generator.
+A complete utterance that itself ends on a hard-negative word ("...i did not do that")
+stays END and is tagged end_on_hard_negative: a real counterexample to the lexicon.
 Keeping every prefix would make NOT_END outnumber END about 10:1 and over-weight
 long utterances.
 """
@@ -61,4 +63,5 @@ class Truncator:
             digits_mid=_inside(utt.digit_spans, k),
             digits_spelled=_overlaps(utt.spelled_spans, k),
             short=n <= self.config.short_max_words,
-            code_mixed=is_code_mixed(tokens, utt.source.language))
+            code_mixed=is_code_mixed(tokens, utt.source.language),
+            end_on_hard_negative=k == n and ends_with_hard_negative(tokens, utt.source.language))

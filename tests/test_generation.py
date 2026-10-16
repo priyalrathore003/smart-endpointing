@@ -167,7 +167,8 @@ def test_build_end_to_end(tmp_path):
     m = run_pilot_build(tmp_path)
     assert m["leakage_checks"] == "passed"
     assert m["drops"]["script_mismatch"] == {"hi": 2}                   # Latin line, in both hi batches
-    assert m["drops"]["ends_with_hard_negative"] == {"hinglish": 2}   # "maine complaint ki" in 2 batches
+    assert "ends_with_hard_negative" not in m["drops"]                 # kept as END, tagged instead
+    assert m["counts"]["slices"]["train"]["end_on_hard_negative"] >= 1  # "maine complaint ki"
     assert m["dedup"]["exact_removed"] > 0                             # same fake text in both batches
     assert (tmp_path / "manifests" / "pilot.json").exists()
     rows = [json.loads(l) for l in (tmp_path / "processed" / "pilot" / "train.jsonl").read_text().splitlines()]
