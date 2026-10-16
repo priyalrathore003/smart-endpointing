@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.telecom.port_or_sim.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "port_or_sim",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "port my number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "sim swap"
+    },
+    {
+      "context": "Do you want to proceed with the port request",
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "When would you like to activate the new SIM",
+      "requested_bucket": "short",
+      "text": "today"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to port my number from Airtel to Vodafone"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please replace my SIM as it is not working properly"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you help me change my SIM to a new one"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I would like to port my mobile number to your network"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "My old SIM is damaged so I want a new SIM issued"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "How long will it take to port my number to your service"
+    },
+    {
+      "context": "Can you provide your account number for verification",
+      "requested_bucket": "medium",
+      "text": "My number is linked to account number 1234567890"
+    },
+    {
+      "context": "When did you buy the current SIM card",
+      "requested_bucket": "medium",
+      "text": "The SIM was purchased on 15th March 2023"
+    },
+    {
+      "context": "By when do you want the SIM activation to be completed",
+      "requested_bucket": "medium",
+      "text": "I need the new SIM activated by next Monday"
+    },
+    {
+      "context": "Please provide your mobile number to proceed with porting",
+      "requested_bucket": "medium",
+      "text": "My phone number is 98765 43210 for the port request"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I want to port my current mobile number to your network because the signal is weak with my current provider"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Could you please help me with replacing my SIM card as it is not working properly and shows no network"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I have lost my SIM recently and would like to know the process for getting a new SIM with the same number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Please tell me how long it will take to transfer my number from Jio to your company because I need to plan accordingly"
+    },
+    {
+      "context": "Are you ready to submit all required documents for the porting service",
+      "requested_bucket": "long",
+      "text": "Yes I want to port my number my current plan is with Airtel and I need to switch to Vodafone immediately"
+    },
+    {
+      "context": "Could you please provide your mobile number and account ID for SIM replacement",
+      "requested_bucket": "long",
+      "text": "My SIM has been damaged and I want to replace it the number is 99887 77665 and my account ID is 562738495"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2785725001,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: port_or_sim - wants to port the number, replace or swap a SIM\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"port my number\"},{\"text\":\"sim swap\"}],\"short_with_context\":[{\"text\":\"yes please\",\"context\":\"Do you want to proceed with the port request\"},{\"text\":\"today\",\"context\":\"When would you like to activate the new SIM\"}],\"medium\":[{\"text\":\"I want to port my number from Airtel to Vodafone\"},{\"text\":\"Please replace my SIM as it is not working properly\"},{\"text\":\"Can you help me change my SIM to a new one\"},{\"text\":\"I would like to port my mobile number to your network\"},{\"text\":\"My old SIM is damaged so I want a new SIM issued\"},{\"text\":\"How long will it take to port my number to your service\"}],\"medium_with_context\":[{\"text\":\"My number is linked to account number 1234567890\",\"context\":\"Can you provide your account number for verification\"},{\"text\":\"The SIM was purchased on 15th March 2023\",\"context\":\"When did you buy the current SIM card\"},{\"text\":\"I need the new SIM activated by next Monday\",\"context\":\"By when do you want the SIM activation to be completed\"},{\"text\":\"My phone number is 98765 43210 for the port request\",\"context\":\"Please provide your mobile number to proceed with porting\"}],\"long\":[{\"text\":\"I want to port my current mobile number to your network because the signal is weak with my current provider\"},{\"text\":\"Could you please help me with replacing my SIM card as it is not working properly and shows no network\"},{\"text\":\"I have lost my SIM recently and would like to know the process for getting a new SIM with the same number\"},{\"text\":\"Please tell me how long it will take to transfer my number from Jio to your company because I need to plan accordingly\"}],\"long_with_context\":[{\"text\":\"Yes I want to port my number my current plan is with Airtel and I need to switch to Vodafone immediately\",\"context\":\"Are you ready to submit all required documents for the porting service\"},{\"text\":\"My SIM has been damaged and I want to replace it the number is 99887 77665 and my account ID is 562738495\",\"context\":\"Could you please provide your mobile number and account ID for SIM replacement\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 590,
+    "output_tokens": 455
+  }
+}

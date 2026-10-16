@@ -1,0 +1,172 @@
+{
+  "batch_id": "hinglish.collections.callback_request.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "callback_request",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "kab aap call kar sakte hain",
+      "requested_bucket": "short",
+      "text": "thik hai"
+    },
+    {
+      "context": "aap kab free hain call ke liye",
+      "requested_bucket": "short",
+      "text": "shaam ko"
+    },
+    {
+      "context": "kab aapko call karna hai",
+      "requested_bucket": "short",
+      "text": "kal hi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umiid hai aap kal call kar denge"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "thoda baad mein call karna please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main abhi busy hoon kal baat karte hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha ji toh mujhe raat ko call karna ha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap kal subah contact kar sakte ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main kal dopehar tak free hoon call ke liye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "yeh kaam kal tak solve kar dena"
+    },
+    {
+      "context": "kya aap ab baat kar sakte hain",
+      "requested_bucket": "medium",
+      "text": "thoda der baad call kar lena"
+    },
+    {
+      "context": "kab aapse contact karun",
+      "requested_bucket": "medium",
+      "text": "kal subah 10 baje theek rahega"
+    },
+    {
+      "context": "kab humse baat karna chahenge",
+      "requested_bucket": "medium",
+      "text": "aap mujhe Wednesday ko call karna"
+    },
+    {
+      "context": "kya main abhi phone par hoon",
+      "requested_bucket": "medium",
+      "text": "shaam ko call kar lena please"
+    },
+    {
+      "context": "kya aap Tuesday ko contact kar sakte hain",
+      "requested_bucket": "medium",
+      "text": "hum Tuesday ko nahi Wednesday call karna"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera naam Rohit hai aur main aapko kal shaam ko call karna chahata hoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main abhi apne kaam mein vyast hoon toh kripya mujhe thodi der baad call karein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "udhhar jo paise kat gaye hain uske baare mein baat karni hai kal subah thoda time milega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya aap mujhe kal dopahar 2 baje call kar sakte hain main uss samay free rahunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main kal call karne ka samay nirdharit karna chahta hoon kya aapke paas kal 11 baje waqt hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kal raat ko call kar lena mujhe thoda confusion hai account statement ko lekar"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kal shaam tak mujhe call kar lena kyunki main tab ghar par available hoon"
+    },
+    {
+      "context": "kab aapko call karna convenient rahega?",
+      "requested_bucket": "long",
+      "text": "kal kaunsa samay aapko thik lagega hum call karne ke liye"
+    },
+    {
+      "context": "aaj baat karna aapke liye theek rahega?",
+      "requested_bucket": "long",
+      "text": "main abhi thoda busy hoon kya aap mujhe kal dopehar call kar sakte hain"
+    },
+    {
+      "context": "aapse call kab kar sakte hain hum?",
+      "requested_bucket": "long",
+      "text": "kal mujhe shaam ko call kar lena main ghar par tab free hoon aur baat kar sakte hain"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 587498655,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: callback_request - asks the agent to call back at another time\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal tak\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"thik hai\",\"context\":\"kab aap call kar sakte hain\"},{\"text\":\"shaam ko\",\"context\":\"aap kab free hain call ke liye\"},{\"text\":\"kal hi\",\"context\":\"kab aapko call karna hai\"}],\"medium\":[{\"text\":\"umiid hai aap kal call kar denge\"},{\"text\":\"thoda baad mein call karna please\"},{\"text\":\"main abhi busy hoon kal baat karte hain\"},{\"text\":\"accha ji toh mujhe raat ko call karna ha\"},{\"text\":\"kya aap kal subah contact kar sakte ho\"},{\"text\":\"main kal dopehar tak free hoon call ke liye\"},{\"text\":\"yeh kaam kal tak solve kar dena\"}],\"medium_with_context\":[{\"text\":\"thoda der baad call kar lena\",\"context\":\"kya aap ab baat kar sakte hain\"},{\"text\":\"kal subah 10 baje theek rahega\",\"context\":\"kab aapse contact karun\"},{\"text\":\"aap mujhe Wednesday ko call karna\",\"context\":\"kab humse baat karna chahenge\"},{\"text\":\"shaam ko call kar lena please\",\"context\":\"kya main abhi phone par hoon\"},{\"text\":\"hum Tuesday ko nahi Wednesday call karna\",\"context\":\"kya aap Tuesday ko contact kar sakte hain\"}],\"long\":[{\"text\":\"mera naam Rohit hai aur main aapko kal shaam ko call karna chahata hoon\"},{\"text\":\"main abhi apne kaam mein vyast hoon toh kripya mujhe thodi der baad call karein\"},{\"text\":\"udhhar jo paise kat gaye hain uske baare mein baat karni hai kal subah thoda time milega\"},{\"text\":\"kya aap mujhe kal dopahar 2 baje call kar sakte hain main uss samay free rahunga\"},{\"text\":\"main kal call karne ka samay nirdharit karna chahta hoon kya aapke paas kal 11 baje waqt hai\"},{\"text\":\"kal raat ko call kar lena mujhe thoda confusion hai account statement ko lekar\"},{\"text\":\"kal shaam tak mujhe call kar lena kyunki main tab ghar par available hoon\"}],\"long_with_context\":[{\"text\":\"kal kaunsa samay aapko thik lagega hum call karne ke liye\",\"context\":\"kab aapko call karna convenient rahega?\"},{\"text\":\"main abhi thoda busy hoon kya aap mujhe kal dopehar call kar sakte hain\",\"context\":\"aaj baat karna aapke liye theek rahega?\"},{\"text\":\"kal mujhe shaam ko call kar lena main ghar par tab free hoon aur baat kar sakte hain\",\"context\":\"aapse call kab kar sakte hain hum?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 610,
+    "output_tokens": 627
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.banking.balance_enquiry.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "balance_enquiry",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "balance please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "card ending nine four five six"
+    },
+    {
+      "context": "What information do you want to check",
+      "requested_bucket": "short",
+      "text": "available balance"
+    },
+    {
+      "context": "Which details would you like to receive",
+      "requested_bucket": "short",
+      "text": "last three transactions"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you tell me my savings account balance"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please check the recent transactions on my account"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i want to know the balance in my account right now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "could you provide the last five transactions on my debit card"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "what is the total balance shown in my account statement"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "check and tell me about deposits made this month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i need the balance on my account linked to phone number nine eight seven six five four three two one zero"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "tell me the transactions made on the twenty third of december"
+    },
+    {
+      "context": "What details do you want to check today",
+      "requested_bucket": "medium",
+      "text": "i would like to know my current account balance"
+    },
+    {
+      "context": "Which transactions do you want details for",
+      "requested_bucket": "medium",
+      "text": "please provide three recent debit entries on my account"
+    },
+    {
+      "context": "Which account balance do you want to inquire about",
+      "requested_bucket": "medium",
+      "text": "could you check the balance of my fixed deposit account"
+    },
+    {
+      "context": "What transaction type are you interested in",
+      "requested_bucket": "medium",
+      "text": "show me the withdrawals made last week from my savings account"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i want to check my account balance as i am planning to make a payment tomorrow morning"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "please let me know the last ten transactions in my account so i can verify some entries"
+    },
+    {
+      "context": "Can you specify which transactions or balance details you want",
+      "requested_bucket": "long",
+      "text": "i want to know my current balance and also the recent payments made in the last fifteen days"
+    },
+    {
+      "context": "What period do you want the transaction details for",
+      "requested_bucket": "long",
+      "text": "please provide details of all credit and debit transactions along with the available balance for the last month"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 64145981,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: balance_enquiry - asks for their account balance or recent transactions\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"balance please\"},{\"text\":\"card ending nine four five six\"}],\"short_with_context\":[{\"text\":\"available balance\",\"context\":\"What information do you want to check\"},{\"text\":\"last three transactions\",\"context\":\"Which details would you like to receive\"}],\"medium\":[{\"text\":\"can you tell me my savings account balance\"},{\"text\":\"please check the recent transactions on my account\"},{\"text\":\"i want to know the balance in my account right now\"},{\"text\":\"could you provide the last five transactions on my debit card\"},{\"text\":\"what is the total balance shown in my account statement\"},{\"text\":\"check and tell me about deposits made this month\"},{\"text\":\"i need the balance on my account linked to phone number nine eight seven six five four three two one zero\"},{\"text\":\"tell me the transactions made on the twenty third of december\"}],\"medium_with_context\":[{\"text\":\"i would like to know my current account balance\",\"context\":\"What details do you want to check today\"},{\"text\":\"please provide three recent debit entries on my account\",\"context\":\"Which transactions do you want details for\"},{\"text\":\"could you check the balance of my fixed deposit account\",\"context\":\"Which account balance do you want to inquire about\"},{\"text\":\"show me the withdrawals made last week from my savings account\",\"context\":\"What transaction type are you interested in\"}],\"long\":[{\"text\":\"i want to check my account balance as i am planning to make a payment tomorrow morning\"},{\"text\":\"please let me know the last ten transactions in my account so i can verify some entries\"}],\"long_with_context\":[{\"text\":\"i want to know my current balance and also the recent payments made in the last fifteen days\",\"context\":\"Can you specify which transactions or balance details you want\"},{\"text\":\"please provide details of all credit and debit transactions along with the available balance for the last month\",\"context\":\"What period do you want the transaction details for\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 587,
+    "output_tokens": 390
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.telecom.data_balance.numbers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "telecom",
+  "intent": "data_balance",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "data kitna bacha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "validity batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kitna balance hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "short_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "thik hai"
+    },
+    {
+      "context": "Aapko apne data balance ke baare mein jankari chahiye kya",
+      "requested_bucket": "short",
+      "text": "kitna data bacha hai"
+    },
+    {
+      "context": "Kya aapko apne pack ki validity pata karni hai",
+      "requested_bucket": "short",
+      "text": "validity kab tak hai"
+    },
+    {
+      "context": "Kya aap apna current data balance janna chahte hain",
+      "requested_bucket": "short",
+      "text": "pakka balance batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera phone number 98765 43210 hai data balance batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please mujhe mere plan ki validity aur data balance batado"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main dekhna chahta hun ki mere account mein abhi kitna data bacha hua hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "aap mujhe mera current usage aur remaining data bata sakte hain kya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera plan expire hone wala hai to mujhe validity bata dijiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "meri sim 12 march ko activate hui thi data balance bhi batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap check kar sakte hain mera data balance with validity"
+    },
+    {
+      "context": "Apko apne plan ki recharge aur data details chahiye kya",
+      "requested_bucket": "medium",
+      "text": "mujhe apni last recharge ki details chahiye including data balance"
+    },
+    {
+      "context": "Aap apne phone number bataye jiske liye data check karna hai",
+      "requested_bucket": "medium",
+      "text": "mera phone number 9988776655 hai kya data balance bata sakte ho"
+    },
+    {
+      "context": "Kya aap apne plan ki expiry date aur data balance janna chahte hain",
+      "requested_bucket": "medium",
+      "text": "main jana chahta hun ki mera plan kab expire hoga aur kitna data left hai"
+    },
+    {
+      "context": "Kya aap apni sim ke baare mein data aur validity ke baare mein puch rahe hain",
+      "requested_bucket": "medium",
+      "text": "mujhe apne sim ki validity aur bacha hua data usage bata dijiye"
+    },
+    {
+      "context": "Kya aap account mein available data ka detail jaanna chahte hain",
+      "requested_bucket": "medium",
+      "text": "please mujhe mere account par baki data ka details bataiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera number 98765 43210 hai main janna chahta hun ki mera kitna data balance hua hai aur meri validity kab tak hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "last recharge 5 april ko hua tha please mera data balance aur validity ka update dena"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya aap bata sakte hain ki abhi mera kitna data use hua hai aur kitna bacha hai purely for 4g"
+    },
+    {
+      "context": "Kya main aapka number jan sakta hun jis par data balance check karna hai",
+      "requested_bucket": "long",
+      "text": "mera number 998 877 6655 hai kya aap mujhe bata sakte hain ki mera data balance aur validity kya hai"
+    },
+    {
+      "context": "Aapne apne phone par koi specific pack recharge kara hai kya jiska data jana hai",
+      "requested_bucket": "long",
+      "text": "maine 1 march ko 1 gb daily pack recharge kara tha abhi mujhe mera data balance bata dijiye"
+    },
+    {
+      "context": "Aapko apne current plan ki validity aur remaining data janna hai",
+      "requested_bucket": "long",
+      "text": "mere plan ki validity kab expire hoti hai aur kitna data abhi available hai mujhe confirm kar dijiye"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 137523136,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: data_balance - asks how much data or validity is left\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"data kitna bacha hai\"},{\"text\":\"validity batao\"},{\"text\":\"kitna balance hai\"},{\"text\":\"short_with_context\"},{\"text\":\"haan batao\"},{\"text\":\"thik hai\"}],\"short_with_context\":[{\"text\":\"kitna data bacha hai\",\"context\":\"Aapko apne data balance ke baare mein jankari chahiye kya\"},{\"text\":\"validity kab tak hai\",\"context\":\"Kya aapko apne pack ki validity pata karni hai\"},{\"text\":\"pakka balance batao\",\"context\":\"Kya aap apna current data balance janna chahte hain\"}],\"medium\":[{\"text\":\"mera phone number 98765 43210 hai data balance batao\"},{\"text\":\"please mujhe mere plan ki validity aur data balance batado\"},{\"text\":\"main dekhna chahta hun ki mere account mein abhi kitna data bacha hua hai\"},{\"text\":\"aap mujhe mera current usage aur remaining data bata sakte hain kya\"},{\"text\":\"mera plan expire hone wala hai to mujhe validity bata dijiye\"},{\"text\":\"meri sim 12 march ko activate hui thi data balance bhi batao\"},{\"text\":\"kya aap check kar sakte hain mera data balance with validity\"}],\"medium_with_context\":[{\"text\":\"mujhe apni last recharge ki details chahiye including data balance\",\"context\":\"Apko apne plan ki recharge aur data details chahiye kya\"},{\"text\":\"mera phone number 9988776655 hai kya data balance bata sakte ho\",\"context\":\"Aap apne phone number bataye jiske liye data check karna hai\"},{\"text\":\"main jana chahta hun ki mera plan kab expire hoga aur kitna data left hai\",\"context\":\"Kya aap apne plan ki expiry date aur data balance janna chahte hain\"},{\"text\":\"mujhe apne sim ki validity aur bacha hua data usage bata dijiye\",\"context\":\"Kya aap apni sim ke baare mein data aur validity ke baare mein puch rahe hain\"},{\"text\":\"please mujhe mere account par baki data ka details bataiye\",\"context\":\"Kya aap account mein available data ka detail jaanna chahte hain\"}],\"long\":[{\"text\":\"mera number 98765 43210 hai main janna chahta hun ki mera kitna data balance hua hai aur meri validity kab tak hai\"},{\"text\":\"last recharge 5 april ko hua tha please mera data balance aur validity ka update dena\"},{\"text\":\"kya aap bata sakte hain ki abhi mera kitna data use hua hai aur kitna bacha hai purely for 4g\"}],\"long_with_context\":[{\"text\":\"mera number 998 877 6655 hai kya aap mujhe bata sakte hain ki mera data balance aur validity kya hai\",\"context\":\"Kya main aapka number jan sakta hun jis par data balance check karna hai\"},{\"text\":\"maine 1 march ko 1 gb daily pack recharge kara tha abhi mujhe mera data balance bata dijiye\",\"context\":\"Aapne apne phone par koi specific pack recharge kara hai kya jiska data jana hai\"},{\"text\":\"mere plan ki validity kab expire hoti hai aur kitna data abhi available hai mujhe confirm kar dijiye\",\"context\":\"Aapko apne current plan ki validity aur remaining data janna hai\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 606,
+    "output_tokens": 706
+  }
+}

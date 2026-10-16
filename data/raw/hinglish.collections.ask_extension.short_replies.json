@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.collections.ask_extension.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "collections",
+  "intent": "ask_extension",
+  "items": [
+    {
+      "context": "Kya aap paise jama kar sakte hain aaj?",
+      "requested_bucket": "short",
+      "text": "Nahi ji"
+    },
+    {
+      "context": "Aapko kitna waqt chahiye payment ke liye?",
+      "requested_bucket": "short",
+      "text": "Do din"
+    },
+    {
+      "context": "Kya aap partial payment kar sakte hain?",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Aap kal tak payment kar denge?",
+      "requested_bucket": "short",
+      "text": "Theek hai"
+    },
+    {
+      "context": "Kya payment tod kar denge?",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kab tak poori raqam de sakte hain?",
+      "requested_bucket": "short",
+      "text": "Agale hafte"
+    },
+    {
+      "context": "Aapke paas aaj paise hain?",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kya aap extension lena chahte hain?",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Paise online bhejna hai kya?",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya aapke paas EMI option chahiye?",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Payment kab karenge?",
+      "requested_bucket": "short",
+      "text": "Kal"
+    },
+    {
+      "context": "Aapko kab tak payment karna hai?",
+      "requested_bucket": "short",
+      "text": "Ek hafta"
+    },
+    {
+      "context": "Kya aap kal payment karenge?",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kya aaj partial payment kar sakte hain?",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kitni amount aap de sakte hain abhi?",
+      "requested_bucket": "short",
+      "text": "Pach hazar"
+    },
+    {
+      "context": "Kya aap payment tod sakte hain?",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Aapko aur kitna time chahiye?",
+      "requested_bucket": "short",
+      "text": "3 din"
+    },
+    {
+      "context": "Kya aap kal payment kar denge?",
+      "requested_bucket": "short",
+      "text": "Theek hai"
+    },
+    {
+      "context": "Aap payment kab tak kar denge?",
+      "requested_bucket": "medium",
+      "text": "Main kal tak paise jama kar dunga ji"
+    },
+    {
+      "context": "Kya aap poora amount ek saath dena chahte hain?",
+      "requested_bucket": "medium",
+      "text": "Nahi ji thoda thoda karke dena hai mujhe"
+    },
+    {
+      "context": "Kya aapko EMI option chahiye?",
+      "requested_bucket": "medium",
+      "text": "Haan ji mujhe EMI mein payment karna hai abhi"
+    },
+    {
+      "context": "Aap kitne din ka extension lena chahenge?",
+      "requested_bucket": "medium",
+      "text": "Mujhe kam se kam panch din extension chahiye"
+    },
+    {
+      "context": "Kya aap partial payment kar sakte hain aaj?",
+      "requested_bucket": "medium",
+      "text": "Nahi abhi paise nahi hain thoda time chahiye"
+    },
+    {
+      "context": "Kab tak aap payment complete kar paenge?",
+      "requested_bucket": "medium",
+      "text": "Agale hafte ke andar main payment kar dunga"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3912829867,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: ask_extension - asks for more time or to split the payment\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Kya aap paise jama kar sakte hain aaj?\",\"reply\":\"Nahi ji\"},{\"agent_question\":\"Aapko kitna waqt chahiye payment ke liye?\",\"reply\":\"Do din\"},{\"agent_question\":\"Kya aap partial payment kar sakte hain?\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Aap kal tak payment kar denge?\",\"reply\":\"Theek hai\"},{\"agent_question\":\"Kya payment tod kar denge?\",\"reply\":\"Haan\"},{\"agent_question\":\"Kab tak poori raqam de sakte hain?\",\"reply\":\"Agale hafte\"},{\"agent_question\":\"Aapke paas aaj paise hain?\",\"reply\":\"Nahi\"},{\"agent_question\":\"Kya aap extension lena chahte hain?\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Paise online bhejna hai kya?\",\"reply\":\"Haan\"},{\"agent_question\":\"Kya aapke paas EMI option chahiye?\",\"reply\":\"Haan\"},{\"agent_question\":\"Payment kab karenge?\",\"reply\":\"Kal\"},{\"agent_question\":\"Aapko kab tak payment karna hai?\",\"reply\":\"Ek hafta\"},{\"agent_question\":\"Kya aap kal payment karenge?\",\"reply\":\"Nahi\"},{\"agent_question\":\"Kya aaj partial payment kar sakte hain?\",\"reply\":\"Nahi\"},{\"agent_question\":\"Kitni amount aap de sakte hain abhi?\",\"reply\":\"Pach hazar\"},{\"agent_question\":\"Kya aap payment tod sakte hain?\",\"reply\":\"Haan\"},{\"agent_question\":\"Aapko aur kitna time chahiye?\",\"reply\":\"3 din\"},{\"agent_question\":\"Kya aap kal payment kar denge?\",\"reply\":\"Theek hai\"}],\"medium\":[{\"agent_question\":\"Aap payment kab tak kar denge?\",\"reply\":\"Main kal tak paise jama kar dunga ji\"},{\"agent_question\":\"Kya aap poora amount ek saath dena chahte hain?\",\"reply\":\"Nahi ji thoda thoda karke dena hai mujhe\"},{\"agent_question\":\"Kya aapko EMI option chahiye?\",\"reply\":\"Haan ji mujhe EMI mein payment karna hai abhi\"},{\"agent_question\":\"Aap kitne din ka extension lena chahenge?\",\"reply\":\"Mujhe kam se kam panch din extension chahiye\"},{\"agent_question\":\"Kya aap partial payment kar sakte hain aaj?\",\"reply\":\"Nahi abhi paise nahi hain thoda time chahiye\"},{\"agent_question\":\"Kab tak aap payment complete kar paenge?\",\"reply\":\"Agale hafte ke andar main payment kar dunga\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 394,
+    "output_tokens": 554
+  }
+}

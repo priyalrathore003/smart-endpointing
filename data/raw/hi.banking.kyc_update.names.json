@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.banking.kyc_update.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "kyc_update",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "जी सर ठीक है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "कल तक अपडेट कर दो"
+    },
+    {
+      "context": "क्या आप अपना पता अपडेट करना चाहते हैं?",
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "पैन कार्ड अपडेट के लिए प्रक्रिया शुरू करूँ?",
+      "requested_bucket": "short",
+      "text": "कितनी देर लगती है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मेरा नाम राजीव कुमार है और मुझे पैन अपडेट कराना है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "क्या आप मेरे पुराने पते से नया पता अपडेट कर सकते हैं"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैंने अपना आधार कार्ड नंबर बदला है उसे कैसे अपडेट करूँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "कया आपको मेरी नई निवासी गली का पता चाहिए अपडेट के लिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे पता बदलवाना है दिल्ली से मुंबई में जल्द से जल्द करना है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "कृप्या मेरे बैंक account में नया आधार लिंक कर दें"
+    },
+    {
+      "context": "कृपया अपना नाम बताएं जिससे हम अपडेट कर सकें",
+      "requested_bucket": "medium",
+      "text": "मेरा नाम सुमित है और मैं पैन अपडेट करवाना चाहता हूँ"
+    },
+    {
+      "context": "आपका नया पता क्या है जिससे रिकॉर्ड में डाल सकें?",
+      "requested_bucket": "medium",
+      "text": "नया पता है सेक्टर 45, गुरुग्राम जोड़ा जाए धन्यवाद"
+    },
+    {
+      "context": "क्या आपको बता दूँ कि कौन से दस्तावेज आवश्यक हैं?",
+      "requested_bucket": "medium",
+      "text": "मुझे पता करना है कि आधार अपडेट के लिए क्या डॉक्यूमेंट चाहिए"
+    },
+    {
+      "context": "आपका नया मोबाइल नंबर क्या है जो हम अपडेट करें?",
+      "requested_bucket": "medium",
+      "text": "कृपया मेरे खाते में नया मोबाइल नंबर अपडेट कर दो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मुझे अपना पता अपडेट करना है क्योंकि अभी भी मेरे पुराने घर का पता लिखा है बैंक में"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैंने नया आधार कार्ड लिया है जिसमें नया पता है और मैं इसे बैंक रिकॉर्ड से लिंक कराना चाहता हूँ"
+    },
+    {
+      "context": "पता अपडेट के लिए आपको अपने पुराने और नए पते के प्रमाण दिखाने होंगे",
+      "requested_bucket": "long",
+      "text": "मेरा पता अपडेट करने के लिए मुझे क्या-क्या कागजात लेके आना होगा"
+    },
+    {
+      "context": "पैन अपडेट में आमतौर पर 7 से 10 दिन लगते हैं कृपया इंतजार करें",
+      "requested_bucket": "long",
+      "text": "क्या आप मुझे बता सकते हैं कि पैन कार्ड अपडेट करने में आम तौर पर कितना वक्त लगता है"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1964805067,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: kyc_update - wants to update KYC, address, PAN or Aadhaar details\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"जी सर ठीक है\"},{\"text\":\"कल तक अपडेट कर दो\"}],\"short_with_context\":[{\"text\":\"हाँ जी\",\"context\":\"क्या आप अपना पता अपडेट करना चाहते हैं?\"},{\"text\":\"कितनी देर लगती है\",\"context\":\"पैन कार्ड अपडेट के लिए प्रक्रिया शुरू करूँ?\"}],\"medium\":[{\"text\":\"मेरा नाम राजीव कुमार है और मुझे पैन अपडेट कराना है\"},{\"text\":\"क्या आप मेरे पुराने पते से नया पता अपडेट कर सकते हैं\"},{\"text\":\"मैंने अपना आधार कार्ड नंबर बदला है उसे कैसे अपडेट करूँ\"},{\"text\":\"कया आपको मेरी नई निवासी गली का पता चाहिए अपडेट के लिए\"},{\"text\":\"मुझे पता बदलवाना है दिल्ली से मुंबई में जल्द से जल्द करना है\"},{\"text\":\"कृप्या मेरे बैंक account में नया आधार लिंक कर दें\"}],\"medium_with_context\":[{\"text\":\"मेरा नाम सुमित है और मैं पैन अपडेट करवाना चाहता हूँ\",\"context\":\"कृपया अपना नाम बताएं जिससे हम अपडेट कर सकें\"},{\"text\":\"नया पता है सेक्टर 45, गुरुग्राम जोड़ा जाए धन्यवाद\",\"context\":\"आपका नया पता क्या है जिससे रिकॉर्ड में डाल सकें?\"},{\"text\":\"मुझे पता करना है कि आधार अपडेट के लिए क्या डॉक्यूमेंट चाहिए\",\"context\":\"क्या आपको बता दूँ कि कौन से दस्तावेज आवश्यक हैं?\"},{\"text\":\"कृपया मेरे खाते में नया मोबाइल नंबर अपडेट कर दो\",\"context\":\"आपका नया मोबाइल नंबर क्या है जो हम अपडेट करें?\"}],\"long\":[{\"text\":\"मुझे अपना पता अपडेट करना है क्योंकि अभी भी मेरे पुराने घर का पता लिखा है बैंक में\"},{\"text\":\"मैंने नया आधार कार्ड लिया है जिसमें नया पता है और मैं इसे बैंक रिकॉर्ड से लिंक कराना चाहता हूँ\"}],\"long_with_context\":[{\"text\":\"मेरा पता अपडेट करने के लिए मुझे क्या-क्या कागजात लेके आना होगा\",\"context\":\"पता अपडेट के लिए आपको अपने पुराने और नए पते के प्रमाण दिखाने होंगे\"},{\"text\":\"क्या आप मुझे बता सकते हैं कि पैन कार्ड अपडेट करने में आम तौर पर कितना वक्त लगता है\",\"context\":\"पैन अपडेट में आमतौर पर 7 से 10 दिन लगते हैं कृपया इंतजार करें\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 697,
+    "output_tokens": 466
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "batch_id": "en.delivery.wrong_or_damaged.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "wrong_or_damaged",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wrong item"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "damaged box"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "next Monday"
+    },
+    {
+      "context": "Would you like to replace the item or get a refund",
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "When would you like the replacement delivered",
+      "requested_bucket": "short",
+      "text": "next Monday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I received the wrong model of the mixer grinder from your store in Bangalore"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "The package I got from Delhi has a cracked screen on the smart watch I ordered"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "My parcel was supposed to have two pairs of shoes but only one was delivered"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you help me fix the issue with the damaged phone cover that came yesterday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "The saree I ordered from Chennai arrived with a big tear on the border"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I checked the box and the laptop bag inside is not the one I paid for"
+    },
+    {
+      "context": "Do you want a refund or a replacement for the damaged item",
+      "requested_bucket": "medium",
+      "text": "I would like a refund for the broken blender I got"
+    },
+    {
+      "context": "Can you describe what is wrong with your order",
+      "requested_bucket": "medium",
+      "text": "It was a blue denim jacket but they gave me a black one"
+    },
+    {
+      "context": "Is the address on the delivery correct",
+      "requested_bucket": "medium",
+      "text": "The delivery address on the parcel is correct but the product does not belong to me"
+    },
+    {
+      "context": "When did you receive the damaged item and where is the delivery location",
+      "requested_bucket": "medium",
+      "text": "Last evening I received a damaged crockery set at my home in Pune"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I placed an order for a Samsung fridge from your Mumbai store but instead got a washing machine which is completely wrong"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "The blender I received yesterday from your Hyderabad branch has a broken jar and I need it replaced urgently because I have guests coming"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Yesterday I got my order from your store in Jaipur but unfortunately the leather wallet has a scratch and does not look new"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I live at 22 MG Road, Bangalore and I got a damaged speaker box that is dented and the sound is not working properly after delivery"
+    },
+    {
+      "context": "Can you please provide your order number and what exactly was wrong with the delivery",
+      "requested_bucket": "long",
+      "text": "Yes the order number is 12345678 and I received the wrong book from your Pune outlet instead of the cookbook I had ordered"
+    },
+    {
+      "context": "Could you tell me your order details and what is the mismatch with the product received",
+      "requested_bucket": "long",
+      "text": "I ordered a pair of running shoes size 9 from your Kolkata warehouse and received size 7 which is too small and I cannot use them"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3823366992,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: wrong_or_damaged - received a wrong or damaged item\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"wrong item\"},{\"text\":\"damaged box\"},{\"text\":\"yes please\"},{\"text\":\"next Monday\"}],\"short_with_context\":[{\"text\":\"yes please\",\"context\":\"Would you like to replace the item or get a refund\"},{\"text\":\"next Monday\",\"context\":\"When would you like the replacement delivered\"}],\"medium\":[{\"text\":\"I received the wrong model of the mixer grinder from your store in Bangalore\"},{\"text\":\"The package I got from Delhi has a cracked screen on the smart watch I ordered\"},{\"text\":\"My parcel was supposed to have two pairs of shoes but only one was delivered\"},{\"text\":\"Can you help me fix the issue with the damaged phone cover that came yesterday\"},{\"text\":\"The saree I ordered from Chennai arrived with a big tear on the border\"},{\"text\":\"I checked the box and the laptop bag inside is not the one I paid for\"}],\"medium_with_context\":[{\"text\":\"I would like a refund for the broken blender I got\",\"context\":\"Do you want a refund or a replacement for the damaged item\"},{\"text\":\"It was a blue denim jacket but they gave me a black one\",\"context\":\"Can you describe what is wrong with your order\"},{\"text\":\"The delivery address on the parcel is correct but the product does not belong to me\",\"context\":\"Is the address on the delivery correct\"},{\"text\":\"Last evening I received a damaged crockery set at my home in Pune\",\"context\":\"When did you receive the damaged item and where is the delivery location\"}],\"long\":[{\"text\":\"I placed an order for a Samsung fridge from your Mumbai store but instead got a washing machine which is completely wrong\"},{\"text\":\"The blender I received yesterday from your Hyderabad branch has a broken jar and I need it replaced urgently because I have guests coming\"},{\"text\":\"Yesterday I got my order from your store in Jaipur but unfortunately the leather wallet has a scratch and does not look new\"},{\"text\":\"I live at 22 MG Road, Bangalore and I got a damaged speaker box that is dented and the sound is not working properly after delivery\"}],\"long_with_context\":[{\"text\":\"Yes the order number is 12345678 and I received the wrong book from your Pune outlet instead of the cookbook I had ordered\",\"context\":\"Can you please provide your order number and what exactly was wrong with the delivery\"},{\"text\":\"I ordered a pair of running shoes size 9 from your Kolkata warehouse and received size 7 which is too small and I cannot use them\",\"context\":\"Could you tell me your order details and what is the mismatch with the product received\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 567,
+    "output_tokens": 521
+  }
+}

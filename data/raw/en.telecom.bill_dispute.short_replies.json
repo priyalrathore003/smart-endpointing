@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.telecom.bill_dispute.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "bill_dispute",
+  "items": [
+    {
+      "context": "Can you please confirm your account number",
+      "requested_bucket": "short",
+      "text": "1234567890"
+    },
+    {
+      "context": "Is this the first time you are seeing this charge",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Did you make any international calls last month",
+      "requested_bucket": "short",
+      "text": "no"
+    },
+    {
+      "context": "Is the bill amount higher than usual",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Can you tell me the bill date",
+      "requested_bucket": "short",
+      "text": "25th april"
+    },
+    {
+      "context": "Are you seeing any extra data charges",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Have you checked for any roaming charges",
+      "requested_bucket": "short",
+      "text": "not yet"
+    },
+    {
+      "context": "Did you recently upgrade your plan",
+      "requested_bucket": "short",
+      "text": "no"
+    },
+    {
+      "context": "Is the disputed amount showing on your bill",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Are you the primary account holder",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Do you want me to send the bill details to your email",
+      "requested_bucket": "short",
+      "text": "okay"
+    },
+    {
+      "context": "Have you tried restarting your phone",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Is your payment status showing paid",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Would you like to speak with a billing specialist",
+      "requested_bucket": "short",
+      "text": "no"
+    },
+    {
+      "context": "Can you explain what seems to be wrong with your bill",
+      "requested_bucket": "medium",
+      "text": "the internet charges are much higher than i expected this month"
+    },
+    {
+      "context": "When did you notice this unexpected charge on your bill",
+      "requested_bucket": "medium",
+      "text": "i saw it on the bill i got last week on the fifteenth"
+    },
+    {
+      "context": "Could you specify which charge amount you believe is incorrect",
+      "requested_bucket": "medium",
+      "text": "there is a two thousand rupees charge for calls that i did not make"
+    },
+    {
+      "context": "Have you checked your call history for any unknown calls recently",
+      "requested_bucket": "medium",
+      "text": "yes i went through my call log and found no calls matching that charge"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 4249512198,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: bill_dispute - says a postpaid bill or charge is wrong\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Can you please confirm your account number\",\"reply\":\"1234567890\"},{\"agent_question\":\"Is this the first time you are seeing this charge\",\"reply\":\"yes\"},{\"agent_question\":\"Did you make any international calls last month\",\"reply\":\"no\"},{\"agent_question\":\"Is the bill amount higher than usual\",\"reply\":\"yes\"},{\"agent_question\":\"Can you tell me the bill date\",\"reply\":\"25th april\"},{\"agent_question\":\"Are you seeing any extra data charges\",\"reply\":\"yes\"},{\"agent_question\":\"Have you checked for any roaming charges\",\"reply\":\"not yet\"},{\"agent_question\":\"Did you recently upgrade your plan\",\"reply\":\"no\"},{\"agent_question\":\"Is the disputed amount showing on your bill\",\"reply\":\"yes\"},{\"agent_question\":\"Are you the primary account holder\",\"reply\":\"yes\"},{\"agent_question\":\"Do you want me to send the bill details to your email\",\"reply\":\"okay\"},{\"agent_question\":\"Have you tried restarting your phone\",\"reply\":\"yes\"},{\"agent_question\":\"Is your payment status showing paid\",\"reply\":\"yes\"},{\"agent_question\":\"Would you like to speak with a billing specialist\",\"reply\":\"no\"}],\"medium\":[{\"agent_question\":\"Can you explain what seems to be wrong with your bill\",\"reply\":\"the internet charges are much higher than i expected this month\"},{\"agent_question\":\"When did you notice this unexpected charge on your bill\",\"reply\":\"i saw it on the bill i got last week on the fifteenth\"},{\"agent_question\":\"Could you specify which charge amount you believe is incorrect\",\"reply\":\"there is a two thousand rupees charge for calls that i did not make\"},{\"agent_question\":\"Have you checked your call history for any unknown calls recently\",\"reply\":\"yes i went through my call log and found no calls matching that charge\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 368,
+    "output_tokens": 357
+  }
+}

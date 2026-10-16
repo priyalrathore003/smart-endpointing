@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.delivery.agent_unreachable.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "delivery",
+  "intent": "agent_unreachable",
+  "items": [
+    {
+      "context": "डिलीवरी पर्सन ने आपका कॉल उठा लिया क्या",
+      "requested_bucket": "short",
+      "text": "नहीं जी"
+    },
+    {
+      "context": "क्या आप पता ठीक से बता सकते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "डिलीवरी कब करनी है",
+      "requested_bucket": "short",
+      "text": "आज ही"
+    },
+    {
+      "context": "आपका पता कौन सा है",
+      "requested_bucket": "short",
+      "text": "गाँधी नगर"
+    },
+    {
+      "context": "डिलीवरी पर्सन को कॉल मार के देख लिया",
+      "requested_bucket": "short",
+      "text": "कॉल लगाया"
+    },
+    {
+      "context": "क्या डिलीवरी पर्सन को लोकेशन भेजा आपने",
+      "requested_bucket": "short",
+      "text": "हूँ भेजा"
+    },
+    {
+      "context": "पार्सल अभी तक मिला क्या",
+      "requested_bucket": "short",
+      "text": "नहीं मिला"
+    },
+    {
+      "context": "क्या आप फिर से नंबर शेयर कर सकते हैं",
+      "requested_bucket": "short",
+      "text": "जी शेयर कर दूंगा"
+    },
+    {
+      "context": "डिलीवरी पर्सन घर पर कोई और मिला क्या",
+      "requested_bucket": "short",
+      "text": "कोई नहीं था"
+    },
+    {
+      "context": "क्या आप फोन पर उपलब्ध हैं अभी",
+      "requested_bucket": "short",
+      "text": "हाँ अभी हूँ"
+    },
+    {
+      "context": "डिलीवरी पर्सन ने कही कि पता नहीं मिल रहा",
+      "requested_bucket": "short",
+      "text": "हाँ बोला"
+    },
+    {
+      "context": "क्या आपको OTP मैसेज मिला था",
+      "requested_bucket": "short",
+      "text": "मिला था"
+    },
+    {
+      "context": "क्या डिलीवरी भेजने की तारीख लिखी हुई है",
+      "requested_bucket": "short",
+      "text": "कल की है"
+    },
+    {
+      "context": "क्या आप जल्दी चाहिए डिलीवरी",
+      "requested_bucket": "short",
+      "text": "बहुत जल्दी"
+    },
+    {
+      "context": "डिलीवरी पर्सन कहाँ फंसा हुआ है",
+      "requested_bucket": "medium",
+      "text": "वो कॉल कर रहा था पर पता नहीं मिल पा रहा था"
+    },
+    {
+      "context": "कौन सा landmark पास में है आपके घर के",
+      "requested_bucket": "medium",
+      "text": "पास में बड़ा हस्पताल है जी और एक स्कूल भी"
+    },
+    {
+      "context": "आपको कितनी बार कॉल की डिलीवरी पर्सन ने",
+      "requested_bucket": "medium",
+      "text": "तीन चार बार कॉल किया हमने भी रिसीव किया"
+    },
+    {
+      "context": "क्या डिलीवरी पर्सन ने आपसे मिलने का कोई समय बताया",
+      "requested_bucket": "medium",
+      "text": "हुआ था जी कहा था दोपहर के बाद आएगा फिर कॉल किया"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3079299955,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: agent_unreachable - the delivery person is not answering or cannot find the address\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"डिलीवरी पर्सन ने आपका कॉल उठा लिया क्या\",\"reply\":\"नहीं जी\"},{\"agent_question\":\"क्या आप पता ठीक से बता सकते हैं\",\"reply\":\"हाँ जी\"},{\"agent_question\":\"डिलीवरी कब करनी है\",\"reply\":\"आज ही\"},{\"agent_question\":\"आपका पता कौन सा है\",\"reply\":\"गाँधी नगर\"},{\"agent_question\":\"डिलीवरी पर्सन को कॉल मार के देख लिया\",\"reply\":\"कॉल लगाया\"},{\"agent_question\":\"क्या डिलीवरी पर्सन को लोकेशन भेजा आपने\",\"reply\":\"हूँ भेजा\"},{\"agent_question\":\"पार्सल अभी तक मिला क्या\",\"reply\":\"नहीं मिला\"},{\"agent_question\":\"क्या आप फिर से नंबर शेयर कर सकते हैं\",\"reply\":\"जी शेयर कर दूंगा\"},{\"agent_question\":\"डिलीवरी पर्सन घर पर कोई और मिला क्या\",\"reply\":\"कोई नहीं था\"},{\"agent_question\":\"क्या आप फोन पर उपलब्ध हैं अभी\",\"reply\":\"हाँ अभी हूँ\"},{\"agent_question\":\"डिलीवरी पर्सन ने कही कि पता नहीं मिल रहा\",\"reply\":\"हाँ बोला\"},{\"agent_question\":\"क्या आपको OTP मैसेज मिला था\",\"reply\":\"मिला था\"},{\"agent_question\":\"क्या डिलीवरी भेजने की तारीख लिखी हुई है\",\"reply\":\"कल की है\"},{\"agent_question\":\"क्या आप जल्दी चाहिए डिलीवरी\",\"reply\":\"बहुत जल्दी\"}],\"medium\":[{\"agent_question\":\"डिलीवरी पर्सन कहाँ फंसा हुआ है\",\"reply\":\"वो कॉल कर रहा था पर पता नहीं मिल पा रहा था\"},{\"agent_question\":\"कौन सा landmark पास में है आपके घर के\",\"reply\":\"पास में बड़ा हस्पताल है जी और एक स्कूल भी\"},{\"agent_question\":\"आपको कितनी बार कॉल की डिलीवरी पर्सन ने\",\"reply\":\"तीन चार बार कॉल किया हमने भी रिसीव किया\"},{\"agent_question\":\"क्या डिलीवरी पर्सन ने आपसे मिलने का कोई समय बताया\",\"reply\":\"हुआ था जी कहा था दोपहर के बाद आएगा फिर कॉल किया\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 500,
+    "output_tokens": 419
+  }
+}

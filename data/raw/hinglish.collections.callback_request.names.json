@@ -1,0 +1,187 @@
+{
+  "batch_id": "hinglish.collections.callback_request.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "callback_request",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal call karna"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "shaam ko"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "thik hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kya karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "firse call kar lena"
+    },
+    {
+      "context": "Aap kab call receive kar sakte hain?",
+      "requested_bucket": "short",
+      "text": "shaam ko"
+    },
+    {
+      "context": "Kab call karna chahenge aap?",
+      "requested_bucket": "short",
+      "text": "kal dopahar"
+    },
+    {
+      "context": "Kya aap kal call lena chahenge?",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Mujhe call karna hai kal subah timing mein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Main abhi phone pe busy hoon baad mein baat karenge"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Kya aap kal mere office pe contact kar sakte hain?"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Mera naam Rahul Singh hai jo pending dues ke baare mein baat karni hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Kal dopahar do baje call kar lena mera address Delhi mein hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Mujhe delayed payment ko lekar call karna hai kal hi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Shaam ko call kar lena mujhe address bhej do pehle"
+    },
+    {
+      "context": "Aap apna naam batayenge?",
+      "requested_bucket": "medium",
+      "text": "Mera naam Priya hai main kal call karna chahti hoon"
+    },
+    {
+      "context": "Aapke account mein kitni quantity pending hai?",
+      "requested_bucket": "medium",
+      "text": "Main karib 5000 rupees pending rakhta hoon call karna hai mujhe"
+    },
+    {
+      "context": "Aapka address kya hai?",
+      "requested_bucket": "medium",
+      "text": "Jee main address Pune mein hai kal subah me call karenge"
+    },
+    {
+      "context": "Kya abhi call lena mumkin hai?",
+      "requested_bucket": "medium",
+      "text": "Main call receive nahi kar paunga abhi isliye kal karna please"
+    },
+    {
+      "context": "Aapko kab call mil sakti hai?",
+      "requested_bucket": "medium",
+      "text": "Mujhe kal shaam 6 baje tak phone karna confirmation chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Main Bengaluru se bol raha hoon mera naam Anil Kumar aur kal dopahar baad mein call karna"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Mera account Mumbai mein registered hai aur main chunta hoon agle hafte call back milega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Mujhe apne pending balance ke baare mein kuch saaf saaf jankari chahiye phone par kal subah baat karenge"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Kal main apne ghar par available nahin hoon isliye shukravaar ko shaam ke 7 baje call kar lena"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Maine 3 din pehle payment kiya tha magar abhi tak update nahin hua hai to call kar lena please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Mera pta hai New Delhi mein 25 sector mein please kal dopahar 2 baje call kar lena mujhe"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Main aapke department mein call karna chahata hoon kyunki payment delay hua hai to call kar lena kal"
+    },
+    {
+      "context": "Aap kab call lene ke liye free honge?",
+      "requested_bucket": "long",
+      "text": "Mujhe kal dopahar baad mein call karna hai kyunki main abhi kaam mein hoon thoda busy hoon"
+    },
+    {
+      "context": "Aap apna naam aur jagah bataenge?",
+      "requested_bucket": "long",
+      "text": "Mera naam Sunita Sharma hai aur main Lucknow se baat kar rahi hoon payment confirmation ke liye kal call karoge"
+    },
+    {
+      "context": "Aapko call kis wajah se chahiye?",
+      "requested_bucket": "long",
+      "text": "Main apne account statement ko lekar thoda confusion mein hoon isliye kal subah 11 baje call karna"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1674029762,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: callback_request - asks the agent to call back at another time\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"kal call karna\"},{\"text\":\"haan ji\"},{\"text\":\"shaam ko\"},{\"text\":\"thik hai\"},{\"text\":\"kya karna hai\"},{\"text\":\"firse call kar lena\"}],\"short_with_context\":[{\"text\":\"shaam ko\",\"context\":\"Aap kab call receive kar sakte hain?\"},{\"text\":\"kal dopahar\",\"context\":\"Kab call karna chahenge aap?\"},{\"text\":\"haan ji\",\"context\":\"Kya aap kal call lena chahenge?\"}],\"medium\":[{\"text\":\"Mujhe call karna hai kal subah timing mein\"},{\"text\":\"Main abhi phone pe busy hoon baad mein baat karenge\"},{\"text\":\"Kya aap kal mere office pe contact kar sakte hain?\"},{\"text\":\"Mera naam Rahul Singh hai jo pending dues ke baare mein baat karni hai\"},{\"text\":\"Kal dopahar do baje call kar lena mera address Delhi mein hai\"},{\"text\":\"Mujhe delayed payment ko lekar call karna hai kal hi\"},{\"text\":\"Shaam ko call kar lena mujhe address bhej do pehle\"}],\"medium_with_context\":[{\"text\":\"Mera naam Priya hai main kal call karna chahti hoon\",\"context\":\"Aap apna naam batayenge?\"},{\"text\":\"Main karib 5000 rupees pending rakhta hoon call karna hai mujhe\",\"context\":\"Aapke account mein kitni quantity pending hai?\"},{\"text\":\"Jee main address Pune mein hai kal subah me call karenge\",\"context\":\"Aapka address kya hai?\"},{\"text\":\"Main call receive nahi kar paunga abhi isliye kal karna please\",\"context\":\"Kya abhi call lena mumkin hai?\"},{\"text\":\"Mujhe kal shaam 6 baje tak phone karna confirmation chahiye\",\"context\":\"Aapko kab call mil sakti hai?\"}],\"long\":[{\"text\":\"Main Bengaluru se bol raha hoon mera naam Anil Kumar aur kal dopahar baad mein call karna\"},{\"text\":\"Mera account Mumbai mein registered hai aur main chunta hoon agle hafte call back milega\"},{\"text\":\"Mujhe apne pending balance ke baare mein kuch saaf saaf jankari chahiye phone par kal subah baat karenge\"},{\"text\":\"Kal main apne ghar par available nahin hoon isliye shukravaar ko shaam ke 7 baje call kar lena\"},{\"text\":\"Maine 3 din pehle payment kiya tha magar abhi tak update nahin hua hai to call kar lena please\"},{\"text\":\"Mera pta hai New Delhi mein 25 sector mein please kal dopahar 2 baje call kar lena mujhe\"},{\"text\":\"Main aapke department mein call karna chahata hoon kyunki payment delay hua hai to call kar lena kal\"}],\"long_with_context\":[{\"text\":\"Mujhe kal dopahar baad mein call karna hai kyunki main abhi kaam mein hoon thoda busy hoon\",\"context\":\"Aap kab call lene ke liye free honge?\"},{\"text\":\"Mera naam Sunita Sharma hai aur main Lucknow se baat kar rahi hoon payment confirmation ke liye kal call karoge\",\"context\":\"Aap apna naam aur jagah bataenge?\"},{\"text\":\"Main apne account statement ko lekar thoda confusion mein hoon isliye kal subah 11 baje call karna\",\"context\":\"Aapko call kis wajah se chahiye?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 588,
+    "output_tokens": 739
+  }
+}

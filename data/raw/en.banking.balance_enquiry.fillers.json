@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.banking.balance_enquiry.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "balance_enquiry",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "balance please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "last three transactions"
+    },
+    {
+      "context": "Would you like to check your account balance?",
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "For which period do you want the transaction details?",
+      "requested_bucket": "short",
+      "text": "this month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umm can you please tell me my current account balance"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to know the last five transactions I did actually"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "could you check the balance in my savings account now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "so I was checking my account umm tell me my balance"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I mean can you find out how much money I have right now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "uh can you tell me my account balance as of yesterday"
+    },
+    {
+      "context": "Do you want to check your available balance or last transaction?",
+      "requested_bucket": "medium",
+      "text": "um yes i want to check the available balance in my account"
+    },
+    {
+      "context": "Which dates of transactions are you interested in?",
+      "requested_bucket": "medium",
+      "text": "actually I need the transactions from last week including Tuesday no Wednesday"
+    },
+    {
+      "context": "Do you want information on recent salary credit transactions?",
+      "requested_bucket": "medium",
+      "text": "yeah I want to see if my salary got credited last friday no thursday"
+    },
+    {
+      "context": "Do you want balance details or transaction history for your savings account?",
+      "requested_bucket": "medium",
+      "text": "please tell me the balance and recent transactions of my savings account"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I was trying to remember but can you please tell me my exact account balance as of today morning"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I think I made some payments last Tuesday no, wait Wednesday so can you check my last five transactions"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "actually I am worried about a withdrawal that happened on last Saturday no Sunday so could you confirm"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "could you please tell me the detailed statement of my account for the last ten days starting from Monday"
+    },
+    {
+      "context": "Do you want the balance after recent transactions or the full statement?",
+      "requested_bucket": "long",
+      "text": "Can you please help me understand what is the exact balance in my account after recent transactions"
+    },
+    {
+      "context": "Are you asking about a specific transaction on Wednesday?",
+      "requested_bucket": "long",
+      "text": "I want to check if the rent payment I made on Wednesday reflected in my account or not"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2351234605,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: balance_enquiry - asks for their account balance or recent transactions\nLanguage: Indian English, Latin script.\nStyle for this batch: with fillers and hesitations (umm, uh, like, actually, I mean); at least a third include a self-correction ('Tuesday, no, Wednesday')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"balance please\"},{\"text\":\"last three transactions\"}],\"short_with_context\":[{\"text\":\"yes please\",\"context\":\"Would you like to check your account balance?\"},{\"text\":\"this month\",\"context\":\"For which period do you want the transaction details?\"}],\"medium\":[{\"text\":\"umm can you please tell me my current account balance\"},{\"text\":\"I want to know the last five transactions I did actually\"},{\"text\":\"could you check the balance in my savings account now\"},{\"text\":\"so I was checking my account umm tell me my balance\"},{\"text\":\"I mean can you find out how much money I have right now\"},{\"text\":\"uh can you tell me my account balance as of yesterday\"}],\"medium_with_context\":[{\"text\":\"um yes i want to check the available balance in my account\",\"context\":\"Do you want to check your available balance or last transaction?\"},{\"text\":\"actually I need the transactions from last week including Tuesday no Wednesday\",\"context\":\"Which dates of transactions are you interested in?\"},{\"text\":\"yeah I want to see if my salary got credited last friday no thursday\",\"context\":\"Do you want information on recent salary credit transactions?\"},{\"text\":\"please tell me the balance and recent transactions of my savings account\",\"context\":\"Do you want balance details or transaction history for your savings account?\"}],\"long\":[{\"text\":\"I was trying to remember but can you please tell me my exact account balance as of today morning\"},{\"text\":\"I think I made some payments last Tuesday no, wait Wednesday so can you check my last five transactions\"},{\"text\":\"actually I am worried about a withdrawal that happened on last Saturday no Sunday so could you confirm\"},{\"text\":\"could you please tell me the detailed statement of my account for the last ten days starting from Monday\"}],\"long_with_context\":[{\"text\":\"Can you please help me understand what is the exact balance in my account after recent transactions\",\"context\":\"Do you want the balance after recent transactions or the full statement?\"},{\"text\":\"I want to check if the rent payment I made on Wednesday reflected in my account or not\",\"context\":\"Are you asking about a specific transaction on Wednesday?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 588,
+    "output_tokens": 439
+  }
+}

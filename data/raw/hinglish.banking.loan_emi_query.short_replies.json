@@ -1,0 +1,147 @@
+{
+  "batch_id": "hinglish.banking.loan_emi_query.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "banking",
+  "intent": "loan_emi_query",
+  "items": [
+    {
+      "context": "Aapko kaunsa loan EMI check karna hai",
+      "requested_bucket": "short",
+      "text": "Car loan"
+    },
+    {
+      "context": "Aapka loan account number kya hai",
+      "requested_bucket": "short",
+      "text": "1234567890"
+    },
+    {
+      "context": "Kitni EMI deni hai aapko",
+      "requested_bucket": "short",
+      "text": "Pachaas hazaar"
+    },
+    {
+      "context": "Agli EMI kab due hai",
+      "requested_bucket": "short",
+      "text": "Pachis March"
+    },
+    {
+      "context": "EMI ki raqam confirm karna chahte hain",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Kya aapne abhi tak EMI pay ki hai",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Aapko EMI kaise deduct karna hai",
+      "requested_bucket": "short",
+      "text": "Auto debit"
+    },
+    {
+      "context": "Kya aapko EMI deduction slip chahiye",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Aapke account mein paise hain kya",
+      "requested_bucket": "short",
+      "text": "Haan hain"
+    },
+    {
+      "context": "Kitni baar EMI miss hui hai",
+      "requested_bucket": "short",
+      "text": "Do baar"
+    },
+    {
+      "context": "EMI deduction ka confirmation chahiye",
+      "requested_bucket": "short",
+      "text": "Chahiye"
+    },
+    {
+      "context": "Kya aapko due date badhwana hai",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kya aapko repayment schedule chahiye",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Loan ki total amount kitni hai",
+      "requested_bucket": "short",
+      "text": "Pache lakh"
+    },
+    {
+      "context": "Aapka loan sanction kab hua tha",
+      "requested_bucket": "short",
+      "text": "Ek saal pehle"
+    },
+    {
+      "context": "Kitna balance bacha hai loan mein",
+      "requested_bucket": "short",
+      "text": "Teen lakh"
+    },
+    {
+      "context": "Aapka mobile number kya hai",
+      "requested_bucket": "short",
+      "text": "9876543210"
+    },
+    {
+      "context": "EMI pay karne ke liye aapka preferred tareekh kya hai",
+      "requested_bucket": "medium",
+      "text": "Mujhe har mahine pachis tareekh theek lagti hai"
+    },
+    {
+      "context": "Aapke account se EMI ka deduction hua ya nahi confirm karein",
+      "requested_bucket": "medium",
+      "text": "Abhi tak kuch paise deduct nahi hue hain"
+    },
+    {
+      "context": "Agar EMI mein koi dikkat hai toh bataiye",
+      "requested_bucket": "medium",
+      "text": "Kuch technical issue ki wajah se payment nahi ho paya"
+    },
+    {
+      "context": "Aapko koi reminder message chahiye EMI due hone par",
+      "requested_bucket": "medium",
+      "text": "Haan ji mujhe ek din pehle SMS bhejna"
+    },
+    {
+      "context": "EMI ki amount badalne ki koi request hai kya",
+      "requested_bucket": "medium",
+      "text": "Nahi abhi tak koi request nahi ki hai"
+    },
+    {
+      "context": "Kya aapko loan ke baaki balance ka statement chahiye",
+      "requested_bucket": "medium",
+      "text": "Haan kal tak email kar dijiye please"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2736468093,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: loan_emi_query - asks about a loan EMI amount, due date or a deduction\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Aapko kaunsa loan EMI check karna hai\",\"reply\":\"Car loan\"},{\"agent_question\":\"Aapka loan account number kya hai\",\"reply\":\"1234567890\"},{\"agent_question\":\"Kitni EMI deni hai aapko\",\"reply\":\"Pachaas hazaar\"},{\"agent_question\":\"Agli EMI kab due hai\",\"reply\":\"Pachis March\"},{\"agent_question\":\"EMI ki raqam confirm karna chahte hain\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Kya aapne abhi tak EMI pay ki hai\",\"reply\":\"Nahi\"},{\"agent_question\":\"Aapko EMI kaise deduct karna hai\",\"reply\":\"Auto debit\"},{\"agent_question\":\"Kya aapko EMI deduction slip chahiye\",\"reply\":\"Haan\"},{\"agent_question\":\"Aapke account mein paise hain kya\",\"reply\":\"Haan hain\"},{\"agent_question\":\"Kitni baar EMI miss hui hai\",\"reply\":\"Do baar\"},{\"agent_question\":\"EMI deduction ka confirmation chahiye\",\"reply\":\"Chahiye\"},{\"agent_question\":\"Kya aapko due date badhwana hai\",\"reply\":\"Nahi\"},{\"agent_question\":\"Kya aapko repayment schedule chahiye\",\"reply\":\"Haan\"},{\"agent_question\":\"Loan ki total amount kitni hai\",\"reply\":\"Pache lakh\"},{\"agent_question\":\"Aapka loan sanction kab hua tha\",\"reply\":\"Ek saal pehle\"},{\"agent_question\":\"Kitna balance bacha hai loan mein\",\"reply\":\"Teen lakh\"},{\"agent_question\":\"Aapka mobile number kya hai\",\"reply\":\"9876543210\"}],\"medium\":[{\"agent_question\":\"EMI pay karne ke liye aapka preferred tareekh kya hai\",\"reply\":\"Mujhe har mahine pachis tareekh theek lagti hai\"},{\"agent_question\":\"Aapke account se EMI ka deduction hua ya nahi confirm karein\",\"reply\":\"Abhi tak kuch paise deduct nahi hue hain\"},{\"agent_question\":\"Agar EMI mein koi dikkat hai toh bataiye\",\"reply\":\"Kuch technical issue ki wajah se payment nahi ho paya\"},{\"agent_question\":\"Aapko koi reminder message chahiye EMI due hone par\",\"reply\":\"Haan ji mujhe ek din pehle SMS bhejna\"},{\"agent_question\":\"EMI ki amount badalne ki koi request hai kya\",\"reply\":\"Nahi abhi tak koi request nahi ki hai\"},{\"agent_question\":\"Kya aapko loan ke baaki balance ka statement chahiye\",\"reply\":\"Haan kal tak email kar dijiye please\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 399,
+    "output_tokens": 522
+  }
+}

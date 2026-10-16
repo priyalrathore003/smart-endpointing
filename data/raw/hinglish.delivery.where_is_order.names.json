@@ -1,0 +1,237 @@
+{
+  "batch_id": "hinglish.delivery.where_is_order.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "where_is_order",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kya hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kab aayega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "hai delivery status"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "thoda der"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "order kaha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mera parcel"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "receipt chahiye"
+    },
+    {
+      "context": "Aapka order abhi kaha tak pahucha hai",
+      "requested_bucket": "short",
+      "text": "aur delivery kab hogi"
+    },
+    {
+      "context": "Aap please apna address bata sakte hain",
+      "requested_bucket": "short",
+      "text": "sirf address confirm karna hai"
+    },
+    {
+      "context": "Kya aap order number share kar sakte hain?",
+      "requested_bucket": "short",
+      "text": "haan ji confirm kar do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera order Delhi me hi block ho gaya hai kya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "aj ka delivery update chahiye mera address Gurgaon hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mere naam par ek parcel aana tha Mumbai se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aapko pata hai ki mera package kis stage me hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine apne account se payment kar diya tha kal"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap please mere delivery agent se baat kar sakte hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mare order me missent ka koi issue to nahi hua na"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "delivery boy ne mujhe kal call karne ko bola tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap confirm kar sakte hain ki mera order dispatch ho chuka hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera parcel kahaan tak pohucha hai aur estimated time kya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "order ko time pe deliver karna hai mera address Bandra West mein hai"
+    },
+    {
+      "context": "Kya aap apna delivery address confirm kar sakte hain",
+      "requested_bucket": "medium",
+      "text": "haan wo address wahi hai jo maine diya tha"
+    },
+    {
+      "context": "Abhi tak aapne order ka koi update dekha hai kya",
+      "requested_bucket": "medium",
+      "text": "order tracking me last update last night 8 baje ka tha"
+    },
+    {
+      "context": "Kya aap batayenge ke aapka package kis city se dispatch hua tha",
+      "requested_bucket": "medium",
+      "text": "mera parcel chennai se aana tha lekin delivery pending dikha raha hai"
+    },
+    {
+      "context": "Aap apni location bata sakte hain jahaan parcel deliver hona tha",
+      "requested_bucket": "medium",
+      "text": "main Mumbai me hi hoon aur parcel late kyun hai kya reason hai"
+    },
+    {
+      "context": "Aapko order ka batch number pata hai ya nahi",
+      "requested_bucket": "medium",
+      "text": "kya aap mujhe batch number aur order delivery ki date bata sakte ho"
+    },
+    {
+      "context": "Kya aapko delivery executive ka contact chahiye",
+      "requested_bucket": "medium",
+      "text": "delivery boy ka contact number dena please mujhe problem ho rahi hai"
+    },
+    {
+      "context": "Kya aap apna order jaldi receive karna chahte hain",
+      "requested_bucket": "medium",
+      "text": "order ko jaldi deliver karne ke liye kuch kar sakte hai kya"
+    },
+    {
+      "context": "Kya aap check kar sakte hain ki aapka order abhi kaha hai",
+      "requested_bucket": "medium",
+      "text": "kya mera parcel abhi out for delivery hai"
+    },
+    {
+      "context": "Aapka parcel kis city me derail hua hai",
+      "requested_bucket": "medium",
+      "text": "kya mera parcel manish nagar Nagpur tak pohoch gaya hai"
+    },
+    {
+      "context": "Apko estimated delivery time chahiye ya exact delivery date",
+      "requested_bucket": "medium",
+      "text": "kya aap mujhe delivery ke liye expected time bata sakte hain"
+    },
+    {
+      "context": "Kya aapko apna order cancel karna hai ya refund karna hai",
+      "requested_bucket": "medium",
+      "text": "order abhi tak dispatch kyu nahi hua mujhe refund chahiye"
+    },
+    {
+      "context": "Order aapne kab book kiya tha aur expected delivery kab ki thi",
+      "requested_bucket": "medium",
+      "text": "mera order kal aana tha par abhi tak status update nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main Arjun hoon Chennai se aur mera ek parcel abhi tak deliver nahi hua hai main janna chahta hoon ki iska kya status hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera naam Pooja Singh hai aur mera order jo Lucknow mein deliver hona tha wo abhi tak pending hi hai kripya update de sakte hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main Mumbai me rehti hoon aur mera ek piece order 3 din pehle book hua tha lekin tracking mein wo abhi tak dispatch hua show nahi kar raha hai"
+    },
+    {
+      "context": "Kya aap mujhe bata sakte hain ki aapka delivery address kya hai",
+      "requested_bucket": "long",
+      "text": "Aap se poochhna tha mera address correct hai par delivery mein itni der kyun ho rahi hai mujhe Kolkata se parcel aana tha par abhi tak receive nahi hua"
+    },
+    {
+      "context": "Kya aap apni last order ki details share kar sakte hain",
+      "requested_bucket": "long",
+      "text": "Mujhe kal se bar bar call aaraha hai ki mera parcel Chennai se dispatch ho gaya hai par main abhi tak receive nahi kar paya hoon iske baare mein jankari chahiye"
+    },
+    {
+      "context": "Aap mujhe thodi aur information de sakte hain aapke order ke baare mein",
+      "requested_bucket": "long",
+      "text": "Namaste mujhe mera parcel last week order kiya tha jo Delhi ke Pitampura area mein deliver hona tha wo abhi tak nahi mila hai kripya iska status update kariye"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 4077621313,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: where_is_order - asks where their order or parcel is\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"kya hua\"},{\"text\":\"kab aayega\"},{\"text\":\"hai delivery status\"}, {\"text\":\"kal tak\"},{\"text\":\"haan ji\"},{\"text\":\"thoda der\"},{\"text\":\"order kaha hai\"},{\"text\":\"mera parcel\"},{\"text\":\"receipt chahiye\"}],\"short_with_context\":[{\"text\":\"aur delivery kab hogi\",\"context\":\"Aapka order abhi kaha tak pahucha hai\"}, {\"text\":\"sirf address confirm karna hai\",\"context\":\"Aap please apna address bata sakte hain\"}, {\"text\":\"haan ji confirm kar do\",\"context\":\"Kya aap order number share kar sakte hain?\"}], \"medium\":[{\"text\":\"mera order Delhi me hi block ho gaya hai kya\"}, {\"text\":\"aj ka delivery update chahiye mera address Gurgaon hai\"}, {\"text\":\"mere naam par ek parcel aana tha Mumbai se\"}, {\"text\":\"kya aapko pata hai ki mera package kis stage me hai\"}, {\"text\":\"maine apne account se payment kar diya tha kal\"},{\"text\":\"kya aap please mere delivery agent se baat kar sakte hain\"}, {\"text\":\"mare order me missent ka koi issue to nahi hua na\"}, {\"text\":\"delivery boy ne mujhe kal call karne ko bola tha\"}, {\"text\":\"kya aap confirm kar sakte hain ki mera order dispatch ho chuka hai\"}, {\"text\":\"mera parcel kahaan tak pohucha hai aur estimated time kya hai\"}, {\"text\":\"order ko time pe deliver karna hai mera address Bandra West mein hai\"}],\"medium_with_context\":[{\"text\":\"haan wo address wahi hai jo maine diya tha\",\"context\":\"Kya aap apna delivery address confirm kar sakte hain\"}, {\"text\":\"order tracking me last update last night 8 baje ka tha\",\"context\":\"Abhi tak aapne order ka koi update dekha hai kya\"}, {\"text\":\"mera parcel chennai se aana tha lekin delivery pending dikha raha hai\",\"context\":\"Kya aap batayenge ke aapka package kis city se dispatch hua tha\"}, {\"text\":\"main Mumbai me hi hoon aur parcel late kyun hai kya reason hai\",\"context\":\"Aap apni location bata sakte hain jahaan parcel deliver hona tha\"}, {\"text\":\"kya aap mujhe batch number aur order delivery ki date bata sakte ho\",\"context\":\"Aapko order ka batch number pata hai ya nahi\"}, {\"text\":\"delivery boy ka contact number dena please mujhe problem ho rahi hai\",\"context\":\"Kya aapko delivery executive ka contact chahiye\"}, {\"text\":\"order ko jaldi deliver karne ke liye kuch kar sakte hai kya\",\"context\":\"Kya aap apna order jaldi receive karna chahte hain\"}, {\"text\":\"kya mera parcel abhi out for delivery hai\",\"context\":\"Kya aap check kar sakte hain ki aapka order abhi kaha hai\"}, {\"text\":\"kya mera parcel manish nagar Nagpur tak pohoch gaya hai\",\"context\":\"Aapka parcel kis city me derail hua hai\"}, {\"text\":\"kya aap mujhe delivery ke liye expected time bata sakte hain\",\"context\":\"Apko estimated delivery time chahiye ya exact delivery date\"}, {\"text\":\"order abhi tak dispatch kyu nahi hua mujhe refund chahiye\",\"context\":\"Kya aapko apna order cancel karna hai ya refund karna hai\"}, {\"text\":\"mera order kal aana tha par abhi tak status update nahi hai\",\"context\":\"Order aapne kab book kiya tha aur expected delivery kab ki thi\"}],\"long\":[{\"text\":\"main Arjun hoon Chennai se aur mera ek parcel abhi tak deliver nahi hua hai main janna chahta hoon ki iska kya status hai\"}, {\"text\":\"mera naam Pooja Singh hai aur mera order jo Lucknow mein deliver hona tha wo abhi tak pending hi hai kripya update de sakte hain\"}, {\"text\":\"main Mumbai me rehti hoon aur mera ek piece order 3 din pehle book hua tha lekin tracking mein wo abhi tak dispatch hua show nahi kar raha hai\"}],\"long_with_context\":[{\"text\":\"Aap se poochhna tha mera address correct hai par delivery mein itni der kyun ho rahi hai mujhe Kolkata se parcel aana tha par abhi tak receive nahi hua\",\"context\":\"Kya aap mujhe bata sakte hain ki aapka delivery address kya hai\"}, {\"text\":\"Mujhe kal se bar bar call aaraha hai ki mera parcel Chennai se dispatch ho gaya hai par main abhi tak receive nahi kar paya hoon iske baare mein jankari chahiye\",\"context\":\"Kya aap apni last order ki details share kar sakte hain\"}, {\"text\":\"Namaste mujhe mera parcel last week order kiya tha jo Delhi ke Pitampura area mein deliver hona tha wo abhi tak nahi mila hai kripya iska status update kariye\",\"context\":\"Aap mujhe thodi aur information de sakte hain aapke order ke baare mein\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 587,
+    "output_tokens": 1062
+  }
+}

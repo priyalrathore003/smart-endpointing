@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.collections.promise_to_pay.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "promise_to_pay",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "do din me"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "week ke andar"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paise bhej dunga"
+    },
+    {
+      "context": "Kab payment kar sakte hain aap?",
+      "requested_bucket": "short",
+      "text": "kal hi kar dunga"
+    },
+    {
+      "context": "Payment kab tak jaldi karenge aap?",
+      "requested_bucket": "short",
+      "text": "do hafton me"
+    },
+    {
+      "context": "Kya aap payment date confirm kar sakte hain?",
+      "requested_bucket": "short",
+      "text": "thik hai ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mai 5000 rupees 15 april ko jama kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine kal paise transfer kiye the thoda late ho gaya tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "meri salary 20 april ko aati hai uske baad bhej dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mujhe 10 din chahiye payment ke liye may be thoda late hoga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main next week me poora amount clear kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main delhi me hoon aur 5 tarik ko payment kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please thoda time dijiye 7 din ke andar paise jama kar dunga"
+    },
+    {
+      "context": "Kab tak payment possible hai aapke liye?",
+      "requested_bucket": "medium",
+      "text": "main 3500 rupees 22 april ko bhej dunga"
+    },
+    {
+      "context": "Partial payment kar sakte hain kya abhi?",
+      "requested_bucket": "medium",
+      "text": "maine thoda paisa bhej diya baaki chhota amount 2 din me dunga"
+    },
+    {
+      "context": "Aapko pura amount kab tak dena hai?",
+      "requested_bucket": "medium",
+      "text": "main apne dost ke paas se 25 april tak paise lekar bhej dunga"
+    },
+    {
+      "context": "Kya aap payment date confirm kar sakte hain?",
+      "requested_bucket": "medium",
+      "text": "thik hai 3 din me paise transfer kar dunga"
+    },
+    {
+      "context": "Aap payment kab tak kar denge?",
+      "requested_bucket": "medium",
+      "text": "hume 20 april tak payment mil jayega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera naam Amit Kumar hai aur main Bangalore se bol raha hoon main 30 april tak paise jama kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine 12 april ko payment karna tha lekin thoda kaam tha isliye 19 april tak payment kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera address sector 12 Noida hai main Mumbai me hoon abhi aur 25 april tak settle kar dunga payment"
+    },
+    {
+      "context": "Kya aap apna naam aur address confirm kar sakte hain?",
+      "requested_bucket": "long",
+      "text": "mera naam Ravi Sharma hai main Dwarka Delhi se hoon aur main 28 april tak poora amount renew kar dunga"
+    },
+    {
+      "context": "Kya aap apna current location aur payment date bata sakte hain?",
+      "requested_bucket": "long",
+      "text": "main Kolkata me hoon mera address Salt Lake City hai aur 5 may tak aapka payment clear kar dunga"
+    },
+    {
+      "context": "Kya aap humse apna account number share kar sakte hain?",
+      "requested_bucket": "long",
+      "text": "main payment me thoda late ho raha hoon mera account no 56789123 hai mujhe 10 din aur chahiye please"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3069196361,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: promise_to_pay - replies to a payment reminder with a date or amount they will pay\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"kal tak\"},{\"text\":\"do din me\"},{\"text\":\"theek hai\"},{\"text\":\"haan ji\"},{\"text\":\"week ke andar\"},{\"text\":\"paise bhej dunga\"}],\"short_with_context\":[{\"text\":\"kal hi kar dunga\",\"context\":\"Kab payment kar sakte hain aap?\"},{\"text\":\"do hafton me\",\"context\":\"Payment kab tak jaldi karenge aap?\"},{\"text\":\"thik hai ji\",\"context\":\"Kya aap payment date confirm kar sakte hain?\"}],\"medium\":[{\"text\":\"mai 5000 rupees 15 april ko jama kar dunga\"},{\"text\":\"maine kal paise transfer kiye the thoda late ho gaya tha\"},{\"text\":\"meri salary 20 april ko aati hai uske baad bhej dunga\"},{\"text\":\"mujhe 10 din chahiye payment ke liye may be thoda late hoga\"},{\"text\":\"main next week me poora amount clear kar dunga\"},{\"text\":\"main delhi me hoon aur 5 tarik ko payment kar dunga\"},{\"text\":\"please thoda time dijiye 7 din ke andar paise jama kar dunga\"}],\"medium_with_context\":[{\"text\":\"main 3500 rupees 22 april ko bhej dunga\",\"context\":\"Kab tak payment possible hai aapke liye?\"},{\"text\":\"maine thoda paisa bhej diya baaki chhota amount 2 din me dunga\",\"context\":\"Partial payment kar sakte hain kya abhi?\"},{\"text\":\"main apne dost ke paas se 25 april tak paise lekar bhej dunga\",\"context\":\"Aapko pura amount kab tak dena hai?\"},{\"text\":\"thik hai 3 din me paise transfer kar dunga\",\"context\":\"Kya aap payment date confirm kar sakte hain?\"},{\"text\":\"hume 20 april tak payment mil jayega\",\"context\":\"Aap payment kab tak kar denge?\"}],\"long\":[{\"text\":\"mera naam Amit Kumar hai aur main Bangalore se bol raha hoon main 30 april tak paise jama kar dunga\"},{\"text\":\"maine 12 april ko payment karna tha lekin thoda kaam tha isliye 19 april tak payment kar dunga\"},{\"text\":\"mera address sector 12 Noida hai main Mumbai me hoon abhi aur 25 april tak settle kar dunga payment\"}],\"long_with_context\":[{\"text\":\"mera naam Ravi Sharma hai main Dwarka Delhi se hoon aur main 28 april tak poora amount renew kar dunga\",\"context\":\"Kya aap apna naam aur address confirm kar sakte hain?\"},{\"text\":\"main Kolkata me hoon mera address Salt Lake City hai aur 5 may tak aapka payment clear kar dunga\",\"context\":\"Kya aap apna current location aur payment date bata sakte hain?\"},{\"text\":\"main payment me thoda late ho raha hoon mera account no 56789123 hai mujhe 10 din aur chahiye please\",\"context\":\"Kya aap humse apna account number share kar sakte hain?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 593,
+    "output_tokens": 644
+  }
+}

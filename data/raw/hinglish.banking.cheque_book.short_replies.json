@@ -1,0 +1,177 @@
+{
+  "batch_id": "hinglish.banking.cheque_book.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "banking",
+  "intent": "cheque_book",
+  "items": [
+    {
+      "context": "Kaunsa type ka cheque book chahiye aapko",
+      "requested_bucket": "short",
+      "text": "normal"
+    },
+    {
+      "context": "Kitne pages chahiye cheque book mein",
+      "requested_bucket": "short",
+      "text": "twenty five"
+    },
+    {
+      "context": "Kya aapke account mein updated address hai",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Cheque book ki delivery address confirm karenge",
+      "requested_bucket": "short",
+      "text": "mera ghar address hi"
+    },
+    {
+      "context": "Aapko cheque book kab tak chahiye",
+      "requested_bucket": "short",
+      "text": "jaldi"
+    },
+    {
+      "context": "Account number bata sakte hain please",
+      "requested_bucket": "short",
+      "text": "one two three four five six"
+    },
+    {
+      "context": "Kya aap pehle bhi cheque book le chuke hain",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "Cheque book request online karna chahte hain ya branch se",
+      "requested_bucket": "short",
+      "text": "online"
+    },
+    {
+      "context": "Cheque book ki delivery kab tak chahiye aapko",
+      "requested_bucket": "short",
+      "text": "do din mein"
+    },
+    {
+      "context": "Aapka registered mobile number confirm karenge",
+      "requested_bucket": "short",
+      "text": "nine eight seven six five four three two one zero"
+    },
+    {
+      "context": "Cheque book ke liye fee pay karni hogi",
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Aapki identity proof updated hai kya",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "Account holder ka naam confirm karen",
+      "requested_bucket": "short",
+      "text": "rahul kumar"
+    },
+    {
+      "context": "Aapko urgent cheque book chahiye kya",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Kya aapko cheque book ki copy chahiye email par",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "Cheque book ke liye koi alternative delivery address chahiye",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "Aapka preferred language kya hai cheque book ke liye",
+      "requested_bucket": "short",
+      "text": "english"
+    },
+    {
+      "context": "Kya aapke account mein sufficient balance hai",
+      "requested_bucket": "short",
+      "text": "hai"
+    },
+    {
+      "context": "Account opening date kya hai",
+      "requested_bucket": "short",
+      "text": "pichle saal april"
+    },
+    {
+      "context": "Aapko aur koi help chahiye",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "Kya aap signature update karwana chahte hain",
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": "Aapke paas jo last cheque book thi wo use kari hai",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "Cheque book delivery method chunenge",
+      "requested_bucket": "short",
+      "text": "courier"
+    },
+    {
+      "context": "Aapko kitne din mein cheque book deliver karni hai",
+      "requested_bucket": "medium",
+      "text": "kal tak mil jaye to accha rahega"
+    },
+    {
+      "context": "Kya aapke address proof document update hain humare records mein",
+      "requested_bucket": "medium",
+      "text": "haan ji sabhi documents updated hain mere account mein"
+    },
+    {
+      "context": "Cheque book ke liye registered email id confirm kar dijiye",
+      "requested_bucket": "medium",
+      "text": "mera email id hai rahulkumar@gmail.com"
+    },
+    {
+      "context": "Kya aap home delivery prefer karenge ya branch se le lenge",
+      "requested_bucket": "medium",
+      "text": "ghar par delivery chahiye mujhe hi asaan rahega"
+    },
+    {
+      "context": "Kya aap mujhe bata sakte hain aapke account mein current balance kitna hai",
+      "requested_bucket": "medium",
+      "text": "lagbhag twenty thousand rupees hain mere account mein"
+    },
+    {
+      "context": "Cheque book request ke liye aapko koi aur special instructions deni hain",
+      "requested_bucket": "medium",
+      "text": "nahi koi aur instructions nahi hain sir"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3125752432,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: cheque_book - requests a new cheque book or asks about its delivery\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Kaunsa type ka cheque book chahiye aapko\",\"reply\":\"normal\"},{\"agent_question\":\"Kitne pages chahiye cheque book mein\",\"reply\":\"twenty five\"},{\"agent_question\":\"Kya aapke account mein updated address hai\",\"reply\":\"haan ji\"},{\"agent_question\":\"Cheque book ki delivery address confirm karenge\",\"reply\":\"mera ghar address hi\"},{\"agent_question\":\"Aapko cheque book kab tak chahiye\",\"reply\":\"jaldi\"},{\"agent_question\":\"Account number bata sakte hain please\",\"reply\":\"one two three four five six\"},{\"agent_question\":\"Kya aap pehle bhi cheque book le chuke hain\",\"reply\":\"haan\"},{\"agent_question\":\"Cheque book request online karna chahte hain ya branch se\",\"reply\":\"online\"},{\"agent_question\":\"Cheque book ki delivery kab tak chahiye aapko\",\"reply\":\"do din mein\"},{\"agent_question\":\"Aapka registered mobile number confirm karenge\",\"reply\":\"nine eight seven six five four three two one zero\"},{\"agent_question\":\"Cheque book ke liye fee pay karni hogi\",\"reply\":\"theek hai\"},{\"agent_question\":\"Aapki identity proof updated hai kya\",\"reply\":\"haan\"},{\"agent_question\":\"Account holder ka naam confirm karen\",\"reply\":\"rahul kumar\"},{\"agent_question\":\"Aapko urgent cheque book chahiye kya\",\"reply\":\"haan ji\"},{\"agent_question\":\"Kya aapko cheque book ki copy chahiye email par\",\"reply\":\"nahi\"},{\"agent_question\":\"Cheque book ke liye koi alternative delivery address chahiye\",\"reply\":\"nahi\"},{\"agent_question\":\"Aapka preferred language kya hai cheque book ke liye\",\"reply\":\"english\"},{\"agent_question\":\"Kya aapke account mein sufficient balance hai\",\"reply\":\"hai\"},{\"agent_question\":\"Account opening date kya hai\",\"reply\":\"pichle saal april\"},{\"agent_question\":\"Aapko aur koi help chahiye\",\"reply\":\"nahi\"},{\"agent_question\":\"Kya aap signature update karwana chahte hain\",\"reply\":\"abhi nahi\"},{\"agent_question\":\"Aapke paas jo last cheque book thi wo use kari hai\",\"reply\":\"haan\"},{\"agent_question\":\"Cheque book delivery method chunenge\",\"reply\":\"courier\"}],\"medium\":[{\"agent_question\":\"Aapko kitne din mein cheque book deliver karni hai\",\"reply\":\"kal tak mil jaye to accha rahega\"},{\"agent_question\":\"Kya aapke address proof document update hain humare records mein\",\"reply\":\"haan ji sabhi documents updated hain mere account mein\"},{\"agent_question\":\"Cheque book ke liye registered email id confirm kar dijiye\",\"reply\":\"mera email id hai rahulkumar@gmail.com\"},{\"agent_question\":\"Kya aap home delivery prefer karenge ya branch se le lenge\",\"reply\":\"ghar par delivery chahiye mujhe hi asaan rahega\"},{\"agent_question\":\"Kya aap mujhe bata sakte hain aapke account mein current balance kitna hai\",\"reply\":\"lagbhag twenty thousand rupees hain mere account mein\"},{\"agent_question\":\"Cheque book request ke liye aapko koi aur special instructions deni hain\",\"reply\":\"nahi koi aur instructions nahi hain sir\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 660
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.collections.wrong_person.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "wrong_person",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "not my number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wrong person"
+    },
+    {
+      "context": "Is this 22B Singh Road",
+      "requested_bucket": "short",
+      "text": "no"
+    },
+    {
+      "context": "May I have your name please",
+      "requested_bucket": "short",
+      "text": "I am not Ram Kumar"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "This is not Rahul Sharma from Delhi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "You have the wrong address I live at 45 MG Road not 56"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I think you called the wrong person my name is Anjali"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please check again this is Mrs Kavita Sanghvi not Mr Verma"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I have no outstanding payments you must have mixed up numbers"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I live in Bangalore not Pune so this call is for someone else"
+    },
+    {
+      "context": "Can you confirm the name on account please",
+      "requested_bucket": "medium",
+      "text": "Actually I am not the Sunil you are trying to reach"
+    },
+    {
+      "context": "Are you referring to Mr Suresh Patil from Mumbai",
+      "requested_bucket": "medium",
+      "text": "The amount you mentioned is not what I owe or have been told"
+    },
+    {
+      "context": "Could you verify your registered address for me",
+      "requested_bucket": "medium",
+      "text": "My address is 12 Church Street and not whatever you mentioned"
+    },
+    {
+      "context": "Who am I speaking to please",
+      "requested_bucket": "medium",
+      "text": "Sorry this is not Rajesh Gupta I think you have the wrong contact"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I believe you have confused me with another person because I do not live in Chennai I am residing in Hyderabad on 9th Avenue"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "The phone number you dialed must be incorrectly entered because my name is Priya Shah and I've never had any debt with your company"
+    },
+    {
+      "context": "Can you please spell your name for verification",
+      "requested_bucket": "long",
+      "text": "I checked your records and I am certain you have mistakenly contacted me as I have no loans and my address is 88 Nehru Nagar not where you mentioned"
+    },
+    {
+      "context": "To confirm your details I need your full name and address",
+      "requested_bucket": "long",
+      "text": "After reviewing my documents I can confirm this is the wrong case I live at 17 Park Lane and my name is Vinod Malhotra not the person you spoke about"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1799151679,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: wrong_person - says the agent has the wrong person or number\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"not my number\"},{\"text\":\"wrong person\"}],\"short_with_context\":[{\"text\":\"no\",\"context\":\"Is this 22B Singh Road\"},{\"text\":\"I am not Ram Kumar\",\"context\":\"May I have your name please\"}],\"medium\":[{\"text\":\"This is not Rahul Sharma from Delhi\"},{\"text\":\"You have the wrong address I live at 45 MG Road not 56\"},{\"text\":\"I think you called the wrong person my name is Anjali\"},{\"text\":\"Please check again this is Mrs Kavita Sanghvi not Mr Verma\"},{\"text\":\"I have no outstanding payments you must have mixed up numbers\"},{\"text\":\"I live in Bangalore not Pune so this call is for someone else\"}],\"medium_with_context\":[{\"text\":\"Actually I am not the Sunil you are trying to reach\",\"context\":\"Can you confirm the name on account please\"},{\"text\":\"The amount you mentioned is not what I owe or have been told\",\"context\":\"Are you referring to Mr Suresh Patil from Mumbai\"},{\"text\":\"My address is 12 Church Street and not whatever you mentioned\",\"context\":\"Could you verify your registered address for me\"},{\"text\":\"Sorry this is not Rajesh Gupta I think you have the wrong contact\",\"context\":\"Who am I speaking to please\"}],\"long\":[{\"text\":\"I believe you have confused me with another person because I do not live in Chennai I am residing in Hyderabad on 9th Avenue\"},{\"text\":\"The phone number you dialed must be incorrectly entered because my name is Priya Shah and I've never had any debt with your company\"}],\"long_with_context\":[{\"text\":\"I checked your records and I am certain you have mistakenly contacted me as I have no loans and my address is 88 Nehru Nagar not where you mentioned\",\"context\":\"Can you please spell your name for verification\"},{\"text\":\"After reviewing my documents I can confirm this is the wrong case I live at 17 Park Lane and my name is Vinod Malhotra not the person you spoke about\",\"context\":\"To confirm your details I need your full name and address\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 568,
+    "output_tokens": 428
+  }
+}

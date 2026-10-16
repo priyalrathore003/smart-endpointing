@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.collections.payment_link.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "payment_link",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "payment link bhejo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "transaction kab tak hoga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "online payment possible hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "ji bataye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak kaise karun"
+    },
+    {
+      "context": "Aapko payment link chahiye kya?",
+      "requested_bucket": "short",
+      "text": "ji payment karna hai"
+    },
+    {
+      "context": "Kab aap payment karenge?",
+      "requested_bucket": "short",
+      "text": "ji bhai kal tak kar dunga"
+    },
+    {
+      "context": "Kya aapka address Delhi mein hai?",
+      "requested_bucket": "short",
+      "text": "haan ji address confirm kar do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera naam Rahul Singh hai aur payment link bhej do please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Kya main Hyderabad ke office se online payment kar sakta hun?"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Mujhe 5000 rupaye ka payment karna hai Jaldi link bhejo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Maine 15 April ko payment kiya tha par transaction show nahi ho raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Kya aap mujhe payment karne ka aur koi option bata sakte ho?"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Meri address Mumbai mein hai aur kal payment karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Bhaiya payment link SMS par bhej do main check kar leta hun"
+    },
+    {
+      "context": "Kab aap payment karenge?",
+      "requested_bucket": "medium",
+      "text": "Maine kal payment karne ke liye poocha tha aap batayenge kab?"
+    },
+    {
+      "context": "Kis method se aap payment karna chahte hain?",
+      "requested_bucket": "medium",
+      "text": "Kya ye payment link Paytm se bhi kaam karega kya?"
+    },
+    {
+      "context": "Aapka address Lucknow mein hai kya?",
+      "requested_bucket": "medium",
+      "text": "Mujhe Gulshan Nagar Lucknow ka payment link milega kya?"
+    },
+    {
+      "context": "Payment karte waqt aapko kya doubt hai?",
+      "requested_bucket": "medium",
+      "text": "Kya mujhe koi customer id provide karni padegi payment ke time?"
+    },
+    {
+      "context": "Payment amount kitna hai?",
+      "requested_bucket": "medium",
+      "text": "5000 rupaye ka link jaldi bhej do main kal tak payment kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Mera naam Ajay Kumar hai aur main Noida sector 62 mein rehta hun please mujhe payment link bhej do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Maine pichle mahine 12000 ki payment ki thi but abhi tak mera update nahi hua payment ka"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Mujhe jaldi se payment karni hai lekin mujhe samajh nahi aa raha ki link kaise milega aap madad karo"
+    },
+    {
+      "context": "Kya aapne payment link ke liye try kiya hai pehle se?",
+      "requested_bucket": "long",
+      "text": "Main 3 din se try kar raha hun payment karne ke liye par link nahi mil raha kya solution hai aapke paas?"
+    },
+    {
+      "context": "Aapka address Patna mein hai kya?",
+      "requested_bucket": "long",
+      "text": "Mujhe Apne address Patna se payment karni hai kar sakte hain kya aap log?"
+    },
+    {
+      "context": "Kya aap online payment prefer karte hain?",
+      "requested_bucket": "long",
+      "text": "Aap mujhe SMS pe payment link bhej dein please main Gaya se hoon aur online karna chahta hun payment"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 4130242317,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: payment_link - asks for a payment link or how to pay\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"payment link bhejo\"},{\"text\":\"transaction kab tak hoga\"},{\"text\":\"online payment possible hai\"},{\"text\":\"ji bataye\"},{\"text\":\"theek hai\"},{\"text\":\"kal tak kaise karun\"}],\"short_with_context\":[{\"text\":\"ji payment karna hai\",\"context\":\"Aapko payment link chahiye kya?\"},{\"text\":\"ji bhai kal tak kar dunga\",\"context\":\"Kab aap payment karenge?\"},{\"text\":\"haan ji address confirm kar do\",\"context\":\"Kya aapka address Delhi mein hai?\"}],\"medium\":[{\"text\":\"mera naam Rahul Singh hai aur payment link bhej do please\"},{\"text\":\"Kya main Hyderabad ke office se online payment kar sakta hun?\"},{\"text\":\"Mujhe 5000 rupaye ka payment karna hai Jaldi link bhejo\"},{\"text\":\"Maine 15 April ko payment kiya tha par transaction show nahi ho raha\"},{\"text\":\"Kya aap mujhe payment karne ka aur koi option bata sakte ho?\"},{\"text\":\"Meri address Mumbai mein hai aur kal payment karna hai\"},{\"text\":\"Bhaiya payment link SMS par bhej do main check kar leta hun\"}],\"medium_with_context\":[{\"text\":\"Maine kal payment karne ke liye poocha tha aap batayenge kab?\",\"context\":\"Kab aap payment karenge?\"},{\"text\":\"Kya ye payment link Paytm se bhi kaam karega kya?\",\"context\":\"Kis method se aap payment karna chahte hain?\"},{\"text\":\"Mujhe Gulshan Nagar Lucknow ka payment link milega kya?\",\"context\":\"Aapka address Lucknow mein hai kya?\"},{\"text\":\"Kya mujhe koi customer id provide karni padegi payment ke time?\",\"context\":\"Payment karte waqt aapko kya doubt hai?\"},{\"text\":\"5000 rupaye ka link jaldi bhej do main kal tak payment kar dunga\",\"context\":\"Payment amount kitna hai?\"}],\"long\":[{\"text\":\"Mera naam Ajay Kumar hai aur main Noida sector 62 mein rehta hun please mujhe payment link bhej do\"},{\"text\":\"Maine pichle mahine 12000 ki payment ki thi but abhi tak mera update nahi hua payment ka\"},{\"text\":\"Mujhe jaldi se payment karni hai lekin mujhe samajh nahi aa raha ki link kaise milega aap madad karo\"}],\"long_with_context\":[{\"text\":\"Main 3 din se try kar raha hun payment karne ke liye par link nahi mil raha kya solution hai aapke paas?\",\"context\":\"Kya aapne payment link ke liye try kiya hai pehle se?\"},{\"text\":\"Mujhe Apne address Patna se payment karni hai kar sakte hain kya aap log?\",\"context\":\"Aapka address Patna mein hai kya?\"},{\"text\":\"Aap mujhe SMS pe payment link bhej dein please main Gaya se hoon aur online karna chahta hun payment\",\"context\":\"Kya aap online payment prefer karte hain?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 588,
+    "output_tokens": 648
+  }
+}

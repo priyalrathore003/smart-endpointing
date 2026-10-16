@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.collections.dispute_amount.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "dispute_amount",
+  "items": [
+    {
+      "context": "Can you tell me the disputed amount",
+      "requested_bucket": "short",
+      "text": "fifteen thousand"
+    },
+    {
+      "context": "Have you checked your last statement",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Is the charge from last month",
+      "requested_bucket": "short",
+      "text": "no"
+    },
+    {
+      "context": "Which amount seems incorrect",
+      "requested_bucket": "short",
+      "text": "five hundred"
+    },
+    {
+      "context": "Do you have the reference number",
+      "requested_bucket": "short",
+      "text": "not right now"
+    },
+    {
+      "context": "Did you make any recent payments",
+      "requested_bucket": "short",
+      "text": "no payments"
+    },
+    {
+      "context": "Is this the amount shown on your app",
+      "requested_bucket": "short",
+      "text": "different"
+    },
+    {
+      "context": "Are you sure this transaction is wrong",
+      "requested_bucket": "short",
+      "text": "i think so"
+    },
+    {
+      "context": "When did you notice this charge",
+      "requested_bucket": "short",
+      "text": "yesterday"
+    },
+    {
+      "context": "Can you confirm your account number",
+      "requested_bucket": "short",
+      "text": "one two three four"
+    },
+    {
+      "context": "Is the disputed amount on your latest bill",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Have you raised a complaint before",
+      "requested_bucket": "short",
+      "text": "not yet"
+    },
+    {
+      "context": "Is the amount in rupees or paise",
+      "requested_bucket": "short",
+      "text": "rupees"
+    },
+    {
+      "context": "Did you get any notification about this",
+      "requested_bucket": "short",
+      "text": "no notifications"
+    },
+    {
+      "context": "Could you explain why you think the amount is incorrect",
+      "requested_bucket": "medium",
+      "text": "the bill shows charges for services i did not use"
+    },
+    {
+      "context": "Can you tell me when you last checked your account balance",
+      "requested_bucket": "medium",
+      "text": "i checked it last week but the error was not there then"
+    },
+    {
+      "context": "Have you disputed this charge with the merchant directly",
+      "requested_bucket": "medium",
+      "text": "no i have not contacted the merchant about this issue yet"
+    },
+    {
+      "context": "What action would you like us to take regarding this amount",
+      "requested_bucket": "medium",
+      "text": "please investigate and correct the outstanding balance as soon as possible"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3759259954,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: dispute_amount - says the outstanding amount or a charge is wrong\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Can you tell me the disputed amount\",\"reply\":\"fifteen thousand\"},{\"agent_question\":\"Have you checked your last statement\",\"reply\":\"yes\"},{\"agent_question\":\"Is the charge from last month\",\"reply\":\"no\"},{\"agent_question\":\"Which amount seems incorrect\",\"reply\":\"five hundred\"},{\"agent_question\":\"Do you have the reference number\",\"reply\":\"not right now\"},{\"agent_question\":\"Did you make any recent payments\",\"reply\":\"no payments\"},{\"agent_question\":\"Is this the amount shown on your app\",\"reply\":\"different\"},{\"agent_question\":\"Are you sure this transaction is wrong\",\"reply\":\"i think so\"},{\"agent_question\":\"When did you notice this charge\",\"reply\":\"yesterday\"},{\"agent_question\":\"Can you confirm your account number\",\"reply\":\"one two three four\"},{\"agent_question\":\"Is the disputed amount on your latest bill\",\"reply\":\"yes\"},{\"agent_question\":\"Have you raised a complaint before\",\"reply\":\"not yet\"},{\"agent_question\":\"Is the amount in rupees or paise\",\"reply\":\"rupees\"},{\"agent_question\":\"Did you get any notification about this\",\"reply\":\"no notifications\"}],\"medium\":[{\"agent_question\":\"Could you explain why you think the amount is incorrect\",\"reply\":\"the bill shows charges for services i did not use\"},{\"agent_question\":\"Can you tell me when you last checked your account balance\",\"reply\":\"i checked it last week but the error was not there then\"},{\"agent_question\":\"Have you disputed this charge with the merchant directly\",\"reply\":\"no i have not contacted the merchant about this issue yet\"},{\"agent_question\":\"What action would you like us to take regarding this amount\",\"reply\":\"please investigate and correct the outstanding balance as soon as possible\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 367,
+    "output_tokens": 342
+  }
+}

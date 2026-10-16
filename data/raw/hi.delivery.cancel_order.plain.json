@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.delivery.cancel_order.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "cancel_order",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "क्या कर सकते हो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "फिर से भेजो"
+    },
+    {
+      "context": "क्या आप अपना order cancel करना चाहते हैं?",
+      "requested_bucket": "short",
+      "text": "नहीं चाहिए"
+    },
+    {
+      "context": "क्या मैं आपकी help कर सकता हूँ?",
+      "requested_bucket": "short",
+      "text": "हां प्लीज"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे मेरी डिलीवरी जल्दी cancel करनी है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "कहाँ से भेजा है यह parcel मैं बताओ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अभी payment हो चुका है पर डिलीवर नहीं मिला"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "क्या refund जल्दी मिलेगा मेरी order cancel करने पर"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "ऑर्डर डिलीवर करने में बहुत देर हो रही है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे मेरी package cancel कर के refund कर दो प्लीज"
+    },
+    {
+      "context": "क्या समस्या है जिससे आप order cancel करना चाहते हैं?",
+      "requested_bucket": "medium",
+      "text": "क्योंकि मुझे जो item चाहिए वो गलत आया है"
+    },
+    {
+      "context": "क्या आप हमें बतायेंगे कि आप order कैसे cancel करना चाहते हैं?",
+      "requested_bucket": "medium",
+      "text": "मुझे parcel वापस return करना है क्या प्रोसेस है"
+    },
+    {
+      "context": "क्या आप address change करना चाहते हैं या order cancel?",
+      "requested_bucket": "medium",
+      "text": "हां मैं अपना delivery address बदलना चाहता था इसलिए cancel करना चाहता हूँ"
+    },
+    {
+      "context": "क्या आपको refund पाने में कोई दिक्कत हो रही है?",
+      "requested_bucket": "medium",
+      "text": "जी हां जल्दी refund चाहिए मुझे payment वापस चाहिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मेरी order बहुत देर से डिलीवर हो रही है इसलिए मैं इसे cancel करना चाहता हूँ और मेरा पैसा वापस चाहिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैंने अभी payment किया था और अभी तक डिलीवरी नहीं हुई है तो कृपया मेरी order cancel कर दो और पैसा लौटाओ"
+    },
+    {
+      "context": "क्या आप हमें अपनी समस्या विस्तार से बता सकते हैं?",
+      "requested_bucket": "long",
+      "text": "कृपया मुझे बताइए कि मेरी order कैसे cancel कर सकते हैं क्योंकि मेरी डिलीवरी address गलत दिख रहा है"
+    },
+    {
+      "context": "क्या आप payment mode के बारे में बता सकते हैं?",
+      "requested_bucket": "long",
+      "text": "मैंने online payment से ऑर्डर दिया था पर अब मुझे उस चीज की जरूरत नहीं है इसलिए मैं इसे cancel करना चाहता हूँ"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2675181145,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cancel_order - wants to cancel an order\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"क्या कर सकते हो\"},{\"text\":\"फिर से भेजो\"}],\"short_with_context\":[{\"text\":\"नहीं चाहिए\",\"context\":\"क्या आप अपना order cancel करना चाहते हैं?\"},{\"text\":\"हां प्लीज\",\"context\":\"क्या मैं आपकी help कर सकता हूँ?\"}],\"medium\":[{\"text\":\"मुझे मेरी डिलीवरी जल्दी cancel करनी है\"},{\"text\":\"कहाँ से भेजा है यह parcel मैं बताओ\"},{\"text\":\"अभी payment हो चुका है पर डिलीवर नहीं मिला\"},{\"text\":\"क्या refund जल्दी मिलेगा मेरी order cancel करने पर\"},{\"text\":\"ऑर्डर डिलीवर करने में बहुत देर हो रही है\"},{\"text\":\"मुझे मेरी package cancel कर के refund कर दो प्लीज\"}],\"medium_with_context\":[{\"text\":\"क्योंकि मुझे जो item चाहिए वो गलत आया है\",\"context\":\"क्या समस्या है जिससे आप order cancel करना चाहते हैं?\"},{\"text\":\"मुझे parcel वापस return करना है क्या प्रोसेस है\",\"context\":\"क्या आप हमें बतायेंगे कि आप order कैसे cancel करना चाहते हैं?\"},{\"text\":\"हां मैं अपना delivery address बदलना चाहता था इसलिए cancel करना चाहता हूँ\",\"context\":\"क्या आप address change करना चाहते हैं या order cancel?\"},{\"text\":\"जी हां जल्दी refund चाहिए मुझे payment वापस चाहिए\",\"context\":\"क्या आपको refund पाने में कोई दिक्कत हो रही है?\"}],\"long\":[{\"text\":\"मेरी order बहुत देर से डिलीवर हो रही है इसलिए मैं इसे cancel करना चाहता हूँ और मेरा पैसा वापस चाहिए\"},{\"text\":\"मैंने अभी payment किया था और अभी तक डिलीवरी नहीं हुई है तो कृपया मेरी order cancel कर दो और पैसा लौटाओ\"}],\"long_with_context\":[{\"text\":\"कृपया मुझे बताइए कि मेरी order कैसे cancel कर सकते हैं क्योंकि मेरी डिलीवरी address गलत दिख रहा है\",\"context\":\"क्या आप हमें अपनी समस्या विस्तार से बता सकते हैं?\"},{\"text\":\"मैंने online payment से ऑर्डर दिया था पर अब मुझे उस चीज की जरूरत नहीं है इसलिए मैं इसे cancel करना चाहता हूँ\",\"context\":\"क्या आप payment mode के बारे में बता सकते हैं?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 679,
+    "output_tokens": 436
+  }
+}

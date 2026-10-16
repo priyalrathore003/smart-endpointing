@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.telecom.port_or_sim.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "telecom",
+  "intent": "port_or_sim",
+  "items": [
+    {
+      "context": "Aapka port request kis number se hai",
+      "requested_bucket": "short",
+      "text": "9876543210"
+    },
+    {
+      "context": "Kya aapke paas original sim hai",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Port karne ke liye aapka proof of address",
+      "requested_bucket": "short",
+      "text": "aadhaar card"
+    },
+    {
+      "context": "Kya aap naya sim lena chahte hain",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "Sim replacement chahiye kya",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "Port request kab ki thi",
+      "requested_bucket": "short",
+      "text": "kal"
+    },
+    {
+      "context": "Port karne ka reason kya hai",
+      "requested_bucket": "short",
+      "text": "network problem"
+    },
+    {
+      "context": "Current operator kaun sa hai",
+      "requested_bucket": "short",
+      "text": "vodafone"
+    },
+    {
+      "context": "Naya sim delivery address confirm karein",
+      "requested_bucket": "short",
+      "text": "ghar par"
+    },
+    {
+      "context": "Kya aapke paas porting code hai",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "Kya aap emergency sim chahte hain",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "Aapka date of birth kya hai",
+      "requested_bucket": "short",
+      "text": "pachis panch"
+    },
+    {
+      "context": "Port request status check karna hai kya",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Sim activate karwana hai ya replace",
+      "requested_bucket": "short",
+      "text": "activate karwana hai"
+    },
+    {
+      "context": "Naya sim ready hai kya",
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": "Sim replacement charge dena hoga kya",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "Kitne din lagenge port hone me",
+      "requested_bucket": "short",
+      "text": "teen din"
+    },
+    {
+      "context": "Kya number transfer karna hai",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Aap port ke liye application kab file ki thi",
+      "requested_bucket": "medium",
+      "text": "do din pehle online ki thi"
+    },
+    {
+      "context": "Naya sim kab tak chahiye aapko",
+      "requested_bucket": "medium",
+      "text": "jaldi se jaldi kal tak"
+    },
+    {
+      "context": "Aap kaun sa plan lena chahte hain naye sim par",
+      "requested_bucket": "medium",
+      "text": "same plan lena hai mera"
+    },
+    {
+      "context": "Sim activation ke liye koi issue to nahi hai kya",
+      "requested_bucket": "medium",
+      "text": "nahi sab theek hai sir"
+    },
+    {
+      "context": "Port request me koi documents missing hain kya",
+      "requested_bucket": "medium",
+      "text": "nahi sab documents complete hain"
+    },
+    {
+      "context": "Port hone ke baad aapko notification milega kya",
+      "requested_bucket": "medium",
+      "text": "haan mujhe ek message milega"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 93980601,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: port_or_sim - wants to port the number, replace or swap a SIM\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Aapka port request kis number se hai\",\"reply\":\"9876543210\"},{\"agent_question\":\"Kya aapke paas original sim hai\",\"reply\":\"haan ji\"},{\"agent_question\":\"Port karne ke liye aapka proof of address\",\"reply\":\"aadhaar card\"},{\"agent_question\":\"Kya aap naya sim lena chahte hain\",\"reply\":\"haan\"},{\"agent_question\":\"Sim replacement chahiye kya\",\"reply\":\"nahi\"},{\"agent_question\":\"Port request kab ki thi\",\"reply\":\"kal\"},{\"agent_question\":\"Port karne ka reason kya hai\",\"reply\":\"network problem\"},{\"agent_question\":\"Current operator kaun sa hai\",\"reply\":\"vodafone\"},{\"agent_question\":\"Naya sim delivery address confirm karein\",\"reply\":\"ghar par\"},{\"agent_question\":\"Kya aapke paas porting code hai\",\"reply\":\"haan\"},{\"agent_question\":\"Kya aap emergency sim chahte hain\",\"reply\":\"nahi\"},{\"agent_question\":\"Aapka date of birth kya hai\",\"reply\":\"pachis panch\"},{\"agent_question\":\"Port request status check karna hai kya\",\"reply\":\"haan ji\"},{\"agent_question\":\"Sim activate karwana hai ya replace\",\"reply\":\"activate karwana hai\"},{\"agent_question\":\"Naya sim ready hai kya\",\"reply\":\"abhi nahi\"},{\"agent_question\":\"Sim replacement charge dena hoga kya\",\"reply\":\"haan\"},{\"agent_question\":\"Kitne din lagenge port hone me\",\"reply\":\"teen din\"},{\"agent_question\":\"Kya number transfer karna hai\",\"reply\":\"haan ji\"}],\"medium\":[{\"agent_question\":\"Aap port ke liye application kab file ki thi\",\"reply\":\"do din pehle online ki thi\"},{\"agent_question\":\"Naya sim kab tak chahiye aapko\",\"reply\":\"jaldi se jaldi kal tak\"},{\"agent_question\":\"Aap kaun sa plan lena chahte hain naye sim par\",\"reply\":\"same plan lena hai mera\"},{\"agent_question\":\"Sim activation ke liye koi issue to nahi hai kya\",\"reply\":\"nahi sab theek hai sir\"},{\"agent_question\":\"Port request me koi documents missing hain kya\",\"reply\":\"nahi sab documents complete hain\"},{\"agent_question\":\"Port hone ke baad aapko notification milega kya\",\"reply\":\"haan mujhe ek message milega\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 397,
+    "output_tokens": 470
+  }
+}

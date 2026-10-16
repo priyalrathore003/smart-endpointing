@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.delivery.cod_payment.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "cod_payment",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "पैसा नहीं है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "कल तक अदा कर देंगे"
+    },
+    {
+      "context": "क्या आप अभी COD के लिए भुगतान कर सकते हैं",
+      "requested_bucket": "short",
+      "text": "हां ठीक है"
+    },
+    {
+      "context": "क्या आप अभी पेमेंट कर सकते हैं",
+      "requested_bucket": "short",
+      "text": "नहीं हो पाएगा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर मेरे पास पैसे नहीं हैं अभी दे पाऊंगा कल तक दो दिन में"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैडम डिलीवरी वाला आ गया पर मैं पैसा नहीं दे पाया घर पे"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "पार्सल मिला था पर मैंने COD में पेमेंट नहीं किया था क्या करूं"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मेरा पता दिल्ली सेक्टर 12 है डिलीवरी वाले ने कहा पैसे नहीं लिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "पैसों का इंतजार है अगले हफ्ते तक रिफंड करवा देना सर"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "कृपया जल्दी से आकर डिलीवरी वाला सामान वापस ले जाए"
+    },
+    {
+      "context": "कब तक आप पेमेंट कर सकते हैं",
+      "requested_bucket": "medium",
+      "text": "मैं कल दोपहर तक पैसा दे दूंगा आप इंतजार कर लेना"
+    },
+    {
+      "context": "क्या आप अपने नाम पे COD पेमेंट कर सकते हैं",
+      "requested_bucket": "medium",
+      "text": "डिलीवरी उनके नाम पे है क्या उसे पैसे दे सकते हैं"
+    },
+    {
+      "context": "क्या आप COD पेमेंट के संबंध में सूचना चाहते हैं",
+      "requested_bucket": "medium",
+      "text": "मुझे COD पेमेंट के लिए कन्फर्मेशन एसएमएस करना पड़ेगा"
+    },
+    {
+      "context": "आपका पता क्या है जिसपर डिलीवरी होनी है",
+      "requested_bucket": "medium",
+      "text": "डिलीवरी मेरे पते पर है छोटा सा घर सेक्टर 7 है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर मैंने अभी तक पैसे जमा नहीं किया था डिलीवरी वाले ने कहा कि बाद में भी दे सकता हूँ क्या ये सही है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मेरे घर पर डिलीवरी आई थी लेकिन मैंने पैसे नहीं रखे थे किस तरह मैं अगली बार बेहतर COD पेमेंट कर सकूं"
+    },
+    {
+      "context": "कभी COD पेमेंट में आपको कोई समस्या हुई है क्या",
+      "requested_bucket": "long",
+      "text": "अब तक ऐसा हुआ है कि डिलीवरी का पैसा सामने न होने के कारण रद्द कर दिया डिलीवरी को यह समस्या कैसे सुलझाई जाए"
+    },
+    {
+      "context": "क्या डिलीवरी आपके द्वारा प्राप्त हुई है या नहीं",
+      "requested_bucket": "long",
+      "text": "मेरी डिलीवरी कल दिल्ली सेक्टर 15 आई थी पर मैं पैसे देने के लिए नहीं था अब मैं किस तरह उसे अपग्रेड कर सकता हूँ"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2962180147,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cod_payment - has a problem with cash on delivery or payment at the door\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"पैसा नहीं है\"},{\"text\":\"कल तक अदा कर देंगे\"}],\"short_with_context\":[{\"text\":\"हां ठीक है\",\"context\":\"क्या आप अभी COD के लिए भुगतान कर सकते हैं\"}, {\"text\":\"नहीं हो पाएगा\",\"context\":\"क्या आप अभी पेमेंट कर सकते हैं\"}],\"medium\":[{\"text\":\"सर मेरे पास पैसे नहीं हैं अभी दे पाऊंगा कल तक दो दिन में\"},{\"text\":\"मैडम डिलीवरी वाला आ गया पर मैं पैसा नहीं दे पाया घर पे\"},{\"text\":\"पार्सल मिला था पर मैंने COD में पेमेंट नहीं किया था क्या करूं\"},{\"text\":\"मेरा पता दिल्ली सेक्टर 12 है डिलीवरी वाले ने कहा पैसे नहीं लिए\"},{\"text\":\"पैसों का इंतजार है अगले हफ्ते तक रिफंड करवा देना सर\"},{\"text\":\"कृपया जल्दी से आकर डिलीवरी वाला सामान वापस ले जाए\"}],\"medium_with_context\":[{\"text\":\"मैं कल दोपहर तक पैसा दे दूंगा आप इंतजार कर लेना\",\"context\":\"कब तक आप पेमेंट कर सकते हैं\"}, {\"text\":\"डिलीवरी उनके नाम पे है क्या उसे पैसे दे सकते हैं\",\"context\":\"क्या आप अपने नाम पे COD पेमेंट कर सकते हैं\"}, {\"text\":\"मुझे COD पेमेंट के लिए कन्फर्मेशन एसएमएस करना पड़ेगा\",\"context\":\"क्या आप COD पेमेंट के संबंध में सूचना चाहते हैं\"}, {\"text\":\"डिलीवरी मेरे पते पर है छोटा सा घर सेक्टर 7 है\",\"context\":\"आपका पता क्या है जिसपर डिलीवरी होनी है\"}],\"long\":[{\"text\":\"सर मैंने अभी तक पैसे जमा नहीं किया था डिलीवरी वाले ने कहा कि बाद में भी दे सकता हूँ क्या ये सही है\"}, {\"text\":\"मेरे घर पर डिलीवरी आई थी लेकिन मैंने पैसे नहीं रखे थे किस तरह मैं अगली बार बेहतर COD पेमेंट कर सकूं\"}],\"long_with_context\":[{\"text\":\"अब तक ऐसा हुआ है कि डिलीवरी का पैसा सामने न होने के कारण रद्द कर दिया डिलीवरी को यह समस्या कैसे सुलझाई जाए\",\"context\":\"कभी COD पेमेंट में आपको कोई समस्या हुई है क्या\"}, {\"text\":\"मेरी डिलीवरी कल दिल्ली सेक्टर 15 आई थी पर मैं पैसे देने के लिए नहीं था अब मैं किस तरह उसे अपग्रेड कर सकता हूँ\",\"context\":\"क्या डिलीवरी आपके द्वारा प्राप्त हुई है या नहीं\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 695,
+    "output_tokens": 508
+  }
+}

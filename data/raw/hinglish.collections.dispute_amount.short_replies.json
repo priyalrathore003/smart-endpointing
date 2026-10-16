@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.collections.dispute_amount.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "collections",
+  "intent": "dispute_amount",
+  "items": [
+    {
+      "context": "Aapka account number bata sakte hain?",
+      "requested_bucket": "short",
+      "text": "Haan ji 1234567890"
+    },
+    {
+      "context": "Kitna amount claim kar rahe hain aap?",
+      "requested_bucket": "short",
+      "text": "Paanch hazaar"
+    },
+    {
+      "context": "Kya transaction date check kari aapne?",
+      "requested_bucket": "short",
+      "text": "Nahi abhi tak"
+    },
+    {
+      "context": "Aapke hisab se sahi balance kya hai?",
+      "requested_bucket": "short",
+      "text": "Do hazaar"
+    },
+    {
+      "context": "Kya aapko pata hai yeh charge kis cheez ka hai?",
+      "requested_bucket": "short",
+      "text": "Nahi bilkul nahi"
+    },
+    {
+      "context": "Kya aapke paas payment receipt hai?",
+      "requested_bucket": "short",
+      "text": "Haan ji hai"
+    },
+    {
+      "context": "Kya aapne account statement dekha?",
+      "requested_bucket": "short",
+      "text": "Abhi nahi"
+    },
+    {
+      "context": "Mujhe transaction ID batayein please",
+      "requested_bucket": "short",
+      "text": "ID hai 789456123"
+    },
+    {
+      "context": "Kab tak aap payment kar sakte hain?",
+      "requested_bucket": "short",
+      "text": "Kal tak"
+    },
+    {
+      "context": "Kya aap claim ko verify karna chahenge?",
+      "requested_bucket": "short",
+      "text": "Haan chahiye"
+    },
+    {
+      "context": "Kya aapko lagta hai amount galat dikhaya gaya hai?",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Aapke pass proof hai?",
+      "requested_bucket": "short",
+      "text": "Haan pas hai"
+    },
+    {
+      "context": "Aapka full naam kya hai?",
+      "requested_bucket": "short",
+      "text": "Rahul Sharma"
+    },
+    {
+      "context": "Kya is charge ko aap maante hain?",
+      "requested_bucket": "short",
+      "text": "Nahi maante"
+    },
+    {
+      "context": "Kya aap bank notified hain?",
+      "requested_bucket": "short",
+      "text": "Haan notified"
+    },
+    {
+      "context": "Kya aapne pehle dispute raise kiya hai?",
+      "requested_bucket": "short",
+      "text": "Nahi pehli baar"
+    },
+    {
+      "context": "Kya aapko SMS mila is charge ka?",
+      "requested_bucket": "short",
+      "text": "Nahi mila"
+    },
+    {
+      "context": "Aapke phone number kya hai?",
+      "requested_bucket": "short",
+      "text": "9876543210"
+    },
+    {
+      "context": "Price calculation mein aapko kya galat lag raha hai?",
+      "requested_bucket": "medium",
+      "text": "Mera khayal hai charge zyada hai mujhe confirm karna hai"
+    },
+    {
+      "context": "Aapne outstanding amount check kiya hai kabhi?",
+      "requested_bucket": "medium",
+      "text": "Haan ji kal maine check kiya tha amount kam dikhaya tha"
+    },
+    {
+      "context": "Kya aap is poore transaction ko explain kar sakte hain?",
+      "requested_bucket": "medium",
+      "text": "Ji haan kal maine payment kiya tha par double charge lag gaya"
+    },
+    {
+      "context": "Kab se aapko lag raha hai amount galat dikh raha hai?",
+      "requested_bucket": "medium",
+      "text": "Pichle hafte se mujhe lag raha hai mujhe clear karna hai"
+    },
+    {
+      "context": "Kya aapko pata hai kis tarah ka dispute raise karna chahiye?",
+      "requested_bucket": "medium",
+      "text": "Thoda idea hai par details chahiye mujhe samajh nahi aayi"
+    },
+    {
+      "context": "Kya aapne bank ko bata kar dispute registered kara liya hai?",
+      "requested_bucket": "medium",
+      "text": "Nahi abhi tak nahi kiya main karne ja raha hun"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2076036284,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: dispute_amount - says the outstanding amount or a charge is wrong\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Aapka account number bata sakte hain?\",\"reply\":\"Haan ji 1234567890\"},{\"agent_question\":\"Kitna amount claim kar rahe hain aap?\",\"reply\":\"Paanch hazaar\"},{\"agent_question\":\"Kya transaction date check kari aapne?\",\"reply\":\"Nahi abhi tak\"},{\"agent_question\":\"Aapke hisab se sahi balance kya hai?\",\"reply\":\"Do hazaar\"},{\"agent_question\":\"Kya aapko pata hai yeh charge kis cheez ka hai?\",\"reply\":\"Nahi bilkul nahi\"},{\"agent_question\":\"Kya aapke paas payment receipt hai?\",\"reply\":\"Haan ji hai\"},{\"agent_question\":\"Kya aapne account statement dekha?\",\"reply\":\"Abhi nahi\"},{\"agent_question\":\"Mujhe transaction ID batayein please\",\"reply\":\"ID hai 789456123\"},{\"agent_question\":\"Kab tak aap payment kar sakte hain?\",\"reply\":\"Kal tak\"},{\"agent_question\":\"Kya aap claim ko verify karna chahenge?\",\"reply\":\"Haan chahiye\"},{\"agent_question\":\"Kya aapko lagta hai amount galat dikhaya gaya hai?\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Aapke pass proof hai?\",\"reply\":\"Haan pas hai\"},{\"agent_question\":\"Aapka full naam kya hai?\",\"reply\":\"Rahul Sharma\"},{\"agent_question\":\"Kya is charge ko aap maante hain?\",\"reply\":\"Nahi maante\"},{\"agent_question\":\"Kya aap bank notified hain?\",\"reply\":\"Haan notified\"},{\"agent_question\":\"Kya aapne pehle dispute raise kiya hai?\",\"reply\":\"Nahi pehli baar\"},{\"agent_question\":\"Kya aapko SMS mila is charge ka?\",\"reply\":\"Nahi mila\"},{\"agent_question\":\"Aapke phone number kya hai?\",\"reply\":\"9876543210\"}],\"medium\":[{\"agent_question\":\"Price calculation mein aapko kya galat lag raha hai?\",\"reply\":\"Mera khayal hai charge zyada hai mujhe confirm karna hai\"},{\"agent_question\":\"Aapne outstanding amount check kiya hai kabhi?\",\"reply\":\"Haan ji kal maine check kiya tha amount kam dikhaya tha\"},{\"agent_question\":\"Kya aap is poore transaction ko explain kar sakte hain?\",\"reply\":\"Ji haan kal maine payment kiya tha par double charge lag gaya\"},{\"agent_question\":\"Kab se aapko lag raha hai amount galat dikh raha hai?\",\"reply\":\"Pichle hafte se mujhe lag raha hai mujhe clear karna hai\"},{\"agent_question\":\"Kya aapko pata hai kis tarah ka dispute raise karna chahiye?\",\"reply\":\"Thoda idea hai par details chahiye mujhe samajh nahi aayi\"},{\"agent_question\":\"Kya aapne bank ko bata kar dispute registered kara liya hai?\",\"reply\":\"Nahi abhi tak nahi kiya main karne ja raha hun\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 394,
+    "output_tokens": 632
+  }
+}

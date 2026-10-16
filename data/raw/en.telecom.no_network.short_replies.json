@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.telecom.no_network.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "no_network",
+  "items": [
+    {
+      "context": "Are you facing no network issue now",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Is this happening indoors or outdoors",
+      "requested_bucket": "short",
+      "text": "Indoors"
+    },
+    {
+      "context": "How long have you seen this problem",
+      "requested_bucket": "short",
+      "text": "Two days"
+    },
+    {
+      "context": "Are your calls getting disconnected",
+      "requested_bucket": "short",
+      "text": "Often"
+    },
+    {
+      "context": "Is the internet speed slow or no internet at all",
+      "requested_bucket": "short",
+      "text": "No internet"
+    },
+    {
+      "context": "Have you restarted your phone",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Is the sim card properly inserted",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Are you in a busy area with many buildings",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Did the signal drop while on call",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Is your phone showing the network provider name",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Do other phones in your area face the same issue",
+      "requested_bucket": "short",
+      "text": "Not sure"
+    },
+    {
+      "context": "Have you checked with neighbours about network",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Are you using a prepaid or postpaid connection",
+      "requested_bucket": "short",
+      "text": "Prepaid"
+    },
+    {
+      "context": "Is airplane mode off on your phone",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Can you describe what happens when you try to make a call",
+      "requested_bucket": "medium",
+      "text": "Call starts ringing and then disconnects after a few seconds"
+    },
+    {
+      "context": "When did you first notice the network issue",
+      "requested_bucket": "medium",
+      "text": "It started after the last heavy rain three days ago"
+    },
+    {
+      "context": "Have you contacted customer support before about this problem",
+      "requested_bucket": "medium",
+      "text": "No I am calling for the first time about this issue"
+    },
+    {
+      "context": "Do you experience slow internet everywhere or only in specific areas",
+      "requested_bucket": "medium",
+      "text": "Only in some places like inside my home and market area"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 865256067,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: no_network - has no signal, call drops or slow internet\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Are you facing no network issue now\",\"reply\":\"Yes\"},{\"agent_question\":\"Is this happening indoors or outdoors\",\"reply\":\"Indoors\"},{\"agent_question\":\"How long have you seen this problem\",\"reply\":\"Two days\"},{\"agent_question\":\"Are your calls getting disconnected\",\"reply\":\"Often\"},{\"agent_question\":\"Is the internet speed slow or no internet at all\",\"reply\":\"No internet\"},{\"agent_question\":\"Have you restarted your phone\",\"reply\":\"Yes\"},{\"agent_question\":\"Is the sim card properly inserted\",\"reply\":\"Yes\"},{\"agent_question\":\"Are you in a busy area with many buildings\",\"reply\":\"Yes\"},{\"agent_question\":\"Did the signal drop while on call\",\"reply\":\"Yes\"},{\"agent_question\":\"Is your phone showing the network provider name\",\"reply\":\"No\"},{\"agent_question\":\"Do other phones in your area face the same issue\",\"reply\":\"Not sure\"},{\"agent_question\":\"Have you checked with neighbours about network\",\"reply\":\"Yes\"},{\"agent_question\":\"Are you using a prepaid or postpaid connection\",\"reply\":\"Prepaid\"},{\"agent_question\":\"Is airplane mode off on your phone\",\"reply\":\"Yes\"}],\"medium\":[{\"agent_question\":\"Can you describe what happens when you try to make a call\",\"reply\":\"Call starts ringing and then disconnects after a few seconds\"},{\"agent_question\":\"When did you first notice the network issue\",\"reply\":\"It started after the last heavy rain three days ago\"},{\"agent_question\":\"Have you contacted customer support before about this problem\",\"reply\":\"No I am calling for the first time about this issue\"},{\"agent_question\":\"Do you experience slow internet everywhere or only in specific areas\",\"reply\":\"Only in some places like inside my home and market area\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 367,
+    "output_tokens": 341
+  }
+}

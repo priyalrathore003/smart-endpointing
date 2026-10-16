@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.banking.login_otp_problem.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "login_otp_problem",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "हां जी ठीक है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "कल तक"
+    },
+    {
+      "context": "कृपया फॉर्म भेज दीजिए लॉगिन में दिक्कत के लिए?",
+      "requested_bucket": "short",
+      "text": "सर फॉर्म भेज दीजिए"
+    },
+    {
+      "context": "क्या आपको OTP प्राप्त हो रहा है?",
+      "requested_bucket": "short",
+      "text": "योकेटपी नहीं आ रहा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर मै मोबाइल से लॉगिन नहीं कर पा रहा हूँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैंने कल भी कोशिश की थी लेकिन OTP नहीं आया था"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "वो मोबाइल नंबर से SMS आ रहा है पर OTP नहीं मिलता"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैंने नंबर अपडेट किया था पर अभी भी लॉगिन नहीं हो रहा है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अच्छा मैडम मेरा नाम संजीव है और मैं बॉम्बे में हूँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मंगलवार नहीं बुधवार को भी OTP नहीं मिला था मुझे"
+    },
+    {
+      "context": "जी हाँ नेटवर्क बिलकुल ठीक है पर OTP नहीं आता",
+      "requested_bucket": "medium",
+      "text": "कभी आपका फोन नेटवर्क खराब तो नहीं रहता"
+    },
+    {
+      "context": "नहीं अम्म, मैंने दूसरे मोबाइल से ट्राई नहीं किया अभी तक",
+      "requested_bucket": "medium",
+      "text": "क्या आपने दूसरे मोबाइल से भी ट्राई किया"
+    },
+    {
+      "context": "अच्छा ९८७६५४३२१० है सर जो बैंक अकाउंट से लिंक्ड है",
+      "requested_bucket": "medium",
+      "text": "आपका रजिस्टर फोन नम्बर क्या है"
+    },
+    {
+      "context": "नहीं ये वहीं पुराना फोन है और वही सिम है जिस पर OTP आता रहता था",
+      "requested_bucket": "medium",
+      "text": "क्या नया फोन या सिम लेकर लॉगिन कर रहे हैं"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर मैं तीन दिन से लगातार OTP नहीं प्राप्त कर पा रहा हूँ जिस वजह से मेरा नेट बैंकिंग अकाउंट लॉक हो गया है और मुझे बहुत परेशानी हो रही है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैडम मैंने फोन में कोई अपडेट किया था शायद उसी के बाद से OTP आना बंद हो गया है कृपया जल्दी से मेरी मदद करें मुझे पेमेंट करनी है"
+    },
+    {
+      "context": "जी हाँ मैंने चेक किया है सेटिंग्स में सारी चीजें ठीक हैं फिर भी OTP आता नहीं है",
+      "requested_bucket": "long",
+      "text": "सर आपकी समस्या को समझते हुए मैं आपको बता दूं कि आप कभी अपने फोन की Settings में SMS बंद तो नहीं किये"
+    },
+    {
+      "context": "हाँ मेरा नाम अंकित है और मोबाइल नंबर ९८१२३४५६७८९ है सर मैं मुंबई से कॉल कर रहा हूँ",
+      "requested_bucket": "long",
+      "text": "क्या आप कृपया हमें अपना मोबाइल नंबर और लॉगिन का सही नाम बता सकते हैं जिससे हम आपकी मदद कर सकें"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2053021957,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: login_otp_problem - cannot log in to net or mobile banking or is not receiving the OTP\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with fillers and hesitations (अम्म, मतलब, वो, अच्छा, हाँ जी); at least a third include a self-correction ('मंगलवार, नहीं, बुधवार')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"हां जी ठीक है\"},{\"text\":\"कल तक\"}],\"short_with_context\":[{\"text\":\"सर फॉर्म भेज दीजिए\",\"context\":\"कृपया फॉर्म भेज दीजिए लॉगिन में दिक्कत के लिए?\"},{\"text\":\"योकेटपी नहीं आ रहा\",\"context\":\"क्या आपको OTP प्राप्त हो रहा है?\"}],\"medium\":[{\"text\":\"सर मै मोबाइल से लॉगिन नहीं कर पा रहा हूँ\"},{\"text\":\"मैंने कल भी कोशिश की थी लेकिन OTP नहीं आया था\"},{\"text\":\"वो मोबाइल नंबर से SMS आ रहा है पर OTP नहीं मिलता\"},{\"text\":\"मैंने नंबर अपडेट किया था पर अभी भी लॉगिन नहीं हो रहा है\"},{\"text\":\"अच्छा मैडम मेरा नाम संजीव है और मैं बॉम्बे में हूँ\"},{\"text\":\"मंगलवार नहीं बुधवार को भी OTP नहीं मिला था मुझे\"}],\"medium_with_context\":[{\"text\":\"कभी आपका फोन नेटवर्क खराब तो नहीं रहता\",\"context\":\"जी हाँ नेटवर्क बिलकुल ठीक है पर OTP नहीं आता\"},{\"text\":\"क्या आपने दूसरे मोबाइल से भी ट्राई किया\",\"context\":\"नहीं अम्म, मैंने दूसरे मोबाइल से ट्राई नहीं किया अभी तक\"},{\"text\":\"आपका रजिस्टर फोन नम्बर क्या है\",\"context\":\"अच्छा ९८७६५४३२१० है सर जो बैंक अकाउंट से लिंक्ड है\"},{\"text\":\"क्या नया फोन या सिम लेकर लॉगिन कर रहे हैं\",\"context\":\"नहीं ये वहीं पुराना फोन है और वही सिम है जिस पर OTP आता रहता था\"}],\"long\":[{\"text\":\"सर मैं तीन दिन से लगातार OTP नहीं प्राप्त कर पा रहा हूँ जिस वजह से मेरा नेट बैंकिंग अकाउंट लॉक हो गया है और मुझे बहुत परेशानी हो रही है\"},{\"text\":\"मैडम मैंने फोन में कोई अपडेट किया था शायद उसी के बाद से OTP आना बंद हो गया है कृपया जल्दी से मेरी मदद करें मुझे पेमेंट करनी है\"}],\"long_with_context\":[{\"text\":\"सर आपकी समस्या को समझते हुए मैं आपको बता दूं कि आप कभी अपने फोन की Settings में SMS बंद तो नहीं किये\",\"context\":\"जी हाँ मैंने चेक किया है सेटिंग्स में सारी चीजें ठीक हैं फिर भी OTP आता नहीं है\"},{\"text\":\"क्या आप कृपया हमें अपना मोबाइल नंबर और लॉगिन का सही नाम बता सकते हैं जिससे हम आपकी मदद कर सकें\",\"context\":\"हाँ मेरा नाम अंकित है और मोबाइल नंबर ९८१२३४५६७८९ है सर मैं मुंबई से कॉल कर रहा हूँ\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 723,
+    "output_tokens": 527
+  }
+}

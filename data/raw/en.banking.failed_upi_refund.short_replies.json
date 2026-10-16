@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.banking.failed_upi_refund.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "banking",
+  "intent": "failed_upi_refund",
+  "items": [
+    {
+      "context": "When did you make the payment",
+      "requested_bucket": "short",
+      "text": "Yesterday evening"
+    },
+    {
+      "context": "What was the transaction amount",
+      "requested_bucket": "short",
+      "text": "Five thousand rupees"
+    },
+    {
+      "context": "Can you tell me your UPI ID",
+      "requested_bucket": "short",
+      "text": "rahul123@upi"
+    },
+    {
+      "context": "Did you receive any error message",
+      "requested_bucket": "short",
+      "text": "Yes it showed timeout"
+    },
+    {
+      "context": "Is your mobile number linked to the bank account",
+      "requested_bucket": "short",
+      "text": "Yes it is"
+    },
+    {
+      "context": "Do you have the transaction reference number",
+      "requested_bucket": "short",
+      "text": "Yes I do"
+    },
+    {
+      "context": "Have you checked your bank statement",
+      "requested_bucket": "short",
+      "text": "Yes I have"
+    },
+    {
+      "context": "Are you the account holder",
+      "requested_bucket": "short",
+      "text": "Yes I am"
+    },
+    {
+      "context": "Did you try to make the payment again",
+      "requested_bucket": "short",
+      "text": "No not yet"
+    },
+    {
+      "context": "Which bank account is linked to your UPI",
+      "requested_bucket": "short",
+      "text": "HDFC Bank"
+    },
+    {
+      "context": "Is your app updated to the latest version",
+      "requested_bucket": "short",
+      "text": "Yes updated"
+    },
+    {
+      "context": "Have you received any SMS about this transaction",
+      "requested_bucket": "short",
+      "text": "No not yet"
+    },
+    {
+      "context": "Would you like me to initiate a refund request",
+      "requested_bucket": "short",
+      "text": "Please do"
+    },
+    {
+      "context": "Is your phone connected to the internet",
+      "requested_bucket": "short",
+      "text": "Yes it is"
+    },
+    {
+      "context": "Can you describe what happened during the payment",
+      "requested_bucket": "medium",
+      "text": "I attempted to transfer money but the app showed a timeout and then my amount was debited"
+    },
+    {
+      "context": "Have you checked if your account was actually debited",
+      "requested_bucket": "medium",
+      "text": "I checked my bank statement and the money is gone but no confirmation received"
+    },
+    {
+      "context": "When do you expect to see the refund in your account",
+      "requested_bucket": "medium",
+      "text": "I want the refund processed by tomorrow end of the day"
+    },
+    {
+      "context": "Please share the exact date and time of this transaction",
+      "requested_bucket": "medium",
+      "text": "It was on 15th of June at around 7 pm in the evening"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3129678692,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: failed_upi_refund - a UPI or online payment failed but money was debited; wants a refund\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"When did you make the payment\",\"reply\":\"Yesterday evening\"},{\"agent_question\":\"What was the transaction amount\",\"reply\":\"Five thousand rupees\"},{\"agent_question\":\"Can you tell me your UPI ID\",\"reply\":\"rahul123@upi\"},{\"agent_question\":\"Did you receive any error message\",\"reply\":\"Yes it showed timeout\"},{\"agent_question\":\"Is your mobile number linked to the bank account\",\"reply\":\"Yes it is\"},{\"agent_question\":\"Do you have the transaction reference number\",\"reply\":\"Yes I do\"},{\"agent_question\":\"Have you checked your bank statement\",\"reply\":\"Yes I have\"},{\"agent_question\":\"Are you the account holder\",\"reply\":\"Yes I am\"},{\"agent_question\":\"Did you try to make the payment again\",\"reply\":\"No not yet\"},{\"agent_question\":\"Which bank account is linked to your UPI\",\"reply\":\"HDFC Bank\"},{\"agent_question\":\"Is your app updated to the latest version\",\"reply\":\"Yes updated\"},{\"agent_question\":\"Have you received any SMS about this transaction\",\"reply\":\"No not yet\"},{\"agent_question\":\"Would you like me to initiate a refund request\",\"reply\":\"Please do\"},{\"agent_question\":\"Is your phone connected to the internet\",\"reply\":\"Yes it is\"}],\"medium\":[{\"agent_question\":\"Can you describe what happened during the payment\",\"reply\":\"I attempted to transfer money but the app showed a timeout and then my amount was debited\"},{\"agent_question\":\"Have you checked if your account was actually debited\",\"reply\":\"I checked my bank statement and the money is gone but no confirmation received\"},{\"agent_question\":\"When do you expect to see the refund in your account\",\"reply\":\"I want the refund processed by tomorrow end of the day\"},{\"agent_question\":\"Please share the exact date and time of this transaction\",\"reply\":\"It was on 15th of June at around 7 pm in the evening\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 377,
+    "output_tokens": 377
+  }
+}

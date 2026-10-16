@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.delivery.agent_unreachable.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "agent_unreachable",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "he is not reachable"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "no he cant find it"
+    },
+    {
+      "context": "Is the delivery person reachable on phone",
+      "requested_bucket": "short",
+      "text": "not answering"
+    },
+    {
+      "context": "Did the delivery person find your address successfully",
+      "requested_bucket": "short",
+      "text": "address not found"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "delivery person is calling but no one is answering here"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the delivery person says he is not able to locate my house"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you please call the delivery person again and ask the address"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i gave my location but still they say they cannot find the place"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the phone number given for delivery does not connect to anyone"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please resend the delivery person as soon as possible to my address"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "delivery person called but hung up immediately without saying anything"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "they say they have reached the street but cannot find the exact address"
+    },
+    {
+      "context": "What exactly is the delivery person saying about locating your address",
+      "requested_bucket": "medium",
+      "text": "he is saying he doesnt see the gate number is it correct"
+    },
+    {
+      "context": "Is the delivery person asking for any landmark details",
+      "requested_bucket": "medium",
+      "text": "they asked me to verify the landmark near my place"
+    },
+    {
+      "context": "Did the delivery person mention any particular problem while finding the address",
+      "requested_bucket": "medium",
+      "text": "delivery person asked for the pin code again and said he cant find the place"
+    },
+    {
+      "context": "What did the delivery person say about contacting you",
+      "requested_bucket": "medium",
+      "text": "he said my phone is unreachable but i am sitting here with it switched on"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "the delivery boy called on my mobile and said he has reached the area but is unable to find the house number which is quite confusing"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i have been waiting since an hour and the delivery person is not answering my calls even after i shared the exact address and landmarks clearly"
+    },
+    {
+      "context": "Can you describe what the delivery person told you when you contacted him",
+      "requested_bucket": "long",
+      "text": "the delivery person is saying he is on my road but there are multiple buildings with similar numbers and he cannot locate my house number"
+    },
+    {
+      "context": "What reason did the delivery person give for not delivering the package on time",
+      "requested_bucket": "long",
+      "text": "the delivery person told me he tried calling me multiple times but my mobile was switched off even though it was on and i was available"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 93345285,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: agent_unreachable - the delivery person is not answering or cannot find the address\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"he is not reachable\"},{\"text\":\"no he cant find it\"}],\"short_with_context\":[{\"text\":\"not answering\",\"context\":\"Is the delivery person reachable on phone\"},{\"text\":\"address not found\",\"context\":\"Did the delivery person find your address successfully\"}],\"medium\":[{\"text\":\"delivery person is calling but no one is answering here\"},{\"text\":\"the delivery person says he is not able to locate my house\"},{\"text\":\"can you please call the delivery person again and ask the address\"},{\"text\":\"i gave my location but still they say they cannot find the place\"},{\"text\":\"the phone number given for delivery does not connect to anyone\"},{\"text\":\"please resend the delivery person as soon as possible to my address\"},{\"text\":\"delivery person called but hung up immediately without saying anything\"},{\"text\":\"they say they have reached the street but cannot find the exact address\"}],\"medium_with_context\":[{\"text\":\"he is saying he doesnt see the gate number is it correct\",\"context\":\"What exactly is the delivery person saying about locating your address\"},{\"text\":\"they asked me to verify the landmark near my place\",\"context\":\"Is the delivery person asking for any landmark details\"},{\"text\":\"delivery person asked for the pin code again and said he cant find the place\",\"context\":\"Did the delivery person mention any particular problem while finding the address\"},{\"text\":\"he said my phone is unreachable but i am sitting here with it switched on\",\"context\":\"What did the delivery person say about contacting you\"}],\"long\":[{\"text\":\"the delivery boy called on my mobile and said he has reached the area but is unable to find the house number which is quite confusing\"},{\"text\":\"i have been waiting since an hour and the delivery person is not answering my calls even after i shared the exact address and landmarks clearly\"}],\"long_with_context\":[{\"text\":\"the delivery person is saying he is on my road but there are multiple buildings with similar numbers and he cannot locate my house number\",\"context\":\"Can you describe what the delivery person told you when you contacted him\"},{\"text\":\"the delivery person told me he tried calling me multiple times but my mobile was switched off even though it was on and i was available\",\"context\":\"What reason did the delivery person give for not delivering the package on time\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 590,
+    "output_tokens": 460
+  }
+}

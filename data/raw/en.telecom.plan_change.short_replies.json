@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.telecom.plan_change.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "plan_change",
+  "items": [
+    {
+      "context": "Which plan do you want to switch to",
+      "requested_bucket": "short",
+      "text": "The unlimited data plan"
+    },
+    {
+      "context": "Do you want to upgrade or downgrade your plan",
+      "requested_bucket": "short",
+      "text": "Upgrade please"
+    },
+    {
+      "context": "Are you looking for a prepaid or postpaid plan",
+      "requested_bucket": "short",
+      "text": "Prepaid"
+    },
+    {
+      "context": "Is there a specific data limit you want",
+      "requested_bucket": "short",
+      "text": "Five gigs"
+    },
+    {
+      "context": "Would you like to include international roaming",
+      "requested_bucket": "short",
+      "text": "No thanks"
+    },
+    {
+      "context": "What is your current plan",
+      "requested_bucket": "short",
+      "text": "Basic talk and text"
+    },
+    {
+      "context": "Do you want to keep your old number",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "How soon do you want to change your plan",
+      "requested_bucket": "short",
+      "text": "Right now"
+    },
+    {
+      "context": "Can I know your customer ID",
+      "requested_bucket": "short",
+      "text": "Seven eight nine zero"
+    },
+    {
+      "context": "Are you interested in family plans",
+      "requested_bucket": "short",
+      "text": "Not now"
+    },
+    {
+      "context": "Will you need extra SMS in your new plan",
+      "requested_bucket": "short",
+      "text": "Yes please"
+    },
+    {
+      "context": "Do you want a plan with unlimited calls",
+      "requested_bucket": "short",
+      "text": "Yes unlimited calls"
+    },
+    {
+      "context": "Do you prefer a daily or monthly plan",
+      "requested_bucket": "short",
+      "text": "Monthly"
+    },
+    {
+      "context": "Have you checked the new plans on our website",
+      "requested_bucket": "short",
+      "text": "Not yet"
+    },
+    {
+      "context": "What features do you want in your new telecom plan",
+      "requested_bucket": "medium",
+      "text": "I want more data and unlimited calls with no extra charges"
+    },
+    {
+      "context": "When would you like your plan change to be effective from",
+      "requested_bucket": "medium",
+      "text": "Please make the change from the first of next month"
+    },
+    {
+      "context": "Are you facing any issues with your current plan that you want to resolve",
+      "requested_bucket": "medium",
+      "text": "Yes the data limit is too low and I keep running out quickly"
+    },
+    {
+      "context": "Do you need help comparing different plans we offer",
+      "requested_bucket": "medium",
+      "text": "Yes please I am confused between the family and individual plans"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 117631792,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: plan_change - wants to change or understand a plan\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Which plan do you want to switch to\",\"reply\":\"The unlimited data plan\"},{\"agent_question\":\"Do you want to upgrade or downgrade your plan\",\"reply\":\"Upgrade please\"},{\"agent_question\":\"Are you looking for a prepaid or postpaid plan\",\"reply\":\"Prepaid\"},{\"agent_question\":\"Is there a specific data limit you want\",\"reply\":\"Five gigs\"},{\"agent_question\":\"Would you like to include international roaming\",\"reply\":\"No thanks\"},{\"agent_question\":\"What is your current plan\",\"reply\":\"Basic talk and text\"},{\"agent_question\":\"Do you want to keep your old number\",\"reply\":\"Yes\"},{\"agent_question\":\"How soon do you want to change your plan\",\"reply\":\"Right now\"},{\"agent_question\":\"Can I know your customer ID\",\"reply\":\"Seven eight nine zero\"},{\"agent_question\":\"Are you interested in family plans\",\"reply\":\"Not now\"},{\"agent_question\":\"Will you need extra SMS in your new plan\",\"reply\":\"Yes please\"},{\"agent_question\":\"Do you want a plan with unlimited calls\",\"reply\":\"Yes unlimited calls\"},{\"agent_question\":\"Do you prefer a daily or monthly plan\",\"reply\":\"Monthly\"},{\"agent_question\":\"Have you checked the new plans on our website\",\"reply\":\"Not yet\"}],\"medium\":[{\"agent_question\":\"What features do you want in your new telecom plan\",\"reply\":\"I want more data and unlimited calls with no extra charges\"},{\"agent_question\":\"When would you like your plan change to be effective from\",\"reply\":\"Please make the change from the first of next month\"},{\"agent_question\":\"Are you facing any issues with your current plan that you want to resolve\",\"reply\":\"Yes the data limit is too low and I keep running out quickly\"},{\"agent_question\":\"Do you need help comparing different plans we offer\",\"reply\":\"Yes please I am confused between the family and individual plans\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 365,
+    "output_tokens": 367
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.telecom.roaming.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "roaming",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "activate roaming"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "international please"
+    },
+    {
+      "context": "Do you want to activate roaming on your number now?",
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "Which roaming service would you like to activate",
+      "requested_bucket": "short",
+      "text": "india national roaming"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to activate international roaming for next month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you please activate national roaming for my Delhi number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I will be travelling to Mumbai so activate roaming there"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Is it possible to enable roaming for USA for 15 days"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please activate roaming services starting from 10th March"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I need roaming on my number as I am planning to visit Dubai soon"
+    },
+    {
+      "context": "Are you looking for information about roaming charges internationally?",
+      "requested_bucket": "medium",
+      "text": "I want to check charges for international roaming in UK"
+    },
+    {
+      "context": "Can you confirm which city you will use the roaming service in?",
+      "requested_bucket": "medium",
+      "text": "Yes activate roaming for my Vodafone number in Chennai"
+    },
+    {
+      "context": "Please tell me the period you will need roaming service for?",
+      "requested_bucket": "medium",
+      "text": "I will be in Bangalore from 5th to 20th so activate roaming"
+    },
+    {
+      "context": "Could you specify the start date for the roaming activation?",
+      "requested_bucket": "medium",
+      "text": "Please set roaming for my Mumbai number from 1st April onwards"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I am planning a trip to Singapore in July so I need the international roaming activated in advance"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Please enable the national roaming facility for my number as I will be traveling across different states in India next month"
+    },
+    {
+      "context": "Can you tell me the dates you need the international roaming service?",
+      "requested_bucket": "long",
+      "text": "I will be travelling to London from third to 20th of May can you activate international roaming for that period"
+    },
+    {
+      "context": "When do you want to start the national roaming on your mobile number?",
+      "requested_bucket": "long",
+      "text": "Could you activate national roaming on my number starting next week as I will be visiting multiple cities in south India"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2813300981,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: roaming - wants to activate international or national roaming\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"activate roaming\"},{\"text\":\"international please\"}],\"short_with_context\":[{\"text\":\"yes please\",\"context\":\"Do you want to activate roaming on your number now?\"},{\"text\":\"india national roaming\",\"context\":\"Which roaming service would you like to activate\"}],\"medium\":[{\"text\":\"I want to activate international roaming for next month\"},{\"text\":\"Can you please activate national roaming for my Delhi number\"},{\"text\":\"I will be travelling to Mumbai so activate roaming there\"},{\"text\":\"Is it possible to enable roaming for USA for 15 days\"},{\"text\":\"Please activate roaming services starting from 10th March\"},{\"text\":\"I need roaming on my number as I am planning to visit Dubai soon\"}],\"medium_with_context\":[{\"text\":\"I want to check charges for international roaming in UK\",\"context\":\"Are you looking for information about roaming charges internationally?\"},{\"text\":\"Yes activate roaming for my Vodafone number in Chennai\",\"context\":\"Can you confirm which city you will use the roaming service in?\"},{\"text\":\"I will be in Bangalore from 5th to 20th so activate roaming\",\"context\":\"Please tell me the period you will need roaming service for?\"},{\"text\":\"Please set roaming for my Mumbai number from 1st April onwards\",\"context\":\"Could you specify the start date for the roaming activation?\"}],\"long\":[{\"text\":\"I am planning a trip to Singapore in July so I need the international roaming activated in advance\"},{\"text\":\"Please enable the national roaming facility for my number as I will be traveling across different states in India next month\"}],\"long_with_context\":[{\"text\":\"I will be travelling to London from third to 20th of May can you activate international roaming for that period\",\"context\":\"Can you tell me the dates you need the international roaming service?\"},{\"text\":\"Could you activate national roaming on my number starting next week as I will be visiting multiple cities in south India\",\"context\":\"When do you want to start the national roaming on your mobile number?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 565,
+    "output_tokens": 405
+  }
+}

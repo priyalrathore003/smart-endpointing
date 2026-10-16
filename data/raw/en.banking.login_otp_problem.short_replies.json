@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.banking.login_otp_problem.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "banking",
+  "intent": "login_otp_problem",
+  "items": [
+    {
+      "context": "Can you please confirm your registered mobile number",
+      "requested_bucket": "short",
+      "text": "Nine eight seven six five four three two one zero"
+    },
+    {
+      "context": "Have you received any OTP message recently",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Are you able to access your mobile banking app",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Please tell me your date of birth",
+      "requested_bucket": "short",
+      "text": "First of January nineteen eighty five"
+    },
+    {
+      "context": "Is your phone connected to the internet right now",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Are you using the latest version of the app",
+      "requested_bucket": "short",
+      "text": "Not sure"
+    },
+    {
+      "context": "Did you recently change your registered mobile number",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Do you have another SIM card in the same phone",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Have you tried restarting your phone",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Are you receiving any error message while logging in",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Can you tell me the error message you get",
+      "requested_bucket": "short",
+      "text": "Otp not received"
+    },
+    {
+      "context": "Are you currently travelling abroad",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Do you want me to resend the OTP now",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Have you checked your message inbox for OTP",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Can you please describe the problem you are facing with login",
+      "requested_bucket": "medium",
+      "text": "I am not receiving the OTP to my registered number"
+    },
+    {
+      "context": "When did you last receive an OTP successfully",
+      "requested_bucket": "medium",
+      "text": "It was about two days ago in the evening"
+    },
+    {
+      "context": "Have you updated your mobile banking app recently",
+      "requested_bucket": "medium",
+      "text": "No I have not updated it since last month"
+    },
+    {
+      "context": "Are you using any spam or message blocking app on your phone",
+      "requested_bucket": "medium",
+      "text": "Yes I have installed a call and message blocker app"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 18577285,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: login_otp_problem - cannot log in to net or mobile banking or is not receiving the OTP\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Can you please confirm your registered mobile number\",\"reply\":\"Nine eight seven six five four three two one zero\"},{\"agent_question\":\"Have you received any OTP message recently\",\"reply\":\"No\"},{\"agent_question\":\"Are you able to access your mobile banking app\",\"reply\":\"No\"},{\"agent_question\":\"Please tell me your date of birth\",\"reply\":\"First of January nineteen eighty five\"},{\"agent_question\":\"Is your phone connected to the internet right now\",\"reply\":\"Yes\"},{\"agent_question\":\"Are you using the latest version of the app\",\"reply\":\"Not sure\"},{\"agent_question\":\"Did you recently change your registered mobile number\",\"reply\":\"No\"},{\"agent_question\":\"Do you have another SIM card in the same phone\",\"reply\":\"Yes\"},{\"agent_question\":\"Have you tried restarting your phone\",\"reply\":\"Yes\"},{\"agent_question\":\"Are you receiving any error message while logging in\",\"reply\":\"Yes\"},{\"agent_question\":\"Can you tell me the error message you get\",\"reply\":\"Otp not received\"},{\"agent_question\":\"Are you currently travelling abroad\",\"reply\":\"No\"},{\"agent_question\":\"Do you want me to resend the OTP now\",\"reply\":\"Yes\"},{\"agent_question\":\"Have you checked your message inbox for OTP\",\"reply\":\"Yes\"}],\"medium\":[{\"agent_question\":\"Can you please describe the problem you are facing with login\",\"reply\":\"I am not receiving the OTP to my registered number\"},{\"agent_question\":\"When did you last receive an OTP successfully\",\"reply\":\"It was about two days ago in the evening\"},{\"agent_question\":\"Have you updated your mobile banking app recently\",\"reply\":\"No I have not updated it since last month\"},{\"agent_question\":\"Are you using any spam or message blocking app on your phone\",\"reply\":\"Yes I have installed a call and message blocker app\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 374,
+    "output_tokens": 356
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.collections.already_paid.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "already_paid",
+  "items": [
+    {
+      "context": "क्या आपने पैसा पे किया था",
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "कब पे किया था",
+      "requested_bucket": "short",
+      "text": "कल रात"
+    },
+    {
+      "context": "पेमेंट का तरीका बताएं",
+      "requested_bucket": "short",
+      "text": "नेट बैंकिंग"
+    },
+    {
+      "context": "पेमेंट रिसिप्ट भेजी क्या",
+      "requested_bucket": "short",
+      "text": "हाँ भेजी थी"
+    },
+    {
+      "context": "अकाउंट नंबर बताइए",
+      "requested_bucket": "short",
+      "text": "1234567890"
+    },
+    {
+      "context": "कैसे पे किया था",
+      "requested_bucket": "short",
+      "text": "यूपीआई से"
+    },
+    {
+      "context": "कितना पे किया था",
+      "requested_bucket": "short",
+      "text": "पाँच हज़ार"
+    },
+    {
+      "context": "ट्रांजेक्शन आईडी बताइये",
+      "requested_bucket": "short",
+      "text": "TXN987654"
+    },
+    {
+      "context": "पेमेंट का दिन बताएं",
+      "requested_bucket": "short",
+      "text": "15 मार्च"
+    },
+    {
+      "context": "रसीद का नंबर क्या है",
+      "requested_bucket": "short",
+      "text": "456123"
+    },
+    {
+      "context": "किस नाम पे किया था",
+      "requested_bucket": "short",
+      "text": "राहुल शर्मा"
+    },
+    {
+      "context": "मौका कब था पेमेंट का",
+      "requested_bucket": "short",
+      "text": "सुबह 10 बजे"
+    },
+    {
+      "context": "ऑनलाइन किया था या ऑफलाइन",
+      "requested_bucket": "short",
+      "text": "ऑनलाइन"
+    },
+    {
+      "context": "क्या रिफंड चाहिए आपको",
+      "requested_bucket": "short",
+      "text": "नहीं चाहिए"
+    },
+    {
+      "context": "पेमेंट का पूरा डिटेल बताइए",
+      "requested_bucket": "medium",
+      "text": "सर मैंने डेबिट कार्ड से भुगतान किया था कल"
+    },
+    {
+      "context": "क्या आपने पेमेंट की फोटो भेजी है",
+      "requested_bucket": "medium",
+      "text": "हाँ सर मैडम मैने WhatsApp पर भेज दिया था"
+    },
+    {
+      "context": "पेमेंट कब से कलेक्शन में रिकॉर्ड नहीं है",
+      "requested_bucket": "medium",
+      "text": "मैंने दो दिन पहले पे किया था लेकिन रिकॉर्ड नहीं दिख रहा"
+    },
+    {
+      "context": "क्या आपको कोई ट्रांजेक्शन मैसेज मिला था",
+      "requested_bucket": "medium",
+      "text": "हाँ जी मैसेज आया था जिसमें लिखा था पेमेंट सफल"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3465026193,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: already_paid - says they have already paid and gives details\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"क्या आपने पैसा पे किया था\",\"reply\":\"हाँ जी\"},{\"agent_question\":\"कब पे किया था\",\"reply\":\"कल रात\"},{\"agent_question\":\"पेमेंट का तरीका बताएं\",\"reply\":\"नेट बैंकिंग\"},{\"agent_question\":\"पेमेंट रिसिप्ट भेजी क्या\",\"reply\":\"हाँ भेजी थी\"},{\"agent_question\":\"अकाउंट नंबर बताइए\",\"reply\":\"1234567890\"},{\"agent_question\":\"कैसे पे किया था\",\"reply\":\"यूपीआई से\"},{\"agent_question\":\"कितना पे किया था\",\"reply\":\"पाँच हज़ार\"},{\"agent_question\":\"ट्रांजेक्शन आईडी बताइये\",\"reply\":\"TXN987654\"},{\"agent_question\":\"पेमेंट का दिन बताएं\",\"reply\":\"15 मार्च\"},{\"agent_question\":\"रसीद का नंबर क्या है\",\"reply\":\"456123\"},{\"agent_question\":\"किस नाम पे किया था\",\"reply\":\"राहुल शर्मा\"},{\"agent_question\":\"मौका कब था पेमेंट का\",\"reply\":\"सुबह 10 बजे\"},{\"agent_question\":\"ऑनलाइन किया था या ऑफलाइन\",\"reply\":\"ऑनलाइन\"},{\"agent_question\":\"क्या रिफंड चाहिए आपको\",\"reply\":\"नहीं चाहिए\"}],\"medium\":[{\"agent_question\":\"पेमेंट का पूरा डिटेल बताइए\",\"reply\":\"सर मैंने डेबिट कार्ड से भुगतान किया था कल\"},{\"agent_question\":\"क्या आपने पेमेंट की फोटो भेजी है\",\"reply\":\"हाँ सर मैडम मैने WhatsApp पर भेज दिया था\"},{\"agent_question\":\"पेमेंट कब से कलेक्शन में रिकॉर्ड नहीं है\",\"reply\":\"मैंने दो दिन पहले पे किया था लेकिन रिकॉर्ड नहीं दिख रहा\"},{\"agent_question\":\"क्या आपको कोई ट्रांजेक्शन मैसेज मिला था\",\"reply\":\"हाँ जी मैसेज आया था जिसमें लिखा था पेमेंट सफल\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 496,
+    "output_tokens": 370
+  }
+}

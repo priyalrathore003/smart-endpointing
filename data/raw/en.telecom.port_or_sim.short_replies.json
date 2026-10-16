@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.telecom.port_or_sim.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "port_or_sim",
+  "items": [
+    {
+      "context": "Do you want to port your number today",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Which network do you want to port from",
+      "requested_bucket": "short",
+      "text": "airtel"
+    },
+    {
+      "context": "Do you need a new sim card",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Is your sim damaged or lost",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Can you provide the last four digits of your number",
+      "requested_bucket": "short",
+      "text": "9876"
+    },
+    {
+      "context": "Are you the account holder of this number",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Do you want to activate the sim now",
+      "requested_bucket": "short",
+      "text": "okay"
+    },
+    {
+      "context": "Would you like a normal or a nano sim",
+      "requested_bucket": "short",
+      "text": "nano"
+    },
+    {
+      "context": "Do you want to keep your old number",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Are you willing to provide address proof",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Do you want that sim delivered or self pick",
+      "requested_bucket": "short",
+      "text": "self pick"
+    },
+    {
+      "context": "Is this a prepaid or postpaid connection",
+      "requested_bucket": "short",
+      "text": "prepaid"
+    },
+    {
+      "context": "When do you want to start the porting process",
+      "requested_bucket": "short",
+      "text": "tomorrow"
+    },
+    {
+      "context": "Have you received your porting approval code",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "What is the reason for porting your number",
+      "requested_bucket": "medium",
+      "text": "my current sim is not working properly anymore"
+    },
+    {
+      "context": "Can you tell me your full name as per proof",
+      "requested_bucket": "medium",
+      "text": "my name is rahul sharma"
+    },
+    {
+      "context": "When do you want to receive your new sim card",
+      "requested_bucket": "medium",
+      "text": "please provide it by friday if possible"
+    },
+    {
+      "context": "Do you want to change your plan after porting",
+      "requested_bucket": "medium",
+      "text": "yes i want to switch to the unlimited data plan"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 4278635922,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: port_or_sim - wants to port the number, replace or swap a SIM\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Do you want to port your number today\",\"reply\":\"yes\"},{\"agent_question\":\"Which network do you want to port from\",\"reply\":\"airtel\"},{\"agent_question\":\"Do you need a new sim card\",\"reply\":\"yes\"},{\"agent_question\":\"Is your sim damaged or lost\",\"reply\":\"yes\"},{\"agent_question\":\"Can you provide the last four digits of your number\",\"reply\":\"9876\"},{\"agent_question\":\"Are you the account holder of this number\",\"reply\":\"yes\"},{\"agent_question\":\"Do you want to activate the sim now\",\"reply\":\"okay\"},{\"agent_question\":\"Would you like a normal or a nano sim\",\"reply\":\"nano\"},{\"agent_question\":\"Do you want to keep your old number\",\"reply\":\"yes\"},{\"agent_question\":\"Are you willing to provide address proof\",\"reply\":\"yes\"},{\"agent_question\":\"Do you want that sim delivered or self pick\",\"reply\":\"self pick\"},{\"agent_question\":\"Is this a prepaid or postpaid connection\",\"reply\":\"prepaid\"},{\"agent_question\":\"When do you want to start the porting process\",\"reply\":\"tomorrow\"},{\"agent_question\":\"Have you received your porting approval code\",\"reply\":\"yes\"}],\"medium\":[{\"agent_question\":\"What is the reason for porting your number\",\"reply\":\"my current sim is not working properly anymore\"},{\"agent_question\":\"Can you tell me your full name as per proof\",\"reply\":\"my name is rahul sharma\"},{\"agent_question\":\"When do you want to receive your new sim card\",\"reply\":\"please provide it by friday if possible\"},{\"agent_question\":\"Do you want to change your plan after porting\",\"reply\":\"yes i want to switch to the unlimited data plan\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 370,
+    "output_tokens": 339
+  }
+}

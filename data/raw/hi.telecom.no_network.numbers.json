@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.telecom.no_network.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "no_network",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "नेटवर्क नहीं है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "सिग्नल कम है"
+    },
+    {
+      "context": "क्या आप बताओगे कि नेटवर्क काम कर रहा है या नहीं",
+      "requested_bucket": "short",
+      "text": "कनेक्शन जाँचें"
+    },
+    {
+      "context": "आपको नेटवर्क से क्या समस्या हो रही है",
+      "requested_bucket": "short",
+      "text": "स्लो इंटरनेट हो रहा है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "दोपहर से कॉल बार बार कट रहे हैं"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मेरे इलाके में डेटा कनेक्शन बिल्कुल भी नहीं आता"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "कल से सिग्नल बहुत कमजोर है यहाँ पर"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मेरा फोन कोई नेटवर्क ढूंढ नहीं पा रहा है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "इंटरनेट चालू तो होता है पर बहुत स्लो चलता है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "कॉल शुरू होते ही डिस्कनेक्ट हो जाता है"
+    },
+    {
+      "context": "क्या आपका फोन कोई नेटवर्क दिखा रहा है या नहीं",
+      "requested_bucket": "medium",
+      "text": "घर के अंदर फोन बिल्कुल नेटवर्क नहीं दिखा रहा है"
+    },
+    {
+      "context": "आप किस तरह की समस्या फेस कर रहे हैं कॉल में",
+      "requested_bucket": "medium",
+      "text": "मेरे फोन में बार-बार कॉल ड्रॉप का प्रॉब्लम हो रहा है"
+    },
+    {
+      "context": "आपके फोन में सिग्नल की क्या स्थिति है",
+      "requested_bucket": "medium",
+      "text": "सिग्नल लेवल बहुत नीचे है और कोई कॉल नहीं बनती"
+    },
+    {
+      "context": "इंटरनेट स्पीड के बारे में कुछ बताइए",
+      "requested_bucket": "medium",
+      "text": "डेटा कनेक्शन चलता जरूर है लेकिन बहुत धीमा हो गया है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैं इस इलाक़े में रहता हूँ और पिछले हफ्ते से नेटवर्क पूरी तरह गायब हो गया है कई बार नया सिम लगवाया लेकिन कोई फायदा नहीं हो रहा है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "फोन में सिग्नल दिखता है पर कॉल उठाते ही कट जाता है और इंटरनेट भी बेहद स्लो चल रहा है जिससे काम करना मुश्किल हो रहा है"
+    },
+    {
+      "context": "कृपया अपनी समस्या विस्तार से बताएं जिससे हम आपकी मदद कर सकें",
+      "requested_bucket": "long",
+      "text": "मैं कोशिश कर रहा हूँ कॉल करने की पर नेटवर्क इतना खराब है कि बार-बार कॉल ड्रॉप हो जाता है कृपया जल्दी ठीक करें"
+    },
+    {
+      "context": "आपके इलाके में नेटवर्क की समस्या कब से शुरू हुई है",
+      "requested_bucket": "long",
+      "text": "हमारे इलाके में नेटवर्क की समस्या बहुत गंभीर है, लगभग दस दिन से ठीक से कॉलिंग नहीं हो पा रही है जबकि पहले सब सही था"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 414924562,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: no_network - has no signal, call drops or slow internet\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"नेटवर्क नहीं है\"},{\"text\":\"सिग्नल कम है\"}],\"short_with_context\":[{\"text\":\"कनेक्शन जाँचें\",\"context\":\"क्या आप बताओगे कि नेटवर्क काम कर रहा है या नहीं\"}, {\"text\":\"स्लो इंटरनेट हो रहा है\",\"context\":\"आपको नेटवर्क से क्या समस्या हो रही है\"}],\"medium\":[{\"text\":\"दोपहर से कॉल बार बार कट रहे हैं\"},{\"text\":\"मेरे इलाके में डेटा कनेक्शन बिल्कुल भी नहीं आता\"},{\"text\":\"कल से सिग्नल बहुत कमजोर है यहाँ पर\"},{\"text\":\"मेरा फोन कोई नेटवर्क ढूंढ नहीं पा रहा है\"},{\"text\":\"इंटरनेट चालू तो होता है पर बहुत स्लो चलता है\"},{\"text\":\"कॉल शुरू होते ही डिस्कनेक्ट हो जाता है\"}],\"medium_with_context\":[{\"text\":\"घर के अंदर फोन बिल्कुल नेटवर्क नहीं दिखा रहा है\",\"context\":\"क्या आपका फोन कोई नेटवर्क दिखा रहा है या नहीं\"}, {\"text\":\"मेरे फोन में बार-बार कॉल ड्रॉप का प्रॉब्लम हो रहा है\",\"context\":\"आप किस तरह की समस्या फेस कर रहे हैं कॉल में\"}, {\"text\":\"सिग्नल लेवल बहुत नीचे है और कोई कॉल नहीं बनती\",\"context\":\"आपके फोन में सिग्नल की क्या स्थिति है\"}, {\"text\":\"डेटा कनेक्शन चलता जरूर है लेकिन बहुत धीमा हो गया है\",\"context\":\"इंटरनेट स्पीड के बारे में कुछ बताइए\"}],\"long\":[{\"text\":\"मैं इस इलाक़े में रहता हूँ और पिछले हफ्ते से नेटवर्क पूरी तरह गायब हो गया है कई बार नया सिम लगवाया लेकिन कोई फायदा नहीं हो रहा है\"},{\"text\":\"फोन में सिग्नल दिखता है पर कॉल उठाते ही कट जाता है और इंटरनेट भी बेहद स्लो चल रहा है जिससे काम करना मुश्किल हो रहा है\"}],\"long_with_context\":[{\"text\":\"मैं कोशिश कर रहा हूँ कॉल करने की पर नेटवर्क इतना खराब है कि बार-बार कॉल ड्रॉप हो जाता है कृपया जल्दी ठीक करें\",\"context\":\"कृपया अपनी समस्या विस्तार से बताएं जिससे हम आपकी मदद कर सकें\"}, {\"text\":\"हमारे इलाके में नेटवर्क की समस्या बहुत गंभीर है, लगभग दस दिन से ठीक से कॉलिंग नहीं हो पा रही है जबकि पहले सब सही था\",\"context\":\"आपके इलाके में नेटवर्क की समस्या कब से शुरू हुई है\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 711,
+    "output_tokens": 493
+  }
+}

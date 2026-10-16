@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.delivery.cancel_order.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "delivery",
+  "intent": "cancel_order",
+  "items": [
+    {
+      "context": "Order cancel karna hai kya",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Order id bata sakte hain",
+      "requested_bucket": "short",
+      "text": "one two three four five"
+    },
+    {
+      "context": "Kya reason hai cancel karne ka",
+      "requested_bucket": "short",
+      "text": "galat item aaya"
+    },
+    {
+      "context": "Aapka naam kya hai",
+      "requested_bucket": "short",
+      "text": "ram kumar"
+    },
+    {
+      "context": "Delivery address confirm karein",
+      "requested_bucket": "short",
+      "text": "noida sector nine"
+    },
+    {
+      "context": "Refund chahiye ya replacement",
+      "requested_bucket": "short",
+      "text": "refund chahiye"
+    },
+    {
+      "context": "Order cancel abhi kar doon",
+      "requested_bucket": "short",
+      "text": "jaldi kar dijiye"
+    },
+    {
+      "context": "Payment mode kya tha",
+      "requested_bucket": "short",
+      "text": "cash on delivery"
+    },
+    {
+      "context": "Aapko replacement bhejna hai kya",
+      "requested_bucket": "short",
+      "text": "nahi chahiye"
+    },
+    {
+      "context": "Kya aapne order receive kiya",
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": "Order cancel confirmation denge",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Kya complaint register karni hai",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "Order date kya thi",
+      "requested_bucket": "short",
+      "text": "kal ki thi"
+    },
+    {
+      "context": "Contact number confirm karein",
+      "requested_bucket": "short",
+      "text": "nine eight seven six five"
+    },
+    {
+      "context": "Order tracking kar rahe the kya",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "Kya aapko naya order chahiye",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "Refund account details denge",
+      "requested_bucket": "short",
+      "text": "bank account hai"
+    },
+    {
+      "context": "Order cancel karne se sure hain",
+      "requested_bucket": "short",
+      "text": "ji haan sure"
+    },
+    {
+      "context": "Aapko order cancel kyun karna hai",
+      "requested_bucket": "medium",
+      "text": "product size mera sahi nahi tha"
+    },
+    {
+      "context": "Kya aapko refund chahiye ya replacement dena hai",
+      "requested_bucket": "medium",
+      "text": "refund chahiye please jaldi process kar dena"
+    },
+    {
+      "context": "Kab tak aap order cancel karna chahenge",
+      "requested_bucket": "medium",
+      "text": "aaj hi cancel kar dena"
+    },
+    {
+      "context": "Delivery address mein kya problem hai",
+      "requested_bucket": "medium",
+      "text": "delivery address galat type ho gaya hai"
+    },
+    {
+      "context": "Kya aap order receive karne ke baad cancel kar rahe hain",
+      "requested_bucket": "medium",
+      "text": "nahi mujhe abhi tak order receive nahi hua"
+    },
+    {
+      "context": "Kya aap payment kar chuke hain ya nahi",
+      "requested_bucket": "medium",
+      "text": "payment nahi kiya tha cash on delivery tha"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3787162857,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cancel_order - wants to cancel an order\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Order cancel karna hai kya\",\"reply\":\"haan ji\"},{\"agent_question\":\"Order id bata sakte hain\",\"reply\":\"one two three four five\"},{\"agent_question\":\"Kya reason hai cancel karne ka\",\"reply\":\"galat item aaya\"},{\"agent_question\":\"Aapka naam kya hai\",\"reply\":\"ram kumar\"},{\"agent_question\":\"Delivery address confirm karein\",\"reply\":\"noida sector nine\"},{\"agent_question\":\"Refund chahiye ya replacement\",\"reply\":\"refund chahiye\"},{\"agent_question\":\"Order cancel abhi kar doon\",\"reply\":\"jaldi kar dijiye\"},{\"agent_question\":\"Payment mode kya tha\",\"reply\":\"cash on delivery\"},{\"agent_question\":\"Aapko replacement bhejna hai kya\",\"reply\":\"nahi chahiye\"},{\"agent_question\":\"Kya aapne order receive kiya\",\"reply\":\"abhi nahi\"},{\"agent_question\":\"Order cancel confirmation denge\",\"reply\":\"haan ji\"},{\"agent_question\":\"Kya complaint register karni hai\",\"reply\":\"haan\"},{\"agent_question\":\"Order date kya thi\",\"reply\":\"kal ki thi\"},{\"agent_question\":\"Contact number confirm karein\",\"reply\":\"nine eight seven six five\"},{\"agent_question\":\"Order tracking kar rahe the kya\",\"reply\":\"haan\"},{\"agent_question\":\"Kya aapko naya order chahiye\",\"reply\":\"nahi\"},{\"agent_question\":\"Refund account details denge\",\"reply\":\"bank account hai\"},{\"agent_question\":\"Order cancel karne se sure hain\",\"reply\":\"ji haan sure\"}],\"medium\":[{\"agent_question\":\"Aapko order cancel kyun karna hai\",\"reply\":\"product size mera sahi nahi tha\"},{\"agent_question\":\"Kya aapko refund chahiye ya replacement dena hai\",\"reply\":\"refund chahiye please jaldi process kar dena\"},{\"agent_question\":\"Kab tak aap order cancel karna chahenge\",\"reply\":\"aaj hi cancel kar dena\"},{\"agent_question\":\"Delivery address mein kya problem hai\",\"reply\":\"delivery address galat type ho gaya hai\"},{\"agent_question\":\"Kya aap order receive karne ke baad cancel kar rahe hain\",\"reply\":\"nahi mujhe abhi tak order receive nahi hua\"},{\"agent_question\":\"Kya aap payment kar chuke hain ya nahi\",\"reply\":\"payment nahi kiya tha cash on delivery tha\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 390,
+    "output_tokens": 474
+  }
+}

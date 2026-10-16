@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.telecom.port_or_sim.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "port_or_sim",
+  "items": [
+    {
+      "context": "कौन सा नंबर पोर्ट करना है",
+      "requested_bucket": "short",
+      "text": "उसे वाला नंबर"
+    },
+    {
+      "context": "आपका नाम क्या है",
+      "requested_bucket": "short",
+      "text": "राहुल शर्मा"
+    },
+    {
+      "context": "नया सिम कहां भेजना है",
+      "requested_bucket": "short",
+      "text": "पता वही है"
+    },
+    {
+      "context": "पुराना नेटवर्क कौन सा है",
+      "requested_bucket": "short",
+      "text": "एयरटेल"
+    },
+    {
+      "context": "आपके पास पहचान पत्र है",
+      "requested_bucket": "short",
+      "text": "हाँ पास है"
+    },
+    {
+      "context": "फोन का मॉडल क्या है",
+      "requested_bucket": "short",
+      "text": "सैमसंग"
+    },
+    {
+      "context": "पोर्टिंग के लिए फीस दे दी क्या",
+      "requested_bucket": "short",
+      "text": "अभी नहीं"
+    },
+    {
+      "context": "नया सिम कब चाहिए",
+      "requested_bucket": "short",
+      "text": "जल्दी चाहिए"
+    },
+    {
+      "context": "KYC कम्पलीट कर लिया है",
+      "requested_bucket": "short",
+      "text": "हाँ जी कर लिया"
+    },
+    {
+      "context": "किस शहर में हैं आप",
+      "requested_bucket": "short",
+      "text": "दिल्ली में"
+    },
+    {
+      "context": "सिम का साइज बताएं",
+      "requested_bucket": "short",
+      "text": "नैनो सिम"
+    },
+    {
+      "context": "पुरानी सिम एक्टिव है क्या",
+      "requested_bucket": "short",
+      "text": "हाँ है"
+    },
+    {
+      "context": "क्या नंबर लिंक्ड है मनी ट्रांसफर से",
+      "requested_bucket": "short",
+      "text": "हाँ लिंक है"
+    },
+    {
+      "context": "आपको OTP मिला क्या",
+      "requested_bucket": "short",
+      "text": "हाँ मिला"
+    },
+    {
+      "context": "कृपया अपना पूरा पता बताएं",
+      "requested_bucket": "medium",
+      "text": "मेरा पता दिल्ली के द्वारका सेक्टर 12 में है"
+    },
+    {
+      "context": "क्या आपने नए सिम के लिए पेमेंट किया",
+      "requested_bucket": "medium",
+      "text": "जी हाँ मैंने ऑनलाइन payment कर दिया था कल"
+    },
+    {
+      "context": "आपका पोर्टिंग रिक्वेस्ट कब लगाना चाहते हैं",
+      "requested_bucket": "medium",
+      "text": "मैं पोर्टिंग कल सुबह करना चाहता हूँ"
+    },
+    {
+      "context": "आपका फोन नंबर फिर से बता सकते हैं",
+      "requested_bucket": "medium",
+      "text": "मेरा नंबर 9876543210 है"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1487668535,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: port_or_sim - wants to port the number, replace or swap a SIM\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"कौन सा नंबर पोर्ट करना है\",\"reply\":\"उसे वाला नंबर\"},{\"agent_question\":\"आपका नाम क्या है\",\"reply\":\"राहुल शर्मा\"},{\"agent_question\":\"नया सिम कहां भेजना है\",\"reply\":\"पता वही है\"},{\"agent_question\":\"पुराना नेटवर्क कौन सा है\",\"reply\":\"एयरटेल\"},{\"agent_question\":\"आपके पास पहचान पत्र है\",\"reply\":\"हाँ पास है\"},{\"agent_question\":\"फोन का मॉडल क्या है\",\"reply\":\"सैमसंग\"},{\"agent_question\":\"पोर्टिंग के लिए फीस दे दी क्या\",\"reply\":\"अभी नहीं\"},{\"agent_question\":\"नया सिम कब चाहिए\",\"reply\":\"जल्दी चाहिए\"},{\"agent_question\":\"KYC कम्पलीट कर लिया है\",\"reply\":\"हाँ जी कर लिया\"},{\"agent_question\":\"किस शहर में हैं आप\",\"reply\":\"दिल्ली में\"},{\"agent_question\":\"सिम का साइज बताएं\",\"reply\":\"नैनो सिम\"},{\"agent_question\":\"पुरानी सिम एक्टिव है क्या\",\"reply\":\"हाँ है\"},{\"agent_question\":\"क्या नंबर लिंक्ड है मनी ट्रांसफर से\",\"reply\":\"हाँ लिंक है\"},{\"agent_question\":\"आपको OTP मिला क्या\",\"reply\":\"हाँ मिला\"}],\"medium\":[{\"agent_question\":\"कृपया अपना पूरा पता बताएं\",\"reply\":\"मेरा पता दिल्ली के द्वारका सेक्टर 12 में है\"},{\"agent_question\":\"क्या आपने नए सिम के लिए पेमेंट किया\",\"reply\":\"जी हाँ मैंने ऑनलाइन payment कर दिया था कल\"},{\"agent_question\":\"आपका पोर्टिंग रिक्वेस्ट कब लगाना चाहते हैं\",\"reply\":\"मैं पोर्टिंग कल सुबह करना चाहता हूँ\"},{\"agent_question\":\"आपका फोन नंबर फिर से बता सकते हैं\",\"reply\":\"मेरा नंबर 9876543210 है\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 500,
+    "output_tokens": 366
+  }
+}

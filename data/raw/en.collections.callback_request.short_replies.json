@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.collections.callback_request.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "callback_request",
+  "items": [
+    {
+      "context": "Can I help you now",
+      "requested_bucket": "short",
+      "text": "Not now"
+    },
+    {
+      "context": "Do you want a call back",
+      "requested_bucket": "short",
+      "text": "Yes please"
+    },
+    {
+      "context": "Is this a good time",
+      "requested_bucket": "short",
+      "text": "No it is not"
+    },
+    {
+      "context": "When should we call you",
+      "requested_bucket": "short",
+      "text": "Tomorrow"
+    },
+    {
+      "context": "Should I call you later today",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Do you want to reschedule",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Can I talk to you now",
+      "requested_bucket": "short",
+      "text": "No thanks"
+    },
+    {
+      "context": "Would you want a call back",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "What is the best time to call",
+      "requested_bucket": "short",
+      "text": "Evening"
+    },
+    {
+      "context": "Are you available now",
+      "requested_bucket": "short",
+      "text": "Not available"
+    },
+    {
+      "context": "Should I call after lunch",
+      "requested_bucket": "short",
+      "text": "Yes please"
+    },
+    {
+      "context": "Do you want to speak now",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Can I call you back",
+      "requested_bucket": "short",
+      "text": "Later"
+    },
+    {
+      "context": "When can I call you back",
+      "requested_bucket": "short",
+      "text": "Monday"
+    },
+    {
+      "context": "Would you like to get a call back later today",
+      "requested_bucket": "medium",
+      "text": "Yes please call me after five pm"
+    },
+    {
+      "context": "When would be a suitable time for us to call you back",
+      "requested_bucket": "medium",
+      "text": "Can you please call me by friday evening"
+    },
+    {
+      "context": "Is there a better time for me to reach you",
+      "requested_bucket": "medium",
+      "text": "Please call me tomorrow morning around nine am"
+    },
+    {
+      "context": "Can I help you with this issue now or should I call back later",
+      "requested_bucket": "medium",
+      "text": "I am busy now can you call me in two hours"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 240234938,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: callback_request - asks the agent to call back at another time\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Can I help you now\",\"reply\":\"Not now\"},{\"agent_question\":\"Do you want a call back\",\"reply\":\"Yes please\"},{\"agent_question\":\"Is this a good time\",\"reply\":\"No it is not\"},{\"agent_question\":\"When should we call you\",\"reply\":\"Tomorrow\"},{\"agent_question\":\"Should I call you later today\",\"reply\":\"Yes\"},{\"agent_question\":\"Do you want to reschedule\",\"reply\":\"Yes\"},{\"agent_question\":\"Can I talk to you now\",\"reply\":\"No thanks\"},{\"agent_question\":\"Would you want a call back\",\"reply\":\"Yes\"},{\"agent_question\":\"What is the best time to call\",\"reply\":\"Evening\"},{\"agent_question\":\"Are you available now\",\"reply\":\"Not available\"},{\"agent_question\":\"Should I call after lunch\",\"reply\":\"Yes please\"},{\"agent_question\":\"Do you want to speak now\",\"reply\":\"No\"},{\"agent_question\":\"Can I call you back\",\"reply\":\"Later\"},{\"agent_question\":\"When can I call you back\",\"reply\":\"Monday\"}],\"medium\":[{\"agent_question\":\"Would you like to get a call back later today\",\"reply\":\"Yes please call me after five pm\"},{\"agent_question\":\"When would be a suitable time for us to call you back\",\"reply\":\"Can you please call me by friday evening\"},{\"agent_question\":\"Is there a better time for me to reach you\",\"reply\":\"Please call me tomorrow morning around nine am\"},{\"agent_question\":\"Can I help you with this issue now or should I call back later\",\"reply\":\"I am busy now can you call me in two hours\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 367,
+    "output_tokens": 316
+  }
+}

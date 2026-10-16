@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.collections.already_paid.numbers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "already_paid",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "already paid"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "payment ho chuka hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "receipt mil gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal transfer ho gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "payment clear hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "amount deduct ho gaya"
+    },
+    {
+      "context": "Kya aapne payment kar diya hai",
+      "requested_bucket": "short",
+      "text": "haa kar diya"
+    },
+    {
+      "context": "Kya aapke paas payment receipt hai",
+      "requested_bucket": "short",
+      "text": "receipt hai mere paas"
+    },
+    {
+      "context": "Kya aapke payment confirm hain",
+      "requested_bucket": "short",
+      "text": "payment confirm hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine 2500 rupees transfer kiya tha 3 march ko"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account number 1234 5678 9012 me paisa aa chuka hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kal subah 9 baje payment kr diya tha online se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mere paas transaction id 4567 1234 8901 hai status ke liye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "pichle hafte payment ho chuka tha jaldi verify krdo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main ne yesterday 15 feb ko payment kiya hai credit card se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "payment details mein sab kuch sahi hai mujhe paise deduct dikh rahe hain"
+    },
+    {
+      "context": "Kab aur kis tareeke se payment kiya tha aapne?",
+      "requested_bucket": "medium",
+      "text": "maine online bank se payment ki thi 2 din pehle"
+    },
+    {
+      "context": "Kya aapke paas payment ka koi reference number ya id hai?",
+      "requested_bucket": "medium",
+      "text": "mere paas transaction id 7890 1234 5678 hai confirm kar lijiye"
+    },
+    {
+      "context": "Kab aapka payment hua tha aur kis device se?",
+      "requested_bucket": "medium",
+      "text": "payment transfer kal raat 10 baje hua tha phone se"
+    },
+    {
+      "context": "Kya aap apna account number confirm kar sakte hain?",
+      "requested_bucket": "medium",
+      "text": "account number 9876 5432 1098 me paise transfer hue hain"
+    },
+    {
+      "context": "Kitni raashi bheji thi aur kis tareekh ko?",
+      "requested_bucket": "medium",
+      "text": "maine 3000 rupaye 5 feb ko transfer kiye thay mobile app se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine 5 march ko apne account se mobile app ke zariye 4500 rupaye transfer kiye the aur mujhe receipt bhi mil chuki hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kal subah me ne apne debit card se 1500 rupaye payment kiye the jiska transaction id 3344 5566 7788 hai verify kr len"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "3 din pehle 10 february ko maine paisa bank branch se cash deposit kiye the jiska slip mere pass hai aur payment confirm karwana hai"
+    },
+    {
+      "context": "Aapne kab aur kitni rakam transfer ki thi aur transaction id batayen",
+      "requested_bucket": "long",
+      "text": "haan maine 25 february ko apne net banking se 6000 rupaye transfer kiye the aur transaction number 1122 3344 5566 confirm karna hai"
+    },
+    {
+      "context": "Kya aapke paas payment ki koi receipt ya reference number hai?",
+      "requested_bucket": "long",
+      "text": "mere paas 15 january ko kiye gaye 3200 rupaye ke payment ka receipt aur reference number 9988 7766 5544 hai"
+    },
+    {
+      "context": "Kya aap payment karne ke baad koi confirmation message ya notification mile tha?",
+      "requested_bucket": "long",
+      "text": "maine 12 march ko apne phone se 2700 rupaye transfer kiye the aur payment successful ka message bhi aaya tha lekin paise dikha nahi rahe"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2669702050,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: already_paid - says they have already paid and gives details\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"already paid\"},{\"text\":\"payment ho chuka hai\"},{\"text\":\"receipt mil gaya\"},{\"text\":\"kal transfer ho gaya\"},{\"text\":\"payment clear hain\"},{\"text\":\"amount deduct ho gaya\"}],\"short_with_context\":[{\"text\":\"haa kar diya\",\"context\":\"Kya aapne payment kar diya hai\"},{\"text\":\"receipt hai mere paas\",\"context\":\"Kya aapke paas payment receipt hai\"},{\"text\":\"payment confirm hain\",\"context\":\"Kya aapke payment confirm hain\"}],\"medium\":[{\"text\":\"maine 2500 rupees transfer kiya tha 3 march ko\"},{\"text\":\"mera account number 1234 5678 9012 me paisa aa chuka hai\"},{\"text\":\"kal subah 9 baje payment kr diya tha online se\"},{\"text\":\"mere paas transaction id 4567 1234 8901 hai status ke liye\"},{\"text\":\"pichle hafte payment ho chuka tha jaldi verify krdo\"},{\"text\":\"main ne yesterday 15 feb ko payment kiya hai credit card se\"},{\"text\":\"payment details mein sab kuch sahi hai mujhe paise deduct dikh rahe hain\"}],\"medium_with_context\":[{\"text\":\"maine online bank se payment ki thi 2 din pehle\",\"context\":\"Kab aur kis tareeke se payment kiya tha aapne?\"},{\"text\":\"mere paas transaction id 7890 1234 5678 hai confirm kar lijiye\",\"context\":\"Kya aapke paas payment ka koi reference number ya id hai?\"},{\"text\":\"payment transfer kal raat 10 baje hua tha phone se\",\"context\":\"Kab aapka payment hua tha aur kis device se?\"},{\"text\":\"account number 9876 5432 1098 me paise transfer hue hain\",\"context\":\"Kya aap apna account number confirm kar sakte hain?\"},{\"text\":\"maine 3000 rupaye 5 feb ko transfer kiye thay mobile app se\",\"context\":\"Kitni raashi bheji thi aur kis tareekh ko?\"}],\"long\":[{\"text\":\"maine 5 march ko apne account se mobile app ke zariye 4500 rupaye transfer kiye the aur mujhe receipt bhi mil chuki hai\"},{\"text\":\"kal subah me ne apne debit card se 1500 rupaye payment kiye the jiska transaction id 3344 5566 7788 hai verify kr len\"},{\"text\":\"3 din pehle 10 february ko maine paisa bank branch se cash deposit kiye the jiska slip mere pass hai aur payment confirm karwana hai\"}],\"long_with_context\":[{\"text\":\"haan maine 25 february ko apne net banking se 6000 rupaye transfer kiye the aur transaction number 1122 3344 5566 confirm karna hai\",\"context\":\"Aapne kab aur kitni rakam transfer ki thi aur transaction id batayen\"},{\"text\":\"mere paas 15 january ko kiye gaye 3200 rupaye ke payment ka receipt aur reference number 9988 7766 5544 hai\",\"context\":\"Kya aapke paas payment ki koi receipt ya reference number hai?\"},{\"text\":\"maine 12 march ko apne phone se 2700 rupaye transfer kiye the aur payment successful ka message bhi aaya tha lekin paise dikha nahi rahe\",\"context\":\"Kya aap payment karne ke baad koi confirmation message ya notification mile tha?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 606,
+    "output_tokens": 717
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.telecom.no_network.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "telecom",
+  "intent": "no_network",
+  "items": [
+    {
+      "context": "Aapka area network hai kya abhi",
+      "requested_bucket": "short",
+      "text": "Nahi abhi network nahi hai"
+    },
+    {
+      "context": "Kya aapne phone restart kiya",
+      "requested_bucket": "short",
+      "text": "Haan kar liya"
+    },
+    {
+      "context": "Aapka sim sahi jagah laga hai",
+      "requested_bucket": "short",
+      "text": "Haan sahi hai"
+    },
+    {
+      "context": "Aap apna location bata sakte hain",
+      "requested_bucket": "short",
+      "text": "Mumbai ke Andheri"
+    },
+    {
+      "context": "Aapka device model kya hai",
+      "requested_bucket": "short",
+      "text": "Samsung Galaxy M31"
+    },
+    {
+      "context": "Internet speed slow hai ya bilkul nahi chal raha",
+      "requested_bucket": "short",
+      "text": "Bilkul band hai"
+    },
+    {
+      "context": "Call drop kab hota hai mostly",
+      "requested_bucket": "short",
+      "text": "Jab main ghar me hota hu"
+    },
+    {
+      "context": "5G use kar rahe hain aap",
+      "requested_bucket": "short",
+      "text": "Nahi 4G hi use karta hu"
+    },
+    {
+      "context": "Network bar kitna dikhata hai phone pe",
+      "requested_bucket": "short",
+      "text": "Do bar dikhata hai"
+    },
+    {
+      "context": "SIM card naya liya hai ya purana",
+      "requested_bucket": "short",
+      "text": "Purana hai yeh sim"
+    },
+    {
+      "context": "Kya aapke phone mein software update hua hai recently",
+      "requested_bucket": "short",
+      "text": "Nahi hua"
+    },
+    {
+      "context": "Aapke ghar ke bahar network kaisa lagta hai",
+      "requested_bucket": "short",
+      "text": "Thik hai waha pe"
+    },
+    {
+      "context": "Aapka plane mode on to nahi hai",
+      "requested_bucket": "short",
+      "text": "Nahi off hai plane mode"
+    },
+    {
+      "context": "Kya aapke area me network maintenance chal raha hai",
+      "requested_bucket": "short",
+      "text": "Pata nahi chal raha"
+    },
+    {
+      "context": "Kya call karte waqt signal poora dikhata hai phone",
+      "requested_bucket": "short",
+      "text": "Nahi half bar dikhta hai"
+    },
+    {
+      "context": "Aap indoor hai ya outdoor abhi",
+      "requested_bucket": "short",
+      "text": "Indoor hu room me"
+    },
+    {
+      "context": "Kya aapke sim pe balance available hai",
+      "requested_bucket": "short",
+      "text": "Haan balance hai"
+    },
+    {
+      "context": "Kya phone restart karne ke baad network aa gaya",
+      "requested_bucket": "short",
+      "text": "Abhi tak nahi"
+    },
+    {
+      "context": "Aapne kab se network problem notice kiya hai",
+      "requested_bucket": "medium",
+      "text": "Kal se network bilkul nahi aa raha hai"
+    },
+    {
+      "context": "Kya aap kisi particular jagah par yeh problem face kar rahe ho",
+      "requested_bucket": "medium",
+      "text": "Haan sir mostly apne office ke andar hi problem hai"
+    },
+    {
+      "context": "Aap internet kb use karte time ye problem aati hai",
+      "requested_bucket": "medium",
+      "text": "Jab main evening me mobile data use karta hu tab slow hota hai"
+    },
+    {
+      "context": "Call drop hote waqt koi message ya alert aata hai kya",
+      "requested_bucket": "medium",
+      "text": "Nahi koi bhi message nahi dikhta sir bas call cut ho jata hai"
+    },
+    {
+      "context": "Aapki location me 4G network normally available hai kya",
+      "requested_bucket": "medium",
+      "text": "Haan normally network hota hai lekin abhi aapne dekha to nahi"
+    },
+    {
+      "context": "Kya aapne sim card dusre phone me try kiya hai network ke liye",
+      "requested_bucket": "medium",
+      "text": "Haan dusre phone me thoda better lag raha hai network"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2133462306,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: no_network - has no signal, call drops or slow internet\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Aapka area network hai kya abhi\",\"reply\":\"Nahi abhi network nahi hai\"},{\"agent_question\":\"Kya aapne phone restart kiya\",\"reply\":\"Haan kar liya\"},{\"agent_question\":\"Aapka sim sahi jagah laga hai\",\"reply\":\"Haan sahi hai\"},{\"agent_question\":\"Aap apna location bata sakte hain\",\"reply\":\"Mumbai ke Andheri\"},{\"agent_question\":\"Aapka device model kya hai\",\"reply\":\"Samsung Galaxy M31\"},{\"agent_question\":\"Internet speed slow hai ya bilkul nahi chal raha\",\"reply\":\"Bilkul band hai\"},{\"agent_question\":\"Call drop kab hota hai mostly\",\"reply\":\"Jab main ghar me hota hu\"},{\"agent_question\":\"5G use kar rahe hain aap\",\"reply\":\"Nahi 4G hi use karta hu\"},{\"agent_question\":\"Network bar kitna dikhata hai phone pe\",\"reply\":\"Do bar dikhata hai\"},{\"agent_question\":\"SIM card naya liya hai ya purana\",\"reply\":\"Purana hai yeh sim\"},{\"agent_question\":\"Kya aapke phone mein software update hua hai recently\",\"reply\":\"Nahi hua\"},{\"agent_question\":\"Aapke ghar ke bahar network kaisa lagta hai\",\"reply\":\"Thik hai waha pe\"},{\"agent_question\":\"Aapka plane mode on to nahi hai\",\"reply\":\"Nahi off hai plane mode\"},{\"agent_question\":\"Kya aapke area me network maintenance chal raha hai\",\"reply\":\"Pata nahi chal raha\"},{\"agent_question\":\"Kya call karte waqt signal poora dikhata hai phone\",\"reply\":\"Nahi half bar dikhta hai\"},{\"agent_question\":\"Aap indoor hai ya outdoor abhi\",\"reply\":\"Indoor hu room me\"},{\"agent_question\":\"Kya aapke sim pe balance available hai\",\"reply\":\"Haan balance hai\"},{\"agent_question\":\"Kya phone restart karne ke baad network aa gaya\",\"reply\":\"Abhi tak nahi\"}],\"medium\":[{\"agent_question\":\"Aapne kab se network problem notice kiya hai\",\"reply\":\"Kal se network bilkul nahi aa raha hai\"},{\"agent_question\":\"Kya aap kisi particular jagah par yeh problem face kar rahe ho\",\"reply\":\"Haan sir mostly apne office ke andar hi problem hai\"},{\"agent_question\":\"Aap internet kb use karte time ye problem aati hai\",\"reply\":\"Jab main evening me mobile data use karta hu tab slow hota hai\"},{\"agent_question\":\"Call drop hote waqt koi message ya alert aata hai kya\",\"reply\":\"Nahi koi bhi message nahi dikhta sir bas call cut ho jata hai\"},{\"agent_question\":\"Aapki location me 4G network normally available hai kya\",\"reply\":\"Haan normally network hota hai lekin abhi aapne dekha to nahi\"},{\"agent_question\":\"Kya aapne sim card dusre phone me try kiya hai network ke liye\",\"reply\":\"Haan dusre phone me thoda better lag raha hai network\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 394,
+    "output_tokens": 623
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.telecom.escalate_complaint.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "telecom",
+  "intent": "escalate_complaint",
+  "items": [
+    {
+      "context": "Aapka complaint number kya hai",
+      "requested_bucket": "short",
+      "text": "Complaint number 12435"
+    },
+    {
+      "context": "Kab aapne complaint register karwaya tha",
+      "requested_bucket": "short",
+      "text": "Do din pehle"
+    },
+    {
+      "context": "Aapka naam kya hai",
+      "requested_bucket": "short",
+      "text": "Rahul Sharma"
+    },
+    {
+      "context": "Kya aap apni details confirm karenge",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Aapka registered mobile number kya hai",
+      "requested_bucket": "short",
+      "text": "9876543210"
+    },
+    {
+      "context": "Kya problem abhi bhi same hai",
+      "requested_bucket": "short",
+      "text": "Haan abhi bhi"
+    },
+    {
+      "context": "Kya aapko case ka update mila tha",
+      "requested_bucket": "short",
+      "text": "Nahi mila"
+    },
+    {
+      "context": "Aapka address confirm karenge",
+      "requested_bucket": "short",
+      "text": "Indore Madhya Pradesh"
+    },
+    {
+      "context": "Kya aapne customer care se repeat call kiya tha",
+      "requested_bucket": "short",
+      "text": "Haan kiya tha"
+    },
+    {
+      "context": "Kitni baar aapne complaint register karwai hai",
+      "requested_bucket": "short",
+      "text": "Do baar"
+    },
+    {
+      "context": "Aapka plan kaun sa hai",
+      "requested_bucket": "short",
+      "text": "Prepaid plan"
+    },
+    {
+      "context": "Kya aap transfer karwana chahte hain",
+      "requested_bucket": "short",
+      "text": "Haan chahte hain"
+    },
+    {
+      "context": "Aap refund ka status jana chahte hain",
+      "requested_bucket": "short",
+      "text": "Haan chahiye"
+    },
+    {
+      "context": "Aapko ideal time aur date kab chahiye",
+      "requested_bucket": "short",
+      "text": "Kal tak"
+    },
+    {
+      "context": "Kya aapko SMS update mila tha",
+      "requested_bucket": "short",
+      "text": "Nahi mila"
+    },
+    {
+      "context": "Problem kab shuru hui",
+      "requested_bucket": "short",
+      "text": "Pichle hafte"
+    },
+    {
+      "context": "Kya aapko kisi aur agent ne help kiya tha",
+      "requested_bucket": "short",
+      "text": "Haan kiya tha"
+    },
+    {
+      "context": "Kya aap escalation chahte hai",
+      "requested_bucket": "short",
+      "text": "Haan chahiye"
+    },
+    {
+      "context": "Aapke complaint me kya issue hai batayein",
+      "requested_bucket": "medium",
+      "text": "Mera balance kat gaya lekin service nahi mili abhi tak"
+    },
+    {
+      "context": "Kya aapne pehle bhi is problem ko report kiya hai",
+      "requested_bucket": "medium",
+      "text": "Haan do din pehle complaint register kiya tha phone nahi laga"
+    },
+    {
+      "context": "Aapko kis level par escalation chahiye",
+      "requested_bucket": "medium",
+      "text": "Manager ke paas escalat karna hai jaldi se problem solve karein"
+    },
+    {
+      "context": "Kya aapke paas complaint ka reference number hai",
+      "requested_bucket": "medium",
+      "text": "Haan hai 12435 is number se complaint register ki thi main"
+    },
+    {
+      "context": "Kya aap humari customer care se baat kar chuke hain",
+      "requested_bucket": "medium",
+      "text": "Haan call kiya tha par solution nahi mila abhi tak"
+    },
+    {
+      "context": "Aapka mobile number confirm kar sakte hain",
+      "requested_bucket": "medium",
+      "text": "9876543210 ye mera registered mobile hai jisse call kar raha hun"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2576978236,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: escalate_complaint - is unhappy that an earlier complaint was not solved and wants escalation\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Aapka complaint number kya hai\",\"reply\":\"Complaint number 12435\"},{\"agent_question\":\"Kab aapne complaint register karwaya tha\",\"reply\":\"Do din pehle\"},{\"agent_question\":\"Aapka naam kya hai\",\"reply\":\"Rahul Sharma\"},{\"agent_question\":\"Kya aap apni details confirm karenge\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Aapka registered mobile number kya hai\",\"reply\":\"9876543210\"},{\"agent_question\":\"Kya problem abhi bhi same hai\",\"reply\":\"Haan abhi bhi\"},{\"agent_question\":\"Kya aapko case ka update mila tha\",\"reply\":\"Nahi mila\"},{\"agent_question\":\"Aapka address confirm karenge\",\"reply\":\"Indore Madhya Pradesh\"},{\"agent_question\":\"Kya aapne customer care se repeat call kiya tha\",\"reply\":\"Haan kiya tha\"},{\"agent_question\":\"Kitni baar aapne complaint register karwai hai\",\"reply\":\"Do baar\"},{\"agent_question\":\"Aapka plan kaun sa hai\",\"reply\":\"Prepaid plan\"},{\"agent_question\":\"Kya aap transfer karwana chahte hain\",\"reply\":\"Haan chahte hain\"},{\"agent_question\":\"Aap refund ka status jana chahte hain\",\"reply\":\"Haan chahiye\"},{\"agent_question\":\"Aapko ideal time aur date kab chahiye\",\"reply\":\"Kal tak\"},{\"agent_question\":\"Kya aapko SMS update mila tha\",\"reply\":\"Nahi mila\"},{\"agent_question\":\"Problem kab shuru hui\",\"reply\":\"Pichle hafte\"},{\"agent_question\":\"Kya aapko kisi aur agent ne help kiya tha\",\"reply\":\"Haan kiya tha\"},{\"agent_question\":\"Kya aap escalation chahte hai\",\"reply\":\"Haan chahiye\"}],\"medium\":[{\"agent_question\":\"Aapke complaint me kya issue hai batayein\",\"reply\":\"Mera balance kat gaya lekin service nahi mili abhi tak\"},{\"agent_question\":\"Kya aapne pehle bhi is problem ko report kiya hai\",\"reply\":\"Haan do din pehle complaint register kiya tha phone nahi laga\"},{\"agent_question\":\"Aapko kis level par escalation chahiye\",\"reply\":\"Manager ke paas escalat karna hai jaldi se problem solve karein\"},{\"agent_question\":\"Kya aapke paas complaint ka reference number hai\",\"reply\":\"Haan hai 12435 is number se complaint register ki thi main\"},{\"agent_question\":\"Kya aap humari customer care se baat kar chuke hain\",\"reply\":\"Haan call kiya tha par solution nahi mila abhi tak\"},{\"agent_question\":\"Aapka mobile number confirm kar sakte hain\",\"reply\":\"9876543210 ye mera registered mobile hai jisse call kar raha hun\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 399,
+    "output_tokens": 572
+  }
+}

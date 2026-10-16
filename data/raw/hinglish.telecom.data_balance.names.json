@@ -1,0 +1,202 @@
+{
+  "batch_id": "hinglish.telecom.data_balance.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "telecom",
+  "intent": "data_balance",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "data balance batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kitna bacha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "validity kya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "data balance"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "validity batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "meri data kya bacha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "data kitna bacha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "abhi kitna data hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "validity kab tak hai"
+    },
+    {
+      "context": "Kaunse plan ka data balance chahiye aapko",
+      "requested_bucket": "short",
+      "text": "thoda details dijiye"
+    },
+    {
+      "context": "Aap kis area se call kar rahe hain",
+      "requested_bucket": "short",
+      "text": "sirf data balance"
+    },
+    {
+      "context": "Aapka name aur registered number kya hai",
+      "requested_bucket": "short",
+      "text": "validity jaldi bataye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera data balance aur validity kya hai Delhi ke liye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Kripya karke sirf mujhe apni current data balance batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Muzaffarnagar me kaun se plan ke andar mera data bacha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Kya aap mujhe mera last recharge ke baad kitna data bacha hai bata sakte ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Mera account name hai Rajesh Sharma aur mujhe mera data balance janna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Main Mumbai se call kar raha hu mera 1GB balance hai ya nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Mujhe validity ki date bhi check karwani hai mera connection Gurgaon mein hai"
+    },
+    {
+      "context": "Kya aapko apna data usage dekhna hai",
+      "requested_bucket": "medium",
+      "text": "Main apne recent usage ke baare mein jaankari chahta hoon"
+    },
+    {
+      "context": "Aapka registered mobile number kya hai",
+      "requested_bucket": "medium",
+      "text": "Kripya mera balance data aur khaati valid date bataiye"
+    },
+    {
+      "context": "Verification ke liye ID proof chahiye hota hai kya",
+      "requested_bucket": "medium",
+      "text": "Muhir sir mera ID proof scan karke bhej diya hai kya"
+    },
+    {
+      "context": "Aapko weekly data usage chahiye ya monthly",
+      "requested_bucket": "medium",
+      "text": "Kya mera last week ka data usage separate mil sakta hai"
+    },
+    {
+      "context": "Aapke connection ki current validity check karte hain",
+      "requested_bucket": "medium",
+      "text": "Mujhe pata karna hai ki mera data plan expire hone me kitne din bache hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Maine apne connection ko 15 March ko recharge kara tha uske baad kitna data meri taraf se pending hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Kya aap mujhe apne latest data usage details de sakte hain kyunki mera data jaldi khatam ho raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Mera naam Sunita Gupta hai, mera mobile number Delhi mein registered hai, kya aap mujhe mera available data bata sakte hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Main Chandigarh se bol raha hoon mujhe apne data balance ke saath saath iska expiry date bhi bataiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Mujhe pata karna hai meri mobile line pe kitna data abhi tak bacha hua hai aur kab tak valid hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Mere account pe last recharge 7 din pehle hua tha abhi mujhe data balance ki jankari dena"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Main apna details verify karwana chahta hoon aur mera data balance aur validity check karna hai"
+    },
+    {
+      "context": "Aap apna registered mobile number bata sakte hain kya",
+      "requested_bucket": "long",
+      "text": "Ji main aapka registered number confirm karunga, kripya thoda intazaar kijiye"
+    },
+    {
+      "context": "Kya aap apni location aur number confirm kar denge please",
+      "requested_bucket": "long",
+      "text": "Aapke Mumbai number ke liye jo last recharge hua tha usmein kitna data balance bacha hai wahi main confirm karta hoon"
+    },
+    {
+      "context": "Maine aapka data balance check kar liya hai aapko batata hoon",
+      "requested_bucket": "long",
+      "text": "Aapka 3GB ka plan 28 April tak valid hai aur ab tak 1.2GB data aapke account me bacha hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 292642847,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: data_balance - asks how much data or validity is left\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"data balance batao\"},{\"text\":\"kitna bacha hai\"},{\"text\":\"validity kya hai\"},{\"text\":\"data balance\"},{\"text\":\"validity batao\"},{\"text\":\"meri data kya bacha\"},{\"text\":\"data kitna bacha\"},{\"text\":\"abhi kitna data hai\"},{\"text\":\"validity kab tak hai\"}],\"short_with_context\":[{\"text\":\"thoda details dijiye\",\"context\":\"Kaunse plan ka data balance chahiye aapko\"},{\"text\":\"sirf data balance\",\"context\":\"Aap kis area se call kar rahe hain\"},{\"text\":\"validity jaldi bataye\",\"context\":\"Aapka name aur registered number kya hai\"}],\"medium\":[{\"text\":\"mera data balance aur validity kya hai Delhi ke liye\"},{\"text\":\"Kripya karke sirf mujhe apni current data balance batao\"},{\"text\":\"Muzaffarnagar me kaun se plan ke andar mera data bacha hai\"},{\"text\":\"Kya aap mujhe mera last recharge ke baad kitna data bacha hai bata sakte ho\"},{\"text\":\"Mera account name hai Rajesh Sharma aur mujhe mera data balance janna hai\"},{\"text\":\"Main Mumbai se call kar raha hu mera 1GB balance hai ya nahi\"},{\"text\":\"Mujhe validity ki date bhi check karwani hai mera connection Gurgaon mein hai\"}],\"medium_with_context\":[{\"text\":\"Main apne recent usage ke baare mein jaankari chahta hoon\",\"context\":\"Kya aapko apna data usage dekhna hai\"},{\"text\":\"Kripya mera balance data aur khaati valid date bataiye\",\"context\":\"Aapka registered mobile number kya hai\"},{\"text\":\"Muhir sir mera ID proof scan karke bhej diya hai kya\",\"context\":\"Verification ke liye ID proof chahiye hota hai kya\"},{\"text\":\"Kya mera last week ka data usage separate mil sakta hai\",\"context\":\"Aapko weekly data usage chahiye ya monthly\"},{\"text\":\"Mujhe pata karna hai ki mera data plan expire hone me kitne din bache hain\",\"context\":\"Aapke connection ki current validity check karte hain\"}],\"long\":[{\"text\":\"Maine apne connection ko 15 March ko recharge kara tha uske baad kitna data meri taraf se pending hai\"},{\"text\":\"Kya aap mujhe apne latest data usage details de sakte hain kyunki mera data jaldi khatam ho raha hai\"},{\"text\":\"Mera naam Sunita Gupta hai, mera mobile number Delhi mein registered hai, kya aap mujhe mera available data bata sakte hain\"},{\"text\":\"Main Chandigarh se bol raha hoon mujhe apne data balance ke saath saath iska expiry date bhi bataiye\"},{\"text\":\"Mujhe pata karna hai meri mobile line pe kitna data abhi tak bacha hua hai aur kab tak valid hai\"},{\"text\":\"Mere account pe last recharge 7 din pehle hua tha abhi mujhe data balance ki jankari dena\"},{\"text\":\"Main apna details verify karwana chahta hoon aur mera data balance aur validity check karna hai\"}],\"long_with_context\":[{\"text\":\"Ji main aapka registered number confirm karunga, kripya thoda intazaar kijiye\",\"context\":\"Aap apna registered mobile number bata sakte hain kya\"},{\"text\":\"Aapke Mumbai number ke liye jo last recharge hua tha usmein kitna data balance bacha hai wahi main confirm karta hoon\",\"context\":\"Kya aap apni location aur number confirm kar denge please\"},{\"text\":\"Aapka 3GB ka plan 28 April tak valid hai aur ab tak 1.2GB data aapke account me bacha hai\",\"context\":\"Maine aapka data balance check kar liya hai aapko batata hoon\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 587,
+    "output_tokens": 803
+  }
+}

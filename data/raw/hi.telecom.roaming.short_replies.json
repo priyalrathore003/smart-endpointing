@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.telecom.roaming.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "roaming",
+  "items": [
+    {
+      "context": "क्या आप नेशनल रूमिंग एक्टिवेट करना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "आपको कौन सा पैक चाहिए",
+      "requested_bucket": "short",
+      "text": "नॅशनल पैक"
+    },
+    {
+      "context": "इंटरनेशनल रूमिंग एक्टिवेट करनी है क्या",
+      "requested_bucket": "short",
+      "text": "हाँ जरूर"
+    },
+    {
+      "context": "आपकी सर्विस लोकल नेटवर्क पर काम कर रही है क्या",
+      "requested_bucket": "short",
+      "text": "हाँ सर"
+    },
+    {
+      "context": "एक्टिवेशन के लिए आपका मोबाइल नंबर क्या है",
+      "requested_bucket": "short",
+      "text": "मेरा नंबर लगा हुआ है"
+    },
+    {
+      "context": "आप किस देश में रूमिंग करनी है",
+      "requested_bucket": "short",
+      "text": "यूएसए जाना है"
+    },
+    {
+      "context": "रूमिंग पैक में आप कितना खर्च करना चाहेंगे",
+      "requested_bucket": "short",
+      "text": "पाँच सौ रुपये"
+    },
+    {
+      "context": "क्या आप डेट प्लान एक्सटेंड करना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ मैडम"
+    },
+    {
+      "context": "आपका अकाउंट बैलेंस फिलहाल कितना है",
+      "requested_bucket": "short",
+      "text": "दो सौ रुपए"
+    },
+    {
+      "context": "रूमिंग एक्टिवेशन के लिए पेमेंट करानी है क्या",
+      "requested_bucket": "short",
+      "text": "हाँ करना है"
+    },
+    {
+      "context": "आपका वर्तमान प्लान कौन सा है",
+      "requested_bucket": "short",
+      "text": "जी ओटीपी वाला प्लान"
+    },
+    {
+      "context": "आपको इंस्टेंट एक्टिवेशन चाहिए",
+      "requested_bucket": "short",
+      "text": "हाँ जल्दी चाहिए"
+    },
+    {
+      "context": "क्या आपको इंटरनेट रूमिंग भी चाहिए",
+      "requested_bucket": "short",
+      "text": "नहीं अभी नहीं"
+    },
+    {
+      "context": "रूमिंग की वैधता कितने दिन चाहिए",
+      "requested_bucket": "short",
+      "text": "महीने भर"
+    },
+    {
+      "context": "आपको कौन से देश के लिए अंतरराष्ट्रीय रूमिंग चाहिए",
+      "requested_bucket": "medium",
+      "text": "मुझे यूके और यूएसए दोनों के लिए करना है"
+    },
+    {
+      "context": "क्या आपने पहले कभी हमारी रूमिंग सर्विस इस्तेमाल की है",
+      "requested_bucket": "medium",
+      "text": "नहीं सर ये पहली बार है मैं एक्टिवेशन चाहता हूँ"
+    },
+    {
+      "context": "आपके मोबाइल नंबर की अंतिम चार अंक बताएँ",
+      "requested_bucket": "medium",
+      "text": "मेरा नंबर 7890 से खत्म होता है"
+    },
+    {
+      "context": "क्या आपको इमरजेंसी संपर्क नंबर सेव करने हैं",
+      "requested_bucket": "medium",
+      "text": "हाँ मैडम प्लीज सेव कर दीजिए जल्दी से"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3160000646,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: roaming - wants to activate international or national roaming\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"क्या आप नेशनल रूमिंग एक्टिवेट करना चाहते हैं\",\"reply\":\"हाँ जी\"},{\"agent_question\":\"आपको कौन सा पैक चाहिए\",\"reply\":\"नॅशनल पैक\"},{\"agent_question\":\"इंटरनेशनल रूमिंग एक्टिवेट करनी है क्या\",\"reply\":\"हाँ जरूर\"},{\"agent_question\":\"आपकी सर्विस लोकल नेटवर्क पर काम कर रही है क्या\",\"reply\":\"हाँ सर\"},{\"agent_question\":\"एक्टिवेशन के लिए आपका मोबाइल नंबर क्या है\",\"reply\":\"मेरा नंबर लगा हुआ है\"},{\"agent_question\":\"आप किस देश में रूमिंग करनी है\",\"reply\":\"यूएसए जाना है\"},{\"agent_question\":\"रूमिंग पैक में आप कितना खर्च करना चाहेंगे\",\"reply\":\"पाँच सौ रुपये\"},{\"agent_question\":\"क्या आप डेट प्लान एक्सटेंड करना चाहते हैं\",\"reply\":\"हाँ मैडम\"},{\"agent_question\":\"आपका अकाउंट बैलेंस फिलहाल कितना है\",\"reply\":\"दो सौ रुपए\"},{\"agent_question\":\"रूमिंग एक्टिवेशन के लिए पेमेंट करानी है क्या\",\"reply\":\"हाँ करना है\"},{\"agent_question\":\"आपका वर्तमान प्लान कौन सा है\",\"reply\":\"जी ओटीपी वाला प्लान\"},{\"agent_question\":\"आपको इंस्टेंट एक्टिवेशन चाहिए\",\"reply\":\"हाँ जल्दी चाहिए\"},{\"agent_question\":\"क्या आपको इंटरनेट रूमिंग भी चाहिए\",\"reply\":\"नहीं अभी नहीं\"},{\"agent_question\":\"रूमिंग की वैधता कितने दिन चाहिए\",\"reply\":\"महीने भर\"}],\"medium\":[{\"agent_question\":\"आपको कौन से देश के लिए अंतरराष्ट्रीय रूमिंग चाहिए\",\"reply\":\"मुझे यूके और यूएसए दोनों के लिए करना है\"},{\"agent_question\":\"क्या आपने पहले कभी हमारी रूमिंग सर्विस इस्तेमाल की है\",\"reply\":\"नहीं सर ये पहली बार है मैं एक्टिवेशन चाहता हूँ\"},{\"agent_question\":\"आपके मोबाइल नंबर की अंतिम चार अंक बताएँ\",\"reply\":\"मेरा नंबर 7890 से खत्म होता है\"},{\"agent_question\":\"क्या आपको इमरजेंसी संपर्क नंबर सेव करने हैं\",\"reply\":\"हाँ मैडम प्लीज सेव कर दीजिए जल्दी से\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 494,
+    "output_tokens": 435
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.banking.balance_enquiry.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "banking",
+  "intent": "balance_enquiry",
+  "items": [
+    {
+      "context": "आपका बैंक अकाउंट नंबर बताइए",
+      "requested_bucket": "short",
+      "text": "ठीक है"
+    },
+    {
+      "context": "आपको किस खाते का बैलेंस चाहिए",
+      "requested_bucket": "short",
+      "text": "सेविंग अकाउंट"
+    },
+    {
+      "context": "क्या आप OTP लेने के लिए नंबर देंगे",
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "आपका रजिस्टर मोबाइल नंबर क्या है",
+      "requested_bucket": "short",
+      "text": "जी हाँ"
+    },
+    {
+      "context": "पिछले महीने की लेनदेन रिपोर्ट चाहिए",
+      "requested_bucket": "short",
+      "text": "जी अभी नहीं"
+    },
+    {
+      "context": "आप किस बैंक शाखा से जुड़े हैं",
+      "requested_bucket": "short",
+      "text": "बजरंगी नगर"
+    },
+    {
+      "context": "आपको टैम का बैलेंस चाहिए",
+      "requested_bucket": "short",
+      "text": "रुपये पांच हज़ार"
+    },
+    {
+      "context": "क्या आप अपना पिन नंबर याद कर सकते हैं",
+      "requested_bucket": "short",
+      "text": "नहीं सर"
+    },
+    {
+      "context": "कृपया अपना नाम फिर से बताइए",
+      "requested_bucket": "short",
+      "text": "सुनील कुमार"
+    },
+    {
+      "context": "आप कितनी जल्दी इस जानकारी चाहते हैं",
+      "requested_bucket": "short",
+      "text": "अभी जल्दी"
+    },
+    {
+      "context": "आपके खाते में कुल कितने पैसे हैं",
+      "requested_bucket": "short",
+      "text": "साठ हज़ार"
+    },
+    {
+      "context": "क्या आप पिछले पंद्रह दिन के ट्रांजेक्शन देखना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ दिखाइए"
+    },
+    {
+      "context": "आपका खाते का प्रकार क्या है",
+      "requested_bucket": "short",
+      "text": "कारेंट अकाउंट"
+    },
+    {
+      "context": "क्या आप कुछ और सहायता चाहते हैं",
+      "requested_bucket": "short",
+      "text": "ठीक है"
+    },
+    {
+      "context": "क्या आप खाता खोलने की तारीख बता सकते हैं",
+      "requested_bucket": "medium",
+      "text": "मई 2019 में खाता खोला था"
+    },
+    {
+      "context": "पिछले महीने आपने कितनी निकासी की थी",
+      "requested_bucket": "medium",
+      "text": "लगभग पच्चीस हज़ार रुपए निकाले थे"
+    },
+    {
+      "context": "आपका अकाउंट में अंतिम जमा राशि कब हुई थी",
+      "requested_bucket": "medium",
+      "text": "अंतिम जमा तीन दिन पहले हुई थी"
+    },
+    {
+      "context": "आपका खाताधारक नाम पूरा बताएं",
+      "requested_bucket": "medium",
+      "text": "मेरा नाम हरीश चंद्र है"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3622374634,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: balance_enquiry - asks for their account balance or recent transactions\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"आपका बैंक अकाउंट नंबर बताइए\",\"reply\":\"ठीक है\"},{\"agent_question\":\"आपको किस खाते का बैलेंस चाहिए\",\"reply\":\"सेविंग अकाउंट\"},{\"agent_question\":\"क्या आप OTP लेने के लिए नंबर देंगे\",\"reply\":\"हाँ जी\"},{\"agent_question\":\"आपका रजिस्टर मोबाइल नंबर क्या है\",\"reply\":\"जी हाँ\"},{\"agent_question\":\"पिछले महीने की लेनदेन रिपोर्ट चाहिए\",\"reply\":\"जी अभी नहीं\"},{\"agent_question\":\"आप किस बैंक शाखा से जुड़े हैं\",\"reply\":\"बजरंगी नगर\"},{\"agent_question\":\"आपको टैम का बैलेंस चाहिए\",\"reply\":\"रुपये पांच हज़ार\"},{\"agent_question\":\"क्या आप अपना पिन नंबर याद कर सकते हैं\",\"reply\":\"नहीं सर\"},{\"agent_question\":\"कृपया अपना नाम फिर से बताइए\",\"reply\":\"सुनील कुमार\"},{\"agent_question\":\"आप कितनी जल्दी इस जानकारी चाहते हैं\",\"reply\":\"अभी जल्दी\"},{\"agent_question\":\"आपके खाते में कुल कितने पैसे हैं\",\"reply\":\"साठ हज़ार\"},{\"agent_question\":\"क्या आप पिछले पंद्रह दिन के ट्रांजेक्शन देखना चाहते हैं\",\"reply\":\"हाँ दिखाइए\"},{\"agent_question\":\"आपका खाते का प्रकार क्या है\",\"reply\":\"कारेंट अकाउंट\"},{\"agent_question\":\"क्या आप कुछ और सहायता चाहते हैं\",\"reply\":\"ठीक है\"}],\"medium\":[{\"agent_question\":\"क्या आप खाता खोलने की तारीख बता सकते हैं\",\"reply\":\"मई 2019 में खाता खोला था\"},{\"agent_question\":\"पिछले महीने आपने कितनी निकासी की थी\",\"reply\":\"लगभग पच्चीस हज़ार रुपए निकाले थे\"},{\"agent_question\":\"आपका अकाउंट में अंतिम जमा राशि कब हुई थी\",\"reply\":\"अंतिम जमा तीन दिन पहले हुई थी\"},{\"agent_question\":\"आपका खाताधारक नाम पूरा बताएं\",\"reply\":\"मेरा नाम हरीश चंद्र है\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 497,
+    "output_tokens": 406
+  }
+}

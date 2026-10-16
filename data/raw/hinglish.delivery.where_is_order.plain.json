@@ -1,0 +1,282 @@
+{
+  "batch_id": "hinglish.delivery.where_is_order.plain",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "where_is_order",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kab aayega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "order kaha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "delivery late hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "short_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "delivery status kya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "order confirm hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kab milega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "medium"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mera parcel abhi tak deliver kyun nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "delivery ki timing kya hogi aaj"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mera order track kar do please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kya mera package dispatched hua hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "apka system mera address dikhata hai kya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kya courier agent call karega mujhse"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "order delay hua to mujhe intimation milega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "medium_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mera order kahaan tak pahucha hai aaj ki date tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kya aap mujhe delivery ka exact date bata sakte hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kya payment verify hone ke baad hi shipment hota hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "apne tracking id check kiya to status kya dikha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kya mera parcel lost to nahi ho gaya delivery mein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "long"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "maine pichle week me order place kiya tha aur abhi tak parcel ghar nahi aaya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kya aap mujhe mera order ka current status update kar sakte ho delivery ke baare mein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "agar mera parcel abhi dispatch nahi hua to mujhe jaldi se bataye ki kis wajah se delay hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "long_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "agent ne poocha aapka order number kya hai mera order number 987654 hai aur delivery status batayein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "jab agent ne kaha delivery address confirm karein to maine address phir se sahi sahi bata diya hai delhi ke safdarjung area mein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "agent ne poocha aap ne payment kaise ki thi toh maine bataya ki maine online net banking se payment ki thi lekin delivery abhi pending hai"
+    },
+    {
+      "context": "aapka order abhi kahan tak pahucha hai",
+      "requested_bucket": "short",
+      "text": "do din se pending hai"
+    },
+    {
+      "context": "kya aapne tracker check kiya hai",
+      "requested_bucket": "short",
+      "text": "tracker update nahi hai"
+    },
+    {
+      "context": "kya aapka parcel deliver hua hai kya",
+      "requested_bucket": "short",
+      "text": "nahin mila abhi tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera order kaise track karun mujhe samajh nahi aa raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya mujhe delivery ke liye koi call ya message ayega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine online order diya tha aur tracking number bhi mil gaya tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya mujhe order late mil raha hai due to lockdown"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "parcel ki delivery ke liye mujhe kya karna hoga batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera order dilli se aana tha par abhi tak status nahi update hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap mujhe delivery ka estimated time de sakte hain"
+    },
+    {
+      "context": "aapko delivery kab chahiye thi",
+      "requested_bucket": "medium",
+      "text": "delivery ki pakki tareekh bata sakte ho kya"
+    },
+    {
+      "context": "kya aapke paas tracking ID hai",
+      "requested_bucket": "medium",
+      "text": "tracking number mujhe fir se bhejo please"
+    },
+    {
+      "context": "kya aap apna order ID check kar sakte hain",
+      "requested_bucket": "medium",
+      "text": "order ke baare mein pata nahi chal raha hai tracking mein"
+    },
+    {
+      "context": "aapko koi cancellation notice mila kya",
+      "requested_bucket": "medium",
+      "text": "kya mera order by mistake cancel to nahi hua hai"
+    },
+    {
+      "context": "kya aapka address galat hai order mein",
+      "requested_bucket": "medium",
+      "text": "kya delivery address update kar sakta hoon abhi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine ek mahine pehle order kiya tha lekin abhi tak mera parcel deliver nahi hua hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya aap mujhe exact delivery date aur expected time frame bata sakte hain mera order number hai 12345"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "agar mera parcel deliver nahi hota hai to mein refund kaise le sakta hoon aur process kya hai"
+    },
+    {
+      "context": "kya aap apna order ID batayenge",
+      "requested_bucket": "long",
+      "text": "agent ne poocha ki kya aapke paas order ID hai to maine order ID batayi aur kaha mera parcel abhi tak deliver nahi hua hai"
+    },
+    {
+      "context": "kya aapki payment successful ho gayi hai",
+      "requested_bucket": "long",
+      "text": "jab agent ne poocha ki kya aapne payment kar di thi to maine confirm kiya ki payment successful hai par delivery pending hai"
+    },
+    {
+      "context": "kya aap apna delivery address confirm karenge",
+      "requested_bucket": "long",
+      "text": "agent ne kaha ki aap delivery address confirm karein to maine address confirm kar diya aur kaha delivery mein abhi tak delay kyun ho raha hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 222949006,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: where_is_order - asks where their order or parcel is\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: plain and direct\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"kab aayega\"},{\"text\":\"order kaha hai\"},{\"text\":\"delivery late hai\"},{\"text\":\"short_with_context\"},{\"text\":\"delivery status kya hai\"},{\"text\":\"order confirm hua\"},{\"text\":\"kab milega\"},{\"text\":\"medium\"},{\"text\":\"mera parcel abhi tak deliver kyun nahi hua\"},{\"text\":\"delivery ki timing kya hogi aaj\"},{\"text\":\"mera order track kar do please\"},{\"text\":\"kya mera package dispatched hua hai\"},{\"text\":\"apka system mera address dikhata hai kya\"},{\"text\":\"kya courier agent call karega mujhse\"},{\"text\":\"order delay hua to mujhe intimation milega\"},{\"text\":\"medium_with_context\"},{\"text\":\"mera order kahaan tak pahucha hai aaj ki date tak\"},{\"text\":\"kya aap mujhe delivery ka exact date bata sakte hain\"},{\"text\":\"kya payment verify hone ke baad hi shipment hota hai\"},{\"text\":\"apne tracking id check kiya to status kya dikha\"},{\"text\":\"kya mera parcel lost to nahi ho gaya delivery mein\"},{\"text\":\"long\"},{\"text\":\"maine pichle week me order place kiya tha aur abhi tak parcel ghar nahi aaya hai\"},{\"text\":\"kya aap mujhe mera order ka current status update kar sakte ho delivery ke baare mein\"},{\"text\":\"agar mera parcel abhi dispatch nahi hua to mujhe jaldi se bataye ki kis wajah se delay hai\"},{\"text\":\"long_with_context\"},{\"text\":\"agent ne poocha aapka order number kya hai mera order number 987654 hai aur delivery status batayein\"},{\"text\":\"jab agent ne kaha delivery address confirm karein to maine address phir se sahi sahi bata diya hai delhi ke safdarjung area mein\"},{\"text\":\"agent ne poocha aap ne payment kaise ki thi toh maine bataya ki maine online net banking se payment ki thi lekin delivery abhi pending hai\"}],\"short_with_context\":[{\"text\":\"do din se pending hai\",\"context\":\"aapka order abhi kahan tak pahucha hai\"},{\"text\":\"tracker update nahi hai\",\"context\":\"kya aapne tracker check kiya hai\"},{\"text\":\"nahin mila abhi tak\",\"context\":\"kya aapka parcel deliver hua hai kya\"}],\"medium\":[{\"text\":\"mera order kaise track karun mujhe samajh nahi aa raha hai\"},{\"text\":\"kya mujhe delivery ke liye koi call ya message ayega\"},{\"text\":\"maine online order diya tha aur tracking number bhi mil gaya tha\"},{\"text\":\"kya mujhe order late mil raha hai due to lockdown\"},{\"text\":\"parcel ki delivery ke liye mujhe kya karna hoga batao\"},{\"text\":\"mera order dilli se aana tha par abhi tak status nahi update hua\"},{\"text\":\"kya aap mujhe delivery ka estimated time de sakte hain\"}],\"medium_with_context\":[{\"text\":\"delivery ki pakki tareekh bata sakte ho kya\",\"context\":\"aapko delivery kab chahiye thi\"},{\"text\":\"tracking number mujhe fir se bhejo please\",\"context\":\"kya aapke paas tracking ID hai\"},{\"text\":\"order ke baare mein pata nahi chal raha hai tracking mein\",\"context\":\"kya aap apna order ID check kar sakte hain\"},{\"text\":\"kya mera order by mistake cancel to nahi hua hai\",\"context\":\"aapko koi cancellation notice mila kya\"},{\"text\":\"kya delivery address update kar sakta hoon abhi\",\"context\":\"kya aapka address galat hai order mein\"}],\"long\":[{\"text\":\"maine ek mahine pehle order kiya tha lekin abhi tak mera parcel deliver nahi hua hai\"},{\"text\":\"kya aap mujhe exact delivery date aur expected time frame bata sakte hain mera order number hai 12345\"},{\"text\":\"agar mera parcel deliver nahi hota hai to mein refund kaise le sakta hoon aur process kya hai\"}],\"long_with_context\":[{\"text\":\"agent ne poocha ki kya aapke paas order ID hai to maine order ID batayi aur kaha mera parcel abhi tak deliver nahi hua hai\",\"context\":\"kya aap apna order ID batayenge\"},{\"text\":\"jab agent ne poocha ki kya aapne payment kar di thi to maine confirm kiya ki payment successful hai par delivery pending hai\",\"context\":\"kya aapki payment successful ho gayi hai\"},{\"text\":\"agent ne kaha ki aap delivery address confirm karein to maine address confirm kar diya aur kaha delivery mein abhi tak delay kyun ho raha hai\",\"context\":\"kya aap apna delivery address confirm karenge\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 578,
+    "output_tokens": 963
+  }
+}

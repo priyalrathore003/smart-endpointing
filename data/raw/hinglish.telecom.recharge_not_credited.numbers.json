@@ -1,0 +1,257 @@
+{
+  "batch_id": "hinglish.telecom.recharge_not_credited.numbers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "telecom",
+  "intent": "recharge_not_credited",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paise cut gaye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "plan nahi mila"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kab milega recharge"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "ok ji thik hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "just abhi kiya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "call karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "main ne 199 recharge kiya lekin nahi aaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paise toh kat gaye mera balance mein kuch add nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mere number pe 299 wala plan kharida tha par credited nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "main ne 15 march ko recharge kiya tha par plan activate nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mai ne recharge 500 ka kiya tha but abhi tak kuch nahi mila"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paise toh gaya par recharge failed dikh raha hai blue alert"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "main ne 10 april ko plan renew karne ke liye recharge kiya tha lekin plan active nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mera mobile number 98765 43210 hai aur recharge hua nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paise mere account se deduct hui hai par balance mein pad nahi raha payment"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mera recharge 399 ka tha par abhi tak plan activate nahi hua hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paytm se recharge kiya tha 250 rupaye ka 16 april ko lekin abhi tak active nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "main ne apne number 91234 56789 pe 149 recharge kiya tha par wallet mein reflect nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mera number 99887 66554 hai lekin recharge ke baad bhi balance zero dikh raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "15 march ko recharge kiya tha main ne par plan activate nahi hua balance nahi mila"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paise toh kat gaye par plan kab milega mujhe jawab chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kya aap check kar sakte ho mera recharge show kar raha hai failed"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "main ne 500 ka top up kiya tha 12 april ko par balance increase nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kya aap mujhe bata sakte ho mera recharge process hua ki nahi"
+    },
+    {
+      "context": "Did you recharge through our official app?",
+      "requested_bucket": "short",
+      "text": "haan bilkul"
+    },
+    {
+      "context": "Has the plan been credited to your account?",
+      "requested_bucket": "short",
+      "text": "pakka nahi mila abhi"
+    },
+    {
+      "context": "Did you receive any confirmation message after recharge?",
+      "requested_bucket": "short",
+      "text": "nahi mujhe koi prompt mila"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main ne apne sim pe 299 ka plan recharge kiya tha par credit nahi hua ab tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mere paise account se cut gaye par plan activate nahi hua kab milega mujhe"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine 500 rupaye ka recharge 15 march ko kiya lekin balance nahi mila abhi tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera number 98765 43210 hai recharge hua nahi hai phir bhi paise kat gaye hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap check kar sakte hain mera recharge successful tha ya nahi mujhe pata nahi chal raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine online recharge kiya tha jo failed show kar raha mere paise kat gaye aur balance zero hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main ne 10 april ko 149 rupaye ka recharge kiya tha lekin balance mere mobile me add nahi hua"
+    },
+    {
+      "context": "Can you please confirm if the transaction was successful?",
+      "requested_bucket": "medium",
+      "text": "mere paise toh cut gaye par recharge nahi hua kya issue hai batao"
+    },
+    {
+      "context": "Could you please provide your transaction ID for verification?",
+      "requested_bucket": "medium",
+      "text": "meri transaction id hai 1234 5678 9012 par recharge reflect nahi kar raha hai"
+    },
+    {
+      "context": "Which payment method did you use for this recharge?",
+      "requested_bucket": "medium",
+      "text": "main ne paytm se recharge kiya tha 299 ka lekin mera balance update nahi hua"
+    },
+    {
+      "context": "Is the balance showing as zero or pending in your account?",
+      "requested_bucket": "medium",
+      "text": "pera toh mera account se deduct hua par mujhe recharge nahi mila kya karu"
+    },
+    {
+      "context": "Can I have your mobile number to check the status of your recharge?",
+      "requested_bucket": "medium",
+      "text": "mera number 99887 66554 hai aur recharge error dikhata hai paise deduct hone ke baad"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine apne phone number 91234 56789 pe 15 april ko 199 ka recharge kiya tha par abhi tak plan activate nahi hua hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera account se paisa deduct ho chuka hai par mujhe koi confirmation message ya plan activate hone ka notification nahi aaya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main ne socha recharge successful nahi hua shayad koi problem hai aap log confirm kar ke batao ki mera paise wapas mil sakta hai ya nahi"
+    },
+    {
+      "context": "Can you confirm the date and amount of your last recharge?",
+      "requested_bucket": "long",
+      "text": "please check mera recharge 299 rupaye ka jo ki 20 april ko kiya tha wo mere number 98765 43210 pe credit nahi hua hai"
+    },
+    {
+      "context": "Did you receive any error message during the recharge process?",
+      "requested_bucket": "long",
+      "text": "maine apne wallet se 499 rupaye ka recharge kiya tha 18 april ko par koi balance update nahi hua abhi tak"
+    },
+    {
+      "context": "Can I have your payment transaction reference number to check the payment status?",
+      "requested_bucket": "long",
+      "text": "mera recharge payment deduct ho gaya phone number 99887 66554 se par plan mere phone me activate nahi hua hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3694120503,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: recharge_not_credited - recharged but the plan or balance was not credited\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"paise cut gaye\"},{\"text\":\"plan nahi mila\"},{\"text\":\"kab milega recharge\"},{\"text\":\"ok ji thik hai\"},{\"text\":\"just abhi kiya\"},{\"text\":\"call karna hai\"},{\"text\":\"main ne 199 recharge kiya lekin nahi aaya\"},{\"text\":\"paise toh kat gaye mera balance mein kuch add nahi hua\"},{\"text\":\"mere number pe 299 wala plan kharida tha par credited nahi hua\"},{\"text\":\"main ne 15 march ko recharge kiya tha par plan activate nahi hua\"},{\"text\":\"mai ne recharge 500 ka kiya tha but abhi tak kuch nahi mila\"},{\"text\":\"paise toh gaya par recharge failed dikh raha hai blue alert\"},{\"text\":\"main ne 10 april ko plan renew karne ke liye recharge kiya tha lekin plan active nahi hua\"},{\"text\":\"mera mobile number 98765 43210 hai aur recharge hua nahi hai\"},{\"text\":\"paise mere account se deduct hui hai par balance mein pad nahi raha payment\"},{\"text\":\"mera recharge 399 ka tha par abhi tak plan activate nahi hua hai\"},{\"text\":\"paytm se recharge kiya tha 250 rupaye ka 16 april ko lekin abhi tak active nahi hua\"},{\"text\":\"main ne apne number 91234 56789 pe 149 recharge kiya tha par wallet mein reflect nahi hua\"},{\"text\":\"mera number 99887 66554 hai lekin recharge ke baad bhi balance zero dikh raha hai\"},{\"text\":\"15 march ko recharge kiya tha main ne par plan activate nahi hua balance nahi mila\"},{\"text\":\"paise toh kat gaye par plan kab milega mujhe jawab chahiye\"},{\"text\":\"kya aap check kar sakte ho mera recharge show kar raha hai failed\"},{\"text\":\"main ne 500 ka top up kiya tha 12 april ko par balance increase nahi hua\"},{\"text\":\"kya aap mujhe bata sakte ho mera recharge process hua ki nahi\"}],\"short_with_context\":[{\"text\":\"haan bilkul\",\"context\":\"Did you recharge through our official app?\"},{\"text\":\"pakka nahi mila abhi\",\"context\":\"Has the plan been credited to your account?\"},{\"text\":\"nahi mujhe koi prompt mila\",\"context\":\"Did you receive any confirmation message after recharge?\"}],\"medium\":[{\"text\":\"main ne apne sim pe 299 ka plan recharge kiya tha par credit nahi hua ab tak\"},{\"text\":\"mere paise account se cut gaye par plan activate nahi hua kab milega mujhe\"},{\"text\":\"maine 500 rupaye ka recharge 15 march ko kiya lekin balance nahi mila abhi tak\"},{\"text\":\"mera number 98765 43210 hai recharge hua nahi hai phir bhi paise kat gaye hain\"},{\"text\":\"kya aap check kar sakte hain mera recharge successful tha ya nahi mujhe pata nahi chal raha\"},{\"text\":\"maine online recharge kiya tha jo failed show kar raha mere paise kat gaye aur balance zero hai\"},{\"text\":\"main ne 10 april ko 149 rupaye ka recharge kiya tha lekin balance mere mobile me add nahi hua\"}],\"medium_with_context\":[{\"text\":\"mere paise toh cut gaye par recharge nahi hua kya issue hai batao\",\"context\":\"Can you please confirm if the transaction was successful?\"},{\"text\":\"meri transaction id hai 1234 5678 9012 par recharge reflect nahi kar raha hai\",\"context\":\"Could you please provide your transaction ID for verification?\"},{\"text\":\"main ne paytm se recharge kiya tha 299 ka lekin mera balance update nahi hua\",\"context\":\"Which payment method did you use for this recharge?\"},{\"text\":\"pera toh mera account se deduct hua par mujhe recharge nahi mila kya karu\",\"context\":\"Is the balance showing as zero or pending in your account?\"},{\"text\":\"mera number 99887 66554 hai aur recharge error dikhata hai paise deduct hone ke baad\",\"context\":\"Can I have your mobile number to check the status of your recharge?\"}],\"long\":[{\"text\":\"maine apne phone number 91234 56789 pe 15 april ko 199 ka recharge kiya tha par abhi tak plan activate nahi hua hain\"},{\"text\":\"mera account se paisa deduct ho chuka hai par mujhe koi confirmation message ya plan activate hone ka notification nahi aaya hai\"},{\"text\":\"main ne socha recharge successful nahi hua shayad koi problem hai aap log confirm kar ke batao ki mera paise wapas mil sakta hai ya nahi\"}],\"long_with_context\":[{\"text\":\"please check mera recharge 299 rupaye ka jo ki 20 april ko kiya tha wo mere number 98765 43210 pe credit nahi hua hai\",\"context\":\"Can you confirm the date and amount of your last recharge?\"},{\"text\":\"maine apne wallet se 499 rupaye ka recharge kiya tha 18 april ko par koi balance update nahi hua abhi tak\",\"context\":\"Did you receive any error message during the recharge process?\"},{\"text\":\"mera recharge payment deduct ho gaya phone number 99887 66554 se par plan mere phone me activate nahi hua hai\",\"context\":\"Can I have your payment transaction reference number to check the payment status?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 610,
+    "output_tokens": 1083
+  }
+}

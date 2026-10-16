@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.banking.cheque_book.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "cheque_book",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "new cheque book"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "when will it arrive"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "please send cheque book"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "next week"
+    },
+    {
+      "context": "Do you want to order a new cheque book?",
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "Which day do you expect delivery?",
+      "requested_bucket": "short",
+      "text": "tuesday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umm I need a new cheque book delivered to my home"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "actually can you tell me if the cheque book has been dispatched"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I think I requested the cheque book last Thursday or Friday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you confirm the delivery address for the cheque book"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "uhm I want to know the status of my cheque book order please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "so the cheque book should come by Wednesday no Thursday"
+    },
+    {
+      "context": "What kind of cheque book do you want to order?",
+      "requested_bucket": "medium",
+      "text": "please confirm the number of leaves in the cheque book"
+    },
+    {
+      "context": "When did you place your cheque book request?",
+      "requested_bucket": "medium",
+      "text": "I am not sure but I think I asked for it last week"
+    },
+    {
+      "context": "Do you want me to check the delivery status?",
+      "requested_bucket": "medium",
+      "text": "could you check where my cheque book is now"
+    },
+    {
+      "context": "Do you want to proceed with cancelling your cheque book?",
+      "requested_bucket": "medium",
+      "text": "actually I want to cancel my cheque book order"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "umm so I applied for a new cheque book like around ten days ago but havent received any update till now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I mean I gave the address correctly but still like I am worried if they sent it somewhere else or delayed"
+    },
+    {
+      "context": "Have you received your cheque book or do you need to know the expected delivery date?",
+      "requested_bucket": "long",
+      "text": "I was asking about my cheque book today but you said it will come in three more days is that correct"
+    },
+    {
+      "context": "Do you want to update the delivery address for your cheque book order?",
+      "requested_bucket": "long",
+      "text": "Actually I wanted to modify the address for the cheque book delivery because I moved recently"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 4113844873,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: cheque_book - requests a new cheque book or asks about its delivery\nLanguage: Indian English, Latin script.\nStyle for this batch: with fillers and hesitations (umm, uh, like, actually, I mean); at least a third include a self-correction ('Tuesday, no, Wednesday')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"new cheque book\"},{\"text\":\"when will it arrive\"},{\"text\":\"please send cheque book\"},{\"text\":\"next week\"}],\"short_with_context\":[{\"text\":\"yes please\",\"context\":\"Do you want to order a new cheque book?\"},{\"text\":\"tuesday\",\"context\":\"Which day do you expect delivery?\"}],\"medium\":[{\"text\":\"umm I need a new cheque book delivered to my home\"},{\"text\":\"actually can you tell me if the cheque book has been dispatched\"},{\"text\":\"I think I requested the cheque book last Thursday or Friday\"},{\"text\":\"can you confirm the delivery address for the cheque book\"},{\"text\":\"uhm I want to know the status of my cheque book order please\"},{\"text\":\"so the cheque book should come by Wednesday no Thursday\"}],\"medium_with_context\":[{\"text\":\"please confirm the number of leaves in the cheque book\",\"context\":\"What kind of cheque book do you want to order?\"},{\"text\":\"I am not sure but I think I asked for it last week\",\"context\":\"When did you place your cheque book request?\"},{\"text\":\"could you check where my cheque book is now\",\"context\":\"Do you want me to check the delivery status?\"},{\"text\":\"actually I want to cancel my cheque book order\",\"context\":\"Do you want to proceed with cancelling your cheque book?\"}],\"long\":[{\"text\":\"umm so I applied for a new cheque book like around ten days ago but havent received any update till now\"},{\"text\":\"I mean I gave the address correctly but still like I am worried if they sent it somewhere else or delayed\"}],\"long_with_context\":[{\"text\":\"I was asking about my cheque book today but you said it will come in three more days is that correct\",\"context\":\"Have you received your cheque book or do you need to know the expected delivery date?\"},{\"text\":\"Actually I wanted to modify the address for the cheque book delivery because I moved recently\",\"context\":\"Do you want to update the delivery address for your cheque book order?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 589,
+    "output_tokens": 409
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.banking.balance_enquiry.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "banking",
+  "intent": "balance_enquiry",
+  "items": [
+    {
+      "context": "aapka account number kya hai",
+      "requested_bucket": "short",
+      "text": "mera account number 1234567890 hai"
+    },
+    {
+      "context": "aapko balance check karna hai ya transactions",
+      "requested_bucket": "short",
+      "text": "balance check karna hai"
+    },
+    {
+      "context": "last transaction ki date batayen",
+      "requested_bucket": "short",
+      "text": "kal ki hai"
+    },
+    {
+      "context": "kya aapke account me recent paise aaye hain",
+      "requested_bucket": "short",
+      "text": "haan aaye hain"
+    },
+    {
+      "context": "aapka registered mobile number kya hai",
+      "requested_bucket": "short",
+      "text": "9876543210 hai"
+    },
+    {
+      "context": "kya aap ATM se paise nikalna chahte hain",
+      "requested_bucket": "short",
+      "text": "nahi yeh nahi"
+    },
+    {
+      "context": "kitna balance dekhna chahte hain",
+      "requested_bucket": "short",
+      "text": "pura balance dekhna hai"
+    },
+    {
+      "context": "kya aapka internet banking chal raha hai",
+      "requested_bucket": "short",
+      "text": "haan chal raha hai"
+    },
+    {
+      "context": "transaction slip chahiye aapko",
+      "requested_bucket": "short",
+      "text": "haan chahiye"
+    },
+    {
+      "context": "account me paise kab aaye the",
+      "requested_bucket": "short",
+      "text": "do din pehle"
+    },
+    {
+      "context": "kya aap account ki statement maangna chahte hain",
+      "requested_bucket": "short",
+      "text": "haan chahiye statement"
+    },
+    {
+      "context": "aapka KYC complete hua hai",
+      "requested_bucket": "short",
+      "text": "haan complete hai"
+    },
+    {
+      "context": "mobile number se SMS aaya tha kya",
+      "requested_bucket": "short",
+      "text": "haan aaya tha"
+    },
+    {
+      "context": "aap salary account se balance dekhna chahte hain",
+      "requested_bucket": "short",
+      "text": "haan salary account hai"
+    },
+    {
+      "context": "kitni raashi verify karni hai",
+      "requested_bucket": "short",
+      "text": "pachaas hazaar"
+    },
+    {
+      "context": "aapko check book chahiye kya",
+      "requested_bucket": "short",
+      "text": "nahi chahiye"
+    },
+    {
+      "context": "account khulwaane ka reason batayen",
+      "requested_bucket": "short",
+      "text": "saving ke liye"
+    },
+    {
+      "context": "aap online transfer karna chahte hain kya",
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": "aapko last week ke transactions bata doon",
+      "requested_bucket": "medium",
+      "text": "haan ji bata dijiye please"
+    },
+    {
+      "context": "account balance update karne ke liye consent dijiye",
+      "requested_bucket": "medium",
+      "text": "theek hai aap kar dijiye"
+    },
+    {
+      "context": "kya aapne apna passbook update karwai hai recently",
+      "requested_bucket": "medium",
+      "text": "nahi abhi tak update nahi karwai"
+    },
+    {
+      "context": "aapke account me suspicious activity dekhi gayi hai kya",
+      "requested_bucket": "medium",
+      "text": "nahi mujhe pata nahi koi dikhat nahi hai"
+    },
+    {
+      "context": "kya aap apna registered email id confirm kar sakte hain",
+      "requested_bucket": "medium",
+      "text": "haan confirm karta hu wo mera email hai"
+    },
+    {
+      "context": "transaction detail ke liye aapko SMS bheju kya",
+      "requested_bucket": "medium",
+      "text": "haan bhej dijiye usme poora detail hona chahiye"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3206000619,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: balance_enquiry - asks for their account balance or recent transactions\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"aapka account number kya hai\",\"reply\":\"mera account number 1234567890 hai\"},{\"agent_question\":\"aapko balance check karna hai ya transactions\",\"reply\":\"balance check karna hai\"},{\"agent_question\":\"last transaction ki date batayen\",\"reply\":\"kal ki hai\"},{\"agent_question\":\"kya aapke account me recent paise aaye hain\",\"reply\":\"haan aaye hain\"},{\"agent_question\":\"aapka registered mobile number kya hai\",\"reply\":\"9876543210 hai\"},{\"agent_question\":\"kya aap ATM se paise nikalna chahte hain\",\"reply\":\"nahi yeh nahi\"},{\"agent_question\":\"kitna balance dekhna chahte hain\",\"reply\":\"pura balance dekhna hai\"},{\"agent_question\":\"kya aapka internet banking chal raha hai\",\"reply\":\"haan chal raha hai\"},{\"agent_question\":\"transaction slip chahiye aapko\",\"reply\":\"haan chahiye\"},{\"agent_question\":\"account me paise kab aaye the\",\"reply\":\"do din pehle\"},{\"agent_question\":\"kya aap account ki statement maangna chahte hain\",\"reply\":\"haan chahiye statement\"},{\"agent_question\":\"aapka KYC complete hua hai\",\"reply\":\"haan complete hai\"},{\"agent_question\":\"mobile number se SMS aaya tha kya\",\"reply\":\"haan aaya tha\"},{\"agent_question\":\"aap salary account se balance dekhna chahte hain\",\"reply\":\"haan salary account hai\"},{\"agent_question\":\"kitni raashi verify karni hai\",\"reply\":\"pachaas hazaar\"},{\"agent_question\":\"aapko check book chahiye kya\",\"reply\":\"nahi chahiye\"},{\"agent_question\":\"account khulwaane ka reason batayen\",\"reply\":\"saving ke liye\"},{\"agent_question\":\"aap online transfer karna chahte hain kya\",\"reply\":\"abhi nahi\"}],\"medium\":[{\"agent_question\":\"aapko last week ke transactions bata doon\",\"reply\":\"haan ji bata dijiye please\"},{\"agent_question\":\"account balance update karne ke liye consent dijiye\",\"reply\":\"theek hai aap kar dijiye\"},{\"agent_question\":\"kya aapne apna passbook update karwai hai recently\",\"reply\":\"nahi abhi tak update nahi karwai\"},{\"agent_question\":\"aapke account me suspicious activity dekhi gayi hai kya\",\"reply\":\"nahi mujhe pata nahi koi dikhat nahi hai\"},{\"agent_question\":\"kya aap apna registered email id confirm kar sakte hain\",\"reply\":\"haan confirm karta hu wo mera email hai\"},{\"agent_question\":\"transaction detail ke liye aapko SMS bheju kya\",\"reply\":\"haan bhej dijiye usme poora detail hona chahiye\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 394,
+    "output_tokens": 566
+  }
+}

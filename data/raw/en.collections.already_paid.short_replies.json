@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.collections.already_paid.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "already_paid",
+  "items": [
+    {
+      "context": "Have you made the payment already",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "When did you make the payment",
+      "requested_bucket": "short",
+      "text": "Yesterday"
+    },
+    {
+      "context": "Can you provide the transaction id",
+      "requested_bucket": "short",
+      "text": "TXN12345"
+    },
+    {
+      "context": "What was the payment method",
+      "requested_bucket": "short",
+      "text": "Online"
+    },
+    {
+      "context": "Did you receive a payment confirmation",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "What amount did you pay",
+      "requested_bucket": "short",
+      "text": "Five thousand"
+    },
+    {
+      "context": "Was the payment done through net banking",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Is the payment related to this month",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Did you pay through the mobile app",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Have you got the payment receipt",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Was the payment done today",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Can you share the bank name",
+      "requested_bucket": "short",
+      "text": "HDFC"
+    },
+    {
+      "context": "Did you use a credit card for payment",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Are you sure the payment was successful",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Can you explain how and when you paid",
+      "requested_bucket": "medium",
+      "text": "I paid online using net banking yesterday evening"
+    },
+    {
+      "context": "Please share the payment details with us",
+      "requested_bucket": "medium",
+      "text": "I did a NEFT transfer the amount was five thousand rupees yesterday"
+    },
+    {
+      "context": "Do you have any proof of payment with you",
+      "requested_bucket": "medium",
+      "text": "Yes I have the payment receipt and transaction ID with me"
+    },
+    {
+      "context": "When exactly did you clear the outstanding amount",
+      "requested_bucket": "medium",
+      "text": "I made the payment at around three pm on the fifteenth"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1403265329,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: already_paid - says they have already paid and gives details\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Have you made the payment already\",\"reply\":\"Yes\"},{\"agent_question\":\"When did you make the payment\",\"reply\":\"Yesterday\"},{\"agent_question\":\"Can you provide the transaction id\",\"reply\":\"TXN12345\"},{\"agent_question\":\"What was the payment method\",\"reply\":\"Online\"},{\"agent_question\":\"Did you receive a payment confirmation\",\"reply\":\"Yes\"},{\"agent_question\":\"What amount did you pay\",\"reply\":\"Five thousand\"},{\"agent_question\":\"Was the payment done through net banking\",\"reply\":\"Yes\"},{\"agent_question\":\"Is the payment related to this month\",\"reply\":\"No\"},{\"agent_question\":\"Did you pay through the mobile app\",\"reply\":\"Yes\"},{\"agent_question\":\"Have you got the payment receipt\",\"reply\":\"Yes\"},{\"agent_question\":\"Was the payment done today\",\"reply\":\"No\"},{\"agent_question\":\"Can you share the bank name\",\"reply\":\"HDFC\"},{\"agent_question\":\"Did you use a credit card for payment\",\"reply\":\"No\"},{\"agent_question\":\"Are you sure the payment was successful\",\"reply\":\"Yes\"}],\"medium\":[{\"agent_question\":\"Can you explain how and when you paid\",\"reply\":\"I paid online using net banking yesterday evening\"},{\"agent_question\":\"Please share the payment details with us\",\"reply\":\"I did a NEFT transfer the amount was five thousand rupees yesterday\"},{\"agent_question\":\"Do you have any proof of payment with you\",\"reply\":\"Yes I have the payment receipt and transaction ID with me\"},{\"agent_question\":\"When exactly did you clear the outstanding amount\",\"reply\":\"I made the payment at around three pm on the fifteenth\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 366,
+    "output_tokens": 318
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.delivery.wrong_or_damaged.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "delivery",
+  "intent": "wrong_or_damaged",
+  "items": [
+    {
+      "context": "आपका ऑर्डर नंबर क्या है",
+      "requested_bucket": "short",
+      "text": "12345 है"
+    },
+    {
+      "context": "क्या आपको पूरा डिलीवरी मिला",
+      "requested_bucket": "short",
+      "text": "नहीं लोगों कुछ टूटा था"
+    },
+    {
+      "context": "क्या आपने पैकेज खोला",
+      "requested_bucket": "short",
+      "text": "हाँ जी खोला"
+    },
+    {
+      "context": "क्या पैकेज पर कोई नुकसान दिख रहा है",
+      "requested_bucket": "short",
+      "text": "हाँ जी दिख रहा है"
+    },
+    {
+      "context": "क्या आप वापस भेजना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ जी भेजना चाहता हूँ"
+    },
+    {
+      "context": "क्या आपको रिफंड चाहिए",
+      "requested_bucket": "short",
+      "text": "हाँ रिफंड लेना है"
+    },
+    {
+      "context": "क्या समस्या डिलीवरी टाइम की है",
+      "requested_bucket": "short",
+      "text": "नहीं समय पर आ गया था"
+    },
+    {
+      "context": "क्या आपने पहले भी शिकायत की थी",
+      "requested_bucket": "short",
+      "text": "अभी नहीं की"
+    },
+    {
+      "context": "क्या आपको सही आर्टिकल चाहिए",
+      "requested_bucket": "short",
+      "text": "हाँ सही चाहिए"
+    },
+    {
+      "context": "क्या आपको पूरा पैसा वापस चाहिए",
+      "requested_bucket": "short",
+      "text": "हाँ पूरा चाहिए"
+    },
+    {
+      "context": "क्या आपको नया आइटम भेजना है",
+      "requested_bucket": "short",
+      "text": "हाँ नया भेजिए"
+    },
+    {
+      "context": "क्या डीटेल्स ठीक हैं",
+      "requested_bucket": "short",
+      "text": "सही हैं"
+    },
+    {
+      "context": "क्या आप अगली डिलीवरी के लिए तैयार हैं",
+      "requested_bucket": "short",
+      "text": "हाँ तैयार हूं"
+    },
+    {
+      "context": "क्या आपको COD में पेमेंट करना था",
+      "requested_bucket": "short",
+      "text": "नहीं ऑनलाइन पे किया था"
+    },
+    {
+      "context": "कृपया बताएं किस आइटम में दिक्कत आई है",
+      "requested_bucket": "medium",
+      "text": "दिया हुआ parcel गलत है और टूटा भी है"
+    },
+    {
+      "context": "कब तक आप हमें आइटम वापस भेज सकते हैं",
+      "requested_bucket": "medium",
+      "text": "कल तक तो भेज सकते हैं ठीक रहेगा"
+    },
+    {
+      "context": "क्या आप पहले से डिलीवरी प्वाइंट पर गए थे",
+      "requested_bucket": "medium",
+      "text": "नहीं मैं सीधे घर पर डिलीवरी लेने आया था"
+    },
+    {
+      "context": "क्या आप चाहते हैं कि हम समस्या का समाधान जल्दी करें",
+      "requested_bucket": "medium",
+      "text": "हाँ सर जल्दी से जल्दी प्रॉब्लम सॉल्व कर दो प्लीज़"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2568911322,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: wrong_or_damaged - received a wrong or damaged item\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"आपका ऑर्डर नंबर क्या है\",\"reply\":\"12345 है\"},{\"agent_question\":\"क्या आपको पूरा डिलीवरी मिला\",\"reply\":\"नहीं लोगों कुछ टूटा था\"},{\"agent_question\":\"क्या आपने पैकेज खोला\",\"reply\":\"हाँ जी खोला\"},{\"agent_question\":\"क्या पैकेज पर कोई नुकसान दिख रहा है\",\"reply\":\"हाँ जी दिख रहा है\"},{\"agent_question\":\"क्या आप वापस भेजना चाहते हैं\",\"reply\":\"हाँ जी भेजना चाहता हूँ\"},{\"agent_question\":\"क्या आपको रिफंड चाहिए\",\"reply\":\"हाँ रिफंड लेना है\"},{\"agent_question\":\"क्या समस्या डिलीवरी टाइम की है\",\"reply\":\"नहीं समय पर आ गया था\"},{\"agent_question\":\"क्या आपने पहले भी शिकायत की थी\",\"reply\":\"अभी नहीं की\"},{\"agent_question\":\"क्या आपको सही आर्टिकल चाहिए\",\"reply\":\"हाँ सही चाहिए\"},{\"agent_question\":\"क्या आपको पूरा पैसा वापस चाहिए\",\"reply\":\"हाँ पूरा चाहिए\"},{\"agent_question\":\"क्या आपको नया आइटम भेजना है\",\"reply\":\"हाँ नया भेजिए\"},{\"agent_question\":\"क्या डीटेल्स ठीक हैं\",\"reply\":\"सही हैं\"},{\"agent_question\":\"क्या आप अगली डिलीवरी के लिए तैयार हैं\",\"reply\":\"हाँ तैयार हूं\"},{\"agent_question\":\"क्या आपको COD में पेमेंट करना था\",\"reply\":\"नहीं ऑनलाइन पे किया था\"}],\"medium\":[{\"agent_question\":\"कृपया बताएं किस आइटम में दिक्कत आई है\",\"reply\":\"दिया हुआ parcel गलत है और टूटा भी है\"},{\"agent_question\":\"कब तक आप हमें आइटम वापस भेज सकते हैं\",\"reply\":\"कल तक तो भेज सकते हैं ठीक रहेगा\"},{\"agent_question\":\"क्या आप पहले से डिलीवरी प्वाइंट पर गए थे\",\"reply\":\"नहीं मैं सीधे घर पर डिलीवरी लेने आया था\"},{\"agent_question\":\"क्या आप चाहते हैं कि हम समस्या का समाधान जल्दी करें\",\"reply\":\"हाँ सर जल्दी से जल्दी प्रॉब्लम सॉल्व कर दो प्लीज़\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 496,
+    "output_tokens": 409
+  }
+}

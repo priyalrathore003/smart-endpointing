@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.delivery.cancel_order.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "cancel_order",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "cancel please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "order number 7894"
+    },
+    {
+      "context": "Would you like to cancel the order now?",
+      "requested_bucket": "short",
+      "text": "yes cancel it"
+    },
+    {
+      "context": "Which order would you like to cancel?",
+      "requested_bucket": "short",
+      "text": "cancel that one"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to cancel my order from Delhi please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you cancel the order placed yesterday from Mumbai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please cancel the order with id 4521 from my address in Bengaluru"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I need to cancel the delivery scheduled for tomorrow at Andheri"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Is it possible to cancel the pizza order that I ordered last night"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I changed my mind can you cancel the 2 kilogram mango order"
+    },
+    {
+      "context": "Can you give me the order number for cancellation?",
+      "requested_bucket": "medium",
+      "text": "The order number is 5632 from my office address in Pune"
+    },
+    {
+      "context": "When was the order placed and payment method?",
+      "requested_bucket": "medium",
+      "text": "Yes the order was placed this morning via credit card"
+    },
+    {
+      "context": "Why do you want to cancel the order?",
+      "requested_bucket": "medium",
+      "text": "I want a refund so please cancel the medicines ordered from Chennai"
+    },
+    {
+      "context": "Which product do you want to cancel and at what address?",
+      "requested_bucket": "medium",
+      "text": "Please cancel the ladies shoes order delivered to my home in Hyderabad"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I placed an order for a laptop with order number 9876 last week from my home in Noida but I want to cancel it now because I found a better deal elsewhere"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "My wife ordered a sofa set on March 5th to be delivered in Gurgaon but due to moving houses we want to cancel the entire order and get a full refund"
+    },
+    {
+      "context": "Please provide details about the order you want to cancel.",
+      "requested_bucket": "long",
+      "text": "Can you tell me your order details because I need to cancel the order that I placed at my office in Kolkata last month and it is still not delivered"
+    },
+    {
+      "context": "Can you specify which order needs to be canceled and why?",
+      "requested_bucket": "long",
+      "text": "The order is from Flipkart assigned to my address in Chennai it includes two kitchen appliances but I realized the model is incorrect so please cancel the order"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 4072398291,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cancel_order - wants to cancel an order\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"cancel please\"},{\"text\":\"order number 7894\"}],\"short_with_context\":[{\"text\":\"yes cancel it\",\"context\":\"Would you like to cancel the order now?\"},{\"text\":\"cancel that one\",\"context\":\"Which order would you like to cancel?\"}],\"medium\":[{\"text\":\"I want to cancel my order from Delhi please\"},{\"text\":\"Can you cancel the order placed yesterday from Mumbai\"},{\"text\":\"Please cancel the order with id 4521 from my address in Bengaluru\"},{\"text\":\"I need to cancel the delivery scheduled for tomorrow at Andheri\"},{\"text\":\"Is it possible to cancel the pizza order that I ordered last night\"},{\"text\":\"I changed my mind can you cancel the 2 kilogram mango order\"}],\"medium_with_context\":[{\"text\":\"The order number is 5632 from my office address in Pune\",\"context\":\"Can you give me the order number for cancellation?\"},{\"text\":\"Yes the order was placed this morning via credit card\",\"context\":\"When was the order placed and payment method?\"},{\"text\":\"I want a refund so please cancel the medicines ordered from Chennai\",\"context\":\"Why do you want to cancel the order?\"},{\"text\":\"Please cancel the ladies shoes order delivered to my home in Hyderabad\",\"context\":\"Which product do you want to cancel and at what address?\"}],\"long\":[{\"text\":\"I placed an order for a laptop with order number 9876 last week from my home in Noida but I want to cancel it now because I found a better deal elsewhere\"},{\"text\":\"My wife ordered a sofa set on March 5th to be delivered in Gurgaon but due to moving houses we want to cancel the entire order and get a full refund\"}],\"long_with_context\":[{\"text\":\"Can you tell me your order details because I need to cancel the order that I placed at my office in Kolkata last month and it is still not delivered\",\"context\":\"Please provide details about the order you want to cancel.\"},{\"text\":\"The order is from Flipkart assigned to my address in Chennai it includes two kitchen appliances but I realized the model is incorrect so please cancel the order\",\"context\":\"Can you specify which order needs to be canceled and why?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 564,
+    "output_tokens": 446
+  }
+}

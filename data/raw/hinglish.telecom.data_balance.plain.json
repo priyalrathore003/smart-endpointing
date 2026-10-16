@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.telecom.data_balance.plain",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "telecom",
+  "intent": "data_balance",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kitna data hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "validity kitni hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "batado jaldi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paise kahan gaye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "data khatam ho gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "meri scheme chal rahi hai"
+    },
+    {
+      "context": "Aapko data balance check karna hai?",
+      "requested_bucket": "short",
+      "text": "do din ka valid hai"
+    },
+    {
+      "context": "Aapko apne current data balance kitna hai pata karna hai?",
+      "requested_bucket": "short",
+      "text": "bas 100 mb baki hai"
+    },
+    {
+      "context": "Kya aap janana chahte hain ki aapka number active hai ya nahi?",
+      "requested_bucket": "short",
+      "text": "account active hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera data balance check karke batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mujhe apne internet ka balance dekhna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera plan kab tak valid hai mujhe batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kyu mera data balance jaldi khatam ho raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap bata sakte ho mera remaining data"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya mera mobile number internet use kar sakta hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account se paise kat gaye lekin data nahi mila"
+    },
+    {
+      "context": "Aapko apne data balance ke baare mein kya janna hai?",
+      "requested_bucket": "medium",
+      "text": "mera data balance 2 gb ke around hona chahiye"
+    },
+    {
+      "context": "Kya aapka pack active hai ya expire ho gaya?",
+      "requested_bucket": "medium",
+      "text": "meri validity 30 din ki package hai iska pata karo"
+    },
+    {
+      "context": "Aapko apne recharge ki details chahiye?",
+      "requested_bucket": "medium",
+      "text": "kya mujhe apni last recharge ki details milegi"
+    },
+    {
+      "context": "Aapke phone ka internet issue kya hai?",
+      "requested_bucket": "medium",
+      "text": "mera phone me internet chal nahi raha hai help karo"
+    },
+    {
+      "context": "Kya aapke plan me broadband option hai?",
+      "requested_bucket": "medium",
+      "text": "kya mera plan broadband internet ke liye bhi valid hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Main jana chahta hoon ki mera data balance aur validity kab tak hai mujhe turant batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Maine apne mobile se recharge kiya tha lekin abhi bhi mera data balance update nahi hua hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Mujhe apne current plan ki details chahiye including kitna data use hua aur kitna baki hai"
+    },
+    {
+      "context": "Aap apni current data balance aur validity ke baare mein kya janna chahte hain?",
+      "requested_bucket": "long",
+      "text": "Mujhe batao ki mera data balance aur validity dono check karne hai mujhe clear information do please"
+    },
+    {
+      "context": "Aapko apne internet data ka balance aur expiry date check karni hai?",
+      "requested_bucket": "long",
+      "text": "Kya aap verify kar sakte hain ki mera internet data ka balance kitna bacha hai aur kab expire hoga"
+    },
+    {
+      "context": "Kya aap apni recharge status verify kar sakte hain?",
+      "requested_bucket": "long",
+      "text": "Mujhe confirmation chahiye ki mera recharge successful hua hai ya nahi kyunki abhi tak data credit nahi hua"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3954673679,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: data_balance - asks how much data or validity is left\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: plain and direct\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"kitna data hai\"},{\"text\":\"validity kitni hai\"},{\"text\":\"batado jaldi\"}, {\"text\":\"paise kahan gaye\"},{\"text\":\"data khatam ho gaya\"},{\"text\":\"meri scheme chal rahi hai\"}],\"short_with_context\":[{\"text\":\"do din ka valid hai\",\"context\":\"Aapko data balance check karna hai?\"},{\"text\":\"bas 100 mb baki hai\",\"context\":\"Aapko apne current data balance kitna hai pata karna hai?\"},{\"text\":\"account active hai\",\"context\":\"Kya aap janana chahte hain ki aapka number active hai ya nahi?\"}],\"medium\":[{\"text\":\"mera data balance check karke batao\"},{\"text\":\"mujhe apne internet ka balance dekhna hai\"},{\"text\":\"mera plan kab tak valid hai mujhe batao\"},{\"text\":\"kyu mera data balance jaldi khatam ho raha hai\"},{\"text\":\"kya aap bata sakte ho mera remaining data\"},{\"text\":\"kya mera mobile number internet use kar sakta hai\"},{\"text\":\"mera account se paise kat gaye lekin data nahi mila\"}],\"medium_with_context\":[{\"text\":\"mera data balance 2 gb ke around hona chahiye\",\"context\":\"Aapko apne data balance ke baare mein kya janna hai?\"},{\"text\":\"meri validity 30 din ki package hai iska pata karo\",\"context\":\"Kya aapka pack active hai ya expire ho gaya?\"},{\"text\":\"kya mujhe apni last recharge ki details milegi\",\"context\":\"Aapko apne recharge ki details chahiye?\"},{\"text\":\"mera phone me internet chal nahi raha hai help karo\",\"context\":\"Aapke phone ka internet issue kya hai?\"},{\"text\":\"kya mera plan broadband internet ke liye bhi valid hai\",\"context\":\"Kya aapke plan me broadband option hai?\"}],\"long\":[{\"text\":\"Main jana chahta hoon ki mera data balance aur validity kab tak hai mujhe turant batao\"},{\"text\":\"Maine apne mobile se recharge kiya tha lekin abhi bhi mera data balance update nahi hua hai\"},{\"text\":\"Mujhe apne current plan ki details chahiye including kitna data use hua aur kitna baki hai\"}],\"long_with_context\":[{\"text\":\"Mujhe batao ki mera data balance aur validity dono check karne hai mujhe clear information do please\",\"context\":\"Aap apni current data balance aur validity ke baare mein kya janna chahte hain?\"},{\"text\":\"Kya aap verify kar sakte hain ki mera internet data ka balance kitna bacha hai aur kab expire hoga\",\"context\":\"Aapko apne internet data ka balance aur expiry date check karni hai?\"},{\"text\":\"Mujhe confirmation chahiye ki mera recharge successful hua hai ya nahi kyunki abhi tak data credit nahi hua\",\"context\":\"Kya aap apni recharge status verify kar sakte hain?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 578,
+    "output_tokens": 623
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.delivery.where_is_order.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "delivery",
+  "intent": "where_is_order",
+  "items": [
+    {
+      "context": "आपका ऑर्डर नंबर बताइए",
+      "requested_bucket": "short",
+      "text": "मेरा नंबर ४५६७८९ है"
+    },
+    {
+      "context": "पार्सल कब भेजा गया था",
+      "requested_bucket": "short",
+      "text": "दो दिन पहले"
+    },
+    {
+      "context": "आपका नाम क्या है",
+      "requested_bucket": "short",
+      "text": "राजेश कुमार"
+    },
+    {
+      "context": "किस पते पर डिलीवरी चाहिए",
+      "requested_bucket": "short",
+      "text": "मेरा पता दिल्ली में है"
+    },
+    {
+      "context": "पार्सल ट्रैक किया क्या",
+      "requested_bucket": "short",
+      "text": "हाँ जी ट्रैक कर लिया"
+    },
+    {
+      "context": "डिलीवरी का टाइम क्या बताया गया था",
+      "requested_bucket": "short",
+      "text": "शाम ६ बजे तक"
+    },
+    {
+      "context": "क्या आपको SMS मिला था",
+      "requested_bucket": "short",
+      "text": "नहीं अभी तक नहीं मिला"
+    },
+    {
+      "context": "कौन सा आइटम ऑर्डर किया था",
+      "requested_bucket": "short",
+      "text": "मुझे मोबाइल केस चाहिए था"
+    },
+    {
+      "context": "पार्सल अभी तक नहीं मिला क्या",
+      "requested_bucket": "short",
+      "text": "अभी नहीं मिला"
+    },
+    {
+      "context": "क्या पैकिंग सही थी",
+      "requested_bucket": "short",
+      "text": "हाँ बिल्कुल ठीक थी"
+    },
+    {
+      "context": "रिशिपी का नाम बताएंगे",
+      "requested_bucket": "short",
+      "text": "सुमित शर्मा"
+    },
+    {
+      "context": "डिलीवरी बॉय से बात हुई क्या",
+      "requested_bucket": "short",
+      "text": "हाँ बात हो गई"
+    },
+    {
+      "context": "किस डिलीवरी कंपनी से आया था",
+      "requested_bucket": "short",
+      "text": "ब्लू डार्ट से आया था"
+    },
+    {
+      "context": "पार्सल खोल के देखा क्या",
+      "requested_bucket": "short",
+      "text": "हाँ जी खोल के देखा"
+    },
+    {
+      "context": "डिलीवरी कब तक हो जाएगी",
+      "requested_bucket": "medium",
+      "text": "सर जी कल शाम तक डिलीवरी हो जाएगी"
+    },
+    {
+      "context": "क्या समस्या आ रही है आपकी डिलीवरी में",
+      "requested_bucket": "medium",
+      "text": "पार्सल अभी वहीं अटका हुआ है जो सोच रहा हूँ"
+    },
+    {
+      "context": "आपने ऑनलाइन ट्रैकिंग की कोशिश की",
+      "requested_bucket": "medium",
+      "text": "हाँ मैडम मैंने वेबसाइट पर जाकर ट्रैक किया था"
+    },
+    {
+      "context": "क्या आपको डिलीवरी का कन्फर्मेशन मिला था",
+      "requested_bucket": "medium",
+      "text": "नहीं मैडम अभी तक मुझे कोई कन्फर्मेशन नहीं मिला"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2669977442,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: where_is_order - asks where their order or parcel is\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"आपका ऑर्डर नंबर बताइए\",\"reply\":\"मेरा नंबर ४५६७८९ है\"},{\"agent_question\":\"पार्सल कब भेजा गया था\",\"reply\":\"दो दिन पहले\"},{\"agent_question\":\"आपका नाम क्या है\",\"reply\":\"राजेश कुमार\"},{\"agent_question\":\"किस पते पर डिलीवरी चाहिए\",\"reply\":\"मेरा पता दिल्ली में है\"},{\"agent_question\":\"पार्सल ट्रैक किया क्या\",\"reply\":\"हाँ जी ट्रैक कर लिया\"},{\"agent_question\":\"डिलीवरी का टाइम क्या बताया गया था\",\"reply\":\"शाम ६ बजे तक\"},{\"agent_question\":\"क्या आपको SMS मिला था\",\"reply\":\"नहीं अभी तक नहीं मिला\"},{\"agent_question\":\"कौन सा आइटम ऑर्डर किया था\",\"reply\":\"मुझे मोबाइल केस चाहिए था\"},{\"agent_question\":\"पार्सल अभी तक नहीं मिला क्या\",\"reply\":\"अभी नहीं मिला\"},{\"agent_question\":\"क्या पैकिंग सही थी\",\"reply\":\"हाँ बिल्कुल ठीक थी\"},{\"agent_question\":\"रिशिपी का नाम बताएंगे\",\"reply\":\"सुमित शर्मा\"},{\"agent_question\":\"डिलीवरी बॉय से बात हुई क्या\",\"reply\":\"हाँ बात हो गई\"},{\"agent_question\":\"किस डिलीवरी कंपनी से आया था\",\"reply\":\"ब्लू डार्ट से आया था\"},{\"agent_question\":\"पार्सल खोल के देखा क्या\",\"reply\":\"हाँ जी खोल के देखा\"}],\"medium\":[{\"agent_question\":\"डिलीवरी कब तक हो जाएगी\",\"reply\":\"सर जी कल शाम तक डिलीवरी हो जाएगी\"},{\"agent_question\":\"क्या समस्या आ रही है आपकी डिलीवरी में\",\"reply\":\"पार्सल अभी वहीं अटका हुआ है जो सोच रहा हूँ\"},{\"agent_question\":\"आपने ऑनलाइन ट्रैकिंग की कोशिश की\",\"reply\":\"हाँ मैडम मैंने वेबसाइट पर जाकर ट्रैक किया था\"},{\"agent_question\":\"क्या आपको डिलीवरी का कन्फर्मेशन मिला था\",\"reply\":\"नहीं मैडम अभी तक मुझे कोई कन्फर्मेशन नहीं मिला\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 496,
+    "output_tokens": 416
+  }
+}

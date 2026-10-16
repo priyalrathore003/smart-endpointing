@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.delivery.change_address.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "change_address",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "change address"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "new landmark please"
+    },
+    {
+      "context": "Do you want to update your delivery address?",
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "Can you tell me the new landmark for delivery?",
+      "requested_bucket": "short",
+      "text": "at main road"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to change my delivery address to the new apartment"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you update the delivery to the office instead of home"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please change the address to the plot number 78 in sector 12"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I moved recently so I want to change my delivery location"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you please deliver it near the central park instead of my old address"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I need to update the address to the next building beside mine"
+    },
+    {
+      "context": "Where should I update your delivery address to?",
+      "requested_bucket": "medium",
+      "text": "I want to change the delivery address to my office now"
+    },
+    {
+      "context": "What is the new landmark you want me to note?",
+      "requested_bucket": "medium",
+      "text": "Please change the landmark to the hospital near my house"
+    },
+    {
+      "context": "Can you provide the full new delivery address?",
+      "requested_bucket": "medium",
+      "text": "Kindly update the delivery address to 12 Baker Street Downtown"
+    },
+    {
+      "context": "Why do you want to change the delivery address?",
+      "requested_bucket": "medium",
+      "text": "I have shifted so please change the address to my new residence"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I would like to change the delivery address as I have shifted to a new house across the city and the current address is not valid anymore"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Please update my delivery location to the landmark known as City Mall near the old railway station because it is easier to locate for your delivery team"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I recently moved to a different area and the current address you have is outdated so can you please change it to 45 Rosewood apartments near the community center"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "My current delivery address is incorrect and needs to be changed to the plot adjacent to the green park on 5th Avenue so the courier can find it quickly"
+    },
+    {
+      "context": "Could you please tell me why you want to change the delivery address?",
+      "requested_bucket": "long",
+      "text": "I have moved permanently and the address on file is old can you update it to my new home at 22 Sunrise colony near the main bus stop"
+    },
+    {
+      "context": "What extra details can you provide to help us update your delivery address?",
+      "requested_bucket": "long",
+      "text": "The address you have is not complete so the delivery person is finding it difficult to locate me I want to add the landmark as the Blue Tower opposite City Bank"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3089623164,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: change_address - wants to change the delivery address or landmark\nLanguage: Indian English, Latin script.\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"change address\"},{\"text\":\"new landmark please\"}],\"short_with_context\":[{\"text\":\"yes please\",\"context\":\"Do you want to update your delivery address?\"},{\"text\":\"at main road\",\"context\":\"Can you tell me the new landmark for delivery?\"}],\"medium\":[{\"text\":\"I want to change my delivery address to the new apartment\"},{\"text\":\"Can you update the delivery to the office instead of home\"},{\"text\":\"Please change the address to the plot number 78 in sector 12\"},{\"text\":\"I moved recently so I want to change my delivery location\"},{\"text\":\"Can you please deliver it near the central park instead of my old address\"},{\"text\":\"I need to update the address to the next building beside mine\"}],\"medium_with_context\":[{\"text\":\"I want to change the delivery address to my office now\",\"context\":\"Where should I update your delivery address to?\"},{\"text\":\"Please change the landmark to the hospital near my house\",\"context\":\"What is the new landmark you want me to note?\"},{\"text\":\"Kindly update the delivery address to 12 Baker Street Downtown\",\"context\":\"Can you provide the full new delivery address?\"},{\"text\":\"I have shifted so please change the address to my new residence\",\"context\":\"Why do you want to change the delivery address?\"}],\"long\":[{\"text\":\"I would like to change the delivery address as I have shifted to a new house across the city and the current address is not valid anymore\"},{\"text\":\"Please update my delivery location to the landmark known as City Mall near the old railway station because it is easier to locate for your delivery team\"},{\"text\":\"I recently moved to a different area and the current address you have is outdated so can you please change it to 45 Rosewood apartments near the community center\"},{\"text\":\"My current delivery address is incorrect and needs to be changed to the plot adjacent to the green park on 5th Avenue so the courier can find it quickly\"}],\"long_with_context\":[{\"text\":\"I have moved permanently and the address on file is old can you update it to my new home at 22 Sunrise colony near the main bus stop\",\"context\":\"Could you please tell me why you want to change the delivery address?\"},{\"text\":\"The address you have is not complete so the delivery person is finding it difficult to locate me I want to add the landmark as the Blue Tower opposite City Bank\",\"context\":\"What extra details can you provide to help us update your delivery address?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 558,
+    "output_tokens": 505
+  }
+}

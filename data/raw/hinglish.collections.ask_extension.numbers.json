@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.collections.ask_extension.numbers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "ask_extension",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "thik hai"
+    },
+    {
+      "context": "kya aapko aur samay chahiye payment ke liye?",
+      "requested_bucket": "short",
+      "text": "thik hai"
+    },
+    {
+      "context": "kya aap poora amount ek sath de sakte hain?",
+      "requested_bucket": "short",
+      "text": "haan chal jayega"
+    },
+    {
+      "context": "kya aapko payment split karna hai?",
+      "requested_bucket": "short",
+      "text": "nahi abhi nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mujhe thoda aur samay chahiye payment ke liye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya main apna payment do hisso me kar sakta hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kal tak main poora paisa jama kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account number hai dois ek dair teen char sat"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "abhi thoda financial problem chal rahi hai mujhe extension chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main pehla installment aaj transfer kar dunga baki kal kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap mujhe payment ki exact due date bata sakte hain"
+    },
+    {
+      "context": "kya aapko payment delay karna hai?",
+      "requested_bucket": "medium",
+      "text": "thik hai thoda aur samay chahiye mujhe payment karne ke liye"
+    },
+    {
+      "context": "kya aap payment split karwana chahte hain?",
+      "requested_bucket": "medium",
+      "text": "ji haan main apna payment do parts me karne ka soch raha hu"
+    },
+    {
+      "context": "kab tak aap payment kar payenge?",
+      "requested_bucket": "medium",
+      "text": "main agle mahine 20 tarik ko poora amount jama kar dunga"
+    },
+    {
+      "context": "kya aapko extension chahiye payment ke liye?",
+      "requested_bucket": "medium",
+      "text": "mujhe ye bataiye ki extension ke liye kya process hai"
+    },
+    {
+      "context": "extension lene par koi extra charge lagega?",
+      "requested_bucket": "medium",
+      "text": "agar main thoda aur samay lekar payment karta hu to koi fine lagega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera account number hai do panch shoon in maaf teen naa do ke aath nau saja main payment kal tak kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main abhi thoda financial tension me hu toh mera request hai ki mujhe apna payment ek hafta aur extend kar diya jaye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya main apna payment baat me kar sakta hu kyunki abhi mere paas poora amount nahin hai kuch hisso me transfer karne ki ijazat do"
+    },
+    {
+      "context": "kab tak aap payment kar denge agar extension mile?",
+      "requested_bucket": "long",
+      "text": "main account number do doosar pandrah shoon ek taarik ko payment kar dunga extension kab tak milega"
+    },
+    {
+      "context": "kya aap apna payment split karna chahte hain?",
+      "requested_bucket": "long",
+      "text": "mujhe payment split karne ki suvidha chahiye sir main do part me paise jama karunga"
+    },
+    {
+      "context": "extension dene par kya penalty lagegi?",
+      "requested_bucket": "long",
+      "text": "agar mujhe ek hafte ka extension mil jaye to main poora amount bina kisi penalty ke de dunga"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1493883522,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: ask_extension - asks for more time or to split the payment\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal tak\"},{\"text\":\"thik hai\"}],\"short_with_context\":[{\"text\":\"thik hai\",\"context\":\"kya aapko aur samay chahiye payment ke liye?\"},{\"text\":\"haan chal jayega\",\"context\":\"kya aap poora amount ek sath de sakte hain?\"},{\"text\":\"nahi abhi nahi\",\"context\":\"kya aapko payment split karna hai?\"}],\"medium\":[{\"text\":\"mujhe thoda aur samay chahiye payment ke liye\"},{\"text\":\"kya main apna payment do hisso me kar sakta hu\"},{\"text\":\"kal tak main poora paisa jama kar dunga\"},{\"text\":\"mera account number hai dois ek dair teen char sat\"},{\"text\":\"abhi thoda financial problem chal rahi hai mujhe extension chahiye\"},{\"text\":\"main pehla installment aaj transfer kar dunga baki kal kar dunga\"},{\"text\":\"kya aap mujhe payment ki exact due date bata sakte hain\"}],\"medium_with_context\":[{\"text\":\"thik hai thoda aur samay chahiye mujhe payment karne ke liye\",\"context\":\"kya aapko payment delay karna hai?\"},{\"text\":\"ji haan main apna payment do parts me karne ka soch raha hu\",\"context\":\"kya aap payment split karwana chahte hain?\"},{\"text\":\"main agle mahine 20 tarik ko poora amount jama kar dunga\",\"context\":\"kab tak aap payment kar payenge?\"},{\"text\":\"mujhe ye bataiye ki extension ke liye kya process hai\",\"context\":\"kya aapko extension chahiye payment ke liye?\"},{\"text\":\"agar main thoda aur samay lekar payment karta hu to koi fine lagega\",\"context\":\"extension lene par koi extra charge lagega?\"}],\"long\":[{\"text\":\"mera account number hai do panch shoon in maaf teen naa do ke aath nau saja main payment kal tak kar dunga\"},{\"text\":\"main abhi thoda financial tension me hu toh mera request hai ki mujhe apna payment ek hafta aur extend kar diya jaye\"},{\"text\":\"kya main apna payment baat me kar sakta hu kyunki abhi mere paas poora amount nahin hai kuch hisso me transfer karne ki ijazat do\"}],\"long_with_context\":[{\"text\":\"main account number do doosar pandrah shoon ek taarik ko payment kar dunga extension kab tak milega\",\"context\":\"kab tak aap payment kar denge agar extension mile?\"},{\"text\":\"mujhe payment split karne ki suvidha chahiye sir main do part me paise jama karunga\",\"context\":\"kya aap apna payment split karna chahte hain?\"},{\"text\":\"agar mujhe ek hafte ka extension mil jaye to main poora amount bina kisi penalty ke de dunga\",\"context\":\"extension dene par kya penalty lagegi?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 607,
+    "output_tokens": 628
+  }
+}

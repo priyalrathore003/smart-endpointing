@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.telecom.no_network.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "no_network",
+  "items": [
+    {
+      "context": "आपका नेटवर्क कब से नहीं है",
+      "requested_bucket": "short",
+      "text": "आज सुबह से"
+    },
+    {
+      "context": "क्या आपकी सिम कार्ड सही जगह है",
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "आपके क्षेत्र में कोई दिक्कत है क्या",
+      "requested_bucket": "short",
+      "text": "मुमकिन है"
+    },
+    {
+      "context": "फोन में कौन सा मॉडल है",
+      "requested_bucket": "short",
+      "text": "सैमसंग गैलेक्सी"
+    },
+    {
+      "context": "इंटरनेट कनेक्शन कब से स्लो है",
+      "requested_bucket": "short",
+      "text": "कल से"
+    },
+    {
+      "context": "आपका प्लान एक्टिव है",
+      "requested_bucket": "short",
+      "text": "हां एक्टिव है"
+    },
+    {
+      "context": "क्या आपने फोन बंद कर के फिर चालू किया",
+      "requested_bucket": "short",
+      "text": "हाँ कर लिया"
+    },
+    {
+      "context": "आपका कॉल ड्रॉप कितनी बार हुआ",
+      "requested_bucket": "short",
+      "text": "तेरह बार"
+    },
+    {
+      "context": "आपके इलाके में 4G नेटवर्क मिलता है",
+      "requested_bucket": "short",
+      "text": "मिलता है"
+    },
+    {
+      "context": "फोन में कोई अपडेट आया था क्या",
+      "requested_bucket": "short",
+      "text": "नहीं आया"
+    },
+    {
+      "context": "क्या आप एयरप्लेन मोड ऑन-ऑफ किया",
+      "requested_bucket": "short",
+      "text": "हाँ किया"
+    },
+    {
+      "context": "आपका पता क्या है",
+      "requested_bucket": "short",
+      "text": "दिल्ली में रहता हूँ"
+    },
+    {
+      "context": "सिग्नल बार दिखा रहा है",
+      "requested_bucket": "short",
+      "text": "एक बार"
+    },
+    {
+      "context": "क्या आपने अपने सिम का बैलेंस चेक किया",
+      "requested_bucket": "short",
+      "text": "हाँ, पूरा है"
+    },
+    {
+      "context": "कबसे आपको मोबाइल नेटवर्क में दिक्कत आ रही है",
+      "requested_bucket": "medium",
+      "text": "पिछले दो दिन से कॉल ड्रॉप हो रहा है बार बार"
+    },
+    {
+      "context": "क्या आप घर के अंदर हैं या बाहर जब दिक्कत आई",
+      "requested_bucket": "medium",
+      "text": "अक्सर घर के अंदर रहते हैं तब नेटवर्क बहुत कम होता है"
+    },
+    {
+      "context": "आपके इलाके में नेटवर्क बार-बार क्यों कट रहा है",
+      "requested_bucket": "medium",
+      "text": "शायद इलाके में नेटवर्क टावर में कोई समस्या आ गई है"
+    },
+    {
+      "context": "क्या आपका फोन कोई मैसेज या OTP प्राप्त कर रहा है",
+      "requested_bucket": "medium",
+      "text": "नहीं अभी तक कोई OTP या मैसेज नहीं मिला है"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2789105498,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: no_network - has no signal, call drops or slow internet\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"आपका नेटवर्क कब से नहीं है\",\"reply\":\"आज सुबह से\"},{\"agent_question\":\"क्या आपकी सिम कार्ड सही जगह है\",\"reply\":\"हाँ जी\"},{\"agent_question\":\"आपके क्षेत्र में कोई दिक्कत है क्या\",\"reply\":\"मुमकिन है\"},{\"agent_question\":\"फोन में कौन सा मॉडल है\",\"reply\":\"सैमसंग गैलेक्सी\"},{\"agent_question\":\"इंटरनेट कनेक्शन कब से स्लो है\",\"reply\":\"कल से\"},{\"agent_question\":\"आपका प्लान एक्टिव है\",\"reply\":\"हां एक्टिव है\"},{\"agent_question\":\"क्या आपने फोन बंद कर के फिर चालू किया\",\"reply\":\"हाँ कर लिया\"},{\"agent_question\":\"आपका कॉल ड्रॉप कितनी बार हुआ\",\"reply\":\"तेरह बार\"},{\"agent_question\":\"आपके इलाके में 4G नेटवर्क मिलता है\",\"reply\":\"मिलता है\"},{\"agent_question\":\"फोन में कोई अपडेट आया था क्या\",\"reply\":\"नहीं आया\"},{\"agent_question\":\"क्या आप एयरप्लेन मोड ऑन-ऑफ किया\",\"reply\":\"हाँ किया\"},{\"agent_question\":\"आपका पता क्या है\",\"reply\":\"दिल्ली में रहता हूँ\"},{\"agent_question\":\"सिग्नल बार दिखा रहा है\",\"reply\":\"एक बार\"},{\"agent_question\":\"क्या आपने अपने सिम का बैलेंस चेक किया\",\"reply\":\"हाँ, पूरा है\"}],\"medium\":[{\"agent_question\":\"कबसे आपको मोबाइल नेटवर्क में दिक्कत आ रही है\",\"reply\":\"पिछले दो दिन से कॉल ड्रॉप हो रहा है बार बार\"},{\"agent_question\":\"क्या आप घर के अंदर हैं या बाहर जब दिक्कत आई\",\"reply\":\"अक्सर घर के अंदर रहते हैं तब नेटवर्क बहुत कम होता है\"},{\"agent_question\":\"आपके इलाके में नेटवर्क बार-बार क्यों कट रहा है\",\"reply\":\"शायद इलाके में नेटवर्क टावर में कोई समस्या आ गई है\"},{\"agent_question\":\"क्या आपका फोन कोई मैसेज या OTP प्राप्त कर रहा है\",\"reply\":\"नहीं अभी तक कोई OTP या मैसेज नहीं मिला है\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 497,
+    "output_tokens": 416
+  }
+}

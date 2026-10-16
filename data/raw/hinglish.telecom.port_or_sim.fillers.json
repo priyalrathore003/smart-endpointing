@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.telecom.port_or_sim.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "telecom",
+  "intent": "port_or_sim",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "thik hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "kab aapko sim chahiye",
+      "requested_bucket": "short",
+      "text": "thik hai"
+    },
+    {
+      "context": "kya aap port karwana chahte hain",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "kya aapka number portable hai",
+      "requested_bucket": "short",
+      "text": "ji haan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera number port karwana hai indore se bangalore"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "matlab mera sim replace karna hai kyu ki lost ho gaya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main Wednesday ko apply karna chahta tha nahi Thursday hoga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "woh mera old sim activate karna tha abhi naya mila hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "thoda wait karna padega port hone mein kitna time lagega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine last week request ki thi lekin ab tak process nahi hui"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "matlab mera number swap karwana hai do sim ke beech mein"
+    },
+    {
+      "context": "aapka poora address kya hai port ke liye",
+      "requested_bucket": "medium",
+      "text": "haan mujhe port karwana hai mere paas detail hai"
+    },
+    {
+      "context": "kab aapko sim lena hai",
+      "requested_bucket": "medium",
+      "text": "main khud sim lene aaya tha kal ke din"
+    },
+    {
+      "context": "kya aap ek aur sim chahte hain apne number par",
+      "requested_bucket": "medium",
+      "text": "meri family ke liye ek sim or add karna hai"
+    },
+    {
+      "context": "kab tak aapko sim chahiye",
+      "requested_bucket": "medium",
+      "text": "mera thoda jaldi kar do please Wednesday tak chahiye"
+    },
+    {
+      "context": "kya aap port karenge ya sim replace karenge",
+      "requested_bucket": "medium",
+      "text": "wi-fi number pe port karna hai nahi to sim replace kar dena"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera sim kaafi der se kaam nahi kar raha hoon to naya port karwana hai mujhe thoda jaldi process kar do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main chahata hoon mera number swap kar doon apne do alag devices me lekin process samajh nahi aa raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "actually mera sim kharaab ho gaya tha to main replace karwana chahta hoon aur naya sim jaldi bhejo"
+    },
+    {
+      "context": "port karne ki request kab ki thi aapne",
+      "requested_bucket": "long",
+      "text": "agent aapne kab request ki thi port ke liye to mujhe confirm karna hai aapke hisab se kab hoga ye"
+    },
+    {
+      "context": "naya sim lene ke liye kya procedure hai",
+      "requested_bucket": "long",
+      "text": "kya mujhe naya sim khud center par le kar aana padega ya delivery ho sakti hai location par"
+    },
+    {
+      "context": "kya aap urgent port karwana chahte hain",
+      "requested_bucket": "long",
+      "text": "mera number ekdum urgent port karwana hai zyada der na ho nahi to main kahi aur chale jaunga"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3754817634,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: port_or_sim - wants to port the number, replace or swap a SIM\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"thik hai\"},{\"text\":\"kal tak\"},{\"text\":\"haan\"},{\"text\":\"nahi\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"thik hai\",\"context\":\"kab aapko sim chahiye\"},{\"text\":\"haan ji\",\"context\":\"kya aap port karwana chahte hain\"},{\"text\":\"ji haan\",\"context\":\"kya aapka number portable hai\"}],\"medium\":[{\"text\":\"mera number port karwana hai indore se bangalore\"},{\"text\":\"matlab mera sim replace karna hai kyu ki lost ho gaya hai\"},{\"text\":\"main Wednesday ko apply karna chahta tha nahi Thursday hoga\"},{\"text\":\"woh mera old sim activate karna tha abhi naya mila hai\"},{\"text\":\"thoda wait karna padega port hone mein kitna time lagega\"},{\"text\":\"maine last week request ki thi lekin ab tak process nahi hui\"},{\"text\":\"matlab mera number swap karwana hai do sim ke beech mein\"}],\"medium_with_context\":[{\"text\":\"haan mujhe port karwana hai mere paas detail hai\",\"context\":\"aapka poora address kya hai port ke liye\"},{\"text\":\"main khud sim lene aaya tha kal ke din\",\"context\":\"kab aapko sim lena hai\"},{\"text\":\"meri family ke liye ek sim or add karna hai\",\"context\":\"kya aap ek aur sim chahte hain apne number par\"},{\"text\":\"mera thoda jaldi kar do please Wednesday tak chahiye\",\"context\":\"kab tak aapko sim chahiye\"},{\"text\":\"wi-fi number pe port karna hai nahi to sim replace kar dena\",\"context\":\"kya aap port karenge ya sim replace karenge\"}],\"long\":[{\"text\":\"mera sim kaafi der se kaam nahi kar raha hoon to naya port karwana hai mujhe thoda jaldi process kar do\"},{\"text\":\"main chahata hoon mera number swap kar doon apne do alag devices me lekin process samajh nahi aa raha\"},{\"text\":\"actually mera sim kharaab ho gaya tha to main replace karwana chahta hoon aur naya sim jaldi bhejo\"}],\"long_with_context\":[{\"text\":\"agent aapne kab request ki thi port ke liye to mujhe confirm karna hai aapke hisab se kab hoga ye\",\"context\":\"port karne ki request kab ki thi aapne\"},{\"text\":\"kya mujhe naya sim khud center par le kar aana padega ya delivery ho sakti hai location par\",\"context\":\"naya sim lene ke liye kya procedure hai\"},{\"text\":\"mera number ekdum urgent port karwana hai zyada der na ho nahi to main kahi aur chale jaunga\",\"context\":\"kya aap urgent port karwana chahte hain\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 613,
+    "output_tokens": 596
+  }
+}

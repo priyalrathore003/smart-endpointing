@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.collections.wrong_person.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "wrong_person",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahi ye galat number hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "main nahin hu ye vyakti"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "galat aadmi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "galat hai bhai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "ye mera nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "maine ye liya hi nahi"
+    },
+    {
+      "context": "Can you please confirm your registered phone number?",
+      "requested_bucket": "short",
+      "text": "ye number mera nahi hai"
+    },
+    {
+      "context": "Please confirm the name on the account",
+      "requested_bucket": "short",
+      "text": "nahi ye mera account nahi hai"
+    },
+    {
+      "context": "Can you verify your address for verification?",
+      "requested_bucket": "short",
+      "text": "ye address mere area ka nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main Ravi Kumar from Jaipur baat kar raha hu par ye account mera nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera naam Anjali Sharma hai par jo number call kar raha hai wo galat hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine apne paas koi credit card ke paisa udhaar liya hi nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "ye EMI jo wo bol rahe hain wo mere account ke hisab se match nahi karta"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera address Mumbai me hai aur ye jo zila bata rahe ho wo different hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "aap jo keh rahe ho wo galat hai mujhe koi collection wala notice nahi mila"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "ho sakta hai ki aapne galat person ko call kar liya hai mera naam Suresh hai aur address Delhi me hai"
+    },
+    {
+      "context": "Are you sure the account is under your name?",
+      "requested_bucket": "medium",
+      "text": "maine kabhi bhi loan liya nahi hai ye jo aap bol rahe ho aapka data galat hai"
+    },
+    {
+      "context": "Can you confirm your current city and name?",
+      "requested_bucket": "medium",
+      "text": "nahi sir ye galat number hai mera naam Pooja verma hai aur main Lucknow me rehti hu"
+    },
+    {
+      "context": "Are there any recent transactions you do not recognize?",
+      "requested_bucket": "medium",
+      "text": "ye jo mujhe charges dikh rahe hain wo mera account se match nahi karte mujhe pata nahi inka"
+    },
+    {
+      "context": "Can you confirm the details you have for the loan account?",
+      "requested_bucket": "medium",
+      "text": "main Sanjay Singh bol raha hoon par jo aap debt collection kar rahe ho wo kisi aur ka case hai"
+    },
+    {
+      "context": "Please verify the phone number we have on record.",
+      "requested_bucket": "medium",
+      "text": "main Neha Mittal hoon aur Hyderabad me rahti hu ye jo phone number call kar raha hai wo mere paas nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine kabhi bhi Is loan ke liye apply nahi kiya hai aur mera naam bhi us list me nahi hai jisme aap contact kar rahe ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera naam Rahul Jain hai aur main Bangalore me rehta hoon mujhe poora shak hai ki ye call galat person ke liye hai jo number aap dikh rahe ho wo mera nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main Sunita Gupta bol rahi hu aur mera address Delhi me hai par ye jo call aa raha hai vo alag sheher ke liye lagta hai aur mujhe lagta hai aapke pass galat details hain"
+    },
+    {
+      "context": "Can you please confirm your full name and city of residence?",
+      "requested_bucket": "long",
+      "text": "main aapko batana chahti hu ki mera naam Priya Singh hai aur main Pune me rahati hu to ye collection kis cheez ki baat ho rahi hai mujhe samajh nahi aa raha"
+    },
+    {
+      "context": "Can you share more details about the loan account for verification?",
+      "requested_bucket": "long",
+      "text": "kya aap thoda aur details de sakte hain kyunki main Abhishek Kumar hoon aur mera address Chennai hai mujhe lagta hai ki ye account kisi aur ka hai"
+    },
+    {
+      "context": "Can you verify your account number and dues details again?",
+      "requested_bucket": "long",
+      "text": "main Rajeshwari Patel bol rahi hu aur main Ahmedabad se hoon mujhe lagta hai ki aapne galat vyakti se baat kar liya hai kyunki maine kabhi bhi loan ke liye apply nahi kiya hai aur na hi koi dues hain mera account number bhi jisme aap call kar rahe hain wo mera nahi lagta hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 845717023,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: wrong_person - says the agent has the wrong person or number\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"nahi ye galat number hai\"},{\"text\":\"main nahin hu ye vyakti\"},{\"text\":\"galat aadmi hai\"},{\"text\":\"galat hai bhai\"},{\"text\":\"ye mera nahi hai\"},{\"text\":\"maine ye liya hi nahi\"}],\"short_with_context\":[{\"text\":\"ye number mera nahi hai\",\"context\":\"Can you please confirm your registered phone number?\"},{\"text\":\"nahi ye mera account nahi hai\",\"context\":\"Please confirm the name on the account\"},{\"text\":\"ye address mere area ka nahi\",\"context\":\"Can you verify your address for verification?\"}],\"medium\":[{\"text\":\"main Ravi Kumar from Jaipur baat kar raha hu par ye account mera nahi hai\"},{\"text\":\"mera naam Anjali Sharma hai par jo number call kar raha hai wo galat hai\"},{\"text\":\"maine apne paas koi credit card ke paisa udhaar liya hi nahi\"},{\"text\":\"ye EMI jo wo bol rahe hain wo mere account ke hisab se match nahi karta\"},{\"text\":\"mera address Mumbai me hai aur ye jo zila bata rahe ho wo different hai\"},{\"text\":\"aap jo keh rahe ho wo galat hai mujhe koi collection wala notice nahi mila\"},{\"text\":\"ho sakta hai ki aapne galat person ko call kar liya hai mera naam Suresh hai aur address Delhi me hai\"}],\"medium_with_context\":[{\"text\":\"maine kabhi bhi loan liya nahi hai ye jo aap bol rahe ho aapka data galat hai\",\"context\":\"Are you sure the account is under your name?\"},{\"text\":\"nahi sir ye galat number hai mera naam Pooja verma hai aur main Lucknow me rehti hu\",\"context\":\"Can you confirm your current city and name?\"},{\"text\":\"ye jo mujhe charges dikh rahe hain wo mera account se match nahi karte mujhe pata nahi inka\",\"context\":\"Are there any recent transactions you do not recognize?\"},{\"text\":\"main Sanjay Singh bol raha hoon par jo aap debt collection kar rahe ho wo kisi aur ka case hai\",\"context\":\"Can you confirm the details you have for the loan account?\"},{\"text\":\"main Neha Mittal hoon aur Hyderabad me rahti hu ye jo phone number call kar raha hai wo mere paas nahi hai\",\"context\":\"Please verify the phone number we have on record.\"}],\"long\":[{\"text\":\"maine kabhi bhi Is loan ke liye apply nahi kiya hai aur mera naam bhi us list me nahi hai jisme aap contact kar rahe ho\"},{\"text\":\"mera naam Rahul Jain hai aur main Bangalore me rehta hoon mujhe poora shak hai ki ye call galat person ke liye hai jo number aap dikh rahe ho wo mera nahi hai\"},{\"text\":\"main Sunita Gupta bol rahi hu aur mera address Delhi me hai par ye jo call aa raha hai vo alag sheher ke liye lagta hai aur mujhe lagta hai aapke pass galat details hain\"}],\"long_with_context\":[{\"text\":\"main aapko batana chahti hu ki mera naam Priya Singh hai aur main Pune me rahati hu to ye collection kis cheez ki baat ho rahi hai mujhe samajh nahi aa raha\",\"context\":\"Can you please confirm your full name and city of residence?\"},{\"text\":\"kya aap thoda aur details de sakte hain kyunki main Abhishek Kumar hoon aur mera address Chennai hai mujhe lagta hai ki ye account kisi aur ka hai\",\"context\":\"Can you share more details about the loan account for verification?\"},{\"text\":\"main Rajeshwari Patel bol rahi hu aur main Ahmedabad se hoon mujhe lagta hai ki aapne galat vyakti se baat kar liya hai kyunki maine kabhi bhi loan ke liye apply nahi kiya hai aur na hi koi dues hain mera account number bhi jisme aap call kar rahe hain wo mera nahi lagta hai\",\"context\":\"Can you verify your account number and dues details again?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 588,
+    "output_tokens": 838
+  }
+}

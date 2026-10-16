@@ -1,0 +1,182 @@
+{
+  "batch_id": "hinglish.delivery.cod_payment.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "cod_payment",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "cash payment problem"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "payment failed"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "cod nahi ho raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan thik hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "ji kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mera address delhi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "order payment issue"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paise cancel ho gaye"
+    },
+    {
+      "context": "Are you facing an issue with the payment on delivery?",
+      "requested_bucket": "short",
+      "text": "payment failed"
+    },
+    {
+      "context": "Was the cash amount ready at the time of delivery?",
+      "requested_bucket": "short",
+      "text": "cash nahi tha"
+    },
+    {
+      "context": "Did you receive any confirmation after paying cash?",
+      "requested_bucket": "short",
+      "text": "nahi mila payment confirmation"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera name Ramesh Singh aur address Noida hai payment cash on delivery tha lekin delivery boy nahi aaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine kal Mumbai mein order diya tha aur payment cash on delivery tha lekin abhi tak confirm nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "delivery boy ne cash maangha tha lekin mere paas cash nahi tha to ab payment kaise hoga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main Neha Rajput hn Hyderabad ki aur mera order payment door pe hi karna tha par payment reject ho gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera order Bangalore mein tha aur payment cod pe tha lekin payment process nahi ho raha hai aap help karo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "payment reject ka message aaya aur delivery boy bhi refund nahi kar raha address Gurgaon hai mera"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "order cash on delivery tha lekin payment receipt nahi aayi mujhe Mumbai ke address par delivery hui thi"
+    },
+    {
+      "context": "Can you tell me why the payment on delivery did not go through?",
+      "requested_bucket": "medium",
+      "text": "mere pas cash nahi tha isliye payment failed hua"
+    },
+    {
+      "context": "Was there any issue with the cash amount when delivery was attempted?",
+      "requested_bucket": "medium",
+      "text": "delivery boy ne paise accept nahi kiye kyunki exact amount nahi tha"
+    },
+    {
+      "context": "Where are you calling from and what happened with the cash on delivery payment?",
+      "requested_bucket": "medium",
+      "text": "mai sohna hu Ludhiana ka aur paisa lekar nahi aaya delivery boy"
+    },
+    {
+      "context": "Did you try to pay cash at the time of delivery?",
+      "requested_bucket": "medium",
+      "text": "main payment karna chahti thi par delivery boy cash lene se mana kar diya"
+    },
+    {
+      "context": "Do you know why the cash on delivery payment got cancelled?",
+      "requested_bucket": "medium",
+      "text": "payment cancel hone ki wajah kya hai humne cash ready rakha tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera naam Ankit Gupta hai aur maine last week Delhi se ek product order kiya tha jo cash on delivery tha par payment nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine payal kumari ke naam se order diya tha aur address Patna tha lekin payment process nahi hua cash on delivery ke liye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main Arjun Singh hu Lucknow se aur mujhe delivery par paise dene the par delivery boy ne kaha payment cancel ho gaya hai toh ab kya karun"
+    },
+    {
+      "context": "Could you please explain what problem you are facing with cash on delivery payment?",
+      "requested_bucket": "long",
+      "text": "maine suna ki payment ka issue aa raha hai kya aap mujhe bata sakte hain ki merese kya problem hui"
+    },
+    {
+      "context": "Can you confirm if the delivery boy mentioned any reason for the payment failure?",
+      "requested_bucket": "long",
+      "text": "delivery boy ne kaha payment nahi hua par mere paas cash tha main Rohit Kumar Chennai se bol raha hu"
+    },
+    {
+      "context": "Were you able to give cash to the delivery boy when your order was delivered?",
+      "requested_bucket": "long",
+      "text": "main Priya Sharma Gurgaon se hu aur mera order cash on delivery tha lekin delivery boy payment lene se mana kar raha hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 301713683,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cod_payment - has a problem with cash on delivery or payment at the door\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"cash payment problem\"},{\"text\":\"payment failed\"},{\"text\":\"cod nahi ho raha\"},{\"text\":\"haan thik hai\"},{\"text\":\"ji kal tak\"},{\"text\":\"theek hai\"},{\"text\":\"mera address delhi hai\"},{\"text\":\"order payment issue\"},{\"text\":\"paise cancel ho gaye\"}],\"short_with_context\":[{\"text\":\"payment failed\",\"context\":\"Are you facing an issue with the payment on delivery?\"},{\"text\":\"cash nahi tha\",\"context\":\"Was the cash amount ready at the time of delivery?\"},{\"text\":\"nahi mila payment confirmation\",\"context\":\"Did you receive any confirmation after paying cash?\"}],\"medium\":[{\"text\":\"mera name Ramesh Singh aur address Noida hai payment cash on delivery tha lekin delivery boy nahi aaya\"},{\"text\":\"maine kal Mumbai mein order diya tha aur payment cash on delivery tha lekin abhi tak confirm nahi hua\"},{\"text\":\"delivery boy ne cash maangha tha lekin mere paas cash nahi tha to ab payment kaise hoga\"},{\"text\":\"main Neha Rajput hn Hyderabad ki aur mera order payment door pe hi karna tha par payment reject ho gaya\"},{\"text\":\"mera order Bangalore mein tha aur payment cod pe tha lekin payment process nahi ho raha hai aap help karo\"},{\"text\":\"payment reject ka message aaya aur delivery boy bhi refund nahi kar raha address Gurgaon hai mera\"},{\"text\":\"order cash on delivery tha lekin payment receipt nahi aayi mujhe Mumbai ke address par delivery hui thi\"}],\"medium_with_context\":[{\"text\":\"mere pas cash nahi tha isliye payment failed hua\",\"context\":\"Can you tell me why the payment on delivery did not go through?\"},{\"text\":\"delivery boy ne paise accept nahi kiye kyunki exact amount nahi tha\",\"context\":\"Was there any issue with the cash amount when delivery was attempted?\"},{\"text\":\"mai sohna hu Ludhiana ka aur paisa lekar nahi aaya delivery boy\",\"context\":\"Where are you calling from and what happened with the cash on delivery payment?\"},{\"text\":\"main payment karna chahti thi par delivery boy cash lene se mana kar diya\",\"context\":\"Did you try to pay cash at the time of delivery?\"},{\"text\":\"payment cancel hone ki wajah kya hai humne cash ready rakha tha\",\"context\":\"Do you know why the cash on delivery payment got cancelled?\"}],\"long\":[{\"text\":\"mera naam Ankit Gupta hai aur maine last week Delhi se ek product order kiya tha jo cash on delivery tha par payment nahi hua\"},{\"text\":\"maine payal kumari ke naam se order diya tha aur address Patna tha lekin payment process nahi hua cash on delivery ke liye\"},{\"text\":\"main Arjun Singh hu Lucknow se aur mujhe delivery par paise dene the par delivery boy ne kaha payment cancel ho gaya hai toh ab kya karun\"}],\"long_with_context\":[{\"text\":\"maine suna ki payment ka issue aa raha hai kya aap mujhe bata sakte hain ki merese kya problem hui\",\"context\":\"Could you please explain what problem you are facing with cash on delivery payment?\"},{\"text\":\"delivery boy ne kaha payment nahi hua par mere paas cash tha main Rohit Kumar Chennai se bol raha hu\",\"context\":\"Can you confirm if the delivery boy mentioned any reason for the payment failure?\"},{\"text\":\"main Priya Sharma Gurgaon se hu aur mera order cash on delivery tha lekin delivery boy payment lene se mana kar raha hai\",\"context\":\"Were you able to give cash to the delivery boy when your order was delivered?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 591,
+    "output_tokens": 721
+  }
+}

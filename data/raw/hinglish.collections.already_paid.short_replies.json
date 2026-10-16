@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.collections.already_paid.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "collections",
+  "intent": "already_paid",
+  "items": [
+    {
+      "context": "Kab payment kiya tha aapne",
+      "requested_bucket": "short",
+      "text": "kal raat ko"
+    },
+    {
+      "context": "Kitna amount transfer kiya tha",
+      "requested_bucket": "short",
+      "text": "pachis hazar"
+    },
+    {
+      "context": "Kya transaction ID hai aapke paas",
+      "requested_bucket": "short",
+      "text": "haan 12345"
+    },
+    {
+      "context": "Kaunsi date ko aapne pay kiya",
+      "requested_bucket": "short",
+      "text": "pichle mahine"
+    },
+    {
+      "context": "Kya aapne bank se confirm kiya",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Payment mode kya tha",
+      "requested_bucket": "short",
+      "text": "net banking"
+    },
+    {
+      "context": "Kya aapne receipt save kiya hai",
+      "requested_bucket": "short",
+      "text": "haan mere paas hai"
+    },
+    {
+      "context": "Kya aapko refund chahiye ya confirmation",
+      "requested_bucket": "short",
+      "text": "confirmation chahiye"
+    },
+    {
+      "context": "Kya aapne dusra number try kiya",
+      "requested_bucket": "short",
+      "text": "nahi abhi tak"
+    },
+    {
+      "context": "Aapka account number share kar sakte hain",
+      "requested_bucket": "short",
+      "text": "haan 9876543210"
+    },
+    {
+      "context": "Kya payment pending dikh raha hai",
+      "requested_bucket": "short",
+      "text": "nahi bilkul clear hai"
+    },
+    {
+      "context": "Kya aapne bank statement dekha",
+      "requested_bucket": "short",
+      "text": "haan dekha"
+    },
+    {
+      "context": "Kya payment aapke mobile wallet se hua",
+      "requested_bucket": "short",
+      "text": "nahi bank se hua"
+    },
+    {
+      "context": "Kya OTP mila payment ke time",
+      "requested_bucket": "short",
+      "text": "haan mila"
+    },
+    {
+      "context": "Kya transaction fail hua tha",
+      "requested_bucket": "short",
+      "text": "nahi successful tha"
+    },
+    {
+      "context": "Kya aapne customer care ko inform kiya",
+      "requested_bucket": "short",
+      "text": "haan call kiya tha"
+    },
+    {
+      "context": "Kya payment ka proof bhej sakte hain",
+      "requested_bucket": "short",
+      "text": "haan bhej raha hu"
+    },
+    {
+      "context": "Kya total amount sahi hai",
+      "requested_bucket": "short",
+      "text": "haan sahi hai"
+    },
+    {
+      "context": "Kab se aapko payment confirmation nahi mila",
+      "requested_bucket": "medium",
+      "text": "kal se Confirmation nahi aaya hai bank se"
+    },
+    {
+      "context": "Payment kaise kiya tha aapne bata sakte hain",
+      "requested_bucket": "medium",
+      "text": "net banking ke through do din pehle kiya tha"
+    },
+    {
+      "context": "Kya aapne apne bank statement mein dekha hai",
+      "requested_bucket": "medium",
+      "text": "haan maine bank statement check kiya hai kal"
+    },
+    {
+      "context": "Kya aapne kisi aur number se payment kiya tha",
+      "requested_bucket": "medium",
+      "text": "nahi sirf apne account se hi kiya tha"
+    },
+    {
+      "context": "Aapke paas transaction receipt hai kya",
+      "requested_bucket": "medium",
+      "text": "haan mere paas receipt ki photo hai mere pass"
+    },
+    {
+      "context": "Kya aap online payment portal use kar rahe the",
+      "requested_bucket": "medium",
+      "text": "haan online portal se payment kiya tha subah ko"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2397054717,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: already_paid - says they have already paid and gives details\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Kab payment kiya tha aapne\",\"reply\":\"kal raat ko\"},{\"agent_question\":\"Kitna amount transfer kiya tha\",\"reply\":\"pachis hazar\"},{\"agent_question\":\"Kya transaction ID hai aapke paas\",\"reply\":\"haan 12345\"},{\"agent_question\":\"Kaunsi date ko aapne pay kiya\",\"reply\":\"pichle mahine\"},{\"agent_question\":\"Kya aapne bank se confirm kiya\",\"reply\":\"haan ji\"},{\"agent_question\":\"Payment mode kya tha\",\"reply\":\"net banking\"},{\"agent_question\":\"Kya aapne receipt save kiya hai\",\"reply\":\"haan mere paas hai\"},{\"agent_question\":\"Kya aapko refund chahiye ya confirmation\",\"reply\":\"confirmation chahiye\"},{\"agent_question\":\"Kya aapne dusra number try kiya\",\"reply\":\"nahi abhi tak\"},{\"agent_question\":\"Aapka account number share kar sakte hain\",\"reply\":\"haan 9876543210\"},{\"agent_question\":\"Kya payment pending dikh raha hai\",\"reply\":\"nahi bilkul clear hai\"},{\"agent_question\":\"Kya aapne bank statement dekha\",\"reply\":\"haan dekha\"},{\"agent_question\":\"Kya payment aapke mobile wallet se hua\",\"reply\":\"nahi bank se hua\"},{\"agent_question\":\"Kya OTP mila payment ke time\",\"reply\":\"haan mila\"},{\"agent_question\":\"Kya transaction fail hua tha\",\"reply\":\"nahi successful tha\"},{\"agent_question\":\"Kya aapne customer care ko inform kiya\",\"reply\":\"haan call kiya tha\"},{\"agent_question\":\"Kya payment ka proof bhej sakte hain\",\"reply\":\"haan bhej raha hu\"},{\"agent_question\":\"Kya total amount sahi hai\",\"reply\":\"haan sahi hai\"}],\"medium\":[{\"agent_question\":\"Kab se aapko payment confirmation nahi mila\",\"reply\":\"kal se Confirmation nahi aaya hai bank se\"},{\"agent_question\":\"Payment kaise kiya tha aapne bata sakte hain\",\"reply\":\"net banking ke through do din pehle kiya tha\"},{\"agent_question\":\"Kya aapne apne bank statement mein dekha hai\",\"reply\":\"haan maine bank statement check kiya hai kal\"},{\"agent_question\":\"Kya aapne kisi aur number se payment kiya tha\",\"reply\":\"nahi sirf apne account se hi kiya tha\"},{\"agent_question\":\"Aapke paas transaction receipt hai kya\",\"reply\":\"haan mere paas receipt ki photo hai mere pass\"},{\"agent_question\":\"Kya aap online payment portal use kar rahe the\",\"reply\":\"haan online portal se payment kiya tha subah ko\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 393,
+    "output_tokens": 540
+  }
+}

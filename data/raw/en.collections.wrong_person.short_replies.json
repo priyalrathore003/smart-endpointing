@@ -1,0 +1,127 @@
+{
+  "batch_id": "en.collections.wrong_person.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "wrong_person",
+  "items": [
+    {
+      "context": "Can you confirm your name please",
+      "requested_bucket": "short",
+      "text": "No that's not me"
+    },
+    {
+      "context": "Are you the account holder",
+      "requested_bucket": "short",
+      "text": "No wrong person"
+    },
+    {
+      "context": "Is this account number 123456",
+      "requested_bucket": "short",
+      "text": "I think you have the wrong number"
+    },
+    {
+      "context": "Can you verify your dob",
+      "requested_bucket": "short",
+      "text": "I am not the one"
+    },
+    {
+      "context": "Is this your outstanding balance",
+      "requested_bucket": "short",
+      "text": "No this is someone else"
+    },
+    {
+      "context": "Are you aware of this payment due",
+      "requested_bucket": "short",
+      "text": "Actually you called wrong person"
+    },
+    {
+      "context": "Can you please confirm your address",
+      "requested_bucket": "short",
+      "text": "I dont live there"
+    },
+    {
+      "context": "Have you made any recent payments",
+      "requested_bucket": "short",
+      "text": "I have no idea about this"
+    },
+    {
+      "context": "Do you authorize us to debit this amount",
+      "requested_bucket": "short",
+      "text": "No I didnt authorize"
+    },
+    {
+      "context": "Is your contact number still active",
+      "requested_bucket": "short",
+      "text": "This isnt my number"
+    },
+    {
+      "context": "Are you familiar with this account",
+      "requested_bucket": "short",
+      "text": "Not my account"
+    },
+    {
+      "context": "Can you confirm the last transaction",
+      "requested_bucket": "short",
+      "text": "You have the wrong person"
+    },
+    {
+      "context": "Is the debt amount correct",
+      "requested_bucket": "short",
+      "text": "That doesnt belong to me"
+    },
+    {
+      "context": "Have you received any previous calls from us",
+      "requested_bucket": "short",
+      "text": "No I havent"
+    },
+    {
+      "context": "Is this name correct on the account",
+      "requested_bucket": "short",
+      "text": "No that is not my name"
+    },
+    {
+      "context": "Can you tell me why there is an outstanding balance under your name",
+      "requested_bucket": "medium",
+      "text": "That account is definitely not mine I think you have dialed the wrong number"
+    },
+    {
+      "context": "Did you receive any messages or emails regarding this debt before",
+      "requested_bucket": "medium",
+      "text": "No I have not received any such messages or calls before this one"
+    },
+    {
+      "context": "Would you like me to connect you to the department that can help correct these details",
+      "requested_bucket": "medium",
+      "text": "Yes please connect me to someone who can help fix this mistake as soon as possible"
+    },
+    {
+      "context": "Can you provide your correct details so we can update our records",
+      "requested_bucket": "medium",
+      "text": "I am not sure what to provide because I am not the person you are looking for"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3234624761,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: wrong_person - says the agent has the wrong person or number\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Can you confirm your name please\",\"reply\":\"No that's not me\"},{\"agent_question\":\"Are you the account holder\",\"reply\":\"No wrong person\"},{\"agent_question\":\"Is this account number 123456\",\"reply\":\"I think you have the wrong number\"},{\"agent_question\":\"Can you verify your dob\",\"reply\":\"I am not the one\"},{\"agent_question\":\"Is this your outstanding balance\",\"reply\":\"No this is someone else\"},{\"agent_question\":\"Are you aware of this payment due\",\"reply\":\"Actually you called wrong person\"},{\"agent_question\":\"Can you please confirm your address\",\"reply\":\"I dont live there\"},{\"agent_question\":\"Have you made any recent payments\",\"reply\":\"I have no idea about this\"},{\"agent_question\":\"Do you authorize us to debit this amount\",\"reply\":\"No I didnt authorize\"},{\"agent_question\":\"Is your contact number still active\",\"reply\":\"This isnt my number\"},{\"agent_question\":\"Are you familiar with this account\",\"reply\":\"Not my account\"},{\"agent_question\":\"Can you confirm the last transaction\",\"reply\":\"You have the wrong person\"},{\"agent_question\":\"Is the debt amount correct\",\"reply\":\"That doesnt belong to me\"},{\"agent_question\":\"Have you received any previous calls from us\",\"reply\":\"No I havent\"},{\"agent_question\":\"Is this name correct on the account\",\"reply\":\"No that is not my name\"}],\"medium\":[{\"agent_question\":\"Can you tell me why there is an outstanding balance under your name\",\"reply\":\"That account is definitely not mine I think you have dialed the wrong number\"},{\"agent_question\":\"Did you receive any messages or emails regarding this debt before\",\"reply\":\"No I have not received any such messages or calls before this one\"},{\"agent_question\":\"Would you like me to connect you to the department that can help correct these details\",\"reply\":\"Yes please connect me to someone who can help fix this mistake as soon as possible\"},{\"agent_question\":\"Can you provide your correct details so we can update our records\",\"reply\":\"I am not sure what to provide because I am not the person you are looking for\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 367,
+    "output_tokens": 417
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.banking.cheque_book.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "cheque_book",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "कल तक पहुंचा देना"
+    },
+    {
+      "context": "नया चेकबुक चाहिए क्या आप?",
+      "requested_bucket": "short",
+      "text": "जी हाँ मलाई चेकबुक चाहिए"
+    },
+    {
+      "context": "आपका पता तो मैंने नोट कर लिया है सही है?",
+      "requested_bucket": "short",
+      "text": "हां सर सही एड्रेस है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैडम मेरा चेकबुक कब तक डिलीवर होगा बताइए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर एक नया चेकबुक जारी करवा रहा हूँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "प्लीज़ जल्दी से चेकबुक भेज दीजिए मुझे उसको चाहिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मेरा खाता नंबर है १२३४५ ६७८९० १२३ मुझे नया चेकबुक चाहिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "क्या डिलीवरी के टाइम पर मुझे कोई SMS आता है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अभी तक मेरा चेकबुक डिलीवर नहीं हुआ है किसी ने नहीं दिया"
+    },
+    {
+      "context": "आप किस तरह से चेकबुक प्राप्त करना चाहेंगे?",
+      "requested_bucket": "medium",
+      "text": "मुझे चेकबुक बनवानी है आप कौनसे डाक के ज़रिए भेजते हैं"
+    },
+    {
+      "context": "कृपया अपना खाता नंबर बताएं।",
+      "requested_bucket": "medium",
+      "text": "सर आपके पास अकाउंट नंबर बताइए जिससे मैं चेकबुक जारी कर सकूँ"
+    },
+    {
+      "context": "आपको जो चेकबुक चाहिए वह कितने दिन में चाहिए?",
+      "requested_bucket": "medium",
+      "text": "मैडम चेकबुक कितना दिन में डिलीवर होगा आपसे"
+    },
+    {
+      "context": "क्या आपके पास OTP आ चुका है चेकबुक के लिए?",
+      "requested_bucket": "medium",
+      "text": "क्या आप से कोई कॉल या मैसेज वेरीफिकेशन आएगा चेकबुक के लिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मेरा नाम राहुल है और मैंने दो हफ्ते पहले नया चेकबुक ऑर्डर किया था पर अभी तक डिलीवर नहीं हुआ है कृपया मदद करें"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैडम मैं आपके नाम से खाता चलाता हूँ मुंबई ब्रांच में मेरा नया चेकबुक अलग एड्रेस पर डिलीवर हो रहा है क्या उसको चेंज किया जा सकता है"
+    },
+    {
+      "context": "आपका पता रेकार्ड में है तीसरे लाइन वाला रोड नंबर १५७ मुंबई क्या वही है?",
+      "requested_bucket": "long",
+      "text": "सर आपका एड्रेस तो सही है पर चेकबुक डिलीवरी क्यों इतनी देर हो रही है मुझे तत्काल चाहिए"
+    },
+    {
+      "context": "क्या आप चेकबुक का ऑनलाइन ऑर्डर देना चाहते हैं या ब्रांच में आकर आवेदन करेंगे?",
+      "requested_bucket": "long",
+      "text": "कृपया बताएं क्या चेकबुक डिलीवरी के लिए कोई चार्ज लगेगा क्या मुझे कोई फॉर्म भरना पड़ेगा"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 239433704,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: cheque_book - requests a new cheque book or asks about its delivery\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"हाँ जी\"},{\"text\":\"कल तक पहुंचा देना\"}],\"short_with_context\":[{\"text\":\"जी हाँ मलाई चेकबुक चाहिए\",\"context\":\"नया चेकबुक चाहिए क्या आप?\"},{\"text\":\"हां सर सही एड्रेस है\",\"context\":\"आपका पता तो मैंने नोट कर लिया है सही है?\"}],\"medium\":[{\"text\":\"मैडम मेरा चेकबुक कब तक डिलीवर होगा बताइए\"},{\"text\":\"सर एक नया चेकबुक जारी करवा रहा हूँ\"},{\"text\":\"प्लीज़ जल्दी से चेकबुक भेज दीजिए मुझे उसको चाहिए\"},{\"text\":\"मेरा खाता नंबर है १२३४५ ६७८९० १२३ मुझे नया चेकबुक चाहिए\"},{\"text\":\"क्या डिलीवरी के टाइम पर मुझे कोई SMS आता है\"},{\"text\":\"अभी तक मेरा चेकबुक डिलीवर नहीं हुआ है किसी ने नहीं दिया\"}],\"medium_with_context\":[{\"text\":\"मुझे चेकबुक बनवानी है आप कौनसे डाक के ज़रिए भेजते हैं\",\"context\":\"आप किस तरह से चेकबुक प्राप्त करना चाहेंगे?\"},{\"text\":\"सर आपके पास अकाउंट नंबर बताइए जिससे मैं चेकबुक जारी कर सकूँ\",\"context\":\"कृपया अपना खाता नंबर बताएं।\"},{\"text\":\"मैडम चेकबुक कितना दिन में डिलीवर होगा आपसे\",\"context\":\"आपको जो चेकबुक चाहिए वह कितने दिन में चाहिए?\"},{\"text\":\"क्या आप से कोई कॉल या मैसेज वेरीफिकेशन आएगा चेकबुक के लिए\",\"context\":\"क्या आपके पास OTP आ चुका है चेकबुक के लिए?\"}],\"long\":[{\"text\":\"मेरा नाम राहुल है और मैंने दो हफ्ते पहले नया चेकबुक ऑर्डर किया था पर अभी तक डिलीवर नहीं हुआ है कृपया मदद करें\"},{\"text\":\"मैडम मैं आपके नाम से खाता चलाता हूँ मुंबई ब्रांच में मेरा नया चेकबुक अलग एड्रेस पर डिलीवर हो रहा है क्या उसको चेंज किया जा सकता है\"}],\"long_with_context\":[{\"text\":\"सर आपका एड्रेस तो सही है पर चेकबुक डिलीवरी क्यों इतनी देर हो रही है मुझे तत्काल चाहिए\",\"context\":\"आपका पता रेकार्ड में है तीसरे लाइन वाला रोड नंबर १५७ मुंबई क्या वही है?\"},{\"text\":\"कृपया बताएं क्या चेकबुक डिलीवरी के लिए कोई चार्ज लगेगा क्या मुझे कोई फॉर्म भरना पड़ेगा\",\"context\":\"क्या आप चेकबुक का ऑनलाइन ऑर्डर देना चाहते हैं या ब्रांच में आकर आवेदन करेंगे?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 712,
+    "output_tokens": 544
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.telecom.port_or_sim.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "port_or_sim",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "please port my number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "replace my sim"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "sim swap"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "number porting"
+    },
+    {
+      "context": "Do you want to port your existing number to us?",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "When do you want to start the porting process?",
+      "requested_bucket": "short",
+      "text": "next week"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to port my number from airtel to your network"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you help me replace my damaged sim card please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "How can I do a sim swap for my mobile number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Is there a form I need to fill for number portability"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please guide me to start the porting process for my phone"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I need to change my current sim to a 4g sim from your company"
+    },
+    {
+      "context": "Are you looking to port your number from another provider?",
+      "requested_bucket": "medium",
+      "text": "I have an existing sim I want to transfer service from"
+    },
+    {
+      "context": "What is the reason for your sim replacement request?",
+      "requested_bucket": "medium",
+      "text": "I lost my sim and want to get a replacement as soon as possible"
+    },
+    {
+      "context": "Do you want to swap the sim or port the number entirely?",
+      "requested_bucket": "medium",
+      "text": "Can I get a new sim with the same number by swapping it at a nearby store"
+    },
+    {
+      "context": "Can you tell me why you want to replace your sim?",
+      "requested_bucket": "medium",
+      "text": "My old sim is not working properly so I want to replace it with a new one"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I want to port my mobile number to your network because the signal is better in my area and I heard your plans are more affordable"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "My sim got damaged recently and I want to replace it immediately so I can continue using my phone without interruption"
+    },
+    {
+      "context": "What is the reason for porting your number to our service?",
+      "requested_bucket": "long",
+      "text": "Yes I want to port my number from another telecom provider because I am moving to a new city where your network has better coverage and offers good data plans"
+    },
+    {
+      "context": "Could you please specify why you need a sim replacement?",
+      "requested_bucket": "long",
+      "text": "I need to replace my lost sim card because I cant access calls and messages anymore and I want it replaced at the earliest for uninterrupted service"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 704265729,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: port_or_sim - wants to port the number, replace or swap a SIM\nLanguage: Indian English, Latin script.\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"please port my number\"},{\"text\":\"replace my sim\"},{\"text\":\"sim swap\"},{\"text\":\"number porting\"}],\"short_with_context\":[{\"text\":\"yes\",\"context\":\"Do you want to port your existing number to us?\"},{\"text\":\"next week\",\"context\":\"When do you want to start the porting process?\"}],\"medium\":[{\"text\":\"I want to port my number from airtel to your network\"},{\"text\":\"Can you help me replace my damaged sim card please\"},{\"text\":\"How can I do a sim swap for my mobile number\"},{\"text\":\"Is there a form I need to fill for number portability\"},{\"text\":\"Please guide me to start the porting process for my phone\"},{\"text\":\"I need to change my current sim to a 4g sim from your company\"}],\"medium_with_context\":[{\"text\":\"I have an existing sim I want to transfer service from\",\"context\":\"Are you looking to port your number from another provider?\"},{\"text\":\"I lost my sim and want to get a replacement as soon as possible\",\"context\":\"What is the reason for your sim replacement request?\"},{\"text\":\"Can I get a new sim with the same number by swapping it at a nearby store\",\"context\":\"Do you want to swap the sim or port the number entirely?\"},{\"text\":\"My old sim is not working properly so I want to replace it with a new one\",\"context\":\"Can you tell me why you want to replace your sim?\"}],\"long\":[{\"text\":\"I want to port my mobile number to your network because the signal is better in my area and I heard your plans are more affordable\"},{\"text\":\"My sim got damaged recently and I want to replace it immediately so I can continue using my phone without interruption\"}],\"long_with_context\":[{\"text\":\"Yes I want to port my number from another telecom provider because I am moving to a new city where your network has better coverage and offers good data plans\",\"context\":\"What is the reason for porting your number to our service?\"},{\"text\":\"I need to replace my lost sim card because I cant access calls and messages anymore and I want it replaced at the earliest for uninterrupted service\",\"context\":\"Could you please specify why you need a sim replacement?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 562,
+    "output_tokens": 457
+  }
+}

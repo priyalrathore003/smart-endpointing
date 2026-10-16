@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.delivery.return_refund.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "return_refund",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "रिफंड कब मिलेगा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "पैकिंग सही नहीं थी"
+    },
+    {
+      "context": "क्या आप रिफंड लेना चाहते हैं?",
+      "requested_bucket": "short",
+      "text": "हां सर ठीक है"
+    },
+    {
+      "context": "क्या आप जल्दी डिलीवरी चाहते हैं?",
+      "requested_bucket": "short",
+      "text": "हां प्लीज जल्दी भेजो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे मेरा पैकेज वापस करना है क्योंकि प्रोडक्ट खराब आया है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "रिफंड के लिए कितना टाइम लगता है बताइए साफ साफ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "डिलीवरी का पता गलत था इसलिए मैं चीज़ वापस करना चाहता हूँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "पैसों की ट्रांजेक्शन आईडी आपको भेज दी है मैंने"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "परसेंटेज कितना कटेगा रिफंड में बताइए मुझे जल्दी था"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "आर्डर 15 तारीख को किया था आज तक डिलीवरी नहीं हुई है"
+    },
+    {
+      "context": "क्या आपने अपने ऑर्डर की डेट और डिलीवरी का विवरण दिया है?",
+      "requested_bucket": "medium",
+      "text": "मैंने 22 मार्च को आर्डर किया था लेकिन डिलीवरी खराब आई थी"
+    },
+    {
+      "context": "आपके रिफंड की प्रोसेसिंग स्टेटस क्या है?",
+      "requested_bucket": "medium",
+      "text": "मेरे खाते में पैसे नहीं लौटे अभी तक जो 2000 रुपए थे"
+    },
+    {
+      "context": "क्या आप रिटर्न पॉलिसी के बारे में जानना चाहते हैं?",
+      "requested_bucket": "medium",
+      "text": "क्या मुझे वापसी के लिए कोई फॉर्म भरना पड़ेगा या डिलीवरी एजेंट से बात करूँ"
+    },
+    {
+      "context": "क्या आप नुकसान की स्थिति में रिफंड की जानकारी चाहते हैं?",
+      "requested_bucket": "medium",
+      "text": "अगर पैकेज खो जाता है तो मुझे पूरा पैसा मिलेगा या कुछ काटा जाएगा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैंने जो मोबाइल ऑर्डर किया था न वो डैमेज्ड के condition में मिला इसलिए मैं रिटर्न और रिफंड चाहता हूँ सर जल्दी प्रोसेस कर दो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मेरी डिलीवरी 3 दिन पहले हुई थी लेकिन जो product आया है वो मेरा expected quality से match ही नहीं करता है इसलिए मैं उसे वापस करना चाहता हूँ और पूरा पैसा वापस चाहिए"
+    },
+    {
+      "context": "आपका मोबाइल नंबर और ऑर्डर डिटेल्स क्या है जिससे मैं चेक कर सकूँ?",
+      "requested_bucket": "long",
+      "text": "जी मैंने अपना नंबर दिया था 98765 43210 और मैने payment किया था लेकिन अभी तक रिफंड मेरे अकाउंट में नहीं आया है क्या आप देख सकते हैं"
+    },
+    {
+      "context": "क्या मैं आपको रिटर्न पालिसी विस्तार से समझाऊं?",
+      "requested_bucket": "long",
+      "text": "रिटर्न कंडिशन क्या है बताइए अगर product सही condition में न हो तो क्या पूरा रिफंड मिलेगा या कुछ कटौती होती है"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1973291546,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: return_refund - wants to return an item or asks about a refund\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"रिफंड कब मिलेगा\"},{\"text\":\"पैकिंग सही नहीं थी\"}],\"short_with_context\":[{\"text\":\"हां सर ठीक है\",\"context\":\"क्या आप रिफंड लेना चाहते हैं?\"},{\"text\":\"हां प्लीज जल्दी भेजो\",\"context\":\"क्या आप जल्दी डिलीवरी चाहते हैं?\"}],\"medium\":[{\"text\":\"मुझे मेरा पैकेज वापस करना है क्योंकि प्रोडक्ट खराब आया है\"},{\"text\":\"रिफंड के लिए कितना टाइम लगता है बताइए साफ साफ\"},{\"text\":\"डिलीवरी का पता गलत था इसलिए मैं चीज़ वापस करना चाहता हूँ\"},{\"text\":\"पैसों की ट्रांजेक्शन आईडी आपको भेज दी है मैंने\"},{\"text\":\"परसेंटेज कितना कटेगा रिफंड में बताइए मुझे जल्दी था\"},{\"text\":\"आर्डर 15 तारीख को किया था आज तक डिलीवरी नहीं हुई है\"}],\"medium_with_context\":[{\"text\":\"मैंने 22 मार्च को आर्डर किया था लेकिन डिलीवरी खराब आई थी\",\"context\":\"क्या आपने अपने ऑर्डर की डेट और डिलीवरी का विवरण दिया है?\"},{\"text\":\"मेरे खाते में पैसे नहीं लौटे अभी तक जो 2000 रुपए थे\",\"context\":\"आपके रिफंड की प्रोसेसिंग स्टेटस क्या है?\"},{\"text\":\"क्या मुझे वापसी के लिए कोई फॉर्म भरना पड़ेगा या डिलीवरी एजेंट से बात करूँ\",\"context\":\"क्या आप रिटर्न पॉलिसी के बारे में जानना चाहते हैं?\"},{\"text\":\"अगर पैकेज खो जाता है तो मुझे पूरा पैसा मिलेगा या कुछ काटा जाएगा\",\"context\":\"क्या आप नुकसान की स्थिति में रिफंड की जानकारी चाहते हैं?\"}],\"long\":[{\"text\":\"मैंने जो मोबाइल ऑर्डर किया था न वो डैमेज्ड के condition में मिला इसलिए मैं रिटर्न और रिफंड चाहता हूँ सर जल्दी प्रोसेस कर दो\"},{\"text\":\"मेरी डिलीवरी 3 दिन पहले हुई थी लेकिन जो product आया है वो मेरा expected quality से match ही नहीं करता है इसलिए मैं उसे वापस करना चाहता हूँ और पूरा पैसा वापस चाहिए\"}],\"long_with_context\":[{\"text\":\"जी मैंने अपना नंबर दिया था 98765 43210 और मैने payment किया था लेकिन अभी तक रिफंड मेरे अकाउंट में नहीं आया है क्या आप देख सकते हैं\",\"context\":\"आपका मोबाइल नंबर और ऑर्डर डिटेल्स क्या है जिससे मैं चेक कर सकूँ?\"},{\"text\":\"रिटर्न कंडिशन क्या है बताइए अगर product सही condition में न हो तो क्या पूरा रिफंड मिलेगा या कुछ कटौती होती है\",\"context\":\"क्या मैं आपको रिटर्न पालिसी विस्तार से समझाऊं?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 713,
+    "output_tokens": 567
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "batch_id": "hi.collections.payment_link.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "payment_link",
+  "items": [
+    {
+      "context": "पैमेंट लिंक भेज दूँ क्या",
+      "requested_bucket": "short",
+      "text": "हाँ जी भेज दीजिए"
+    },
+    {
+      "context": "कितना पे करना है",
+      "requested_bucket": "short",
+      "text": "पांच हज़ार"
+    },
+    {
+      "context": "पैमेंट mode क्या है आपका",
+      "requested_bucket": "short",
+      "text": "UPI से करूँगा"
+    },
+    {
+      "context": "ऑनलाइन पे पर करना है",
+      "requested_bucket": "short",
+      "text": "हाँ जी बिल्कुल"
+    },
+    {
+      "context": "क्या आपने मोबाइल नंबर confirm किया",
+      "requested_bucket": "short",
+      "text": "हाँ कर लिया"
+    },
+    {
+      "context": "पेमेंट के लिए कौन सा नंबर देगा",
+      "requested_bucket": "short",
+      "text": "वही वाला नंबर है"
+    },
+    {
+      "context": "पेमेंट अभी कर पाएंगे",
+      "requested_bucket": "short",
+      "text": "थोड़ा बाद करूँगा"
+    },
+    {
+      "context": "क्या आप नेट बैंकिंग यूज़ करते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ करता हूँ"
+    },
+    {
+      "context": "पेमेंट लिंक आपको SMS करे क्या",
+      "requested_bucket": "short",
+      "text": "जी हाँ ठीक है"
+    },
+    {
+      "context": "कब तक पेमेंट कर देंगे",
+      "requested_bucket": "short",
+      "text": "कल तक कर दूंगा"
+    },
+    {
+      "context": "क्या आपने अपना account खुलवाया है",
+      "requested_bucket": "short",
+      "text": "हाँ खुलवा लिया"
+    },
+    {
+      "context": "पेमेंट के लिए OTP मिल गया क्या",
+      "requested_bucket": "short",
+      "text": "हाँ मिल गया"
+    },
+    {
+      "context": "क्या पेमेंट कर दिया आपने",
+      "requested_bucket": "short",
+      "text": "अभी नहीं कर पाया"
+    },
+    {
+      "context": "पैसे कहाँ से और कैसे भेजेंगे",
+      "requested_bucket": "medium",
+      "text": "मैं घर से net banking से तुरंत भेज दूंगा"
+    },
+    {
+      "context": "अगर पेमेंट में कोई दिक्कत हुई तो बताइए",
+      "requested_bucket": "medium",
+      "text": "जरूर सर मैं कॉल कर के समझा दूंगा"
+    },
+    {
+      "context": "क्या आपको पेमेंट लिंक SMS से चाहिए या email से",
+      "requested_bucket": "medium",
+      "text": "SMS से जल्दी मिल जाएगा तो ठीक रहेगा"
+    },
+    {
+      "context": "आपके पास पेमेंट करने के लिए net banking है",
+      "requested_bucket": "medium",
+      "text": "हाँ सर मेरे पास net banking पूरी ready है"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3714142245,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: payment_link - asks for a payment link or how to pay\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"पैमेंट लिंक भेज दूँ क्या\",\"reply\":\"हाँ जी भेज दीजिए\"},{\"agent_question\":\"कितना पे करना है\",\"reply\":\"पांच हज़ार\"},{\"agent_question\":\"पैमेंट mode क्या है आपका\",\"reply\":\"UPI से करूँगा\"},{\"agent_question\":\"ऑनलाइन पे पर करना है\",\"reply\":\"हाँ जी बिल्कुल\"},{\"agent_question\":\"क्या आपने मोबाइल नंबर confirm किया\",\"reply\":\"हाँ कर लिया\"},{\"agent_question\":\"पेमेंट के लिए कौन सा नंबर देगा\",\"reply\":\"वही वाला नंबर है\"},{\"agent_question\":\"पेमेंट अभी कर पाएंगे\",\"reply\":\"थोड़ा बाद करूँगा\"},{\"agent_question\":\"क्या आप नेट बैंकिंग यूज़ करते हैं\",\"reply\":\"हाँ करता हूँ\"},{\"agent_question\":\"पेमेंट लिंक आपको SMS करे क्या\",\"reply\":\"जी हाँ ठीक है\"},{\"agent_question\":\"कब तक पेमेंट कर देंगे\",\"reply\":\"कल तक कर दूंगा\"},{\"agent_question\":\"क्या आपने अपना account खुलवाया है\",\"reply\":\"हाँ खुलवा लिया\"},{\"agent_question\":\"पेमेंट के लिए OTP मिल गया क्या\",\"reply\":\"हाँ मिल गया\"},{\"agent_question\":\"क्या पेमेंट कर दिया आपने\",\"reply\":\"अभी नहीं कर पाया\"}],\"medium\":[{\"agent_question\":\"पैसे कहाँ से और कैसे भेजेंगे\",\"reply\":\"मैं घर से net banking से तुरंत भेज दूंगा\"},{\"agent_question\":\"अगर पेमेंट में कोई दिक्कत हुई तो बताइए\",\"reply\":\"जरूर सर मैं कॉल कर के समझा दूंगा\"},{\"agent_question\":\"क्या आपको पेमेंट लिंक SMS से चाहिए या email से\",\"reply\":\"SMS से जल्दी मिल जाएगा तो ठीक रहेगा\"},{\"agent_question\":\"आपके पास पेमेंट करने के लिए net banking है\",\"reply\":\"हाँ सर मेरे पास net banking पूरी ready है\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 497,
+    "output_tokens": 364
+  }
+}

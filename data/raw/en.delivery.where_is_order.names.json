@@ -1,0 +1,242 @@
+{
+  "batch_id": "en.delivery.where_is_order.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "where_is_order",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "where is my parcel"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "delivered today"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "short_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "no"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "medium"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "can you tell me when my order will arrive"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "i want to know the status of my delivery"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "my parcel was supposed to come yesterday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "please check if my order is out for delivery"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "having trouble locating my package"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "where exactly is my shipment right now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "medium_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "i placed the order last thursday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "can you tell me the delivery date"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "it was meant to be delivered by now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "my address is 24 park street kolkata"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "long"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "my order was placed on 15th of july i have not received any update about the shipment since then and i want to know exactly when it will reach me"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "i am staying at 45 green park new delhi and the courier status shows delayed please tell me what is the current location of my parcel"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "long_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "the order number is 458723 i called earlier and was told to wait for two more days but it is already a week now could you kindly update me on the delivery status"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "i live in sector 12 rohini delhi the package was supposed to arrive yesterday yet i have not got any notification about its whereabouts can you please track it and inform me"
+    },
+    {
+      "context": "which city is your delivery for",
+      "requested_bucket": "short",
+      "text": "delhi"
+    },
+    {
+      "context": "do you have the tracking details",
+      "requested_bucket": "short",
+      "text": "no updates"
+    },
+    {
+      "context": "corresponding_agent_questions_here",
+      "requested_bucket": "short",
+      "text": "medium_with_context_texts_here"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "did you dispatch the parcel from mumbai warehouse"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "tell me if my cocacola order has shipped yet"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i want to check the delivery status of my order number 789456"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you confirm if my package is still in transit"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "is the parcel expected to arrive by december 3rd"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "where can i collect the parcel since i am not at home"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "medium_with_context_responses_here"
+    },
+    {
+      "context": "when did you place your order",
+      "requested_bucket": "medium",
+      "text": "my order was placed on january 10th and i have not seen any updates"
+    },
+    {
+      "context": "can you provide the delivery address",
+      "requested_bucket": "medium",
+      "text": "the delivery address is flat number 101 in sagar apartment"
+    },
+    {
+      "context": "do you have the expected delivery date",
+      "requested_bucket": "medium",
+      "text": "the expected delivery date was april 22nd but i received no communication"
+    },
+    {
+      "context": "do you want home delivery or pickup",
+      "requested_bucket": "medium",
+      "text": "i would prefer to pick up from the nearest courier office if possible"
+    },
+    {
+      "context": "corresponding_agent_questions_here",
+      "requested_bucket": "medium",
+      "text": "long_with_context_texts_here"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "my name is rohan sharma and i ordered a laptop from flipkart my address is 56 civil lines lucknow and the parcel has not been delivered even after 10 days"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i placed an order for a refrigerator from snapdeal it was supposed to come to 78 gurukul road ahmedabad by last friday but i have not received any update at all"
+    },
+    {
+      "context": "can you give me your tracking id and delivery address",
+      "requested_bucket": "long",
+      "text": "the tracking id is 12323456 my order was scheduled for delivery on the 12th of february at my home address in sector 21 chandigarh can you please check its status"
+    },
+    {
+      "context": "what are the details of your order including address and expected delivery date",
+      "requested_bucket": "long",
+      "text": "i have been waiting for the parcel which contains my phone and accessories i live at 22b ashoka nagar chennai the delivery date was jan 30th but nothing has arrived yet can you update me"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1855305435,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: where_is_order - asks where their order or parcel is\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"where is my parcel\"},{\"text\":\"delivered today\"},{\"text\":\"short_with_context\"},{\"text\":\"yes\"},{\"text\":\"no\"},{\"text\":\"medium\"},{\"text\":\"can you tell me when my order will arrive\"},{\"text\":\"i want to know the status of my delivery\"},{\"text\":\"my parcel was supposed to come yesterday\"},{\"text\":\"please check if my order is out for delivery\"},{\"text\":\"having trouble locating my package\"},{\"text\":\"where exactly is my shipment right now\"},{\"text\":\"medium_with_context\"},{\"text\":\"i placed the order last thursday\"},{\"text\":\"can you tell me the delivery date\"},{\"text\":\"it was meant to be delivered by now\"},{\"text\":\"my address is 24 park street kolkata\"},{\"text\":\"long\"},{\"text\":\"my order was placed on 15th of july i have not received any update about the shipment since then and i want to know exactly when it will reach me\"},{\"text\":\"i am staying at 45 green park new delhi and the courier status shows delayed please tell me what is the current location of my parcel\"},{\"text\":\"long_with_context\"},{\"text\":\"the order number is 458723 i called earlier and was told to wait for two more days but it is already a week now could you kindly update me on the delivery status\"},{\"text\":\"i live in sector 12 rohini delhi the package was supposed to arrive yesterday yet i have not got any notification about its whereabouts can you please track it and inform me\"}],\"short_with_context\":[{\"text\":\"delhi\",\"context\":\"which city is your delivery for\"},{\"text\":\"no updates\",\"context\":\"do you have the tracking details\"},{\"text\":\"medium_with_context_texts_here\",\"context\":\"corresponding_agent_questions_here\"}],\"medium\":[{\"text\":\"did you dispatch the parcel from mumbai warehouse\"},{\"text\":\"tell me if my cocacola order has shipped yet\"},{\"text\":\"i want to check the delivery status of my order number 789456\"},{\"text\":\"can you confirm if my package is still in transit\"},{\"text\":\"is the parcel expected to arrive by december 3rd\"},{\"text\":\"where can i collect the parcel since i am not at home\"},{\"text\":\"medium_with_context_responses_here\"}],\"medium_with_context\":[{\"text\":\"my order was placed on january 10th and i have not seen any updates\",\"context\":\"when did you place your order\"},{\"text\":\"the delivery address is flat number 101 in sagar apartment\",\"context\":\"can you provide the delivery address\"},{\"text\":\"the expected delivery date was april 22nd but i received no communication\",\"context\":\"do you have the expected delivery date\"},{\"text\":\"i would prefer to pick up from the nearest courier office if possible\",\"context\":\"do you want home delivery or pickup\"},{\"text\":\"long_with_context_texts_here\",\"context\":\"corresponding_agent_questions_here\"}],\"long\":[{\"text\":\"my name is rohan sharma and i ordered a laptop from flipkart my address is 56 civil lines lucknow and the parcel has not been delivered even after 10 days\"},{\"text\":\"i placed an order for a refrigerator from snapdeal it was supposed to come to 78 gurukul road ahmedabad by last friday but i have not received any update at all\"}],\"long_with_context\":[{\"text\":\"the tracking id is 12323456 my order was scheduled for delivery on the 12th of february at my home address in sector 21 chandigarh can you please check its status\",\"context\":\"can you give me your tracking id and delivery address\"},{\"text\":\"i have been waiting for the parcel which contains my phone and accessories i live at 22b ashoka nagar chennai the delivery date was jan 30th but nothing has arrived yet can you update me\",\"context\":\"what are the details of your order including address and expected delivery date\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 567,
+    "output_tokens": 782
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.telecom.data_balance.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "telecom",
+  "intent": "data_balance",
+  "items": [
+    {
+      "context": "kitna data baki hai aapke paas",
+      "requested_bucket": "short",
+      "text": "do gigabyte"
+    },
+    {
+      "context": "aapka data balance check karna hai",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "validity kab tak hai aapke plan ki",
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": "aapka current data balance kya hai",
+      "requested_bucket": "short",
+      "text": "ek gigabyte"
+    },
+    {
+      "context": "data balance batayein",
+      "requested_bucket": "short",
+      "text": "pachaas megabyte"
+    },
+    {
+      "context": "aap abhi kitna data istemal kar chuke hain",
+      "requested_bucket": "short",
+      "text": "teen gigabyte"
+    },
+    {
+      "context": "validity abhi kitna din ka hai",
+      "requested_bucket": "short",
+      "text": "dus din"
+    },
+    {
+      "context": "data balance confirm karna hai kya",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "aapka plan expiry kab hai",
+      "requested_bucket": "short",
+      "text": "pandrah tareekh"
+    },
+    {
+      "context": "abhi kitna data available hai",
+      "requested_bucket": "short",
+      "text": "do point paanch gb"
+    },
+    {
+      "context": "kya aapko apna data balance chahiye",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "data kharch hone ke baad kya bacha hai",
+      "requested_bucket": "short",
+      "text": "saat hundred mb"
+    },
+    {
+      "context": "aap kitna data abhi use kar sakte ho",
+      "requested_bucket": "short",
+      "text": "paanch gb"
+    },
+    {
+      "context": "aapke paas kitna valid data hai",
+      "requested_bucket": "short",
+      "text": "char din"
+    },
+    {
+      "context": "aapka data balance janna hai",
+      "requested_bucket": "short",
+      "text": "ek point do gb"
+    },
+    {
+      "context": "kya aapko data validity check karni hai",
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": "aapka data kab expire hota hai",
+      "requested_bucket": "short",
+      "text": "pichhle mahine"
+    },
+    {
+      "context": "aapke account me kitna data hai",
+      "requested_bucket": "short",
+      "text": "das gb"
+    },
+    {
+      "context": "aapka data balance check karna hai kya",
+      "requested_bucket": "medium",
+      "text": "haan ji do gigabyte bach gaya hai"
+    },
+    {
+      "context": "data balance aur validity batayen",
+      "requested_bucket": "medium",
+      "text": "aapke paas teen gb aur do din valid hai"
+    },
+    {
+      "context": "kya aapko apne data usage ki jankari chahiye",
+      "requested_bucket": "medium",
+      "text": "haan ji aaj tak ke data usage batao"
+    },
+    {
+      "context": "kya aapko pata hai ki kitna data bach hai abhi",
+      "requested_bucket": "medium",
+      "text": "haan ji abhi char gigabyte bacha hua hai"
+    },
+    {
+      "context": "aap apna data balance kab tak use karna chahte hain",
+      "requested_bucket": "medium",
+      "text": "main ise agle hafte tak use karna chahta hoon"
+    },
+    {
+      "context": "data validity ka time period kya hai aapke plan me",
+      "requested_bucket": "medium",
+      "text": "mera plan teen din tak valid hai abhi"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2541709137,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: data_balance - asks how much data or validity is left\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"kitna data baki hai aapke paas\",\"reply\":\"do gigabyte\"},{\"agent_question\":\"aapka data balance check karna hai\",\"reply\":\"haan ji\"},{\"agent_question\":\"validity kab tak hai aapke plan ki\",\"reply\":\"kal tak\"},{\"agent_question\":\"aapka current data balance kya hai\",\"reply\":\"ek gigabyte\"},{\"agent_question\":\"data balance batayein\",\"reply\":\"pachaas megabyte\"},{\"agent_question\":\"aap abhi kitna data istemal kar chuke hain\",\"reply\":\"teen gigabyte\"},{\"agent_question\":\"validity abhi kitna din ka hai\",\"reply\":\"dus din\"},{\"agent_question\":\"data balance confirm karna hai kya\",\"reply\":\"haan\"},{\"agent_question\":\"aapka plan expiry kab hai\",\"reply\":\"pandrah tareekh\"},{\"agent_question\":\"abhi kitna data available hai\",\"reply\":\"do point paanch gb\"},{\"agent_question\":\"kya aapko apna data balance chahiye\",\"reply\":\"haan ji\"},{\"agent_question\":\"data kharch hone ke baad kya bacha hai\",\"reply\":\"saat hundred mb\"},{\"agent_question\":\"aap kitna data abhi use kar sakte ho\",\"reply\":\"paanch gb\"},{\"agent_question\":\"aapke paas kitna valid data hai\",\"reply\":\"char din\"},{\"agent_question\":\"aapka data balance janna hai\",\"reply\":\"ek point do gb\"},{\"agent_question\":\"kya aapko data validity check karni hai\",\"reply\":\"abhi nahi\"},{\"agent_question\":\"aapka data kab expire hota hai\",\"reply\":\"pichhle mahine\"},{\"agent_question\":\"aapke account me kitna data hai\",\"reply\":\"das gb\"}],\"medium\":[{\"agent_question\":\"aapka data balance check karna hai kya\",\"reply\":\"haan ji do gigabyte bach gaya hai\"},{\"agent_question\":\"data balance aur validity batayen\",\"reply\":\"aapke paas teen gb aur do din valid hai\"},{\"agent_question\":\"kya aapko apne data usage ki jankari chahiye\",\"reply\":\"haan ji aaj tak ke data usage batao\"},{\"agent_question\":\"kya aapko pata hai ki kitna data bach hai abhi\",\"reply\":\"haan ji abhi char gigabyte bacha hua hai\"},{\"agent_question\":\"aap apna data balance kab tak use karna chahte hain\",\"reply\":\"main ise agle hafte tak use karna chahta hoon\"},{\"agent_question\":\"data validity ka time period kya hai aapke plan me\",\"reply\":\"mera plan teen din tak valid hai abhi\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 393,
+    "output_tokens": 536
+  }
+}

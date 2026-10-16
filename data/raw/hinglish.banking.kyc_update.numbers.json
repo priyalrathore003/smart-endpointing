@@ -1,0 +1,172 @@
+{
+  "batch_id": "hinglish.banking.kyc_update.numbers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "kyc_update",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Kya aap apna address update karna chahte hain?",
+      "requested_bucket": "short",
+      "text": "haan theek hai"
+    },
+    {
+      "context": "Kya aap PAN card details update karwana chahte hain?",
+      "requested_bucket": "short",
+      "text": "nahi abhi nahi"
+    },
+    {
+      "context": "Kya aap Aadhaar number submit kar sakte hain?",
+      "requested_bucket": "short",
+      "text": "zarur abhi bhejein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account number hai one two three four five six seven eight nine zero"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main apna PAN card details update karwana chahta hoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya main apna naya address bank mein update karwa sakta hoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera aadhaar number baarah teen char panch chhah saat aath nau zero ek do hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mujhe apni KYC documents bank branch mein jama karni hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera phone number nine eight seven six five four three two one zero hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kab tak mera KYC update poora ho jayega"
+    },
+    {
+      "context": "Kya aap apna PAN card details update karwana chahte hain?",
+      "requested_bucket": "medium",
+      "text": "haan main apne PAN details update karna chahta hun"
+    },
+    {
+      "context": "Kya aap apna naya address bank mein update karwana chahte hain?",
+      "requested_bucket": "medium",
+      "text": "mera naya address sector twenty five gurgaon mein hai"
+    },
+    {
+      "context": "Kya aap apna Aadhaar number submit kar sakte hain?",
+      "requested_bucket": "medium",
+      "text": "mujhe apna aadhaar number submit karna hai"
+    },
+    {
+      "context": "Kaise aap apni KYC documents submit karenge?",
+      "requested_bucket": "medium",
+      "text": "kya aap online documents upload karne ki suvidha dete hain"
+    },
+    {
+      "context": "Kya aap apne account ko verify karwana chahte hain?",
+      "requested_bucket": "medium",
+      "text": "mera account mujhe verify karwana hai jaldi se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera account number one two three four five six seven eight nine zero hai aur mujhe apna KYC update karwana hai naya address ke saath"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main ne apne PAN card ki details galat submit kar di thi abhi usse sahi karna chahta hoon jaldi se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mere paas naya aadhaar card hai usme mera address bhi updated hai main usse apne bank account mein link karwana chahta hoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main branch mein jaakar bhi apna address update kar sakta hoon ya phir online process se karna hoga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya mujhe KYC update ke liye koi charges dena padenge ya ye free service hai bank ki taraf se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera phone number bhi update karwana hai kyunki mera purana number ab kaam nahi karta hai main usse bhi change karwana chahta hoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "aap mujhe batayenge ki KYC update process mein kya kya documents submit karne hote hain bank ko"
+    },
+    {
+      "context": "Kya aap mujhe bata sakte hain ki KYC update karne ke liye kya documents chahiye?",
+      "requested_bucket": "long",
+      "text": "meri KYC update karni hai mujhe kya documents chahiye aur process kya hai"
+    },
+    {
+      "context": "Kya aap online ya mobile app se apni details update karna chahte hain?",
+      "requested_bucket": "long",
+      "text": "kya main apne phone ke through bhi apna PAN aur Aadhaar details update kar sakta hoon"
+    },
+    {
+      "context": "Kya aap apna naya address proof bhi humare paas submit kar sakte hain?",
+      "requested_bucket": "long",
+      "text": "mera naya address Delhi ka hai aur main uska proof bhi submit karwana chahta hoon"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1001514022,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: kyc_update - wants to update KYC, address, PAN or Aadhaar details\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal tak\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"haan theek hai\",\"context\":\"Kya aap apna address update karna chahte hain?\"},{\"text\":\"nahi abhi nahi\",\"context\":\"Kya aap PAN card details update karwana chahte hain?\"},{\"text\":\"zarur abhi bhejein\",\"context\":\"Kya aap Aadhaar number submit kar sakte hain?\"}],\"medium\":[{\"text\":\"mera account number hai one two three four five six seven eight nine zero\"},{\"text\":\"main apna PAN card details update karwana chahta hoon\"},{\"text\":\"kya main apna naya address bank mein update karwa sakta hoon\"},{\"text\":\"mera aadhaar number baarah teen char panch chhah saat aath nau zero ek do hai\"},{\"text\":\"mujhe apni KYC documents bank branch mein jama karni hain\"},{\"text\":\"mera phone number nine eight seven six five four three two one zero hai\"},{\"text\":\"kab tak mera KYC update poora ho jayega\"}],\"medium_with_context\":[{\"text\":\"haan main apne PAN details update karna chahta hun\",\"context\":\"Kya aap apna PAN card details update karwana chahte hain?\"},{\"text\":\"mera naya address sector twenty five gurgaon mein hai\",\"context\":\"Kya aap apna naya address bank mein update karwana chahte hain?\"},{\"text\":\"mujhe apna aadhaar number submit karna hai\",\"context\":\"Kya aap apna Aadhaar number submit kar sakte hain?\"},{\"text\":\"kya aap online documents upload karne ki suvidha dete hain\",\"context\":\"Kaise aap apni KYC documents submit karenge?\"},{\"text\":\"mera account mujhe verify karwana hai jaldi se\",\"context\":\"Kya aap apne account ko verify karwana chahte hain?\"}],\"long\":[{\"text\":\"mera account number one two three four five six seven eight nine zero hai aur mujhe apna KYC update karwana hai naya address ke saath\"},{\"text\":\"main ne apne PAN card ki details galat submit kar di thi abhi usse sahi karna chahta hoon jaldi se\"},{\"text\":\"mere paas naya aadhaar card hai usme mera address bhi updated hai main usse apne bank account mein link karwana chahta hoon\"},{\"text\":\"main branch mein jaakar bhi apna address update kar sakta hoon ya phir online process se karna hoga\"},{\"text\":\"kya mujhe KYC update ke liye koi charges dena padenge ya ye free service hai bank ki taraf se\"},{\"text\":\"mera phone number bhi update karwana hai kyunki mera purana number ab kaam nahi karta hai main usse bhi change karwana chahta hoon\"},{\"text\":\"aap mujhe batayenge ki KYC update process mein kya kya documents submit karne hote hain bank ko\"}],\"long_with_context\":[{\"text\":\"meri KYC update karni hai mujhe kya documents chahiye aur process kya hai\",\"context\":\"Kya aap mujhe bata sakte hain ki KYC update karne ke liye kya documents chahiye?\"},{\"text\":\"kya main apne phone ke through bhi apna PAN aur Aadhaar details update kar sakta hoon\",\"context\":\"Kya aap online ya mobile app se apni details update karna chahte hain?\"},{\"text\":\"mera naya address Delhi ka hai aur main uska proof bhi submit karwana chahta hoon\",\"context\":\"Kya aap apna naya address proof bhi humare paas submit kar sakte hain?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 612,
+    "output_tokens": 779
+  }
+}

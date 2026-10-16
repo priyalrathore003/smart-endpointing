@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.delivery.cod_payment.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "delivery",
+  "intent": "cod_payment",
+  "items": [
+    {
+      "context": "Payment mode confirm karein kya aapne?",
+      "requested_bucket": "short",
+      "text": "cash on delivery"
+    },
+    {
+      "context": "Order id bata sakte hain?",
+      "requested_bucket": "short",
+      "text": "123456"
+    },
+    {
+      "context": "Paise deduct hua ya nahi?",
+      "requested_bucket": "short",
+      "text": "nahi hua"
+    },
+    {
+      "context": "Cash ready hai aapke paas?",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "Delivery address confirm karenge?",
+      "requested_bucket": "short",
+      "text": "same address"
+    },
+    {
+      "context": "Kitna dena hai paise?",
+      "requested_bucket": "short",
+      "text": "pachas rupaye"
+    },
+    {
+      "context": "COD payment try kiya tha aapne?",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Kya kisi ne payment already kar diya?",
+      "requested_bucket": "short",
+      "text": "nahi karaya"
+    },
+    {
+      "context": "Abhi tak delivery mili?",
+      "requested_bucket": "short",
+      "text": "abhi tak nahi"
+    },
+    {
+      "context": "Order receive to hua?",
+      "requested_bucket": "short",
+      "text": "haan mil gaya"
+    },
+    {
+      "context": "Aapke phone number confirm karein?",
+      "requested_bucket": "short",
+      "text": "9876543210"
+    },
+    {
+      "context": "Payment ke liye change chahiye?",
+      "requested_bucket": "short",
+      "text": "nahi chahiye"
+    },
+    {
+      "context": "Payment slip dikha sakte hain?",
+      "requested_bucket": "short",
+      "text": "nahi hai"
+    },
+    {
+      "context": "Kitni der se payment issue aa raha?",
+      "requested_bucket": "short",
+      "text": "abhi abhi"
+    },
+    {
+      "context": "Order cancel karna hai kya?",
+      "requested_bucket": "short",
+      "text": "nahi karna"
+    },
+    {
+      "context": "Paise lene wala agent ghar par hai?",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "Amount sahi hai na?",
+      "requested_bucket": "short",
+      "text": "sahi hai"
+    },
+    {
+      "context": "Kya aap se call kar sakte hain?",
+      "requested_bucket": "short",
+      "text": "haan kar sakte hain"
+    },
+    {
+      "context": "Aapko payment mein kya dikat aa rahi hai?",
+      "requested_bucket": "medium",
+      "text": "paise dene par machines accept nahi kar rahi hain"
+    },
+    {
+      "context": "Kya aapne kisi aur tarike se payment try kiya?",
+      "requested_bucket": "medium",
+      "text": "nahi sirf cash hi use kar raha hoon"
+    },
+    {
+      "context": "Kya aapke paas sahi change nahi hai?",
+      "requested_bucket": "medium",
+      "text": "haan, mere paas chhota change nahi hai isliye problem ho rahi hai"
+    },
+    {
+      "context": "Kya delivery agent ne cash accept karne se inkaar kiya?",
+      "requested_bucket": "medium",
+      "text": "haan ji wo payment lene mein dikkat kar raha tha"
+    },
+    {
+      "context": "Aap kis samay payment karna chahenge?",
+      "requested_bucket": "medium",
+      "text": "kal subah main payment kar dunga"
+    },
+    {
+      "context": "Kya aap ek baar payment attempt fir se karenge?",
+      "requested_bucket": "medium",
+      "text": "abhi try karta hoon agar nahi hua toh batata hoon"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1891069020,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cod_payment - has a problem with cash on delivery or payment at the door\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Payment mode confirm karein kya aapne?\",\"reply\":\"cash on delivery\"},{\"agent_question\":\"Order id bata sakte hain?\",\"reply\":\"123456\"},{\"agent_question\":\"Paise deduct hua ya nahi?\",\"reply\":\"nahi hua\"},{\"agent_question\":\"Cash ready hai aapke paas?\",\"reply\":\"haan\"},{\"agent_question\":\"Delivery address confirm karenge?\",\"reply\":\"same address\"},{\"agent_question\":\"Kitna dena hai paise?\",\"reply\":\"pachas rupaye\"},{\"agent_question\":\"COD payment try kiya tha aapne?\",\"reply\":\"haan ji\"},{\"agent_question\":\"Kya kisi ne payment already kar diya?\",\"reply\":\"nahi karaya\"},{\"agent_question\":\"Abhi tak delivery mili?\",\"reply\":\"abhi tak nahi\"},{\"agent_question\":\"Order receive to hua?\",\"reply\":\"haan mil gaya\"},{\"agent_question\":\"Aapke phone number confirm karein?\",\"reply\":\"9876543210\"},{\"agent_question\":\"Payment ke liye change chahiye?\",\"reply\":\"nahi chahiye\"},{\"agent_question\":\"Payment slip dikha sakte hain?\",\"reply\":\"nahi hai\"},{\"agent_question\":\"Kitni der se payment issue aa raha?\",\"reply\":\"abhi abhi\"},{\"agent_question\":\"Order cancel karna hai kya?\",\"reply\":\"nahi karna\"},{\"agent_question\":\"Paise lene wala agent ghar par hai?\",\"reply\":\"haan\"},{\"agent_question\":\"Amount sahi hai na?\",\"reply\":\"sahi hai\"},{\"agent_question\":\"Kya aap se call kar sakte hain?\",\"reply\":\"haan kar sakte hain\"}],\"medium\":[{\"agent_question\":\"Aapko payment mein kya dikat aa rahi hai?\",\"reply\":\"paise dene par machines accept nahi kar rahi hain\"},{\"agent_question\":\"Kya aapne kisi aur tarike se payment try kiya?\",\"reply\":\"nahi sirf cash hi use kar raha hoon\"},{\"agent_question\":\"Kya aapke paas sahi change nahi hai?\",\"reply\":\"haan, mere paas chhota change nahi hai isliye problem ho rahi hai\"},{\"agent_question\":\"Kya delivery agent ne cash accept karne se inkaar kiya?\",\"reply\":\"haan ji wo payment lene mein dikkat kar raha tha\"},{\"agent_question\":\"Aap kis samay payment karna chahenge?\",\"reply\":\"kal subah main payment kar dunga\"},{\"agent_question\":\"Kya aap ek baar payment attempt fir se karenge?\",\"reply\":\"abhi try karta hoon agar nahi hua toh batata hoon\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 397,
+    "output_tokens": 530
+  }
+}

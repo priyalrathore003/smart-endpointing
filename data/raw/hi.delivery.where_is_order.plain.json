@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.delivery.where_is_order.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "where_is_order",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "कब आएगी"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "अब तक कहाँ है"
+    },
+    {
+      "context": "आपका parcel किस स्टेज पर है?",
+      "requested_bucket": "short",
+      "text": "जल्दी बताइए"
+    },
+    {
+      "context": "आपका ऑर्डर कब डिलीवर होगा?",
+      "requested_bucket": "short",
+      "text": "आज तक प्लीज"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर मेरा जो parcel है वो अब तक कहाँ है बताइए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैडम मेरा डिलीवरी आज होनी थी लेकिन कुछ नहीं आया"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मेरे फोन पर कोई update नहीं आया मेरी डिलीवरी का"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे मेरा order जल्दी चाहिए क्या आप कुछ update दे सकते हो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "कल से लगातार कॉल कर रहा हूँ डिलीवरी की जानकारी के लिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "पैसे और delivery दोनों confirm करवा दो मेरी स्थिति क्या है"
+    },
+    {
+      "context": "क्या आपको आपके order की कोई सूचना मिली है?",
+      "requested_bucket": "medium",
+      "text": "मैंने अभी तक delivery का कोई मैसेज नहीं देखा"
+    },
+    {
+      "context": "क्या आपके पास order number है जिसे चेक कर सकें?",
+      "requested_bucket": "medium",
+      "text": "डिलीवरी से जुड़ा कोई नंबर या tracking नहीं मिला"
+    },
+    {
+      "context": "क्या आपका address हम सही तरीके से पाये हैं?",
+      "requested_bucket": "medium",
+      "text": "यहाँ कोई courier person कभी नहीं आया मेरी जगह पर"
+    },
+    {
+      "context": "क्या आप चाहते हैं कि हम आपकी parcel की स्थिति अपडेट करें?",
+      "requested_bucket": "medium",
+      "text": "प्लीज मुझे आज फोन करके डिलीवरी की पुष्टि कर दो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर मेरा जो order था उसने डिलीवरी होनी थी पर अब तक कहीं पता नहीं चला कि कब आएगा कृपया आप बताएं"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैडम मेरे parcel के बारे में एकदम कोई जानकारी नहीं मिली मैंने कई बार कॉल किया पर कोई जवाब नहीं मिला"
+    },
+    {
+      "context": "आपके order की details जांचने पर हमें Dispatch बताया गया है क्या आप और कुछ पूछना चाहते हैं?",
+      "requested_bucket": "long",
+      "text": "मुझे आपका कहना है कि parcel dispatch हो गया है लेकिन मुझे अभी तक कोई ट्रैकिंग नंबर या डिलीवरी टाइम्स नहीं मिला"
+    },
+    {
+      "context": "क्या आप अपने order के confirmation के बारे में बात करना चाहेंगे?",
+      "requested_bucket": "long",
+      "text": "डिलीवरी के लिए आवेदन किया था तीन दिन पहले लेकिन मुझे अभी तक कोई confirmation कॉल या मैसेज नहीं मिला"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1332121253,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: where_is_order - asks where their order or parcel is\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"कब आएगी\"},{\"text\":\"अब तक कहाँ है\"}],\"short_with_context\":[{\"text\":\"जल्दी बताइए\",\"context\":\"आपका parcel किस स्टेज पर है?\"},{\"text\":\"आज तक प्लीज\",\"context\":\"आपका ऑर्डर कब डिलीवर होगा?\"}],\"medium\":[{\"text\":\"सर मेरा जो parcel है वो अब तक कहाँ है बताइए\"},{\"text\":\"मैडम मेरा डिलीवरी आज होनी थी लेकिन कुछ नहीं आया\"},{\"text\":\"मेरे फोन पर कोई update नहीं आया मेरी डिलीवरी का\"},{\"text\":\"मुझे मेरा order जल्दी चाहिए क्या आप कुछ update दे सकते हो\"},{\"text\":\"कल से लगातार कॉल कर रहा हूँ डिलीवरी की जानकारी के लिए\"},{\"text\":\"पैसे और delivery दोनों confirm करवा दो मेरी स्थिति क्या है\"}],\"medium_with_context\":[{\"text\":\"मैंने अभी तक delivery का कोई मैसेज नहीं देखा\",\"context\":\"क्या आपको आपके order की कोई सूचना मिली है?\"},{\"text\":\"डिलीवरी से जुड़ा कोई नंबर या tracking नहीं मिला\",\"context\":\"क्या आपके पास order number है जिसे चेक कर सकें?\"},{\"text\":\"यहाँ कोई courier person कभी नहीं आया मेरी जगह पर\",\"context\":\"क्या आपका address हम सही तरीके से पाये हैं?\"},{\"text\":\"प्लीज मुझे आज फोन करके डिलीवरी की पुष्टि कर दो\",\"context\":\"क्या आप चाहते हैं कि हम आपकी parcel की स्थिति अपडेट करें?\"}],\"long\":[{\"text\":\"सर मेरा जो order था उसने डिलीवरी होनी थी पर अब तक कहीं पता नहीं चला कि कब आएगा कृपया आप बताएं\"},{\"text\":\"मैडम मेरे parcel के बारे में एकदम कोई जानकारी नहीं मिली मैंने कई बार कॉल किया पर कोई जवाब नहीं मिला\"}],\"long_with_context\":[{\"text\":\"मुझे आपका कहना है कि parcel dispatch हो गया है लेकिन मुझे अभी तक कोई ट्रैकिंग नंबर या डिलीवरी टाइम्स नहीं मिला\",\"context\":\"आपके order की details जांचने पर हमें Dispatch बताया गया है क्या आप और कुछ पूछना चाहते हैं?\"},{\"text\":\"डिलीवरी के लिए आवेदन किया था तीन दिन पहले लेकिन मुझे अभी तक कोई confirmation कॉल या मैसेज नहीं मिला\",\"context\":\"क्या आप अपने order के confirmation के बारे में बात करना चाहेंगे?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 682,
+    "output_tokens": 466
+  }
+}

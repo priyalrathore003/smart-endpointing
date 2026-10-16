@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.collections.payment_link.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "payment_link",
+  "items": [
+    {
+      "context": "Do you want me to send the payment link to your phone",
+      "requested_bucket": "short",
+      "text": "Yes please"
+    },
+    {
+      "context": "Can you confirm your registered email for the payment link",
+      "requested_bucket": "short",
+      "text": "Its my email"
+    },
+    {
+      "context": "Would you prefer to pay via UPI or net banking",
+      "requested_bucket": "short",
+      "text": "UPI"
+    },
+    {
+      "context": "Should I resend the payment link to your WhatsApp number",
+      "requested_bucket": "short",
+      "text": "Okay"
+    },
+    {
+      "context": "Is your mobile number still the same for receiving the payment link",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Would you like a link that works on your mobile or desktop",
+      "requested_bucket": "short",
+      "text": "Mobile"
+    },
+    {
+      "context": "Do you need assistance with how to use the payment link",
+      "requested_bucket": "short",
+      "text": "No thanks"
+    },
+    {
+      "context": "Can I send the payment link through SMS",
+      "requested_bucket": "short",
+      "text": "Please do"
+    },
+    {
+      "context": "Are you able to receive payment links on your email",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "When do you expect to make the payment",
+      "requested_bucket": "short",
+      "text": "Tomorrow"
+    },
+    {
+      "context": "Do you want me to call back after sending the payment link",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Is there any other number where I can send the link",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Will you be able to pay by the due date",
+      "requested_bucket": "short",
+      "text": "By friday"
+    },
+    {
+      "context": "Do you prefer the payment link in English or another language",
+      "requested_bucket": "short",
+      "text": "English"
+    },
+    {
+      "context": "Can you tell me how you want to make the payment",
+      "requested_bucket": "medium",
+      "text": "I would like to pay online by debit card"
+    },
+    {
+      "context": "Do you need the payment link sent to your email or phone",
+      "requested_bucket": "medium",
+      "text": "Please send it to my email address"
+    },
+    {
+      "context": "Are you facing any issue with using the payment link",
+      "requested_bucket": "medium",
+      "text": "Yes the link is not opening on my phone"
+    },
+    {
+      "context": "Would you like me to explain how to complete the payment once you get the link",
+      "requested_bucket": "medium",
+      "text": "Yes please explain how to do it step by step"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2744207336,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: payment_link - asks for a payment link or how to pay\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Do you want me to send the payment link to your phone\",\"reply\":\"Yes please\"},{\"agent_question\":\"Can you confirm your registered email for the payment link\",\"reply\":\"Its my email\"},{\"agent_question\":\"Would you prefer to pay via UPI or net banking\",\"reply\":\"UPI\"},{\"agent_question\":\"Should I resend the payment link to your WhatsApp number\",\"reply\":\"Okay\"},{\"agent_question\":\"Is your mobile number still the same for receiving the payment link\",\"reply\":\"Yes\"},{\"agent_question\":\"Would you like a link that works on your mobile or desktop\",\"reply\":\"Mobile\"},{\"agent_question\":\"Do you need assistance with how to use the payment link\",\"reply\":\"No thanks\"},{\"agent_question\":\"Can I send the payment link through SMS\",\"reply\":\"Please do\"},{\"agent_question\":\"Are you able to receive payment links on your email\",\"reply\":\"Yes\"},{\"agent_question\":\"When do you expect to make the payment\",\"reply\":\"Tomorrow\"},{\"agent_question\":\"Do you want me to call back after sending the payment link\",\"reply\":\"No\"},{\"agent_question\":\"Is there any other number where I can send the link\",\"reply\":\"No\"},{\"agent_question\":\"Will you be able to pay by the due date\",\"reply\":\"By friday\"},{\"agent_question\":\"Do you prefer the payment link in English or another language\",\"reply\":\"English\"}],\"medium\":[{\"agent_question\":\"Can you tell me how you want to make the payment\",\"reply\":\"I would like to pay online by debit card\"},{\"agent_question\":\"Do you need the payment link sent to your email or phone\",\"reply\":\"Please send it to my email address\"},{\"agent_question\":\"Are you facing any issue with using the payment link\",\"reply\":\"Yes the link is not opening on my phone\"},{\"agent_question\":\"Would you like me to explain how to complete the payment once you get the link\",\"reply\":\"Yes please explain how to do it step by step\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 367,
+    "output_tokens": 389
+  }
+}

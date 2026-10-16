@@ -1,0 +1,132 @@
+{
+  "batch_id": "hi.telecom.roaming.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "roaming",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "रोमिंग ऑन करो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "नेक्स्ट मंथ से"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "जी हाँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "हाँ सर"
+    },
+    {
+      "context": "क्या आप रोमिंग activate करना चाहते हैं?",
+      "requested_bucket": "short",
+      "text": "हाँ प्लीज़"
+    },
+    {
+      "context": "क्या आप अभी अंतरराष्ट्रीय रोमिंग चालू कराना चाहते हैं?",
+      "requested_bucket": "short",
+      "text": "अभी नहीं"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे नीदरलैंड्स के लिए रोमिंग चालू करानी है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "देश के बाहर जाते वक्त रोमिंग ऑन करनी होती है क्या"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर मेरा प्लान कौन सा होगा इंटरनेशनल रोमिंग के लिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "क्या आप मुझे बता सकते हैं रोमिंग पैक के बारे में"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैं इंडिया में ही हूँ लेकिन नेशनल रोमिंग एक्टिवेट करनी है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "प्लीज़ मेरा रोमिंग अपडेट जल्दी से कर दीजिए"
+    },
+    {
+      "context": "कब से आप रोमिंग चालू करना चाहेंगे?",
+      "requested_bucket": "medium",
+      "text": "हाँ सर मैं दो महीने बाद विदेश जा रहा हूँ"
+    },
+    {
+      "context": "कौन से देश के लिए रोमिंग activate करनी है?",
+      "requested_bucket": "medium",
+      "text": "जी हाँ मैं यूएसए के लिए रोमिंग चाहती हूँ"
+    },
+    {
+      "context": "क्या आप अपना नंबर शेयर कर सकते हैं?",
+      "requested_bucket": "medium",
+      "text": "मेरा नंबर 9876543210 है पर मैं अभी पूछना चाहता हूँ"
+    },
+    {
+      "context": "क्या आपने पहले कभी रोमिंग के लिए activate किया है?",
+      "requested_bucket": "medium",
+      "text": "मैंने अभी तक कोई रोमिंग पैक नहीं लिया है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैं अगले महीने लंदन जा रहा हूँ तो उसके लिए मुझे इंटरनेशनल रोमिंग चालू करवानी होगी।"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर मैं इंडिया के अलग-अलग राज्यों में काम के लिए जाता हूँ तो नेशनल रोमिंग सेट करवा दूँ।"
+    },
+    {
+      "context": "कृपया बताएं कि आप किस तरह की रोमिंग सेवा लेना चाहते हैं?",
+      "requested_bucket": "long",
+      "text": "मैं अमेरिका जाने का प्लान बना रहा हूँ इसलिए मुझे आपके रोमिंग प्लान के बारे में पूरी जानकारी चाहिए।"
+    },
+    {
+      "context": "रोमिंग चालू करने की तारीख बताएं ताकि हम प्रोसेस कर सकें।",
+      "requested_bucket": "long",
+      "text": "मैं अभी दिल्ली में हूँ और अगस्त में दुबई जाना है तो मैं अप्रैल से ही रोमिंग ऑन करना चाहता हूँ क्योंकि उससे पहले टेस्टिंग कर लूँगा।"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3948051120,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: roaming - wants to activate international or national roaming\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"रोमिंग ऑन करो\"},{\"text\":\"नेक्स्ट मंथ से\"},{\"text\":\"जी हाँ\"},{\"text\":\"हाँ सर\"}],\"short_with_context\":[{\"text\":\"हाँ प्लीज़\",\"context\":\"क्या आप रोमिंग activate करना चाहते हैं?\"},{\"text\":\"अभी नहीं\",\"context\":\"क्या आप अभी अंतरराष्ट्रीय रोमिंग चालू कराना चाहते हैं?\"}],\"medium\":[{\"text\":\"मुझे नीदरलैंड्स के लिए रोमिंग चालू करानी है\"},{\"text\":\"देश के बाहर जाते वक्त रोमिंग ऑन करनी होती है क्या\"},{\"text\":\"सर मेरा प्लान कौन सा होगा इंटरनेशनल रोमिंग के लिए\"},{\"text\":\"क्या आप मुझे बता सकते हैं रोमिंग पैक के बारे में\"},{\"text\":\"मैं इंडिया में ही हूँ लेकिन नेशनल रोमिंग एक्टिवेट करनी है\"},{\"text\":\"प्लीज़ मेरा रोमिंग अपडेट जल्दी से कर दीजिए\"}],\"medium_with_context\":[{\"text\":\"हाँ सर मैं दो महीने बाद विदेश जा रहा हूँ\",\"context\":\"कब से आप रोमिंग चालू करना चाहेंगे?\"},{\"text\":\"जी हाँ मैं यूएसए के लिए रोमिंग चाहती हूँ\",\"context\":\"कौन से देश के लिए रोमिंग activate करनी है?\"},{\"text\":\"मेरा नंबर 9876543210 है पर मैं अभी पूछना चाहता हूँ\",\"context\":\"क्या आप अपना नंबर शेयर कर सकते हैं?\"},{\"text\":\"मैंने अभी तक कोई रोमिंग पैक नहीं लिया है\",\"context\":\"क्या आपने पहले कभी रोमिंग के लिए activate किया है?\"}],\"long\":[{\"text\":\"मैं अगले महीने लंदन जा रहा हूँ तो उसके लिए मुझे इंटरनेशनल रोमिंग चालू करवानी होगी।\"},{\"text\":\"सर मैं इंडिया के अलग-अलग राज्यों में काम के लिए जाता हूँ तो नेशनल रोमिंग सेट करवा दूँ।\"}],\"long_with_context\":[{\"text\":\"मैं अमेरिका जाने का प्लान बना रहा हूँ इसलिए मुझे आपके रोमिंग प्लान के बारे में पूरी जानकारी चाहिए।\",\"context\":\"कृपया बताएं कि आप किस तरह की रोमिंग सेवा लेना चाहते हैं?\"},{\"text\":\"मैं अभी दिल्ली में हूँ और अगस्त में दुबई जाना है तो मैं अप्रैल से ही रोमिंग ऑन करना चाहता हूँ क्योंकि उससे पहले टेस्टिंग कर लूँगा।\",\"context\":\"रोमिंग चालू करने की तारीख बताएं ताकि हम प्रोसेस कर सकें।\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 680,
+    "output_tokens": 484
+  }
+}

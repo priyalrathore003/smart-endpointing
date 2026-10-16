@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.delivery.reschedule.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "reschedule",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "tomorrow morning"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "next saturday"
+    },
+    {
+      "context": "Would you like to reschedule for morning or evening?",
+      "requested_bucket": "short",
+      "text": "evening"
+    },
+    {
+      "context": "Which day would you prefer for the new delivery date?",
+      "requested_bucket": "short",
+      "text": "friday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you please deliver it on Wednesday afternoon instead"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I need to change my delivery to next week on Tuesday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Is it possible to reschedule for the day after tomorrow evening"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please arrange the delivery for sometime next Friday if you can"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I would like to shift the delivery to tomorrow noon instead of morning"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you reschedule it to Sunday afternoon because I will be home then"
+    },
+    {
+      "context": "When would you like to reschedule your delivery?",
+      "requested_bucket": "medium",
+      "text": "Next Monday afternoon would be better for me"
+    },
+    {
+      "context": "Do you have a preferred time for the rescheduled delivery?",
+      "requested_bucket": "medium",
+      "text": "Can you please make it after 5 pm on Thursday"
+    },
+    {
+      "context": "Which date and time should I set for your delivery?",
+      "requested_bucket": "medium",
+      "text": "Delivery on Wednesday evening will work for me"
+    },
+    {
+      "context": "Are there any specific days or times you want for the delivery?",
+      "requested_bucket": "medium",
+      "text": "Is it possible to get it by Friday morning instead"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I am not available on the original delivery date please change it to next Wednesday afternoon as I will be home by then"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Due to some work I cannot receive the package on Friday can you reschedule the delivery to the following Monday between two and four pm"
+    },
+    {
+      "context": "Could you please tell me the new preferred date and time for your delivery?",
+      "requested_bucket": "long",
+      "text": "I am not free on Sunday so can you schedule it for Monday morning between nine and eleven"
+    },
+    {
+      "context": "Please provide the date and time you would like your delivery rescheduled to.",
+      "requested_bucket": "long",
+      "text": "I have an appointment on Friday so I want to change my delivery to Wednesday afternoon after three oclock"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2378863054,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: reschedule - wants the delivery on a different day or time\nLanguage: Indian English, Latin script.\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"tomorrow morning\"},{\"text\":\"next saturday\"}],\"short_with_context\":[{\"text\":\"evening\",\"context\":\"Would you like to reschedule for morning or evening?\"},{\"text\":\"friday\",\"context\":\"Which day would you prefer for the new delivery date?\"}],\"medium\":[{\"text\":\"Can you please deliver it on Wednesday afternoon instead\"},{\"text\":\"I need to change my delivery to next week on Tuesday\"},{\"text\":\"Is it possible to reschedule for the day after tomorrow evening\"},{\"text\":\"Please arrange the delivery for sometime next Friday if you can\"},{\"text\":\"I would like to shift the delivery to tomorrow noon instead of morning\"},{\"text\":\"Can you reschedule it to Sunday afternoon because I will be home then\"}],\"medium_with_context\":[{\"text\":\"Next Monday afternoon would be better for me\",\"context\":\"When would you like to reschedule your delivery?\"},{\"text\":\"Can you please make it after 5 pm on Thursday\",\"context\":\"Do you have a preferred time for the rescheduled delivery?\"},{\"text\":\"Delivery on Wednesday evening will work for me\",\"context\":\"Which date and time should I set for your delivery?\"},{\"text\":\"Is it possible to get it by Friday morning instead\",\"context\":\"Are there any specific days or times you want for the delivery?\"}],\"long\":[{\"text\":\"I am not available on the original delivery date please change it to next Wednesday afternoon as I will be home by then\"},{\"text\":\"Due to some work I cannot receive the package on Friday can you reschedule the delivery to the following Monday between two and four pm\"}],\"long_with_context\":[{\"text\":\"I am not free on Sunday so can you schedule it for Monday morning between nine and eleven\",\"context\":\"Could you please tell me the new preferred date and time for your delivery?\"},{\"text\":\"I have an appointment on Friday so I want to change my delivery to Wednesday afternoon after three oclock\",\"context\":\"Please provide the date and time you would like your delivery rescheduled to.\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 559,
+    "output_tokens": 410
+  }
+}

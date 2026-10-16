@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.delivery.return_refund.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "return_refund",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Aap return karna chahte hain kya?",
+      "requested_bucket": "short",
+      "text": "return karna hai"
+    },
+    {
+      "context": "Kya aapko refund chahiye?",
+      "requested_bucket": "short",
+      "text": "refund mil jayega"
+    },
+    {
+      "context": "Kya aapka package wapas aana hai?",
+      "requested_bucket": "short",
+      "text": "package wapas aana hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera order galat item aaya hai mujhe return karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha mujhe refund process ke baare mein batao please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine kal hi item receive kiya tha return chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "woh product defective tha main replace karna chahta hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera paisa kab tak mil jayega refund ke liye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "delivery to ho gayi thi par item match nahi karta"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine return request diya tha par confirmation nahi aaya"
+    },
+    {
+      "context": "Aapka complaint kis cheez ka hai?",
+      "requested_bucket": "medium",
+      "text": "main ne wrong size wala item receive kiya hai"
+    },
+    {
+      "context": "Aapko return ke liye kya jankari chahiye?",
+      "requested_bucket": "medium",
+      "text": "return ka procedure kya hai mujhe samjhao"
+    },
+    {
+      "context": "Kya aapko refund mil gaya hai?",
+      "requested_bucket": "medium",
+      "text": "maine apne bank mein refund nahi dekha abhi tak"
+    },
+    {
+      "context": "Kya aap replacement chahte hain?",
+      "requested_bucket": "medium",
+      "text": "wahi item wapas karna hai aur naya lana hai"
+    },
+    {
+      "context": "Kya aapke order ka status check karun?",
+      "requested_bucket": "medium",
+      "text": "mera order cancel hua tha refund kab aayega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "meri delivery mein kuch problem aayi hai item damage ho gaya hai mujhe turant return karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine apna order Wednesday ko receive kiya tha par yeh product defective hai return process shuru karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "please mujhe bataye ki return request kab tak process hogi aur mera paisa kab refund kiya jayega"
+    },
+    {
+      "context": "Aap kis product ka refund lena chahte hain?",
+      "requested_bucket": "long",
+      "text": "mera order galat item ka aaya tha mujhe uska refund chahiye"
+    },
+    {
+      "context": "Aapne kab return request submit ki thi?",
+      "requested_bucket": "long",
+      "text": "maine return request di thi par ab tak confirmation message nahi aaya hai"
+    },
+    {
+      "context": "Kya aap apna correct contact number de sakte hain?",
+      "requested_bucket": "long",
+      "text": "mera phone number wrong se register ho gaya tha mujhe payment refund karwana hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2907407025,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: return_refund - wants to return an item or asks about a refund\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal tak\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"return karna hai\",\"context\":\"Aap return karna chahte hain kya?\"},{\"text\":\"refund mil jayega\",\"context\":\"Kya aapko refund chahiye?\"},{\"text\":\"package wapas aana hai\",\"context\":\"Kya aapka package wapas aana hai?\"}],\"medium\":[{\"text\":\"mera order galat item aaya hai mujhe return karna hai\"},{\"text\":\"accha mujhe refund process ke baare mein batao please\"},{\"text\":\"maine kal hi item receive kiya tha return chahiye\"},{\"text\":\"woh product defective tha main replace karna chahta hu\"},{\"text\":\"mera paisa kab tak mil jayega refund ke liye\"},{\"text\":\"delivery to ho gayi thi par item match nahi karta\"},{\"text\":\"maine return request diya tha par confirmation nahi aaya\"}],\"medium_with_context\":[{\"text\":\"main ne wrong size wala item receive kiya hai\",\"context\":\"Aapka complaint kis cheez ka hai?\"},{\"text\":\"return ka procedure kya hai mujhe samjhao\",\"context\":\"Aapko return ke liye kya jankari chahiye?\"},{\"text\":\"maine apne bank mein refund nahi dekha abhi tak\",\"context\":\"Kya aapko refund mil gaya hai?\"},{\"text\":\"wahi item wapas karna hai aur naya lana hai\",\"context\":\"Kya aap replacement chahte hain?\"},{\"text\":\"mera order cancel hua tha refund kab aayega\",\"context\":\"Kya aapke order ka status check karun?\"}],\"long\":[{\"text\":\"meri delivery mein kuch problem aayi hai item damage ho gaya hai mujhe turant return karna hai\"},{\"text\":\"maine apna order Wednesday ko receive kiya tha par yeh product defective hai return process shuru karna hai\"},{\"text\":\"please mujhe bataye ki return request kab tak process hogi aur mera paisa kab refund kiya jayega\"}],\"long_with_context\":[{\"text\":\"mera order galat item ka aaya tha mujhe uska refund chahiye\",\"context\":\"Aap kis product ka refund lena chahte hain?\"},{\"text\":\"maine return request di thi par ab tak confirmation message nahi aaya hai\",\"context\":\"Aapne kab return request submit ki thi?\"},{\"text\":\"mera phone number wrong se register ho gaya tha mujhe payment refund karwana hai\",\"context\":\"Kya aap apna correct contact number de sakte hain?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 612,
+    "output_tokens": 535
+  }
+}

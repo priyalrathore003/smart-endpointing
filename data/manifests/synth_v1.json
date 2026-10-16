@@ -1,0 +1,361 @@
+{
+  "analysis_files": [
+    {
+      "note": "every word boundary; analysis only, never train on it",
+      "path": "processed/synth_v1/analysis/all_prefixes.jsonl",
+      "rows": 104869,
+      "sha256": "a6418ee155b2119845c220fc85c1fe0b28e30a0eb46dc0798c35d1b57851f552"
+    }
+  ],
+  "batches_by_split": {
+    "dev": 48,
+    "test": 48,
+    "train": 384
+  },
+  "build_config": {
+    "dedup_threshold": 0.8,
+    "max_context_gap": 0.15,
+    "max_prefixes": 3,
+    "seed": 0,
+    "spell_prob": 0.25,
+    "tail_share": 0.3
+  },
+  "context_balance": {
+    "by_language": {
+      "en": {
+        "gap": 0.0989,
+        "with_context": {
+          "p_end": 0.3763,
+          "rows": 4289
+        },
+        "without_context": {
+          "p_end": 0.2774,
+          "rows": 5595
+        }
+      },
+      "hi": {
+        "gap": 0.1044,
+        "with_context": {
+          "p_end": 0.4141,
+          "rows": 3591
+        },
+        "without_context": {
+          "p_end": 0.3097,
+          "rows": 3865
+        }
+      },
+      "hinglish": {
+        "gap": 0.1062,
+        "with_context": {
+          "p_end": 0.4182,
+          "rows": 5256
+        },
+        "without_context": {
+          "p_end": 0.312,
+          "rows": 5933
+        }
+      }
+    },
+    "failed": [],
+    "max_gap": 0.15
+  },
+  "counts": {
+    "by_split_label": {
+      "dev": {
+        "END": 995,
+        "NOT_END": 1746
+      },
+      "test": {
+        "END": 986,
+        "NOT_END": 1895
+      },
+      "train": {
+        "END": 7918,
+        "NOT_END": 14989
+      }
+    },
+    "by_split_language": {
+      "dev": {
+        "en": 1023,
+        "hi": 703,
+        "hinglish": 1015
+      },
+      "test": {
+        "en": 1100,
+        "hi": 713,
+        "hinglish": 1068
+      },
+      "train": {
+        "en": 7761,
+        "hi": 6040,
+        "hinglish": 9106
+      }
+    },
+    "rows": 28529,
+    "slices": {
+      "dev": {
+        "code_mixed": 161,
+        "digits_mid": 4,
+        "digits_spelled": 21,
+        "end_on_hard_negative": 5,
+        "hard_negative": 402,
+        "has_digits": 261,
+        "heuristic_complete": 933,
+        "prefix_of_reply": 33,
+        "short": 495
+      },
+      "test": {
+        "code_mixed": 130,
+        "digits_mid": 4,
+        "digits_spelled": 32,
+        "end_on_hard_negative": 5,
+        "hard_negative": 457,
+        "has_digits": 224,
+        "heuristic_complete": 1052,
+        "prefix_of_reply": 17,
+        "short": 484
+      },
+      "train": {
+        "code_mixed": 1546,
+        "digits_mid": 73,
+        "digits_spelled": 191,
+        "end_on_hard_negative": 56,
+        "hard_negative": 3564,
+        "has_digits": 2011,
+        "heuristic_complete": 7978,
+        "prefix_of_reply": 210,
+        "short": 3770
+      }
+    }
+  },
+  "data_hash": "5dc7cd3adf313a41040e44e09db8d38df8c1e5cfea97fdf38c3225dc00e2608a",
+  "dedup": {
+    "exact_removed": 531,
+    "input": 10435,
+    "kept": 9899,
+    "near_examples": [
+      [
+        "did you authorize this transaction | no i did not do this",
+        "did you authorize this transaction | no i did not"
+      ],
+      [
+        "when did you make the payment | yesterday only",
+        "when did you make the payment | yesterday"
+      ],
+      [
+        "do you want to activate national or international roaming | international roaming please",
+        "do you want to activate national or international roaming | international roaming"
+      ],
+      [
+        "क्या आप अपना प्लान बदलना चाहते हैं | हाँ",
+        "क्या आप अपना प्लान बदलना चाहते हैं | हाँ जी"
+      ],
+      [
+        "kya aap international roaming activate karna chahte hain | haan bilkul",
+        "kya aap international roaming activate karna chahte hain | haan ji"
+      ]
+    ],
+    "near_removed": 5
+  },
+  "drops": {
+    "script_mismatch": {
+      "hi": 136,
+      "hinglish": 1
+    }
+  },
+  "files": [
+    {
+      "path": "processed/synth_v1/dev.jsonl",
+      "sha256": "dea358615be50beca6be1e1da7fc9b3b22d8acb13ee2f7b2531d5082f98f6608"
+    },
+    {
+      "path": "processed/synth_v1/test.jsonl",
+      "sha256": "8644bddda1a21b68c166c6667851a46587d225999e86392e3fe176d82ae96f70"
+    },
+    {
+      "path": "processed/synth_v1/train.jsonl",
+      "sha256": "c70396cd40b8760562f2ec0daeae3547c22b53fa99f1b9546c6498c88cca2030"
+    }
+  ],
+  "generation": {
+    "model": "gpt-4.1-mini-2025-04-14",
+    "pricing_usd_per_million": {
+      "input": "0.40",
+      "output": "1.60"
+    },
+    "prompt_versions_current": {
+      "pairs": "2fb546be4c8b2d7c",
+      "turns/en": "6695823f47c9f718",
+      "turns/hi": "615aa9302f2856a0",
+      "turns/hinglish": "4f583d63fe2afa2d"
+    }
+  },
+  "label_conflicts": {
+    "by_language": {
+      "en": {
+        "conflicting_texts": 39,
+        "distinct_texts": 8486,
+        "rate": 0.0046
+      },
+      "hi": {
+        "conflicting_texts": 34,
+        "distinct_texts": 6782,
+        "rate": 0.005
+      },
+      "hinglish": {
+        "conflicting_texts": 62,
+        "distinct_texts": 9846,
+        "rate": 0.0063
+      }
+    },
+    "examples": [
+      "about two gb",
+      "account number nine eight seven six five four",
+      "different",
+      "evening",
+      "five thousand",
+      "friday",
+      "how much data",
+      "i think you have the wrong person",
+      "illness",
+      "job loss"
+    ],
+    "overall": {
+      "conflicting_texts": 135,
+      "distinct_texts": 25114,
+      "rate": 0.0054
+    }
+  },
+  "leakage_checks": "passed",
+  "length_buckets": {
+    "requested_bucket_agreement": {
+      "agree": 8900,
+      "asked": 10430,
+      "rate": 0.8533
+    },
+    "short_replies": {
+      "en": {
+        "long": 17,
+        "medium": 142,
+        "short": 432
+      },
+      "hi": {
+        "long": 19,
+        "medium": 148,
+        "short": 383
+      },
+      "hinglish": {
+        "long": 8,
+        "medium": 216,
+        "short": 547
+      }
+    },
+    "turns": {
+      "en": {
+        "long": 1009,
+        "medium": 1091,
+        "short": 639
+      },
+      "hi": {
+        "long": 801,
+        "medium": 953,
+        "short": 470
+      },
+      "hinglish": {
+        "long": 1159,
+        "medium": 1427,
+        "short": 969
+      }
+    }
+  },
+  "name": "synth_v1",
+  "prefix_sampling": {
+    "after": {
+      "all": {
+        "END": 9899,
+        "NOT_END": 18630,
+        "not_end_per_end": 1.882,
+        "share_1_2_word_prefixes": 0.1782
+      },
+      "short_replies": {
+        "END": 1899,
+        "NOT_END": 260,
+        "not_end_per_end": 0.137,
+        "share_1_2_word_prefixes": 0.1231
+      },
+      "turns": {
+        "END": 8000,
+        "NOT_END": 18370,
+        "not_end_per_end": 2.296,
+        "share_1_2_word_prefixes": 0.1789
+      }
+    },
+    "before_all_hard_plus_3_random": {
+      "all": {
+        "END": 9899,
+        "NOT_END": 32858,
+        "not_end_per_end": 3.319,
+        "share_1_2_word_prefixes": 0.2627
+      },
+      "short_replies": {
+        "END": 1899,
+        "NOT_END": 3502,
+        "not_end_per_end": 1.844,
+        "share_1_2_word_prefixes": 0.5537
+      },
+      "turns": {
+        "END": 8000,
+        "NOT_END": 29356,
+        "not_end_per_end": 3.67,
+        "share_1_2_word_prefixes": 0.228
+      }
+    },
+    "every_boundary": {
+      "all": {
+        "END": 9899,
+        "NOT_END": 94970,
+        "not_end_per_end": 9.594,
+        "share_1_2_word_prefixes": 0.1876
+      },
+      "short_replies": {
+        "END": 1899,
+        "NOT_END": 6052,
+        "not_end_per_end": 3.187,
+        "share_1_2_word_prefixes": 0.421
+      },
+      "turns": {
+        "END": 8000,
+        "NOT_END": 88918,
+        "not_end_per_end": 11.115,
+        "share_1_2_word_prefixes": 0.1718
+      }
+    },
+    "scheme": "capped: <= 3 NOT_END per utterance (hard-negative/filler, last 30% of words, random); short replies: hard-negative only"
+  },
+  "raw": {
+    "batches": 480,
+    "prompt_versions": {
+      "pairs": "2fb546be4c8b2d7c",
+      "turns/en": "6695823f47c9f718",
+      "turns/hi": "615aa9302f2856a0",
+      "turns/hinglish": "4f583d63fe2afa2d"
+    },
+    "utterances_by_language": {
+      "en": 3333,
+      "hi": 2911,
+      "hinglish": 4328
+    }
+  },
+  "utterances_by_language": {
+    "en": 3166,
+    "hi": 2684,
+    "hinglish": 4049
+  },
+  "utterances_by_style": {
+    "fillers": 1879,
+    "names": 2047,
+    "numbers": 2056,
+    "plain": 2018,
+    "short_replies": 1899
+  }
+}

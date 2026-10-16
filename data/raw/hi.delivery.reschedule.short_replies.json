@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.delivery.reschedule.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "delivery",
+  "intent": "reschedule",
+  "items": [
+    {
+      "context": "कब डिलीवरी करवानी है",
+      "requested_bucket": "short",
+      "text": "कल सुबह"
+    },
+    {
+      "context": "डिलीवरी टाइम कौन सा ठीक रहेगा",
+      "requested_bucket": "short",
+      "text": "शाम के बाद"
+    },
+    {
+      "context": "कौन सा दिन चाहिए आपको",
+      "requested_bucket": "short",
+      "text": "शनिवार"
+    },
+    {
+      "context": "डिलीवरी एड्रेस वही रहेगा",
+      "requested_bucket": "short",
+      "text": "हाँ वही है"
+    },
+    {
+      "context": "डिलीवरी रिस्केड्यूल करना है क्या",
+      "requested_bucket": "short",
+      "text": "जी हाँ"
+    },
+    {
+      "context": "क्या आपको सुबह में डिलीवरी चाहिए",
+      "requested_bucket": "short",
+      "text": "नहीं जी शाम ठीक है"
+    },
+    {
+      "context": "डिलीवरी कल रख दूँ",
+      "requested_bucket": "short",
+      "text": "ठीक है"
+    },
+    {
+      "context": "डिलीवरी का parcel अभी लेना है",
+      "requested_bucket": "short",
+      "text": "नहीं अभी नहीं"
+    },
+    {
+      "context": "आप कौन सा slot चुनना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "डेढ़ से तीन बजे"
+    },
+    {
+      "context": "रात की डिलीवरी ठीक रहेगी",
+      "requested_bucket": "short",
+      "text": "जी हाँ सही है"
+    },
+    {
+      "context": "डिलीवरी टाइम कम करवा सकते हो",
+      "requested_bucket": "short",
+      "text": "प्लीज जल्दी कर दो"
+    },
+    {
+      "context": "क्या आज डिलीवरी कर पाएंगे",
+      "requested_bucket": "short",
+      "text": "नहीं जी कल कर देना"
+    },
+    {
+      "context": "डिलीवरी का confirmation चाहिए आपको",
+      "requested_bucket": "short",
+      "text": "हाँ जी मेल कर दो"
+    },
+    {
+      "context": "कब आप free हो डिलीवरी के लिए",
+      "requested_bucket": "short",
+      "text": "शाम को फ्री हूँ"
+    },
+    {
+      "context": "डिलीवरी का दिन बदलना है क्या",
+      "requested_bucket": "medium",
+      "text": "हाँ मैडम कल से होने वाली है डिलीवरी"
+    },
+    {
+      "context": "आप कब डिलीवरी लेना पसंद करोगे",
+      "requested_bucket": "medium",
+      "text": "शाम ५ बजे के बाद या फिर सात बजे ठीक रहेगा"
+    },
+    {
+      "context": "डिलीवरी के लिए कौन सा टाइम स्लॉट रखूं",
+      "requested_bucket": "medium",
+      "text": "सुबह १० से ११ बजे के बीच रखना तभी सही रहेगा"
+    },
+    {
+      "context": "डिलीवरी रिस्केड्यूल करने का कारण बताइए",
+      "requested_bucket": "medium",
+      "text": "घरेलू समस्या की वजह से कल नहीं आ पाएंगे"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1829663375,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: reschedule - wants the delivery on a different day or time\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"कब डिलीवरी करवानी है\",\"reply\":\"कल सुबह\"},{\"agent_question\":\"डिलीवरी टाइम कौन सा ठीक रहेगा\",\"reply\":\"शाम के बाद\"},{\"agent_question\":\"कौन सा दिन चाहिए आपको\",\"reply\":\"शनिवार\"},{\"agent_question\":\"डिलीवरी एड्रेस वही रहेगा\",\"reply\":\"हाँ वही है\"},{\"agent_question\":\"डिलीवरी रिस्केड्यूल करना है क्या\",\"reply\":\"जी हाँ\"},{\"agent_question\":\"क्या आपको सुबह में डिलीवरी चाहिए\",\"reply\":\"नहीं जी शाम ठीक है\"},{\"agent_question\":\"डिलीवरी कल रख दूँ\",\"reply\":\"ठीक है\"},{\"agent_question\":\"डिलीवरी का parcel अभी लेना है\",\"reply\":\"नहीं अभी नहीं\"},{\"agent_question\":\"आप कौन सा slot चुनना चाहते हैं\",\"reply\":\"डेढ़ से तीन बजे\"},{\"agent_question\":\"रात की डिलीवरी ठीक रहेगी\",\"reply\":\"जी हाँ सही है\"},{\"agent_question\":\"डिलीवरी टाइम कम करवा सकते हो\",\"reply\":\"प्लीज जल्दी कर दो\"},{\"agent_question\":\"क्या आज डिलीवरी कर पाएंगे\",\"reply\":\"नहीं जी कल कर देना\"},{\"agent_question\":\"डिलीवरी का confirmation चाहिए आपको\",\"reply\":\"हाँ जी मेल कर दो\"},{\"agent_question\":\"कब आप free हो डिलीवरी के लिए\",\"reply\":\"शाम को फ्री हूँ\"}],\"medium\":[{\"agent_question\":\"डिलीवरी का दिन बदलना है क्या\",\"reply\":\"हाँ मैडम कल से होने वाली है डिलीवरी\"},{\"agent_question\":\"आप कब डिलीवरी लेना पसंद करोगे\",\"reply\":\"शाम ५ बजे के बाद या फिर सात बजे ठीक रहेगा\"},{\"agent_question\":\"डिलीवरी के लिए कौन सा टाइम स्लॉट रखूं\",\"reply\":\"सुबह १० से ११ बजे के बीच रखना तभी सही रहेगा\"},{\"agent_question\":\"डिलीवरी रिस्केड्यूल करने का कारण बताइए\",\"reply\":\"घरेलू समस्या की वजह से कल नहीं आ पाएंगे\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 497,
+    "output_tokens": 404
+  }
+}

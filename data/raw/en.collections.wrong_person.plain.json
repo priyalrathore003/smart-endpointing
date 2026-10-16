@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.collections.wrong_person.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "wrong_person",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wrong number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "not my name"
+    },
+    {
+      "context": "Can you please confirm your full name",
+      "requested_bucket": "short",
+      "text": "this is not correct"
+    },
+    {
+      "context": "Are you Mr Rajesh Kumar?",
+      "requested_bucket": "short",
+      "text": "i think you have the wrong person"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "you have dialed the wrong number this is not related to me"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i am sorry but i am not aware of this account or loan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please check again because i am not the customer you are looking for"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "this call might be meant for someone else i do not owe any amount"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i do not have any outstanding payments it must be a mistake"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the details you mentioned do not match with me or my records"
+    },
+    {
+      "context": "Can you confirm the loan account holder name please?",
+      "requested_bucket": "medium",
+      "text": "no this is not my account or loan you are talking about"
+    },
+    {
+      "context": "Are you calling about the overdue payment on your credit card?",
+      "requested_bucket": "medium",
+      "text": "sir i think you have contacted the wrong number please verify"
+    },
+    {
+      "context": "May I know if you are Mr. Suresh from Bangalore?",
+      "requested_bucket": "medium",
+      "text": "this is not my number i am not associated with this account"
+    },
+    {
+      "context": "Have you been trying to reach Mr. Anil Verma regarding dues?",
+      "requested_bucket": "medium",
+      "text": "i do not have any loan or credit card with your bank"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i have no relation with the account number and the phone number is also not mine please verify your records carefully"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "this must be some error because i have never taken any loan or credit from your bank so please check again"
+    },
+    {
+      "context": "We are calling regarding your pending loan payment which is overdue by two months",
+      "requested_bucket": "long",
+      "text": "i am sorry but i think you have contacted the wrong person i have no outstanding dues or loans with your institution"
+    },
+    {
+      "context": "Is this Priya Sharma this is regarding your credit card overdue amount",
+      "requested_bucket": "long",
+      "text": "please double check the records because this phone number does not belong to the person you are trying to reach and i am not responsible for this account"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3748732999,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: wrong_person - says the agent has the wrong person or number\nLanguage: Indian English, Latin script.\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"wrong number\"},{\"text\":\"not my name\"}],\"short_with_context\":[{\"text\":\"this is not correct\",\"context\":\"Can you please confirm your full name\"},{\"text\":\"i think you have the wrong person\",\"context\":\"Are you Mr Rajesh Kumar?\"}],\"medium\":[{\"text\":\"you have dialed the wrong number this is not related to me\"},{\"text\":\"i am sorry but i am not aware of this account or loan\"},{\"text\":\"please check again because i am not the customer you are looking for\"},{\"text\":\"this call might be meant for someone else i do not owe any amount\"},{\"text\":\"i do not have any outstanding payments it must be a mistake\"},{\"text\":\"the details you mentioned do not match with me or my records\"}],\"medium_with_context\":[{\"text\":\"no this is not my account or loan you are talking about\",\"context\":\"Can you confirm the loan account holder name please?\"},{\"text\":\"sir i think you have contacted the wrong number please verify\",\"context\":\"Are you calling about the overdue payment on your credit card?\"},{\"text\":\"this is not my number i am not associated with this account\",\"context\":\"May I know if you are Mr. Suresh from Bangalore?\"},{\"text\":\"i do not have any loan or credit card with your bank\",\"context\":\"Have you been trying to reach Mr. Anil Verma regarding dues?\"}],\"long\":[{\"text\":\"i have no relation with the account number and the phone number is also not mine please verify your records carefully\"},{\"text\":\"this must be some error because i have never taken any loan or credit from your bank so please check again\"}],\"long_with_context\":[{\"text\":\"i am sorry but i think you have contacted the wrong person i have no outstanding dues or loans with your institution\",\"context\":\"We are calling regarding your pending loan payment which is overdue by two months\"},{\"text\":\"please double check the records because this phone number does not belong to the person you are trying to reach and i am not responsible for this account\",\"context\":\"Is this Priya Sharma this is regarding your credit card overdue amount\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 559,
+    "output_tokens": 433
+  }
+}

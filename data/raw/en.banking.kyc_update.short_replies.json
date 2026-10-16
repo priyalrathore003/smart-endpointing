@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.banking.kyc_update.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "banking",
+  "intent": "kyc_update",
+  "items": [
+    {
+      "context": "Which document would you like to update",
+      "requested_bucket": "short",
+      "text": "Aadhaar"
+    },
+    {
+      "context": "Do you have your PAN card with you",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Please confirm your new address",
+      "requested_bucket": "short",
+      "text": "123 MG Road"
+    },
+    {
+      "context": "Would you like to update both PAN and Aadhaar",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Can you provide your KYC number",
+      "requested_bucket": "short",
+      "text": "456789"
+    },
+    {
+      "context": "When did you last update your KYC",
+      "requested_bucket": "short",
+      "text": "Two years ago"
+    },
+    {
+      "context": "Is your mobile number linked with Aadhaar",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Are you calling from your registered mobile",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Have you filled the KYC form online",
+      "requested_bucket": "short",
+      "text": "Not yet"
+    },
+    {
+      "context": "Will you visit the branch for verification",
+      "requested_bucket": "short",
+      "text": "Tomorrow"
+    },
+    {
+      "context": "Can you send a copy of your address proof",
+      "requested_bucket": "short",
+      "text": "Sure"
+    },
+    {
+      "context": "Do you want to update email address also",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Is your PAN card verified already",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "What is the city of your new address",
+      "requested_bucket": "short",
+      "text": "Bangalore"
+    },
+    {
+      "context": "Why do you want to update your KYC details",
+      "requested_bucket": "medium",
+      "text": "I shifted to a new house and need to update address"
+    },
+    {
+      "context": "Can you explain the changes you want in your KYC",
+      "requested_bucket": "medium",
+      "text": "I want to update my Aadhaar and address details please"
+    },
+    {
+      "context": "When will you be able to submit the required documents",
+      "requested_bucket": "medium",
+      "text": "I can submit the documents by next friday"
+    },
+    {
+      "context": "Have you updated your KYC details with any other bank",
+      "requested_bucket": "medium",
+      "text": "Yes I updated it at another bank two months ago"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 642483844,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: kyc_update - wants to update KYC, address, PAN or Aadhaar details\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Which document would you like to update\",\"reply\":\"Aadhaar\"},{\"agent_question\":\"Do you have your PAN card with you\",\"reply\":\"Yes\"},{\"agent_question\":\"Please confirm your new address\",\"reply\":\"123 MG Road\"},{\"agent_question\":\"Would you like to update both PAN and Aadhaar\",\"reply\":\"No\"},{\"agent_question\":\"Can you provide your KYC number\",\"reply\":\"456789\"},{\"agent_question\":\"When did you last update your KYC\",\"reply\":\"Two years ago\"},{\"agent_question\":\"Is your mobile number linked with Aadhaar\",\"reply\":\"Yes\"},{\"agent_question\":\"Are you calling from your registered mobile\",\"reply\":\"Yes\"},{\"agent_question\":\"Have you filled the KYC form online\",\"reply\":\"Not yet\"},{\"agent_question\":\"Will you visit the branch for verification\",\"reply\":\"Tomorrow\"},{\"agent_question\":\"Can you send a copy of your address proof\",\"reply\":\"Sure\"},{\"agent_question\":\"Do you want to update email address also\",\"reply\":\"Yes\"},{\"agent_question\":\"Is your PAN card verified already\",\"reply\":\"No\"},{\"agent_question\":\"What is the city of your new address\",\"reply\":\"Bangalore\"}],\"medium\":[{\"agent_question\":\"Why do you want to update your KYC details\",\"reply\":\"I shifted to a new house and need to update address\"},{\"agent_question\":\"Can you explain the changes you want in your KYC\",\"reply\":\"I want to update my Aadhaar and address details please\"},{\"agent_question\":\"When will you be able to submit the required documents\",\"reply\":\"I can submit the documents by next friday\"},{\"agent_question\":\"Have you updated your KYC details with any other bank\",\"reply\":\"Yes I updated it at another bank two months ago\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 372,
+    "output_tokens": 346
+  }
+}

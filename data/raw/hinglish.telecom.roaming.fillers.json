@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.telecom.roaming.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "telecom",
+  "intent": "roaming",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Kya aapko international roaming activate karna hai",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Kya aapko national roaming chahiye",
+      "requested_bucket": "short",
+      "text": "nahi ji"
+    },
+    {
+      "context": "Kab se aapko roaming chalu karna hai",
+      "requested_bucket": "short",
+      "text": "abhi chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umm mera phone Dubai me use karna hai toh roaming chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "woh mujhe Indian number pe bhi roaming activate karwani hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha agar main Friday ko travel karu toh Friday se chalega kya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "haan ji mujhe international roaming activate karni hai please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "matlab mera number automatic roaming pe set kar do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main Kolkata se Delhi ja raha hu kal raat tak chalu kar do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera balance 200 rupaye hai uske hisab se charge kitne lagenge"
+    },
+    {
+      "context": "For how many days do you want roaming activated?",
+      "requested_bucket": "medium",
+      "text": "haan mujhe 10 din ke liye international roaming activate karna hai"
+    },
+    {
+      "context": "Kab se aap roaming chalu karna chahte hain?",
+      "requested_bucket": "medium",
+      "text": "nahi Thursday nahi Wednesday ko activate karwana hai"
+    },
+    {
+      "context": "Aapka plan prepaid hai ya postpaid?",
+      "requested_bucket": "medium",
+      "text": "mera plan prepaid hai kya roaming ke liye alag se bill lagega"
+    },
+    {
+      "context": "Kya aap chahte hain ki roaming automatic renew ho?",
+      "requested_bucket": "medium",
+      "text": "accha bhai ji automatic renewal hota hai kya roaming ka"
+    },
+    {
+      "context": "Aap kis city se travel kar rahe hain?",
+      "requested_bucket": "medium",
+      "text": "woh main Mumbai se London ja raha hu isliye activate karwana hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "merko thoda help chahiye yeh international roaming plan activate karwane mein main UAE ja raha hu agle hafte"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera number 9876543210 hai aur main plan samajh nahi pa raha hu ki kaunsa best rahega mere liye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "dekh bhai mein pehle ghar se bahar kab ja paun yeh pata nahi toh thoda flexible toh kar do roaming plan main"
+    },
+    {
+      "context": "Thoda thoda bataiye ki kaha travel karna hai aur kitne din ke liye?",
+      "requested_bucket": "long",
+      "text": "accha sir aapke number pe ek baar verify kar lete hain phir activation karte hain"
+    },
+    {
+      "context": "Kya aap mujhe apka current plan bata sakte hain?",
+      "requested_bucket": "long",
+      "text": "ji mujhe apka current plan samajhna hai fir sahi roaming activate karenge"
+    },
+    {
+      "context": "Aap apne travel plan ke baare mein bata sakte hain?",
+      "requested_bucket": "long",
+      "text": "main Delhi se ja raha hoon par Mumbai se bhi kuch din rukna hai toh dono jagah ke liye kaise chalega"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 86616316,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: roaming - wants to activate international or national roaming\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal tak\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"haan ji\",\"context\":\"Kya aapko international roaming activate karna hai\"},{\"text\":\"nahi ji\",\"context\":\"Kya aapko national roaming chahiye\"},{\"text\":\"abhi chahiye\",\"context\":\"Kab se aapko roaming chalu karna hai\"}],\"medium\":[{\"text\":\"umm mera phone Dubai me use karna hai toh roaming chahiye\"},{\"text\":\"woh mujhe Indian number pe bhi roaming activate karwani hai\"},{\"text\":\"accha agar main Friday ko travel karu toh Friday se chalega kya\"},{\"text\":\"haan ji mujhe international roaming activate karni hai please\"},{\"text\":\"matlab mera number automatic roaming pe set kar do\"},{\"text\":\"main Kolkata se Delhi ja raha hu kal raat tak chalu kar do\"},{\"text\":\"mera balance 200 rupaye hai uske hisab se charge kitne lagenge\"}],\"medium_with_context\":[{\"text\":\"haan mujhe 10 din ke liye international roaming activate karna hai\",\"context\":\"For how many days do you want roaming activated?\"},{\"text\":\"nahi Thursday nahi Wednesday ko activate karwana hai\",\"context\":\"Kab se aap roaming chalu karna chahte hain?\"},{\"text\":\"mera plan prepaid hai kya roaming ke liye alag se bill lagega\",\"context\":\"Aapka plan prepaid hai ya postpaid?\"},{\"text\":\"accha bhai ji automatic renewal hota hai kya roaming ka\",\"context\":\"Kya aap chahte hain ki roaming automatic renew ho?\"},{\"text\":\"woh main Mumbai se London ja raha hu isliye activate karwana hai\",\"context\":\"Aap kis city se travel kar rahe hain?\"}],\"long\":[{\"text\":\"merko thoda help chahiye yeh international roaming plan activate karwane mein main UAE ja raha hu agle hafte\"},{\"text\":\"mera number 9876543210 hai aur main plan samajh nahi pa raha hu ki kaunsa best rahega mere liye\"},{\"text\":\"dekh bhai mein pehle ghar se bahar kab ja paun yeh pata nahi toh thoda flexible toh kar do roaming plan main\"}],\"long_with_context\":[{\"text\":\"accha sir aapke number pe ek baar verify kar lete hain phir activation karte hain\",\"context\":\"Thoda thoda bataiye ki kaha travel karna hai aur kitne din ke liye?\"},{\"text\":\"ji mujhe apka current plan samajhna hai fir sahi roaming activate karenge\",\"context\":\"Kya aap mujhe apka current plan bata sakte hain?\"},{\"text\":\"main Delhi se ja raha hoon par Mumbai se bhi kuch din rukna hai toh dono jagah ke liye kaise chalega\",\"context\":\"Aap apne travel plan ke baare mein bata sakte hain?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 607,
+    "output_tokens": 605
+  }
+}

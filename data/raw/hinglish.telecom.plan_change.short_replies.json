@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.telecom.plan_change.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "telecom",
+  "intent": "plan_change",
+  "items": [
+    {
+      "context": "kaunse plan ke baare mein jankari chahiye aapko",
+      "requested_bucket": "short",
+      "text": "prepaid plan"
+    },
+    {
+      "context": "kya aap apna current plan batayenge",
+      "requested_bucket": "short",
+      "text": "jio 299"
+    },
+    {
+      "context": "kya aapko unlimited calls chahiye",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "data limit kitni chahiye aapko",
+      "requested_bucket": "short",
+      "text": "do GB"
+    },
+    {
+      "context": "kya main aapka mobile number le sakta hoon",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "kya aapko monthly ya daily plan chahiye",
+      "requested_bucket": "short",
+      "text": "monthly"
+    },
+    {
+      "context": "kis company ka sim use kar rahe hain aap",
+      "requested_bucket": "short",
+      "text": "vodafone"
+    },
+    {
+      "context": "kya aapko international call facility chahiye",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "aapka budget kitna hai plan ke liye",
+      "requested_bucket": "short",
+      "text": "500 rupees"
+    },
+    {
+      "context": "kya aapko SMS pack bhi chahiye",
+      "requested_bucket": "short",
+      "text": "haan chahiye"
+    },
+    {
+      "context": "kab se plan activate karwana hai",
+      "requested_bucket": "short",
+      "text": "kal se"
+    },
+    {
+      "context": "kya aap naye number pe plan lena chahte hain",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "kya main aapke identity proof verify karoon",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "kya aapko apne plan mein koi extra feature add karna hai",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "kya aap apna plan turant badalna chahte hain",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "kya aap prepaid se postpaid mein switch karna chahte hain",
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": "kya international roaming chahiye aapko",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "kya aapko refer karne ka offer chahiye",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "aapko kaunse naye plan ke baare mein jaana hai",
+      "requested_bucket": "medium",
+      "text": "mujhe 4GB data wale plan ke baare mein bataiye"
+    },
+    {
+      "context": "kya aap apne plan mein koi aur benefit samil karna chahte hain",
+      "requested_bucket": "medium",
+      "text": "haan ji main extra data aur calling chahata hoon"
+    },
+    {
+      "context": "kya aapko long term plan lena hai ya short term",
+      "requested_bucket": "medium",
+      "text": "mujhe ek saal ka plan lena hai jisme accha data mile"
+    },
+    {
+      "context": "kis date tak aapka current plan valid hai",
+      "requested_bucket": "medium",
+      "text": "mera plan agle mahine ke 15 tak valid hai"
+    },
+    {
+      "context": "kya aap apne current plan mein koi problem face kar rahe hain",
+      "requested_bucket": "medium",
+      "text": "haan kabhi kabhi network mein problem hoti hai"
+    },
+    {
+      "context": "kya aapke pass koi specific budget hai plan ke liye",
+      "requested_bucket": "medium",
+      "text": "meri limit 600 rupaye tak hi hai monthly"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2136997887,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: plan_change - wants to change or understand a plan\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"kaunse plan ke baare mein jankari chahiye aapko\",\"reply\":\"prepaid plan\"},{\"agent_question\":\"kya aap apna current plan batayenge\",\"reply\":\"jio 299\"},{\"agent_question\":\"kya aapko unlimited calls chahiye\",\"reply\":\"haan\"},{\"agent_question\":\"data limit kitni chahiye aapko\",\"reply\":\"do GB\"},{\"agent_question\":\"kya main aapka mobile number le sakta hoon\",\"reply\":\"haan ji\"},{\"agent_question\":\"kya aapko monthly ya daily plan chahiye\",\"reply\":\"monthly\"},{\"agent_question\":\"kis company ka sim use kar rahe hain aap\",\"reply\":\"vodafone\"},{\"agent_question\":\"kya aapko international call facility chahiye\",\"reply\":\"nahi\"},{\"agent_question\":\"aapka budget kitna hai plan ke liye\",\"reply\":\"500 rupees\"},{\"agent_question\":\"kya aapko SMS pack bhi chahiye\",\"reply\":\"haan chahiye\"},{\"agent_question\":\"kab se plan activate karwana hai\",\"reply\":\"kal se\"},{\"agent_question\":\"kya aap naye number pe plan lena chahte hain\",\"reply\":\"nahi\"},{\"agent_question\":\"kya main aapke identity proof verify karoon\",\"reply\":\"haan ji\"},{\"agent_question\":\"kya aapko apne plan mein koi extra feature add karna hai\",\"reply\":\"nahi\"},{\"agent_question\":\"kya aap apna plan turant badalna chahte hain\",\"reply\":\"haan\"},{\"agent_question\":\"kya aap prepaid se postpaid mein switch karna chahte hain\",\"reply\":\"abhi nahi\"},{\"agent_question\":\"kya international roaming chahiye aapko\",\"reply\":\"nahi\"},{\"agent_question\":\"kya aapko refer karne ka offer chahiye\",\"reply\":\"haan\"}],\"medium\":[{\"agent_question\":\"aapko kaunse naye plan ke baare mein jaana hai\",\"reply\":\"mujhe 4GB data wale plan ke baare mein bataiye\"},{\"agent_question\":\"kya aap apne plan mein koi aur benefit samil karna chahte hain\",\"reply\":\"haan ji main extra data aur calling chahata hoon\"},{\"agent_question\":\"kya aapko long term plan lena hai ya short term\",\"reply\":\"mujhe ek saal ka plan lena hai jisme accha data mile\"},{\"agent_question\":\"kis date tak aapka current plan valid hai\",\"reply\":\"mera plan agle mahine ke 15 tak valid hai\"},{\"agent_question\":\"kya aap apne current plan mein koi problem face kar rahe hain\",\"reply\":\"haan kabhi kabhi network mein problem hoti hai\"},{\"agent_question\":\"kya aapke pass koi specific budget hai plan ke liye\",\"reply\":\"meri limit 600 rupaye tak hi hai monthly\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 392,
+    "output_tokens": 597
+  }
+}

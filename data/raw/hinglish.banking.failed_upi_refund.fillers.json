@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.banking.failed_upi_refund.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "failed_upi_refund",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "accha"
+    },
+    {
+      "context": "Can you please confirm the transaction date?",
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Do you want to check any other transaction?",
+      "requested_bucket": "short",
+      "text": "filhaal nahi"
+    },
+    {
+      "context": "Should I escalate this to our technical team?",
+      "requested_bucket": "short",
+      "text": "ha ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera paisa to kat gaya lekin transfer nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "uhm mujhe refund chahiye jo paise kata tha kal"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "woh payment failed hua tha 500 rupees ka"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine try kiya par payment process nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account se toh paise kat gaye par payment nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha matlab mera account debit hua hai par receiver ko nahi mila"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "woh 1st March ko transaction kiya tha par abhi tak refund nahi mila"
+    },
+    {
+      "context": "Are you referring to the transaction on Wednesday?",
+      "requested_bucket": "medium",
+      "text": "haan ji mujhe woh failed transaction ke details chahiye"
+    },
+    {
+      "context": "Just to confirm the date of transaction you faced issue?",
+      "requested_bucket": "medium",
+      "text": "nahi nahi Tuesday ko try kiya tha payment par fail ho gaya tha"
+    },
+    {
+      "context": "Can you tell me the amount involved in the failed payment?",
+      "requested_bucket": "medium",
+      "text": "woh 1000 rupaye the jo mera account se nahi wapas aaye"
+    },
+    {
+      "context": "Do you have the beneficiary name for the transaction?",
+      "requested_bucket": "medium",
+      "text": "umar bhai ka account tha jisme paise jane the par transfer fail hua"
+    },
+    {
+      "context": "What action you would like us to take regarding this?",
+      "requested_bucket": "medium",
+      "text": "haan mujhe refund chahiye warna dispute karna padega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "actually dekhiye maine kal online shopping ki payment ki woh fail ho gaya par paisa kaat gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main ek baar firse confirm kar raha hoon ki mere bank account se toh paisa kat gaya lekin payment nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine last week Monday ko 1500 ka payment kiya tha par wo pending dikh raha hai aur refund nahi aaya"
+    },
+    {
+      "context": "mujhe paise transaction ke time deduct ho gaye lekin receiver ko paise nahi mile hain ab refund kaise milega",
+      "requested_bucket": "long",
+      "text": "agent asked Can you describe the problem with the transaction more clearly"
+    },
+    {
+      "context": "mein Wednesday ko payment kiya tha par woh transaction fail ho gaya bina kisi refund ke",
+      "requested_bucket": "long",
+      "text": "agent asked When did you initiate this UPI payment"
+    },
+    {
+      "context": "haan maine statement dekha par refund nahi mila ab main chinta me hoon ki paise kahaan gaye",
+      "requested_bucket": "long",
+      "text": "agent asked Have you checked your bank statement for the refund"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3106862133,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: failed_upi_refund - a UPI or online payment failed but money was debited; wants a refund\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal tak\"},{\"text\":\"accha\"}],\"short_with_context\":[{\"text\":\"theek hai\",\"context\":\"Can you please confirm the transaction date?\"},{\"text\":\"filhaal nahi\",\"context\":\"Do you want to check any other transaction?\"},{\"text\":\"ha ji\",\"context\":\"Should I escalate this to our technical team?\"}],\"medium\":[{\"text\":\"mera paisa to kat gaya lekin transfer nahi hua\"},{\"text\":\"uhm mujhe refund chahiye jo paise kata tha kal\"},{\"text\":\"woh payment failed hua tha 500 rupees ka\"},{\"text\":\"maine try kiya par payment process nahi hua\"},{\"text\":\"mera account se toh paise kat gaye par payment nahi hua\"},{\"text\":\"accha matlab mera account debit hua hai par receiver ko nahi mila\"},{\"text\":\"woh 1st March ko transaction kiya tha par abhi tak refund nahi mila\"}],\"medium_with_context\":[{\"text\":\"haan ji mujhe woh failed transaction ke details chahiye\",\"context\":\"Are you referring to the transaction on Wednesday?\"},{\"text\":\"nahi nahi Tuesday ko try kiya tha payment par fail ho gaya tha\",\"context\":\"Just to confirm the date of transaction you faced issue?\"},{\"text\":\"woh 1000 rupaye the jo mera account se nahi wapas aaye\",\"context\":\"Can you tell me the amount involved in the failed payment?\"},{\"text\":\"umar bhai ka account tha jisme paise jane the par transfer fail hua\",\"context\":\"Do you have the beneficiary name for the transaction?\"},{\"text\":\"haan mujhe refund chahiye warna dispute karna padega\",\"context\":\"What action you would like us to take regarding this?\"}],\"long\":[{\"text\":\"actually dekhiye maine kal online shopping ki payment ki woh fail ho gaya par paisa kaat gaya\"},{\"text\":\"main ek baar firse confirm kar raha hoon ki mere bank account se toh paisa kat gaya lekin payment nahi hua\"},{\"text\":\"maine last week Monday ko 1500 ka payment kiya tha par wo pending dikh raha hai aur refund nahi aaya\"}],\"long_with_context\":[{\"text\":\"agent asked Can you describe the problem with the transaction more clearly\",\"context\":\"mujhe paise transaction ke time deduct ho gaye lekin receiver ko paise nahi mile hain ab refund kaise milega\"},{\"text\":\"agent asked When did you initiate this UPI payment\",\"context\":\"mein Wednesday ko payment kiya tha par woh transaction fail ho gaya bina kisi refund ke\"},{\"text\":\"agent asked Have you checked your bank statement for the refund\",\"context\":\"haan maine statement dekha par refund nahi mila ab main chinta me hoon ki paise kahaan gaye\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 620,
+    "output_tokens": 563
+  }
+}

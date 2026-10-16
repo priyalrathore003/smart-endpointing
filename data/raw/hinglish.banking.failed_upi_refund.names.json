@@ -1,0 +1,182 @@
+{
+  "batch_id": "hinglish.banking.failed_upi_refund.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "failed_upi_refund",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paise kat gaye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "refund chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "order fail hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "abhi batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "confirm kijiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "matlab kya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "bank ka naam kya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kab hua transaction"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "sender ka naam kya hai"
+    },
+    {
+      "context": "can you please confirm the transaction amount",
+      "requested_bucket": "short",
+      "text": "yes sahi hai"
+    },
+    {
+      "context": "is this the name on the account where money was debited",
+      "requested_bucket": "short",
+      "text": "nahi ubaid hai"
+    },
+    {
+      "context": "do you want us to initiate the refund process now",
+      "requested_bucket": "short",
+      "text": "theek hai samajh gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera naam rohini gupta hai aur paise 5000 kat gaye the lekin transfer nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mujhe refund chahiye kyunki mera upi transaction fail ho gaya tha par paise account se nikal gaye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "saheb mera account number 12345678 se paise kat gaye lekin payment receiver ko nahi mila"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine last saturday ko online payment kiya tha par amount abhi tak wapas nahi aaya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine flipkart par order diya tha lekin payment fail hone ke baad bhi paisa kat gaya tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mujhe confirmation chahiye ki mera paise kab refund honge kyunki transfer nahi hua tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "ajay kumar yahan ghaziabad se bol raha hu mera 2000 rupaye ka payment fail hua hai"
+    },
+    {
+      "context": "please tell me the date and time of the failed transaction",
+      "requested_bucket": "medium",
+      "text": "transcation kab hua tha kya aapko yaad hai"
+    },
+    {
+      "context": "from which account was the payment debited please provide the number",
+      "requested_bucket": "medium",
+      "text": "paise kahan se kat gaye the matlab account number batao"
+    },
+    {
+      "context": "would you like us to help with refund or anything else",
+      "requested_bucket": "medium",
+      "text": "apko refund chahiye ya fir kuch aur madad"
+    },
+    {
+      "context": "can you share the name of the beneficiary who was supposed to receive the money",
+      "requested_bucket": "medium",
+      "text": "kya receiver ka name batayenge jinhone payment lena tha"
+    },
+    {
+      "context": "do you have the transaction reference number handy",
+      "requested_bucket": "medium",
+      "text": "transaction ka reference number mere paas hai agar chahiye to"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera naam shweta hain aur main delhi ki rehne wali hun mera upi transaction last week mein fail ho gaya tha lekin paise account se kat gaye the"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main anil hoon aur mera account number 9988776655 se 3000 rupaye transfer karne ki koshish ki thi par paisa receiver ke account mein nahi gaya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "namaste mera naam piyush singh hai aur main noida mein rehta hun maine 12 march ko ek payment kiya tha jo fail ho gaya par paise kat gaye the"
+    },
+    {
+      "context": "mujhe pata karna hai ki refund process shuru karne ke liye transaction date aur amount chaiye",
+      "requested_bucket": "long",
+      "text": "aapka transaction kab hua tha aur kitni rashi thi"
+    },
+    {
+      "context": "kya aap mujhe apne bank account ki details de sakte hain taaki aapki madad kar paun",
+      "requested_bucket": "long",
+      "text": "apka bank account ka naam aur address denge taaki verification ho sake"
+    },
+    {
+      "context": "kya main janna sakta hun ki jis upi id se transaction hua tha wo kya thi",
+      "requested_bucket": "long",
+      "text": "kya aap mujhe batayenge ki upi id kya thi jisse paise transfer karne ki koshish ki thi"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1080673331,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: failed_upi_refund - a UPI or online payment failed but money was debited; wants a refund\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"paise kat gaye\"},{\"text\":\"refund chahiye\"},{\"text\":\"order fail hua\"},{\"text\":\"abhi batao\"},{\"text\":\"confirm kijiye\"},{\"text\":\"matlab kya\"},{\"text\":\"bank ka naam kya hai\"},{\"text\":\"kab hua transaction\"},{\"text\":\"sender ka naam kya hai\"}],\"short_with_context\":[{\"text\":\"yes sahi hai\",\"context\":\"can you please confirm the transaction amount\"},{\"text\":\"nahi ubaid hai\",\"context\":\"is this the name on the account where money was debited\"},{\"text\":\"theek hai samajh gaya\",\"context\":\"do you want us to initiate the refund process now\"}],\"medium\":[{\"text\":\"mera naam rohini gupta hai aur paise 5000 kat gaye the lekin transfer nahi hua\"},{\"text\":\"mujhe refund chahiye kyunki mera upi transaction fail ho gaya tha par paise account se nikal gaye\"},{\"text\":\"saheb mera account number 12345678 se paise kat gaye lekin payment receiver ko nahi mila\"},{\"text\":\"maine last saturday ko online payment kiya tha par amount abhi tak wapas nahi aaya hai\"},{\"text\":\"maine flipkart par order diya tha lekin payment fail hone ke baad bhi paisa kat gaya tha\"},{\"text\":\"mujhe confirmation chahiye ki mera paise kab refund honge kyunki transfer nahi hua tha\"},{\"text\":\"ajay kumar yahan ghaziabad se bol raha hu mera 2000 rupaye ka payment fail hua hai\"}],\"medium_with_context\":[{\"text\":\"transcation kab hua tha kya aapko yaad hai\",\"context\":\"please tell me the date and time of the failed transaction\"},{\"text\":\"paise kahan se kat gaye the matlab account number batao\",\"context\":\"from which account was the payment debited please provide the number\"},{\"text\":\"apko refund chahiye ya fir kuch aur madad\",\"context\":\"would you like us to help with refund or anything else\"},{\"text\":\"kya receiver ka name batayenge jinhone payment lena tha\",\"context\":\"can you share the name of the beneficiary who was supposed to receive the money\"},{\"text\":\"transaction ka reference number mere paas hai agar chahiye to\",\"context\":\"do you have the transaction reference number handy\"}],\"long\":[{\"text\":\"mera naam shweta hain aur main delhi ki rehne wali hun mera upi transaction last week mein fail ho gaya tha lekin paise account se kat gaye the\"},{\"text\":\"main anil hoon aur mera account number 9988776655 se 3000 rupaye transfer karne ki koshish ki thi par paisa receiver ke account mein nahi gaya hai\"},{\"text\":\"namaste mera naam piyush singh hai aur main noida mein rehta hun maine 12 march ko ek payment kiya tha jo fail ho gaya par paise kat gaye the\"}],\"long_with_context\":[{\"text\":\"aapka transaction kab hua tha aur kitni rashi thi\",\"context\":\"mujhe pata karna hai ki refund process shuru karne ke liye transaction date aur amount chaiye\"},{\"text\":\"apka bank account ka naam aur address denge taaki verification ho sake\",\"context\":\"kya aap mujhe apne bank account ki details de sakte hain taaki aapki madad kar paun\"},{\"text\":\"kya aap mujhe batayenge ki upi id kya thi jisse paise transfer karne ki koshish ki thi\",\"context\":\"kya main janna sakta hun ki jis upi id se transaction hua tha wo kya thi\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 598,
+    "output_tokens": 750
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "batch_id": "hi.delivery.wrong_or_damaged.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "wrong_or_damaged",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "हाँ जी ठीक है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "अच्छा धन्यवाद"
+    },
+    {
+      "context": "क्या आप डिलीवरी की तारीख बता सकते हैं?",
+      "requested_bucket": "short",
+      "text": "जी हाँ ठीक है"
+    },
+    {
+      "context": "आपको यह parcel कब चाहिए?",
+      "requested_bucket": "short",
+      "text": "सर जी जल्दी चाहिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर जी मैंने जो मंगा था वो गलत आया है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अम्म पैकेज में कुछ टूट गया है क्या कर सकते हो?"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मंगलवार को नहीं बुधवार को भेजो प्लीज"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "हां जी ये सामान मेरे लिए बिलकुल नहीं है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "प्रीतोरिया वाला पैकेज डिलीवर नहीं हुआ है अभी तक"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "क्या आप रिफंड प्रोसेस जल्दी शुरू कर सकते हो?"
+    },
+    {
+      "context": "क्या आपने सही प्रोडक्ट चेक किया है?",
+      "requested_bucket": "medium",
+      "text": "जी हां ये जो मैंने मंगा था उसका कंसिस्ट सही नहीं है"
+    },
+    {
+      "context": "क्या पैकेज खोलने पर कोई नुकसान दिखा?",
+      "requested_bucket": "medium",
+      "text": "सर जी पैकेज खोलते ही पता चला कुछ टूट गया है"
+    },
+    {
+      "context": "आपको डिलीवरी किस दिन चाहिए थी?",
+      "requested_bucket": "medium",
+      "text": "जी डिलीवरी में देर हो रही है मेरे पास टाइम नहीं है"
+    },
+    {
+      "context": "क्या आपने जो मिला उसको विवरण के साथ देखा है?",
+      "requested_bucket": "medium",
+      "text": "देखिए मैडम मैंने जो डिस्क्रिप्शन पढ़ा था वो बिलकुल अलग मिला"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर जी जो चीज भेजी है वो मेरी ऑर्डर से बिल्कुल अलग है और वो भी खराब हालत में आई है मौसम के हिसाब से बहुत जल्दी खराब हो जाएगी"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "हेलो मैडम मैंने बुधवार को ऑर्डर दिया था लेकिन मुझे जो मिला है वो बिलकुल गलत प्रोडक्ट है मुझे इसका एक्सचेंज या रिफंड चाहिए जल्दी"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "देखिए मुझे वो parcel सही आइटम के साथ चाहिए था लेकिन मुझे गलती से दूसरे प्रोडक्ट की डिलीवरी कर दी गई है क्या आप इसे बदल सकते हैं"
+    },
+    {
+      "context": "क्या आप अपना payment status चेक करना चाहते हैं?",
+      "requested_bucket": "long",
+      "text": "सर जी मैं देखना चाहता था कि मेरा पेमेंट कन्फर्म है या नहीं क्योंकि डिलीवरी अभी तक नहीं आई है और मैंने ट्रैकिंग भी चेक की थी"
+    },
+    {
+      "context": "क्या आप तोड़फोड़ हुई वस्तु की रिपोर्ट कर चुके हैं?",
+      "requested_bucket": "long",
+      "text": "मुझे हुआ ये है कि डिलीवरी में जो सामान भेजा गया है वो टूटा हुआ मिला है मैंने तुरंत इसके बारे में रिपोर्ट भी किया है तो क्या अब रिफंड मिल सकता है"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3524551942,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: wrong_or_damaged - received a wrong or damaged item\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with fillers and hesitations (अम्म, मतलब, वो, अच्छा, हाँ जी); at least a third include a self-correction ('मंगलवार, नहीं, बुधवार')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"हाँ जी ठीक है\"},{\"text\":\"अच्छा धन्यवाद\"}],\"short_with_context\":[{\"text\":\"जी हाँ ठीक है\",\"context\":\"क्या आप डिलीवरी की तारीख बता सकते हैं?\"},{\"text\":\"सर जी जल्दी चाहिए\",\"context\":\"आपको यह parcel कब चाहिए?\"}],\"medium\":[{\"text\":\"सर जी मैंने जो मंगा था वो गलत आया है\"},{\"text\":\"अम्म पैकेज में कुछ टूट गया है क्या कर सकते हो?\"},{\"text\":\"मंगलवार को नहीं बुधवार को भेजो प्लीज\"},{\"text\":\"हां जी ये सामान मेरे लिए बिलकुल नहीं है\"},{\"text\":\"प्रीतोरिया वाला पैकेज डिलीवर नहीं हुआ है अभी तक\"},{\"text\":\"क्या आप रिफंड प्रोसेस जल्दी शुरू कर सकते हो?\"}],\"medium_with_context\":[{\"text\":\"जी हां ये जो मैंने मंगा था उसका कंसिस्ट सही नहीं है\",\"context\":\"क्या आपने सही प्रोडक्ट चेक किया है?\"},{\"text\":\"सर जी पैकेज खोलते ही पता चला कुछ टूट गया है\",\"context\":\"क्या पैकेज खोलने पर कोई नुकसान दिखा?\"},{\"text\":\"जी डिलीवरी में देर हो रही है मेरे पास टाइम नहीं है\",\"context\":\"आपको डिलीवरी किस दिन चाहिए थी?\"},{\"text\":\"देखिए मैडम मैंने जो डिस्क्रिप्शन पढ़ा था वो बिलकुल अलग मिला\",\"context\":\"क्या आपने जो मिला उसको विवरण के साथ देखा है?\"}],\"long\":[{\"text\":\"सर जी जो चीज भेजी है वो मेरी ऑर्डर से बिल्कुल अलग है और वो भी खराब हालत में आई है मौसम के हिसाब से बहुत जल्दी खराब हो जाएगी\"},{\"text\":\"हेलो मैडम मैंने बुधवार को ऑर्डर दिया था लेकिन मुझे जो मिला है वो बिलकुल गलत प्रोडक्ट है मुझे इसका एक्सचेंज या रिफंड चाहिए जल्दी\"},{\"text\":\"देखिए मुझे वो parcel सही आइटम के साथ चाहिए था लेकिन मुझे गलती से दूसरे प्रोडक्ट की डिलीवरी कर दी गई है क्या आप इसे बदल सकते हैं\"}],\"long_with_context\":[{\"text\":\"सर जी मैं देखना चाहता था कि मेरा पेमेंट कन्फर्म है या नहीं क्योंकि डिलीवरी अभी तक नहीं आई है और मैंने ट्रैकिंग भी चेक की थी\",\"context\":\"क्या आप अपना payment status चेक करना चाहते हैं?\"},{\"text\":\"मुझे हुआ ये है कि डिलीवरी में जो सामान भेजा गया है वो टूटा हुआ मिला है मैंने तुरंत इसके बारे में रिपोर्ट भी किया है तो क्या अब रिफंड मिल सकता है\",\"context\":\"क्या आप तोड़फोड़ हुई वस्तु की रिपोर्ट कर चुके हैं?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 715,
+    "output_tokens": 550
+  }
+}

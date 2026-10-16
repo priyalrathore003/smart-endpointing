@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.banking.kyc_update.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "banking",
+  "intent": "kyc_update",
+  "items": [
+    {
+      "context": "Kya aap apne PAN details update karna chahte hain",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "AADHAAR number de sakte hain kya",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Naya address update karna hai kya",
+      "requested_bucket": "short",
+      "text": "Ji haan"
+    },
+    {
+      "context": "Kya aapke paas updated KYC documents hain",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Aapka account number bataiye",
+      "requested_bucket": "short",
+      "text": "1234567890"
+    },
+    {
+      "context": "Kya aapke paas PAN card ready hai",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Aapka registered mobile number kya hai",
+      "requested_bucket": "short",
+      "text": "9876543210"
+    },
+    {
+      "context": "Update ke liye kaunsa document bhejna hai",
+      "requested_bucket": "short",
+      "text": "Aadhaar card"
+    },
+    {
+      "context": "Kya aap IP address bhi update karwana chahte hain",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kya aapke paas photograph ready hai",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya aapka email ID update karna hai",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kya aap apne address proof bhejna chahte hain",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Kya abhi aapke paas updated PAN card hai",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kya aap permanent address update kar rahe hain",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "OTP bhej dh ko confirm karna hai",
+      "requested_bucket": "short",
+      "text": "123456"
+    },
+    {
+      "context": "Kitne din mein update chahiye",
+      "requested_bucket": "short",
+      "text": "Do din"
+    },
+    {
+      "context": "Kya aap address proof ke roop mein electricity bill bhejna chahte hain",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Identity proof update karna chahte hain kya",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya aap apna updated Aadhaar card submit karna chahte hain",
+      "requested_bucket": "medium",
+      "text": "Haan ji main Aadhaar card bhejna chahta hoon"
+    },
+    {
+      "context": "Aapke address mein kya changes karne hain",
+      "requested_bucket": "medium",
+      "text": "Mera naya address Delhi mein hai ab"
+    },
+    {
+      "context": "Kya aap PAN aur Aadhaar dono update karwana chahte hain",
+      "requested_bucket": "medium",
+      "text": "Haan dono documents ke details update karwani hain"
+    },
+    {
+      "context": "Aapke paas KYC documents abhi available hain kya",
+      "requested_bucket": "medium",
+      "text": "Ji haan mere paas sab documents ready hain"
+    },
+    {
+      "context": "Kya aap mobile number bhi update karwana chahte hain",
+      "requested_bucket": "medium",
+      "text": "Nahi sir filhal mobile number change nahi karna hai"
+    },
+    {
+      "context": "Aapko kab tak apni KYC update karna hai",
+      "requested_bucket": "medium",
+      "text": "Main kal tak apna KYC update kar dunga"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3683636970,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: kyc_update - wants to update KYC, address, PAN or Aadhaar details\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Kya aap apne PAN details update karna chahte hain\",\"reply\":\"Haan ji\"},{\"agent_question\":\"AADHAAR number de sakte hain kya\",\"reply\":\"Haan\"},{\"agent_question\":\"Naya address update karna hai kya\",\"reply\":\"Ji haan\"},{\"agent_question\":\"Kya aapke paas updated KYC documents hain\",\"reply\":\"Haan\"},{\"agent_question\":\"Aapka account number bataiye\",\"reply\":\"1234567890\"},{\"agent_question\":\"Kya aapke paas PAN card ready hai\",\"reply\":\"Haan\"},{\"agent_question\":\"Aapka registered mobile number kya hai\",\"reply\":\"9876543210\"},{\"agent_question\":\"Update ke liye kaunsa document bhejna hai\",\"reply\":\"Aadhaar card\"},{\"agent_question\":\"Kya aap IP address bhi update karwana chahte hain\",\"reply\":\"Nahi\"},{\"agent_question\":\"Kya aapke paas photograph ready hai\",\"reply\":\"Haan\"},{\"agent_question\":\"Kya aapka email ID update karna hai\",\"reply\":\"Nahi\"},{\"agent_question\":\"Kya aap apne address proof bhejna chahte hain\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Kya abhi aapke paas updated PAN card hai\",\"reply\":\"Nahi\"},{\"agent_question\":\"Kya aap permanent address update kar rahe hain\",\"reply\":\"Haan\"},{\"agent_question\":\"OTP bhej dh ko confirm karna hai\",\"reply\":\"123456\"},{\"agent_question\":\"Kitne din mein update chahiye\",\"reply\":\"Do din\"},{\"agent_question\":\"Kya aap address proof ke roop mein electricity bill bhejna chahte hain\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Identity proof update karna chahte hain kya\",\"reply\":\"Haan\"}],\"medium\":[{\"agent_question\":\"Kya aap apna updated Aadhaar card submit karna chahte hain\",\"reply\":\"Haan ji main Aadhaar card bhejna chahta hoon\"},{\"agent_question\":\"Aapke address mein kya changes karne hain\",\"reply\":\"Mera naya address Delhi mein hai ab\"},{\"agent_question\":\"Kya aap PAN aur Aadhaar dono update karwana chahte hain\",\"reply\":\"Haan dono documents ke details update karwani hain\"},{\"agent_question\":\"Aapke paas KYC documents abhi available hain kya\",\"reply\":\"Ji haan mere paas sab documents ready hain\"},{\"agent_question\":\"Kya aap mobile number bhi update karwana chahte hain\",\"reply\":\"Nahi sir filhal mobile number change nahi karna hai\"},{\"agent_question\":\"Aapko kab tak apni KYC update karna hai\",\"reply\":\"Main kal tak apna KYC update kar dunga\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 399,
+    "output_tokens": 563
+  }
+}

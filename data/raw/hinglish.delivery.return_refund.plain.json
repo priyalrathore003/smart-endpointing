@@ -1,0 +1,172 @@
+{
+  "batch_id": "hinglish.delivery.return_refund.plain",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "return_refund",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "refund chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "item return karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kab milega"
+    },
+    {
+      "context": "Kab tak aapko refund chahiye?",
+      "requested_bucket": "short",
+      "text": "jaldi chahiye"
+    },
+    {
+      "context": "Kya aapne item deliver kar liya hai?",
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Kya aapka address confirm karna hai?",
+      "requested_bucket": "short",
+      "text": "address confirm karo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera order mujhe galat item mila hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main apna item wapas bhejna chahta hoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap mujhe refund process bata sakte ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine item kal receive kiya tha par damaged tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "refund kab tak milega please batayein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "return pickup kaise arrange karwana hoga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "order cancel karna hai toh kya karna padega"
+    },
+    {
+      "context": "Kya aapka item abhi tak deliver hua hai?",
+      "requested_bucket": "medium",
+      "text": "haan mera item delivery ho chuka hai"
+    },
+    {
+      "context": "Kahan par aapko refund milega chahiye?",
+      "requested_bucket": "medium",
+      "text": "refund amount mere bank account mein chahiye"
+    },
+    {
+      "context": "Kya aap ke paas order number hai?",
+      "requested_bucket": "medium",
+      "text": "main order number batata hoon ek minute"
+    },
+    {
+      "context": "Kya reason hai aapke return ka?",
+      "requested_bucket": "medium",
+      "text": "item defective tha isliye return karna hai"
+    },
+    {
+      "context": "Aapko pickup kab chahiye?",
+      "requested_bucket": "medium",
+      "text": "pickup kab hoga mujhe inform kar dena"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine apna order receipt ke baad check kiya to item broken nikla"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "refund lene ke liye mujhe kya documents dene honge aur process kya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main apni taraf se pura try kar raha hoon lekin refund thoda time leta hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main kal apna parcel wapas karne wala hoon lekin mujhe pickup details nahi mili"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine 3 din ho gaye return request kiye lekin abhi tak refund nahi mila"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya main kisi aur payment method mein refund le sakta hoon jaise digital wallet"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "agar item return nahi hua toh mera paisa kab tak refund hoga"
+    },
+    {
+      "context": "Kya aap item receive kar chuke hain aur return karna chahenge?",
+      "requested_bucket": "long",
+      "text": "haan maine delivery check kar liya hai lekin item sahi nahi tha aur main return karna chahta hoon"
+    },
+    {
+      "context": "Aapko kis wajah se refund process ko lekar pareshani ho rahi hai?",
+      "requested_bucket": "long",
+      "text": "refund process bahut time le raha hai mujhe jaldi paisa chahiye tha kyunki mujhe emergency mein chahiye tha"
+    },
+    {
+      "context": "Pickup arrange karne mein aapko koi dikkat ho rahi hai kya?",
+      "requested_bucket": "long",
+      "text": "mujhe pickup ke liye contact koi nahi kar raha hai aur ab parcel mere paas pad raha hai main confused hoon next step kya hoga"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2328655059,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: return_refund - wants to return an item or asks about a refund\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: plain and direct\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"refund chahiye\"},{\"text\":\"item return karna hai\"},{\"text\":\"kab milega\"}],\"short_with_context\":[{\"text\":\"jaldi chahiye\",\"context\":\"Kab tak aapko refund chahiye?\"},{\"text\":\"theek hai\",\"context\":\"Kya aapne item deliver kar liya hai?\"},{\"text\":\"address confirm karo\",\"context\":\"Kya aapka address confirm karna hai?\"}],\"medium\":[{\"text\":\"mera order mujhe galat item mila hai\"},{\"text\":\"main apna item wapas bhejna chahta hoon\"},{\"text\":\"kya aap mujhe refund process bata sakte ho\"},{\"text\":\"maine item kal receive kiya tha par damaged tha\"},{\"text\":\"refund kab tak milega please batayein\"},{\"text\":\"return pickup kaise arrange karwana hoga\"},{\"text\":\"order cancel karna hai toh kya karna padega\"}],\"medium_with_context\":[{\"text\":\"haan mera item delivery ho chuka hai\",\"context\":\"Kya aapka item abhi tak deliver hua hai?\"},{\"text\":\"refund amount mere bank account mein chahiye\",\"context\":\"Kahan par aapko refund milega chahiye?\"},{\"text\":\"main order number batata hoon ek minute\",\"context\":\"Kya aap ke paas order number hai?\"},{\"text\":\"item defective tha isliye return karna hai\",\"context\":\"Kya reason hai aapke return ka?\"},{\"text\":\"pickup kab hoga mujhe inform kar dena\",\"context\":\"Aapko pickup kab chahiye?\"}],\"long\":[{\"text\":\"maine apna order receipt ke baad check kiya to item broken nikla\"},{\"text\":\"refund lene ke liye mujhe kya documents dene honge aur process kya hai\"},{\"text\":\"main apni taraf se pura try kar raha hoon lekin refund thoda time leta hai\"},{\"text\":\"main kal apna parcel wapas karne wala hoon lekin mujhe pickup details nahi mili\"},{\"text\":\"maine 3 din ho gaye return request kiye lekin abhi tak refund nahi mila\"},{\"text\":\"kya main kisi aur payment method mein refund le sakta hoon jaise digital wallet\"},{\"text\":\"agar item return nahi hua toh mera paisa kab tak refund hoga\"}],\"long_with_context\":[{\"text\":\"haan maine delivery check kar liya hai lekin item sahi nahi tha aur main return karna chahta hoon\",\"context\":\"Kya aap item receive kar chuke hain aur return karna chahenge?\"},{\"text\":\"refund process bahut time le raha hai mujhe jaldi paisa chahiye tha kyunki mujhe emergency mein chahiye tha\",\"context\":\"Aapko kis wajah se refund process ko lekar pareshani ho rahi hai?\"},{\"text\":\"mujhe pickup ke liye contact koi nahi kar raha hai aur ab parcel mere paas pad raha hai main confused hoon next step kya hoga\",\"context\":\"Pickup arrange karne mein aapko koi dikkat ho rahi hai kya?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 581,
+    "output_tokens": 634
+  }
+}

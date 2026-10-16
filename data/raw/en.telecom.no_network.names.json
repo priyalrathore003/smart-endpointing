@@ -1,0 +1,127 @@
+{
+  "batch_id": "en.telecom.no_network.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "no_network",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "no signal"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "call drops"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "slow internet"
+    },
+    {
+      "context": "What is your current location?",
+      "requested_bucket": "short",
+      "text": "no network here"
+    },
+    {
+      "context": "Can you describe the problem you are facing?",
+      "requested_bucket": "short",
+      "text": "signal very weak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I am not getting any network in my area since morning"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Calls keep dropping when I am at my home in Delhi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "The internet speed is really slow when I use 4G at Sector 45 Chandigarh"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please check the network issues in my area near MG Road Bangalore"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I have tried restarting my phone but still no network in Mumbai area"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "My SIM is not showing any signal at all when I am traveling through Pune"
+    },
+    {
+      "context": "Can you tell me the problem you are facing with your service?",
+      "requested_bucket": "medium",
+      "text": "I have been experiencing call drops frequently"
+    },
+    {
+      "context": "Where are you facing the slow internet issue?",
+      "requested_bucket": "medium",
+      "text": "The internet speed is very slow in my residence at Noida Sector 62"
+    },
+    {
+      "context": "Are you able to make any calls or receive calls?",
+      "requested_bucket": "medium",
+      "text": "I am unable to make or receive calls in my locality in Jayanagar Mysore"
+    },
+    {
+      "context": "Does the problem occur everywhere or at some specific place?",
+      "requested_bucket": "medium",
+      "text": "Network disappears completely when I go to Semmancherry in Chennai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I am calling from my house in Indore and I have been unable to get any signal whatsoever since yesterday evening which is very inconvenient for me"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Every time I try to use mobile internet in my office at Salt Lake Kolkata it takes ages to load pages or the connection just drops without warning"
+    },
+    {
+      "context": "Could you please describe when you experience the call drops?",
+      "requested_bucket": "long",
+      "text": "I just want to inform you that the call keeps dropping as soon as I step out of my flat in Sector 21 Gurgaon"
+    },
+    {
+      "context": "Can you share your location and explain how the network is behaving?",
+      "requested_bucket": "long",
+      "text": "I am located near the Fort area in Mumbai and the network has been very unstable for the past three days with calls failing or internet disconnecting"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 59284176,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: no_network - has no signal, call drops or slow internet\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"no signal\"},{\"text\":\"call drops\"}, {\"text\":\"slow internet\"}],\"short_with_context\":[{\"text\":\"no network here\",\"context\":\"What is your current location?\"},{\"text\":\"signal very weak\",\"context\":\"Can you describe the problem you are facing?\"}],\"medium\":[{\"text\":\"I am not getting any network in my area since morning\"},{\"text\":\"Calls keep dropping when I am at my home in Delhi\"},{\"text\":\"The internet speed is really slow when I use 4G at Sector 45 Chandigarh\"},{\"text\":\"Please check the network issues in my area near MG Road Bangalore\"},{\"text\":\"I have tried restarting my phone but still no network in Mumbai area\"},{\"text\":\"My SIM is not showing any signal at all when I am traveling through Pune\"}],\"medium_with_context\":[{\"text\":\"I have been experiencing call drops frequently\",\"context\":\"Can you tell me the problem you are facing with your service?\"},{\"text\":\"The internet speed is very slow in my residence at Noida Sector 62\",\"context\":\"Where are you facing the slow internet issue?\"},{\"text\":\"I am unable to make or receive calls in my locality in Jayanagar Mysore\",\"context\":\"Are you able to make any calls or receive calls?\"},{\"text\":\"Network disappears completely when I go to Semmancherry in Chennai\",\"context\":\"Does the problem occur everywhere or at some specific place?\"}],\"long\":[{\"text\":\"I am calling from my house in Indore and I have been unable to get any signal whatsoever since yesterday evening which is very inconvenient for me\"},{\"text\":\"Every time I try to use mobile internet in my office at Salt Lake Kolkata it takes ages to load pages or the connection just drops without warning\"}],\"long_with_context\":[{\"text\":\"I just want to inform you that the call keeps dropping as soon as I step out of my flat in Sector 21 Gurgaon\",\"context\":\"Could you please describe when you experience the call drops?\"},{\"text\":\"I am located near the Fort area in Mumbai and the network has been very unstable for the past three days with calls failing or internet disconnecting\",\"context\":\"Can you share your location and explain how the network is behaving?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 568,
+    "output_tokens": 448
+  }
+}

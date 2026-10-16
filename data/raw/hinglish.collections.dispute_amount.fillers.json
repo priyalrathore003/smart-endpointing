@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.collections.dispute_amount.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "dispute_amount",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yeh galat hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mai disagree karta hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "thoda zyada charge hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Aapko lagta hai amount sahi nahi hai?",
+      "requested_bucket": "short",
+      "text": "hmm sahi nahi hai"
+    },
+    {
+      "context": "Kya aapke hisaab se amount sahi hai?",
+      "requested_bucket": "short",
+      "text": "nahi theek nahi hai"
+    },
+    {
+      "context": "Kya aapko lagega ki charge sahi hai?",
+      "requested_bucket": "short",
+      "text": "galat charge hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera monthly bill mein extra charge show ho raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine payment kar diya tha lekin amount outstanding hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha matlab mujhe ek baar detail samjha dijiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "charge kaafi zyada hai jo mere records ke hisaab se nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "boat naam se ek transaction hua tha lekin woh galat dikhaya ja raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "ho sakta hai ki payment update nahi hua ho is wajah se problem hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Thursday nahi Wednesday ko payment hua tha galti se record mein Thursday likha hai"
+    },
+    {
+      "context": "Aapko kya lagta hai outstanding amount correct hai?",
+      "requested_bucket": "medium",
+      "text": "main soch raha hu amount galat hai bar bar verify karna chahiye"
+    },
+    {
+      "context": "Kya aapne recent payment kiya hai ya nahi?",
+      "requested_bucket": "medium",
+      "text": "maine kal payment kiya tha lekin abhi bhi pending dikh raha hai"
+    },
+    {
+      "context": "Aapko extension mil sakta hai kya interest charges ko lekar?",
+      "requested_bucket": "medium",
+      "text": "umm mujhe nahi pata ki interest charges itne zyada kyun hain"
+    },
+    {
+      "context": "Kya payment date aapne verify ki hai?",
+      "requested_bucket": "medium",
+      "text": "galat date show karti hai mera payment Wednesday nahi Thursday tha"
+    },
+    {
+      "context": "Kya aapko payment proof hai jo verify kar sake?",
+      "requested_bucket": "medium",
+      "text": "payment confirmation mil gaya tha par phir bhi charges kam nahi hue"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera account se paise deduct hone ke baad bhi update nahi hua hai to outstanding amount wrong dikh raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main kal hi payment karne gaya tha par bank ne kaha transaction failed tha isliye amount clear nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine socha ki fees mein kuch extra charges lage hain par actually mera due amount kam hona chahiye tha uske badle zyada bataya ja raha hai"
+    },
+    {
+      "context": "Aapne payment dispute raise kiya tha kya update mila?",
+      "requested_bucket": "long",
+      "text": "maine dispute raise kiya tha payment ka aur aapne bola tha ki verify karenge par abhi tak kuch update nahi mila"
+    },
+    {
+      "context": "Kya aap payment receipt verify kar sakte hain?",
+      "requested_bucket": "long",
+      "text": "woh jo charges aap bata rahe ho vo galat hain kyunki maine apne payment receipt cross check kiya hai aur vo different hai"
+    },
+    {
+      "context": "Aapke contract ke hisaab se charges kya hone chahiye the?",
+      "requested_bucket": "long",
+      "text": "main samajhta hu ki koi problem ho gaya hoga system mein kyunki mere contract ke hisaab se charges itne zyada nahi hone chahiye"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3864816145,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: dispute_amount - says the outstanding amount or a charge is wrong\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"yeh galat hai\"},{\"text\":\"mai disagree karta hu\"},{\"text\":\"thoda zyada charge hua\"},{\"text\":\"haan ji\"},{\"text\":\"kal tak\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"hmm sahi nahi hai\",\"context\":\"Aapko lagta hai amount sahi nahi hai?\"},{\"text\":\"nahi theek nahi hai\",\"context\":\"Kya aapke hisaab se amount sahi hai?\"},{\"text\":\"galat charge hua\",\"context\":\"Kya aapko lagega ki charge sahi hai?\"}],\"medium\":[{\"text\":\"mera monthly bill mein extra charge show ho raha hai\"},{\"text\":\"maine payment kar diya tha lekin amount outstanding hai\"},{\"text\":\"accha matlab mujhe ek baar detail samjha dijiye\"},{\"text\":\"charge kaafi zyada hai jo mere records ke hisaab se nahi hai\"},{\"text\":\"boat naam se ek transaction hua tha lekin woh galat dikhaya ja raha hai\"},{\"text\":\"ho sakta hai ki payment update nahi hua ho is wajah se problem hai\"},{\"text\":\"Thursday nahi Wednesday ko payment hua tha galti se record mein Thursday likha hai\"}],\"medium_with_context\":[{\"text\":\"main soch raha hu amount galat hai bar bar verify karna chahiye\",\"context\":\"Aapko kya lagta hai outstanding amount correct hai?\"},{\"text\":\"maine kal payment kiya tha lekin abhi bhi pending dikh raha hai\",\"context\":\"Kya aapne recent payment kiya hai ya nahi?\"},{\"text\":\"umm mujhe nahi pata ki interest charges itne zyada kyun hain\",\"context\":\"Aapko extension mil sakta hai kya interest charges ko lekar?\"},{\"text\":\"galat date show karti hai mera payment Wednesday nahi Thursday tha\",\"context\":\"Kya payment date aapne verify ki hai?\"},{\"text\":\"payment confirmation mil gaya tha par phir bhi charges kam nahi hue\",\"context\":\"Kya aapko payment proof hai jo verify kar sake?\"}],\"long\":[{\"text\":\"mera account se paise deduct hone ke baad bhi update nahi hua hai to outstanding amount wrong dikh raha hai\"},{\"text\":\"main kal hi payment karne gaya tha par bank ne kaha transaction failed tha isliye amount clear nahi hua\"},{\"text\":\"maine socha ki fees mein kuch extra charges lage hain par actually mera due amount kam hona chahiye tha uske badle zyada bataya ja raha hai\"}],\"long_with_context\":[{\"text\":\"maine dispute raise kiya tha payment ka aur aapne bola tha ki verify karenge par abhi tak kuch update nahi mila\",\"context\":\"Aapne payment dispute raise kiya tha kya update mila?\"},{\"text\":\"woh jo charges aap bata rahe ho vo galat hain kyunki maine apne payment receipt cross check kiya hai aur vo different hai\",\"context\":\"Kya aap payment receipt verify kar sakte hain?\"},{\"text\":\"main samajhta hu ki koi problem ho gaya hoga system mein kyunki mere contract ke hisaab se charges itne zyada nahi hone chahiye\",\"context\":\"Aapke contract ke hisaab se charges kya hone chahiye the?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 610,
+    "output_tokens": 667
+  }
+}

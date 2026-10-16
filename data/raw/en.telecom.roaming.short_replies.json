@@ -1,0 +1,142 @@
+{
+  "batch_id": "en.telecom.roaming.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "roaming",
+  "items": [
+    {
+      "context": "Do you want to activate national or international roaming",
+      "requested_bucket": "short",
+      "text": "International roaming"
+    },
+    {
+      "context": "Which country are you travelling to",
+      "requested_bucket": "short",
+      "text": "United States"
+    },
+    {
+      "context": "Would you like to activate roaming now",
+      "requested_bucket": "short",
+      "text": "Yes please"
+    },
+    {
+      "context": "Do you want roaming for data or calls",
+      "requested_bucket": "short",
+      "text": "Both calls and data"
+    },
+    {
+      "context": "Can you confirm your phone number",
+      "requested_bucket": "short",
+      "text": "Nine eight seven six five four three two one"
+    },
+    {
+      "context": "How long will you need the roaming service",
+      "requested_bucket": "short",
+      "text": "One month"
+    },
+    {
+      "context": "Should I activate roaming from tomorrow",
+      "requested_bucket": "short",
+      "text": "Tomorrow okay"
+    },
+    {
+      "context": "Do you want to check roaming charges first",
+      "requested_bucket": "short",
+      "text": "No thank you"
+    },
+    {
+      "context": "Would you prefer daily or monthly roaming packs",
+      "requested_bucket": "short",
+      "text": "Monthly pack"
+    },
+    {
+      "context": "Is your phone compatible with international roaming",
+      "requested_bucket": "short",
+      "text": "Yes it is"
+    },
+    {
+      "context": "Do you have any previous roaming packs active",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Would you like SMS alerts for usage",
+      "requested_bucket": "short",
+      "text": "Yes please"
+    },
+    {
+      "context": "Can I assist you with anything else",
+      "requested_bucket": "short",
+      "text": "No that is all thanks"
+    },
+    {
+      "context": "Are you okay with auto renewal of roaming pack",
+      "requested_bucket": "short",
+      "text": "Yes I am"
+    },
+    {
+      "context": "When are you traveling abroad",
+      "requested_bucket": "short",
+      "text": "Next week"
+    },
+    {
+      "context": "Do you want me to send activation details via SMS",
+      "requested_bucket": "short",
+      "text": "Yes send it"
+    },
+    {
+      "context": "Do you have your ID proof ready for verification",
+      "requested_bucket": "short",
+      "text": "Yes I do"
+    },
+    {
+      "context": "Shall I activate the roaming now for you",
+      "requested_bucket": "short",
+      "text": "Do it now"
+    },
+    {
+      "context": "Please tell me the period for which you need roaming service",
+      "requested_bucket": "medium",
+      "text": "I will need roaming for about two weeks"
+    },
+    {
+      "context": "Do you want to add international roaming for data only or calls too",
+      "requested_bucket": "medium",
+      "text": "I want both calls and data activated please"
+    },
+    {
+      "context": "Can you provide the date from which you want the roaming to start",
+      "requested_bucket": "medium",
+      "text": "Please start the roaming from the first of next month"
+    },
+    {
+      "context": "Would you like me to explain the roaming charges before activation",
+      "requested_bucket": "medium",
+      "text": "Yes please explain the charges in detail"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3788791410,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: roaming - wants to activate international or national roaming\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Do you want to activate national or international roaming\",\"reply\":\"International roaming\"},{\"agent_question\":\"Which country are you travelling to\",\"reply\":\"United States\"},{\"agent_question\":\"Would you like to activate roaming now\",\"reply\":\"Yes please\"},{\"agent_question\":\"Do you want roaming for data or calls\",\"reply\":\"Both calls and data\"},{\"agent_question\":\"Can you confirm your phone number\",\"reply\":\"Nine eight seven six five four three two one\"},{\"agent_question\":\"How long will you need the roaming service\",\"reply\":\"One month\"},{\"agent_question\":\"Should I activate roaming from tomorrow\",\"reply\":\"Tomorrow okay\"},{\"agent_question\":\"Do you want to check roaming charges first\",\"reply\":\"No thank you\"},{\"agent_question\":\"Would you prefer daily or monthly roaming packs\",\"reply\":\"Monthly pack\"},{\"agent_question\":\"Is your phone compatible with international roaming\",\"reply\":\"Yes it is\"},{\"agent_question\":\"Do you have any previous roaming packs active\",\"reply\":\"No\"},{\"agent_question\":\"Would you like SMS alerts for usage\",\"reply\":\"Yes please\"},{\"agent_question\":\"Can I assist you with anything else\",\"reply\":\"No that is all thanks\"},{\"agent_question\":\"Are you okay with auto renewal of roaming pack\",\"reply\":\"Yes I am\"},{\"agent_question\":\"When are you traveling abroad\",\"reply\":\"Next week\"},{\"agent_question\":\"Do you want me to send activation details via SMS\",\"reply\":\"Yes send it\"},{\"agent_question\":\"Do you have your ID proof ready for verification\",\"reply\":\"Yes I do\"},{\"agent_question\":\"Shall I activate the roaming now for you\",\"reply\":\"Do it now\"}],\"medium\":[{\"agent_question\":\"Please tell me the period for which you need roaming service\",\"reply\":\"I will need roaming for about two weeks\"},{\"agent_question\":\"Do you want to add international roaming for data only or calls too\",\"reply\":\"I want both calls and data activated please\"},{\"agent_question\":\"Can you provide the date from which you want the roaming to start\",\"reply\":\"Please start the roaming from the first of next month\"},{\"agent_question\":\"Would you like me to explain the roaming charges before activation\",\"reply\":\"Yes please explain the charges in detail\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 364,
+    "output_tokens": 434
+  }
+}

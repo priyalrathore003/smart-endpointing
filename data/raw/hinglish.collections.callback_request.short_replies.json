@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.collections.callback_request.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "collections",
+  "intent": "callback_request",
+  "items": [
+    {
+      "context": "Kab main call karun aapko dobara",
+      "requested_bucket": "short",
+      "text": "kal shaam ko"
+    },
+    {
+      "context": "Aapko call kab chahiye",
+      "requested_bucket": "short",
+      "text": "subah 10 baje"
+    },
+    {
+      "context": "Kab baat kar sakte hain aap",
+      "requested_bucket": "short",
+      "text": "dopahar mein"
+    },
+    {
+      "context": "Aap abhi baat nahi kar sakte",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Kya main aapko kal call karun",
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Call karne ka time bataiye",
+      "requested_bucket": "short",
+      "text": "shaam 6 baje"
+    },
+    {
+      "context": "Kya aap abhi busy hain",
+      "requested_bucket": "short",
+      "text": "haan thoda busy hoon"
+    },
+    {
+      "context": "Dobara call karne ka din kya hai",
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": "Kab call karna convenient rahega",
+      "requested_bucket": "short",
+      "text": "do din baad"
+    },
+    {
+      "context": "Kya aap kal available hain call ke liye",
+      "requested_bucket": "short",
+      "text": "haan kal raat"
+    },
+    {
+      "context": "Kya main aapko abhi call karoon",
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": "Kab baat karna pasand karenge aap",
+      "requested_bucket": "short",
+      "text": "subah 9"
+    },
+    {
+      "context": "Call ke liye best time kya hai",
+      "requested_bucket": "short",
+      "text": "shaam 7 baje"
+    },
+    {
+      "context": "Aapko call kab karu main",
+      "requested_bucket": "short",
+      "text": "aaj shaam"
+    },
+    {
+      "context": "Call ke liye kya wakt theek rahega",
+      "requested_bucket": "short",
+      "text": "kal dopahar"
+    },
+    {
+      "context": "Aapke liye kaun sa waqt acha hai",
+      "requested_bucket": "short",
+      "text": "7 baje sham"
+    },
+    {
+      "context": "Kya main aapko dobara phone karoon",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Call aane par aap baat karenge",
+      "requested_bucket": "short",
+      "text": "haan zaroor"
+    },
+    {
+      "context": "Kya main aapko kal dobara call karun",
+      "requested_bucket": "medium",
+      "text": "haan ji kal dopahar mein baat karna"
+    },
+    {
+      "context": "Aapko call ke liye kaun sa samay suit karega",
+      "requested_bucket": "medium",
+      "text": "shaam ko 6 baje kar lena call mujhe theek lagega"
+    },
+    {
+      "context": "Kab tak call karna chahenge aap humse",
+      "requested_bucket": "medium",
+      "text": "kal tak call kar lena subah ke waqt mujhe theek rahega"
+    },
+    {
+      "context": "Kya aap abhi baat nahi kar sakte kal theek rahega",
+      "requested_bucket": "medium",
+      "text": "haan ji kal baat karta hoon abhi thoda busy hoon"
+    },
+    {
+      "context": "Call ke liye koi specific samay bataye jisme aap available ho",
+      "requested_bucket": "medium",
+      "text": "rona 5 baje ke baad call kar lena tab main free hoon"
+    },
+    {
+      "context": "Aapko call karne ka sabse acha waqt kab lagta hai",
+      "requested_bucket": "medium",
+      "text": "dinner ke baad shaam ko kar lena call theek rahega"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3596288869,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: callback_request - asks the agent to call back at another time\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Kab main call karun aapko dobara\",\"reply\":\"kal shaam ko\"},{\"agent_question\":\"Aapko call kab chahiye\",\"reply\":\"subah 10 baje\"},{\"agent_question\":\"Kab baat kar sakte hain aap\",\"reply\":\"dopahar mein\"},{\"agent_question\":\"Aap abhi baat nahi kar sakte\",\"reply\":\"haan ji\"},{\"agent_question\":\"Kya main aapko kal call karun\",\"reply\":\"theek hai\"},{\"agent_question\":\"Call karne ka time bataiye\",\"reply\":\"shaam 6 baje\"},{\"agent_question\":\"Kya aap abhi busy hain\",\"reply\":\"haan thoda busy hoon\"},{\"agent_question\":\"Dobara call karne ka din kya hai\",\"reply\":\"kal tak\"},{\"agent_question\":\"Kab call karna convenient rahega\",\"reply\":\"do din baad\"},{\"agent_question\":\"Kya aap kal available hain call ke liye\",\"reply\":\"haan kal raat\"},{\"agent_question\":\"Kya main aapko abhi call karoon\",\"reply\":\"abhi nahi\"},{\"agent_question\":\"Kab baat karna pasand karenge aap\",\"reply\":\"subah 9\"},{\"agent_question\":\"Call ke liye best time kya hai\",\"reply\":\"shaam 7 baje\"},{\"agent_question\":\"Aapko call kab karu main\",\"reply\":\"aaj shaam\"},{\"agent_question\":\"Call ke liye kya wakt theek rahega\",\"reply\":\"kal dopahar\"},{\"agent_question\":\"Aapke liye kaun sa waqt acha hai\",\"reply\":\"7 baje sham\"},{\"agent_question\":\"Kya main aapko dobara phone karoon\",\"reply\":\"haan ji\"},{\"agent_question\":\"Call aane par aap baat karenge\",\"reply\":\"haan zaroor\"}],\"medium\":[{\"agent_question\":\"Kya main aapko kal dobara call karun\",\"reply\":\"haan ji kal dopahar mein baat karna\"},{\"agent_question\":\"Aapko call ke liye kaun sa samay suit karega\",\"reply\":\"shaam ko 6 baje kar lena call mujhe theek lagega\"},{\"agent_question\":\"Kab tak call karna chahenge aap humse\",\"reply\":\"kal tak call kar lena subah ke waqt mujhe theek rahega\"},{\"agent_question\":\"Kya aap abhi baat nahi kar sakte kal theek rahega\",\"reply\":\"haan ji kal baat karta hoon abhi thoda busy hoon\"},{\"agent_question\":\"Call ke liye koi specific samay bataye jisme aap available ho\",\"reply\":\"rona 5 baje ke baad call kar lena tab main free hoon\"},{\"agent_question\":\"Aapko call karne ka sabse acha waqt kab lagta hai\",\"reply\":\"dinner ke baad shaam ko kar lena call theek rahega\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 394,
+    "output_tokens": 594
+  }
+}

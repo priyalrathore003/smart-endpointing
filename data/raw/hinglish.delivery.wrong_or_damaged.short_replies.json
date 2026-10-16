@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.delivery.wrong_or_damaged.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "delivery",
+  "intent": "wrong_or_damaged",
+  "items": [
+    {
+      "context": "Kya aapke paas order number hai",
+      "requested_bucket": "short",
+      "text": "Haan hai"
+    },
+    {
+      "context": "Aapka naam kya hai",
+      "requested_bucket": "short",
+      "text": "Ramesh Kumar"
+    },
+    {
+      "context": "Product kaun sa tha",
+      "requested_bucket": "short",
+      "text": "Mobile cover"
+    },
+    {
+      "context": "Damage kaisa laga aapko",
+      "requested_bucket": "short",
+      "text": "Screen toot gaya"
+    },
+    {
+      "context": "Kya aapne package already open kiya",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Kitne quantity mila aapko",
+      "requested_bucket": "short",
+      "text": "Sirf ek"
+    },
+    {
+      "context": "Kya aap return chahte hain",
+      "requested_bucket": "short",
+      "text": "Haan chahiye"
+    },
+    {
+      "context": "Payment method kya tha",
+      "requested_bucket": "short",
+      "text": "Cash on delivery"
+    },
+    {
+      "context": "Aapka address please bataiye",
+      "requested_bucket": "short",
+      "text": "Delhi mein rehata hoon"
+    },
+    {
+      "context": "Order kab place kiya tha aapne",
+      "requested_bucket": "short",
+      "text": "Kal kiya tha"
+    },
+    {
+      "context": "Replacement chahiye ya refund",
+      "requested_bucket": "short",
+      "text": "Replacement chahiye"
+    },
+    {
+      "context": "Kya aap kisi aur product ke baare mein batana chahte hain",
+      "requested_bucket": "short",
+      "text": "Nahi nahi"
+    },
+    {
+      "context": "Aapne complaint pehle ki hai",
+      "requested_bucket": "short",
+      "text": "Nahi ki"
+    },
+    {
+      "context": "Kitne din mein delivery hui thi",
+      "requested_bucket": "short",
+      "text": "Do din mein"
+    },
+    {
+      "context": "Kya aapne photo bheja damage ka",
+      "requested_bucket": "short",
+      "text": "Haan bheja"
+    },
+    {
+      "context": "Kya delivery boy ne aapko product diya",
+      "requested_bucket": "short",
+      "text": "Haan diya"
+    },
+    {
+      "context": "Kya packing seal tod ke aaya tha",
+      "requested_bucket": "short",
+      "text": "Seal tod ke aaya tha"
+    },
+    {
+      "context": "Aapke paas invoice hai ya nahi",
+      "requested_bucket": "short",
+      "text": "Invoice nahi tha"
+    },
+    {
+      "context": "Aapko product me kya problem aayi hai",
+      "requested_bucket": "medium",
+      "text": "Jo mila woh bilkul alag hai mere order se"
+    },
+    {
+      "context": "Aapne kab delivery receive ki thi",
+      "requested_bucket": "medium",
+      "text": "Aaj subah 10 baje mujhe delivery mili thi"
+    },
+    {
+      "context": "Kya aap email se ya call se complaint karna chahte hain",
+      "requested_bucket": "medium",
+      "text": "Abhi phone par hi complaint karna hai mujhe"
+    },
+    {
+      "context": "Aapko refund chahiye ya product replace karna hai",
+      "requested_bucket": "medium",
+      "text": "Mujhe product replace karna hai please jaldi"
+    },
+    {
+      "context": "Kya aapke paas product ki photo aur video hai damage dikhaane ke liye",
+      "requested_bucket": "medium",
+      "text": "Haan maine photo aur video dono liye hain damage ke"
+    },
+    {
+      "context": "Aap phir kab free rahenge taki hum faulty product le ja sakein",
+      "requested_bucket": "medium",
+      "text": "Kal subah 11 baje main available hoon"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 357853410,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: wrong_or_damaged - received a wrong or damaged item\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Kya aapke paas order number hai\",\"reply\":\"Haan hai\"},{\"agent_question\":\"Aapka naam kya hai\",\"reply\":\"Ramesh Kumar\"},{\"agent_question\":\"Product kaun sa tha\",\"reply\":\"Mobile cover\"},{\"agent_question\":\"Damage kaisa laga aapko\",\"reply\":\"Screen toot gaya\"},{\"agent_question\":\"Kya aapne package already open kiya\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Kitne quantity mila aapko\",\"reply\":\"Sirf ek\"},{\"agent_question\":\"Kya aap return chahte hain\",\"reply\":\"Haan chahiye\"},{\"agent_question\":\"Payment method kya tha\",\"reply\":\"Cash on delivery\"},{\"agent_question\":\"Aapka address please bataiye\",\"reply\":\"Delhi mein rehata hoon\"},{\"agent_question\":\"Order kab place kiya tha aapne\",\"reply\":\"Kal kiya tha\"},{\"agent_question\":\"Replacement chahiye ya refund\",\"reply\":\"Replacement chahiye\"},{\"agent_question\":\"Kya aap kisi aur product ke baare mein batana chahte hain\",\"reply\":\"Nahi nahi\"},{\"agent_question\":\"Aapne complaint pehle ki hai\",\"reply\":\"Nahi ki\"},{\"agent_question\":\"Kitne din mein delivery hui thi\",\"reply\":\"Do din mein\"},{\"agent_question\":\"Kya aapne photo bheja damage ka\",\"reply\":\"Haan bheja\"},{\"agent_question\":\"Kya delivery boy ne aapko product diya\",\"reply\":\"Haan diya\"},{\"agent_question\":\"Kya packing seal tod ke aaya tha\",\"reply\":\"Seal tod ke aaya tha\"},{\"agent_question\":\"Aapke paas invoice hai ya nahi\",\"reply\":\"Invoice nahi tha\"}],\"medium\":[{\"agent_question\":\"Aapko product me kya problem aayi hai\",\"reply\":\"Jo mila woh bilkul alag hai mere order se\"},{\"agent_question\":\"Aapne kab delivery receive ki thi\",\"reply\":\"Aaj subah 10 baje mujhe delivery mili thi\"},{\"agent_question\":\"Kya aap email se ya call se complaint karna chahte hain\",\"reply\":\"Abhi phone par hi complaint karna hai mujhe\"},{\"agent_question\":\"Aapko refund chahiye ya product replace karna hai\",\"reply\":\"Mujhe product replace karna hai please jaldi\"},{\"agent_question\":\"Kya aapke paas product ki photo aur video hai damage dikhaane ke liye\",\"reply\":\"Haan maine photo aur video dono liye hain damage ke\"},{\"agent_question\":\"Aap phir kab free rahenge taki hum faulty product le ja sakein\",\"reply\":\"Kal subah 11 baje main available hoon\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 393,
+    "output_tokens": 542
+  }
+}

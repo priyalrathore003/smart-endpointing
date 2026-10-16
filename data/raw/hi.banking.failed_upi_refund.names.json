@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.banking.failed_upi_refund.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "failed_upi_refund",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "पैसा नहीं आया"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "कब तक होगा"
+    },
+    {
+      "context": "क्या आप अपना रिफंड जल्दी चाहते हैं?",
+      "requested_bucket": "short",
+      "text": "रिफंड जल्दी होगा"
+    },
+    {
+      "context": "क्या आपने पेमेंट के दौरान OTP डाला था?",
+      "requested_bucket": "short",
+      "text": "हाँ सर ठीक है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर मेरा ऑनलाइन payment failed हुआ पर पैसे कट गए हैं"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैडम मेरा यूपीआई transaction फेल हुआ है पैसे तो डेबिट हो गए थे"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैंने 5000 रुपये भेजे थे पर recipient का account क्रेडिट नहीं हुआ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "कल के ट्रांजैक्शन का पैसा वापस कब आएगा मुझे पता लगाइएगा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे मेरी शिकायत का 24 घंटे में जवाब चाहिए प्लीज देखिए जल्दी"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर मेरा नाम अमित है और मेरा बैंक मुंबई में है यह ट्रांजैक्शन था"
+    },
+    {
+      "context": "क्या आपने चेक किया कि रिफंड हुआ या नहीं?",
+      "requested_bucket": "medium",
+      "text": "पैसे अभी तक account में वापस नहीं आए हैं आप देख सकते हो"
+    },
+    {
+      "context": "क्या आप जानते हैं कि transaction किसने cancel किया था?",
+      "requested_bucket": "medium",
+      "text": "उसने पेमेंट cancel किया था तो पैसे वापस क्यों नहीं हुए"
+    },
+    {
+      "context": "आपने यह payment कब initiate किया था?",
+      "requested_bucket": "medium",
+      "text": "मैंने 12 तारीख को payment initiate किया था लेकिन fail हो गया"
+    },
+    {
+      "context": "कहां से payment कर रहे थे आप?",
+      "requested_bucket": "medium",
+      "text": "डिलीवरी वाली वेबसाइट पर payment फेल होने के बाद चार्ज हो गया"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैंने अपना मोबाइल से 3000 रुपये का payment किया था अमेज़न पर लेकिन payment fail हो गया फिर भी मेरे पैसे कटा रहे हैं आप जल्दी चेक करो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मेरी एक friend को मैंने 2500 रुपये भेजे थे यूपीआई से पर confirmation नहीं आई और पैसे डेबिट हो गए हैं देर ना करो मुझे वापस चाहिए वो पैसे"
+    },
+    {
+      "context": "क्या आप हमें transaction ID दे सकते हैं रिफंड status चेक करने के लिए?",
+      "requested_bucket": "long",
+      "text": "आपका रिफंड process कब शुरू होगा मैं पिछले चार दिन से wait कर रहा हूं मुझे जल्दी बताओ"
+    },
+    {
+      "context": "क्या आप transaction नंबर बता सकते हैं जिससे हम सहायता कर सकें?",
+      "requested_bucket": "long",
+      "text": "मैंने transaction नंबर 12345 से payment किया था उसके बाद पैसे मेरे account से डेबिट हो गए पर recipient को कुछ भी नहीं मिला"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1072023835,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: failed_upi_refund - a UPI or online payment failed but money was debited; wants a refund\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"पैसा नहीं आया\"},{\"text\":\"कब तक होगा\"}],\"short_with_context\":[{\"text\":\"रिफंड जल्दी होगा\",\"context\":\"क्या आप अपना रिफंड जल्दी चाहते हैं?\"},{\"text\":\"हाँ सर ठीक है\",\"context\":\"क्या आपने पेमेंट के दौरान OTP डाला था?\"}],\"medium\":[{\"text\":\"सर मेरा ऑनलाइन payment failed हुआ पर पैसे कट गए हैं\"},{\"text\":\"मैडम मेरा यूपीआई transaction फेल हुआ है पैसे तो डेबिट हो गए थे\"},{\"text\":\"मैंने 5000 रुपये भेजे थे पर recipient का account क्रेडिट नहीं हुआ\"},{\"text\":\"कल के ट्रांजैक्शन का पैसा वापस कब आएगा मुझे पता लगाइएगा\"},{\"text\":\"मुझे मेरी शिकायत का 24 घंटे में जवाब चाहिए प्लीज देखिए जल्दी\"},{\"text\":\"सर मेरा नाम अमित है और मेरा बैंक मुंबई में है यह ट्रांजैक्शन था\"}],\"medium_with_context\":[{\"text\":\"पैसे अभी तक account में वापस नहीं आए हैं आप देख सकते हो\",\"context\":\"क्या आपने चेक किया कि रिफंड हुआ या नहीं?\"},{\"text\":\"उसने पेमेंट cancel किया था तो पैसे वापस क्यों नहीं हुए\",\"context\":\"क्या आप जानते हैं कि transaction किसने cancel किया था?\"},{\"text\":\"मैंने 12 तारीख को payment initiate किया था लेकिन fail हो गया\",\"context\":\"आपने यह payment कब initiate किया था?\"},{\"text\":\"डिलीवरी वाली वेबसाइट पर payment फेल होने के बाद चार्ज हो गया\",\"context\":\"कहां से payment कर रहे थे आप?\"}],\"long\":[{\"text\":\"मैंने अपना मोबाइल से 3000 रुपये का payment किया था अमेज़न पर लेकिन payment fail हो गया फिर भी मेरे पैसे कटा रहे हैं आप जल्दी चेक करो\"},{\"text\":\"मेरी एक friend को मैंने 2500 रुपये भेजे थे यूपीआई से पर confirmation नहीं आई और पैसे डेबिट हो गए हैं देर ना करो मुझे वापस चाहिए वो पैसे\"}],\"long_with_context\":[{\"text\":\"आपका रिफंड process कब शुरू होगा मैं पिछले चार दिन से wait कर रहा हूं मुझे जल्दी बताओ\",\"context\":\"क्या आप हमें transaction ID दे सकते हैं रिफंड status चेक करने के लिए?\"},{\"text\":\"मैंने transaction नंबर 12345 से payment किया था उसके बाद पैसे मेरे account से डेबिट हो गए पर recipient को कुछ भी नहीं मिला\",\"context\":\"क्या आप transaction नंबर बता सकते हैं जिससे हम सहायता कर सकें?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 702,
+    "output_tokens": 508
+  }
+}

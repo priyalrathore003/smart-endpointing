@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.telecom.plan_change.plain",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "telecom",
+  "intent": "plan_change",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "help chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "plan change karna"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kab tak milega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "price batao please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "extra data chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kaunsa plan best hai"
+    },
+    {
+      "context": "Kya aap apna plan change karna chahte hain?",
+      "requested_bucket": "short",
+      "text": "haan kar do"
+    },
+    {
+      "context": "Kya main aapka current plan deactivate kar du?",
+      "requested_bucket": "short",
+      "text": "ji badal dena"
+    },
+    {
+      "context": "Kab aapko naya plan chahiye?",
+      "requested_bucket": "short",
+      "text": "turant chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera current plan thoda mehenga lag raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aapke paas koi budget friendly plan hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main apna recharge plan upgrade karna chahta hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "ismein aur zyada internet chahiye mujhe"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya main monthly plan se yearly plan pe switch kar sakta hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kab se ye naya plan effective hoga mera"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please mujhe plan ke benefits acche se samjha do"
+    },
+    {
+      "context": "Kya aapko apne liye koi budget plan chahiye?",
+      "requested_bucket": "medium",
+      "text": "kya aap mujhe sabse sasta data plan recommend kar sakte hain"
+    },
+    {
+      "context": "Kya aap international call facility chahte hain apne plan mein?",
+      "requested_bucket": "medium",
+      "text": "main apne plan mein international calls bhi include karna chahta hu"
+    },
+    {
+      "context": "Aapka mahine ka average data usage kitna hai?",
+      "requested_bucket": "medium",
+      "text": "mujhe apne data usage ke hisaab se plan chahiye"
+    },
+    {
+      "context": "Kya aap apne plan ki validity extend karna chahte hain?",
+      "requested_bucket": "medium",
+      "text": "kya mujhe apne plan ka validity badhana padega naya plan lene ke liye"
+    },
+    {
+      "context": "Kya aap apna balance new plan mein transfer karna chahte hain?",
+      "requested_bucket": "medium",
+      "text": "kya main plan change karte hi apne existing balance ka use kar sakta hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera current prepaid plan thoda expensive hai aur mujhe lagta hai ki main uska pura faida nahi utha pa raha hu main koi aisa plan chahata hu jismein zyada data aur calls included ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya aapke paas koi aisa plan available hai jismein international calling facility di gayi ho main kab se apne international family members ko call karna chahta hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mujhe apne plan ko upgrade karna hai isliye mujhe pata karna hai ki naye plans mein kya kya offers hain aur kitne me upgrade ho sakta hu"
+    },
+    {
+      "context": "Aap apne plan mein changes karna chahte hain toh bataiye kya zarurat hai?",
+      "requested_bucket": "long",
+      "text": "main apna existing plan change karna chahata hu kyunki mujhe zyada internet chahiye abhi jo plan use kar raha hu usme data kam padta hai"
+    },
+    {
+      "context": "Kya main aapko naye plans ke baare mein batata hu?",
+      "requested_bucket": "long",
+      "text": "naye plans ke baare mein mujhe detail mein batayiye jismein call aur data dono ka best combination mile aise plan dhoondh raha hu main"
+    },
+    {
+      "context": "Kya aapko apna plan type change karna hai prepaid se postpaid ya postpaid se prepaid?",
+      "requested_bucket": "long",
+      "text": "kya main apne postpaid plan ko prepaid mein convert kar sakta hu agar ha to process kya hai mujhe bataiye"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3117538092,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: plan_change - wants to change or understand a plan\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: plain and direct\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"help chahiye\"},{\"text\":\"plan change karna\"},{\"text\":\"kab tak milega\"},{\"text\":\"price batao please\"},{\"text\":\"extra data chahiye\"},{\"text\":\"kaunsa plan best hai\"}],\"short_with_context\":[{\"text\":\"haan kar do\",\"context\":\"Kya aap apna plan change karna chahte hain?\"},{\"text\":\"ji badal dena\",\"context\":\"Kya main aapka current plan deactivate kar du?\"},{\"text\":\"turant chahiye\",\"context\":\"Kab aapko naya plan chahiye?\"}],\"medium\":[{\"text\":\"mera current plan thoda mehenga lag raha hai\"},{\"text\":\"kya aapke paas koi budget friendly plan hai\"},{\"text\":\"main apna recharge plan upgrade karna chahta hu\"},{\"text\":\"ismein aur zyada internet chahiye mujhe\"},{\"text\":\"kya main monthly plan se yearly plan pe switch kar sakta hu\"},{\"text\":\"kab se ye naya plan effective hoga mera\"},{\"text\":\"please mujhe plan ke benefits acche se samjha do\"}],\"medium_with_context\":[{\"text\":\"kya aap mujhe sabse sasta data plan recommend kar sakte hain\",\"context\":\"Kya aapko apne liye koi budget plan chahiye?\"},{\"text\":\"main apne plan mein international calls bhi include karna chahta hu\",\"context\":\"Kya aap international call facility chahte hain apne plan mein?\"},{\"text\":\"mujhe apne data usage ke hisaab se plan chahiye\",\"context\":\"Aapka mahine ka average data usage kitna hai?\"},{\"text\":\"kya mujhe apne plan ka validity badhana padega naya plan lene ke liye\",\"context\":\"Kya aap apne plan ki validity extend karna chahte hain?\"},{\"text\":\"kya main plan change karte hi apne existing balance ka use kar sakta hu\",\"context\":\"Kya aap apna balance new plan mein transfer karna chahte hain?\"}],\"long\":[{\"text\":\"mera current prepaid plan thoda expensive hai aur mujhe lagta hai ki main uska pura faida nahi utha pa raha hu main koi aisa plan chahata hu jismein zyada data aur calls included ho\"},{\"text\":\"kya aapke paas koi aisa plan available hai jismein international calling facility di gayi ho main kab se apne international family members ko call karna chahta hu\"},{\"text\":\"mujhe apne plan ko upgrade karna hai isliye mujhe pata karna hai ki naye plans mein kya kya offers hain aur kitne me upgrade ho sakta hu\"}],\"long_with_context\":[{\"text\":\"main apna existing plan change karna chahata hu kyunki mujhe zyada internet chahiye abhi jo plan use kar raha hu usme data kam padta hai\",\"context\":\"Aap apne plan mein changes karna chahte hain toh bataiye kya zarurat hai?\"},{\"text\":\"naye plans ke baare mein mujhe detail mein batayiye jismein call aur data dono ka best combination mile aise plan dhoondh raha hu main\",\"context\":\"Kya main aapko naye plans ke baare mein batata hu?\"},{\"text\":\"kya main apne postpaid plan ko prepaid mein convert kar sakta hu agar ha to process kya hai mujhe bataiye\",\"context\":\"Kya aapko apna plan type change karna hai prepaid se postpaid ya postpaid se prepaid?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 577,
+    "output_tokens": 744
+  }
+}

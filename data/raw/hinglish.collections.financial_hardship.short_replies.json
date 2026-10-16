@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.collections.financial_hardship.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "collections",
+  "intent": "financial_hardship",
+  "items": [
+    {
+      "context": "Aapka account number kya hai",
+      "requested_bucket": "short",
+      "text": "Mera account 123456"
+    },
+    {
+      "context": "Kya aap payment kar sakte hain abhi",
+      "requested_bucket": "short",
+      "text": "Nahi abhi"
+    },
+    {
+      "context": "Aapki current job status kya hai",
+      "requested_bucket": "short",
+      "text": "Main unemployed hoon"
+    },
+    {
+      "context": "Aapko kitne paise dene hain",
+      "requested_bucket": "short",
+      "text": "Pach hazar"
+    },
+    {
+      "context": "Kya aapko koi bimari hai",
+      "requested_bucket": "short",
+      "text": "Haan thoda fever"
+    },
+    {
+      "context": "Kya aapne pehle kisi scheme ke liye apply kiya hai",
+      "requested_bucket": "short",
+      "text": "Nahi abhi tak"
+    },
+    {
+      "context": "Aapka contact number kya hai",
+      "requested_bucket": "short",
+      "text": "9876543210 hai"
+    },
+    {
+      "context": "Kya aap kal tak payment kar sakte hain",
+      "requested_bucket": "short",
+      "text": "Nahi kal tak bhi nahi"
+    },
+    {
+      "context": "Kitne din se aapka job nahi hai",
+      "requested_bucket": "short",
+      "text": "Do mahine ho gaye"
+    },
+    {
+      "context": "Aapki arrears amount kya hai",
+      "requested_bucket": "short",
+      "text": "Das hazar"
+    },
+    {
+      "context": "Kya aap kisi aur family member se madad le rahe hain",
+      "requested_bucket": "short",
+      "text": "Nahi khud ki problem hai"
+    },
+    {
+      "context": "Kya aap bank branch visit kar sakte hain",
+      "requested_bucket": "short",
+      "text": "Abhi nahi"
+    },
+    {
+      "context": "Aapko monthly income kitni hai",
+      "requested_bucket": "short",
+      "text": "Abhi zero hai"
+    },
+    {
+      "context": "Aapko kitni der tak madad chahiye",
+      "requested_bucket": "short",
+      "text": "Thodi der ke liye"
+    },
+    {
+      "context": "Kya aapko medical bills zyada hain",
+      "requested_bucket": "short",
+      "text": "Haan bahut"
+    },
+    {
+      "context": "Aapka loan account number bataiye",
+      "requested_bucket": "short",
+      "text": "56789 hai"
+    },
+    {
+      "context": "Kya aap payment ke liye plan bana sakte hain",
+      "requested_bucket": "short",
+      "text": "Abhi nahi"
+    },
+    {
+      "context": "Kya aap hamari koi mailing receive kar rahe hain",
+      "requested_bucket": "short",
+      "text": "Haan maine dekha"
+    },
+    {
+      "context": "Apni financial halat ke baare mein bataiye",
+      "requested_bucket": "medium",
+      "text": "Meri naukri chali gayi hai aur koi income nahi hai abhi"
+    },
+    {
+      "context": "Kya aap kisi government support scheme ka hissa hain",
+      "requested_bucket": "medium",
+      "text": "Abhi tak apply nahi kiya lekin soch raha hoon karne ka"
+    },
+    {
+      "context": "Aap abhi payment kab kar sakte hain",
+      "requested_bucket": "medium",
+      "text": "Thoda waqt chahiye kal tak toh nahi de sakta"
+    },
+    {
+      "context": "Kya aapko kisi aur se madad mil rahi hai iss waqt",
+      "requested_bucket": "medium",
+      "text": "Nahi main akela hi sab manage kar raha hoon"
+    },
+    {
+      "context": "Aap kis wajah se payment nahi kar pa rahe hain",
+      "requested_bucket": "medium",
+      "text": "Mera ilaj chal raha hai is wajah se paisa nahi hai"
+    },
+    {
+      "context": "Kya aapko kisi aur loan ya credit card ka payment bhi pending hai",
+      "requested_bucket": "medium",
+      "text": "Haan dusra loan bhi chal raha hai is wajah se dikkat hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2585707447,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: financial_hardship - explains they cannot pay right now because of job loss, illness or similar\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Aapka account number kya hai\",\"reply\":\"Mera account 123456\"},{\"agent_question\":\"Kya aap payment kar sakte hain abhi\",\"reply\":\"Nahi abhi\"},{\"agent_question\":\"Aapki current job status kya hai\",\"reply\":\"Main unemployed hoon\"},{\"agent_question\":\"Aapko kitne paise dene hain\",\"reply\":\"Pach hazar\"},{\"agent_question\":\"Kya aapko koi bimari hai\",\"reply\":\"Haan thoda fever\"},{\"agent_question\":\"Kya aapne pehle kisi scheme ke liye apply kiya hai\",\"reply\":\"Nahi abhi tak\"},{\"agent_question\":\"Aapka contact number kya hai\",\"reply\":\"9876543210 hai\"},{\"agent_question\":\"Kya aap kal tak payment kar sakte hain\",\"reply\":\"Nahi kal tak bhi nahi\"},{\"agent_question\":\"Kitne din se aapka job nahi hai\",\"reply\":\"Do mahine ho gaye\"},{\"agent_question\":\"Aapki arrears amount kya hai\",\"reply\":\"Das hazar\"},{\"agent_question\":\"Kya aap kisi aur family member se madad le rahe hain\",\"reply\":\"Nahi khud ki problem hai\"},{\"agent_question\":\"Kya aap bank branch visit kar sakte hain\",\"reply\":\"Abhi nahi\"},{\"agent_question\":\"Aapko monthly income kitni hai\",\"reply\":\"Abhi zero hai\"},{\"agent_question\":\"Aapko kitni der tak madad chahiye\",\"reply\":\"Thodi der ke liye\"},{\"agent_question\":\"Kya aapko medical bills zyada hain\",\"reply\":\"Haan bahut\"},{\"agent_question\":\"Aapka loan account number bataiye\",\"reply\":\"56789 hai\"},{\"agent_question\":\"Kya aap payment ke liye plan bana sakte hain\",\"reply\":\"Abhi nahi\"},{\"agent_question\":\"Kya aap hamari koi mailing receive kar rahe hain\",\"reply\":\"Haan maine dekha\"}],\"medium\":[{\"agent_question\":\"Apni financial halat ke baare mein bataiye\",\"reply\":\"Meri naukri chali gayi hai aur koi income nahi hai abhi\"},{\"agent_question\":\"Kya aap kisi government support scheme ka hissa hain\",\"reply\":\"Abhi tak apply nahi kiya lekin soch raha hoon karne ka\"},{\"agent_question\":\"Aap abhi payment kab kar sakte hain\",\"reply\":\"Thoda waqt chahiye kal tak toh nahi de sakta\"},{\"agent_question\":\"Kya aapko kisi aur se madad mil rahi hai iss waqt\",\"reply\":\"Nahi main akela hi sab manage kar raha hoon\"},{\"agent_question\":\"Aap kis wajah se payment nahi kar pa rahe hain\",\"reply\":\"Mera ilaj chal raha hai is wajah se paisa nahi hai\"},{\"agent_question\":\"Kya aapko kisi aur loan ya credit card ka payment bhi pending hai\",\"reply\":\"Haan dusra loan bhi chal raha hai is wajah se dikkat hai\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 401,
+    "output_tokens": 612
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.banking.lost_card.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "banking",
+  "intent": "lost_card",
+  "items": [
+    {
+      "context": "क्या आपकी कार्ड चोरी हो गई है",
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "आपका नाम क्या है",
+      "requested_bucket": "short",
+      "text": "राहुल शर्मा"
+    },
+    {
+      "context": "आपका अकाउंट नंबर बताइए",
+      "requested_bucket": "short",
+      "text": "अभी नहीं"
+    },
+    {
+      "context": "आपकी कार्ड पर आखिरी ट्रांजेक्शन कब हुआ था",
+      "requested_bucket": "short",
+      "text": "कल हुआ था"
+    },
+    {
+      "context": "क्या आपके पास कार्ड नंबर है",
+      "requested_bucket": "short",
+      "text": "हां है"
+    },
+    {
+      "context": "आपका पंजीकृत मोबाइल नंबर क्या है",
+      "requested_bucket": "short",
+      "text": "९८७६५४३२१०"
+    },
+    {
+      "context": "आपका पता सही है न",
+      "requested_bucket": "short",
+      "text": "हाँ सही है"
+    },
+    {
+      "context": "क्या आपने कार्ड खोने की रिपोर्ट पुलिस में दर्ज कराई है",
+      "requested_bucket": "short",
+      "text": "नहीं अभी नहीं"
+    },
+    {
+      "context": "कार्ड ब्लॉक करना चाहते हैं क्या",
+      "requested_bucket": "short",
+      "text": "जी हाँ"
+    },
+    {
+      "context": "क्या आपने पिछले महीने कोई बड़ी payment की थी",
+      "requested_bucket": "short",
+      "text": "नहीं"
+    },
+    {
+      "context": "आप कौन सा कार्ड इस्तेमाल कर रहे थे",
+      "requested_bucket": "short",
+      "text": "डेबिट कार्ड"
+    },
+    {
+      "context": "क्या आपको OTP मिला था",
+      "requested_bucket": "short",
+      "text": "मिला था"
+    },
+    {
+      "context": "आपका जन्मदिन कब है",
+      "requested_bucket": "short",
+      "text": "१५ अगस्त"
+    },
+    {
+      "context": "आपका खाता किस शहर में खुला है",
+      "requested_bucket": "short",
+      "text": "दिल्ली"
+    },
+    {
+      "context": "आपको कार्ड खोने का पता कब चला",
+      "requested_bucket": "medium",
+      "text": "कल शाम को मैंने देखा कार्ड नहीं था"
+    },
+    {
+      "context": "आपका नाम और पता फिर से बताइए",
+      "requested_bucket": "medium",
+      "text": "राहुल शर्मा हूँ और घर दिल्ली में है"
+    },
+    {
+      "context": "क्या आपने कार्ड ब्लॉक करने के अलावा कोई और शिकायत दर्ज करवाई",
+      "requested_bucket": "medium",
+      "text": "नहीं फिलहाल नहीं और पता भी पुलिस को नहीं दिया"
+    },
+    {
+      "context": "क्या आप कार्ड के जरिए कोई ट्रांजेक्शन करना चाहते थे जो पूरा हो गया",
+      "requested_bucket": "medium",
+      "text": "नहीं उस वक्त मैं कोई transaction नहीं कर रहा था"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2153228554,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: lost_card - reports a lost or stolen card and wants it blocked\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"क्या आपकी कार्ड चोरी हो गई है\",\"reply\":\"हाँ जी\"},{\"agent_question\":\"आपका नाम क्या है\",\"reply\":\"राहुल शर्मा\"},{\"agent_question\":\"आपका अकाउंट नंबर बताइए\",\"reply\":\"अभी नहीं\"},{\"agent_question\":\"आपकी कार्ड पर आखिरी ट्रांजेक्शन कब हुआ था\",\"reply\":\"कल हुआ था\"},{\"agent_question\":\"क्या आपके पास कार्ड नंबर है\",\"reply\":\"हां है\"},{\"agent_question\":\"आपका पंजीकृत मोबाइल नंबर क्या है\",\"reply\":\"९८७६५४३२१०\"},{\"agent_question\":\"आपका पता सही है न\",\"reply\":\"हाँ सही है\"},{\"agent_question\":\"क्या आपने कार्ड खोने की रिपोर्ट पुलिस में दर्ज कराई है\",\"reply\":\"नहीं अभी नहीं\"},{\"agent_question\":\"कार्ड ब्लॉक करना चाहते हैं क्या\",\"reply\":\"जी हाँ\"},{\"agent_question\":\"क्या आपने पिछले महीने कोई बड़ी payment की थी\",\"reply\":\"नहीं\"},{\"agent_question\":\"आप कौन सा कार्ड इस्तेमाल कर रहे थे\",\"reply\":\"डेबिट कार्ड\"},{\"agent_question\":\"क्या आपको OTP मिला था\",\"reply\":\"मिला था\"},{\"agent_question\":\"आपका जन्मदिन कब है\",\"reply\":\"१५ अगस्त\"},{\"agent_question\":\"आपका खाता किस शहर में खुला है\",\"reply\":\"दिल्ली\"}],\"medium\":[{\"agent_question\":\"आपको कार्ड खोने का पता कब चला\",\"reply\":\"कल शाम को मैंने देखा कार्ड नहीं था\"},{\"agent_question\":\"आपका नाम और पता फिर से बताइए\",\"reply\":\"राहुल शर्मा हूँ और घर दिल्ली में है\"},{\"agent_question\":\"क्या आपने कार्ड ब्लॉक करने के अलावा कोई और शिकायत दर्ज करवाई\",\"reply\":\"नहीं फिलहाल नहीं और पता भी पुलिस को नहीं दिया\"},{\"agent_question\":\"क्या आप कार्ड के जरिए कोई ट्रांजेक्शन करना चाहते थे जो पूरा हो गया\",\"reply\":\"नहीं उस वक्त मैं कोई transaction नहीं कर रहा था\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 498,
+    "output_tokens": 390
+  }
+}

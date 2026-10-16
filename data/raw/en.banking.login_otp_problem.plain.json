@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.banking.login_otp_problem.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "login_otp_problem",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "not receiving otp"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "please help me"
+    },
+    {
+      "context": "Have you received the OTP on your registered mobile number?",
+      "requested_bucket": "short",
+      "text": "not yet received"
+    },
+    {
+      "context": "Have you tried to resend the OTP?",
+      "requested_bucket": "short",
+      "text": "yes i tried"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i am unable to login to net banking due to otp issue"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "otp not coming on my phone since morning"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you please check why i am not getting otp"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i have tried multiple times but still no otp received"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my mobile number is updated but otp is still not coming"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "this is urgent i need to access my account now"
+    },
+    {
+      "context": "Did you try requesting the OTP again?",
+      "requested_bucket": "medium",
+      "text": "yes i did but no otp received so far"
+    },
+    {
+      "context": "Would you like the OTP to be sent to your email id?",
+      "requested_bucket": "medium",
+      "text": "please resend the otp to my email id also"
+    },
+    {
+      "context": "Can you confirm your registered mobile number?",
+      "requested_bucket": "medium",
+      "text": "my registered mobile number is 9876543210"
+    },
+    {
+      "context": "What phone and network are you using currently?",
+      "requested_bucket": "medium",
+      "text": "i am using android phone and network is stable"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i have not received the otp for net banking login despite repeated attempts all through today please help me resolve this issue soon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "every time i try to login on your app the otp does not arrive on my phone but my mobile number is correct and active now kindly assist"
+    },
+    {
+      "context": "Can you tell me what steps you have taken so far to receive the OTP?",
+      "requested_bucket": "long",
+      "text": "i have tried resending otp many times but it never comes on my phone now what can be done to fix this issue as i want to check my account balance"
+    },
+    {
+      "context": "Why is receiving the OTP critical for you right now?",
+      "requested_bucket": "long",
+      "text": "the otp is important for my transaction and without it i cannot proceed so can you please escalate my complaint for faster resolution"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3755420013,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: login_otp_problem - cannot log in to net or mobile banking or is not receiving the OTP\nLanguage: Indian English, Latin script.\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"not receiving otp\"},{\"text\":\"please help me\"}],\"short_with_context\":[{\"text\":\"not yet received\",\"context\":\"Have you received the OTP on your registered mobile number?\"},{\"text\":\"yes i tried\",\"context\":\"Have you tried to resend the OTP?\"}],\"medium\":[{\"text\":\"i am unable to login to net banking due to otp issue\"},{\"text\":\"otp not coming on my phone since morning\"},{\"text\":\"can you please check why i am not getting otp\"},{\"text\":\"i have tried multiple times but still no otp received\"},{\"text\":\"my mobile number is updated but otp is still not coming\"},{\"text\":\"this is urgent i need to access my account now\"}],\"medium_with_context\":[{\"text\":\"yes i did but no otp received so far\",\"context\":\"Did you try requesting the OTP again?\"},{\"text\":\"please resend the otp to my email id also\",\"context\":\"Would you like the OTP to be sent to your email id?\"},{\"text\":\"my registered mobile number is 9876543210\",\"context\":\"Can you confirm your registered mobile number?\"},{\"text\":\"i am using android phone and network is stable\",\"context\":\"What phone and network are you using currently?\"}],\"long\":[{\"text\":\"i have not received the otp for net banking login despite repeated attempts all through today please help me resolve this issue soon\"},{\"text\":\"every time i try to login on your app the otp does not arrive on my phone but my mobile number is correct and active now kindly assist\"}],\"long_with_context\":[{\"text\":\"i have tried resending otp many times but it never comes on my phone now what can be done to fix this issue as i want to check my account balance\",\"context\":\"Can you tell me what steps you have taken so far to receive the OTP?\"},{\"text\":\"the otp is important for my transaction and without it i cannot proceed so can you please escalate my complaint for faster resolution\",\"context\":\"Why is receiving the OTP critical for you right now?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 566,
+    "output_tokens": 409
+  }
+}

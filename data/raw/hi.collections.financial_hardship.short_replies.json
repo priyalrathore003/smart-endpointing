@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.collections.financial_hardship.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "financial_hardship",
+  "items": [
+    {
+      "context": "आपके पास अभी पैसे देने की स्थिति है क्या",
+      "requested_bucket": "short",
+      "text": "अभी नहीं"
+    },
+    {
+      "context": "कब तक पेमेंट कर पाएंगे आप",
+      "requested_bucket": "short",
+      "text": "अगले महीने"
+    },
+    {
+      "context": "कृपया अपना आкаун्ट नंबर बताएं",
+      "requested_bucket": "short",
+      "text": "पता नहीं"
+    },
+    {
+      "context": "क्या आप अपनी नौकरी गवा चुके हैं",
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "इस बिल के लिए कोई गारंटी दे पाएंगे",
+      "requested_bucket": "short",
+      "text": "मुमकिन नहीं"
+    },
+    {
+      "context": "आपका आखिरी पेमेंट कब हुआ था",
+      "requested_bucket": "short",
+      "text": "तीन महीने पहले"
+    },
+    {
+      "context": "क्या आपको अस्पताल में भर्ती कराया गया था",
+      "requested_bucket": "short",
+      "text": "हाँ था"
+    },
+    {
+      "context": "अभी कितनी राशि बकाया है आपके ऊपर",
+      "requested_bucket": "short",
+      "text": "पच्चीस हज़ार"
+    },
+    {
+      "context": "आप अपने पगार का प्रमाण दिखा सकते हैं",
+      "requested_bucket": "short",
+      "text": "नहीं सर"
+    },
+    {
+      "context": "तब तो आप जल्द ही पेमेंट कर पाएंगे",
+      "requested_bucket": "short",
+      "text": "शायद नहीं"
+    },
+    {
+      "context": "क्या इस समय कोई अन्य आर्थिक समस्या है",
+      "requested_bucket": "short",
+      "text": "हाँ है"
+    },
+    {
+      "context": "क्या आप कोई सहारा माँगना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "आपका नाम बताइए",
+      "requested_bucket": "short",
+      "text": "अमित"
+    },
+    {
+      "context": "क्या आप समय न लेकर पेमेंट कर पाएंगे",
+      "requested_bucket": "short",
+      "text": "ठीक है"
+    },
+    {
+      "context": "क्या हाल ही में आपकी जॉब में कोई बदलाव हुआ है",
+      "requested_bucket": "medium",
+      "text": "हाँ सर मेरी जॉब छूट गई है इस वजह से नहीं कर पा रहा"
+    },
+    {
+      "context": "आपके पास अभी पैसे जमा करने के अलावा कोई विकल्प है क्या",
+      "requested_bucket": "medium",
+      "text": "सर अभी घर में भी हालत ठीक नहीं है मुश्किल हो रहा है पैसे निकालना"
+    },
+    {
+      "context": "आपको इलाज के लिए अस्पताल में कितने दिन रहना पड़ा",
+      "requested_bucket": "medium",
+      "text": "लगभग दो हफ्ते तक रहना पड़ा इसलिए खर्चा ज्यादा हो गया"
+    },
+    {
+      "context": "पैसे देने में देरी के लिए फिर से कब तक तैयारी कर पाएंगे",
+      "requested_bucket": "medium",
+      "text": "जैसे ही नई नौकरी मिलती है अगली तारीख तक जरूर जमा कर दूंगा"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1411355549,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: financial_hardship - explains they cannot pay right now because of job loss, illness or similar\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"आपके पास अभी पैसे देने की स्थिति है क्या\",\"reply\":\"अभी नहीं\"},{\"agent_question\":\"कब तक पेमेंट कर पाएंगे आप\",\"reply\":\"अगले महीने\"},{\"agent_question\":\"कृपया अपना आкаун्ट नंबर बताएं\",\"reply\":\"पता नहीं\"},{\"agent_question\":\"क्या आप अपनी नौकरी गवा चुके हैं\",\"reply\":\"हाँ जी\"},{\"agent_question\":\"इस बिल के लिए कोई गारंटी दे पाएंगे\",\"reply\":\"मुमकिन नहीं\"},{\"agent_question\":\"आपका आखिरी पेमेंट कब हुआ था\",\"reply\":\"तीन महीने पहले\"},{\"agent_question\":\"क्या आपको अस्पताल में भर्ती कराया गया था\",\"reply\":\"हाँ था\"},{\"agent_question\":\"अभी कितनी राशि बकाया है आपके ऊपर\",\"reply\":\"पच्चीस हज़ार\"},{\"agent_question\":\"आप अपने पगार का प्रमाण दिखा सकते हैं\",\"reply\":\"नहीं सर\"},{\"agent_question\":\"तब तो आप जल्द ही पेमेंट कर पाएंगे\",\"reply\":\"शायद नहीं\"},{\"agent_question\":\"क्या इस समय कोई अन्य आर्थिक समस्या है\",\"reply\":\"हाँ है\"},{\"agent_question\":\"क्या आप कोई सहारा माँगना चाहते हैं\",\"reply\":\"हाँ जी\"},{\"agent_question\":\"आपका नाम बताइए\",\"reply\":\"अमित\"},{\"agent_question\":\"क्या आप समय न लेकर पेमेंट कर पाएंगे\",\"reply\":\"ठीक है\"}],\"medium\":[{\"agent_question\":\"क्या हाल ही में आपकी जॉब में कोई बदलाव हुआ है\",\"reply\":\"हाँ सर मेरी जॉब छूट गई है इस वजह से नहीं कर पा रहा\"},{\"agent_question\":\"आपके पास अभी पैसे जमा करने के अलावा कोई विकल्प है क्या\",\"reply\":\"सर अभी घर में भी हालत ठीक नहीं है मुश्किल हो रहा है पैसे निकालना\"},{\"agent_question\":\"आपको इलाज के लिए अस्पताल में कितने दिन रहना पड़ा\",\"reply\":\"लगभग दो हफ्ते तक रहना पड़ा इसलिए खर्चा ज्यादा हो गया\"},{\"agent_question\":\"पैसे देने में देरी के लिए फिर से कब तक तैयारी कर पाएंगे\",\"reply\":\"जैसे ही नई नौकरी मिलती है अगली तारीख तक जरूर जमा कर दूंगा\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 504,
+    "output_tokens": 435
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.telecom.escalate_complaint.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "escalate_complaint",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "फिर से नहीं हुआ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "जल्दी कर दो"
+    },
+    {
+      "context": "क्या आप अपना पूरा नाम बता सकते हैं?",
+      "requested_bucket": "short",
+      "text": "हां ठीक है"
+    },
+    {
+      "context": "क्या आपको समस्या का समाधान मिल गया?",
+      "requested_bucket": "short",
+      "text": "नहीं मिला"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर मैंने 5 दिन पहले complaint किया था लेकिन अभी तक कुछ नहीं हुआ।"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मेरे इलाके में नेटवर्क बिल्कुल खराब है हर दिन गिर जाता है कॉल।"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैडम मेरा नाम सुमित है और मेरा पता दिल्ली में है कृपया जल्दी देखें।"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैंने दो बार बतिया किया था लेकिन कोई भी follow up नहीं हुआ अब से complaint escalate करें।"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "कल से मेरा data नहीं चल रहा है और customer care कोई मदद नहीं दे रहा।"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "क्या आप मेरे account की स्टेटस चेक कर सकते हो अभी तक रिफंड नहीं मिला।"
+    },
+    {
+      "context": "आप अपना नाम और मोबाइल नंबर दे सकते हैं?",
+      "requested_bucket": "medium",
+      "text": "मेरा नाम हिना है और मेरा मोबाइल नंबर 9876543210 है।"
+    },
+    {
+      "context": "क्या पिछली बार आपकी शिकायत का समाधान हुआ था?",
+      "requested_bucket": "medium",
+      "text": "मैं पिछले हफ्ते complaint किया था लेकिन कोई जवाब नहीं मिला।"
+    },
+    {
+      "context": "कृपया अपनी शिकायत बताएं क्या समस्या है?",
+      "requested_bucket": "medium",
+      "text": "मेरी समस्या नेटवर्क इशू की है यहाँ जयपुर में बहुत बार कॉल कट जाता है।"
+    },
+    {
+      "context": "क्या आप इस शिकायत को escalate करना चाहते हैं?",
+      "requested_bucket": "medium",
+      "text": "मैं चाहता हूँ कि मेरी शिकायत तुरंत सीनियर अधिकारी के पास जाएगी।"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर मैं कल भी फोन कर चुका हूँ पर मेरे issue का कोई हल नहीं निकला है कृपया मेरी शिकायत को ऊपरी अधिकारी तक पहुँचाएं।"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैडम मेरा नाम राहुल है मैं मुंबई से बोल रहा हूँ मैंने चार दिन पहले data recharge किया था लेकिन अभी तक activate नहीं हुआ।"
+    },
+    {
+      "context": "पहली बार शिकायत करने के बाद क्या आपकी समस्या ठीक हुई?",
+      "requested_bucket": "long",
+      "text": "मैंने 10 तारीख को complaint किया था लेकिन अभी तक उसको कोई ध्यान नहीं दिया गया है इसलिए मैं दूसरी बार कॉल कर रहा हूँ।"
+    },
+    {
+      "context": "कृपया बताएं आपकी शिकायत किस प्रकार की है?",
+      "requested_bucket": "long",
+      "text": "मेरे इलाके में signal बहुत खराब हो गया है और customer care से कोई सही समाधान नहीं मिल रहा इसलिए मैं escalation चाहूँगा।"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2968851182,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: escalate_complaint - is unhappy that an earlier complaint was not solved and wants escalation\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"फिर से नहीं हुआ\"},{\"text\":\"जल्दी कर दो\"}],\"short_with_context\":[{\"text\":\"हां ठीक है\",\"context\":\"क्या आप अपना पूरा नाम बता सकते हैं?\"},{\"text\":\"नहीं मिला\",\"context\":\"क्या आपको समस्या का समाधान मिल गया?\"}],\"medium\":[{\"text\":\"सर मैंने 5 दिन पहले complaint किया था लेकिन अभी तक कुछ नहीं हुआ।\"},{\"text\":\"मेरे इलाके में नेटवर्क बिल्कुल खराब है हर दिन गिर जाता है कॉल।\"},{\"text\":\"मैडम मेरा नाम सुमित है और मेरा पता दिल्ली में है कृपया जल्दी देखें।\"},{\"text\":\"मैंने दो बार बतिया किया था लेकिन कोई भी follow up नहीं हुआ अब से complaint escalate करें।\"},{\"text\":\"कल से मेरा data नहीं चल रहा है और customer care कोई मदद नहीं दे रहा।\"},{\"text\":\"क्या आप मेरे account की स्टेटस चेक कर सकते हो अभी तक रिफंड नहीं मिला।\"}],\"medium_with_context\":[{\"text\":\"मेरा नाम हिना है और मेरा मोबाइल नंबर 9876543210 है।\",\"context\":\"आप अपना नाम और मोबाइल नंबर दे सकते हैं?\"},{\"text\":\"मैं पिछले हफ्ते complaint किया था लेकिन कोई जवाब नहीं मिला।\",\"context\":\"क्या पिछली बार आपकी शिकायत का समाधान हुआ था?\"},{\"text\":\"मेरी समस्या नेटवर्क इशू की है यहाँ जयपुर में बहुत बार कॉल कट जाता है।\",\"context\":\"कृपया अपनी शिकायत बताएं क्या समस्या है?\"},{\"text\":\"मैं चाहता हूँ कि मेरी शिकायत तुरंत सीनियर अधिकारी के पास जाएगी।\",\"context\":\"क्या आप इस शिकायत को escalate करना चाहते हैं?\"}],\"long\":[{\"text\":\"सर मैं कल भी फोन कर चुका हूँ पर मेरे issue का कोई हल नहीं निकला है कृपया मेरी शिकायत को ऊपरी अधिकारी तक पहुँचाएं।\"},{\"text\":\"मैडम मेरा नाम राहुल है मैं मुंबई से बोल रहा हूँ मैंने चार दिन पहले data recharge किया था लेकिन अभी तक activate नहीं हुआ।\"}],\"long_with_context\":[{\"text\":\"मैंने 10 तारीख को complaint किया था लेकिन अभी तक उसको कोई ध्यान नहीं दिया गया है इसलिए मैं दूसरी बार कॉल कर रहा हूँ।\",\"context\":\"पहली बार शिकायत करने के बाद क्या आपकी समस्या ठीक हुई?\"},{\"text\":\"मेरे इलाके में signal बहुत खराब हो गया है और customer care से कोई सही समाधान नहीं मिल रहा इसलिए मैं escalation चाहूँगा।\",\"context\":\"कृपया बताएं आपकी शिकायत किस प्रकार की है?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 697,
+    "output_tokens": 504
+  }
+}

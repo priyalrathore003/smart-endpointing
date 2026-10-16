@@ -1,0 +1,142 @@
+{
+  "batch_id": "en.telecom.escalate_complaint.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "escalate_complaint",
+  "items": [
+    {
+      "context": "Can you please confirm your registered mobile number",
+      "requested_bucket": "short",
+      "text": "Nine eight seven six five four three two one zero"
+    },
+    {
+      "context": "Have you already raised a complaint previously",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Is your service currently active",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Do you want me to escalate the matter",
+      "requested_bucket": "short",
+      "text": "Yes please"
+    },
+    {
+      "context": "Are you facing network issues or billing problems",
+      "requested_bucket": "short",
+      "text": "Network issues"
+    },
+    {
+      "context": "Did the technician visit your place",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Would you prefer a callback from the senior executive",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Is your SIM card inserted properly",
+      "requested_bucket": "short",
+      "text": "Yes it is"
+    },
+    {
+      "context": "Have you tried restarting your phone",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Can you share your service area pin code",
+      "requested_bucket": "short",
+      "text": "Five six seven zero one"
+    },
+    {
+      "context": "Is your bill payment up to date",
+      "requested_bucket": "short",
+      "text": "No not yet"
+    },
+    {
+      "context": "Would you like us to send an SMS update",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Are you using a postpaid or prepaid connection",
+      "requested_bucket": "short",
+      "text": "Postpaid"
+    },
+    {
+      "context": "Did the previous complaint get acknowledged",
+      "requested_bucket": "short",
+      "text": "No it did not"
+    },
+    {
+      "context": "When did you first notice the problem",
+      "requested_bucket": "short",
+      "text": "Last week"
+    },
+    {
+      "context": "Would you like me to escalate this complaint today",
+      "requested_bucket": "short",
+      "text": "Today itself please"
+    },
+    {
+      "context": "Can you describe the problem you are facing",
+      "requested_bucket": "short",
+      "text": "Network keeps dropping since three days"
+    },
+    {
+      "context": "How long has this issue been affecting your service",
+      "requested_bucket": "short",
+      "text": "It started about a week ago"
+    },
+    {
+      "context": "Can you please provide more details about your complaint",
+      "requested_bucket": "medium",
+      "text": "I raised a complaint last week but nobody came to fix it"
+    },
+    {
+      "context": "What exactly was the issue in your earlier complaint",
+      "requested_bucket": "medium",
+      "text": "My internet has not been working properly for past ten days"
+    },
+    {
+      "context": "Have you received any updates on your previous complaint",
+      "requested_bucket": "medium",
+      "text": "No I have not received any updates till now"
+    },
+    {
+      "context": "Do you want us to escalate this to the higher authorities",
+      "requested_bucket": "medium",
+      "text": "Yes I want this escalated immediately to resolve the issue"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1977173647,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: escalate_complaint - is unhappy that an earlier complaint was not solved and wants escalation\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Can you please confirm your registered mobile number\",\"reply\":\"Nine eight seven six five four three two one zero\"},{\"agent_question\":\"Have you already raised a complaint previously\",\"reply\":\"Yes\"},{\"agent_question\":\"Is your service currently active\",\"reply\":\"No\"},{\"agent_question\":\"Do you want me to escalate the matter\",\"reply\":\"Yes please\"},{\"agent_question\":\"Are you facing network issues or billing problems\",\"reply\":\"Network issues\"},{\"agent_question\":\"Did the technician visit your place\",\"reply\":\"No\"},{\"agent_question\":\"Would you prefer a callback from the senior executive\",\"reply\":\"Yes\"},{\"agent_question\":\"Is your SIM card inserted properly\",\"reply\":\"Yes it is\"},{\"agent_question\":\"Have you tried restarting your phone\",\"reply\":\"Yes\"},{\"agent_question\":\"Can you share your service area pin code\",\"reply\":\"Five six seven zero one\"},{\"agent_question\":\"Is your bill payment up to date\",\"reply\":\"No not yet\"},{\"agent_question\":\"Would you like us to send an SMS update\",\"reply\":\"Yes\"},{\"agent_question\":\"Are you using a postpaid or prepaid connection\",\"reply\":\"Postpaid\"},{\"agent_question\":\"Did the previous complaint get acknowledged\",\"reply\":\"No it did not\"},{\"agent_question\":\"When did you first notice the problem\",\"reply\":\"Last week\"},{\"agent_question\":\"Would you like me to escalate this complaint today\",\"reply\":\"Today itself please\"},{\"agent_question\":\"Can you describe the problem you are facing\",\"reply\":\"Network keeps dropping since three days\"},{\"agent_question\":\"How long has this issue been affecting your service\",\"reply\":\"It started about a week ago\"}],\"medium\":[{\"agent_question\":\"Can you please provide more details about your complaint\",\"reply\":\"I raised a complaint last week but nobody came to fix it\"},{\"agent_question\":\"What exactly was the issue in your earlier complaint\",\"reply\":\"My internet has not been working properly for past ten days\"},{\"agent_question\":\"Have you received any updates on your previous complaint\",\"reply\":\"No I have not received any updates till now\"},{\"agent_question\":\"Do you want us to escalate this to the higher authorities\",\"reply\":\"Yes I want this escalated immediately to resolve the issue\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 372,
+    "output_tokens": 433
+  }
+}

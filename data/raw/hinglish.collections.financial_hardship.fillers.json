@@ -1,0 +1,172 @@
+{
+  "batch_id": "hinglish.collections.financial_hardship.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "financial_hardship",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "accha theek hai"
+    },
+    {
+      "context": "Please hold for a moment sir can you wait",
+      "requested_bucket": "short",
+      "text": "thoda wait kr lijiye"
+    },
+    {
+      "context": "Can you confirm the amount you can pay now",
+      "requested_bucket": "short",
+      "text": "thik hai ji"
+    },
+    {
+      "context": "Do you want to speak with our financial hardship team",
+      "requested_bucket": "short",
+      "text": "ji haan boliye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera job chala gaya is wajah se payment nahi kar paunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "woh haan main beemar tha is mahine to payment delay ho gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "meri salary abhi nahi aayi isliye thoda time chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kal ya parson paise bhejne ki koshish karunga ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine socha tha Tuesday ko bhej dunga par nahi Wednesday ko"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "meri kisi family emergency ki wajah se thoda dikkat ho rahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "apni financial situation abhi thik nahi hai thoda samay chahiye"
+    },
+    {
+      "context": "Can you explain why you are not able to pay the instalment this month",
+      "requested_bucket": "medium",
+      "text": "haan ji main job loss ki wajah se payment abhi nahi kar pa raha"
+    },
+    {
+      "context": "Was there any particular reason for the delay in payment sir",
+      "requested_bucket": "medium",
+      "text": "meri tabiyat theek nahi thi isi wajah se jald payment nahi kar paya"
+    },
+    {
+      "context": "Can you specify your reason for requesting financial hardship support",
+      "requested_bucket": "medium",
+      "text": "garib parivar ka jimmedar hun is waqt to paisa dena mushkil hai"
+    },
+    {
+      "context": "When do you think you will be able to make the payment",
+      "requested_bucket": "medium",
+      "text": "main kal tak koshish karunga paisa jama karne ki par confirm nahi hai"
+    },
+    {
+      "context": "Can you tell us if recent job loss caused this situation",
+      "requested_bucket": "medium",
+      "text": "thodi job dhoond raha tha is reason payment nahi kar saka"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main apne previous employer se nikala gaya hu isliye iss mahine payment nahi kar paunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mere paas abhi medical bills hain jiski wajah se financial condition thodi tight hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "meri salary delay ho gayi hai aur main temporary unpaid leave pe hu isliye mahsus ho raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main samajhta hu ki payment important hai par meri situation bahut kharab hai is waqt"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kal se main ek naye job ke liye interview de raha hu to paisa bhejna mushkil hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera dost bhi financial crisis se guzar raha hai to apne parivaar ke sath problems hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "thoda aur samay dena please kyunki job recovery mein kuch din lag jayenge mujhe abhi"
+    },
+    {
+      "context": "Sir can you tell me if there was any emergency or illness causing the delay",
+      "requested_bucket": "long",
+      "text": "mai aapse maafi chahta hu par mera accident ho gaya tha us wajah se payment delay hua hai"
+    },
+    {
+      "context": "Can you explain your current employment status and why payment is delayed",
+      "requested_bucket": "long",
+      "text": "meri company band ho gayi hai is liye paisa jama karne mein dikkat aa rahi hai mujhe"
+    },
+    {
+      "context": "What is your plan to clear the outstanding payment sir",
+      "requested_bucket": "long",
+      "text": "mai kal apne accountant se baat karunga aur turant paise transfer karne ki koshish karunga"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 4073705978,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: financial_hardship - explains they cannot pay right now because of job loss, illness or similar\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal tak\"},{\"text\":\"accha theek hai\"}],\"short_with_context\":[{\"text\":\"thoda wait kr lijiye\",\"context\":\"Please hold for a moment sir can you wait\"},{\"text\":\"thik hai ji\",\"context\":\"Can you confirm the amount you can pay now\"},{\"text\":\"ji haan boliye\",\"context\":\"Do you want to speak with our financial hardship team\"}],\"medium\":[{\"text\":\"mera job chala gaya is wajah se payment nahi kar paunga\"},{\"text\":\"woh haan main beemar tha is mahine to payment delay ho gaya\"},{\"text\":\"meri salary abhi nahi aayi isliye thoda time chahiye\"},{\"text\":\"kal ya parson paise bhejne ki koshish karunga ji\"},{\"text\":\"maine socha tha Tuesday ko bhej dunga par nahi Wednesday ko\"},{\"text\":\"meri kisi family emergency ki wajah se thoda dikkat ho rahi hai\"},{\"text\":\"apni financial situation abhi thik nahi hai thoda samay chahiye\"}],\"medium_with_context\":[{\"text\":\"haan ji main job loss ki wajah se payment abhi nahi kar pa raha\",\"context\":\"Can you explain why you are not able to pay the instalment this month\"},{\"text\":\"meri tabiyat theek nahi thi isi wajah se jald payment nahi kar paya\",\"context\":\"Was there any particular reason for the delay in payment sir\"},{\"text\":\"garib parivar ka jimmedar hun is waqt to paisa dena mushkil hai\",\"context\":\"Can you specify your reason for requesting financial hardship support\"},{\"text\":\"main kal tak koshish karunga paisa jama karne ki par confirm nahi hai\",\"context\":\"When do you think you will be able to make the payment\"},{\"text\":\"thodi job dhoond raha tha is reason payment nahi kar saka\",\"context\":\"Can you tell us if recent job loss caused this situation\"}],\"long\":[{\"text\":\"main apne previous employer se nikala gaya hu isliye iss mahine payment nahi kar paunga\"},{\"text\":\"mere paas abhi medical bills hain jiski wajah se financial condition thodi tight hai\"},{\"text\":\"meri salary delay ho gayi hai aur main temporary unpaid leave pe hu isliye mahsus ho raha\"},{\"text\":\"main samajhta hu ki payment important hai par meri situation bahut kharab hai is waqt\"},{\"text\":\"kal se main ek naye job ke liye interview de raha hu to paisa bhejna mushkil hai\"},{\"text\":\"mera dost bhi financial crisis se guzar raha hai to apne parivaar ke sath problems hain\"},{\"text\":\"thoda aur samay dena please kyunki job recovery mein kuch din lag jayenge mujhe abhi\"}],\"long_with_context\":[{\"text\":\"mai aapse maafi chahta hu par mera accident ho gaya tha us wajah se payment delay hua hai\",\"context\":\"Sir can you tell me if there was any emergency or illness causing the delay\"},{\"text\":\"meri company band ho gayi hai is liye paisa jama karne mein dikkat aa rahi hai mujhe\",\"context\":\"Can you explain your current employment status and why payment is delayed\"},{\"text\":\"mai kal apne accountant se baat karunga aur turant paise transfer karne ki koshish karunga\",\"context\":\"What is your plan to clear the outstanding payment sir\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 617,
+    "output_tokens": 692
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.delivery.cod_payment.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "delivery",
+  "intent": "cod_payment",
+  "items": [
+    {
+      "context": "Are you facing issues with cash on delivery payment",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Did the delivery person accept your payment",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Is the amount you have less than the bill",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Have you tried paying online instead",
+      "requested_bucket": "short",
+      "text": "Not yet"
+    },
+    {
+      "context": "Is the payment gateway showing any error",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Did you receive a message about payment failure",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Are you willing to pay through wallet now",
+      "requested_bucket": "short",
+      "text": "Maybe later"
+    },
+    {
+      "context": "Is the delivery scheduled for today",
+      "requested_bucket": "short",
+      "text": "Tomorrow"
+    },
+    {
+      "context": "Do you want to reschedule the delivery",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Is cash available with you at the moment",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Have you checked the exact amount to pay",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Is there any change issue with delivery person",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Have you contacted the delivery service before",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Would you prefer to cancel the order",
+      "requested_bucket": "short",
+      "text": "Not now"
+    },
+    {
+      "context": "Can you explain the problem with cash on delivery",
+      "requested_bucket": "medium",
+      "text": "The delivery guy did not have change for two hundred"
+    },
+    {
+      "context": "When are you available to receive and pay the order",
+      "requested_bucket": "medium",
+      "text": "I can be available by six pm today only"
+    },
+    {
+      "context": "Is there any error displayed on the payment app",
+      "requested_bucket": "medium",
+      "text": "The app says transaction failed but it deducted money"
+    },
+    {
+      "context": "What was the exact amount you tried to pay",
+      "requested_bucket": "medium",
+      "text": "I tried to pay two thousand five hundred rupees"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2987234185,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cod_payment - has a problem with cash on delivery or payment at the door\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Are you facing issues with cash on delivery payment\",\"reply\":\"Yes\"},{\"agent_question\":\"Did the delivery person accept your payment\",\"reply\":\"No\"},{\"agent_question\":\"Is the amount you have less than the bill\",\"reply\":\"Yes\"},{\"agent_question\":\"Have you tried paying online instead\",\"reply\":\"Not yet\"},{\"agent_question\":\"Is the payment gateway showing any error\",\"reply\":\"No\"},{\"agent_question\":\"Did you receive a message about payment failure\",\"reply\":\"Yes\"},{\"agent_question\":\"Are you willing to pay through wallet now\",\"reply\":\"Maybe later\"},{\"agent_question\":\"Is the delivery scheduled for today\",\"reply\":\"Tomorrow\"},{\"agent_question\":\"Do you want to reschedule the delivery\",\"reply\":\"Yes\"},{\"agent_question\":\"Is cash available with you at the moment\",\"reply\":\"No\"},{\"agent_question\":\"Have you checked the exact amount to pay\",\"reply\":\"Yes\"},{\"agent_question\":\"Is there any change issue with delivery person\",\"reply\":\"Yes\"},{\"agent_question\":\"Have you contacted the delivery service before\",\"reply\":\"No\"},{\"agent_question\":\"Would you prefer to cancel the order\",\"reply\":\"Not now\"}],\"medium\":[{\"agent_question\":\"Can you explain the problem with cash on delivery\",\"reply\":\"The delivery guy did not have change for two hundred\"},{\"agent_question\":\"When are you available to receive and pay the order\",\"reply\":\"I can be available by six pm today only\"},{\"agent_question\":\"Is there any error displayed on the payment app\",\"reply\":\"The app says transaction failed but it deducted money\"},{\"agent_question\":\"What was the exact amount you tried to pay\",\"reply\":\"I tried to pay two thousand five hundred rupees\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 370,
+    "output_tokens": 333
+  }
+}

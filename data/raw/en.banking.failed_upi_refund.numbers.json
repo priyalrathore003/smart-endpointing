@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.banking.failed_upi_refund.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "failed_upi_refund",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "refund please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "transaction failed"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "my upi id"
+    },
+    {
+      "context": "Please provide the transaction ID",
+      "requested_bucket": "short",
+      "text": "txn id 123456"
+    },
+    {
+      "context": "Can I have your registered mobile number",
+      "requested_bucket": "short",
+      "text": "registered mobile number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the money got deducted but payment did not go through"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i tried sending three thousand on twenty fifth april but it failed"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the amount fifty five hundred rupees was debited from my account"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you help me get the refund of failed upi payment"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my upi payment went through bank of baroda but status is failed"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please check the payment failure reason and refund my amount"
+    },
+    {
+      "context": "What issue did you face with the payment?",
+      "requested_bucket": "medium",
+      "text": "the transaction got debited but recipient did not receive it"
+    },
+    {
+      "context": "What amount was involved in the transaction?",
+      "requested_bucket": "medium",
+      "text": "i paid two thousand five hundred but it shows payment failed"
+    },
+    {
+      "context": "Can you confirm the phone number linked to your UPI?",
+      "requested_bucket": "medium",
+      "text": "my u pi payment from phone number nine eight seven six five four three two one zero failed"
+    },
+    {
+      "context": "Please give the last four digits of your bank account number",
+      "requested_bucket": "medium",
+      "text": "my account number ends with five seven six four and money was debited"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i initiated a payment of four thousand five hundred rupees to amazon seller but transaction failed and amount is debited from my sbi account"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "on twenty ninth march i attempted to pay a bill of three thousand using google pay but the app showed failure and money got deducted"
+    },
+    {
+      "context": "Can you explain what happened during your transaction?",
+      "requested_bucket": "long",
+      "text": "i sent payment through my upi id but it failed and the money of seven thousand rupees is debited from my account what can be done"
+    },
+    {
+      "context": "When did the transaction take place and what is the concern?",
+      "requested_bucket": "long",
+      "text": "the transaction was made on first of june the money left my account but the payment status says failed so when will it be refunded"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 681304126,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: failed_upi_refund - a UPI or online payment failed but money was debited; wants a refund\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"refund please\"},{\"text\":\"transaction failed\"},{\"text\":\"yes\"},{\"text\":\"my upi id\"}],\"short_with_context\":[{\"text\":\"txn id 123456\",\"context\":\"Please provide the transaction ID\"},{\"text\":\"registered mobile number\",\"context\":\"Can I have your registered mobile number\"}],\"medium\":[{\"text\":\"the money got deducted but payment did not go through\"},{\"text\":\"i tried sending three thousand on twenty fifth april but it failed\"},{\"text\":\"the amount fifty five hundred rupees was debited from my account\"},{\"text\":\"can you help me get the refund of failed upi payment\"},{\"text\":\"my upi payment went through bank of baroda but status is failed\"},{\"text\":\"please check the payment failure reason and refund my amount\"}],\"medium_with_context\":[{\"text\":\"the transaction got debited but recipient did not receive it\",\"context\":\"What issue did you face with the payment?\"},{\"text\":\"i paid two thousand five hundred but it shows payment failed\",\"context\":\"What amount was involved in the transaction?\"},{\"text\":\"my u pi payment from phone number nine eight seven six five four three two one zero failed\",\"context\":\"Can you confirm the phone number linked to your UPI?\"},{\"text\":\"my account number ends with five seven six four and money was debited\",\"context\":\"Please give the last four digits of your bank account number\"}],\"long\":[{\"text\":\"i initiated a payment of four thousand five hundred rupees to amazon seller but transaction failed and amount is debited from my sbi account\"},{\"text\":\"on twenty ninth march i attempted to pay a bill of three thousand using google pay but the app showed failure and money got deducted\"}],\"long_with_context\":[{\"text\":\"i sent payment through my upi id but it failed and the money of seven thousand rupees is debited from my account what can be done\",\"context\":\"Can you explain what happened during your transaction?\"},{\"text\":\"the transaction was made on first of june the money left my account but the payment status says failed so when will it be refunded\",\"context\":\"When did the transaction take place and what is the concern?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 597,
+    "output_tokens": 436
+  }
+}

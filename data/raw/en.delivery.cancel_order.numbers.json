@@ -1,0 +1,162 @@
+{
+  "batch_id": "en.delivery.cancel_order.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "cancel_order",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "cancel order"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "order number nine three four five"
+    },
+    {
+      "context": "Do you want to cancel the order now",
+      "requested_bucket": "short",
+      "text": "yes cancel it"
+    },
+    {
+      "context": "Can you please provide your order number",
+      "requested_bucket": "short",
+      "text": "order number seven six five four"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i want to cancel my order placed yesterday evening"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please cancel the delivery scheduled for the twenty fifth march"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you help me cancel my order with transaction id two zero zero six"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i need to cancel order number four eight seven six nine five immediately"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i just placed order number two three four five six but want to cancel"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kindly cancel my order because i entered wrong delivery address"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please cancel my order i dont want it delivered anymore"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my name is rohan singh and i want to cancel my recent order"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the order placed on phone number nine eight seven six five four three two one zero"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i entered the wrong phone number during order can i cancel it now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i want to cancel order number five six seven eight nine zero thanks"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you please cancel the order delivered to my address in noida"
+    },
+    {
+      "context": "Are you sure you want to cancel the order",
+      "requested_bucket": "medium",
+      "text": "yes i want to cancel it please"
+    },
+    {
+      "context": "Could you provide your order number for cancellation",
+      "requested_bucket": "medium",
+      "text": "my order is number eight seven six five three please cancel"
+    },
+    {
+      "context": "Can you tell me why you want to cancel the order",
+      "requested_bucket": "medium",
+      "text": "because the package is delayed i want to cancel it"
+    },
+    {
+      "context": "When do you plan to order again after cancellation",
+      "requested_bucket": "medium",
+      "text": "i will reorder later so please cancel this now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i just checked my order status and since it shows out for delivery i want to cancel it before it reaches me"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i placed an order yesterday night for groceries but changed my mind so please cancel it before dispatch"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "the order number four five six seven eight nine placed by sushma has to be cancelled due to wrong item selection"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i was charged two five zero rupees for the last order placed but need to cancel it due to an address error"
+    },
+    {
+      "context": "The order has been processed and shipped are you sure you want to cancel it now",
+      "requested_bucket": "long",
+      "text": "i am sorry but we cannot cancel orders once they are dispatched can you please confirm if the status is still processing"
+    },
+    {
+      "context": "Since your order is still processing i can cancel it now for you please confirm your order number",
+      "requested_bucket": "long",
+      "text": "yes the status is still showing processing so please proceed with cancellation as i do not want the item anymore"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3996198598,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cancel_order - wants to cancel an order\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"cancel order\"},{\"text\":\"order number nine three four five\"}],\"short_with_context\":[{\"text\":\"yes cancel it\",\"context\":\"Do you want to cancel the order now\"},{\"text\":\"order number seven six five four\",\"context\":\"Can you please provide your order number\"}],\"medium\":[{\"text\":\"i want to cancel my order placed yesterday evening\"},{\"text\":\"please cancel the delivery scheduled for the twenty fifth march\"},{\"text\":\"can you help me cancel my order with transaction id two zero zero six\"},{\"text\":\"i need to cancel order number four eight seven six nine five immediately\"},{\"text\":\"i just placed order number two three four five six but want to cancel\"},{\"text\":\"kindly cancel my order because i entered wrong delivery address\"},{\"text\":\"please cancel my order i dont want it delivered anymore\"},{\"text\":\"my name is rohan singh and i want to cancel my recent order\"},{\"text\":\"the order placed on phone number nine eight seven six five four three two one zero\"},{\"text\":\"i entered the wrong phone number during order can i cancel it now\"},{\"text\":\"i want to cancel order number five six seven eight nine zero thanks\"},{\"text\":\"can you please cancel the order delivered to my address in noida\"}],\"medium_with_context\":[{\"text\":\"yes i want to cancel it please\",\"context\":\"Are you sure you want to cancel the order\"},{\"text\":\"my order is number eight seven six five three please cancel\",\"context\":\"Could you provide your order number for cancellation\"},{\"text\":\"because the package is delayed i want to cancel it\",\"context\":\"Can you tell me why you want to cancel the order\"},{\"text\":\"i will reorder later so please cancel this now\",\"context\":\"When do you plan to order again after cancellation\"}],\"long\":[{\"text\":\"i just checked my order status and since it shows out for delivery i want to cancel it before it reaches me\"},{\"text\":\"i placed an order yesterday night for groceries but changed my mind so please cancel it before dispatch\"},{\"text\":\"the order number four five six seven eight nine placed by sushma has to be cancelled due to wrong item selection\"},{\"text\":\"i was charged two five zero rupees for the last order placed but need to cancel it due to an address error\"}],\"long_with_context\":[{\"text\":\"i am sorry but we cannot cancel orders once they are dispatched can you please confirm if the status is still processing\",\"context\":\"The order has been processed and shipped are you sure you want to cancel it now\"},{\"text\":\"yes the status is still showing processing so please proceed with cancellation as i do not want the item anymore\",\"context\":\"Since your order is still processing i can cancel it now for you please confirm your order number\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 583,
+    "output_tokens": 552
+  }
+}

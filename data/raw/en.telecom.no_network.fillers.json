@@ -1,0 +1,167 @@
+{
+  "batch_id": "en.telecom.no_network.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "no_network",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "no signal"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "call drops"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "very slow"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "full network"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nowhere"
+    },
+    {
+      "context": "What issue are you facing with your network?",
+      "requested_bucket": "short",
+      "text": "no service"
+    },
+    {
+      "context": "Can you describe the network problem?",
+      "requested_bucket": "short",
+      "text": "weak signal"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umm I mean the internet is really slow from morning"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "actually I keep losing signal outside my house"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my calls drop frequently especially in the evenings"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "like on Tuesday no Wednesday last week I faced no network"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "uhm sometimes the network gets disconnected even though full bars"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I noticed no internet on 24th April around Delhi area"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "network is down since morning in my area I tried restarting"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my data is working but calls are dropping randomly every now and then"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the signal strength fluctuates a lot inside my apartment no idea why"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I faced no network issue last night from around 10 pm onwards"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "sometimes it shows no network like around 5 minutes and comes back"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I am not able to connect calls properly since yesterday evening"
+    },
+    {
+      "context": "Can you tell me where you mostly face the network issue?",
+      "requested_bucket": "medium",
+      "text": "I am experiencing network outage especially when I go to the terrace"
+    },
+    {
+      "context": "Is the internet slow or is it the call quality you are facing issues with?",
+      "requested_bucket": "medium",
+      "text": "signal strength is weak and internet speed is very slow now"
+    },
+    {
+      "context": "When did you start noticing the calls dropping?",
+      "requested_bucket": "medium",
+      "text": "my calls are dropping since last night around 8 pm to 9 pm"
+    },
+    {
+      "context": "Can you describe the problem you see on your phone regarding network?",
+      "requested_bucket": "medium",
+      "text": "sometimes the network disappears suddenly but full bars still show"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I have been facing no network issue intermittently especially during the late evenings at my home in Mumbai it is very frustrating"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "The call gets disconnected very often even when the signal bars show full strength like yesterday I had a call that dropped three times"
+    },
+    {
+      "context": "Could you please describe the issue you are facing with your network in detail?",
+      "requested_bucket": "long",
+      "text": "actually I want to report the bad network coverage at my office in Bangalore since last two days calls keep dropping mid conversation and internet is very slow"
+    },
+    {
+      "context": "When was the last time you faced the no network or internet problem?",
+      "requested_bucket": "long",
+      "text": "um on Wednesday no Thursday last week the internet was completely down for almost four hours in my area near Andheri I checked with my neighbors they had the same problem"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1166460772,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: no_network - has no signal, call drops or slow internet\nLanguage: Indian English, Latin script.\nStyle for this batch: with fillers and hesitations (umm, uh, like, actually, I mean); at least a third include a self-correction ('Tuesday, no, Wednesday')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"no signal\"},{\"text\":\"call drops\"}, {\"text\":\"very slow\"}, {\"text\":\"full network\"}, {\"text\":\"nowhere\"}],\"short_with_context\":[{\"text\":\"no service\",\"context\":\"What issue are you facing with your network?\"},{\"text\":\"weak signal\",\"context\":\"Can you describe the network problem?\"}],\"medium\":[{\"text\":\"umm I mean the internet is really slow from morning\"},{\"text\":\"actually I keep losing signal outside my house\"},{\"text\":\"my calls drop frequently especially in the evenings\"},{\"text\":\"like on Tuesday no Wednesday last week I faced no network\"},{\"text\":\"uhm sometimes the network gets disconnected even though full bars\"},{\"text\":\"I noticed no internet on 24th April around Delhi area\"}, {\"text\":\"network is down since morning in my area I tried restarting\"},{\"text\":\"my data is working but calls are dropping randomly every now and then\"},{\"text\":\"the signal strength fluctuates a lot inside my apartment no idea why\"},{\"text\":\"I faced no network issue last night from around 10 pm onwards\"},{\"text\":\"sometimes it shows no network like around 5 minutes and comes back\"},{\"text\":\"I am not able to connect calls properly since yesterday evening\"}],\"medium_with_context\":[{\"text\":\"I am experiencing network outage especially when I go to the terrace\",\"context\":\"Can you tell me where you mostly face the network issue?\"},{\"text\":\"signal strength is weak and internet speed is very slow now\",\"context\":\"Is the internet slow or is it the call quality you are facing issues with?\"},{\"text\":\"my calls are dropping since last night around 8 pm to 9 pm\",\"context\":\"When did you start noticing the calls dropping?\"},{\"text\":\"sometimes the network disappears suddenly but full bars still show\",\"context\":\"Can you describe the problem you see on your phone regarding network?\"}],\"long\":[{\"text\":\"I have been facing no network issue intermittently especially during the late evenings at my home in Mumbai it is very frustrating\"},{\"text\":\"The call gets disconnected very often even when the signal bars show full strength like yesterday I had a call that dropped three times\"}],\"long_with_context\":[{\"text\":\"actually I want to report the bad network coverage at my office in Bangalore since last two days calls keep dropping mid conversation and internet is very slow\",\"context\":\"Could you please describe the issue you are facing with your network in detail?\"},{\"text\":\"um on Wednesday no Thursday last week the internet was completely down for almost four hours in my area near Andheri I checked with my neighbors they had the same problem\",\"context\":\"When was the last time you faced the no network or internet problem?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 588,
+    "output_tokens": 538
+  }
+}

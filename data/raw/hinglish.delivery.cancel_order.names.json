@@ -1,0 +1,187 @@
+{
+  "batch_id": "hinglish.delivery.cancel_order.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "cancel_order",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "cancel kar do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "abhi nahi chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "order hatao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "ha ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahi chahiye"
+    },
+    {
+      "context": "Can I help you with cancelling the order?",
+      "requested_bucket": "short",
+      "text": "cancel kar do"
+    },
+    {
+      "context": "Do you want to cancel the order now?",
+      "requested_bucket": "short",
+      "text": "abhi nahi chahiye"
+    },
+    {
+      "context": "Should I proceed to cancel your order?",
+      "requested_bucket": "short",
+      "text": "order hatao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera order jo delhi ke address pe hai usko cancel karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please cancel the order placed for my house in noida"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to cancel my order from the Gurgaon store"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap mere Mumbai wale order ko cancel kar sakte ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "meri delivery jo aaj aani thi kanpur se wo cancel karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "order ID 12345 ko cancel karna hai please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera naam Ravi Singh hai aur mere address se order hatao"
+    },
+    {
+      "context": "Can you tell me the location of your delivery address?",
+      "requested_bucket": "medium",
+      "text": "mera order delhi mein hai usse cancel karna hai"
+    },
+    {
+      "context": "Do you want to cancel the order from Noida branch?",
+      "requested_bucket": "medium",
+      "text": "main apna order cancel karna chahta hu jo noida se hai"
+    },
+    {
+      "context": "Which city is your order from?",
+      "requested_bucket": "medium",
+      "text": "kripya mere order Gurgaon se cancel kar dein"
+    },
+    {
+      "context": "When was your order expected for delivery?",
+      "requested_bucket": "medium",
+      "text": "mera delivery jo aaj kanpur se aani thi usay cancel karo"
+    },
+    {
+      "context": "Please provide your order ID to cancel.",
+      "requested_bucket": "medium",
+      "text": "mere order ID 98765 ko turant cancel karo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera ek order hai jo kal Mumbai se aana tha lekin ab mujhe nahi chahiye usko cancel kar dein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I placed an order from the Bangalore store but I want to cancel it because I found a better deal elsewhere"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "meri taraf se cancel karwana hai mera recent order jo ki Lucknow mein deliver hona tha because ab plan change ho gaya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "please cancel my order which was supposed to be delivered to my house in Hyderabad by tomorrow midday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main cancel karwana chahta hoon mera order number 56321 joh recent aapke Pune branch se bheja gaya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Agar mere order ko cancel nahi kiya gaya to mujhe refund lena hoga as soon as possible for my order from Ahmedabad"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera naam Sunita Sharma hai aur mera order jo banjara hills Hyderabad mein deliver hona tha use cancel karna hai"
+    },
+    {
+      "context": "Can you please explain why you want to cancel the order?",
+      "requested_bucket": "long",
+      "text": "main cancel karwana chahata hoon mera order jo ki Bengaluru se aana tha kyunki ab zarurat nahi hai"
+    },
+    {
+      "context": "Which location was your order supposed to be delivered to?",
+      "requested_bucket": "long",
+      "text": "mera order Noida mein deliver hona tha lekin ab wo chahiye nahi hai toh use cancel kar dijiye"
+    },
+    {
+      "context": "Can you provide your order ID and delivery city for cancellation?",
+      "requested_bucket": "long",
+      "text": "order ID 77654 New Delhi ke liye tha aur mujhse galti se zyada order ho gaya isliye cancel chahiye"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2619521122,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cancel_order - wants to cancel an order\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"cancel kar do\"},{\"text\":\"abhi nahi chahiye\"},{\"text\":\"order hatao\"},{\"text\":\"ha ji\"},{\"text\":\"theek hai\"},{\"text\":\"nahi chahiye\"}],\"short_with_context\":[{\"text\":\"cancel kar do\",\"context\":\"Can I help you with cancelling the order?\"},{\"text\":\"abhi nahi chahiye\",\"context\":\"Do you want to cancel the order now?\"},{\"text\":\"order hatao\",\"context\":\"Should I proceed to cancel your order?\"}],\"medium\":[{\"text\":\"mera order jo delhi ke address pe hai usko cancel karna hai\"},{\"text\":\"please cancel the order placed for my house in noida\"},{\"text\":\"I want to cancel my order from the Gurgaon store\"},{\"text\":\"kya aap mere Mumbai wale order ko cancel kar sakte ho\"},{\"text\":\"meri delivery jo aaj aani thi kanpur se wo cancel karna hai\"},{\"text\":\"order ID 12345 ko cancel karna hai please\"},{\"text\":\"mera naam Ravi Singh hai aur mere address se order hatao\"}],\"medium_with_context\":[{\"text\":\"mera order delhi mein hai usse cancel karna hai\",\"context\":\"Can you tell me the location of your delivery address?\"},{\"text\":\"main apna order cancel karna chahta hu jo noida se hai\",\"context\":\"Do you want to cancel the order from Noida branch?\"},{\"text\":\"kripya mere order Gurgaon se cancel kar dein\",\"context\":\"Which city is your order from?\"},{\"text\":\"mera delivery jo aaj kanpur se aani thi usay cancel karo\",\"context\":\"When was your order expected for delivery?\"},{\"text\":\"mere order ID 98765 ko turant cancel karo\",\"context\":\"Please provide your order ID to cancel.\"}],\"long\":[{\"text\":\"mera ek order hai jo kal Mumbai se aana tha lekin ab mujhe nahi chahiye usko cancel kar dein\"},{\"text\":\"I placed an order from the Bangalore store but I want to cancel it because I found a better deal elsewhere\"},{\"text\":\"meri taraf se cancel karwana hai mera recent order jo ki Lucknow mein deliver hona tha because ab plan change ho gaya hai\"},{\"text\":\"please cancel my order which was supposed to be delivered to my house in Hyderabad by tomorrow midday\"},{\"text\":\"main cancel karwana chahta hoon mera order number 56321 joh recent aapke Pune branch se bheja gaya hai\"},{\"text\":\"Agar mere order ko cancel nahi kiya gaya to mujhe refund lena hoga as soon as possible for my order from Ahmedabad\"},{\"text\":\"mera naam Sunita Sharma hai aur mera order jo banjara hills Hyderabad mein deliver hona tha use cancel karna hai\"}],\"long_with_context\":[{\"text\":\"main cancel karwana chahata hoon mera order jo ki Bengaluru se aana tha kyunki ab zarurat nahi hai\",\"context\":\"Can you please explain why you want to cancel the order?\"},{\"text\":\"mera order Noida mein deliver hona tha lekin ab wo chahiye nahi hai toh use cancel kar dijiye\",\"context\":\"Which location was your order supposed to be delivered to?\"},{\"text\":\"order ID 77654 New Delhi ke liye tha aur mujhse galti se zyada order ho gaya isliye cancel chahiye\",\"context\":\"Can you provide your order ID and delivery city for cancellation?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 584,
+    "output_tokens": 692
+  }
+}

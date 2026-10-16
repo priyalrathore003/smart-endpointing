@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.collections.financial_hardship.numbers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "financial_hardship",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahi de sakta abhi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "thoda waqt chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kaam band ho gaya hai"
+    },
+    {
+      "context": "Can you make the payment today?",
+      "requested_bucket": "short",
+      "text": "abhi payment nahi kar sakta"
+    },
+    {
+      "context": "Why haven't you paid the dues yet?",
+      "requested_bucket": "short",
+      "text": "main hospital me hu"
+    },
+    {
+      "context": "Do you understand the payment process?",
+      "requested_bucket": "short",
+      "text": "mujhe samajh nahi aa raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "meri salary nahi aayi is mahine isliye paise nahi hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "meri tabiyat kharab hai aur doctor ne kaam se mana kiya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "meri naukri chali gayi hai kal se main gareeb ho gaya hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main abhi ghar par hi hoon aur parivar kaafi depend karta hai mujh par"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main kal tak payment kar dunga jab tak thoda paisa ayega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mere brother ki tabiyat kharab hai isi liye main payment nahi kar pa raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera bank account blocked ho gaya hai is wajah se transfer nahi ho paya"
+    },
+    {
+      "context": "Have you made your payment for this month?",
+      "requested_bucket": "medium",
+      "text": "main september ke month ka payment kar raha hoon abhi thoda delay hua hai"
+    },
+    {
+      "context": "Why is your payment pending?",
+      "requested_bucket": "medium",
+      "text": "abhi tak koi income nahi hai isliye payment delay ho raha hai"
+    },
+    {
+      "context": "Are you facing any issue sending the payment?",
+      "requested_bucket": "medium",
+      "text": "mujhe paise bhejne mein thodi dikkat ho rahi hai aaj kal"
+    },
+    {
+      "context": "What is the reason for non payment?",
+      "requested_bucket": "medium",
+      "text": "meri job lost ho gayi hai isliye mein payment nahi kar pa raha"
+    },
+    {
+      "context": "Can you request for payment extension?",
+      "requested_bucket": "medium",
+      "text": "main thoda samay chah raha hun payment ke liye financial problems ki wajah se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera naam rohit sharma hai aur mera account number 1234 5678 9876 5432 hai main abhi unemployed hu is wajah se payment nahi kar paya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "meri tabiyat kuch dino se bahut kharab chal rahi thi doctor ne rest lene ko kaha hai isliye paise jama karne mein problem ho rahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kal se meri naukri band ho gayi hai aur mere paas koi aur income source nahi hai isliye main aaj payment karne mein asamarth hoon"
+    },
+    {
+      "context": "Can you explain reason for delay in payment?",
+      "requested_bucket": "long",
+      "text": "agent asked can you explain reason for delay in payment customer said mera bank account block hai abhi tak paisa transfer nahi kar paya"
+    },
+    {
+      "context": "Is your family condition affecting your ability to pay?",
+      "requested_bucket": "long",
+      "text": "agent asked is family condition affecting your ability to pay customer said haan meri maa ki tabiyat bahut kharab hai main sare kharche utha raha hu"
+    },
+    {
+      "context": "When can you make the payment?",
+      "requested_bucket": "long",
+      "text": "agent asked when can you make the payment customer said thoda jaldi paise mil jaayenge to agle hafte tak main payment kar dunga"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3459717459,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: financial_hardship - explains they cannot pay right now because of job loss, illness or similar\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"nahi de sakta abhi\"},{\"text\":\"thoda waqt chahiye\"},{\"text\":\"kaam band ho gaya hai\"}],\"short_with_context\":[{\"text\":\"abhi payment nahi kar sakta\",\"context\":\"Can you make the payment today?\"},{\"text\":\"main hospital me hu\",\"context\":\"Why haven't you paid the dues yet?\"},{\"text\":\"mujhe samajh nahi aa raha\",\"context\":\"Do you understand the payment process?\"}],\"medium\":[{\"text\":\"meri salary nahi aayi is mahine isliye paise nahi hain\"},{\"text\":\"meri tabiyat kharab hai aur doctor ne kaam se mana kiya hai\"},{\"text\":\"meri naukri chali gayi hai kal se main gareeb ho gaya hu\"},{\"text\":\"main abhi ghar par hi hoon aur parivar kaafi depend karta hai mujh par\"},{\"text\":\"main kal tak payment kar dunga jab tak thoda paisa ayega\"},{\"text\":\"mere brother ki tabiyat kharab hai isi liye main payment nahi kar pa raha\"},{\"text\":\"mera bank account blocked ho gaya hai is wajah se transfer nahi ho paya\"}],\"medium_with_context\":[{\"text\":\"main september ke month ka payment kar raha hoon abhi thoda delay hua hai\",\"context\":\"Have you made your payment for this month?\"},{\"text\":\"abhi tak koi income nahi hai isliye payment delay ho raha hai\",\"context\":\"Why is your payment pending?\"},{\"text\":\"mujhe paise bhejne mein thodi dikkat ho rahi hai aaj kal\",\"context\":\"Are you facing any issue sending the payment?\"},{\"text\":\"meri job lost ho gayi hai isliye mein payment nahi kar pa raha\",\"context\":\"What is the reason for non payment?\"},{\"text\":\"main thoda samay chah raha hun payment ke liye financial problems ki wajah se\",\"context\":\"Can you request for payment extension?\"}],\"long\":[{\"text\":\"mera naam rohit sharma hai aur mera account number 1234 5678 9876 5432 hai main abhi unemployed hu is wajah se payment nahi kar paya\"},{\"text\":\"meri tabiyat kuch dino se bahut kharab chal rahi thi doctor ne rest lene ko kaha hai isliye paise jama karne mein problem ho rahi hai\"},{\"text\":\"kal se meri naukri band ho gayi hai aur mere paas koi aur income source nahi hai isliye main aaj payment karne mein asamarth hoon\"}],\"long_with_context\":[{\"text\":\"agent asked can you explain reason for delay in payment customer said mera bank account block hai abhi tak paisa transfer nahi kar paya\",\"context\":\"Can you explain reason for delay in payment?\"},{\"text\":\"agent asked is family condition affecting your ability to pay customer said haan meri maa ki tabiyat bahut kharab hai main sare kharche utha raha hu\",\"context\":\"Is your family condition affecting your ability to pay?\"},{\"text\":\"agent asked when can you make the payment customer said thoda jaldi paise mil jaayenge to agle hafte tak main payment kar dunga\",\"context\":\"When can you make the payment?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 614,
+    "output_tokens": 654
+  }
+}

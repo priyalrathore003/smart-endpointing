@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.telecom.bill_dispute.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "bill_dispute",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "बिल गलत है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "ध्यान दो"
+    },
+    {
+      "context": "क्या आप बिल की राशि बतायेंगे?",
+      "requested_bucket": "short",
+      "text": "हाँ बिल्कुल"
+    },
+    {
+      "context": "क्या आपके बिल में कोई अतिरिक्त चार्ज दिख रहा है?",
+      "requested_bucket": "short",
+      "text": "थोड़ा ज्यादा आया"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "माफ़ कीजिए सर 3500 से ज्यादा चार्ज कैसे हो गया"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "पिछले महीने मैंने इतना ज्यादा कॉल नहीं किया था"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "महीने के अंत में अचानक 1500 का चार्ज क्यों लग गया है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैंने अपने प्लान के हिसाब से ज्यादा बिल नहीं देना है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "कृपया मेरा बिल चेक करके बताइए कि कहां गलती हुई है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे लगता है कोई गलत कॉल चार्ज हो गया है"
+    },
+    {
+      "context": "क्या आप अपना मोबाइल नंबर बता सकते हैं?",
+      "requested_bucket": "medium",
+      "text": "हाँ 98123 45678 वाला नंबर है मेरा कवन account नंबर चाहिए?"
+    },
+    {
+      "context": "क्या आप पिछले महीने की कॉल हिस्ट्री देखना चाहेंगे?",
+      "requested_bucket": "medium",
+      "text": "कॉल हिस्ट्री दिखाइए मुझे पिछले महीने के लिए"
+    },
+    {
+      "context": "आपके बिल में क्या समस्या लग रही है?",
+      "requested_bucket": "medium",
+      "text": "मुझे समझ नहीं आ रहा क्यों 500 रुपये ज्यादा आए हैं"
+    },
+    {
+      "context": "क्या आपने हाल ही में कोई रिचार्ज किया है?",
+      "requested_bucket": "medium",
+      "text": "मैंने 7 मार्च को रिचार्ज किया था पर बिल 10 तारीख का बहुत ज्यादा है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर मेरे बिल में 28 फरवरी को कोई अंतरिक्ष कॉल जैसा चार्ज आया है जो मैंने किया ही नहीं था, कृपया जांच करें"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैडम मैंने देखा है कि 15 मार्च को आने वाले बिल में मेरे प्लान के अनुसार नहीं नो कॉल्स के लिए चार्ज लगाया गयाहै"
+    },
+    {
+      "context": "कृपया अपना मोबाइल नंबर बताएं ताकि मैं आपके बिल को चेक कर सकूँ",
+      "requested_bucket": "long",
+      "text": "मेरा नंबर 987 654 3210 है क्या आप बिल में ज्यादा चार्ज के बारे में देख पाएं?"
+    },
+    {
+      "context": "क्या आप बताना चाहेंगे कि आपको बिल में कौन सा चार्ज गलत लग रहा है?",
+      "requested_bucket": "long",
+      "text": "आपके सिस्टम में कुछ गड़बड़ी लगती है क्योंकि मेरा बिल हर बार ज्यादा आ रहा है"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 122277783,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: bill_dispute - says a postpaid bill or charge is wrong\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"बिल गलत है\"},{\"text\":\"ध्यान दो\"}],\"short_with_context\":[{\"text\":\"हाँ बिल्कुल\",\"context\":\"क्या आप बिल की राशि बतायेंगे?\"},{\"text\":\"थोड़ा ज्यादा आया\", \"context\":\"क्या आपके बिल में कोई अतिरिक्त चार्ज दिख रहा है?\"}],\"medium\":[{\"text\":\"माफ़ कीजिए सर 3500 से ज्यादा चार्ज कैसे हो गया\"},{\"text\":\"पिछले महीने मैंने इतना ज्यादा कॉल नहीं किया था\"},{\"text\":\"महीने के अंत में अचानक 1500 का चार्ज क्यों लग गया है\"},{\"text\":\"मैंने अपने प्लान के हिसाब से ज्यादा बिल नहीं देना है\"},{\"text\":\"कृपया मेरा बिल चेक करके बताइए कि कहां गलती हुई है\"},{\"text\":\"मुझे लगता है कोई गलत कॉल चार्ज हो गया है\"}],\"medium_with_context\":[{\"text\":\"हाँ 98123 45678 वाला नंबर है मेरा कवन account नंबर चाहिए?\", \"context\":\"क्या आप अपना मोबाइल नंबर बता सकते हैं?\"},{\"text\":\"कॉल हिस्ट्री दिखाइए मुझे पिछले महीने के लिए\", \"context\":\"क्या आप पिछले महीने की कॉल हिस्ट्री देखना चाहेंगे?\"},{\"text\":\"मुझे समझ नहीं आ रहा क्यों 500 रुपये ज्यादा आए हैं\", \"context\":\"आपके बिल में क्या समस्या लग रही है?\"},{\"text\":\"मैंने 7 मार्च को रिचार्ज किया था पर बिल 10 तारीख का बहुत ज्यादा है\", \"context\":\"क्या आपने हाल ही में कोई रिचार्ज किया है?\"}],\"long\":[{\"text\":\"सर मेरे बिल में 28 फरवरी को कोई अंतरिक्ष कॉल जैसा चार्ज आया है जो मैंने किया ही नहीं था, कृपया जांच करें\"},{\"text\":\"मैडम मैंने देखा है कि 15 मार्च को आने वाले बिल में मेरे प्लान के अनुसार नहीं नो कॉल्स के लिए चार्ज लगाया गयाहै\"}],\"long_with_context\":[{\"text\":\"मेरा नंबर 987 654 3210 है क्या आप बिल में ज्यादा चार्ज के बारे में देख पाएं?\",\"context\":\"कृपया अपना मोबाइल नंबर बताएं ताकि मैं आपके बिल को चेक कर सकूँ\"},{\"text\":\"आपके सिस्टम में कुछ गड़बड़ी लगती है क्योंकि मेरा बिल हर बार ज्यादा आ रहा है\",\"context\":\"क्या आप बताना चाहेंगे कि आपको बिल में कौन सा चार्ज गलत लग रहा है?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 712,
+    "output_tokens": 495
+  }
+}

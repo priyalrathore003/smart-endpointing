@@ -1,0 +1,142 @@
+{
+  "batch_id": "en.telecom.data_balance.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "data_balance",
+  "items": [
+    {
+      "context": "how much data do you have left",
+      "requested_bucket": "short",
+      "text": "one gigabyte"
+    },
+    {
+      "context": "can you tell me your data balance",
+      "requested_bucket": "short",
+      "text": "five hundred mb"
+    },
+    {
+      "context": "do you know your current data balance",
+      "requested_bucket": "short",
+      "text": "two gb"
+    },
+    {
+      "context": "remaining data in your account",
+      "requested_bucket": "short",
+      "text": "three point five gb"
+    },
+    {
+      "context": "how many mb are left",
+      "requested_bucket": "short",
+      "text": "seven hundred mb"
+    },
+    {
+      "context": "your data validity is",
+      "requested_bucket": "short",
+      "text": "ten days"
+    },
+    {
+      "context": "when does your data expire",
+      "requested_bucket": "short",
+      "text": "next saturday"
+    },
+    {
+      "context": "balance data available",
+      "requested_bucket": "short",
+      "text": "eight hundred mb"
+    },
+    {
+      "context": "data usage details",
+      "requested_bucket": "short",
+      "text": "still have one gb"
+    },
+    {
+      "context": "remaining internet data",
+      "requested_bucket": "short",
+      "text": "four gb"
+    },
+    {
+      "context": "is your data active",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "how many days for validity",
+      "requested_bucket": "short",
+      "text": "five days"
+    },
+    {
+      "context": "has your data expired",
+      "requested_bucket": "short",
+      "text": "no not yet"
+    },
+    {
+      "context": "check your data balance now",
+      "requested_bucket": "short",
+      "text": "okay"
+    },
+    {
+      "context": "how much data is left for today",
+      "requested_bucket": "short",
+      "text": "around three hundred mb"
+    },
+    {
+      "context": "could you tell me the data validity",
+      "requested_bucket": "short",
+      "text": "valid till next monday"
+    },
+    {
+      "context": "remaining data for your plan",
+      "requested_bucket": "short",
+      "text": "about two gb"
+    },
+    {
+      "context": "data balance status",
+      "requested_bucket": "short",
+      "text": "six hundred mb remaining"
+    },
+    {
+      "context": "can you please provide your data balance status",
+      "requested_bucket": "medium",
+      "text": "i have about three point two gb left till the end of this month"
+    },
+    {
+      "context": "do you want to know your remaining data and validity period",
+      "requested_bucket": "medium",
+      "text": "yes please tell me how much data and when it will expire"
+    },
+    {
+      "context": "are you aware of your current data usage and expiry date",
+      "requested_bucket": "medium",
+      "text": "i have used half of my five gb data pack and validity is seven days"
+    },
+    {
+      "context": "would you like to know the remaining internet data and its validity",
+      "requested_bucket": "medium",
+      "text": "my data balance is four gb and it is valid for ten more days"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3985742190,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: data_balance - asks how much data or validity is left\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"how much data do you have left\",\"reply\":\"one gigabyte\"},{\"agent_question\":\"can you tell me your data balance\",\"reply\":\"five hundred mb\"},{\"agent_question\":\"do you know your current data balance\",\"reply\":\"two gb\"},{\"agent_question\":\"remaining data in your account\",\"reply\":\"three point five gb\"},{\"agent_question\":\"how many mb are left\",\"reply\":\"seven hundred mb\"},{\"agent_question\":\"your data validity is\",\"reply\":\"ten days\"},{\"agent_question\":\"when does your data expire\",\"reply\":\"next saturday\"},{\"agent_question\":\"balance data available\",\"reply\":\"eight hundred mb\"},{\"agent_question\":\"data usage details\",\"reply\":\"still have one gb\"},{\"agent_question\":\"remaining internet data\",\"reply\":\"four gb\"},{\"agent_question\":\"is your data active\",\"reply\":\"yes\"},{\"agent_question\":\"how many days for validity\",\"reply\":\"five days\"},{\"agent_question\":\"has your data expired\",\"reply\":\"no not yet\"},{\"agent_question\":\"check your data balance now\",\"reply\":\"okay\"},{\"agent_question\":\"how much data is left for today\",\"reply\":\"around three hundred mb\"},{\"agent_question\":\"could you tell me the data validity\",\"reply\":\"valid till next monday\"},{\"agent_question\":\"remaining data for your plan\",\"reply\":\"about two gb\"},{\"agent_question\":\"data balance status\",\"reply\":\"six hundred mb remaining\"}],\"medium\":[{\"agent_question\":\"can you please provide your data balance status\",\"reply\":\"i have about three point two gb left till the end of this month\"},{\"agent_question\":\"do you want to know your remaining data and validity period\",\"reply\":\"yes please tell me how much data and when it will expire\"},{\"agent_question\":\"are you aware of your current data usage and expiry date\",\"reply\":\"i have used half of my five gb data pack and validity is seven days\"},{\"agent_question\":\"would you like to know the remaining internet data and its validity\",\"reply\":\"my data balance is four gb and it is valid for ten more days\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 366,
+    "output_tokens": 399
+  }
+}

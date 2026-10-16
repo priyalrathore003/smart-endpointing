@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.banking.kyc_update.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "kyc_update",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "हाँ जी ठीक है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "अच्छा ठीक है"
+    },
+    {
+      "context": "क्या आप जल्द से जल्द अपना KYC अपडेट करना चाहते हैं?",
+      "requested_bucket": "short",
+      "text": "ठीक है जल्दी"
+    },
+    {
+      "context": "आपका फोन नंबर अपडेट करना है क्या?",
+      "requested_bucket": "short",
+      "text": "हाँ ठीक है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे अपना पता बदलवाना है वो क्या कराना होगा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "पैन कार्ड की डिटेल्स अपडेट करनी है मेरे अकाउंट में"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अम्म सर आधार कार्ड नंबर दुबारा डालना है पिछली बार गलती हो गई"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अच्छा तो मेरा नया पता है दिल्ली के सफदरजंग इलाके में"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "वो मेरा नाम भी सही से अपडेट कर देंगे क्या आप लोग"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे पता चला कि ऑनलाइन भी KYC अपडेट हो सकता है"
+    },
+    {
+      "context": "आपको KYC अपडेट के लिए कौन सी डिटेल्स अपडेट करनी हैं?",
+      "requested_bucket": "medium",
+      "text": "जी हाँ मैडम प्लीज़ बताइए क्या करना होगा"
+    },
+    {
+      "context": "कब आप बैंक आ पाएंगे KYC के लिए?",
+      "requested_bucket": "medium",
+      "text": "मंगलवार को नहीं बुधवार को मैं बैंक जाकर फॉर्म भर सकता हूँ"
+    },
+    {
+      "context": "कौन सी डिटेल अपडेट करवानी हैं आप?",
+      "requested_bucket": "medium",
+      "text": "हाँ जी अपना पैन डिटेल्स अपडेट करवाना है अकाउंट में"
+    },
+    {
+      "context": "आपका नया पता क्या है कृपया बताइए",
+      "requested_bucket": "medium",
+      "text": "मेरा नया एड्रेस सिटी सेंटर की तरफ है और पिन ११००२४"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैडम मैंने अपना पता तो बदला है पर बैंक में वो अपडेट नहीं हुआ है इसलिए मैं कॉल कर रहा हूँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "अच्छा बताइए कि मेरे पैन कार्ड और आधार नंबर दोनों गलत से अकाउंट में डाले गए हैं कैसे ठीक करवाओंगा"
+    },
+    {
+      "context": "क्या आप ब्रांच का पता चाहते हैं जहां जाकर KYC अपडेट कराना है?",
+      "requested_bucket": "long",
+      "text": "सर आपका KYC अपडेट कराने के लिए आपके नजदीकी ब्रांच का पता चाहिए क्या मैं बताऊं आपको"
+    },
+    {
+      "context": "क्या आपने ऑनलाइन KYC अपडेट करने की प्रक्रिया देखी या कर दी है?",
+      "requested_bucket": "long",
+      "text": "जी मैंने ऑनलाइन देखी थी लिंक पर KYC अपडेट की सर्विस है पर मैं कन्फर्म करना चाहता हूँ"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3391136641,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: kyc_update - wants to update KYC, address, PAN or Aadhaar details\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with fillers and hesitations (अम्म, मतलब, वो, अच्छा, हाँ जी); at least a third include a self-correction ('मंगलवार, नहीं, बुधवार')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"हाँ जी ठीक है\"},{\"text\":\"अच्छा ठीक है\"}],\"short_with_context\":[{\"text\":\"ठीक है जल्दी\",\"context\":\"क्या आप जल्द से जल्द अपना KYC अपडेट करना चाहते हैं?\"},{\"text\":\"हाँ ठीक है\",\"context\":\"आपका फोन नंबर अपडेट करना है क्या?\"}],\"medium\":[{\"text\":\"मुझे अपना पता बदलवाना है वो क्या कराना होगा\"},{\"text\":\"पैन कार्ड की डिटेल्स अपडेट करनी है मेरे अकाउंट में\"},{\"text\":\"अम्म सर आधार कार्ड नंबर दुबारा डालना है पिछली बार गलती हो गई\"},{\"text\":\"अच्छा तो मेरा नया पता है दिल्ली के सफदरजंग इलाके में\"},{\"text\":\"वो मेरा नाम भी सही से अपडेट कर देंगे क्या आप लोग\"},{\"text\":\"मुझे पता चला कि ऑनलाइन भी KYC अपडेट हो सकता है\"}],\"medium_with_context\":[{\"text\":\"जी हाँ मैडम प्लीज़ बताइए क्या करना होगा\",\"context\":\"आपको KYC अपडेट के लिए कौन सी डिटेल्स अपडेट करनी हैं?\"},{\"text\":\"मंगलवार को नहीं बुधवार को मैं बैंक जाकर फॉर्म भर सकता हूँ\",\"context\":\"कब आप बैंक आ पाएंगे KYC के लिए?\"},{\"text\":\"हाँ जी अपना पैन डिटेल्स अपडेट करवाना है अकाउंट में\",\"context\":\"कौन सी डिटेल अपडेट करवानी हैं आप?\"},{\"text\":\"मेरा नया एड्रेस सिटी सेंटर की तरफ है और पिन ११००२४\",\"context\":\"आपका नया पता क्या है कृपया बताइए\"}],\"long\":[{\"text\":\"मैडम मैंने अपना पता तो बदला है पर बैंक में वो अपडेट नहीं हुआ है इसलिए मैं कॉल कर रहा हूँ\"},{\"text\":\"अच्छा बताइए कि मेरे पैन कार्ड और आधार नंबर दोनों गलत से अकाउंट में डाले गए हैं कैसे ठीक करवाओंगा\"}],\"long_with_context\":[{\"text\":\"सर आपका KYC अपडेट कराने के लिए आपके नजदीकी ब्रांच का पता चाहिए क्या मैं बताऊं आपको\",\"context\":\"क्या आप ब्रांच का पता चाहते हैं जहां जाकर KYC अपडेट कराना है?\"},{\"text\":\"जी मैंने ऑनलाइन देखी थी लिंक पर KYC अपडेट की सर्विस है पर मैं कन्फर्म करना चाहता हूँ\",\"context\":\"क्या आपने ऑनलाइन KYC अपडेट करने की प्रक्रिया देखी या कर दी है?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 721,
+    "output_tokens": 489
+  }
+}

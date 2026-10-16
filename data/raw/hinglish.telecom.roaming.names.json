@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.telecom.roaming.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "telecom",
+  "intent": "roaming",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Kya aapko international roaming activate karna hai",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Kya aap apne sim se national roaming chalu karna chahte hain",
+      "requested_bucket": "short",
+      "text": "bilkul"
+    },
+    {
+      "context": "Kya main aapke account me roaming charges bataun",
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Mujhe apne Mumbai number ke liye international roaming activate karni hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Kya aap bata sakte hain ki Dubai me roaming ki cost kitni padegi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Mera naam Suresh Kumar hai aur main Delhi me rehta hun"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Maine recently apna sim upgrade kiya tha lekin roaming chalu nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Kya aap apne plan me international roaming add kar sakte hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "National roaming ka pack Mumbai se Bangalore me kitna chal raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Mujhe apne account se paise katne ka notification nahi aaya hai"
+    },
+    {
+      "context": "Kaunse sheher ki international roaming chahiye aapko",
+      "requested_bucket": "medium",
+      "text": "Mujhe apne Hyderabad number ke liye international roaming activate karni hai"
+    },
+    {
+      "context": "Aapko kis tareekh se roaming activate karni hai",
+      "requested_bucket": "medium",
+      "text": "Dubai me mera kaam hai isi liye roaming temporarily chalu karni hai"
+    },
+    {
+      "context": "Kya aapke paas international roaming ke liye koi special pack hai",
+      "requested_bucket": "medium",
+      "text": "Mera plan monthly hai aur mujhe isme international roaming add karwani hai"
+    },
+    {
+      "context": "Kya aapko national roaming activate karna hai",
+      "requested_bucket": "medium",
+      "text": "Haan mujhe Delhi ka national roaming activate karwana hai aaj se"
+    },
+    {
+      "context": "Kya main aapke account me national roaming activate kar doon",
+      "requested_bucket": "medium",
+      "text": "Mujhe Gurgaon me apne existing plan me national roaming chalu karni hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Main Rahul Singh bol raha hun Mumbai se mera sim international roaming ke liye activate karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Mera address Lucknow me hai aur mujhe international roaming Dubai ke liye chahiye jaldi se enable kar dijiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Maine apne account me national roaming ke liye apply kiya tha lekin abhi tak active nahi hua hai to help kariye"
+    },
+    {
+      "context": "Kya aap international roaming activate karwana chahenge aur kis country ke liye",
+      "requested_bucket": "long",
+      "text": "Main international roaming ke charges ke baare me detail chahata hun Dubai trip ke liye"
+    },
+    {
+      "context": "Kya aap apne current plan me national roaming chalu karwana chahenge",
+      "requested_bucket": "long",
+      "text": "Aapke system me mera plan monthly hai lekin mujhe national roaming Haryana ke liye aaj se chalu karani hai"
+    },
+    {
+      "context": "Kya aap apne account me international roaming chalu karwana chahenge",
+      "requested_bucket": "long",
+      "text": "Mujhe international roaming activate karani hai mera number 9876543210 hai Delhi me rehta hun please update kar dena"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 27604796,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: roaming - wants to activate international or national roaming\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal tak\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"haan ji\",\"context\":\"Kya aapko international roaming activate karna hai\"},{\"text\":\"bilkul\",\"context\":\"Kya aap apne sim se national roaming chalu karna chahte hain\"},{\"text\":\"abhi nahi\",\"context\":\"Kya main aapke account me roaming charges bataun\"}],\"medium\":[{\"text\":\"Mujhe apne Mumbai number ke liye international roaming activate karni hai\"},{\"text\":\"Kya aap bata sakte hain ki Dubai me roaming ki cost kitni padegi\"},{\"text\":\"Mera naam Suresh Kumar hai aur main Delhi me rehta hun\"},{\"text\":\"Maine recently apna sim upgrade kiya tha lekin roaming chalu nahi hua\"},{\"text\":\"Kya aap apne plan me international roaming add kar sakte hain\"},{\"text\":\"National roaming ka pack Mumbai se Bangalore me kitna chal raha hai\"},{\"text\":\"Mujhe apne account se paise katne ka notification nahi aaya hai\"}],\"medium_with_context\":[{\"text\":\"Mujhe apne Hyderabad number ke liye international roaming activate karni hai\",\"context\":\"Kaunse sheher ki international roaming chahiye aapko\"},{\"text\":\"Dubai me mera kaam hai isi liye roaming temporarily chalu karni hai\",\"context\":\"Aapko kis tareekh se roaming activate karni hai\"},{\"text\":\"Mera plan monthly hai aur mujhe isme international roaming add karwani hai\",\"context\":\"Kya aapke paas international roaming ke liye koi special pack hai\"},{\"text\":\"Haan mujhe Delhi ka national roaming activate karwana hai aaj se\",\"context\":\"Kya aapko national roaming activate karna hai\"},{\"text\":\"Mujhe Gurgaon me apne existing plan me national roaming chalu karni hai\",\"context\":\"Kya main aapke account me national roaming activate kar doon\"}],\"long\":[{\"text\":\"Main Rahul Singh bol raha hun Mumbai se mera sim international roaming ke liye activate karna hai\"},{\"text\":\"Mera address Lucknow me hai aur mujhe international roaming Dubai ke liye chahiye jaldi se enable kar dijiye\"},{\"text\":\"Maine apne account me national roaming ke liye apply kiya tha lekin abhi tak active nahi hua hai to help kariye\"}],\"long_with_context\":[{\"text\":\"Main international roaming ke charges ke baare me detail chahata hun Dubai trip ke liye\",\"context\":\"Kya aap international roaming activate karwana chahenge aur kis country ke liye\"},{\"text\":\"Aapke system me mera plan monthly hai lekin mujhe national roaming Haryana ke liye aaj se chalu karani hai\",\"context\":\"Kya aap apne current plan me national roaming chalu karwana chahenge\"},{\"text\":\"Mujhe international roaming activate karani hai mera number 9876543210 hai Delhi me rehta hun please update kar dena\",\"context\":\"Kya aap apne account me international roaming chalu karwana chahenge\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 585,
+    "output_tokens": 647
+  }
+}

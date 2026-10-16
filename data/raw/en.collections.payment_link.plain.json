@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.collections.payment_link.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "payment_link",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "send payment link"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "need link now"
+    },
+    {
+      "context": "Do you want me to send the payment link to your registered mobile number?",
+      "requested_bucket": "short",
+      "text": "yes send link"
+    },
+    {
+      "context": "Would you like me to share the payment link via SMS or email?",
+      "requested_bucket": "short",
+      "text": "please share"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you send me the payment link for my outstanding bill"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "how do i get the link to pay my dues online"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please provide the payment link so i can clear the amount"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i want to pay the bill what is the link to do that"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "share the payment link quickly so i can make the payment"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "is there a link available where i can pay the pending amount"
+    },
+    {
+      "context": "Where do you want me to send the payment link?",
+      "requested_bucket": "medium",
+      "text": "yes please send the payment link to my email address"
+    },
+    {
+      "context": "Do you prefer to get the payment link via SMS or email?",
+      "requested_bucket": "medium",
+      "text": "i would like to receive the payment link on my phone please"
+    },
+    {
+      "context": "Would you like me to share the payment link now?",
+      "requested_bucket": "medium",
+      "text": "can you help me with the link so i can pay online immediately"
+    },
+    {
+      "context": "When do you plan to make the payment?",
+      "requested_bucket": "medium",
+      "text": "please send the payment link so i can complete payment today"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i have an outstanding amount of five thousand rupees please send me the payment link so i can pay it online at the earliest convenience"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "could you please provide the payment link i want to settle my bill of three thousand two hundred rupees today because i am busy tomorrow"
+    },
+    {
+      "context": "When do you want to pay the outstanding balance?",
+      "requested_bucket": "long",
+      "text": "please share the payment link with me as soon as possible i want to clear my pending bill of seven thousand rupees that is due this week"
+    },
+    {
+      "context": "How do you want to receive the payment link to make the payment?",
+      "requested_bucket": "long",
+      "text": "i am currently away from home so if you send me the payment link via email i will pay the amount of six thousand rupees by tomorrow"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1697338083,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: payment_link - asks for a payment link or how to pay\nLanguage: Indian English, Latin script.\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"send payment link\"},{\"text\":\"need link now\"}],\"short_with_context\":[{\"text\":\"yes send link\",\"context\":\"Do you want me to send the payment link to your registered mobile number?\"},{\"text\":\"please share\",\"context\":\"Would you like me to share the payment link via SMS or email?\"}],\"medium\":[{\"text\":\"can you send me the payment link for my outstanding bill\"},{\"text\":\"how do i get the link to pay my dues online\"},{\"text\":\"please provide the payment link so i can clear the amount\"},{\"text\":\"i want to pay the bill what is the link to do that\"},{\"text\":\"share the payment link quickly so i can make the payment\"},{\"text\":\"is there a link available where i can pay the pending amount\"}],\"medium_with_context\":[{\"text\":\"yes please send the payment link to my email address\",\"context\":\"Where do you want me to send the payment link?\"},{\"text\":\"i would like to receive the payment link on my phone please\",\"context\":\"Do you prefer to get the payment link via SMS or email?\"},{\"text\":\"can you help me with the link so i can pay online immediately\",\"context\":\"Would you like me to share the payment link now?\"},{\"text\":\"please send the payment link so i can complete payment today\",\"context\":\"When do you plan to make the payment?\"}],\"long\":[{\"text\":\"i have an outstanding amount of five thousand rupees please send me the payment link so i can pay it online at the earliest convenience\"},{\"text\":\"could you please provide the payment link i want to settle my bill of three thousand two hundred rupees today because i am busy tomorrow\"}],\"long_with_context\":[{\"text\":\"please share the payment link with me as soon as possible i want to clear my pending bill of seven thousand rupees that is due this week\",\"context\":\"When do you want to pay the outstanding balance?\"},{\"text\":\"i am currently away from home so if you send me the payment link via email i will pay the amount of six thousand rupees by tomorrow\",\"context\":\"How do you want to receive the payment link to make the payment?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 559,
+    "output_tokens": 440
+  }
+}

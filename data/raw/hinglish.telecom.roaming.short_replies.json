@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.telecom.roaming.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "telecom",
+  "intent": "roaming",
+  "items": [
+    {
+      "context": "Aapko kis country ke liye roaming chahiye",
+      "requested_bucket": "short",
+      "text": "United States"
+    },
+    {
+      "context": "Kya aapka SIM prepaid hai ya postpaid",
+      "requested_bucket": "short",
+      "text": "Prepaid"
+    },
+    {
+      "context": "Kya aap national roaming activate karwana chahte hain",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Roaming activate karwana hai ya deactivate",
+      "requested_bucket": "short",
+      "text": "Activate"
+    },
+    {
+      "context": "Aapko kitne din ke liye roaming chahiye",
+      "requested_bucket": "short",
+      "text": "7 din"
+    },
+    {
+      "context": "Kya aap international roaming activate karna chahte hain",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Aapka mobile number bata sakte hain",
+      "requested_bucket": "short",
+      "text": "9876543210"
+    },
+    {
+      "context": "Roaming charges samajhna hai kya",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kya aapke paas valid ID proof hai",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya aap internet roaming bhi chahte hain",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Kitne din ke liye aap jaana chahte hain",
+      "requested_bucket": "short",
+      "text": "5 din"
+    },
+    {
+      "context": "Kya aapko SMS roaming bhi chahiye",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Roaming activate karne ke liye aapka plan kya hai",
+      "requested_bucket": "short",
+      "text": "Postpaid plan"
+    },
+    {
+      "context": "Kya aap apne account me sufficient balance check kar chuke hain",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Aap flight kab ki booking karenge",
+      "requested_bucket": "short",
+      "text": "Kal tak"
+    },
+    {
+      "context": "Kya aapko national ya international roaming samajhna hai",
+      "requested_bucket": "short",
+      "text": "International"
+    },
+    {
+      "context": "Roaming activate karne ke liye aapka device compatible hai",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya aapko roaming deactivate karwani hai",
+      "requested_bucket": "short",
+      "text": "Abhi nahi"
+    },
+    {
+      "context": "Aapka destination country kaun sa hai jahan aap ja rahe hain",
+      "requested_bucket": "medium",
+      "text": "Main Dubai ja raha hoon business ke liye"
+    },
+    {
+      "context": "Roaming plans ke charges aur validity ke baare mein aapko kya jaana hai",
+      "requested_bucket": "medium",
+      "text": "Mujhe international roaming ke charges ke baare mein bataiye"
+    },
+    {
+      "context": "Kya aap prepaid ya postpaid connection ke liye international roaming activate karwana chahte hain",
+      "requested_bucket": "medium",
+      "text": "Mere paas prepaid connection hai roaming activate karwana hai"
+    },
+    {
+      "context": "Aapko kis date se aur kitne din ke liye roaming chahiye",
+      "requested_bucket": "medium",
+      "text": "Mujhe 15 March se 10 din ke liye chahiye roaming"
+    },
+    {
+      "context": "Kya aapke mobile mein roaming settings enable hai abhi",
+      "requested_bucket": "medium",
+      "text": "Nahi ji main abhi tak enable nahi kiya"
+    },
+    {
+      "context": "Aapke account mein balance available hai roaming ke liye use karne layak",
+      "requested_bucket": "medium",
+      "text": "Haan mera account mein achha khaasa balance available hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1822411628,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: roaming - wants to activate international or national roaming\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Aapko kis country ke liye roaming chahiye\",\"reply\":\"United States\"},{\"agent_question\":\"Kya aapka SIM prepaid hai ya postpaid\",\"reply\":\"Prepaid\"},{\"agent_question\":\"Kya aap national roaming activate karwana chahte hain\",\"reply\":\"Haan\"},{\"agent_question\":\"Roaming activate karwana hai ya deactivate\",\"reply\":\"Activate\"},{\"agent_question\":\"Aapko kitne din ke liye roaming chahiye\",\"reply\":\"7 din\"},{\"agent_question\":\"Kya aap international roaming activate karna chahte hain\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Aapka mobile number bata sakte hain\",\"reply\":\"9876543210\"},{\"agent_question\":\"Roaming charges samajhna hai kya\",\"reply\":\"Nahi\"},{\"agent_question\":\"Kya aapke paas valid ID proof hai\",\"reply\":\"Haan\"},{\"agent_question\":\"Kya aap internet roaming bhi chahte hain\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Kitne din ke liye aap jaana chahte hain\",\"reply\":\"5 din\"},{\"agent_question\":\"Kya aapko SMS roaming bhi chahiye\",\"reply\":\"Haan\"},{\"agent_question\":\"Roaming activate karne ke liye aapka plan kya hai\",\"reply\":\"Postpaid plan\"},{\"agent_question\":\"Kya aap apne account me sufficient balance check kar chuke hain\",\"reply\":\"Haan\"},{\"agent_question\":\"Aap flight kab ki booking karenge\",\"reply\":\"Kal tak\"},{\"agent_question\":\"Kya aapko national ya international roaming samajhna hai\",\"reply\":\"International\"},{\"agent_question\":\"Roaming activate karne ke liye aapka device compatible hai\",\"reply\":\"Haan\"},{\"agent_question\":\"Kya aapko roaming deactivate karwani hai\",\"reply\":\"Abhi nahi\"}],\"medium\":[{\"agent_question\":\"Aapka destination country kaun sa hai jahan aap ja rahe hain\",\"reply\":\"Main Dubai ja raha hoon business ke liye\"},{\"agent_question\":\"Roaming plans ke charges aur validity ke baare mein aapko kya jaana hai\",\"reply\":\"Mujhe international roaming ke charges ke baare mein bataiye\"},{\"agent_question\":\"Kya aap prepaid ya postpaid connection ke liye international roaming activate karwana chahte hain\",\"reply\":\"Mere paas prepaid connection hai roaming activate karwana hai\"},{\"agent_question\":\"Aapko kis date se aur kitne din ke liye roaming chahiye\",\"reply\":\"Mujhe 15 March se 10 din ke liye chahiye roaming\"},{\"agent_question\":\"Kya aapke mobile mein roaming settings enable hai abhi\",\"reply\":\"Nahi ji main abhi tak enable nahi kiya\"},{\"agent_question\":\"Aapke account mein balance available hai roaming ke liye use karne layak\",\"reply\":\"Haan mera account mein achha khaasa balance available hai\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 391,
+    "output_tokens": 599
+  }
+}

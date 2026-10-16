@@ -1,0 +1,197 @@
+{
+  "batch_id": "en.telecom.bill_dispute.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "bill_dispute",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wrong bill"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "check my account"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "billing dispute"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "the bill shows a charge of 650 rupees that I did not make"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "I think there is an error in the postpaid bill for march"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "my account number is 9 8 7 6 5 4 3 2 1 please verify"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "I was charged twice for the same call on 15 april"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "there is an unknown transaction for 999 rupees on my bill"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "please explain why my bill for april suddenly increased by 500"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "can you check why my call charges from delhi show 300 rupees"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "my phone number is 9 8 7 0 6 5 4 3 2 1 and bill is incorrect"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "the bill date is 5 may but the charges are from 2 weeks ago"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "I need to dispute the late payment fee added to my account"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "the bill has wrong data usage charges that I did not cross"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "please help me because my bill amount shows 1200 rupees extra"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "I am seeing a roaming charge though I was not out of station"
+    },
+    {
+      "context": "Can you tell me the issue with your bill?",
+      "requested_bucket": "short",
+      "text": "incorrect bill"
+    },
+    {
+      "context": "Is there any specific charge you want to discuss?",
+      "requested_bucket": "short",
+      "text": "overcharged"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I noticed a 300 rupees charge on my april bill which I did not authorize"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my account number is 2 3 4 5 6 7 8 9 0 and the phone number is the same"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the bill generated on 10 june has multiple calls to unknown numbers listed"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please verify the call details for 25 may as they seem incorrect"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I was charged 150 rupees as service tax twice in this billing cycle"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my postpaid bill is showing late fee charges though I paid on time"
+    },
+    {
+      "context": "What exactly seems incorrect in your bill?",
+      "requested_bucket": "medium",
+      "text": "The bill shows an excess of 850 rupees mainly on data usage"
+    },
+    {
+      "context": "Can you specify which charges you think are incorrect?",
+      "requested_bucket": "medium",
+      "text": "The call charges on 12 april are wrongly calculated at 120 rupees"
+    },
+    {
+      "context": "Have you made any payments recently towards your account?",
+      "requested_bucket": "medium",
+      "text": "I have paid the bill but still the system shows an outstanding balance"
+    },
+    {
+      "context": "Did you use roaming services during the last billing period?",
+      "requested_bucket": "medium",
+      "text": "There is a roaming fee on 8 may even though I was in my home city"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "The bill amount of 2350 rupees includes charges for calls I never made on 15 april and I want those reversed"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I dispute the data usage charges on my postpaid account stating 3 gigabytes while I used less than 1 gigabyte"
+    },
+    {
+      "context": "Can you explain more about the incorrect charge on your bill?",
+      "requested_bucket": "long",
+      "text": "The bill shows a roaming charge of 400 rupees on 3 may but I was within the city so this must be a mistake"
+    },
+    {
+      "context": "Could you provide details regarding the duplicate charges you mentioned?",
+      "requested_bucket": "long",
+      "text": "I was charged twice for the same SMS sent on 20 may and the extra 50 rupees added should be removed from my bill"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1817322247,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: bill_dispute - says a postpaid bill or charge is wrong\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"wrong bill\"},{\"text\":\"check my account\"}, \n           {\"text\":\"yes please\"},{\"text\":\"billing dispute\"}, \n           {\"text\":\"the bill shows a charge of 650 rupees that I did not make\"}, \n           {\"text\":\"I think there is an error in the postpaid bill for march\"}, \n           {\"text\":\"my account number is 9 8 7 6 5 4 3 2 1 please verify\"}, \n           {\"text\":\"I was charged twice for the same call on 15 april\"}, \n           {\"text\":\"there is an unknown transaction for 999 rupees on my bill\"}, \n           {\"text\":\"please explain why my bill for april suddenly increased by 500\"}, \n           {\"text\":\"can you check why my call charges from delhi show 300 rupees\"}, \n           {\"text\":\"my phone number is 9 8 7 0 6 5 4 3 2 1 and bill is incorrect\"}, \n           {\"text\":\"the bill date is 5 may but the charges are from 2 weeks ago\"}, \n           {\"text\":\"I need to dispute the late payment fee added to my account\"}, \n           {\"text\":\"the bill has wrong data usage charges that I did not cross\"}, \n           {\"text\":\"please help me because my bill amount shows 1200 rupees extra\"}, \n           {\"text\":\"I am seeing a roaming charge though I was not out of station\"}], \n \"short_with_context\":[{\"text\":\"incorrect bill\",\"context\":\"Can you tell me the issue with your bill?\"}, \n                       {\"text\":\"overcharged\",\"context\":\"Is there any specific charge you want to discuss?\"}], \n \"medium\":[{\"text\":\"I noticed a 300 rupees charge on my april bill which I did not authorize\"}, \n           {\"text\":\"my account number is 2 3 4 5 6 7 8 9 0 and the phone number is the same\"}, \n           {\"text\":\"the bill generated on 10 june has multiple calls to unknown numbers listed\"}, \n           {\"text\":\"please verify the call details for 25 may as they seem incorrect\"}, \n           {\"text\":\"I was charged 150 rupees as service tax twice in this billing cycle\"}, \n           {\"text\":\"my postpaid bill is showing late fee charges though I paid on time\"}], \n \"medium_with_context\":[{\"text\":\"The bill shows an excess of 850 rupees mainly on data usage\",\"context\":\"What exactly seems incorrect in your bill?\"}, \n                        {\"text\":\"The call charges on 12 april are wrongly calculated at 120 rupees\",\"context\":\"Can you specify which charges you think are incorrect?\"}, \n                        {\"text\":\"I have paid the bill but still the system shows an outstanding balance\",\"context\":\"Have you made any payments recently towards your account?\"}, \n                        {\"text\":\"There is a roaming fee on 8 may even though I was in my home city\",\"context\":\"Did you use roaming services during the last billing period?\"}], \n \"long\":[{\"text\":\"The bill amount of 2350 rupees includes charges for calls I never made on 15 april and I want those reversed\"}, \n         {\"text\":\"I dispute the data usage charges on my postpaid account stating 3 gigabytes while I used less than 1 gigabyte\"}], \n \"long_with_context\":[{\"text\":\"The bill shows a roaming charge of 400 rupees on 3 may but I was within the city so this must be a mistake\",\"context\":\"Can you explain more about the incorrect charge on your bill?\"}, \n                      {\"text\":\"I was charged twice for the same SMS sent on 20 may and the extra 50 rupees added should be removed from my bill\",\"context\":\"Could you provide details regarding the duplicate charges you mentioned?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 588,
+    "output_tokens": 796
+  }
+}

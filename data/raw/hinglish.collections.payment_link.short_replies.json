@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.collections.payment_link.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "collections",
+  "intent": "payment_link",
+  "items": [
+    {
+      "context": "Kaise payment karna chahte hain aap",
+      "requested_bucket": "short",
+      "text": "net banking se"
+    },
+    {
+      "context": "Payment link bhej dun kya",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Kab tak payment karna chahte hain",
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": "Kya aapko online payment karna hai",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "SMS se link bheju kya",
+      "requested_bucket": "short",
+      "text": "please bhej do"
+    },
+    {
+      "context": "Kitna amount pay karna hai",
+      "requested_bucket": "short",
+      "text": "pach hazaar"
+    },
+    {
+      "context": "Payment mode batayein",
+      "requested_bucket": "short",
+      "text": "UPI se"
+    },
+    {
+      "context": "Payment confirm karna hai kya",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "Aapke paas internet hai",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Receipt chahiye kya",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "Payment ke liye time chahiye",
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": "Debit card se payment karenge",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "Mobile number confirm karen",
+      "requested_bucket": "short",
+      "text": "nine eight seven six five four three two one"
+    },
+    {
+      "context": "Payment ke baad confirmation lena hai",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Aapko payment link kis number par chahiye",
+      "requested_bucket": "short",
+      "text": "mera registered number par"
+    },
+    {
+      "context": "Payment slip bhej dun",
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Kaun sa date aap prefer karte hain payment ke liye",
+      "requested_bucket": "short",
+      "text": "aaj"
+    },
+    {
+      "context": "Payment status check karwana hai",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Aap payment link SMS se lena chahenge ya email par",
+      "requested_bucket": "medium",
+      "text": "SMS se bhej dena please"
+    },
+    {
+      "context": "Kya aapke paas mobile banking activated hai",
+      "requested_bucket": "medium",
+      "text": "haan ji activated hai mere paas"
+    },
+    {
+      "context": "Kya aapko poora amount ya kuch part pay karna hai",
+      "requested_bucket": "medium",
+      "text": "thoda part pay karna hai abhi"
+    },
+    {
+      "context": "Payment karne me koi dikkat to nahi ho rahi",
+      "requested_bucket": "medium",
+      "text": "nahi sab theek chal raha hai"
+    },
+    {
+      "context": "Aap payment link par click kar ke batana",
+      "requested_bucket": "medium",
+      "text": "theek hai kar ke batata hoon"
+    },
+    {
+      "context": "Kya aap online payment kar rahe hain ya offline",
+      "requested_bucket": "medium",
+      "text": "online karna hai mujhe"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 496056958,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: payment_link - asks for a payment link or how to pay\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Kaise payment karna chahte hain aap\",\"reply\":\"net banking se\"},{\"agent_question\":\"Payment link bhej dun kya\",\"reply\":\"haan ji\"},{\"agent_question\":\"Kab tak payment karna chahte hain\",\"reply\":\"kal tak\"},{\"agent_question\":\"Kya aapko online payment karna hai\",\"reply\":\"haan\"},{\"agent_question\":\"SMS se link bheju kya\",\"reply\":\"please bhej do\"},{\"agent_question\":\"Kitna amount pay karna hai\",\"reply\":\"pach hazaar\"},{\"agent_question\":\"Payment mode batayein\",\"reply\":\"UPI se\"},{\"agent_question\":\"Payment confirm karna hai kya\",\"reply\":\"haan\"},{\"agent_question\":\"Aapke paas internet hai\",\"reply\":\"haan ji\"},{\"agent_question\":\"Receipt chahiye kya\",\"reply\":\"haan\"},{\"agent_question\":\"Payment ke liye time chahiye\",\"reply\":\"abhi nahi\"},{\"agent_question\":\"Debit card se payment karenge\",\"reply\":\"nahi\"},{\"agent_question\":\"Mobile number confirm karen\",\"reply\":\"nine eight seven six five four three two one\"},{\"agent_question\":\"Payment ke baad confirmation lena hai\",\"reply\":\"haan ji\"},{\"agent_question\":\"Aapko payment link kis number par chahiye\",\"reply\":\"mera registered number par\"},{\"agent_question\":\"Payment slip bhej dun\",\"reply\":\"theek hai\"},{\"agent_question\":\"Kaun sa date aap prefer karte hain payment ke liye\",\"reply\":\"aaj\"},{\"agent_question\":\"Payment status check karwana hai\",\"reply\":\"haan ji\"}],\"medium\":[{\"agent_question\":\"Aap payment link SMS se lena chahenge ya email par\",\"reply\":\"SMS se bhej dena please\"},{\"agent_question\":\"Kya aapke paas mobile banking activated hai\",\"reply\":\"haan ji activated hai mere paas\"},{\"agent_question\":\"Kya aapko poora amount ya kuch part pay karna hai\",\"reply\":\"thoda part pay karna hai abhi\"},{\"agent_question\":\"Payment karne me koi dikkat to nahi ho rahi\",\"reply\":\"nahi sab theek chal raha hai\"},{\"agent_question\":\"Aap payment link par click kar ke batana\",\"reply\":\"theek hai kar ke batata hoon\"},{\"agent_question\":\"Kya aap online payment kar rahe hain ya offline\",\"reply\":\"online karna hai mujhe\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 394,
+    "output_tokens": 477
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "batch_id": "hinglish.telecom.data_balance.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "telecom",
+  "intent": "data_balance",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kitna data bacha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "abhi balance check karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "data validity bata do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "thik hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "accha"
+    },
+    {
+      "context": "Aapko apne data balance ke baare mein janna hai kya",
+      "requested_bucket": "short",
+      "text": "piche kitna data hai"
+    },
+    {
+      "context": "Aap apni data validity ka pata karna chahte hain kya",
+      "requested_bucket": "short",
+      "text": "valitity kab tak hai"
+    },
+    {
+      "context": "Kya aapko apne plan ka actual data balance dekhna hai",
+      "requested_bucket": "short",
+      "text": "kitne gb bache hain"
+    },
+    {
+      "context": "Aapko apne data balance ke baare mein janna hai kya",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Aap apni data validity ka pata karna chahte hain kya",
+      "requested_bucket": "short",
+      "text": "validity batado"
+    },
+    {
+      "context": "Kya aapko apne plan ka actual data balance dekhna hai",
+      "requested_bucket": "short",
+      "text": "abhi kitna baki hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umm matlab mera data balance kitna bacha hai bata sakte ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera plan jo hai uski validity abhi last tak kab tak hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha uh mujhe apna remaining data aur validity dono bata do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "haan ji yeh batao mera account me kitna data abhi bacha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera data balance check karna tha kyunki mujhe abhi chalana hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "woh haan ji kitni der me aap details bhej doge mera balance ka"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha matlab mujhe apne active data pack ka status batayein please"
+    },
+    {
+      "context": "Pehele aap apna mobile number batayein",
+      "requested_bucket": "medium",
+      "text": "woh mujhe apka naam aur mobile number do aapka data balance bataun"
+    },
+    {
+      "context": "Main aapka data balance check kar raha hoon",
+      "requested_bucket": "medium",
+      "text": "haan ji thoda ruk jao main check karke batata hoon aapka data balance"
+    },
+    {
+      "context": "Apka jo current data balance hai woh yeh hai",
+      "requested_bucket": "medium",
+      "text": "abhi apke paas 2gb data baki hai aur validity 10 march tak hai"
+    },
+    {
+      "context": "Aapke account me koi aur plans bhi to hain",
+      "requested_bucket": "medium",
+      "text": "main aapke account me aur bhi plans dekh raha hoon thoda intazaar karein"
+    },
+    {
+      "context": "Aapko apne data pack activate karne ki tareekh bhi chahiye kya",
+      "requested_bucket": "medium",
+      "text": "jis date pe activate kiya tha woh thodi der me bata deta hoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "haani ji mera data balance check karna tha kyunki mujhe kal ek important call karni hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "umm mera data kaafi jaldi khatam ho raha hai matlab mujhe pata nahi ki kitna rehta hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "accha main soch raha tha ki mera jo plan hai uski validity kab tak hai mujhe please confirm kardo"
+    },
+    {
+      "context": "Aapka mobile number kya hai jisse main data balance check karoon",
+      "requested_bucket": "long",
+      "text": "haan ji aapka current data balance 3.5gb baki hai valid hai 15 april tak"
+    },
+    {
+      "context": "Maine aapka data balance check kar liya hai ab aapko kuch batana hai",
+      "requested_bucket": "long",
+      "text": "accha toh aapka main plan 10 march ko expire ho jayega aur baki gb 1.2 hai"
+    },
+    {
+      "context": "Aapke data plan ki validity kab tak hai main aapko abhi batata hoon",
+      "requested_bucket": "long",
+      "text": "umm sorry main gale mein 8 march bola tha shayad toh sach mein 10 march tak hi hai validity"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2128742386,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: data_balance - asks how much data or validity is left\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"kitna data bacha hai\"},{\"text\":\"abhi balance check karna hai\"},{\"text\":\"data validity bata do\"},{\"text\":\"haan ji\"},{\"text\":\"thik hai\"},{\"text\":\"accha\"}],\"short_with_context\":[{\"text\":\"piche kitna data hai\",\"context\":\"Aapko apne data balance ke baare mein janna hai kya\"},{\"text\":\"valitity kab tak hai\",\"context\":\"Aap apni data validity ka pata karna chahte hain kya\"},{\"text\":\"kitne gb bache hain\",\"context\":\"Kya aapko apne plan ka actual data balance dekhna hai\"},{\"text\":\"haan ji\",\"context\":\"Aapko apne data balance ke baare mein janna hai kya\"},{\"text\":\"validity batado\",\"context\":\"Aap apni data validity ka pata karna chahte hain kya\"},{\"text\":\"abhi kitna baki hai\",\"context\":\"Kya aapko apne plan ka actual data balance dekhna hai\"}],\"medium\":[{\"text\":\"umm matlab mera data balance kitna bacha hai bata sakte ho\"},{\"text\":\"mera plan jo hai uski validity abhi last tak kab tak hai\"},{\"text\":\"accha uh mujhe apna remaining data aur validity dono bata do\"},{\"text\":\"haan ji yeh batao mera account me kitna data abhi bacha hai\"},{\"text\":\"mera data balance check karna tha kyunki mujhe abhi chalana hai\"},{\"text\":\"woh haan ji kitni der me aap details bhej doge mera balance ka\"},{\"text\":\"accha matlab mujhe apne active data pack ka status batayein please\"}],\"medium_with_context\":[{\"text\":\"woh mujhe apka naam aur mobile number do aapka data balance bataun\",\"context\":\"Pehele aap apna mobile number batayein\"},{\"text\":\"haan ji thoda ruk jao main check karke batata hoon aapka data balance\",\"context\":\"Main aapka data balance check kar raha hoon\"},{\"text\":\"abhi apke paas 2gb data baki hai aur validity 10 march tak hai\",\"context\":\"Apka jo current data balance hai woh yeh hai\"},{\"text\":\"main aapke account me aur bhi plans dekh raha hoon thoda intazaar karein\",\"context\":\"Aapke account me koi aur plans bhi to hain\"},{\"text\":\"jis date pe activate kiya tha woh thodi der me bata deta hoon\",\"context\":\"Aapko apne data pack activate karne ki tareekh bhi chahiye kya\"}],\"long\":[{\"text\":\"haani ji mera data balance check karna tha kyunki mujhe kal ek important call karni hai\"},{\"text\":\"umm mera data kaafi jaldi khatam ho raha hai matlab mujhe pata nahi ki kitna rehta hai\"},{\"text\":\"accha main soch raha tha ki mera jo plan hai uski validity kab tak hai mujhe please confirm kardo\"}],\"long_with_context\":[{\"text\":\"haan ji aapka current data balance 3.5gb baki hai valid hai 15 april tak\",\"context\":\"Aapka mobile number kya hai jisse main data balance check karoon\"},{\"text\":\"accha toh aapka main plan 10 march ko expire ho jayega aur baki gb 1.2 hai\",\"context\":\"Maine aapka data balance check kar liya hai ab aapko kuch batana hai\"},{\"text\":\"umm sorry main gale mein 8 march bola tha shayad toh sach mein 10 march tak hi hai validity\",\"context\":\"Aapke data plan ki validity kab tak hai main aapko abhi batata hoon\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 609,
+    "output_tokens": 766
+  }
+}

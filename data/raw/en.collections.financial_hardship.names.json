@@ -1,0 +1,227 @@
+{
+  "batch_id": "en.collections.financial_hardship.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "financial_hardship",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "cannot pay now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "lost my job"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "short_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "no I am unwell"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "not able to clear"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "medium"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "I have been out of work since last month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "my health issues are not allowing me to work currently"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "due to the lockdown I lost my salary this month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "I do not have enough money to pay the bill now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "last week I was admitted to hospital so no income"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "I have to support my family with no current earnings"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "medium_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "I cant pay the dues right now because I lost job last month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "I am really sick since two weeks so can not pay this time"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "due to covid my office was shut I cant pay the installment"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "I lost my only source of income so payment delayed"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "long"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "My name is Rajesh Kumar from Pune and I lost my job since March so I cant afford the payments currently"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "I am taking care of my wife who is hospitalized in Bangalore so I do not have resources to pay the loan installments"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "long_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "I understand you asked why I cannot pay now I have been laid off at my firm in Hyderabad and I am searching for a new job but no income yet so payment is not possible at this point"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "Regarding your question about my payment ability I have been diagnosed with severe pneumonia and admitted at a Delhi hospital so I am financially unable to pay the EMIs currently"
+    },
+    {
+      "context": "Can you tell me the reason for not paying the amount?",
+      "requested_bucket": "short",
+      "text": "lost job"
+    },
+    {
+      "context": "Is there any specific reason you cannot pay the dues?",
+      "requested_bucket": "short",
+      "text": "quite ill"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Since April I have been financially troubled due to job loss"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Because of my illness I am unable to generate any income"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "My office shut operations due to covid restrictions this month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I need some more time as I have no earnings currently"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "My children need expenses so payment will be delayed for some time"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I was transferred to another city and job hunting not successful yet"
+    },
+    {
+      "context": "Can you describe your current employment status?",
+      "requested_bucket": "medium",
+      "text": "I am jobless from last month so I cannot pay now"
+    },
+    {
+      "context": "Can you explain why payment is not possible at the moment?",
+      "requested_bucket": "medium",
+      "text": "I got sick and admitted in hospital last week so payment delayed"
+    },
+    {
+      "context": "What is the cause of your financial hardship currently?",
+      "requested_bucket": "medium",
+      "text": "My company closed and I am waiting for new job offers now"
+    },
+    {
+      "context": "Please tell me about your health condition affecting payments",
+      "requested_bucket": "medium",
+      "text": "Due to prolonged illness I am out of work and cannot pay"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "My name is Priya Singh from Jaipur and I lost my source of income since April after lockdown so clearing dues currently is impossible"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I am currently undergoing treatment in hospital located in Lucknow so my financial situation is strained and I cannot make loan payments at this time"
+    },
+    {
+      "context": "Can you explain the reason behind non payment of your dues?",
+      "requested_bucket": "long",
+      "text": "To answer your question about why I have not paid the bills I was made redundant in my office in Chennai last month and have no other income source so payment is difficult"
+    },
+    {
+      "context": "Could you provide detailed reasons for your current inability to pay?",
+      "requested_bucket": "long",
+      "text": "Regarding your query about financial problems I am suffering from a serious illness and hospitalized in Ahmedabad which has halted my earnings and made it impossible to pay installment on time"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2867015860,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: financial_hardship - explains they cannot pay right now because of job loss, illness or similar\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"cannot pay now\"},{\"text\":\"lost my job\"},{\"text\":\"short_with_context\"},{\"text\":\"no I am unwell\"},{\"text\":\"not able to clear\"},{\"text\":\"medium\"},{\"text\":\"I have been out of work since last month\"},{\"text\":\"my health issues are not allowing me to work currently\"},{\"text\":\"due to the lockdown I lost my salary this month\"},{\"text\":\"I do not have enough money to pay the bill now\"},{\"text\":\"last week I was admitted to hospital so no income\"},{\"text\":\"I have to support my family with no current earnings\"},{\"text\":\"medium_with_context\"},{\"text\":\"I cant pay the dues right now because I lost job last month\"},{\"text\":\"I am really sick since two weeks so can not pay this time\"},{\"text\":\"due to covid my office was shut I cant pay the installment\"},{\"text\":\"I lost my only source of income so payment delayed\"},{\"text\":\"long\"},{\"text\":\"My name is Rajesh Kumar from Pune and I lost my job since March so I cant afford the payments currently\"},{\"text\":\"I am taking care of my wife who is hospitalized in Bangalore so I do not have resources to pay the loan installments\"},{\"text\":\"long_with_context\"},{\"text\":\"I understand you asked why I cannot pay now I have been laid off at my firm in Hyderabad and I am searching for a new job but no income yet so payment is not possible at this point\"},{\"text\":\"Regarding your question about my payment ability I have been diagnosed with severe pneumonia and admitted at a Delhi hospital so I am financially unable to pay the EMIs currently\"}],\"short_with_context\":[{\"text\":\"lost job\",\"context\":\"Can you tell me the reason for not paying the amount?\"},{\"text\":\"quite ill\",\"context\":\"Is there any specific reason you cannot pay the dues?\"}],\"medium\":[{\"text\":\"Since April I have been financially troubled due to job loss\"},{\"text\":\"Because of my illness I am unable to generate any income\"},{\"text\":\"My office shut operations due to covid restrictions this month\"},{\"text\":\"I need some more time as I have no earnings currently\"},{\"text\":\"My children need expenses so payment will be delayed for some time\"},{\"text\":\"I was transferred to another city and job hunting not successful yet\"}],\"medium_with_context\":[{\"text\":\"I am jobless from last month so I cannot pay now\",\"context\":\"Can you describe your current employment status?\"},{\"text\":\"I got sick and admitted in hospital last week so payment delayed\",\"context\":\"Can you explain why payment is not possible at the moment?\"},{\"text\":\"My company closed and I am waiting for new job offers now\",\"context\":\"What is the cause of your financial hardship currently?\"},{\"text\":\"Due to prolonged illness I am out of work and cannot pay\",\"context\":\"Please tell me about your health condition affecting payments\"}],\"long\":[{\"text\":\"My name is Priya Singh from Jaipur and I lost my source of income since April after lockdown so clearing dues currently is impossible\"},{\"text\":\"I am currently undergoing treatment in hospital located in Lucknow so my financial situation is strained and I cannot make loan payments at this time\"}],\"long_with_context\":[{\"text\":\"To answer your question about why I have not paid the bills I was made redundant in my office in Chennai last month and have no other income source so payment is difficult\",\"context\":\"Can you explain the reason behind non payment of your dues?\"},{\"text\":\"Regarding your query about financial problems I am suffering from a serious illness and hospitalized in Ahmedabad which has halted my earnings and made it impossible to pay installment on time\",\"context\":\"Could you provide detailed reasons for your current inability to pay?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 575,
+    "output_tokens": 741
+  }
+}

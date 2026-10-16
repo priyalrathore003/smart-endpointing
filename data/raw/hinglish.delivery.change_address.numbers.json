@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.delivery.change_address.numbers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "change_address",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "address change karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "abhi kar dijiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "new address bhej do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan theek hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak deliver kar dena"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "landmark bhi change karna hai"
+    },
+    {
+      "context": "Kya aap naya address batayenge?",
+      "requested_bucket": "short",
+      "text": "haan bilkul"
+    },
+    {
+      "context": "Kya aap address change karna chahte hain?",
+      "requested_bucket": "short",
+      "text": "address update kar dijiye"
+    },
+    {
+      "context": "Kab tak aap naya address provide karenge?",
+      "requested_bucket": "short",
+      "text": "15 minute mein bhej raha hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera order ka delivery address change karna hai abhi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please meri delivery address par naya landmark update kar dijiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya main apna delivery address 123 main road se badal sakta hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera purana address model town me tha ab naya address sector 45 hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "agar address change kar diya to kitna samay lag jayega delivery me"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya main apne phone number ke through address update kar sakta hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera order 56789 hai aur naya address house number 12 sector 60 hai"
+    },
+    {
+      "context": "Aap naya address batayenge delivery ke liye?",
+      "requested_bucket": "medium",
+      "text": "delivery ke liye naya address send kar raha hu abhi"
+    },
+    {
+      "context": "Aapko naya landmark batana hai kya?",
+      "requested_bucket": "medium",
+      "text": "naya landmark metro station ke samne hai aap update kar lena"
+    },
+    {
+      "context": "Kya aap app me address change karke de sakte hain?",
+      "requested_bucket": "medium",
+      "text": "phone pe nahi change kar pa raha to app me try kar raha hu abhi"
+    },
+    {
+      "context": "Aap address update karne ke baad kya karna chahte hain?",
+      "requested_bucket": "medium",
+      "text": "order cancel nahi karna bas address update kar dena jaldi se"
+    },
+    {
+      "context": "Pichla address kya tha aur kya naya address hai?",
+      "requested_bucket": "medium",
+      "text": "mera previous address sector 12 tha ab change karke sector 15 karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera delivery address pehle noida sector 18 me tha lekin ab main sector 62 shift ho gaya hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya aap meri delivery ke address ko update kar sakte hain kyuki maine galat address diya tha initially"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "please mera order cancel na karein bas delivery address ko badal ke sector 23 noida se sector 44 kara dijiyega"
+    },
+    {
+      "context": "Kya aap apna address update karna chahenge kyunki jo aapne diya hai usme kuch galti hai?",
+      "requested_bucket": "long",
+      "text": "mera delivery address jo hai usme ek galti hai kya main update kar sakta hoon abhi"
+    },
+    {
+      "context": "Aap apna delivery address change karna chahenge kya?",
+      "requested_bucket": "long",
+      "text": "main apna address change karna chahta hoon kyunki main apna ghar shift kar chuka hu naye flat number 233 sector 20 mein"
+    },
+    {
+      "context": "Kya aapko apne address me changes karwana hai?",
+      "requested_bucket": "long",
+      "text": "agar main apne address me kuch correction karna chahoon toh kya aap mujhe help karenge is call pe"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 901751301,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: change_address - wants to change the delivery address or landmark\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"address change karna hai\"},{\"text\":\"abhi kar dijiye\"},{\"text\":\"new address bhej do\"},{\"text\":\"haan theek hai\"},{\"text\":\"kal tak deliver kar dena\"},{\"text\":\"landmark bhi change karna hai\"}],\"short_with_context\":[{\"text\":\"haan bilkul\",\"context\":\"Kya aap naya address batayenge?\"},{\"text\":\"address update kar dijiye\",\"context\":\"Kya aap address change karna chahte hain?\"},{\"text\":\"15 minute mein bhej raha hu\",\"context\":\"Kab tak aap naya address provide karenge?\"}],\"medium\":[{\"text\":\"mera order ka delivery address change karna hai abhi\"},{\"text\":\"please meri delivery address par naya landmark update kar dijiye\"},{\"text\":\"kya main apna delivery address 123 main road se badal sakta hu\"},{\"text\":\"mera purana address model town me tha ab naya address sector 45 hai\"},{\"text\":\"agar address change kar diya to kitna samay lag jayega delivery me\"},{\"text\":\"kya main apne phone number ke through address update kar sakta hu\"},{\"text\":\"mera order 56789 hai aur naya address house number 12 sector 60 hai\"}],\"medium_with_context\":[{\"text\":\"delivery ke liye naya address send kar raha hu abhi\",\"context\":\"Aap naya address batayenge delivery ke liye?\"},{\"text\":\"naya landmark metro station ke samne hai aap update kar lena\",\"context\":\"Aapko naya landmark batana hai kya?\"},{\"text\":\"phone pe nahi change kar pa raha to app me try kar raha hu abhi\",\"context\":\"Kya aap app me address change karke de sakte hain?\"},{\"text\":\"order cancel nahi karna bas address update kar dena jaldi se\",\"context\":\"Aap address update karne ke baad kya karna chahte hain?\"},{\"text\":\"mera previous address sector 12 tha ab change karke sector 15 karna hai\",\"context\":\"Pichla address kya tha aur kya naya address hai?\"}],\"long\":[{\"text\":\"mera delivery address pehle noida sector 18 me tha lekin ab main sector 62 shift ho gaya hu\"},{\"text\":\"kya aap meri delivery ke address ko update kar sakte hain kyuki maine galat address diya tha initially\"},{\"text\":\"please mera order cancel na karein bas delivery address ko badal ke sector 23 noida se sector 44 kara dijiyega\"}],\"long_with_context\":[{\"text\":\"mera delivery address jo hai usme ek galti hai kya main update kar sakta hoon abhi\",\"context\":\"Kya aap apna address update karna chahenge kyunki jo aapne diya hai usme kuch galti hai?\"},{\"text\":\"main apna address change karna chahta hoon kyunki main apna ghar shift kar chuka hu naye flat number 233 sector 20 mein\",\"context\":\"Aap apna delivery address change karna chahenge kya?\"},{\"text\":\"agar main apne address me kuch correction karna chahoon toh kya aap mujhe help karenge is call pe\",\"context\":\"Kya aapko apne address me changes karwana hai?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 606,
+    "output_tokens": 684
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.collections.wrong_person.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "wrong_person",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahi ye mera number nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji sahi pakde hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "waha se call nahi kiya maine"
+    },
+    {
+      "context": "Sir is this your registered phone number",
+      "requested_bucket": "short",
+      "text": "nahi wo mera number nahi hai"
+    },
+    {
+      "context": "Can you please confirm your name for the account",
+      "requested_bucket": "short",
+      "text": "wrong person yeh toh mera dost ka number hai"
+    },
+    {
+      "context": "Are you calling regarding loan repayment",
+      "requested_bucket": "short",
+      "text": "ye loan mera nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha bhaiya shayad aap galat number pe call kar rahe ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umm matlab mera naam to alag hai aur phone number bhi alag hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "haan ji main samajh sakta hoon par yeh mera account nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "nahi nahi yeh amount to maine transfer hi nahi kiya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "woh aapne galti se kisi aur ko call kar liya lagta hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kal nahi aaj call karna tha par mujhse nahi hua call karna"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "ye loan mujhe nahi lena tha mai paise bhi nahi bheja"
+    },
+    {
+      "context": "Please confirm your date of birth for account verification",
+      "requested_bucket": "medium",
+      "text": "main to abhi thoda confuse hoon aap check kar lo dob sahi hai kya"
+    },
+    {
+      "context": "Did you apply for a personal loan recently",
+      "requested_bucket": "medium",
+      "text": "nahi ji maine kabhi aise kisi loan ke liye apply nahi kiya"
+    },
+    {
+      "context": "Is this phone number registered with your account",
+      "requested_bucket": "medium",
+      "text": "ye number mera nahi hai ye galat dikh raha hai system me"
+    },
+    {
+      "context": "Can you confirm if you are account holder",
+      "requested_bucket": "medium",
+      "text": "umm sorry shayad galat samjhe ho main account holder nahi hoon"
+    },
+    {
+      "context": "Have you contacted us from this number before",
+      "requested_bucket": "medium",
+      "text": "maine toh is number se kabhi call nahi kiya hai aapse"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "bhaiya mujhe samajh nahi aa raha ki aap kiski baat kar rahe ho mera naam to alag hai aur account bhi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "haan ji main Mumbai me rehta hoon mera naam Rajesh hai aur yeh number mera bhi nahi hai jo aap baar baar call kar rahe hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "accha samajh gaye mujhe lagta hai aapne galti se mujhe call kar liya hai kyunki main is transaction se bilkul anjaan hoon"
+    },
+    {
+      "context": "Can you please state your full name for verification",
+      "requested_bucket": "long",
+      "text": "main aapke system ko verify karne ke liye bata doon ke mera naam Rahul hai aur ye number mera nahi hai"
+    },
+    {
+      "context": "Are you the person associated with this loan account",
+      "requested_bucket": "long",
+      "text": "nahi ji ye loan ka case nahi hai main bank ka customer hoon par jiska number aap dial kar rahe ho wo main nahi hoon"
+    },
+    {
+      "context": "We found an overdue balance on your account can you confirm details",
+      "requested_bucket": "long",
+      "text": "sorry mujhe lag raha hai ki aap galat aadmi ko call kar rahe hain kyunki ye details meri nahi hain"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 28017090,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: wrong_person - says the agent has the wrong person or number\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"nahi ye mera number nahi hai\"},{\"text\":\"haan ji sahi pakde hain\"},{\"text\":\"waha se call nahi kiya maine\"}],\"short_with_context\":[{\"text\":\"nahi wo mera number nahi hai\",\"context\":\"Sir is this your registered phone number\"},{\"text\":\"wrong person yeh toh mera dost ka number hai\",\"context\":\"Can you please confirm your name for the account\"},{\"text\":\"ye loan mera nahi hai\",\"context\":\"Are you calling regarding loan repayment\"}],\"medium\":[{\"text\":\"accha bhaiya shayad aap galat number pe call kar rahe ho\"},{\"text\":\"umm matlab mera naam to alag hai aur phone number bhi alag hai\"},{\"text\":\"haan ji main samajh sakta hoon par yeh mera account nahi hai\"},{\"text\":\"nahi nahi yeh amount to maine transfer hi nahi kiya hai\"},{\"text\":\"woh aapne galti se kisi aur ko call kar liya lagta hai\"},{\"text\":\"kal nahi aaj call karna tha par mujhse nahi hua call karna\"},{\"text\":\"ye loan mujhe nahi lena tha mai paise bhi nahi bheja\"}],\"medium_with_context\":[{\"text\":\"main to abhi thoda confuse hoon aap check kar lo dob sahi hai kya\",\"context\":\"Please confirm your date of birth for account verification\"},{\"text\":\"nahi ji maine kabhi aise kisi loan ke liye apply nahi kiya\",\"context\":\"Did you apply for a personal loan recently\"},{\"text\":\"ye number mera nahi hai ye galat dikh raha hai system me\",\"context\":\"Is this phone number registered with your account\"},{\"text\":\"umm sorry shayad galat samjhe ho main account holder nahi hoon\",\"context\":\"Can you confirm if you are account holder\"},{\"text\":\"maine toh is number se kabhi call nahi kiya hai aapse\",\"context\":\"Have you contacted us from this number before\"}],\"long\":[{\"text\":\"bhaiya mujhe samajh nahi aa raha ki aap kiski baat kar rahe ho mera naam to alag hai aur account bhi\"},{\"text\":\"haan ji main Mumbai me rehta hoon mera naam Rajesh hai aur yeh number mera bhi nahi hai jo aap baar baar call kar rahe hain\"},{\"text\":\"accha samajh gaye mujhe lagta hai aapne galti se mujhe call kar liya hai kyunki main is transaction se bilkul anjaan hoon\"}],\"long_with_context\":[{\"text\":\"main aapke system ko verify karne ke liye bata doon ke mera naam Rahul hai aur ye number mera nahi hai\",\"context\":\"Can you please state your full name for verification\"},{\"text\":\"nahi ji ye loan ka case nahi hai main bank ka customer hoon par jiska number aap dial kar rahe ho wo main nahi hoon\",\"context\":\"Are you the person associated with this loan account\"},{\"text\":\"sorry mujhe lag raha hai ki aap galat aadmi ko call kar rahe hain kyunki ye details meri nahi hain\",\"context\":\"We found an overdue balance on your account can you confirm details\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 610,
+    "output_tokens": 652
+  }
+}

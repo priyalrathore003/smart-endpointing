@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.banking.unauthorised_debit.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "unauthorised_debit",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "no I did not"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "card ending 1234"
+    },
+    {
+      "context": "Did you authorize this transaction?",
+      "requested_bucket": "short",
+      "text": "no it was not me"
+    },
+    {
+      "context": "What action would you like to take right now?",
+      "requested_bucket": "short",
+      "text": "please block my card"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I am seeing a debit of two thousand rupees from my account"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "there is a transaction for seven hundred rupees at a store in mumbai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my name is Ravi Kumar and I did not make this payment"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the unauthorized debit happened yesterday evening around seven pm"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you please check the transaction on fourteenth March from Bangalore"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the amount debited is five thousand five hundred and I do not recognize it"
+    },
+    {
+      "context": "Can you confirm the date on which the transaction took place?",
+      "requested_bucket": "medium",
+      "text": "could you please verify the transaction date for me"
+    },
+    {
+      "context": "Where did the transaction happen according to the statement?",
+      "requested_bucket": "medium",
+      "text": "I have never been to Chennai where the transaction occurred"
+    },
+    {
+      "context": "Do you recognize the merchant where the debit happened?",
+      "requested_bucket": "medium",
+      "text": "the debit of six hundred rupees is from a shop I never visited"
+    },
+    {
+      "context": "Which merchant was involved in the disputed transaction?",
+      "requested_bucket": "medium",
+      "text": "please tell me the merchant details for the debit on twenty ninth April"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I was checking my bank statement this morning and noticed a debit of fifteen thousand rupees which I did not authorize at all"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "my debit card was used in Delhi on 12th February for a large purchase that I did not make so please block the card immediately"
+    },
+    {
+      "context": "Can you describe the transaction that you believe is unauthorized?",
+      "requested_bucket": "long",
+      "text": "I see a transaction of eight thousand rupees on the 10th of March at a electronics store in Hyderabad which is completely unknown to me can you help"
+    },
+    {
+      "context": "Can you tell me the details of the disputed transaction you found?",
+      "requested_bucket": "long",
+      "text": "the debit card ending 9876 was charged for a transaction in Kolkata last Sunday and I am sure I was not there on that day so please revoke the transaction"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1086999172,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: unauthorised_debit - reports a transaction they did not make\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"no I did not\"},{\"text\":\"card ending 1234\"}],\"short_with_context\":[{\"text\":\"no it was not me\",\"context\":\"Did you authorize this transaction?\"},{\"text\":\"please block my card\",\"context\":\"What action would you like to take right now?\"}],\"medium\":[{\"text\":\"I am seeing a debit of two thousand rupees from my account\"},{\"text\":\"there is a transaction for seven hundred rupees at a store in mumbai\"},{\"text\":\"my name is Ravi Kumar and I did not make this payment\"},{\"text\":\"the unauthorized debit happened yesterday evening around seven pm\"},{\"text\":\"can you please check the transaction on fourteenth March from Bangalore\"},{\"text\":\"the amount debited is five thousand five hundred and I do not recognize it\"}],\"medium_with_context\":[{\"text\":\"could you please verify the transaction date for me\",\"context\":\"Can you confirm the date on which the transaction took place?\"},{\"text\":\"I have never been to Chennai where the transaction occurred\",\"context\":\"Where did the transaction happen according to the statement?\"},{\"text\":\"the debit of six hundred rupees is from a shop I never visited\",\"context\":\"Do you recognize the merchant where the debit happened?\"},{\"text\":\"please tell me the merchant details for the debit on twenty ninth April\",\"context\":\"Which merchant was involved in the disputed transaction?\"}],\"long\":[{\"text\":\"I was checking my bank statement this morning and noticed a debit of fifteen thousand rupees which I did not authorize at all\"},{\"text\":\"my debit card was used in Delhi on 12th February for a large purchase that I did not make so please block the card immediately\"}],\"long_with_context\":[{\"text\":\"I see a transaction of eight thousand rupees on the 10th of March at a electronics store in Hyderabad which is completely unknown to me can you help\",\"context\":\"Can you describe the transaction that you believe is unauthorized?\"},{\"text\":\"the debit card ending 9876 was charged for a transaction in Kolkata last Sunday and I am sure I was not there on that day so please revoke the transaction\",\"context\":\"Can you tell me the details of the disputed transaction you found?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 569,
+    "output_tokens": 444
+  }
+}

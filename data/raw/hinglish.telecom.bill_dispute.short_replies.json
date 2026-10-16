@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.telecom.bill_dispute.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "telecom",
+  "intent": "bill_dispute",
+  "items": [
+    {
+      "context": "Aapka account number batayenge?",
+      "requested_bucket": "short",
+      "text": "1234567890"
+    },
+    {
+      "context": "Kaunse mahine ka bill hai?",
+      "requested_bucket": "short",
+      "text": "March ka"
+    },
+    {
+      "context": "Kitna zyada charge hua hai?",
+      "requested_bucket": "short",
+      "text": "500 rupees"
+    },
+    {
+      "context": "Kya aap online bill dekh sakte hain?",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Ye charge kab ka lagaya gaya?",
+      "requested_bucket": "short",
+      "text": "Kal ka hi"
+    },
+    {
+      "context": "Kya aapne kisi international call kiya?",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Aapke plan kaun sa hai?",
+      "requested_bucket": "short",
+      "text": "Postpaid 399"
+    },
+    {
+      "context": "Kya aapke paas bill ka screenshot hai?",
+      "requested_bucket": "short",
+      "text": "Haan hai"
+    },
+    {
+      "context": "Kya aapne recent data usage check kiya?",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kitne din se problem aa rahi hai?",
+      "requested_bucket": "short",
+      "text": "Do din"
+    },
+    {
+      "context": "Kya aapka number active hai?",
+      "requested_bucket": "short",
+      "text": "Haan hai"
+    },
+    {
+      "context": "Kya aap bill payment kar chuke hain?",
+      "requested_bucket": "short",
+      "text": "Abhi nahi"
+    },
+    {
+      "context": "Aapka registered mobile number kya hai?",
+      "requested_bucket": "short",
+      "text": "9876543210"
+    },
+    {
+      "context": "Kya aapne plan upgrade kiya tha recently?",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kya aapko lagta hai koi extra call hua?",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya aapka phone roaming par tha?",
+      "requested_bucket": "short",
+      "text": "Nahi tha"
+    },
+    {
+      "context": "Aapke bill mein koi late fees dikha rahi hai?",
+      "requested_bucket": "short",
+      "text": "Haan dikha rahi hai"
+    },
+    {
+      "context": "Kya aapne customer care se baat ki thi pehle?",
+      "requested_bucket": "short",
+      "text": "Nahi ki thi"
+    },
+    {
+      "context": "Aapko kis charge mein problem lag rahi hai?",
+      "requested_bucket": "medium",
+      "text": "Mujhe lagta hai ki data charge galat lagaye hain bill mein"
+    },
+    {
+      "context": "Kya aap apna bill payment date bata sakte hain?",
+      "requested_bucket": "medium",
+      "text": "Maine payment kal kiya tha par bill abhi tak clear nahi hua"
+    },
+    {
+      "context": "Kya aapne apne calls ka detail check kiya hai?",
+      "requested_bucket": "medium",
+      "text": "Haan maine dekha calls galat charge ho rahe hain mere hisaab se"
+    },
+    {
+      "context": "Kaise hum aapki madad sabse pehle kar sakte hain?",
+      "requested_bucket": "medium",
+      "text": "Sabse pehle to meri billing galti ko thik karo please"
+    },
+    {
+      "context": "Aapko kis tarah ka refund chahiye agar galti mile?",
+      "requested_bucket": "medium",
+      "text": "Bas jitna extra charge liya gaya wapas mil jaye to theek rahega"
+    },
+    {
+      "context": "Kya aap kab tak is issue ko solve karwana chahenge?",
+      "requested_bucket": "medium",
+      "text": "Jaldi se jaldi kal tak solve ho jaye to acha rahega"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1152192061,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: bill_dispute - says a postpaid bill or charge is wrong\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Aapka account number batayenge?\",\"reply\":\"1234567890\"},{\"agent_question\":\"Kaunse mahine ka bill hai?\",\"reply\":\"March ka\"},{\"agent_question\":\"Kitna zyada charge hua hai?\",\"reply\":\"500 rupees\"},{\"agent_question\":\"Kya aap online bill dekh sakte hain?\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Ye charge kab ka lagaya gaya?\",\"reply\":\"Kal ka hi\"},{\"agent_question\":\"Kya aapne kisi international call kiya?\",\"reply\":\"Nahi\"},{\"agent_question\":\"Aapke plan kaun sa hai?\",\"reply\":\"Postpaid 399\"},{\"agent_question\":\"Kya aapke paas bill ka screenshot hai?\",\"reply\":\"Haan hai\"},{\"agent_question\":\"Kya aapne recent data usage check kiya?\",\"reply\":\"Nahi\"},{\"agent_question\":\"Kitne din se problem aa rahi hai?\",\"reply\":\"Do din\"},{\"agent_question\":\"Kya aapka number active hai?\",\"reply\":\"Haan hai\"},{\"agent_question\":\"Kya aap bill payment kar chuke hain?\",\"reply\":\"Abhi nahi\"},{\"agent_question\":\"Aapka registered mobile number kya hai?\",\"reply\":\"9876543210\"},{\"agent_question\":\"Kya aapne plan upgrade kiya tha recently?\",\"reply\":\"Nahi\"},{\"agent_question\":\"Kya aapko lagta hai koi extra call hua?\",\"reply\":\"Haan\"},{\"agent_question\":\"Kya aapka phone roaming par tha?\",\"reply\":\"Nahi tha\"},{\"agent_question\":\"Aapke bill mein koi late fees dikha rahi hai?\",\"reply\":\"Haan dikha rahi hai\"},{\"agent_question\":\"Kya aapne customer care se baat ki thi pehle?\",\"reply\":\"Nahi ki thi\"}],\"medium\":[{\"agent_question\":\"Aapko kis charge mein problem lag rahi hai?\",\"reply\":\"Mujhe lagta hai ki data charge galat lagaye hain bill mein\"},{\"agent_question\":\"Kya aap apna bill payment date bata sakte hain?\",\"reply\":\"Maine payment kal kiya tha par bill abhi tak clear nahi hua\"},{\"agent_question\":\"Kya aapne apne calls ka detail check kiya hai?\",\"reply\":\"Haan maine dekha calls galat charge ho rahe hain mere hisaab se\"},{\"agent_question\":\"Kaise hum aapki madad sabse pehle kar sakte hain?\",\"reply\":\"Sabse pehle to meri billing galti ko thik karo please\"},{\"agent_question\":\"Aapko kis tarah ka refund chahiye agar galti mile?\",\"reply\":\"Bas jitna extra charge liya gaya wapas mil jaye to theek rahega\"},{\"agent_question\":\"Kya aap kab tak is issue ko solve karwana chahenge?\",\"reply\":\"Jaldi se jaldi kal tak solve ho jaye to acha rahega\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 614
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.collections.wrong_person.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "wrong_person",
+  "items": [
+    {
+      "context": "क्या आप अपना नाम बता सकते हैं",
+      "requested_bucket": "short",
+      "text": "नहीं मैंने कभी ऐसा अकाउंट नहीं बनवाया"
+    },
+    {
+      "context": "आपका नाम क्या है",
+      "requested_bucket": "short",
+      "text": "यह मेरा नंबर नहीं है"
+    },
+    {
+      "context": "क्या यह आपका मोबाइल नंबर है",
+      "requested_bucket": "short",
+      "text": "मेरा नंबर नहीं है यहाँ"
+    },
+    {
+      "context": "क्या आप पिछले बिल की पेमेंट कर सकते हैं",
+      "requested_bucket": "short",
+      "text": "मुझे तो नहीं पता ये किसका बिल है"
+    },
+    {
+      "context": "क्या आप अपने खाते की डिटेल्स कन्फर्म करेंगे",
+      "requested_bucket": "short",
+      "text": "गलत नंबर है ये मेरे पास कोई अकाउंट नहीं"
+    },
+    {
+      "context": "क्या आप अपने एड्रेस बताएंगे",
+      "requested_bucket": "short",
+      "text": "यह मेरा पता नहीं है कही"
+    },
+    {
+      "context": "क्या आप लेट पेमेंट के लिए जिम्मेदार हैं",
+      "requested_bucket": "short",
+      "text": "नहीं मैं कभी पेमेंट नहीं करता यहाँ से"
+    },
+    {
+      "context": "आपके अकाउंट में कोई dues हैं क्या",
+      "requested_bucket": "short",
+      "text": "गलत व्यक्ति बोल रहे हैं आप शायद किसी और के साथ बात कर रहे हैं"
+    },
+    {
+      "context": "क्या आप payment अभी कर सकते हो",
+      "requested_bucket": "short",
+      "text": "मुझे नहीं पता ये नंबर किसका है"
+    },
+    {
+      "context": "क्या आपने हाल ही में कोई payment किया है",
+      "requested_bucket": "short",
+      "text": "मैंने कभी payment नहीं की इस नंबर से"
+    },
+    {
+      "context": "क्या आप अपनी कॉल रिकॉर्डिंग सुनना चाहेंगे",
+      "requested_bucket": "short",
+      "text": "ये मेरा कॉल नहीं है आप गलत समझ रहे हूँ"
+    },
+    {
+      "context": "कृपया रसीद नंबर दें",
+      "requested_bucket": "short",
+      "text": "गलत नंबर बोल रहे हो ये मेरी बात नहीं है"
+    },
+    {
+      "context": "क्या आप अपना account number दोहरा सकते हैं",
+      "requested_bucket": "short",
+      "text": "मेरा account number नहीं है यहाँ पे"
+    },
+    {
+      "context": "क्या आप आज payment कर पाओगे",
+      "requested_bucket": "short",
+      "text": "इस नंबर पे payment करना गलत होगा"
+    },
+    {
+      "context": "कृपया अपना नाम और पता बताएँ",
+      "requested_bucket": "medium",
+      "text": "सर यह गलत नंबर है मेरा नाम कुछ और है जहाँ"
+    },
+    {
+      "context": "हमारे सिस्टम में आपका सन्डे बिल unpaid दिखा रहा है",
+      "requested_bucket": "medium",
+      "text": "सॉरी सर यह नंबर मेरा नहीं है आप किसी और से बात कर रहे हो"
+    },
+    {
+      "context": "क्या आप हमें confirming call receive करने के लिए तैयार हैं",
+      "requested_bucket": "medium",
+      "text": "नहीं मैडम मैं तो पहली बार सुन रहा हूँ ये कॉल कहीं और पे होना चाहिए"
+    },
+    {
+      "context": "क्या आप इस फोन नंबर पर हमारे SMS receive कर रहे हैं",
+      "requested_bucket": "medium",
+      "text": "जी नहीं मैं इस नंबर का owner नहीं बल्कि कोई और है जो बात कर रहा होगा"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3127084374,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: wrong_person - says the agent has the wrong person or number\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"क्या आप अपना नाम बता सकते हैं\",\"reply\":\"नहीं मैंने कभी ऐसा अकाउंट नहीं बनवाया\"},{\"agent_question\":\"आपका नाम क्या है\",\"reply\":\"यह मेरा नंबर नहीं है\"},{\"agent_question\":\"क्या यह आपका मोबाइल नंबर है\",\"reply\":\"मेरा नंबर नहीं है यहाँ\"},{\"agent_question\":\"क्या आप पिछले बिल की पेमेंट कर सकते हैं\",\"reply\":\"मुझे तो नहीं पता ये किसका बिल है\"},{\"agent_question\":\"क्या आप अपने खाते की डिटेल्स कन्फर्म करेंगे\",\"reply\":\"गलत नंबर है ये मेरे पास कोई अकाउंट नहीं\"},{\"agent_question\":\"क्या आप अपने एड्रेस बताएंगे\",\"reply\":\"यह मेरा पता नहीं है कही\"},{\"agent_question\":\"क्या आप लेट पेमेंट के लिए जिम्मेदार हैं\",\"reply\":\"नहीं मैं कभी पेमेंट नहीं करता यहाँ से\"},{\"agent_question\":\"आपके अकाउंट में कोई dues हैं क्या\",\"reply\":\"गलत व्यक्ति बोल रहे हैं आप शायद किसी और के साथ बात कर रहे हैं\"},{\"agent_question\":\"क्या आप payment अभी कर सकते हो\",\"reply\":\"मुझे नहीं पता ये नंबर किसका है\"},{\"agent_question\":\"क्या आपने हाल ही में कोई payment किया है\",\"reply\":\"मैंने कभी payment नहीं की इस नंबर से\"},{\"agent_question\":\"क्या आप अपनी कॉल रिकॉर्डिंग सुनना चाहेंगे\",\"reply\":\"ये मेरा कॉल नहीं है आप गलत समझ रहे हूँ\"},{\"agent_question\":\"कृपया रसीद नंबर दें\",\"reply\":\"गलत नंबर बोल रहे हो ये मेरी बात नहीं है\"},{\"agent_question\":\"क्या आप अपना account number दोहरा सकते हैं\",\"reply\":\"मेरा account number नहीं है यहाँ पे\"},{\"agent_question\":\"क्या आप आज payment कर पाओगे\",\"reply\":\"इस नंबर पे payment करना गलत होगा\"}],\"medium\":[{\"agent_question\":\"कृपया अपना नाम और पता बताएँ\",\"reply\":\"सर यह गलत नंबर है मेरा नाम कुछ और है जहाँ\"},{\"agent_question\":\"हमारे सिस्टम में आपका सन्डे बिल unpaid दिखा रहा है\",\"reply\":\"सॉरी सर यह नंबर मेरा नहीं है आप किसी और से बात कर रहे हो\"},{\"agent_question\":\"क्या आप हमें confirming call receive करने के लिए तैयार हैं\",\"reply\":\"नहीं मैडम मैं तो पहली बार सुन रहा हूँ ये कॉल कहीं और पे होना चाहिए\"},{\"agent_question\":\"क्या आप इस फोन नंबर पर हमारे SMS receive कर रहे हैं\",\"reply\":\"जी नहीं मैं इस नंबर का owner नहीं बल्कि कोई और है जो बात कर रहा होगा\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 497,
+    "output_tokens": 497
+  }
+}

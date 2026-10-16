@@ -1,0 +1,142 @@
+{
+  "batch_id": "en.collections.already_paid.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "already_paid",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "already paid"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paid two days ago"
+    },
+    {
+      "context": "Have you made the payment already",
+      "requested_bucket": "short",
+      "text": "already paid"
+    },
+    {
+      "context": "When did you make the payment",
+      "requested_bucket": "short",
+      "text": "yesterday only"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umm actually I paid the amount last week only"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I mean the payment was done on Tuesday no Wednesday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I think I cleared the dues on fifth of March"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "like I transferred the balance on my card on Monday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "yes I had settled the entire bill by net banking"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I paid through UPI around 10 am last Friday"
+    },
+    {
+      "context": "Can you tell me when the payment was made",
+      "requested_bucket": "medium",
+      "text": "I had already done the payment on the first of this month"
+    },
+    {
+      "context": "Could you confirm the date of your payment",
+      "requested_bucket": "medium",
+      "text": "The amount was settled from my account on Wednesday itself"
+    },
+    {
+      "context": "Do you remember how the payment was done",
+      "requested_bucket": "medium",
+      "text": "I paid the dues by cheque on the 12th of February"
+    },
+    {
+      "context": "Do you have any proof or confirmation of the payment",
+      "requested_bucket": "medium",
+      "text": "Actually I have confirmation of payment done on Monday night"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "umm sir I actually paid the full due amount through net banking last Wednesday evening around 7"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I mean the payment was done by my credit card on fifteenth March but I forgot to inform earlier"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I have transferred the complete payment by UPI on twenty first but there was some delay in updating"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "like yesterday I made a payment of the pending amount from my savings account but it is not showing here"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "sir I actually cleared all the dues using cheque deposit on 25th February and have the receipt with me"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I mean I settled the entire balance on the 3rd of this month via mobile wallet transaction and got a text confirmation"
+    },
+    {
+      "context": "Can you provide details of your previous payment",
+      "requested_bucket": "long",
+      "text": "yes I had already paid the full amount by online transfer on twenty second March and kept the transaction ID handy"
+    },
+    {
+      "context": "Could you tell me how and when you made the last payment",
+      "requested_bucket": "long",
+      "text": "I did clear my dues through cash deposit at branch on the tenth of this month but the system is not updated"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3396832021,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: already_paid - says they have already paid and gives details\nLanguage: Indian English, Latin script.\nStyle for this batch: with fillers and hesitations (umm, uh, like, actually, I mean); at least a third include a self-correction ('Tuesday, no, Wednesday')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"already paid\"},{\"text\":\"paid two days ago\"}],\"short_with_context\":[{\"text\":\"already paid\",\"context\":\"Have you made the payment already\"},{\"text\":\"yesterday only\",\"context\":\"When did you make the payment\"}],\"medium\":[{\"text\":\"umm actually I paid the amount last week only\"},{\"text\":\"I mean the payment was done on Tuesday no Wednesday\"},{\"text\":\"I think I cleared the dues on fifth of March\"},{\"text\":\"like I transferred the balance on my card on Monday\"},{\"text\":\"yes I had settled the entire bill by net banking\"},{\"text\":\"I paid through UPI around 10 am last Friday\"}],\"medium_with_context\":[{\"text\":\"I had already done the payment on the first of this month\",\"context\":\"Can you tell me when the payment was made\"},{\"text\":\"The amount was settled from my account on Wednesday itself\",\"context\":\"Could you confirm the date of your payment\"},{\"text\":\"I paid the dues by cheque on the 12th of February\",\"context\":\"Do you remember how the payment was done\"},{\"text\":\"Actually I have confirmation of payment done on Monday night\",\"context\":\"Do you have any proof or confirmation of the payment\"}],\"long\":[{\"text\":\"umm sir I actually paid the full due amount through net banking last Wednesday evening around 7\"},{\"text\":\"I mean the payment was done by my credit card on fifteenth March but I forgot to inform earlier\"},{\"text\":\"I have transferred the complete payment by UPI on twenty first but there was some delay in updating\"},{\"text\":\"like yesterday I made a payment of the pending amount from my savings account but it is not showing here\"},{\"text\":\"sir I actually cleared all the dues using cheque deposit on 25th February and have the receipt with me\"},{\"text\":\"I mean I settled the entire balance on the 3rd of this month via mobile wallet transaction and got a text confirmation\"}],\"long_with_context\":[{\"text\":\"yes I had already paid the full amount by online transfer on twenty second March and kept the transaction ID handy\",\"context\":\"Can you provide details of your previous payment\"},{\"text\":\"I did clear my dues through cash deposit at branch on the tenth of this month but the system is not updated\",\"context\":\"Could you tell me how and when you made the last payment\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 587,
+    "output_tokens": 469
+  }
+}

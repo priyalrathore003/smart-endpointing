@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.delivery.return_refund.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "return_refund",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "refund please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "return item now"
+    },
+    {
+      "context": "Are you requesting a refund for your recent order?",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "How many items do you want to return?",
+      "requested_bucket": "short",
+      "text": "two items"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to return the jacket I ordered last week"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you please tell me how long the refund will take"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I received the wrong size so I want to exchange it"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "The tshirt has a stain so I need a return and refund"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "My order number is nine eight seven six five four three two one"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please help me initiate a refund on my recent purchase"
+    },
+    {
+      "context": "Could you explain the reason for the return?",
+      "requested_bucket": "medium",
+      "text": "The item was damaged when it arrived so I want a refund"
+    },
+    {
+      "context": "What was the amount paid for the order?",
+      "requested_bucket": "medium",
+      "text": "I paid one five zero zero rupees for the shoes"
+    },
+    {
+      "context": "Is there any issue with the product quality?",
+      "requested_bucket": "medium",
+      "text": "I tried wearing it but it does not fit me properly"
+    },
+    {
+      "context": "Where would you like the refund to be credited?",
+      "requested_bucket": "medium",
+      "text": "I want the refund to be credited back to my card"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I ordered two t shirts from your website on the fifteenth of March and both have stitching problems so I would like to return them and get my money back"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "The shoes delivered to me do not match the description on your site and the color is different so I am requesting a complete refund because I cannot use them"
+    },
+    {
+      "context": "When did you receive the product you want to return?",
+      "requested_bucket": "long",
+      "text": "I understand you want to return the product because it is damaged but may I know when you received the order"
+    },
+    {
+      "context": "Could you provide the bank account number for the refund?",
+      "requested_bucket": "long",
+      "text": "You mentioned that the refund should be credited back to your bank account so please provide your account number for processing"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3700748767,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: return_refund - wants to return an item or asks about a refund\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"refund please\"},{\"text\":\"return item now\"}],\"short_with_context\":[{\"text\":\"yes\",\"context\":\"Are you requesting a refund for your recent order?\"},{\"text\":\"two items\",\"context\":\"How many items do you want to return?\"}],\"medium\":[{\"text\":\"I want to return the jacket I ordered last week\"},{\"text\":\"Can you please tell me how long the refund will take\"},{\"text\":\"I received the wrong size so I want to exchange it\"},{\"text\":\"The tshirt has a stain so I need a return and refund\"},{\"text\":\"My order number is nine eight seven six five four three two one\"},{\"text\":\"Please help me initiate a refund on my recent purchase\"}],\"medium_with_context\":[{\"text\":\"The item was damaged when it arrived so I want a refund\",\"context\":\"Could you explain the reason for the return?\"},{\"text\":\"I paid one five zero zero rupees for the shoes\",\"context\":\"What was the amount paid for the order?\"},{\"text\":\"I tried wearing it but it does not fit me properly\",\"context\":\"Is there any issue with the product quality?\"},{\"text\":\"I want the refund to be credited back to my card\",\"context\":\"Where would you like the refund to be credited?\"}],\"long\":[{\"text\":\"I ordered two t shirts from your website on the fifteenth of March and both have stitching problems so I would like to return them and get my money back\"},{\"text\":\"The shoes delivered to me do not match the description on your site and the color is different so I am requesting a complete refund because I cannot use them\"}],\"long_with_context\":[{\"text\":\"I understand you want to return the product because it is damaged but may I know when you received the order\",\"context\":\"When did you receive the product you want to return?\"},{\"text\":\"You mentioned that the refund should be credited back to your bank account so please provide your account number for processing\",\"context\":\"Could you provide the bank account number for the refund?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 589,
+    "output_tokens": 411
+  }
+}

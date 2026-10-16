@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.collections.promise_to_pay.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "collections",
+  "intent": "promise_to_pay",
+  "items": [
+    {
+      "context": "aap paise kab bhejenge",
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": "kitna pay karenge aaj",
+      "requested_bucket": "short",
+      "text": "do hazaar"
+    },
+    {
+      "context": "kya aap payment karenge aj hi",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "kab tak payment clear hoga",
+      "requested_bucket": "short",
+      "text": "3 din me"
+    },
+    {
+      "context": "aap payment kaise karenge",
+      "requested_bucket": "short",
+      "text": "net banking se"
+    },
+    {
+      "context": "kya aap online payment karenge",
+      "requested_bucket": "short",
+      "text": "ji haan"
+    },
+    {
+      "context": "payment ka amount confirm karen",
+      "requested_bucket": "short",
+      "text": "paanch hazaar"
+    },
+    {
+      "context": "kya aap credit card se payment kar sakte hai",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "kab tak balance clear hoga",
+      "requested_bucket": "short",
+      "text": "agale hafte"
+    },
+    {
+      "context": "kya aapko reminder mila",
+      "requested_bucket": "short",
+      "text": "haan mila"
+    },
+    {
+      "context": "aapka payment plan kya hai",
+      "requested_bucket": "short",
+      "text": "installment me dena hai"
+    },
+    {
+      "context": "aapka preferred time kya hai payment ka",
+      "requested_bucket": "short",
+      "text": "shaam ko"
+    },
+    {
+      "context": "kya aap partial payment karenge",
+      "requested_bucket": "short",
+      "text": "haan thoda"
+    },
+    {
+      "context": "abhi payment kar sakte hai",
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": "payment delay hone ka reason kya hai",
+      "requested_bucket": "short",
+      "text": "paise nahi mile"
+    },
+    {
+      "context": "kya aap appointment fix karenge payment ke liye",
+      "requested_bucket": "short",
+      "text": "haan kal"
+    },
+    {
+      "context": "aapko aur time chahiye",
+      "requested_bucket": "short",
+      "text": "ha thoda"
+    },
+    {
+      "context": "payment kab tak confirm kar denge",
+      "requested_bucket": "short",
+      "text": "aaj raat"
+    },
+    {
+      "context": "aap is mahine me kab payment kar payenge",
+      "requested_bucket": "medium",
+      "text": "main agle weekend tak payment kar dunga"
+    },
+    {
+      "context": "kya aap hamare saath repayment plan bana sakte hain",
+      "requested_bucket": "medium",
+      "text": "haan ji hum installment me de sakte hain"
+    },
+    {
+      "context": "payment karne me der kis wajah se ho rahi hai",
+      "requested_bucket": "medium",
+      "text": "mujhe salary thoda late mili is wajah se"
+    },
+    {
+      "context": "aap kis tareh se payment bhejenge humein update de sakte hain",
+      "requested_bucket": "medium",
+      "text": "main net banking se transfer kar dunga kal"
+    },
+    {
+      "context": "agar aaj payment nahi hua to aage kya plan hai aapka",
+      "requested_bucket": "medium",
+      "text": "main agle hafte tak pura amount clear kar dunga"
+    },
+    {
+      "context": "kya aapko payment reminder SMS ya call dono milna chahiye",
+      "requested_bucket": "medium",
+      "text": "sirf call chahiye mujhe yaad raha karne ke liye"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2651406662,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: promise_to_pay - replies to a payment reminder with a date or amount they will pay\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"aap paise kab bhejenge\",\"reply\":\"kal tak\"},{\"agent_question\":\"kitna pay karenge aaj\",\"reply\":\"do hazaar\"},{\"agent_question\":\"kya aap payment karenge aj hi\",\"reply\":\"haan ji\"},{\"agent_question\":\"kab tak payment clear hoga\",\"reply\":\"3 din me\"},{\"agent_question\":\"aap payment kaise karenge\",\"reply\":\"net banking se\"},{\"agent_question\":\"kya aap online payment karenge\",\"reply\":\"ji haan\"},{\"agent_question\":\"payment ka amount confirm karen\",\"reply\":\"paanch hazaar\"},{\"agent_question\":\"kya aap credit card se payment kar sakte hai\",\"reply\":\"nahi\"},{\"agent_question\":\"kab tak balance clear hoga\",\"reply\":\"agale hafte\"},{\"agent_question\":\"kya aapko reminder mila\",\"reply\":\"haan mila\"},{\"agent_question\":\"aapka payment plan kya hai\",\"reply\":\"installment me dena hai\"},{\"agent_question\":\"aapka preferred time kya hai payment ka\",\"reply\":\"shaam ko\"},{\"agent_question\":\"kya aap partial payment karenge\",\"reply\":\"haan thoda\"},{\"agent_question\":\"abhi payment kar sakte hai\",\"reply\":\"abhi nahi\"},{\"agent_question\":\"payment delay hone ka reason kya hai\",\"reply\":\"paise nahi mile\"},{\"agent_question\":\"kya aap appointment fix karenge payment ke liye\",\"reply\":\"haan kal\"},{\"agent_question\":\"aapko aur time chahiye\",\"reply\":\"ha thoda\"},{\"agent_question\":\"payment kab tak confirm kar denge\",\"reply\":\"aaj raat\"}],\"medium\":[{\"agent_question\":\"aap is mahine me kab payment kar payenge\",\"reply\":\"main agle weekend tak payment kar dunga\"},{\"agent_question\":\"kya aap hamare saath repayment plan bana sakte hain\",\"reply\":\"haan ji hum installment me de sakte hain\"},{\"agent_question\":\"payment karne me der kis wajah se ho rahi hai\",\"reply\":\"mujhe salary thoda late mili is wajah se\"},{\"agent_question\":\"aap kis tareh se payment bhejenge humein update de sakte hain\",\"reply\":\"main net banking se transfer kar dunga kal\"},{\"agent_question\":\"agar aaj payment nahi hua to aage kya plan hai aapka\",\"reply\":\"main agle hafte tak pura amount clear kar dunga\"},{\"agent_question\":\"kya aapko payment reminder SMS ya call dono milna chahiye\",\"reply\":\"sirf call chahiye mujhe yaad raha karne ke liye\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 399,
+    "output_tokens": 527
+  }
+}

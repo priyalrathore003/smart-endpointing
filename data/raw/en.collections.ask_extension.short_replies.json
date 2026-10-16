@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.collections.ask_extension.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "ask_extension",
+  "items": [
+    {
+      "context": "Can you pay today?",
+      "requested_bucket": "short",
+      "text": "Not today"
+    },
+    {
+      "context": "Will you clear the dues this week?",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Do you want to pay in installments?",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Can you pay half the amount now?",
+      "requested_bucket": "short",
+      "text": "Okay"
+    },
+    {
+      "context": "Is tomorrow payment possible?",
+      "requested_bucket": "short",
+      "text": "Tomorrow"
+    },
+    {
+      "context": "Would you like an extension to pay?",
+      "requested_bucket": "short",
+      "text": "Yes please"
+    },
+    {
+      "context": "Can you pay by Friday?",
+      "requested_bucket": "short",
+      "text": "By friday"
+    },
+    {
+      "context": "Is the full payment possible now?",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "How much can you pay now?",
+      "requested_bucket": "short",
+      "text": "Five thousand"
+    },
+    {
+      "context": "Can you pay on the weekend?",
+      "requested_bucket": "short",
+      "text": "Saturday"
+    },
+    {
+      "context": "Do you want to split the payment?",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Can we expect payment this month?",
+      "requested_bucket": "short",
+      "text": "This month"
+    },
+    {
+      "context": "Are you facing any payment issues?",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Will you require more time?",
+      "requested_bucket": "short",
+      "text": "More time"
+    },
+    {
+      "context": "When can you make the partial payment?",
+      "requested_bucket": "medium",
+      "text": "I can pay half the amount by next Wednesday"
+    },
+    {
+      "context": "How much time do you need to clear the dues?",
+      "requested_bucket": "medium",
+      "text": "I will need two weeks to arrange the payment"
+    },
+    {
+      "context": "Would you prefer to pay in two or three installments?",
+      "requested_bucket": "medium",
+      "text": "I would like to pay in three installments please"
+    },
+    {
+      "context": "Can you tell me the reason for delay in payment?",
+      "requested_bucket": "medium",
+      "text": "I was waiting for my salary to come through"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3327786080,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: ask_extension - asks for more time or to split the payment\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Can you pay today?\",\"reply\":\"Not today\"},{\"agent_question\":\"Will you clear the dues this week?\",\"reply\":\"Yes\"},{\"agent_question\":\"Do you want to pay in installments?\",\"reply\":\"Yes\"},{\"agent_question\":\"Can you pay half the amount now?\",\"reply\":\"Okay\"},{\"agent_question\":\"Is tomorrow payment possible?\",\"reply\":\"Tomorrow\"},{\"agent_question\":\"Would you like an extension to pay?\",\"reply\":\"Yes please\"},{\"agent_question\":\"Can you pay by Friday?\",\"reply\":\"By friday\"},{\"agent_question\":\"Is the full payment possible now?\",\"reply\":\"No\"},{\"agent_question\":\"How much can you pay now?\",\"reply\":\"Five thousand\"},{\"agent_question\":\"Can you pay on the weekend?\",\"reply\":\"Saturday\"},{\"agent_question\":\"Do you want to split the payment?\",\"reply\":\"Yes\"},{\"agent_question\":\"Can we expect payment this month?\",\"reply\":\"This month\"},{\"agent_question\":\"Are you facing any payment issues?\",\"reply\":\"Yes\"},{\"agent_question\":\"Will you require more time?\",\"reply\":\"More time\"}],\"medium\":[{\"agent_question\":\"When can you make the partial payment?\",\"reply\":\"I can pay half the amount by next Wednesday\"},{\"agent_question\":\"How much time do you need to clear the dues?\",\"reply\":\"I will need two weeks to arrange the payment\"},{\"agent_question\":\"Would you prefer to pay in two or three installments?\",\"reply\":\"I would like to pay in three installments please\"},{\"agent_question\":\"Can you tell me the reason for delay in payment?\",\"reply\":\"I was waiting for my salary to come through\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 367,
+    "output_tokens": 329
+  }
+}

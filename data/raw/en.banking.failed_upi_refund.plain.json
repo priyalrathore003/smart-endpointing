@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.banking.failed_upi_refund.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "failed_upi_refund",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "please refund"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "not received"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "refund pending"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes correct"
+    },
+    {
+      "context": "Would you like us to initiate the refund process immediately?",
+      "requested_bucket": "short",
+      "text": "refund now"
+    },
+    {
+      "context": "Can you confirm if the transaction was successful or failed on your side?",
+      "requested_bucket": "short",
+      "text": "transaction failed"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the amount was debited but the payment did not go through"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I tried to pay yesterday but the money is still deducted"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please check the refund status for my failed transaction"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my UPI payment failed but my bank says money is taken"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the refund has not reflected into my account yet"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to know why the refund is delayed for my transfer"
+    },
+    {
+      "context": "Can you explain what happened when you tried to make the payment?",
+      "requested_bucket": "medium",
+      "text": "the transaction failed but the money left my account"
+    },
+    {
+      "context": "Did you receive any notification about the payment status from your bank?",
+      "requested_bucket": "medium",
+      "text": "it showed payment failed but the amount is deducted from my bank"
+    },
+    {
+      "context": "When did you make the transaction that failed but money was debited?",
+      "requested_bucket": "medium",
+      "text": "the transaction date was two days ago and still no refund"
+    },
+    {
+      "context": "What would you like us to do regarding the failed transaction and amount debited?",
+      "requested_bucket": "medium",
+      "text": "I want to get the refund processed as soon as possible"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I made a UPI payment to a vendor last week but it failed and still the money has not been refunded to my account"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kindly check with your department because the refund for the failed online payment has been pending for three days now and I need it urgently"
+    },
+    {
+      "context": "Can you please describe the issue with your payment transaction in detail?",
+      "requested_bucket": "long",
+      "text": "I am really worried because the money was debited from my account two days ago but the payment status shows failed and I havent received any refund yet"
+    },
+    {
+      "context": "How is this failed transaction affecting your banking or financial needs?",
+      "requested_bucket": "long",
+      "text": "please assist me in getting the refund processed quickly as this failed payment is causing issues with my monthly budget and I need the money back soon"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1972083871,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: failed_upi_refund - a UPI or online payment failed but money was debited; wants a refund\nLanguage: Indian English, Latin script.\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"please refund\"},{\"text\":\"not received\"}, {\"text\":\"refund pending\"},{\"text\":\"yes correct\"}],\"short_with_context\":[{\"text\":\"refund now\",\"context\":\"Would you like us to initiate the refund process immediately?\"},{\"text\":\"transaction failed\",\"context\":\"Can you confirm if the transaction was successful or failed on your side?\"}],\"medium\":[{\"text\":\"the amount was debited but the payment did not go through\"},{\"text\":\"I tried to pay yesterday but the money is still deducted\"},{\"text\":\"please check the refund status for my failed transaction\"},{\"text\":\"my UPI payment failed but my bank says money is taken\"},{\"text\":\"the refund has not reflected into my account yet\"},{\"text\":\"I want to know why the refund is delayed for my transfer\"}],\"medium_with_context\":[{\"text\":\"the transaction failed but the money left my account\",\"context\":\"Can you explain what happened when you tried to make the payment?\"},{\"text\":\"it showed payment failed but the amount is deducted from my bank\",\"context\":\"Did you receive any notification about the payment status from your bank?\"},{\"text\":\"the transaction date was two days ago and still no refund\",\"context\":\"When did you make the transaction that failed but money was debited?\"},{\"text\":\"I want to get the refund processed as soon as possible\",\"context\":\"What would you like us to do regarding the failed transaction and amount debited?\"}],\"long\":[{\"text\":\"I made a UPI payment to a vendor last week but it failed and still the money has not been refunded to my account\"},{\"text\":\"kindly check with your department because the refund for the failed online payment has been pending for three days now and I need it urgently\"}],\"long_with_context\":[{\"text\":\"I am really worried because the money was debited from my account two days ago but the payment status shows failed and I havent received any refund yet\",\"context\":\"Can you please describe the issue with your payment transaction in detail?\"},{\"text\":\"please assist me in getting the refund processed quickly as this failed payment is causing issues with my monthly budget and I need the money back soon\",\"context\":\"How is this failed transaction affecting your banking or financial needs?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 569,
+    "output_tokens": 449
+  }
+}

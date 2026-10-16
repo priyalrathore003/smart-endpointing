@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.telecom.no_network.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "no_network",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "no network"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "call dropped"
+    },
+    {
+      "context": "Can you describe the issue you are facing?",
+      "requested_bucket": "short",
+      "text": "slow internet"
+    },
+    {
+      "context": "What problem are you experiencing with your connection?",
+      "requested_bucket": "short",
+      "text": "no signal"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I am not getting any network signal since morning"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "My calls keep dropping every few minutes"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Internet speed is very slow and sometimes it disconnects"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "There is no network coverage in my office building"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Whenever I try to call someone the call just ends immediately"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Data connection fails frequently and I cannot browse"
+    },
+    {
+      "context": "Can you tell me about your internet connectivity problem?",
+      "requested_bucket": "medium",
+      "text": "The internet is very slow in my area since yesterday"
+    },
+    {
+      "context": "Where do you notice the call drop issues?",
+      "requested_bucket": "medium",
+      "text": "Call drops happen mostly when I move to different parts of the city"
+    },
+    {
+      "context": "Is there any specific place where network doesn't work?",
+      "requested_bucket": "medium",
+      "text": "I have no network signal at my home but it works fine outside"
+    },
+    {
+      "context": "What does your phone display when the call fails?",
+      "requested_bucket": "medium",
+      "text": "My phone shows full signal but calls fail to connect at times"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "For the last two days I have been experiencing no network signal at my residence even though others nearby are getting good reception"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Everytime I try to use mobile data my internet speed reduces drastically and the connection drops frequently making it very difficult to use"
+    },
+    {
+      "context": "Have you tried using a different sim card in your phone to check the signal?",
+      "requested_bucket": "long",
+      "text": "I am using a new sim card but even after activating it the network does not come properly in my area which is quite frustrating"
+    },
+    {
+      "context": "Can you describe your call experience and frequency of call drops?",
+      "requested_bucket": "long",
+      "text": "The call quality is very bad and the call drops happen multiple times in a day especially when I travel between locations"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2464852256,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: no_network - has no signal, call drops or slow internet\nLanguage: Indian English, Latin script.\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"no network\"},{\"text\":\"call dropped\"},{\"text\":\"\"}],\"short_with_context\":[{\"text\":\"slow internet\",\"context\":\"Can you describe the issue you are facing?\"},{\"text\":\"no signal\",\"context\":\"What problem are you experiencing with your connection?\"}],\"medium\":[{\"text\":\"I am not getting any network signal since morning\"},{\"text\":\"My calls keep dropping every few minutes\"},{\"text\":\"Internet speed is very slow and sometimes it disconnects\"},{\"text\":\"There is no network coverage in my office building\"},{\"text\":\"Whenever I try to call someone the call just ends immediately\"},{\"text\":\"Data connection fails frequently and I cannot browse\"}],\"medium_with_context\":[{\"text\":\"The internet is very slow in my area since yesterday\",\"context\":\"Can you tell me about your internet connectivity problem?\"},{\"text\":\"Call drops happen mostly when I move to different parts of the city\",\"context\":\"Where do you notice the call drop issues?\"},{\"text\":\"I have no network signal at my home but it works fine outside\",\"context\":\"Is there any specific place where network doesn't work?\"},{\"text\":\"My phone shows full signal but calls fail to connect at times\",\"context\":\"What does your phone display when the call fails?\"}],\"long\":[{\"text\":\"For the last two days I have been experiencing no network signal at my residence even though others nearby are getting good reception\"},{\"text\":\"Everytime I try to use mobile data my internet speed reduces drastically and the connection drops frequently making it very difficult to use\"}],\"long_with_context\":[{\"text\":\"I am using a new sim card but even after activating it the network does not come properly in my area which is quite frustrating\",\"context\":\"Have you tried using a different sim card in your phone to check the signal?\"},{\"text\":\"The call quality is very bad and the call drops happen multiple times in a day especially when I travel between locations\",\"context\":\"Can you describe your call experience and frequency of call drops?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 559,
+    "output_tokens": 402
+  }
+}

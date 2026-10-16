@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.collections.wrong_person.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "wrong_person",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "सही नंबर नहीं है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "गलत आदमी है"
+    },
+    {
+      "context": "क्या आप अपना अकाउंट नंबर बतायेंगे?",
+      "requested_bucket": "short",
+      "text": "नहीं मेरा नहीं है"
+    },
+    {
+      "context": "किस नाम से रजिस्टर है यह अकाउंट?",
+      "requested_bucket": "short",
+      "text": "मेरे नाम पर नहीं है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर ये नंबर श्याम कुमार का नहीं लगता"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैडम मुझे लगता है आपने गलत पते पर कॉल किया है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "यह अकाउंट नंबर मेरे पिता का नहीं है सर"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "यह पेंमेंट मेरे नाम से तो नहीं है मेरी बहन का होगा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अरे जी ये नंबर तो दिल्ली का है मेरा तो पुणे में रहता हूँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "गलती से मेरा नाम ले लिया आपसे किसी और का काम होगा"
+    },
+    {
+      "context": "क्या आप इस क्लेम का सत्यापन कर सकते हैं?",
+      "requested_bucket": "medium",
+      "text": "मैं राजीव शर्मा हूँ और इस बिल का कोई ताल्लुक नहीं मुझसे"
+    },
+    {
+      "context": "आपके अकाउंट नंबर में क्या समस्या लग रही है?",
+      "requested_bucket": "medium",
+      "text": "यह नंबर बिलकुल ठीक है लेकिन अकाउंट गलत है एक बार चेक कर लीजिये"
+    },
+    {
+      "context": "आपका ऑफिसियल पता क्या है?",
+      "requested_bucket": "medium",
+      "text": "मेरा पता तो अमीनाबाद लखनऊ में है और यह कलेक्शन कॉल शुरू हुई है कानपुर से"
+    },
+    {
+      "context": "कौन इस पेमेन्ट का मुख्य हेड है?",
+      "requested_bucket": "medium",
+      "text": "यह रकम मेरे घर वाले अमर सिंह जी का है मैं माया देवी हूँ आपको समझ नहीं आया"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर साहब मेरा नाम प्रिया वर्मा है और मैं चार दिन पहले ही मुम्बई से जयपुर चली आई हूँ इसलिए ये नंबर गलत लग रहा है आप चेक कर लीजिये"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मुझे कोई सूचना नहीं मिली कि मेरे नाम कोई बैलेंस बचा है मैडम आप लोग गलती से किसी और का अकाउंट डिटेल भेज रहे हो क्या आप अपने रिकॉर्ड दोबारा देख सकते हो"
+    },
+    {
+      "context": "क्या आप बतायेंगे कि यह रिफंड किसके लिए है?",
+      "requested_bucket": "long",
+      "text": "मैंने जो अकाउंट नंबर बताया था वह मेरे भतीजे के नाम का था इसलिए इस पेमेन्ट का कनेक्शन मुझसे नहीं है मैं कलकत्ते में रहता हूँ"
+    },
+    {
+      "context": "आपका पूरा पता और नाम क्या है?",
+      "requested_bucket": "long",
+      "text": "मेरा नाम मनोहर लाल है और मेरा पता नई सड़क अनूपपुर है पर आपने जो मिस्ड कॉल की है वह बिलकुल गलत जानकारी दे रही है"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2259641298,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: wrong_person - says the agent has the wrong person or number\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"सही नंबर नहीं है\"},{\"text\":\"गलत आदमी है\"}],\"short_with_context\":[{\"text\":\"नहीं मेरा नहीं है\",\"context\":\"क्या आप अपना अकाउंट नंबर बतायेंगे?\"},{\"text\":\"मेरे नाम पर नहीं है\",\"context\":\"किस नाम से रजिस्टर है यह अकाउंट?\"}],\"medium\":[{\"text\":\"सर ये नंबर श्याम कुमार का नहीं लगता\"},{\"text\":\"मैडम मुझे लगता है आपने गलत पते पर कॉल किया है\"},{\"text\":\"यह अकाउंट नंबर मेरे पिता का नहीं है सर\"},{\"text\":\"यह पेंमेंट मेरे नाम से तो नहीं है मेरी बहन का होगा\"},{\"text\":\"अरे जी ये नंबर तो दिल्ली का है मेरा तो पुणे में रहता हूँ\"},{\"text\":\"गलती से मेरा नाम ले लिया आपसे किसी और का काम होगा\"}],\"medium_with_context\":[{\"text\":\"मैं राजीव शर्मा हूँ और इस बिल का कोई ताल्लुक नहीं मुझसे\",\"context\":\"क्या आप इस क्लेम का सत्यापन कर सकते हैं?\"},{\"text\":\"यह नंबर बिलकुल ठीक है लेकिन अकाउंट गलत है एक बार चेक कर लीजिये\",\"context\":\"आपके अकाउंट नंबर में क्या समस्या लग रही है?\"},{\"text\":\"मेरा पता तो अमीनाबाद लखनऊ में है और यह कलेक्शन कॉल शुरू हुई है कानपुर से\",\"context\":\"आपका ऑफिसियल पता क्या है?\"},{\"text\":\"यह रकम मेरे घर वाले अमर सिंह जी का है मैं माया देवी हूँ आपको समझ नहीं आया\",\"context\":\"कौन इस पेमेन्ट का मुख्य हेड है?\"}],\"long\":[{\"text\":\"सर साहब मेरा नाम प्रिया वर्मा है और मैं चार दिन पहले ही मुम्बई से जयपुर चली आई हूँ इसलिए ये नंबर गलत लग रहा है आप चेक कर लीजिये\"},{\"text\":\"मुझे कोई सूचना नहीं मिली कि मेरे नाम कोई बैलेंस बचा है मैडम आप लोग गलती से किसी और का अकाउंट डिटेल भेज रहे हो क्या आप अपने रिकॉर्ड दोबारा देख सकते हो\"}],\"long_with_context\":[{\"text\":\"मैंने जो अकाउंट नंबर बताया था वह मेरे भतीजे के नाम का था इसलिए इस पेमेन्ट का कनेक्शन मुझसे नहीं है मैं कलकत्ते में रहता हूँ\",\"context\":\"क्या आप बतायेंगे कि यह रिफंड किसके लिए है?\"},{\"text\":\"मेरा नाम मनोहर लाल है और मेरा पता नई सड़क अनूपपुर है पर आपने जो मिस्ड कॉल की है वह बिलकुल गलत जानकारी दे रही है\",\"context\":\"आपका पूरा पता और नाम क्या है?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 692,
+    "output_tokens": 537
+  }
+}

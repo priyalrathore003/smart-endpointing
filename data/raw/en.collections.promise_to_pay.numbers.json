@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.collections.promise_to_pay.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "promise_to_pay",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "next week"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "five thousand"
+    },
+    {
+      "context": "When will you be able to make the payment?",
+      "requested_bucket": "short",
+      "text": "by friday"
+    },
+    {
+      "context": "How much can you pay right now?",
+      "requested_bucket": "short",
+      "text": "ten thousand"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I will be able to pay after my salary comes on fifteenth"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can I pay twenty thousand on the twenty fifth of this month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I will pay five thousand tomorrow morning before noon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "We are arranging funds and will clear ten thousand by Sunday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I can pay full amount by first of next month no problem"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please give me two days I will transfer the payment"
+    },
+    {
+      "context": "What amount can you pay right now?",
+      "requested_bucket": "medium",
+      "text": "I can pay eight thousand this week only"
+    },
+    {
+      "context": "When do you plan to clear your outstanding balance?",
+      "requested_bucket": "medium",
+      "text": "I will settle the dues by tenth April"
+    },
+    {
+      "context": "How much are you able to pay immediately?",
+      "requested_bucket": "medium",
+      "text": "I have only five thousand available now can I pay this"
+    },
+    {
+      "context": "When can we expect your payment?",
+      "requested_bucket": "medium",
+      "text": "My salary is processed on fifth so I will pay after that"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I am sorry for the delay but I promise to clear all outstanding dues by the end of this month latest"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Due to some financial difficulties I will be able to pay the full amount only after fifteen days from today thank you for understanding"
+    },
+    {
+      "context": "Can you make a partial payment now or give a date when full payment will be done?",
+      "requested_bucket": "long",
+      "text": "I do understand but because of recent expenses I can pay only half the amount now and the rest in ten days"
+    },
+    {
+      "context": "Please tell me the date by when you will make the full payment.",
+      "requested_bucket": "long",
+      "text": "I will make the payment of twenty five thousand by twenty second of next month as I have a salary advance coming"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 215099112,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: promise_to_pay - replies to a payment reminder with a date or amount they will pay\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"next week\"},{\"text\":\"five thousand\"}],\"short_with_context\":[{\"text\":\"by friday\",\"context\":\"When will you be able to make the payment?\"},{\"text\":\"ten thousand\",\"context\":\"How much can you pay right now?\"}],\"medium\":[{\"text\":\"I will be able to pay after my salary comes on fifteenth\"},{\"text\":\"Can I pay twenty thousand on the twenty fifth of this month\"},{\"text\":\"I will pay five thousand tomorrow morning before noon\"},{\"text\":\"We are arranging funds and will clear ten thousand by Sunday\"},{\"text\":\"I can pay full amount by first of next month no problem\"},{\"text\":\"Please give me two days I will transfer the payment\"}],\"medium_with_context\":[{\"text\":\"I can pay eight thousand this week only\",\"context\":\"What amount can you pay right now?\"},{\"text\":\"I will settle the dues by tenth April\",\"context\":\"When do you plan to clear your outstanding balance?\"},{\"text\":\"I have only five thousand available now can I pay this\",\"context\":\"How much are you able to pay immediately?\"},{\"text\":\"My salary is processed on fifth so I will pay after that\",\"context\":\"When can we expect your payment?\"}],\"long\":[{\"text\":\"I am sorry for the delay but I promise to clear all outstanding dues by the end of this month latest\"},{\"text\":\"Due to some financial difficulties I will be able to pay the full amount only after fifteen days from today thank you for understanding\"}],\"long_with_context\":[{\"text\":\"I do understand but because of recent expenses I can pay only half the amount now and the rest in ten days\",\"context\":\"Can you make a partial payment now or give a date when full payment will be done?\"},{\"text\":\"I will make the payment of twenty five thousand by twenty second of next month as I have a salary advance coming\",\"context\":\"Please tell me the date by when you will make the full payment.\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 592,
+    "output_tokens": 396
+  }
+}

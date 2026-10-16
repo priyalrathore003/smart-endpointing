@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.telecom.recharge_not_credited.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "telecom",
+  "intent": "recharge_not_credited",
+  "items": [
+    {
+      "context": "Aapke account ka number kya hai",
+      "requested_bucket": "short",
+      "text": "Mera number 9876543210 hai"
+    },
+    {
+      "context": "Recharge kab kiya tha aapne",
+      "requested_bucket": "short",
+      "text": "Abhi thoda pehle"
+    },
+    {
+      "context": "Kitna recharge kiya tha aapne",
+      "requested_bucket": "short",
+      "text": "Pachaas rupees"
+    },
+    {
+      "context": "Kya aapke paas transaction ID hai",
+      "requested_bucket": "short",
+      "text": "Haan mere pass hai"
+    },
+    {
+      "context": "Kya aapne pehle bhi ye recharge kiya tha",
+      "requested_bucket": "short",
+      "text": "Nahi ye pehla baar hai"
+    },
+    {
+      "context": "Kya aapke phone me balance dikh raha hai",
+      "requested_bucket": "short",
+      "text": "Nahi kuch bhi dikh nahi raha"
+    },
+    {
+      "context": "Kya aapko plan activate hone ka message mila",
+      "requested_bucket": "short",
+      "text": "Abhi tak nahi mila"
+    },
+    {
+      "context": "Aapka network provider kaun sa hai",
+      "requested_bucket": "short",
+      "text": "Vodafone Idea"
+    },
+    {
+      "context": "Kya aap prepaid user hain",
+      "requested_bucket": "short",
+      "text": "Haan prepaid user hoon"
+    },
+    {
+      "context": "Recharge SMS aapko mila tha",
+      "requested_bucket": "short",
+      "text": "Nahi koi SMS nahi aaya"
+    },
+    {
+      "context": "Transaction ke time koi error aaya tha",
+      "requested_bucket": "short",
+      "text": "Nahi koi error report nahi hua"
+    },
+    {
+      "context": "Paise account se kat gaye the",
+      "requested_bucket": "short",
+      "text": "Haan paise kat gaye"
+    },
+    {
+      "context": "Kya aapne online ya USSD se recharge kiya",
+      "requested_bucket": "short",
+      "text": "Online recharge kiya tha"
+    },
+    {
+      "context": "Aapka phone abhi switch on hai",
+      "requested_bucket": "short",
+      "text": "Haan abhi switch on hai"
+    },
+    {
+      "context": "Kya aapke pass bank statement hai",
+      "requested_bucket": "short",
+      "text": "Haan pass hai"
+    },
+    {
+      "context": "Payment mode kya tha aapka",
+      "requested_bucket": "short",
+      "text": "NET banking thi"
+    },
+    {
+      "context": "Kya transaction fail hua tha",
+      "requested_bucket": "short",
+      "text": "Nahi failed nahi hua"
+    },
+    {
+      "context": "Recharge ke baad kitna data mila aapko",
+      "requested_bucket": "short",
+      "text": "Kuch bhi data nahi mila"
+    },
+    {
+      "context": "Kab aapne recharge kiya tha aur kitna amount hua tha",
+      "requested_bucket": "medium",
+      "text": "Kal raat ko roughly pachaas rupees ka recharge tha"
+    },
+    {
+      "context": "Kya aapko transaction confirmation SMS ya email mila",
+      "requested_bucket": "medium",
+      "text": "Haan ek message aaya tha lekin recharge activate nahi hua"
+    },
+    {
+      "context": "Aapka balance pehle kitna tha aur ab kitna dikh raha hai",
+      "requested_bucket": "medium",
+      "text": "Pehle 10 rupees the lekin ab zero balance dikh raha hai"
+    },
+    {
+      "context": "Kya aapne kisi aur sim ya number par recharge try kiya hai",
+      "requested_bucket": "medium",
+      "text": "Nahi sirf isi number se recharge kiya hai"
+    },
+    {
+      "context": "Recharge ke baad aapne mobile ko restart kiya ya nahi",
+      "requested_bucket": "medium",
+      "text": "Haan recharge ke baad mainne phone restart kiya tha"
+    },
+    {
+      "context": "Kya aapke mobile me sufficient space tha recharge app ke liye",
+      "requested_bucket": "medium",
+      "text": "Haan phone me space theek tha recharge app chalne ke liye"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2706571321,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: recharge_not_credited - recharged but the plan or balance was not credited\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Aapke account ka number kya hai\",\"reply\":\"Mera number 9876543210 hai\"},{\"agent_question\":\"Recharge kab kiya tha aapne\",\"reply\":\"Abhi thoda pehle\"},{\"agent_question\":\"Kitna recharge kiya tha aapne\",\"reply\":\"Pachaas rupees\"},{\"agent_question\":\"Kya aapke paas transaction ID hai\",\"reply\":\"Haan mere pass hai\"},{\"agent_question\":\"Kya aapne pehle bhi ye recharge kiya tha\",\"reply\":\"Nahi ye pehla baar hai\"},{\"agent_question\":\"Kya aapke phone me balance dikh raha hai\",\"reply\":\"Nahi kuch bhi dikh nahi raha\"},{\"agent_question\":\"Kya aapko plan activate hone ka message mila\",\"reply\":\"Abhi tak nahi mila\"},{\"agent_question\":\"Aapka network provider kaun sa hai\",\"reply\":\"Vodafone Idea\"},{\"agent_question\":\"Kya aap prepaid user hain\",\"reply\":\"Haan prepaid user hoon\"},{\"agent_question\":\"Recharge SMS aapko mila tha\",\"reply\":\"Nahi koi SMS nahi aaya\"},{\"agent_question\":\"Transaction ke time koi error aaya tha\",\"reply\":\"Nahi koi error report nahi hua\"},{\"agent_question\":\"Paise account se kat gaye the\",\"reply\":\"Haan paise kat gaye\"},{\"agent_question\":\"Kya aapne online ya USSD se recharge kiya\",\"reply\":\"Online recharge kiya tha\"},{\"agent_question\":\"Aapka phone abhi switch on hai\",\"reply\":\"Haan abhi switch on hai\"},{\"agent_question\":\"Kya aapke pass bank statement hai\",\"reply\":\"Haan pass hai\"},{\"agent_question\":\"Payment mode kya tha aapka\",\"reply\":\"NET banking thi\"},{\"agent_question\":\"Kya transaction fail hua tha\",\"reply\":\"Nahi failed nahi hua\"},{\"agent_question\":\"Recharge ke baad kitna data mila aapko\",\"reply\":\"Kuch bhi data nahi mila\"}],\"medium\":[{\"agent_question\":\"Kab aapne recharge kiya tha aur kitna amount hua tha\",\"reply\":\"Kal raat ko roughly pachaas rupees ka recharge tha\"},{\"agent_question\":\"Kya aapko transaction confirmation SMS ya email mila\",\"reply\":\"Haan ek message aaya tha lekin recharge activate nahi hua\"},{\"agent_question\":\"Aapka balance pehle kitna tha aur ab kitna dikh raha hai\",\"reply\":\"Pehle 10 rupees the lekin ab zero balance dikh raha hai\"},{\"agent_question\":\"Kya aapne kisi aur sim ya number par recharge try kiya hai\",\"reply\":\"Nahi sirf isi number se recharge kiya hai\"},{\"agent_question\":\"Recharge ke baad aapne mobile ko restart kiya ya nahi\",\"reply\":\"Haan recharge ke baad mainne phone restart kiya tha\"},{\"agent_question\":\"Kya aapke mobile me sufficient space tha recharge app ke liye\",\"reply\":\"Haan phone me space theek tha recharge app chalne ke liye\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 397,
+    "output_tokens": 615
+  }
+}

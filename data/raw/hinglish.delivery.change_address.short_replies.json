@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.delivery.change_address.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "delivery",
+  "intent": "change_address",
+  "items": [
+    {
+      "context": "Naya address bata sakte hain",
+      "requested_bucket": "short",
+      "text": "Haan ji kar sakte hain"
+    },
+    {
+      "context": "Aapka naya landmark kya hai",
+      "requested_bucket": "short",
+      "text": "Near metro station"
+    },
+    {
+      "context": "Kya aap delivery address change karna chahenge",
+      "requested_bucket": "short",
+      "text": "Haan please"
+    },
+    {
+      "context": "Naya address line ek mein kya likhna hai",
+      "requested_bucket": "short",
+      "text": "MG road bharna hai"
+    },
+    {
+      "context": "Naya address confirm kar dein",
+      "requested_bucket": "short",
+      "text": "Thik hai"
+    },
+    {
+      "context": "Kya aap poora naya address denge",
+      "requested_bucket": "short",
+      "text": "Haan ji denge"
+    },
+    {
+      "context": "Delivery ka shahar badalna hai kya",
+      "requested_bucket": "short",
+      "text": "Nahi sir"
+    },
+    {
+      "context": "Naya pincode kya hoga",
+      "requested_bucket": "short",
+      "text": "560001"
+    },
+    {
+      "context": "Kya aapke paas naya phone number hai",
+      "requested_bucket": "short",
+      "text": "Nahi hai"
+    },
+    {
+      "context": "Delivery ke liye kaunsa area suggest karenge",
+      "requested_bucket": "short",
+      "text": "Indiranagar"
+    },
+    {
+      "context": "Kya aapke naya address mein security gate hai",
+      "requested_bucket": "short",
+      "text": "Haan hai"
+    },
+    {
+      "context": "Aapka original address kya tha",
+      "requested_bucket": "short",
+      "text": "Old town"
+    },
+    {
+      "context": "Kya naya address residential area mein hai",
+      "requested_bucket": "short",
+      "text": "Haan residential hai"
+    },
+    {
+      "context": "Kya aapke naya address mein koi landmark hai",
+      "requested_bucket": "short",
+      "text": "Ha ji hai"
+    },
+    {
+      "context": "Naya address kis naam pe karna hai",
+      "requested_bucket": "short",
+      "text": "Sunita Singh"
+    },
+    {
+      "context": "Kya delivery change karna hai aaj ke liye",
+      "requested_bucket": "short",
+      "text": "Abhi nahi"
+    },
+    {
+      "context": "Aapka naya flat number kya hai",
+      "requested_bucket": "short",
+      "text": "501"
+    },
+    {
+      "context": "Aapka last address kya tha",
+      "requested_bucket": "short",
+      "text": "Sector 15"
+    },
+    {
+      "context": "Naya address detail mein bata sakte hain",
+      "requested_bucket": "medium",
+      "text": "Ji haan mera naya address hai 45 second street near Kali mandir"
+    },
+    {
+      "context": "Kya aap delivery address mein phone number bhi update karenge",
+      "requested_bucket": "medium",
+      "text": "Haan ji naya number 9876543210 hai please update kar dijiye"
+    },
+    {
+      "context": "Naya address change karne ke liye kya process hai",
+      "requested_bucket": "medium",
+      "text": "Bataiye kya karna hai main ready hoon process complete karne ke liye"
+    },
+    {
+      "context": "Aap kis date tak delivery chahenge naya address par",
+      "requested_bucket": "medium",
+      "text": "Kal tak naya address par delivery chahiye please confirm"
+    },
+    {
+      "context": "Naya address mein koi khas instruction dena chahenge aap",
+      "requested_bucket": "medium",
+      "text": "Haan ji please gate se andar aate hi left side par drop karna"
+    },
+    {
+      "context": "Kya aap apna naya address aasani se samjha sakte hain",
+      "requested_bucket": "medium",
+      "text": "Ji haan main poora address clear kar deta hun please dhyan se note kar lijiyega"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1732255014,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: change_address - wants to change the delivery address or landmark\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Naya address bata sakte hain\",\"reply\":\"Haan ji kar sakte hain\"},{\"agent_question\":\"Aapka naya landmark kya hai\",\"reply\":\"Near metro station\"},{\"agent_question\":\"Kya aap delivery address change karna chahenge\",\"reply\":\"Haan please\"},{\"agent_question\":\"Naya address line ek mein kya likhna hai\",\"reply\":\"MG road bharna hai\"},{\"agent_question\":\"Naya address confirm kar dein\",\"reply\":\"Thik hai\"},{\"agent_question\":\"Kya aap poora naya address denge\",\"reply\":\"Haan ji denge\"},{\"agent_question\":\"Delivery ka shahar badalna hai kya\",\"reply\":\"Nahi sir\"},{\"agent_question\":\"Naya pincode kya hoga\",\"reply\":\"560001\"},{\"agent_question\":\"Kya aapke paas naya phone number hai\",\"reply\":\"Nahi hai\"},{\"agent_question\":\"Delivery ke liye kaunsa area suggest karenge\",\"reply\":\"Indiranagar\"},{\"agent_question\":\"Kya aapke naya address mein security gate hai\",\"reply\":\"Haan hai\"},{\"agent_question\":\"Aapka original address kya tha\",\"reply\":\"Old town\"},{\"agent_question\":\"Kya naya address residential area mein hai\",\"reply\":\"Haan residential hai\"},{\"agent_question\":\"Kya aapke naya address mein koi landmark hai\",\"reply\":\"Ha ji hai\"},{\"agent_question\":\"Naya address kis naam pe karna hai\",\"reply\":\"Sunita Singh\"},{\"agent_question\":\"Kya delivery change karna hai aaj ke liye\",\"reply\":\"Abhi nahi\"},{\"agent_question\":\"Aapka naya flat number kya hai\",\"reply\":\"501\"},{\"agent_question\":\"Aapka last address kya tha\",\"reply\":\"Sector 15\"}],\"medium\":[{\"agent_question\":\"Naya address detail mein bata sakte hain\",\"reply\":\"Ji haan mera naya address hai 45 second street near Kali mandir\"},{\"agent_question\":\"Kya aap delivery address mein phone number bhi update karenge\",\"reply\":\"Haan ji naya number 9876543210 hai please update kar dijiye\"},{\"agent_question\":\"Naya address change karne ke liye kya process hai\",\"reply\":\"Bataiye kya karna hai main ready hoon process complete karne ke liye\"},{\"agent_question\":\"Aap kis date tak delivery chahenge naya address par\",\"reply\":\"Kal tak naya address par delivery chahiye please confirm\"},{\"agent_question\":\"Naya address mein koi khas instruction dena chahenge aap\",\"reply\":\"Haan ji please gate se andar aate hi left side par drop karna\"},{\"agent_question\":\"Kya aap apna naya address aasani se samjha sakte hain\",\"reply\":\"Ji haan main poora address clear kar deta hun please dhyan se note kar lijiyega\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 393,
+    "output_tokens": 583
+  }
+}

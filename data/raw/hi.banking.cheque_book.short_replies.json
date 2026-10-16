@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.banking.cheque_book.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "banking",
+  "intent": "cheque_book",
+  "items": [
+    {
+      "context": "चेकबुक की डिलीवरी कब होगी",
+      "requested_bucket": "short",
+      "text": "कल तक"
+    },
+    {
+      "context": "आपका खाता नंबर बताइए",
+      "requested_bucket": "short",
+      "text": "अभी नहीं पता"
+    },
+    {
+      "context": "आपको कितने पन्नों का चेकबुक चाहिए",
+      "requested_bucket": "short",
+      "text": "कुछ भी चलेगा"
+    },
+    {
+      "context": "डिलीवरी का पता कन्फर्म करें",
+      "requested_bucket": "short",
+      "text": "पता वही है"
+    },
+    {
+      "context": "क्या आपने चेकबुक के लिए आवेदन किया है",
+      "requested_bucket": "short",
+      "text": "हाँ जी किया"
+    },
+    {
+      "context": "आपका नाम क्या है",
+      "requested_bucket": "short",
+      "text": "राहुल कुमार"
+    },
+    {
+      "context": "डिलीवरी में कितने दिन लगेंगे",
+      "requested_bucket": "short",
+      "text": "पाँच दिन"
+    },
+    {
+      "context": "क्या आपकोओटीपी मिला अब तक",
+      "requested_bucket": "short",
+      "text": "मिला है"
+    },
+    {
+      "context": "क्या यह पहली बार चेकबुक मांग रहे हैं",
+      "requested_bucket": "short",
+      "text": "जी हाँ"
+    },
+    {
+      "context": "आपका मोबाइल नंबर बताइए",
+      "requested_bucket": "short",
+      "text": "९८७६५४३२१०"
+    },
+    {
+      "context": "क्या आप पेजेस ५० वाले चेकबुक चाहेंगे",
+      "requested_bucket": "short",
+      "text": "नहीं जी २५ वाला चाहिए"
+    },
+    {
+      "context": "क्या डिलीवरी में कोई दिक्कत आई थी",
+      "requested_bucket": "short",
+      "text": "नहीं कुछ नहीं"
+    },
+    {
+      "context": "आपको चेकबुक की कितनी कॉपियां चाहिए",
+      "requested_bucket": "short",
+      "text": "एक ही चाहिए"
+    },
+    {
+      "context": "क्या आप नया पते पर चाहते हैं",
+      "requested_bucket": "short",
+      "text": "नहीं पुराने वाले पर"
+    },
+    {
+      "context": "चेकबुक मिलने में कितना समय लग सकता है",
+      "requested_bucket": "medium",
+      "text": "सरजी आमतौर पर तीन से चार दिन लगते हैं डिलीवरी में"
+    },
+    {
+      "context": "आपसे चेकबुक के बारे में आवेदन कब हुआ था",
+      "requested_bucket": "medium",
+      "text": "पिछले हफ्ते गुरुवार को ऑनलाइन फॉर्म भरा था मैंने"
+    },
+    {
+      "context": "क्या आपने ऑनलाइन आवेदन के बाद कॉनफर्मेशन मैसेज प्राप्त किया",
+      "requested_bucket": "medium",
+      "text": "हाँ सर मुझे एक मैसेज आया था जिसमें डिलीवरी की जानकारी थी"
+    },
+    {
+      "context": "क्या आप हमें नई डिलीवरी के लिए सही पता बता सकते हैं",
+      "requested_bucket": "medium",
+      "text": "जी बिलकुल पते में कोई बदलाव नहीं हुआ है वही पुराना पता है"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2476225906,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: cheque_book - requests a new cheque book or asks about its delivery\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"चेकबुक की डिलीवरी कब होगी\",\"reply\":\"कल तक\"},{\"agent_question\":\"आपका खाता नंबर बताइए\",\"reply\":\"अभी नहीं पता\"},{\"agent_question\":\"आपको कितने पन्नों का चेकबुक चाहिए\",\"reply\":\"कुछ भी चलेगा\"},{\"agent_question\":\"डिलीवरी का पता कन्फर्म करें\",\"reply\":\"पता वही है\"},{\"agent_question\":\"क्या आपने चेकबुक के लिए आवेदन किया है\",\"reply\":\"हाँ जी किया\"},{\"agent_question\":\"आपका नाम क्या है\",\"reply\":\"राहुल कुमार\"},{\"agent_question\":\"डिलीवरी में कितने दिन लगेंगे\",\"reply\":\"पाँच दिन\"},{\"agent_question\":\"क्या आपकोओटीपी मिला अब तक\",\"reply\":\"मिला है\"},{\"agent_question\":\"क्या यह पहली बार चेकबुक मांग रहे हैं\",\"reply\":\"जी हाँ\"},{\"agent_question\":\"आपका मोबाइल नंबर बताइए\",\"reply\":\"९८७६५४३२१०\"},{\"agent_question\":\"क्या आप पेजेस ५० वाले चेकबुक चाहेंगे\",\"reply\":\"नहीं जी २५ वाला चाहिए\"},{\"agent_question\":\"क्या डिलीवरी में कोई दिक्कत आई थी\",\"reply\":\"नहीं कुछ नहीं\"},{\"agent_question\":\"आपको चेकबुक की कितनी कॉपियां चाहिए\",\"reply\":\"एक ही चाहिए\"},{\"agent_question\":\"क्या आप नया पते पर चाहते हैं\",\"reply\":\"नहीं पुराने वाले पर\"}],\"medium\":[{\"agent_question\":\"चेकबुक मिलने में कितना समय लग सकता है\",\"reply\":\"सरजी आमतौर पर तीन से चार दिन लगते हैं डिलीवरी में\"},{\"agent_question\":\"आपसे चेकबुक के बारे में आवेदन कब हुआ था\",\"reply\":\"पिछले हफ्ते गुरुवार को ऑनलाइन फॉर्म भरा था मैंने\"},{\"agent_question\":\"क्या आपने ऑनलाइन आवेदन के बाद कॉनफर्मेशन मैसेज प्राप्त किया\",\"reply\":\"हाँ सर मुझे एक मैसेज आया था जिसमें डिलीवरी की जानकारी थी\"},{\"agent_question\":\"क्या आप हमें नई डिलीवरी के लिए सही पता बता सकते हैं\",\"reply\":\"जी बिलकुल पते में कोई बदलाव नहीं हुआ है वही पुराना पता है\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 498,
+    "output_tokens": 445
+  }
+}

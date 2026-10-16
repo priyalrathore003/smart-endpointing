@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.delivery.reschedule.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "reschedule",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "कल शाम"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "हां ठीक है"
+    },
+    {
+      "context": "आप किस दिन डिलीवरी चाहेंगे?",
+      "requested_bucket": "short",
+      "text": "शाम तक कर दो"
+    },
+    {
+      "context": "डिलीवरी का पता कहां है?",
+      "requested_bucket": "short",
+      "text": "पता बदलना होगा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अम्म मैडम डिलीवरी को थोड़ा आगे कर सकते हैं क्या"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर अगली तारीख बुधवार रख देना डिलीवरी के लिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "हाँ जी मुझे मेरा parcel आज नहीं चाहिए कल चाहिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अच्छा वो मेरा टाइमिंग बदलना है दोपहर के बाद कर देना"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "डिलीवरी के वक्त मैं घर पर नहीं रहूंगा क्या टाइम बदल सकता है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "कल सुबह तक डिलीवरी कर देना अगर हो सके तो"
+    },
+    {
+      "context": "आप किस डेट की डिलीवरी चाहते हैं?",
+      "requested_bucket": "medium",
+      "text": "अगले हफ्ते मंगलवार को भेज दें डिलीवरी"
+    },
+    {
+      "context": "क्या आप डिलीवरी का दिन बदलना चाहेंगे?",
+      "requested_bucket": "medium",
+      "text": "मंगलवार नहीं बुधवार कर दो पेमेंट हो गया है"
+    },
+    {
+      "context": "डिलीवरी का समय कब रखना है आपके हिसाब से?",
+      "requested_bucket": "medium",
+      "text": "अच्छा सर थोडा टाइम बाद कर सकते हैं क्या डिलीवरी का"
+    },
+    {
+      "context": "डिलीवरी के लिए कौन सा टाइम बेहतर रहेगा?",
+      "requested_bucket": "medium",
+      "text": "मुझे देर शाम तक ही डिलीवरी चाहिए क्योंकि फिर निकलना है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "अरे सर मैंने अभी अपने address को change किया है तो आप उस नए address पर डिलीवरी करवा देंगे"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "देखिए मुझे कल की बजाय शुक्रवार को डिलीवरी चाहिए क्योंकि उस दिन मैं घर पर रहूंगा और parcel receive कर सकूंगा"
+    },
+    {
+      "context": "क्या आप अपनी डिलीवरी की तारीख बदलना चाहते हैं?",
+      "requested_bucket": "long",
+      "text": "पूछना था कि मेरी डिलीवरी टलती है तो आप मुझे अगली तारीख बता सकते हैं क्या जिससे मैं काम के अनुसार arrange कर सकूं"
+    },
+    {
+      "context": "आप अपने delivery को फिर से schedule करना चाहेंगे क्या?",
+      "requested_bucket": "long",
+      "text": "मेरा payment हो चुका है लेकिन डिलीवरी टाइम पर आ नहीं पायी थी तो क्या इसे रीस्चेड्यूल कर सकते हैं अगले सप्ताह के लिए"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2195462198,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: reschedule - wants the delivery on a different day or time\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with fillers and hesitations (अम्म, मतलब, वो, अच्छा, हाँ जी); at least a third include a self-correction ('मंगलवार, नहीं, बुधवार')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"कल शाम\"},{\"text\":\"हां ठीक है\"}],\"short_with_context\":[{\"text\":\"शाम तक कर दो\",\"context\":\"आप किस दिन डिलीवरी चाहेंगे?\"},{\"text\":\"पता बदलना होगा\",\"context\":\"डिलीवरी का पता कहां है?\"}],\"medium\":[{\"text\":\"अम्म मैडम डिलीवरी को थोड़ा आगे कर सकते हैं क्या\"},{\"text\":\"सर अगली तारीख बुधवार रख देना डिलीवरी के लिए\"},{\"text\":\"हाँ जी मुझे मेरा parcel आज नहीं चाहिए कल चाहिए\"},{\"text\":\"अच्छा वो मेरा टाइमिंग बदलना है दोपहर के बाद कर देना\"},{\"text\":\"डिलीवरी के वक्त मैं घर पर नहीं रहूंगा क्या टाइम बदल सकता है\"},{\"text\":\"कल सुबह तक डिलीवरी कर देना अगर हो सके तो\"}],\"medium_with_context\":[{\"text\":\"अगले हफ्ते मंगलवार को भेज दें डिलीवरी\",\"context\":\"आप किस डेट की डिलीवरी चाहते हैं?\"},{\"text\":\"मंगलवार नहीं बुधवार कर दो पेमेंट हो गया है\",\"context\":\"क्या आप डिलीवरी का दिन बदलना चाहेंगे?\"},{\"text\":\"अच्छा सर थोडा टाइम बाद कर सकते हैं क्या डिलीवरी का\",\"context\":\"डिलीवरी का समय कब रखना है आपके हिसाब से?\"},{\"text\":\"मुझे देर शाम तक ही डिलीवरी चाहिए क्योंकि फिर निकलना है\",\"context\":\"डिलीवरी के लिए कौन सा टाइम बेहतर रहेगा?\"}],\"long\":[{\"text\":\"अरे सर मैंने अभी अपने address को change किया है तो आप उस नए address पर डिलीवरी करवा देंगे\"},{\"text\":\"देखिए मुझे कल की बजाय शुक्रवार को डिलीवरी चाहिए क्योंकि उस दिन मैं घर पर रहूंगा और parcel receive कर सकूंगा\"}],\"long_with_context\":[{\"text\":\"पूछना था कि मेरी डिलीवरी टलती है तो आप मुझे अगली तारीख बता सकते हैं क्या जिससे मैं काम के अनुसार arrange कर सकूं\",\"context\":\"क्या आप अपनी डिलीवरी की तारीख बदलना चाहते हैं?\"},{\"text\":\"मेरा payment हो चुका है लेकिन डिलीवरी टाइम पर आ नहीं पायी थी तो क्या इसे रीस्चेड्यूल कर सकते हैं अगले सप्ताह के लिए\",\"context\":\"आप अपने delivery को फिर से schedule करना चाहेंगे क्या?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 716,
+    "output_tokens": 473
+  }
+}

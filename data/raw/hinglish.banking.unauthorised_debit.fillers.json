@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.banking.unauthorised_debit.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "unauthorised_debit",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Can you please confirm your account number?",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Do you want to block your card now?",
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": "Was this transaction done by you?",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account se paise kat gaye lekin maine transfer nahi kiya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "woh transaction mujhe samajh nahi aaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "tum log check kar sakte ho kya transaction galat toh nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha aap batayiye mera account safe hai na is time"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umm matlab koi unauthorized payment hua hai jo maine nahi kiya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Tuesday nahi Wednesday ko mere account se do baar paise gaye the"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "haan ji mujhe rashi bhi batana hai jo kat gaye bina mera approval ke"
+    },
+    {
+      "context": "Who did this transaction happen with?",
+      "requested_bucket": "medium",
+      "text": "sir paise kisne transfer kiya mujhe pata nahi hai"
+    },
+    {
+      "context": "Where was the transaction made?",
+      "requested_bucket": "medium",
+      "text": "maine dekha ki transaction jagah Delhi batayi hai"
+    },
+    {
+      "context": "Did you receive the transaction details on your phone?",
+      "requested_bucket": "medium",
+      "text": "Nahi sir mujhe transaction details clear nahi thi"
+    },
+    {
+      "context": "Did you report this unauthorized transaction earlier?",
+      "requested_bucket": "medium",
+      "text": "Payment mera nahi tha uske baad maine turant bank ko call kiya"
+    },
+    {
+      "context": "Was the transaction made by your card or net banking?",
+      "requested_bucket": "medium",
+      "text": "Kart se paise kate gaye hain magar maine pooja shopping nahi ki"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Mere account se kal do baar unauthorized debit hua hai lekin maine kisi ko paise nahi diye hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Transaction ki date 15th March hai aur amount 5000 hai jo maine kabhi transfer nahi kiya tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Maine turant bank ko call kiya tha jab mujhe pata chala ki mera paisa kat gaya hai lekin solution nahi mila abhi tak"
+    },
+    {
+      "context": "Can you describe the transactions you are talking about?",
+      "requested_bucket": "long",
+      "text": "Jab maine apni account statement check ki toh mujhe do suspicious transactions mile the jo maine nahi kiye the isliye main report kar raha hoon"
+    },
+    {
+      "context": "Did you authorize any transaction with OTP recently?",
+      "requested_bucket": "long",
+      "text": "Maine apne registered mobile number par OTP bhi use nahi kiya tha lekin fir bhi unauthorized debit hua us din"
+    },
+    {
+      "context": "Do you suspect any breach of your account information?",
+      "requested_bucket": "long",
+      "text": "Mujhe lagta hai ki mera account hack ho gaya hai kyun ki mainne apni details kisi ko share nahi ki hai fir bhi paise nikal gaye hain"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3830822583,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: unauthorised_debit - reports a transaction they did not make\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"haan ji\",\"context\":\"Can you please confirm your account number?\"},{\"text\":\"abhi nahi\",\"context\":\"Do you want to block your card now?\"},{\"text\":\"nahi\",\"context\":\"Was this transaction done by you?\"}],\"medium\":[{\"text\":\"mera account se paise kat gaye lekin maine transfer nahi kiya\"},{\"text\":\"woh transaction mujhe samajh nahi aaya\"},{\"text\":\"tum log check kar sakte ho kya transaction galat toh nahi hai\"},{\"text\":\"accha aap batayiye mera account safe hai na is time\"},{\"text\":\"umm matlab koi unauthorized payment hua hai jo maine nahi kiya\"},{\"text\":\"Tuesday nahi Wednesday ko mere account se do baar paise gaye the\"},{\"text\":\"haan ji mujhe rashi bhi batana hai jo kat gaye bina mera approval ke\"}],\"medium_with_context\":[{\"text\":\"sir paise kisne transfer kiya mujhe pata nahi hai\",\"context\":\"Who did this transaction happen with?\"},{\"text\":\"maine dekha ki transaction jagah Delhi batayi hai\",\"context\":\"Where was the transaction made?\"},{\"text\":\"Nahi sir mujhe transaction details clear nahi thi\",\"context\":\"Did you receive the transaction details on your phone?\"},{\"text\":\"Payment mera nahi tha uske baad maine turant bank ko call kiya\",\"context\":\"Did you report this unauthorized transaction earlier?\"},{\"text\":\"Kart se paise kate gaye hain magar maine pooja shopping nahi ki\",\"context\":\"Was the transaction made by your card or net banking?\"}],\"long\":[{\"text\":\"Mere account se kal do baar unauthorized debit hua hai lekin maine kisi ko paise nahi diye hain\"},{\"text\":\"Transaction ki date 15th March hai aur amount 5000 hai jo maine kabhi transfer nahi kiya tha\"},{\"text\":\"Maine turant bank ko call kiya tha jab mujhe pata chala ki mera paisa kat gaya hai lekin solution nahi mila abhi tak\"}],\"long_with_context\":[{\"text\":\"Jab maine apni account statement check ki toh mujhe do suspicious transactions mile the jo maine nahi kiye the isliye main report kar raha hoon\",\"context\":\"Can you describe the transactions you are talking about?\"},{\"text\":\"Maine apne registered mobile number par OTP bhi use nahi kiya tha lekin fir bhi unauthorized debit hua us din\",\"context\":\"Did you authorize any transaction with OTP recently?\"},{\"text\":\"Mujhe lagta hai ki mera account hack ho gaya hai kyun ki mainne apni details kisi ko share nahi ki hai fir bhi paise nikal gaye hain\",\"context\":\"Do you suspect any breach of your account information?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 611,
+    "output_tokens": 581
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.delivery.cod_payment.numbers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "cod_payment",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "cash nahi tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "payment failed"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "order cancel karna"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Did you have cash ready for the payment",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Can you pay the cash on delivery now",
+      "requested_bucket": "short",
+      "text": "filhaal nahi"
+    },
+    {
+      "context": "Can you wait for a while till the payment is resolved",
+      "requested_bucket": "short",
+      "text": "thoda wait karo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera cod payment accept nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "delivery guy ne paise nahi leye order ka"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main cash ready rakha tha lekin le nahi paya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "cod ka pay option kaise enable karun dobara"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera order tk12345678 ka payment issue ho gaya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "delivery date par main ghar par nahi tha toh payment nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap mera payment dobara try kar sakte ho"
+    },
+    {
+      "context": "Can you please tell why you are unable to pay the cash on delivery",
+      "requested_bucket": "medium",
+      "text": "main cash ready rakhta hu par delivery time problem aati hai"
+    },
+    {
+      "context": "Did the delivery person refuse to take your payment",
+      "requested_bucket": "medium",
+      "text": "maine 1500 rupees ready rakhe the magar delivery person ne le liya nahi"
+    },
+    {
+      "context": "Did you receive any payment notification during delivery",
+      "requested_bucket": "medium",
+      "text": "mere phone pe payment ka notification nahi aaya tha jab delivery hui"
+    },
+    {
+      "context": "Are you open to use alternative payment method if cod fails",
+      "requested_bucket": "medium",
+      "text": "kya koi aur payment method use kar sakta hu agar cod fail ho jaye"
+    },
+    {
+      "context": "Was there any problem with your address during delivery",
+      "requested_bucket": "medium",
+      "text": "mera address galat likha tha isliye payment agent tak nahi pahuche"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera order 9876543210 ka jo cod payment tha wo delivery guy ne accept karne se mana kar diya tha aur main paise ghar par rakha hua tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine delivery ke time 2000 rupees cash ready rakhe the par delivery agent ne kaha ki wo payment nahi le sakta hai toh payment cancel ho gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "agar cod option available nahi hai toh main kaise payment karun kyunki mere paas online payment karne ka option abhi nahi hai"
+    },
+    {
+      "context": "Why did the delivery person not take your cash payment",
+      "requested_bucket": "long",
+      "text": "delivery agent ne kaha payment accept nahi kar payega kyunki wo cash lekar ghar se bahar nahi ja sakta tha"
+    },
+    {
+      "context": "What happens if cash on delivery payment fails during delivery",
+      "requested_bucket": "long",
+      "text": "agar payment stage pe problem aati hai toh kya main payment dobara kar sakta hu ya fir order cancel hoga"
+    },
+    {
+      "context": "Can you confirm if any payment message sent to your contact number",
+      "requested_bucket": "long",
+      "text": "mera contact number 98765 43210 hai jisme payment related koi notification nahi aayi jab delivery attempt hua tha"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 348637929,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cod_payment - has a problem with cash on delivery or payment at the door\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"cash nahi tha\"},{\"text\":\"payment failed\"},{\"text\":\"order cancel karna\"},{\"text\":\"haan ji\"},{\"text\":\"abhi nahi\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"haan ji\",\"context\":\"Did you have cash ready for the payment\"},{\"text\":\"filhaal nahi\",\"context\":\"Can you pay the cash on delivery now\"},{\"text\":\"thoda wait karo\",\"context\":\"Can you wait for a while till the payment is resolved\"}],\"medium\":[{\"text\":\"mera cod payment accept nahi hua\"},{\"text\":\"delivery guy ne paise nahi leye order ka\"},{\"text\":\"main cash ready rakha tha lekin le nahi paya\"},{\"text\":\"cod ka pay option kaise enable karun dobara\"},{\"text\":\"mera order tk12345678 ka payment issue ho gaya hai\"},{\"text\":\"delivery date par main ghar par nahi tha toh payment nahi hua\"},{\"text\":\"kya aap mera payment dobara try kar sakte ho\"}],\"medium_with_context\":[{\"text\":\"main cash ready rakhta hu par delivery time problem aati hai\",\"context\":\"Can you please tell why you are unable to pay the cash on delivery\"},{\"text\":\"maine 1500 rupees ready rakhe the magar delivery person ne le liya nahi\",\"context\":\"Did the delivery person refuse to take your payment\"},{\"text\":\"mere phone pe payment ka notification nahi aaya tha jab delivery hui\",\"context\":\"Did you receive any payment notification during delivery\"},{\"text\":\"kya koi aur payment method use kar sakta hu agar cod fail ho jaye\",\"context\":\"Are you open to use alternative payment method if cod fails\"},{\"text\":\"mera address galat likha tha isliye payment agent tak nahi pahuche\",\"context\":\"Was there any problem with your address during delivery\"}],\"long\":[{\"text\":\"mera order 9876543210 ka jo cod payment tha wo delivery guy ne accept karne se mana kar diya tha aur main paise ghar par rakha hua tha\"},{\"text\":\"maine delivery ke time 2000 rupees cash ready rakhe the par delivery agent ne kaha ki wo payment nahi le sakta hai toh payment cancel ho gaya\"},{\"text\":\"agar cod option available nahi hai toh main kaise payment karun kyunki mere paas online payment karne ka option abhi nahi hai\"}],\"long_with_context\":[{\"text\":\"delivery agent ne kaha payment accept nahi kar payega kyunki wo cash lekar ghar se bahar nahi ja sakta tha\",\"context\":\"Why did the delivery person not take your cash payment\"},{\"text\":\"agar payment stage pe problem aati hai toh kya main payment dobara kar sakta hu ya fir order cancel hoga\",\"context\":\"What happens if cash on delivery payment fails during delivery\"},{\"text\":\"mera contact number 98765 43210 hai jisme payment related koi notification nahi aayi jab delivery attempt hua tha\",\"context\":\"Can you confirm if any payment message sent to your contact number\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 610,
+    "output_tokens": 599
+  }
+}

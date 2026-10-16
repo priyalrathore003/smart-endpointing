@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.collections.already_paid.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "already_paid",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paid last week"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "transaction id four five six one"
+    },
+    {
+      "context": "Have you made the payment already?",
+      "requested_bucket": "short",
+      "text": "yes already paid"
+    },
+    {
+      "context": "Can you provide the receipt number please?",
+      "requested_bucket": "short",
+      "text": "got receipt number nine eight seven six"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i have paid the amount on twenty fifth march"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my account number is one two three four five six seven eight nine zero"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "payment was done through online transfer on second april"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the total amount paid was three thousand five hundred rupees"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i received an sms confirmation for the payment last saturday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the transaction id is three two one zero nine eight seven six five"
+    },
+    {
+      "context": "When was the payment made?",
+      "requested_bucket": "medium",
+      "text": "yes i made the payment on first april"
+    },
+    {
+      "context": "Can you confirm the payment amount and mode?",
+      "requested_bucket": "medium",
+      "text": "the amount of four thousand was paid using credit card"
+    },
+    {
+      "context": "Do you have the transaction reference number?",
+      "requested_bucket": "medium",
+      "text": "i have the transaction reference as nine eight seven six five four three"
+    },
+    {
+      "context": "Please provide your registered mobile number",
+      "requested_bucket": "medium",
+      "text": "my mobile number registered is nine eight seven six five four three two one zero"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i already paid the outstanding amount of five thousand two hundred rupees on the fifteenth of march through net banking and have the payment receipt with me"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "the payment was made from my savings account number one two three four five six seven eight nine zero one two three and confirmed via sms on twenty second april"
+    },
+    {
+      "context": "Can you confirm if you have already made any payments towards the dues?",
+      "requested_bucket": "long",
+      "text": "i already cleared the dues of seven thousand five hundred rupees on tenth february through upi transaction and i have the transaction id with me"
+    },
+    {
+      "context": "How was the payment made and what is your registered mobile number?",
+      "requested_bucket": "long",
+      "text": "the payment was made via phone wallet on the fifth of april my registered mobile number for the account is nine eight seven six five four three two one zero"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2742819816,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: already_paid - says they have already paid and gives details\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"paid last week\"},{\"text\":\"transaction id four five six one\"}],\"short_with_context\":[{\"text\":\"yes already paid\",\"context\":\"Have you made the payment already?\"},{\"text\":\"got receipt number nine eight seven six\",\"context\":\"Can you provide the receipt number please?\"}],\"medium\":[{\"text\":\"i have paid the amount on twenty fifth march\"},{\"text\":\"my account number is one two three four five six seven eight nine zero\"},{\"text\":\"payment was done through online transfer on second april\"},{\"text\":\"the total amount paid was three thousand five hundred rupees\"},{\"text\":\"i received an sms confirmation for the payment last saturday\"},{\"text\":\"the transaction id is three two one zero nine eight seven six five\"}],\"medium_with_context\":[{\"text\":\"yes i made the payment on first april\",\"context\":\"When was the payment made?\"},{\"text\":\"the amount of four thousand was paid using credit card\",\"context\":\"Can you confirm the payment amount and mode?\"},{\"text\":\"i have the transaction reference as nine eight seven six five four three\",\"context\":\"Do you have the transaction reference number?\"},{\"text\":\"my mobile number registered is nine eight seven six five four three two one zero\",\"context\":\"Please provide your registered mobile number\"}],\"long\":[{\"text\":\"i already paid the outstanding amount of five thousand two hundred rupees on the fifteenth of march through net banking and have the payment receipt with me\"},{\"text\":\"the payment was made from my savings account number one two three four five six seven eight nine zero one two three and confirmed via sms on twenty second april\"}],\"long_with_context\":[{\"text\":\"i already cleared the dues of seven thousand five hundred rupees on tenth february through upi transaction and i have the transaction id with me\",\"context\":\"Can you confirm if you have already made any payments towards the dues?\"},{\"text\":\"the payment was made via phone wallet on the fifth of april my registered mobile number for the account is nine eight seven six five four three two one zero\",\"context\":\"How was the payment made and what is your registered mobile number?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 586,
+    "output_tokens": 428
+  }
+}

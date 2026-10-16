@@ -1,0 +1,137 @@
+{
+  "batch_id": "en.delivery.wrong_or_damaged.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "wrong_or_damaged",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wrong item"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "damaged product"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "short_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "can you tell me the order number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "it was supposed to be a blue shirt"
+    },
+    {
+      "context": "What issue are you facing with your delivery?",
+      "requested_bucket": "short",
+      "text": "wrong order"
+    },
+    {
+      "context": "Did you receive your order as expected?",
+      "requested_bucket": "short",
+      "text": "no it was not delivered"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umm I ordered two books but I got only one"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the shirt color is actually red but I wanted blue"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I mean the package was damaged when it arrived at my door"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I got the wrong charger it is not compatible with my phone"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "like the quantity is less than what I had ordered online"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "uhm I think it was supposed to come on Tuesday no Wednesday actually"
+    },
+    {
+      "context": "Can you describe the problem with your received item?",
+      "requested_bucket": "medium",
+      "text": "I received a broken coffee mug in my last purchase"
+    },
+    {
+      "context": "What kind of damage did the product have?",
+      "requested_bucket": "medium",
+      "text": "there is a scratch on the new table I received today"
+    },
+    {
+      "context": "Was the wrong item delivered to you?",
+      "requested_bucket": "medium",
+      "text": "the wrong size of the shoes were sent in my order"
+    },
+    {
+      "context": "How was the condition of the package when you got it?",
+      "requested_bucket": "medium",
+      "text": "actually the delivery was late two days and the box was torn"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "uhm I placed an order for a pair of headphones but what came in the box was a similar looking but different model altogether"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I mean the dress I received is not the one I ordered the color and pattern are completely different and its too small for me"
+    },
+    {
+      "context": "Could you please explain the issue with the received product in detail?",
+      "requested_bucket": "long",
+      "text": "the product you sent me is not what I ordered I meant I wanted a black backpack not this green one its completely different"
+    },
+    {
+      "context": "Can you tell me more about the damage on the item you received?",
+      "requested_bucket": "long",
+      "text": "when I unboxed the parcel it looked like it had been tampered with the tablet screen is cracked and the device wont start at all"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1579441442,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: wrong_or_damaged - received a wrong or damaged item\nLanguage: Indian English, Latin script.\nStyle for this batch: with fillers and hesitations (umm, uh, like, actually, I mean); at least a third include a self-correction ('Tuesday, no, Wednesday')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"wrong item\"},{\"text\":\"damaged product\"},{\"text\":\"short_with_context\"},{\"text\":\"can you tell me the order number\"},{\"text\":\"it was supposed to be a blue shirt\"}],\"short_with_context\":[{\"text\":\"wrong order\",\"context\":\"What issue are you facing with your delivery?\"},{\"text\":\"no it was not delivered\",\"context\":\"Did you receive your order as expected?\"}],\"medium\":[{\"text\":\"umm I ordered two books but I got only one\"},{\"text\":\"the shirt color is actually red but I wanted blue\"},{\"text\":\"I mean the package was damaged when it arrived at my door\"},{\"text\":\"I got the wrong charger it is not compatible with my phone\"},{\"text\":\"like the quantity is less than what I had ordered online\"},{\"text\":\"uhm I think it was supposed to come on Tuesday no Wednesday actually\"}],\"medium_with_context\":[{\"text\":\"I received a broken coffee mug in my last purchase\",\"context\":\"Can you describe the problem with your received item?\"},{\"text\":\"there is a scratch on the new table I received today\",\"context\":\"What kind of damage did the product have?\"},{\"text\":\"the wrong size of the shoes were sent in my order\",\"context\":\"Was the wrong item delivered to you?\"},{\"text\":\"actually the delivery was late two days and the box was torn\",\"context\":\"How was the condition of the package when you got it?\"}],\"long\":[{\"text\":\"uhm I placed an order for a pair of headphones but what came in the box was a similar looking but different model altogether\"},{\"text\":\"I mean the dress I received is not the one I ordered the color and pattern are completely different and its too small for me\"}],\"long_with_context\":[{\"text\":\"the product you sent me is not what I ordered I meant I wanted a black backpack not this green one its completely different\",\"context\":\"Could you please explain the issue with the received product in detail?\"},{\"text\":\"when I unboxed the parcel it looked like it had been tampered with the tablet screen is cracked and the device wont start at all\",\"context\":\"Can you tell me more about the damage on the item you received?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 587,
+    "output_tokens": 445
+  }
+}

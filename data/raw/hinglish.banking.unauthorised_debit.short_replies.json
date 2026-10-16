@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.banking.unauthorised_debit.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "banking",
+  "intent": "unauthorised_debit",
+  "items": [
+    {
+      "context": "Kya aapne khud transaction kiya tha",
+      "requested_bucket": "short",
+      "text": "Nahi ji"
+    },
+    {
+      "context": "Transaction ki date kya thi",
+      "requested_bucket": "short",
+      "text": "Kal"
+    },
+    {
+      "context": "Kitna paise ka transaction hai",
+      "requested_bucket": "short",
+      "text": "Panch hazar"
+    },
+    {
+      "context": "Aapka account number bata sakte hain",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya aapke paas transaction receipt hai",
+      "requested_bucket": "short",
+      "text": "Nahi hai"
+    },
+    {
+      "context": "Mobile number confirm karenge",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Kya aapne kisi ko apna PIN diya hai",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Transaction ka mode kya tha",
+      "requested_bucket": "short",
+      "text": "Online"
+    },
+    {
+      "context": "Kya aapne complaint future mein kiya hai",
+      "requested_bucket": "short",
+      "text": "Abhi nahi"
+    },
+    {
+      "context": "Kya transaction aapke mobile se hua hai",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Aapke account mein kitna balance tha",
+      "requested_bucket": "short",
+      "text": "Das hazar"
+    },
+    {
+      "context": "Kya aapne apne card ka use kiya",
+      "requested_bucket": "short",
+      "text": "Nahi ji"
+    },
+    {
+      "context": "Transaction kab hua tha",
+      "requested_bucket": "short",
+      "text": "Do din pehle"
+    },
+    {
+      "context": "Kya aapko transaction ke bare mein message aaya",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Account holder ka naam kya hai",
+      "requested_bucket": "short",
+      "text": "Mera naam hai"
+    },
+    {
+      "context": "Kya aapke phone mein banking app hai",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Aapka registered email kya hai",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Kya aap abhi free hain baat karne ke liye",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Aapko transaction ki detail bata sakte hain",
+      "requested_bucket": "medium",
+      "text": "Maine check kiya tha par transaction mere nahi lagta"
+    },
+    {
+      "context": "Aapne kis date tak paise transfer dekha",
+      "requested_bucket": "medium",
+      "text": "Kal raat tak paise mere account me the"
+    },
+    {
+      "context": "Kya aap debit transaction ki facility use karte hain",
+      "requested_bucket": "medium",
+      "text": "Haan main normally atm se paise nikalta hu"
+    },
+    {
+      "context": "Account se paise kab deduct hua tha yaad hai",
+      "requested_bucket": "medium",
+      "text": "Pichle hafte kuch din pehle hua tha jo mujhe samajh nahi aaya"
+    },
+    {
+      "context": "Kya aapke pass transaction ke liye koi message ya email aya tha",
+      "requested_bucket": "medium",
+      "text": "Nahi mujhe kisi bhi tarah ka alert ya message nahi mila"
+    },
+    {
+      "context": "Aap apne account me abhi kitna balance check kar sakte hain",
+      "requested_bucket": "medium",
+      "text": "Maine recently balance check kiya tha to usmein paisa kam dikha"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2746380374,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: unauthorised_debit - reports a transaction they did not make\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Kya aapne khud transaction kiya tha\",\"reply\":\"Nahi ji\"},{\"agent_question\":\"Transaction ki date kya thi\",\"reply\":\"Kal\"},{\"agent_question\":\"Kitna paise ka transaction hai\",\"reply\":\"Panch hazar\"},{\"agent_question\":\"Aapka account number bata sakte hain\",\"reply\":\"Haan\"},{\"agent_question\":\"Kya aapke paas transaction receipt hai\",\"reply\":\"Nahi hai\"},{\"agent_question\":\"Mobile number confirm karenge\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Kya aapne kisi ko apna PIN diya hai\",\"reply\":\"Nahi\"},{\"agent_question\":\"Transaction ka mode kya tha\",\"reply\":\"Online\"},{\"agent_question\":\"Kya aapne complaint future mein kiya hai\",\"reply\":\"Abhi nahi\"},{\"agent_question\":\"Kya transaction aapke mobile se hua hai\",\"reply\":\"Haan\"},{\"agent_question\":\"Aapke account mein kitna balance tha\",\"reply\":\"Das hazar\"},{\"agent_question\":\"Kya aapne apne card ka use kiya\",\"reply\":\"Nahi ji\"},{\"agent_question\":\"Transaction kab hua tha\",\"reply\":\"Do din pehle\"},{\"agent_question\":\"Kya aapko transaction ke bare mein message aaya\",\"reply\":\"Haan\"},{\"agent_question\":\"Account holder ka naam kya hai\",\"reply\":\"Mera naam hai\"},{\"agent_question\":\"Kya aapke phone mein banking app hai\",\"reply\":\"Haan\"},{\"agent_question\":\"Aapka registered email kya hai\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Kya aap abhi free hain baat karne ke liye\",\"reply\":\"Haan ji\"}],\"medium\":[{\"agent_question\":\"Aapko transaction ki detail bata sakte hain\",\"reply\":\"Maine check kiya tha par transaction mere nahi lagta\"},{\"agent_question\":\"Aapne kis date tak paise transfer dekha\",\"reply\":\"Kal raat tak paise mere account me the\"},{\"agent_question\":\"Kya aap debit transaction ki facility use karte hain\",\"reply\":\"Haan main normally atm se paise nikalta hu\"},{\"agent_question\":\"Account se paise kab deduct hua tha yaad hai\",\"reply\":\"Pichle hafte kuch din pehle hua tha jo mujhe samajh nahi aaya\"},{\"agent_question\":\"Kya aapke pass transaction ke liye koi message ya email aya tha\",\"reply\":\"Nahi mujhe kisi bhi tarah ka alert ya message nahi mila\"},{\"agent_question\":\"Aap apne account me abhi kitna balance check kar sakte hain\",\"reply\":\"Maine recently balance check kiya tha to usmein paisa kam dikha\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 544
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.banking.login_otp_problem.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "login_otp_problem",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "not receiving otp"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "login issue"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "in delhi"
+    },
+    {
+      "context": "Can you please provide your card number?",
+      "requested_bucket": "short",
+      "text": "card ending 1234"
+    },
+    {
+      "context": "Which branch are you registered with?",
+      "requested_bucket": "short",
+      "text": "pune branch"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i am not getting otp on my mobile number registered with account"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you help me login to net banking my otp is not coming"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i tried multiple times but the otp never arrives on my phone"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my registered mobile number is 9876543210 so why otp not coming"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i last used net banking on 5th june now i cannot login"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i live in mumbai and my account number is 1234567890 please assist"
+    },
+    {
+      "context": "Are you receiving any messages on your mobile recently?",
+      "requested_bucket": "medium",
+      "text": "my otp is not received since morning please help"
+    },
+    {
+      "context": "Have you checked your mobile balance for receiving sms alerts?",
+      "requested_bucket": "medium",
+      "text": "i checked my mobile balance it is sufficient to receive sms"
+    },
+    {
+      "context": "Can you tell me your mobile phone model and network provider?",
+      "requested_bucket": "medium",
+      "text": "i am using android phone over jio network from chennai"
+    },
+    {
+      "context": "Do you receive any other transactional messages from the bank?",
+      "requested_bucket": "medium",
+      "text": "yes i did receive transactions alerts earlier from your bank"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i am shreya residing at 45 gurgaon sector 14 and for last two days i have not received any login otp on my registered mobile number which is 9988776655"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "my name is rajesh kumar from chennai i am unable to login into net banking because i am not receiving the otp on my registered mobile number linked to account number 5678901234"
+    },
+    {
+      "context": "Can you describe the issue you are facing with the OTP in detail?",
+      "requested_bucket": "long",
+      "text": "i tried multiple times to get otp but it never comes and my sim is working fine i am residing in bangalore on 12 park street"
+    },
+    {
+      "context": "Could you confirm your registered mobile number and what troubleshooting you have done?",
+      "requested_bucket": "long",
+      "text": "the mobile number linked to my account is 7654321987 and i have checked network and everything is okay but otp not sent from your side"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1758057382,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: login_otp_problem - cannot log in to net or mobile banking or is not receiving the OTP\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"not receiving otp\"},{\"text\":\"login issue\"}, {\"text\":\"yes please\"},{\"text\":\"in delhi\"}],\"short_with_context\":[{\"text\":\"card ending 1234\",\"context\":\"Can you please provide your card number?\"},{\"text\":\"pune branch\",\"context\":\"Which branch are you registered with?\"}],\"medium\":[{\"text\":\"i am not getting otp on my mobile number registered with account\"},{\"text\":\"can you help me login to net banking my otp is not coming\"},{\"text\":\"i tried multiple times but the otp never arrives on my phone\"},{\"text\":\"my registered mobile number is 9876543210 so why otp not coming\"},{\"text\":\"i last used net banking on 5th june now i cannot login\"},{\"text\":\"i live in mumbai and my account number is 1234567890 please assist\"}],\"medium_with_context\":[{\"text\":\"my otp is not received since morning please help\",\"context\":\"Are you receiving any messages on your mobile recently?\"},{\"text\":\"i checked my mobile balance it is sufficient to receive sms\",\"context\":\"Have you checked your mobile balance for receiving sms alerts?\"},{\"text\":\"i am using android phone over jio network from chennai\",\"context\":\"Can you tell me your mobile phone model and network provider?\"},{\"text\":\"yes i did receive transactions alerts earlier from your bank\",\"context\":\"Do you receive any other transactional messages from the bank?\"}],\"long\":[{\"text\":\"i am shreya residing at 45 gurgaon sector 14 and for last two days i have not received any login otp on my registered mobile number which is 9988776655\"},{\"text\":\"my name is rajesh kumar from chennai i am unable to login into net banking because i am not receiving the otp on my registered mobile number linked to account number 5678901234\"}],\"long_with_context\":[{\"text\":\"i tried multiple times to get otp but it never comes and my sim is working fine i am residing in bangalore on 12 park street\",\"context\":\"Can you describe the issue you are facing with the OTP in detail?\"},{\"text\":\"the mobile number linked to my account is 7654321987 and i have checked network and everything is okay but otp not sent from your side\",\"context\":\"Could you confirm your registered mobile number and what troubleshooting you have done?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 575,
+    "output_tokens": 480
+  }
+}

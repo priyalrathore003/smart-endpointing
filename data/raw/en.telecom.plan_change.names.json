@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.telecom.plan_change.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "plan_change",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "change plan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "new recharge"
+    },
+    {
+      "context": "Do you want to change your current plan now",
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "Would you like me to send the new plan details to your email",
+      "requested_bucket": "short",
+      "text": "no thanks"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to know about the unlimited data plans available"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you check if there is any better plan than my current one"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please tell me the cheapest plan with calls and internet"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Is there a family plan for two connections in Chennai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I am moving to Bangalore next week can I get a plan there"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "What are the prepaid plans valid for 28 days from Hyderabad"
+    },
+    {
+      "context": "Which city are you calling from",
+      "requested_bucket": "medium",
+      "text": "What are the popular data packs for Mumbai area"
+    },
+    {
+      "context": "Are you interested in prepaid or postpaid plans",
+      "requested_bucket": "medium",
+      "text": "Is there any plan with night data benefits"
+    },
+    {
+      "context": "Do you want to upgrade your existing plan",
+      "requested_bucket": "medium",
+      "text": "Can I upgrade my plan from 399 to 599 today itself"
+    },
+    {
+      "context": "Would you like details on daily data limits or talktime benefits",
+      "requested_bucket": "medium",
+      "text": "What is the cost difference between your 1GB and 3GB daily plans"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I am currently using a plan with 2GB data per day but I need more for my family so please suggest a good plan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Last month I was in Delhi but now I have returned to Pune so I need a plan that works best here without extra roaming charges"
+    },
+    {
+      "context": "What type of plan are you interested in postpaid or prepaid",
+      "requested_bucket": "long",
+      "text": "Can you please tell me all the postpaid plans available with unlimited calling and at least 2GB data daily"
+    },
+    {
+      "context": "Are you looking for any additional benefits with your new plan like OTT apps",
+      "requested_bucket": "long",
+      "text": "I want to change my plan to one which includes free subscription to some streaming service along with 3GB daily data if possible"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2202516928,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: plan_change - wants to change or understand a plan\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"change plan\"},{\"text\":\"new recharge\"}],\"short_with_context\":[{\"text\":\"yes please\",\"context\":\"Do you want to change your current plan now\"},{\"text\":\"no thanks\",\"context\":\"Would you like me to send the new plan details to your email\"}],\"medium\":[{\"text\":\"I want to know about the unlimited data plans available\"},{\"text\":\"Can you check if there is any better plan than my current one\"},{\"text\":\"Please tell me the cheapest plan with calls and internet\"},{\"text\":\"Is there a family plan for two connections in Chennai\"},{\"text\":\"I am moving to Bangalore next week can I get a plan there\"},{\"text\":\"What are the prepaid plans valid for 28 days from Hyderabad\"}],\"medium_with_context\":[{\"text\":\"What are the popular data packs for Mumbai area\",\"context\":\"Which city are you calling from\"},{\"text\":\"Is there any plan with night data benefits\",\"context\":\"Are you interested in prepaid or postpaid plans\"},{\"text\":\"Can I upgrade my plan from 399 to 599 today itself\",\"context\":\"Do you want to upgrade your existing plan\"},{\"text\":\"What is the cost difference between your 1GB and 3GB daily plans\",\"context\":\"Would you like details on daily data limits or talktime benefits\"}],\"long\":[{\"text\":\"I am currently using a plan with 2GB data per day but I need more for my family so please suggest a good plan\"},{\"text\":\"Last month I was in Delhi but now I have returned to Pune so I need a plan that works best here without extra roaming charges\"}],\"long_with_context\":[{\"text\":\"Can you please tell me all the postpaid plans available with unlimited calling and at least 2GB data daily\",\"context\":\"What type of plan are you interested in postpaid or prepaid\"},{\"text\":\"I want to change my plan to one which includes free subscription to some streaming service along with 3GB daily data if possible\",\"context\":\"Are you looking for any additional benefits with your new plan like OTT apps\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 566,
+    "output_tokens": 413
+  }
+}

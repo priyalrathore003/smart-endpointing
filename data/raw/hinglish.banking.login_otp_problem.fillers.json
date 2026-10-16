@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.banking.login_otp_problem.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "login_otp_problem",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahi aaya"
+    },
+    {
+      "context": "Can you please confirm if you received the OTP?",
+      "requested_bucket": "short",
+      "text": "thik hai"
+    },
+    {
+      "context": "Have you tried logging in after waiting for a few minutes?",
+      "requested_bucket": "short",
+      "text": "nahi abhi"
+    },
+    {
+      "context": "Do you want me to resend the OTP now?",
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera mobile bank khul nahi raha hai otp nahi aa raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "haan ji thoda rukna OTP nahi aa raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main try karta hua fir keh raha hoon karna hai login"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera number update nahi hua toh otp nahi mil raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Tuesday nahi Wednesday ko transfer kiya tha paisa"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha woh OTP mujhe nahi mila ab kya karu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "jab main login karta hoon toh batata hai otp galat hai"
+    },
+    {
+      "context": "Do you know if you have registered the correct mobile number?",
+      "requested_bucket": "medium",
+      "text": "haan otp milega par form fill karna hoga"
+    },
+    {
+      "context": "Have you checked your mobile network or message inbox?",
+      "requested_bucket": "medium",
+      "text": "nahin otp nahi aaya phir kya karna hai"
+    },
+    {
+      "context": "Can you please tell me the last four digits of your mobile number?",
+      "requested_bucket": "medium",
+      "text": "ha usi number pe sab set hai par fir bhi nahi aaya"
+    },
+    {
+      "context": "Are you trying to login through mobile app or internet banking website?",
+      "requested_bucket": "medium",
+      "text": "mujhe thoda samajh nahi aa raha yeh problem ke wajah kya hai"
+    },
+    {
+      "context": "Is your mobile phone connected to internet while trying to login?",
+      "requested_bucket": "medium",
+      "text": "woh matlab internet banking app pe try kar raha hoon lekin"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "bas OTP aa nahi raha kabhi kabhi delay hota hai ya phir bilkul nahi aata mera phone theek chal raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera account se paise cut gaye lekin login karne ke liye jo OTP aata hai woh mujhe nahi mil raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "ma'am mera mobile number updated hai par phir bhi jab login karta hoon toh OTP receive nahi hota hai mujhe"
+    },
+    {
+      "context": "Can you describe your network connection and whether OTP is delayed or not received at all?",
+      "requested_bucket": "long",
+      "text": "main aapko batadu ki mera mobile ekdum strong network mein hai lekin fir bhi OTP receive nahi ho raha hai"
+    },
+    {
+      "context": "Have you observed similar issues with OTP on any other apps or services?",
+      "requested_bucket": "long",
+      "text": "mujhe aisa lagta hai ki system me kuch dikkat hai kyunki mera phone bilkul sahi hai aur dusre log OTP le rahe hain"
+    },
+    {
+      "context": "Can you share when was the last time you successfully received OTP and logged in without problem?",
+      "requested_bucket": "long",
+      "text": "jis time maine last withdrawal kiya tha usse pehle tak sab login sahi thu lekin ab jab OTP bhejte hai toh nahi aata"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 500535495,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: login_otp_problem - cannot log in to net or mobile banking or is not receiving the OTP\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal tak\"},{\"text\":\"nahi aaya\"}],\"short_with_context\":[{\"text\":\"thik hai\",\"context\":\"Can you please confirm if you received the OTP?\"},{\"text\":\"nahi abhi\",\"context\":\"Have you tried logging in after waiting for a few minutes?\"},{\"text\":\"theek hai\",\"context\":\"Do you want me to resend the OTP now?\"}],\"medium\":[{\"text\":\"mera mobile bank khul nahi raha hai otp nahi aa raha\"},{\"text\":\"haan ji thoda rukna OTP nahi aa raha hai\"},{\"text\":\"main try karta hua fir keh raha hoon karna hai login\"},{\"text\":\"mera number update nahi hua toh otp nahi mil raha hai\"},{\"text\":\"Tuesday nahi Wednesday ko transfer kiya tha paisa\"},{\"text\":\"accha woh OTP mujhe nahi mila ab kya karu\"},{\"text\":\"jab main login karta hoon toh batata hai otp galat hai\"}],\"medium_with_context\":[{\"text\":\"haan otp milega par form fill karna hoga\",\"context\":\"Do you know if you have registered the correct mobile number?\"},{\"text\":\"nahin otp nahi aaya phir kya karna hai\",\"context\":\"Have you checked your mobile network or message inbox?\"},{\"text\":\"ha usi number pe sab set hai par fir bhi nahi aaya\",\"context\":\"Can you please tell me the last four digits of your mobile number?\"},{\"text\":\"mujhe thoda samajh nahi aa raha yeh problem ke wajah kya hai\",\"context\":\"Are you trying to login through mobile app or internet banking website?\"},{\"text\":\"woh matlab internet banking app pe try kar raha hoon lekin\",\"context\":\"Is your mobile phone connected to internet while trying to login?\"}],\"long\":[{\"text\":\"bas OTP aa nahi raha kabhi kabhi delay hota hai ya phir bilkul nahi aata mera phone theek chal raha hai\"},{\"text\":\"mera account se paise cut gaye lekin login karne ke liye jo OTP aata hai woh mujhe nahi mil raha\"},{\"text\":\"ma'am mera mobile number updated hai par phir bhi jab login karta hoon toh OTP receive nahi hota hai mujhe\"}],\"long_with_context\":[{\"text\":\"main aapko batadu ki mera mobile ekdum strong network mein hai lekin fir bhi OTP receive nahi ho raha hai\",\"context\":\"Can you describe your network connection and whether OTP is delayed or not received at all?\"},{\"text\":\"mujhe aisa lagta hai ki system me kuch dikkat hai kyunki mera phone bilkul sahi hai aur dusre log OTP le rahe hain\",\"context\":\"Have you observed similar issues with OTP on any other apps or services?\"},{\"text\":\"jis time maine last withdrawal kiya tha usse pehle tak sab login sahi thu lekin ab jab OTP bhejte hai toh nahi aata\",\"context\":\"Can you share when was the last time you successfully received OTP and logged in without problem?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 617,
+    "output_tokens": 615
+  }
+}

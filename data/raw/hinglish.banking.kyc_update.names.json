@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.banking.kyc_update.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "kyc_update",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "address update"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kyc karwana hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "aadhaar update"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "ji haan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "correct hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mujhe update karni hai"
+    },
+    {
+      "context": "What update would you like to make in your KYC details?",
+      "requested_bucket": "short",
+      "text": "address change"
+    },
+    {
+      "context": "Please tell me what document details you want to update?",
+      "requested_bucket": "short",
+      "text": "aadhaar number"
+    },
+    {
+      "context": "Which document's information do you want to update today?",
+      "requested_bucket": "short",
+      "text": "pan card"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera address change karna hai aur pan update karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main Mumbai mein rehta hoon aur nayi address details dena chahta hoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap mujhe batayenge ki kya documents chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera naam Ravi sharma hai aur nayi aadhaar number bhi update karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera purana address Delhi tha ab Bangalore shift ho gaya hoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please mujhe batao ki kyc update lene ka process kya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main apne account mein address aur pan dono update karwana chahta hoon"
+    },
+    {
+      "context": "Can you confirm your full name and city for verification?",
+      "requested_bucket": "medium",
+      "text": "mera naam Sunita hai aur main Chennai mein rehti hoon"
+    },
+    {
+      "context": "Do you want to update your address or PAN or both?",
+      "requested_bucket": "medium",
+      "text": "mujhe sirf address update karna hai, pan nahi badalna"
+    },
+    {
+      "context": "Do you have your Aadhaar and address proof ready for KYC update?",
+      "requested_bucket": "medium",
+      "text": "main apni aadhaar ke saath address proof bhi dena chahti hoon"
+    },
+    {
+      "context": "Please provide your existing PAN number for update.",
+      "requested_bucket": "medium",
+      "text": "mera pan card number ABCDE1234F hai aur main usse update karna chahta hoon"
+    },
+    {
+      "context": "Can you give me your new address details for KYC?",
+      "requested_bucket": "medium",
+      "text": "mera naya address 45 MG road Bangalore hai aur zip 560001 hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera naam Ajay Kumar hai aur main Kolkata mein rehta hoon abhi mera pan card aur address update karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya aap mujhe batayenge ki main apne Aadhaar number aur address update karne ke liye kya process follow karna hoga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera account number 1234567890 hai aur main apna current address jo ki Hyderabad mein hai usko update karna chahta hoon"
+    },
+    {
+      "context": "Please provide your new address for KYC update.",
+      "requested_bucket": "long",
+      "text": "main aapko apna naya address batata hoon jo ki Patna mein hai aur main chahata hoon ki aap usko update kar dein"
+    },
+    {
+      "context": "Can you confirm the documents you want to update in your account?",
+      "requested_bucket": "long",
+      "text": "mera naam Pooja Singh hai aur main apna Aadhaar card number aur address bank account mein update karwana chahti hoon"
+    },
+    {
+      "context": "Where is your current residence and do you want to update the address details?",
+      "requested_bucket": "long",
+      "text": "main abhi Pune mein hoon aur mera purana address Delhi tha main usko turant update karwana chahti hoon"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 699711453,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: kyc_update - wants to update KYC, address, PAN or Aadhaar details\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"address update\"},{\"text\":\"kyc karwana hai\"},{\"text\":\"aadhaar update\"},{\"text\":\"ji haan\"},{\"text\":\"correct hai\"},{\"text\":\"mujhe update karni hai\"}],\"short_with_context\":[{\"text\":\"address change\",\"context\":\"What update would you like to make in your KYC details?\"},{\"text\":\"aadhaar number\",\"context\":\"Please tell me what document details you want to update?\"},{\"text\":\"pan card\",\"context\":\"Which document's information do you want to update today?\"}],\"medium\":[{\"text\":\"mera address change karna hai aur pan update karna hai\"},{\"text\":\"main Mumbai mein rehta hoon aur nayi address details dena chahta hoon\"},{\"text\":\"kya aap mujhe batayenge ki kya documents chahiye\"},{\"text\":\"mera naam Ravi sharma hai aur nayi aadhaar number bhi update karna hai\"},{\"text\":\"mera purana address Delhi tha ab Bangalore shift ho gaya hoon\"},{\"text\":\"please mujhe batao ki kyc update lene ka process kya hai\"},{\"text\":\"main apne account mein address aur pan dono update karwana chahta hoon\"}],\"medium_with_context\":[{\"text\":\"mera naam Sunita hai aur main Chennai mein rehti hoon\",\"context\":\"Can you confirm your full name and city for verification?\"},{\"text\":\"mujhe sirf address update karna hai, pan nahi badalna\",\"context\":\"Do you want to update your address or PAN or both?\"},{\"text\":\"main apni aadhaar ke saath address proof bhi dena chahti hoon\",\"context\":\"Do you have your Aadhaar and address proof ready for KYC update?\"},{\"text\":\"mera pan card number ABCDE1234F hai aur main usse update karna chahta hoon\",\"context\":\"Please provide your existing PAN number for update.\"},{\"text\":\"mera naya address 45 MG road Bangalore hai aur zip 560001 hai\",\"context\":\"Can you give me your new address details for KYC?\"}],\"long\":[{\"text\":\"mera naam Ajay Kumar hai aur main Kolkata mein rehta hoon abhi mera pan card aur address update karna hai\"},{\"text\":\"kya aap mujhe batayenge ki main apne Aadhaar number aur address update karne ke liye kya process follow karna hoga\"},{\"text\":\"mera account number 1234567890 hai aur main apna current address jo ki Hyderabad mein hai usko update karna chahta hoon\"}],\"long_with_context\":[{\"text\":\"main aapko apna naya address batata hoon jo ki Patna mein hai aur main chahata hoon ki aap usko update kar dein\",\"context\":\"Please provide your new address for KYC update.\"},{\"text\":\"mera naam Pooja Singh hai aur main apna Aadhaar card number aur address bank account mein update karwana chahti hoon\",\"context\":\"Can you confirm the documents you want to update in your account?\"},{\"text\":\"main abhi Pune mein hoon aur mera purana address Delhi tha main usko turant update karwana chahti hoon\",\"context\":\"Where is your current residence and do you want to update the address details?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 593,
+    "output_tokens": 666
+  }
+}

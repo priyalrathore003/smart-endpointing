@@ -1,0 +1,192 @@
+{
+  "batch_id": "hinglish.banking.unauthorised_debit.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "unauthorised_debit",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahin kiya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "ruk jao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "main call kar raha hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kya karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "thik hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wait karna"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "samajh nahi aaya"
+    },
+    {
+      "context": "Kya aapne khud ye transaction kiya hai",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Kya aapne apne account se paise transfer kiye the kal",
+      "requested_bucket": "short",
+      "text": "nahi ji"
+    },
+    {
+      "context": "Paise kab transfer huye the aapke account se",
+      "requested_bucket": "short",
+      "text": "kal kiya tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account se paise kat gaye but transfer nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main surat me rehta hu par transaction mumbai ka dikh raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine ye transaction kab konsa din hua pata nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera naam ramesh kumar hai aur ye transaction unauthorized hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "guna city se transaction hua hai par mujhe uske baare me kuch pata nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mujhe turant mera paise wapas chahiye kyunki ye fraud lag raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account number 1234567890 se paise kat gaye bina mere janne"
+    },
+    {
+      "context": "Jab transaction hua tha uska time aur date batayenge kya",
+      "requested_bucket": "medium",
+      "text": "transaction ki date aur time bata sakte hain aap"
+    },
+    {
+      "context": "Kitne paise kat gaye hain aapke account se",
+      "requested_bucket": "medium",
+      "text": "kya transaction ka amount batayenge jisse aapko doubt hai"
+    },
+    {
+      "context": "Kya aapka address transaction location se match karta hai",
+      "requested_bucket": "medium",
+      "text": "main delhi ka rehne wala hu lekin transaction chennai se hua hai"
+    },
+    {
+      "context": "Aapka account number aur naam batayenge taki verify kar saken",
+      "requested_bucket": "medium",
+      "text": "mai aapko apna account number aur naam de deta hu"
+    },
+    {
+      "context": "Aapko kya karna hai is situation me",
+      "requested_bucket": "medium",
+      "text": "kya mujhe complaint lodge karna padega iske liye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "ranjit singh ke naam se mera account hai aur 15 march ko bin bataye paise kat gaye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine apne atm card ko kabhi kisi ko nahi diya fir bhi mumbai me transaction hua hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera address lucknow hai aur yahan ki transaction history me aisa kuch dikh raha hai jo galat hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "person jo paise transfer kar raha hai uska naam mukesh mehta dikh raha hai par main use nahi janta"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya main apne bank branch jakar ya call ke through complaint kar sakta hu bina branch ke"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "jo amount kat gaya hai wo pachaas hazaar hai aur wo mere monthly salary ka part tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "please mere account ki security check karo aur wo transaction turant rok do"
+    },
+    {
+      "context": "Kya aapko pata hai ki transaction kab hua tha",
+      "requested_bucket": "long",
+      "text": "ye transaction 12 april ko hua hai aur main mera account check kar raha tha"
+    },
+    {
+      "context": "Kis tarah ke documents chahiye honge humari investigation ke liye",
+      "requested_bucket": "long",
+      "text": "kya main apne id proof aur address proof bhej kar is violation ki janch karwa sakta hu"
+    },
+    {
+      "context": "Kya aapke aas paas kisi aur ko bhi aise transactions ki problem hui hai",
+      "requested_bucket": "long",
+      "text": "mere dost ne bhi ye bataya ki uske account se bhi bank call kar raha hai similar paise katne ke baare me"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3771748472,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: unauthorised_debit - reports a transaction they did not make\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"nahin kiya\"},{\"text\":\"ruk jao\"},{\"text\":\"main call kar raha hu\"},{\"text\":\"kya karna hai\"},{\"text\":\"thik hai\"},{\"text\":\"wait karna\"},{\"text\":\"samajh nahi aaya\"}],\"short_with_context\":[{\"text\":\"haan ji\",\"context\":\"Kya aapne khud ye transaction kiya hai\"},{\"text\":\"nahi ji\",\"context\":\"Kya aapne apne account se paise transfer kiye the kal\"},{\"text\":\"kal kiya tha\",\"context\":\"Paise kab transfer huye the aapke account se\"}],\"medium\":[{\"text\":\"mera account se paise kat gaye but transfer nahi hua\"},{\"text\":\"main surat me rehta hu par transaction mumbai ka dikh raha hai\"},{\"text\":\"maine ye transaction kab konsa din hua pata nahi\"},{\"text\":\"mera naam ramesh kumar hai aur ye transaction unauthorized hai\"},{\"text\":\"guna city se transaction hua hai par mujhe uske baare me kuch pata nahi\"},{\"text\":\"mujhe turant mera paise wapas chahiye kyunki ye fraud lag raha hai\"},{\"text\":\"mera account number 1234567890 se paise kat gaye bina mere janne\"}],\"medium_with_context\":[{\"text\":\"transaction ki date aur time bata sakte hain aap\",\"context\":\"Jab transaction hua tha uska time aur date batayenge kya\"},{\"text\":\"kya transaction ka amount batayenge jisse aapko doubt hai\",\"context\":\"Kitne paise kat gaye hain aapke account se\"},{\"text\":\"main delhi ka rehne wala hu lekin transaction chennai se hua hai\",\"context\":\"Kya aapka address transaction location se match karta hai\"},{\"text\":\"mai aapko apna account number aur naam de deta hu\",\"context\":\"Aapka account number aur naam batayenge taki verify kar saken\"},{\"text\":\"kya mujhe complaint lodge karna padega iske liye\",\"context\":\"Aapko kya karna hai is situation me\"}],\"long\":[{\"text\":\"ranjit singh ke naam se mera account hai aur 15 march ko bin bataye paise kat gaye\"},{\"text\":\"maine apne atm card ko kabhi kisi ko nahi diya fir bhi mumbai me transaction hua hai\"},{\"text\":\"mera address lucknow hai aur yahan ki transaction history me aisa kuch dikh raha hai jo galat hai\"},{\"text\":\"person jo paise transfer kar raha hai uska naam mukesh mehta dikh raha hai par main use nahi janta\"},{\"text\":\"kya main apne bank branch jakar ya call ke through complaint kar sakta hu bina branch ke\"},{\"text\":\"jo amount kat gaya hai wo pachaas hazaar hai aur wo mere monthly salary ka part tha\"},{\"text\":\"please mere account ki security check karo aur wo transaction turant rok do\"}],\"long_with_context\":[{\"text\":\"ye transaction 12 april ko hua hai aur main mera account check kar raha tha\",\"context\":\"Kya aapko pata hai ki transaction kab hua tha\"},{\"text\":\"kya main apne id proof aur address proof bhej kar is violation ki janch karwa sakta hu\",\"context\":\"Kis tarah ke documents chahiye honge humari investigation ke liye\"},{\"text\":\"mere dost ne bhi ye bataya ki uske account se bhi bank call kar raha hai similar paise katne ke baare me\",\"context\":\"Kya aapke aas paas kisi aur ko bhi aise transactions ki problem hui hai\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 589,
+    "output_tokens": 734
+  }
+}

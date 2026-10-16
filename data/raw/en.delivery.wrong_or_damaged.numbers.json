@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.delivery.wrong_or_damaged.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "wrong_or_damaged",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wrong item"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "damaged package"
+    },
+    {
+      "context": "Do you want to replace the item or get a refund",
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "When would you be available for the pickup",
+      "requested_bucket": "short",
+      "text": "tomorrow morning"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I received a blender instead of the coffee maker I ordered"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "The package was torn and the laptop screen is cracked"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to report the wrong color shirt delivered to me"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Hello my order was supposed to arrive yesterday but it came damaged"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "The item I got is missing the charger that was listed in the box"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "My phone case delivered is different from the one shown in the pictures"
+    },
+    {
+      "context": "Can you confirm the delivery address you received the product at",
+      "requested_bucket": "medium",
+      "text": "I see the address is wrong on the package it says Mumbai not Pune"
+    },
+    {
+      "context": "Is the item not working or is it just a different product",
+      "requested_bucket": "medium",
+      "text": "It does not switch on the blender I received is malfunctioned"
+    },
+    {
+      "context": "What damage have you noticed on the product",
+      "requested_bucket": "medium",
+      "text": "It has a big dent on the side and looks completely broken"
+    },
+    {
+      "context": "Would you prefer a refund or a replacement for the wrong item",
+      "requested_bucket": "medium",
+      "text": "I would like to get a refund as the product delivered is not what I ordered"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I ordered a black leather wallet from your website but you sent me a brown cloth one instead and I need it corrected immediately"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Last week I received the package but it had a cracked glass on the vase which was a gift I wanted to give tomorrow so please help"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I had ordered a smartphone last Wednesday from your online store but the box arrived crushed and the phone is not working at all now so what can be done"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Today I received my parcel and it contained a pair of shoes but they were the wrong size and the color was very different from what I requested"
+    },
+    {
+      "context": "Can you describe the condition of the item you received and any visible damages",
+      "requested_bucket": "long",
+      "text": "The package arrived damaged and I noticed the screen on my tablet has several cracks now what are the next steps to get this resolved"
+    },
+    {
+      "context": "Did you receive the correct package at the right address or was there an issue with the delivery",
+      "requested_bucket": "long",
+      "text": "I was expecting my kitchen mixer yesterday but the delivery person gave me a box which had wrong items inside and the address was also incorrect"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2274538407,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: wrong_or_damaged - received a wrong or damaged item\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"wrong item\"},{\"text\":\"damaged package\"}],\"short_with_context\":[{\"text\":\"yes please\",\"context\":\"Do you want to replace the item or get a refund\"},{\"text\":\"tomorrow morning\",\"context\":\"When would you be available for the pickup\"}],\"medium\":[{\"text\":\"I received a blender instead of the coffee maker I ordered\"},{\"text\":\"The package was torn and the laptop screen is cracked\"},{\"text\":\"I want to report the wrong color shirt delivered to me\"},{\"text\":\"Hello my order was supposed to arrive yesterday but it came damaged\"},{\"text\":\"The item I got is missing the charger that was listed in the box\"},{\"text\":\"My phone case delivered is different from the one shown in the pictures\"}],\"medium_with_context\":[{\"text\":\"I see the address is wrong on the package it says Mumbai not Pune\",\"context\":\"Can you confirm the delivery address you received the product at\"},{\"text\":\"It does not switch on the blender I received is malfunctioned\",\"context\":\"Is the item not working or is it just a different product\"},{\"text\":\"It has a big dent on the side and looks completely broken\",\"context\":\"What damage have you noticed on the product\"},{\"text\":\"I would like to get a refund as the product delivered is not what I ordered\",\"context\":\"Would you prefer a refund or a replacement for the wrong item\"}],\"long\":[{\"text\":\"I ordered a black leather wallet from your website but you sent me a brown cloth one instead and I need it corrected immediately\"},{\"text\":\"Last week I received the package but it had a cracked glass on the vase which was a gift I wanted to give tomorrow so please help\"},{\"text\":\"I had ordered a smartphone last Wednesday from your online store but the box arrived crushed and the phone is not working at all now so what can be done\"},{\"text\":\"Today I received my parcel and it contained a pair of shoes but they were the wrong size and the color was very different from what I requested\"}],\"long_with_context\":[{\"text\":\"The package arrived damaged and I noticed the screen on my tablet has several cracks now what are the next steps to get this resolved\",\"context\":\"Can you describe the condition of the item you received and any visible damages\"},{\"text\":\"I was expecting my kitchen mixer yesterday but the delivery person gave me a box which had wrong items inside and the address was also incorrect\",\"context\":\"Did you receive the correct package at the right address or was there an issue with the delivery\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 586,
+    "output_tokens": 504
+  }
+}

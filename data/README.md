@@ -3,6 +3,12 @@
 Exact counts, file hashes, drop counts and label-conflict rates are in
 `data/manifests/<name>.json`. Results cite its `data_hash`.
 
+**What is in git:** the raw LLM responses (`data/raw/*.json`, one per batch, 480 for `synth_v1`), the
+spend ledger (`data/raw/spend.jsonl`) and the manifest (`data/manifests/synth_v1.json`), about 4.7 MB.
+The processed train/dev/test files (16 MB) are not committed. They rebuild exactly with
+`python -m endpointing.data.cli build --name synth_v1` (no API calls, a few seconds), and a CI test checks
+that the rebuild matches the manifest's `data_hash` (`5dc7cd3a…`).
+
 ## Source
 - **Generator:** OpenAI `gpt-4.1-mini`, pinned to the snapshot **`gpt-4.1-mini-2025-04-14`**,
   temperature 1.0, fixed seed per call. OpenAI marks `gpt-4.1-mini` as **deprecated** (checked

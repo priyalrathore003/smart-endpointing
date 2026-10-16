@@ -1,0 +1,162 @@
+{
+  "batch_id": "hinglish.banking.login_otp_problem.plain",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "login_otp_problem",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "otp nahi aa raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "login nahi ho pa raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "help chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan bhai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wait kar raha hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "address wahi hai"
+    },
+    {
+      "context": "Did you receive the OTP on your registered mobile number?",
+      "requested_bucket": "short",
+      "text": "nahin nahi mila"
+    },
+    {
+      "context": "Is your registered mobile number still active with you?",
+      "requested_bucket": "short",
+      "text": "phone change kar diya"
+    },
+    {
+      "context": "Should I resend the OTP to your number now?",
+      "requested_bucket": "short",
+      "text": "code dubara bhejo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera net banking me login nahi ho raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "otp baar baar galat aa raha hai mujhe"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mobile number update karna hai pehle se alag number hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "password reset karne par bhi confirmation nahi mil raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap mujhe fir se otp bhej sakte ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "phone ki network problem ho rahi hai warna sab theek hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "account me paise baad me transfer karna hai thoda der ho sakti hai"
+    },
+    {
+      "context": "Please confirm if your registered mobile number is active and reachable?",
+      "requested_bucket": "medium",
+      "text": "mere number pe otp nahi aa raha hai kya karu"
+    },
+    {
+      "context": "Have you tried logging in multiple times with wrong credentials?",
+      "requested_bucket": "medium",
+      "text": "kya mera account block to nahi hua hai jayada galat attempts ke wajah se"
+    },
+    {
+      "context": "Since when are you experiencing this issue with OTP delivery?",
+      "requested_bucket": "medium",
+      "text": "kab se aapko ye problem aa rahi hai kya aapne recent updates kiye hain"
+    },
+    {
+      "context": "Can you please check your phone settings and try again?",
+      "requested_bucket": "medium",
+      "text": "phone ki settings check karunga aur dubara try karunga"
+    },
+    {
+      "context": "Do you want to update your registered mobile number now?",
+      "requested_bucket": "medium",
+      "text": "kya mera registered number change karna possible hai is call ke through"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main apna net banking account use nahi kar pa raha hu kyunki mujhe otp nahi mil raha hai isliye login nahi ho pa raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera phone naya hai aur mobile banking setup nahi hua hai toh main apne account me login kar kaise paunga"
+    },
+    {
+      "context": "Have you checked if the registered mobile number on your account is correct and active?",
+      "requested_bucket": "long",
+      "text": "main apke kehne ke mutabik registered mobile number ko check kar liya lekin fir bhi otp nahi aa raha hai"
+    },
+    {
+      "context": "Can you tell me since how many days you are facing issue with OTP delivery for login?",
+      "requested_bucket": "long",
+      "text": "karib ek hafte se jab mai login karne ki koshish karta hu tab mujhe otp nahi milta hai is wajah se transaction bhi nahi hota hai"
+    },
+    {
+      "context": "Do you think your phone network issue is causing the delay in receiving the OTP?",
+      "requested_bucket": "long",
+      "text": "mera phone network problem kar raha hai shayad isi wajah se otp nahi aa rahe hai mujhe thoda time de ke check karna hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 159516912,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: login_otp_problem - cannot log in to net or mobile banking or is not receiving the OTP\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: plain and direct\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"otp nahi aa raha\"},{\"text\":\"login nahi ho pa raha\"},{\"text\":\"help chahiye\"},{\"text\":\"haan bhai\"},{\"text\":\"wait kar raha hu\"},{\"text\":\"address wahi hai\"}],\"short_with_context\":[{\"text\":\"nahin nahi mila\",\"context\":\"Did you receive the OTP on your registered mobile number?\"},{\"text\":\"phone change kar diya\",\"context\":\"Is your registered mobile number still active with you?\"},{\"text\":\"code dubara bhejo\",\"context\":\"Should I resend the OTP to your number now?\"}],\"medium\":[{\"text\":\"mera net banking me login nahi ho raha hai\"},{\"text\":\"otp baar baar galat aa raha hai mujhe\"},{\"text\":\"mobile number update karna hai pehle se alag number hai\"},{\"text\":\"password reset karne par bhi confirmation nahi mil raha\"},{\"text\":\"kya aap mujhe fir se otp bhej sakte ho\"},{\"text\":\"phone ki network problem ho rahi hai warna sab theek hai\"},{\"text\":\"account me paise baad me transfer karna hai thoda der ho sakti hai\"}],\"medium_with_context\":[{\"text\":\"mere number pe otp nahi aa raha hai kya karu\",\"context\":\"Please confirm if your registered mobile number is active and reachable?\"},{\"text\":\"kya mera account block to nahi hua hai jayada galat attempts ke wajah se\",\"context\":\"Have you tried logging in multiple times with wrong credentials?\"},{\"text\":\"kab se aapko ye problem aa rahi hai kya aapne recent updates kiye hain\",\"context\":\"Since when are you experiencing this issue with OTP delivery?\"},{\"text\":\"phone ki settings check karunga aur dubara try karunga\",\"context\":\"Can you please check your phone settings and try again?\"},{\"text\":\"kya mera registered number change karna possible hai is call ke through\",\"context\":\"Do you want to update your registered mobile number now?\"}],\"long\":[{\"text\":\"main apna net banking account use nahi kar pa raha hu kyunki mujhe otp nahi mil raha hai isliye login nahi ho pa raha\"},{\"text\":\"mera phone naya hai aur mobile banking setup nahi hua hai toh main apne account me login kar kaise paunga\"}],\"long_with_context\":[{\"text\":\"main apke kehne ke mutabik registered mobile number ko check kar liya lekin fir bhi otp nahi aa raha hai\",\"context\":\"Have you checked if the registered mobile number on your account is correct and active?\"},{\"text\":\"karib ek hafte se jab mai login karne ki koshish karta hu tab mujhe otp nahi milta hai is wajah se transaction bhi nahi hota hai\",\"context\":\"Can you tell me since how many days you are facing issue with OTP delivery for login?\"},{\"text\":\"mera phone network problem kar raha hai shayad isi wajah se otp nahi aa rahe hai mujhe thoda time de ke check karna hai\",\"context\":\"Do you think your phone network issue is causing the delay in receiving the OTP?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 586,
+    "output_tokens": 618
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "batch_id": "hinglish.collections.already_paid.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "already_paid",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal transfer"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Have you already made the payment?",
+      "requested_bucket": "short",
+      "text": "already done"
+    },
+    {
+      "context": "When did you make the payment?",
+      "requested_bucket": "short",
+      "text": "kal raat ko"
+    },
+    {
+      "context": "Did the amount get credited to your account?",
+      "requested_bucket": "short",
+      "text": "paise aa gaye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "haan mein paise kal hi transfer kar diya tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "thoda ruk jao woh transfer ka proof dikhata hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "matlab transaction failed nahi hua tha basically"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "haan ji maine bank se confirmation bhi le liya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "woh transfer hua tha last week Tuesday nahi sorry Wednesday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "sir mera account se paise kat gaye but transfer nahi hua"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "payment kar diya tha par confirmation message nahi mila mujhe"
+    },
+    {
+      "context": "Can you confirm when you did the transfer?",
+      "requested_bucket": "medium",
+      "text": "haan maine kal online banking se transfer kiya tha"
+    },
+    {
+      "context": "Please tell me the exact date of payment.",
+      "requested_bucket": "medium",
+      "text": "sorry Monday nahi Thursday ko payment hua tha"
+    },
+    {
+      "context": "Did you get any message about the transfer success?",
+      "requested_bucket": "medium",
+      "text": "matlab transfer hua tha successful but amount reflect nahi hua"
+    },
+    {
+      "context": "Is the amount deducted from your bank account?",
+      "requested_bucket": "medium",
+      "text": "haan ji payable amount already bank se cut ho chuki hai"
+    },
+    {
+      "context": "Can you send us the transaction receipt for verification?",
+      "requested_bucket": "medium",
+      "text": "transfer receipt ke saath mein turant bhejta hu aapko"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "haan ji payment mein last Saturday ne ki thi aur mere bank statement mein dikh bhi raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "woh paise mera account se definitely kat gaye hain par aapke end pe show nahi ho raha hai abhi tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main aapko receipt bhej dunga whatsapp pe theek hai thoda time dijiyega please confirm kardo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mainne apne side se transfer kiya tha par lagta hai reference number galat pad gaya hoga shayad"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "paise transfer kar diya tha 26 February ki date ko aap log confirm karke bata dijiye please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "abhi thoda confusion hai mera receipt bhi mere paas hai aur bank statement bhi match kar raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "haan matlab main apne net banking se payment kar chuka hu please aap verify karke bata dijiye"
+    },
+    {
+      "context": "Are you sure the payment didn't go through from your side?",
+      "requested_bucket": "long",
+      "text": "haan mere account se paise deduct ho gaye hain lekin aapke system mein reflect nahi kar raha hai"
+    },
+    {
+      "context": "Can you tell me the payment date and provide proof?",
+      "requested_bucket": "long",
+      "text": "meinne 10 March ko payment ki thi, receipt bhi mere paas hai, pehle verify kar dijiyega"
+    },
+    {
+      "context": "Have you checked if the payment appears in our system?",
+      "requested_bucket": "long",
+      "text": "matlab sab kuch theek tha lekin aapke database mein abhi tak meri payment reflect nahi kar rahi hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 99197836,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: already_paid - says they have already paid and gives details\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal transfer\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"already done\",\"context\":\"Have you already made the payment?\"},{\"text\":\"kal raat ko\",\"context\":\"When did you make the payment?\"},{\"text\":\"paise aa gaye\",\"context\":\"Did the amount get credited to your account?\"}],\"medium\":[{\"text\":\"haan mein paise kal hi transfer kar diya tha\"},{\"text\":\"thoda ruk jao woh transfer ka proof dikhata hu\"},{\"text\":\"matlab transaction failed nahi hua tha basically\"},{\"text\":\"haan ji maine bank se confirmation bhi le liya hai\"},{\"text\":\"woh transfer hua tha last week Tuesday nahi sorry Wednesday\"},{\"text\":\"sir mera account se paise kat gaye but transfer nahi hua\"},{\"text\":\"payment kar diya tha par confirmation message nahi mila mujhe\"}],\"medium_with_context\":[{\"text\":\"haan maine kal online banking se transfer kiya tha\",\"context\":\"Can you confirm when you did the transfer?\"},{\"text\":\"sorry Monday nahi Thursday ko payment hua tha\",\"context\":\"Please tell me the exact date of payment.\"},{\"text\":\"matlab transfer hua tha successful but amount reflect nahi hua\",\"context\":\"Did you get any message about the transfer success?\"},{\"text\":\"haan ji payable amount already bank se cut ho chuki hai\",\"context\":\"Is the amount deducted from your bank account?\"},{\"text\":\"transfer receipt ke saath mein turant bhejta hu aapko\",\"context\":\"Can you send us the transaction receipt for verification?\"}],\"long\":[{\"text\":\"haan ji payment mein last Saturday ne ki thi aur mere bank statement mein dikh bhi raha hai\"},{\"text\":\"woh paise mera account se definitely kat gaye hain par aapke end pe show nahi ho raha hai abhi tak\"},{\"text\":\"main aapko receipt bhej dunga whatsapp pe theek hai thoda time dijiyega please confirm kardo\"},{\"text\":\"mainne apne side se transfer kiya tha par lagta hai reference number galat pad gaya hoga shayad\"},{\"text\":\"paise transfer kar diya tha 26 February ki date ko aap log confirm karke bata dijiye please\"},{\"text\":\"abhi thoda confusion hai mera receipt bhi mere paas hai aur bank statement bhi match kar raha hai\"},{\"text\":\"haan matlab main apne net banking se payment kar chuka hu please aap verify karke bata dijiye\"}],\"long_with_context\":[{\"text\":\"haan mere account se paise deduct ho gaye hain lekin aapke system mein reflect nahi kar raha hai\",\"context\":\"Are you sure the payment didn't go through from your side?\"},{\"text\":\"meinne 10 March ko payment ki thi, receipt bhi mere paas hai, pehle verify kar dijiyega\",\"context\":\"Can you tell me the payment date and provide proof?\"},{\"text\":\"matlab sab kuch theek tha lekin aapke database mein abhi tak meri payment reflect nahi kar rahi hai\",\"context\":\"Have you checked if the payment appears in our system?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 609,
+    "output_tokens": 635
+  }
+}

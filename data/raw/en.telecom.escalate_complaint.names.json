@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.telecom.escalate_complaint.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "escalate_complaint",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "please escalate"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "not resolved"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "lotus apartment"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "urgent please"
+    },
+    {
+      "context": "Is your issue still unresolved?",
+      "requested_bucket": "short",
+      "text": "not resolved"
+    },
+    {
+      "context": "Do you want me to escalate this complaint?",
+      "requested_bucket": "short",
+      "text": "escalate now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I already complained last week but nothing has changed"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "This is regarding my internet disconnection which is still not fixed"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to speak to your higher authority because this is frustrating"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "My address is 45 green park colony and my line is still down"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you please escalate my complaint to the manager right now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "The technician came but the problem has not been resolved yet"
+    },
+    {
+      "context": "Can you tell me more about your issue?",
+      "requested_bucket": "medium",
+      "text": "I want a supervisor because this issue has been going on for ten days"
+    },
+    {
+      "context": "May I know your landline number please?",
+      "requested_bucket": "medium",
+      "text": "My landline number is 9876543210 but no response has come yet"
+    },
+    {
+      "context": "When did you lodge your previous complaint?",
+      "requested_bucket": "medium",
+      "text": "The last complaint was filed on 5th april but I see no action"
+    },
+    {
+      "context": "Could you please tell me your residential area or sector?",
+      "requested_bucket": "medium",
+      "text": "I live in sector 12 rohini delhi and no one has visited till now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I registered a complaint about my broadband connection service on first march but the speed is still very slow and nobody has fixed the issue yet"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Despite calling customer care multiple times from my flat number 88 in lotus apartment I have seen zero progress and now I want to escalate this complaint to somebody who can actually help"
+    },
+    {
+      "context": "Can you explain what has happened since you filed the complaint?",
+      "requested_bucket": "long",
+      "text": "Every time I call I am told someone will visit but no technician comes I am very disappointed and want this escalated urgently"
+    },
+    {
+      "context": "Please provide your previous complaint reference number for escalation.",
+      "requested_bucket": "long",
+      "text": "My previous complaint reference number is 123456 and I need you to forward this to the senior manager as soon as possible because I am losing business due to poor connectivity"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3971869907,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: escalate_complaint - is unhappy that an earlier complaint was not solved and wants escalation\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"please escalate\"},{\"text\":\"not resolved\"}, {\"text\":\"lotus apartment\"},{\"text\":\"urgent please\"}],\"short_with_context\":[{\"text\":\"not resolved\",\"context\":\"Is your issue still unresolved?\"},{\"text\":\"escalate now\",\"context\":\"Do you want me to escalate this complaint?\"}],\"medium\":[{\"text\":\"I already complained last week but nothing has changed\"},{\"text\":\"This is regarding my internet disconnection which is still not fixed\"},{\"text\":\"I want to speak to your higher authority because this is frustrating\"},{\"text\":\"My address is 45 green park colony and my line is still down\"},{\"text\":\"Can you please escalate my complaint to the manager right now\"},{\"text\":\"The technician came but the problem has not been resolved yet\"}],\"medium_with_context\":[{\"text\":\"I want a supervisor because this issue has been going on for ten days\",\"context\":\"Can you tell me more about your issue?\"},{\"text\":\"My landline number is 9876543210 but no response has come yet\",\"context\":\"May I know your landline number please?\"},{\"text\":\"The last complaint was filed on 5th april but I see no action\",\"context\":\"When did you lodge your previous complaint?\"},{\"text\":\"I live in sector 12 rohini delhi and no one has visited till now\",\"context\":\"Could you please tell me your residential area or sector?\"}],\"long\":[{\"text\":\"I registered a complaint about my broadband connection service on first march but the speed is still very slow and nobody has fixed the issue yet\"},{\"text\":\"Despite calling customer care multiple times from my flat number 88 in lotus apartment I have seen zero progress and now I want to escalate this complaint to somebody who can actually help\"}],\"long_with_context\":[{\"text\":\"Every time I call I am told someone will visit but no technician comes I am very disappointed and want this escalated urgently\",\"context\":\"Can you explain what has happened since you filed the complaint?\"},{\"text\":\"My previous complaint reference number is 123456 and I need you to forward this to the senior manager as soon as possible because I am losing business due to poor connectivity\",\"context\":\"Please provide your previous complaint reference number for escalation.\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 573,
+    "output_tokens": 453
+  }
+}

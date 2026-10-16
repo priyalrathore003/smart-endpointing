@@ -1,0 +1,202 @@
+{
+  "batch_id": "hinglish.delivery.where_is_order.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "where_is_order",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kab milega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak ho jayega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "abhi aayega kya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "thoda wait kar lo"
+    },
+    {
+      "context": "Kab aapka order deliver hoga?",
+      "requested_bucket": "short",
+      "text": "jaldi batao"
+    },
+    {
+      "context": "Delivery timing kya hai?",
+      "requested_bucket": "short",
+      "text": "woh raat tak"
+    },
+    {
+      "context": "Kya aapke order mein koi dikkat hai?",
+      "requested_bucket": "short",
+      "text": "haan lekin delay hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera parcel abhi tak nahi mila hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha toh aap mujhe track kar ke batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "matlab kal tak deliver ho jayega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera order kuch delay ho gaya hai shayad"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "haan ji wo Saturday ko aana tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera address sahi de diya tha main"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "wo Monday nahi Tuesday ko deliver hoga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "meri payment confirm ho gayi hai na"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha abhi kitna time lagega batayein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera parcel Mumbai se Jaipur jana tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "matlab mujhe phone par kaha gaya tha ki"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "thoda jaldi batao mein intezar kar raha hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "par mera order update nahi hua hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera naam Anil Kumar hai aur order number 54321 hai"
+    },
+    {
+      "context": "Kya aapne apne order ko track kiya hai?",
+      "requested_bucket": "medium",
+      "text": "haan abhi tak tracking update nahi dikh raha"
+    },
+    {
+      "context": "Kya aap chahenge main aapko delivery ka time estimate doon?",
+      "requested_bucket": "medium",
+      "text": "toh mujhe approximate delivery time batao"
+    },
+    {
+      "context": "Aapko delivery kis din expected thi?",
+      "requested_bucket": "medium",
+      "text": "wo Wednesday tha nahi Tuesday ko deliver hoga"
+    },
+    {
+      "context": "Kya aap jaante hai ki aapka order kaha hai abhi?",
+      "requested_bucket": "medium",
+      "text": "matlab mera order abhi transit mein hai"
+    },
+    {
+      "context": "Kya aapko apni delivery ko leke koi dikkat ho rahi hai?",
+      "requested_bucket": "medium",
+      "text": "par main thoda pareshaan ho raha hu ab"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera order Saturday ko place kiya tha lekin abhi tak delivery nahi hui hai mujhe pata karna hai ki kaha atka hua hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main customer service se baat kar raha tha aur mujhe bola gaya tha ki kal tak order deliver ho jayega par abhi tak kuch update nahin aaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya aap please mera order number 12345 ko check kar ke bata sakte hain ki mera parcel abhi kaha hai matlab woh delivery ke liye tayar hai ya nahi"
+    },
+    {
+      "context": "Kya aap mujhe apne order ke status ke baare mein bata sakte hain?",
+      "requested_bucket": "long",
+      "text": "maine order place kiya tha last week par tracking mein abhi tak koi update nahi dikh raha hai kya aap madad kar sakte hain is baare mein"
+    },
+    {
+      "context": "Aapka order kahan se kahan deliver hona tha?",
+      "requested_bucket": "long",
+      "text": "mera naam Rahul hai aur mera parcel Delhi se Chennai jana tha lekin mujhe lag raha hai ki wo abhi tak dispatch nahi hua hai kya aap confirm karenge"
+    },
+    {
+      "context": "Order delivery date ke baare mein aapko kya pata hai?",
+      "requested_bucket": "long",
+      "text": "kya aap mujhe bata sakte hain ki mera order Tuesday ko aana tha ya Wednesday ko kyunki mujhe confuse ho raha hai main apni schedule set karna chahta hu"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3071902433,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: where_is_order - asks where their order or parcel is\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"kab milega\"},{\"text\":\"kal tak ho jayega\"},{\"text\":\"haan ji\"},{\"text\":\"abhi aayega kya\"},{\"text\":\"theek hai\"},{\"text\":\"thoda wait kar lo\"}],\"short_with_context\":[{\"text\":\"jaldi batao\",\"context\":\"Kab aapka order deliver hoga?\"},{\"text\":\"woh raat tak\",\"context\":\"Delivery timing kya hai?\"},{\"text\":\"haan lekin delay hai\",\"context\":\"Kya aapke order mein koi dikkat hai?\"}],\"medium\":[{\"text\":\"mera parcel abhi tak nahi mila hai\"},{\"text\":\"accha toh aap mujhe track kar ke batao\"},{\"text\":\"matlab kal tak deliver ho jayega\"},{\"text\":\"mera order kuch delay ho gaya hai shayad\"},{\"text\":\"haan ji wo Saturday ko aana tha\"},{\"text\":\"mera address sahi de diya tha main\"},{\"text\":\"wo Monday nahi Tuesday ko deliver hoga\"},{\"text\":\"meri payment confirm ho gayi hai na\"},{\"text\":\"accha abhi kitna time lagega batayein\"},{\"text\":\"mera parcel Mumbai se Jaipur jana tha\"},{\"text\":\"matlab mujhe phone par kaha gaya tha ki\"},{\"text\":\"thoda jaldi batao mein intezar kar raha hu\"},{\"text\":\"par mera order update nahi hua hai\"},{\"text\":\"mera naam Anil Kumar hai aur order number 54321 hai\"}],\"medium_with_context\":[{\"text\":\"haan abhi tak tracking update nahi dikh raha\",\"context\":\"Kya aapne apne order ko track kiya hai?\"},{\"text\":\"toh mujhe approximate delivery time batao\",\"context\":\"Kya aap chahenge main aapko delivery ka time estimate doon?\"},{\"text\":\"wo Wednesday tha nahi Tuesday ko deliver hoga\",\"context\":\"Aapko delivery kis din expected thi?\"},{\"text\":\"matlab mera order abhi transit mein hai\",\"context\":\"Kya aap jaante hai ki aapka order kaha hai abhi?\"},{\"text\":\"par main thoda pareshaan ho raha hu ab\",\"context\":\"Kya aapko apni delivery ko leke koi dikkat ho rahi hai?\"}],\"long\":[{\"text\":\"mera order Saturday ko place kiya tha lekin abhi tak delivery nahi hui hai mujhe pata karna hai ki kaha atka hua hai\"},{\"text\":\"main customer service se baat kar raha tha aur mujhe bola gaya tha ki kal tak order deliver ho jayega par abhi tak kuch update nahin aaya\"},{\"text\":\"kya aap please mera order number 12345 ko check kar ke bata sakte hain ki mera parcel abhi kaha hai matlab woh delivery ke liye tayar hai ya nahi\"}],\"long_with_context\":[{\"text\":\"maine order place kiya tha last week par tracking mein abhi tak koi update nahi dikh raha hai kya aap madad kar sakte hain is baare mein\",\"context\":\"Kya aap mujhe apne order ke status ke baare mein bata sakte hain?\"},{\"text\":\"mera naam Rahul hai aur mera parcel Delhi se Chennai jana tha lekin mujhe lag raha hai ki wo abhi tak dispatch nahi hua hai kya aap confirm karenge\",\"context\":\"Aapka order kahan se kahan deliver hona tha?\"},{\"text\":\"kya aap mujhe bata sakte hain ki mera order Tuesday ko aana tha ya Wednesday ko kyunki mujhe confuse ho raha hai main apni schedule set karna chahta hu\",\"context\":\"Order delivery date ke baare mein aapko kya pata hai?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 609,
+    "output_tokens": 734
+  }
+}

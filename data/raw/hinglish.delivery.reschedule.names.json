@@ -1,0 +1,187 @@
+{
+  "batch_id": "hinglish.delivery.reschedule.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "reschedule",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal kar do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "subah 10 baje"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahi chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "dopahar tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Can I reschedule your delivery for tomorrow?",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "What time would you prefer for delivery?",
+      "requested_bucket": "short",
+      "text": "subah 10 baje"
+    },
+    {
+      "context": "Do you want to cancel the delivery instead?",
+      "requested_bucket": "short",
+      "text": "nahi chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera address hai sector 22 chandigarh delivery kal kar do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap mera delivery time 5 baje se badal kar 7 baje kar sakte ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main meerut me rahata hun aur kal ka din busy hun isliye badalna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera naam rahul hai aur mera order delhi ke liye reschedule karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "delivery lene wala mera bhai hai to kya main time change kar sakta hun"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mujhe kal raat ko 8 baje ki jagah subah 9 baje chahiye hoga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap sunday ko delivery provide kar sakte ho mera address gurgaon me hai"
+    },
+    {
+      "context": "When would you like to reschedule the delivery to?",
+      "requested_bucket": "medium",
+      "text": "main schedule change karna chahta hun lekin kal nahi reporting pe"
+    },
+    {
+      "context": "Please tell me the new delivery location and time.",
+      "requested_bucket": "medium",
+      "text": "mera order gurgaon ke sector 14 me hai uska time badal do"
+    },
+    {
+      "context": "Would morning delivery work for you instead of evening?",
+      "requested_bucket": "medium",
+      "text": "kya aap mera delivery time badal kar kal subah kar sakte ho"
+    },
+    {
+      "context": "Could you please confirm your order name and new preferred date?",
+      "requested_bucket": "medium",
+      "text": "mera naam priya hai aur mujhe mera order Jaipur ke liye reschedule karna hai"
+    },
+    {
+      "context": "Do you want to move your delivery to tomorrow evening?",
+      "requested_bucket": "medium",
+      "text": "mera ghar Noida sector 37 me hai kya aap delivery kal shaam ko kar sakte hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera order kal aane wala tha magar main kal ghar par nahi rahunga isliye delivery ko agle hafte tak badal do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main mumbai me rehata hun mera address Bandra west aur mujhe delivery timing 10 baje subah karwana hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera naam arjun hai main haridwar se bol raha hun mera delivery 25 tareekh ka tha usko 27 ko bhej do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya aap mera delivery time shift kar sakte hain mujhe apne office jane ka plan bana hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "meri gari kharab ho gayi hai isliye main apni delivery do din baad lene aunga address delhi hai mera"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera order jo tha use mai kal dopahar ke badle shaam 6 baje le sakta hun agar possible ho to batana"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine order diya tha bina kisi delay ke lekin ab karna hai delivery ko agle Wednesday tak move karna hai"
+    },
+    {
+      "context": "When do you want us to reschedule your delivery?",
+      "requested_bucket": "long",
+      "text": "mera naam sunita hai aur wahan main busy rahungi toh delivery ko kal se agle din ke liye karoge kya"
+    },
+    {
+      "context": "Could you share your preferred date for the delivery reschedule?",
+      "requested_bucket": "long",
+      "text": "mera order amritsar ke address pe aana tha mujhe kal office jaana padega toh delivery ko day after kal pe daal do"
+    },
+    {
+      "context": "Do you want to change your delivery date or time for the same day?",
+      "requested_bucket": "long",
+      "text": "mujhe bataya gaya tha ki delivery 15 ko hogi par mujhe change karna hai ki wo 18 tarikh ko ho jaye"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2253367352,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: reschedule - wants the delivery on a different day or time\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"kal kar do\"},{\"text\":\"subah 10 baje\"},{\"text\":\"nahi chahiye\"},{\"text\":\"haan ji\"},{\"text\":\"dopahar tak\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"haan ji\",\"context\":\"Can I reschedule your delivery for tomorrow?\"},{\"text\":\"subah 10 baje\",\"context\":\"What time would you prefer for delivery?\"},{\"text\":\"nahi chahiye\",\"context\":\"Do you want to cancel the delivery instead?\"}],\"medium\":[{\"text\":\"mera address hai sector 22 chandigarh delivery kal kar do\"},{\"text\":\"kya aap mera delivery time 5 baje se badal kar 7 baje kar sakte ho\"},{\"text\":\"main meerut me rahata hun aur kal ka din busy hun isliye badalna hai\"},{\"text\":\"mera naam rahul hai aur mera order delhi ke liye reschedule karna hai\"},{\"text\":\"delivery lene wala mera bhai hai to kya main time change kar sakta hun\"},{\"text\":\"mujhe kal raat ko 8 baje ki jagah subah 9 baje chahiye hoga\"},{\"text\":\"kya aap sunday ko delivery provide kar sakte ho mera address gurgaon me hai\"}],\"medium_with_context\":[{\"text\":\"main schedule change karna chahta hun lekin kal nahi reporting pe\",\"context\":\"When would you like to reschedule the delivery to?\"},{\"text\":\"mera order gurgaon ke sector 14 me hai uska time badal do\",\"context\":\"Please tell me the new delivery location and time.\"},{\"text\":\"kya aap mera delivery time badal kar kal subah kar sakte ho\",\"context\":\"Would morning delivery work for you instead of evening?\"},{\"text\":\"mera naam priya hai aur mujhe mera order Jaipur ke liye reschedule karna hai\",\"context\":\"Could you please confirm your order name and new preferred date?\"},{\"text\":\"mera ghar Noida sector 37 me hai kya aap delivery kal shaam ko kar sakte hain\",\"context\":\"Do you want to move your delivery to tomorrow evening?\"}],\"long\":[{\"text\":\"mera order kal aane wala tha magar main kal ghar par nahi rahunga isliye delivery ko agle hafte tak badal do\"},{\"text\":\"main mumbai me rehata hun mera address Bandra west aur mujhe delivery timing 10 baje subah karwana hai\"},{\"text\":\"mera naam arjun hai main haridwar se bol raha hun mera delivery 25 tareekh ka tha usko 27 ko bhej do\"},{\"text\":\"kya aap mera delivery time shift kar sakte hain mujhe apne office jane ka plan bana hai\"},{\"text\":\"meri gari kharab ho gayi hai isliye main apni delivery do din baad lene aunga address delhi hai mera\"},{\"text\":\"mera order jo tha use mai kal dopahar ke badle shaam 6 baje le sakta hun agar possible ho to batana\"},{\"text\":\"maine order diya tha bina kisi delay ke lekin ab karna hai delivery ko agle Wednesday tak move karna hai\"}],\"long_with_context\":[{\"text\":\"mera naam sunita hai aur wahan main busy rahungi toh delivery ko kal se agle din ke liye karoge kya\",\"context\":\"When do you want us to reschedule your delivery?\"},{\"text\":\"mera order amritsar ke address pe aana tha mujhe kal office jaana padega toh delivery ko day after kal pe daal do\",\"context\":\"Could you share your preferred date for the delivery reschedule?\"},{\"text\":\"mujhe bataya gaya tha ki delivery 15 ko hogi par mujhe change karna hai ki wo 18 tarikh ko ho jaye\",\"context\":\"Do you want to change your delivery date or time for the same day?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 588,
+    "output_tokens": 796
+  }
+}

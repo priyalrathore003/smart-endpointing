@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.telecom.recharge_not_credited.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "recharge_not_credited",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "ना जी"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "पैसा आया नहीं"
+    },
+    {
+      "context": "क्या आपने पहले रिचार्ज किया था?",
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "प्लेन्स क्रेडिट हुए या नहीं?",
+      "requested_bucket": "short",
+      "text": "नहीं अभी तक"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैंने ५० रुपये का रिचार्ज किया था पर बैलेंस नहीं मिला"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर मेरा नाम राहुल है मैं दिल्ली का रहता हूँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "५ अप्रैल को रिचार्ज हुआ था लेकिन प्लान एक्टिवेट नहीं हुआ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैडम पैसे कट गए पर प्लान नहीं आया क्या करूँ अब"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "ट्रांजेक्शन आईडी मेरे पास है पर बैलेंस क्रेडिट नहीं हुआ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे १०० रुपये का प्लान चाहिए था पर पैसा कटा गया"
+    },
+    {
+      "context": "रिचार्ज की तारीख क्या है?",
+      "requested_bucket": "medium",
+      "text": "तो आप कब रिचार्ज करवा रहे थे मैं बताऊँगा प्रोसेस"
+    },
+    {
+      "context": "आपका नाम और लोकेशन क्या है?",
+      "requested_bucket": "medium",
+      "text": "राहुल शर्मा है मेरा नाम मैं मुंबई से बोल रहा हूँ"
+    },
+    {
+      "context": "क्या आप बता सकते हैं कितने रुपये रिचार्ज हुए?",
+      "requested_bucket": "medium",
+      "text": "मैंने १०० रुपये के लिए पेमेंट किया था लेकिन ससक्सेस नही दिखा"
+    },
+    {
+      "context": "क्या आपको पैसों की कटौती हुई या कोई एरर दिखा?",
+      "requested_bucket": "medium",
+      "text": "हाँ पैसे कट गए पर बैलेंस नहीं मिला प्लान एक्टिव नहीं हुआ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर मैं पुणे से बोल रहा हूँ मैंने १५ मार्च को १०० रुपये का रिचार्ज किया था लेकिन मेरा प्लान अभी तक एक्टिवेट नहीं हुआ है कृपया जाँच करें"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैडम मेरा नाम सीमा है मैं हरिद्वार में रहती हूँ २० मार्च को पैसे कटे पर बैलेंस मेरे अकाउंट में अपडेट नहीं हुआ है क्या कोई रिफंड होगा या जल्द क्रेडिट होगा"
+    },
+    {
+      "context": "ट्रांजेक्शन डिटेल्स आप हमारे साथ साझा कर सकते हैं?",
+      "requested_bucket": "long",
+      "text": "पैसे तो मेरे फोन से कट गए हैं लेकिन मेरी सनसतीविटी की योजना अभी तक चालू नहीं हुई क्या आप चेक कर सकते हैं यह कब तक एडजस्ट होगी"
+    },
+    {
+      "context": "आपका रिचार्ज कब और कितना था बताएं कृपया",
+      "requested_bucket": "long",
+      "text": "मुझे एक मंथ का prepaid plan लेना था लेकिन मैंने देखा कि मेरे बैंक अकाउंट से पैसा तो कट गया पर मेरे मोबाइल में कोई भी प्लान एक्टिव नहीं दिख रहा"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1889646994,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: recharge_not_credited - recharged but the plan or balance was not credited\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"ना जी\"},{\"text\":\"पैसा आया नहीं\"}],\"short_with_context\":[{\"text\":\"हाँ जी\",\"context\":\"क्या आपने पहले रिचार्ज किया था?\"},{\"text\":\"नहीं अभी तक\",\"context\":\"प्लेन्स क्रेडिट हुए या नहीं?\"}],\"medium\":[{\"text\":\"मैंने ५० रुपये का रिचार्ज किया था पर बैलेंस नहीं मिला\"},{\"text\":\"सर मेरा नाम राहुल है मैं दिल्ली का रहता हूँ\"},{\"text\":\"५ अप्रैल को रिचार्ज हुआ था लेकिन प्लान एक्टिवेट नहीं हुआ\"},{\"text\":\"मैडम पैसे कट गए पर प्लान नहीं आया क्या करूँ अब\"},{\"text\":\"ट्रांजेक्शन आईडी मेरे पास है पर बैलेंस क्रेडिट नहीं हुआ\"},{\"text\":\"मुझे १०० रुपये का प्लान चाहिए था पर पैसा कटा गया\"}],\"medium_with_context\":[{\"text\":\"तो आप कब रिचार्ज करवा रहे थे मैं बताऊँगा प्रोसेस\",\"context\":\"रिचार्ज की तारीख क्या है?\"},{\"text\":\"राहुल शर्मा है मेरा नाम मैं मुंबई से बोल रहा हूँ\",\"context\":\"आपका नाम और लोकेशन क्या है?\"},{\"text\":\"मैंने १०० रुपये के लिए पेमेंट किया था लेकिन ससक्सेस नही दिखा\",\"context\":\"क्या आप बता सकते हैं कितने रुपये रिचार्ज हुए?\"},{\"text\":\"हाँ पैसे कट गए पर बैलेंस नहीं मिला प्लान एक्टिव नहीं हुआ\",\"context\":\"क्या आपको पैसों की कटौती हुई या कोई एरर दिखा?\"}],\"long\":[{\"text\":\"सर मैं पुणे से बोल रहा हूँ मैंने १५ मार्च को १०० रुपये का रिचार्ज किया था लेकिन मेरा प्लान अभी तक एक्टिवेट नहीं हुआ है कृपया जाँच करें\"},{\"text\":\"मैडम मेरा नाम सीमा है मैं हरिद्वार में रहती हूँ २० मार्च को पैसे कटे पर बैलेंस मेरे अकाउंट में अपडेट नहीं हुआ है क्या कोई रिफंड होगा या जल्द क्रेडिट होगा\"}],\"long_with_context\":[{\"text\":\"पैसे तो मेरे फोन से कट गए हैं लेकिन मेरी सनसतीविटी की योजना अभी तक चालू नहीं हुई क्या आप चेक कर सकते हैं यह कब तक एडजस्ट होगी\",\"context\":\"ट्रांजेक्शन डिटेल्स आप हमारे साथ साझा कर सकते हैं?\"},{\"text\":\"मुझे एक मंथ का prepaid plan लेना था लेकिन मैंने देखा कि मेरे बैंक अकाउंट से पैसा तो कट गया पर मेरे मोबाइल में कोई भी प्लान एक्टिव नहीं दिख रहा\",\"context\":\"आपका रिचार्ज कब और कितना था बताएं कृपया\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 695,
+    "output_tokens": 553
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.collections.financial_hardship.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "financial_hardship",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "unable to pay"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "lost job"
+    },
+    {
+      "context": "Can you tell me the reason for your payment difficulty?",
+      "requested_bucket": "short",
+      "text": "illness"
+    },
+    {
+      "context": "What is causing the financial hardship currently?",
+      "requested_bucket": "short",
+      "text": "salary delay"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "actually I lost my job last month so I cannot pay now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "um my father is sick so I have some medical expenses now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I mean the payment date can you please extend it until next month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "sorry I cannot pay today because I am between jobs at the moment"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I have Covid right now so paying this month is really hard"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "like my work is closed due to lockdown I have no income right now"
+    },
+    {
+      "context": "Could you please explain why you are unable to pay at this time?",
+      "requested_bucket": "medium",
+      "text": "I just lost my job last week so I am not able to pay now"
+    },
+    {
+      "context": "Can you please tell me the reason for the delay in payment?",
+      "requested_bucket": "medium",
+      "text": "actually I am waiting for my salary it is delayed this month"
+    },
+    {
+      "context": "What is the cause of your financial hardship this month?",
+      "requested_bucket": "medium",
+      "text": "um I got ill and had hospital bills so I cannot pay currently"
+    },
+    {
+      "context": "Would you be able to give a reason for your financial difficulty?",
+      "requested_bucket": "medium",
+      "text": "I need some time because my factory has shut for a few weeks"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I am sorry but I recently lost my job and have no income to make the payment now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Due to some serious illness in the family my expenses have shot up and I cannot pay this month"
+    },
+    {
+      "context": "Can you explain your financial situation in detail so we can assist you better?",
+      "requested_bucket": "long",
+      "text": "I have been laid off from work since last month so I want to know if I can get an extension on payment"
+    },
+    {
+      "context": "Please describe your current hardship so we can find a solution for your payments.",
+      "requested_bucket": "long",
+      "text": "Because of Covid lockdown and no work for weeks I have no savings left so I cannot pay the dues today"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2790435817,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: financial_hardship - explains they cannot pay right now because of job loss, illness or similar\nLanguage: Indian English, Latin script.\nStyle for this batch: with fillers and hesitations (umm, uh, like, actually, I mean); at least a third include a self-correction ('Tuesday, no, Wednesday')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"unable to pay\"},{\"text\":\"lost job\"}],\"short_with_context\":[{\"text\":\"illness\",\"context\":\"Can you tell me the reason for your payment difficulty?\"},{\"text\":\"salary delay\",\"context\":\"What is causing the financial hardship currently?\"}],\"medium\":[{\"text\":\"actually I lost my job last month so I cannot pay now\"},{\"text\":\"um my father is sick so I have some medical expenses now\"},{\"text\":\"I mean the payment date can you please extend it until next month\"},{\"text\":\"sorry I cannot pay today because I am between jobs at the moment\"},{\"text\":\"I have Covid right now so paying this month is really hard\"},{\"text\":\"like my work is closed due to lockdown I have no income right now\"}],\"medium_with_context\":[{\"text\":\"I just lost my job last week so I am not able to pay now\",\"context\":\"Could you please explain why you are unable to pay at this time?\"},{\"text\":\"actually I am waiting for my salary it is delayed this month\",\"context\":\"Can you please tell me the reason for the delay in payment?\"},{\"text\":\"um I got ill and had hospital bills so I cannot pay currently\",\"context\":\"What is the cause of your financial hardship this month?\"},{\"text\":\"I need some time because my factory has shut for a few weeks\",\"context\":\"Would you be able to give a reason for your financial difficulty?\"}],\"long\":[{\"text\":\"I am sorry but I recently lost my job and have no income to make the payment now\"},{\"text\":\"Due to some serious illness in the family my expenses have shot up and I cannot pay this month\"}],\"long_with_context\":[{\"text\":\"I have been laid off from work since last month so I want to know if I can get an extension on payment\",\"context\":\"Can you explain your financial situation in detail so we can assist you better?\"},{\"text\":\"Because of Covid lockdown and no work for weeks I have no savings left so I cannot pay the dues today\",\"context\":\"Please describe your current hardship so we can find a solution for your payments.\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 595,
+    "output_tokens": 428
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "batch_id": "hinglish.delivery.agent_unreachable.plain",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "agent_unreachable",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "delivery wala nahi mil raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "address samajh nahi aaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "please call kar lo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "order cancel kar do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kab aayega"
+    },
+    {
+      "context": "Kya delivery wale se baat hui?",
+      "requested_bucket": "short",
+      "text": "haan mile the"
+    },
+    {
+      "context": "Kya address sahi diya hai aapne?",
+      "requested_bucket": "short",
+      "text": "address confirm kar lo"
+    },
+    {
+      "context": "To delivery banda aap se contact kar paaya?",
+      "requested_bucket": "short",
+      "text": "nahin mila abhi tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "delivery person phone nahi utha raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "wo aadmi location find nahi kar pa raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine address bar bar samjha diya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "pata hume correct diya hai phir bhi problem hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please aap unko call karke bata do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "order time se delay ho raha hai abhi tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap phir se unhe contact kar sakte ho?"
+    },
+    {
+      "context": "Kya delivery wala ne aapko koi wajah batayi?",
+      "requested_bucket": "medium",
+      "text": "delivery guy ne kaha road par traffic jyada hai"
+    },
+    {
+      "context": "Aapne address kaise diya hai?",
+      "requested_bucket": "medium",
+      "text": "maine toh poora address message mein bhej diya hai"
+    },
+    {
+      "context": "Kya aap delivery person ko call kar pa rahe hain?",
+      "requested_bucket": "medium",
+      "text": "main do baar phone kar raha hoon lekin call nahi utha rahe"
+    },
+    {
+      "context": "Delivery person ne aap se kya kaha?",
+      "requested_bucket": "medium",
+      "text": "kya driver ne kaha kahin kho gaya hai delivery location?"
+    },
+    {
+      "context": "Delivery person ne aapko kya bataya?",
+      "requested_bucket": "medium",
+      "text": "delivery boy ke paas address nahi samajh mein aa raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "delivery boy ne bar bar call kiya lekin mein baahar nahi tha toh miss ho gaya tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine address phir se check kiya hai yehi sahi hai lekin unko lagta hai koi confusion hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "aapke system mein mera address kya registered hai wo bata do please mujhe call karwa do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "wo aadmi baar baar bola ki location dikh nahi rahi hai phone mein ye dikkat ho rahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mai waiting hoon abhi tak delivery boy mujhe contact nahi kar pa raha hai phone pe"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kripya karke agent ko bol kar mujhe confirm karwa do ke delivery boy mere aas paas hai ya nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya aap log driver ko correct location bhej sakte ho main bahut pareshan ho raha hoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine already delivery boy ko 3 baar call kiya lekin wo phone nahi utha raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "wo delivery person kah raha hai ki road band hai jiske wajah se woh abhi delivery nahi kar pa raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera address Gurgaon hai lekin delivery guy pucha kaunsa sector hai lagta kuch confusion hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "delivery delay ho gaya hai kyunki driver ko location samajh nahi aa rahi main phone pe madad nahi kar pa raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main chahata hoon ki aapka customer support jaldi se delivery boy se baat kare aur location clear kare"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "driver kah raha hai ki wo thoda door par hai aur road nahi mil raha isliye osne call kiya tha"
+    },
+    {
+      "context": "Kya aapne delivery boy ki taraf se call miss kiya hai?",
+      "requested_bucket": "long",
+      "text": "maine aapko pehle bhi bataya tha ki delivery boy baar baar call kar raha hai lekin mein busy tha"
+    },
+    {
+      "context": "Delivery person ne aapko kya problem batayi thi?",
+      "requested_bucket": "long",
+      "text": "delivery boy ne kaha ki location thoda confusing hai usne mujhe call par route samjhane ko kaha tha"
+    },
+    {
+      "context": "Hum driver se contact karna chahte hain aap batayein kya karein?",
+      "requested_bucket": "long",
+      "text": "aap turant driver ko contact kar ke unko exact address wapas bhejdijiye mujhe order chahiye jaldi"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2603217606,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: agent_unreachable - the delivery person is not answering or cannot find the address\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: plain and direct\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"delivery wala nahi mil raha\"},{\"text\":\"address samajh nahi aaya\"},{\"text\":\"please call kar lo\"},{\"text\":\"haan ji\"},{\"text\":\"order cancel kar do\"},{\"text\":\"kab aayega\"}],\"short_with_context\":[{\"text\":\"haan mile the\",\"context\":\"Kya delivery wale se baat hui?\"},{\"text\":\"address confirm kar lo\",\"context\":\"Kya address sahi diya hai aapne?\"},{\"text\":\"nahin mila abhi tak\",\"context\":\"To delivery banda aap se contact kar paaya?\"}],\"medium\":[{\"text\":\"delivery person phone nahi utha raha hai\"},{\"text\":\"wo aadmi location find nahi kar pa raha hai\"},{\"text\":\"maine address bar bar samjha diya\"},{\"text\":\"pata hume correct diya hai phir bhi problem hai\"},{\"text\":\"please aap unko call karke bata do\"},{\"text\":\"order time se delay ho raha hai abhi tak\"},{\"text\":\"kya aap phir se unhe contact kar sakte ho?\"}],\"medium_with_context\":[{\"text\":\"delivery guy ne kaha road par traffic jyada hai\",\"context\":\"Kya delivery wala ne aapko koi wajah batayi?\"},{\"text\":\"maine toh poora address message mein bhej diya hai\",\"context\":\"Aapne address kaise diya hai?\"},{\"text\":\"main do baar phone kar raha hoon lekin call nahi utha rahe\",\"context\":\"Kya aap delivery person ko call kar pa rahe hain?\"},{\"text\":\"kya driver ne kaha kahin kho gaya hai delivery location?\",\"context\":\"Delivery person ne aap se kya kaha?\"},{\"text\":\"delivery boy ke paas address nahi samajh mein aa raha hai\",\"context\":\"Delivery person ne aapko kya bataya?\"}],\"long\":[{\"text\":\"delivery boy ne bar bar call kiya lekin mein baahar nahi tha toh miss ho gaya tha\"},{\"text\":\"maine address phir se check kiya hai yehi sahi hai lekin unko lagta hai koi confusion hai\"},{\"text\":\"aapke system mein mera address kya registered hai wo bata do please mujhe call karwa do\"},{\"text\":\"wo aadmi baar baar bola ki location dikh nahi rahi hai phone mein ye dikkat ho rahi hai\"},{\"text\":\"mai waiting hoon abhi tak delivery boy mujhe contact nahi kar pa raha hai phone pe\"},{\"text\":\"kripya karke agent ko bol kar mujhe confirm karwa do ke delivery boy mere aas paas hai ya nahi\"},{\"text\":\"kya aap log driver ko correct location bhej sakte ho main bahut pareshan ho raha hoon\"},{\"text\":\"maine already delivery boy ko 3 baar call kiya lekin wo phone nahi utha raha hai\"},{\"text\":\"wo delivery person kah raha hai ki road band hai jiske wajah se woh abhi delivery nahi kar pa raha\"},{\"text\":\"mera address Gurgaon hai lekin delivery guy pucha kaunsa sector hai lagta kuch confusion hai\"},{\"text\":\"delivery delay ho gaya hai kyunki driver ko location samajh nahi aa rahi main phone pe madad nahi kar pa raha\"},{\"text\":\"main chahata hoon ki aapka customer support jaldi se delivery boy se baat kare aur location clear kare\"},{\"text\":\"driver kah raha hai ki wo thoda door par hai aur road nahi mil raha isliye osne call kiya tha\"}],\"long_with_context\":[{\"text\":\"maine aapko pehle bhi bataya tha ki delivery boy baar baar call kar raha hai lekin mein busy tha\",\"context\":\"Kya aapne delivery boy ki taraf se call miss kiya hai?\"},{\"text\":\"delivery boy ne kaha ki location thoda confusing hai usne mujhe call par route samjhane ko kaha tha\",\"context\":\"Delivery person ne aapko kya problem batayi thi?\"},{\"text\":\"aap turant driver ko contact kar ke unko exact address wapas bhejdijiye mujhe order chahiye jaldi\",\"context\":\"Hum driver se contact karna chahte hain aap batayein kya karein?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 582,
+    "output_tokens": 846
+  }
+}

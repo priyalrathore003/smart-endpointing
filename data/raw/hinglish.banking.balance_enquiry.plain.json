@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.banking.balance_enquiry.plain",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "balance_enquiry",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "balance batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kitna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "recent transactions"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "account balance"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paise kat gaye kya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "update do"
+    },
+    {
+      "context": "Kya aapne last month ki statement check ki hai?",
+      "requested_bucket": "short",
+      "text": "han ji theek hai"
+    },
+    {
+      "context": "Kya aapko apne account ki balance chahiye?",
+      "requested_bucket": "short",
+      "text": "nahi bhai"
+    },
+    {
+      "context": "Kya aap recent transactions dekhna chahte hain?",
+      "requested_bucket": "short",
+      "text": "please bata do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account balance kitna hai abhi last update ke hisaab se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main apne recent transactions janana chahta hoon please check karo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aaj ke din koi paise meri account se kat gaye hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please mujhe apna current balance bata do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap bata sakte ho mera balance aur aakhri 5 transactions"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main dekhna chahta hoon ki kitne paise mere account mein hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya main apne account ka balance sms ke through le sakta hoon"
+    },
+    {
+      "context": "Kya aapko apne recent transactions dekhne hain?",
+      "requested_bucket": "medium",
+      "text": "main apne aakhri 10 transactions check karna chahta hoon"
+    },
+    {
+      "context": "Kya aapko account balance update chahiye aaj ka?",
+      "requested_bucket": "medium",
+      "text": "mera balance kal se update hua hai kya"
+    },
+    {
+      "context": "Kya main aapko recent transactions bhej doon?",
+      "requested_bucket": "medium",
+      "text": "please mujhe last 7 din ke transactions bhej dein"
+    },
+    {
+      "context": "Main aapka current account balance bata doon?",
+      "requested_bucket": "medium",
+      "text": "abhi mera balance kya hai, mujhe ek baar bata dein"
+    },
+    {
+      "context": "Kya aap apni account statement email karwana chahte hain?",
+      "requested_bucket": "medium",
+      "text": "main apne account ki statement mail karwana chahta hoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera account number 1234567890 hai aur main apna balance janna chahta hoon aaj ki date ke hisab se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "last week se meri account mein koi transaction nahi hua hai kya main apne daily balance check kar sakta hoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mere account se kuch paise bina meri ijazat ke kat gaye hain mujhe pata karna hai ki ye transactions asli hain ya fraudulent"
+    },
+    {
+      "context": "Aap apne account balance aur recent transactions janna chahte hain kya?",
+      "requested_bucket": "long",
+      "text": "main janna chahta hoon ki mere account mein kitne paise bache hain aur recent transactions kis date tak hain"
+    },
+    {
+      "context": "Kya aapko balance ke sath recent transactions bhi chahiye?",
+      "requested_bucket": "long",
+      "text": "mera account balance verify karna hai aur mai chahta hoon ki aap mujhe latest 10 transactions bata dein please"
+    },
+    {
+      "context": "Aap mujhe apne account ki details batana chahte hain, balance aur transactions dono?",
+      "requested_bucket": "long",
+      "text": "kya aap mere account se aaj tak ke paise ki details aur balance confirm kar ke bata sakte hain mujhe bahut zarurat hai ye sab jankari kiya hai ya nahi hua hai kisi transaction mein problem nahi aayi hai na mujhe bataiye please thank you very much for help in advance."
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3418100933,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: balance_enquiry - asks for their account balance or recent transactions\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: plain and direct\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"balance batao\"},{\"text\":\"kitna hai\"},{\"text\":\"recent transactions\"},{\"text\":\"account balance\"},{\"text\":\"paise kat gaye kya\"},{\"text\":\"update do\"}],\"short_with_context\":[{\"text\":\"han ji theek hai\",\"context\":\"Kya aapne last month ki statement check ki hai?\"},{\"text\":\"nahi bhai\",\"context\":\"Kya aapko apne account ki balance chahiye?\"},{\"text\":\"please bata do\",\"context\":\"Kya aap recent transactions dekhna chahte hain?\"}],\"medium\":[{\"text\":\"mera account balance kitna hai abhi last update ke hisaab se\"},{\"text\":\"main apne recent transactions janana chahta hoon please check karo\"},{\"text\":\"kya aaj ke din koi paise meri account se kat gaye hai\"},{\"text\":\"please mujhe apna current balance bata do\"},{\"text\":\"kya aap bata sakte ho mera balance aur aakhri 5 transactions\"},{\"text\":\"main dekhna chahta hoon ki kitne paise mere account mein hain\"},{\"text\":\"kya main apne account ka balance sms ke through le sakta hoon\"}],\"medium_with_context\":[{\"text\":\"main apne aakhri 10 transactions check karna chahta hoon\",\"context\":\"Kya aapko apne recent transactions dekhne hain?\"},{\"text\":\"mera balance kal se update hua hai kya\",\"context\":\"Kya aapko account balance update chahiye aaj ka?\"},{\"text\":\"please mujhe last 7 din ke transactions bhej dein\",\"context\":\"Kya main aapko recent transactions bhej doon?\"},{\"text\":\"abhi mera balance kya hai, mujhe ek baar bata dein\",\"context\":\"Main aapka current account balance bata doon?\"},{\"text\":\"main apne account ki statement mail karwana chahta hoon\",\"context\":\"Kya aap apni account statement email karwana chahte hain?\"}],\"long\":[{\"text\":\"mera account number 1234567890 hai aur main apna balance janna chahta hoon aaj ki date ke hisab se\"},{\"text\":\"last week se meri account mein koi transaction nahi hua hai kya main apne daily balance check kar sakta hoon\"},{\"text\":\"mere account se kuch paise bina meri ijazat ke kat gaye hain mujhe pata karna hai ki ye transactions asli hain ya fraudulent\"}],\"long_with_context\":[{\"text\":\"main janna chahta hoon ki mere account mein kitne paise bache hain aur recent transactions kis date tak hain\",\"context\":\"Aap apne account balance aur recent transactions janna chahte hain kya?\"},{\"text\":\"mera account balance verify karna hai aur mai chahta hoon ki aap mujhe latest 10 transactions bata dein please\",\"context\":\"Kya aapko balance ke sath recent transactions bhi chahiye?\"},{\"text\":\"kya aap mere account se aaj tak ke paise ki details aur balance confirm kar ke bata sakte hain mujhe bahut zarurat hai ye sab jankari kiya hai ya nahi hua hai kisi transaction mein problem nahi aayi hai na mujhe bataiye please thank you very much for help in advance.\" ,\"context\":\"Aap mujhe apne account ki details batana chahte hain, balance aur transactions dono?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 579,
+    "output_tokens": 699
+  }
+}

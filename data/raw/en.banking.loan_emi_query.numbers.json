@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.banking.loan_emi_query.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "loan_emi_query",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "emi amount"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "due date please"
+    },
+    {
+      "context": "What do you want to know about your loan?",
+      "requested_bucket": "short",
+      "text": "yes emi amount"
+    },
+    {
+      "context": "Which EMI details do you require?",
+      "requested_bucket": "short",
+      "text": "this month emi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you tell me what is my emi for the personal loan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i want to know the due date for this month's emi payment"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "how much emi was deducted last month from my account"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please tell me the emi amount that is pending for my loan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my loan account number is 1234 5678 9012 please check the emi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you confirm the emi amount and due date of my car loan"
+    },
+    {
+      "context": "Can you check the emi amount for your home loan?",
+      "requested_bucket": "medium",
+      "text": "the emi is 12000 rupees this month"
+    },
+    {
+      "context": "When is your next emi payment due?",
+      "requested_bucket": "medium",
+      "text": "next emi due date is fifteenth of september"
+    },
+    {
+      "context": "Do you want to know the last emi amount deducted?",
+      "requested_bucket": "medium",
+      "text": "the emi deducted was fifteen thousand rupees on first august"
+    },
+    {
+      "context": "Is your emi for the current month paid or pending?",
+      "requested_bucket": "medium",
+      "text": "your emi is pending and due on 10th of this month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i noticed that the last emi deduction was twenty two thousand five hundred rupees from my savings account can you confirm"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "please tell me when the next emi is due for my loan account number 7890 1234 5678 i want to make sure i pay on time"
+    },
+    {
+      "context": "Was there any change in your emi amount last month?",
+      "requested_bucket": "long",
+      "text": "the last emi amount was higher than usual can you check if any extra charges were added to my account"
+    },
+    {
+      "context": "Did you receive an sms about your emi deduction today?",
+      "requested_bucket": "long",
+      "text": "i received a message about the emi deduction but the amount shown was not correct can you please verify the exact emi amount"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3232598423,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: loan_emi_query - asks about a loan EMI amount, due date or a deduction\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"emi amount\"},{\"text\":\"due date please\"}],\"short_with_context\":[{\"text\":\"yes emi amount\",\"context\":\"What do you want to know about your loan?\"},{\"text\":\"this month emi\",\"context\":\"Which EMI details do you require?\"}],\"medium\":[{\"text\":\"can you tell me what is my emi for the personal loan\"},{\"text\":\"i want to know the due date for this month's emi payment\"},{\"text\":\"how much emi was deducted last month from my account\"},{\"text\":\"please tell me the emi amount that is pending for my loan\"},{\"text\":\"my loan account number is 1234 5678 9012 please check the emi\"},{\"text\":\"can you confirm the emi amount and due date of my car loan\"}],\"medium_with_context\":[{\"text\":\"the emi is 12000 rupees this month\",\"context\":\"Can you check the emi amount for your home loan?\"},{\"text\":\"next emi due date is fifteenth of september\",\"context\":\"When is your next emi payment due?\"},{\"text\":\"the emi deducted was fifteen thousand rupees on first august\",\"context\":\"Do you want to know the last emi amount deducted?\"},{\"text\":\"your emi is pending and due on 10th of this month\",\"context\":\"Is your emi for the current month paid or pending?\"}],\"long\":[{\"text\":\"i noticed that the last emi deduction was twenty two thousand five hundred rupees from my savings account can you confirm\"},{\"text\":\"please tell me when the next emi is due for my loan account number 7890 1234 5678 i want to make sure i pay on time\"}],\"long_with_context\":[{\"text\":\"the last emi amount was higher than usual can you check if any extra charges were added to my account\",\"context\":\"Was there any change in your emi amount last month?\"},{\"text\":\"i received a message about the emi deduction but the amount shown was not correct can you please verify the exact emi amount\",\"context\":\"Did you receive an sms about your emi deduction today?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 592,
+    "output_tokens": 417
+  }
+}

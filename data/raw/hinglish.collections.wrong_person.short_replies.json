@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.collections.wrong_person.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "collections",
+  "intent": "wrong_person",
+  "items": [
+    {
+      "context": "May I know your name please",
+      "requested_bucket": "short",
+      "text": "Nahi ji"
+    },
+    {
+      "context": "Can you confirm your account number",
+      "requested_bucket": "short",
+      "text": "Galat hai ye"
+    },
+    {
+      "context": "Are you the account holder",
+      "requested_bucket": "short",
+      "text": "Nahi hoon"
+    },
+    {
+      "context": "What is your registered phone number",
+      "requested_bucket": "short",
+      "text": "Ye number nahi hai"
+    },
+    {
+      "context": "Is this sir Rahul Kumar",
+      "requested_bucket": "short",
+      "text": "Nahi sir"
+    },
+    {
+      "context": "Sir can you please spell your name",
+      "requested_bucket": "short",
+      "text": "Main Rahul nahi hoon"
+    },
+    {
+      "context": "Can you tell me your date of birth",
+      "requested_bucket": "short",
+      "text": "Main galat shakhs hoon"
+    },
+    {
+      "context": "Are you available to discuss your dues",
+      "requested_bucket": "short",
+      "text": "Main alag aadmi hoon"
+    },
+    {
+      "context": "Is this your address",
+      "requested_bucket": "short",
+      "text": "Yeh address nahi hai"
+    },
+    {
+      "context": "Can you verify your email id",
+      "requested_bucket": "short",
+      "text": "Mujhe pata nahi is number ka"
+    },
+    {
+      "context": "Do you have the loan account details handy",
+      "requested_bucket": "short",
+      "text": "Main galat vyakti hoon"
+    },
+    {
+      "context": "Are you the person responsible for this account",
+      "requested_bucket": "short",
+      "text": "Nahi mai nahi hoon"
+    },
+    {
+      "context": "Can you confirm your PAN number",
+      "requested_bucket": "short",
+      "text": "Mai us aadmi nahi hoon"
+    },
+    {
+      "context": "Is this your mobile number linked to account",
+      "requested_bucket": "short",
+      "text": "Ye mera number nahi hai"
+    },
+    {
+      "context": "Could you provide your customer id",
+      "requested_bucket": "short",
+      "text": "Yeh mera ID nahi hai"
+    },
+    {
+      "context": "Can you tell me your Aadhaar number",
+      "requested_bucket": "short",
+      "text": "Mai galat number pe hoon"
+    },
+    {
+      "context": "Is the name on phone Rahul Singh",
+      "requested_bucket": "short",
+      "text": "Galat number hai"
+    },
+    {
+      "context": "Are you the one who took the loan",
+      "requested_bucket": "short",
+      "text": "Nahi ji"
+    },
+    {
+      "context": "Can you please confirm your full name",
+      "requested_bucket": "medium",
+      "text": "Nahi ji ye sahi number nahi hai aap galat call kar rahe ho"
+    },
+    {
+      "context": "May I know your current address for verification",
+      "requested_bucket": "medium",
+      "text": "Mujhe lagta hai aapne galat shakhs ko call kiya hai"
+    },
+    {
+      "context": "Could you share the loan account number",
+      "requested_bucket": "medium",
+      "text": "Mein is number par nahi rehata hoon ye galat hai"
+    },
+    {
+      "context": "Is this Rahul from Delhi",
+      "requested_bucket": "medium",
+      "text": "Nahi ji main Rahul nahi hoon aapne galat number dial kiya hai"
+    },
+    {
+      "context": "Do you remember applying for the loan",
+      "requested_bucket": "medium",
+      "text": "Main iss loan account se sambandhit nahi hoon aapne galti se call kar liya"
+    },
+    {
+      "context": "Can you tell me outstanding amount on your loan",
+      "requested_bucket": "medium",
+      "text": "Ye meri jankari ka phone nahi hai aap galat shakhs se baat kar rahe ho"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 4255709988,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: wrong_person - says the agent has the wrong person or number\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"May I know your name please\",\"reply\":\"Nahi ji\"},{\"agent_question\":\"Can you confirm your account number\",\"reply\":\"Galat hai ye\"},{\"agent_question\":\"Are you the account holder\",\"reply\":\"Nahi hoon\"},{\"agent_question\":\"What is your registered phone number\",\"reply\":\"Ye number nahi hai\"},{\"agent_question\":\"Is this sir Rahul Kumar\",\"reply\":\"Nahi sir\"},{\"agent_question\":\"Sir can you please spell your name\",\"reply\":\"Main Rahul nahi hoon\"},{\"agent_question\":\"Can you tell me your date of birth\",\"reply\":\"Main galat shakhs hoon\"},{\"agent_question\":\"Are you available to discuss your dues\",\"reply\":\"Main alag aadmi hoon\"},{\"agent_question\":\"Is this your address\",\"reply\":\"Yeh address nahi hai\"},{\"agent_question\":\"Can you verify your email id\",\"reply\":\"Mujhe pata nahi is number ka\"},{\"agent_question\":\"Do you have the loan account details handy\",\"reply\":\"Main galat vyakti hoon\"},{\"agent_question\":\"Are you the person responsible for this account\",\"reply\":\"Nahi mai nahi hoon\"},{\"agent_question\":\"Can you confirm your PAN number\",\"reply\":\"Mai us aadmi nahi hoon\"},{\"agent_question\":\"Is this your mobile number linked to account\",\"reply\":\"Ye mera number nahi hai\"},{\"agent_question\":\"Could you provide your customer id\",\"reply\":\"Yeh mera ID nahi hai\"},{\"agent_question\":\"Can you tell me your Aadhaar number\",\"reply\":\"Mai galat number pe hoon\"},{\"agent_question\":\"Is the name on phone Rahul Singh\",\"reply\":\"Galat number hai\"},{\"agent_question\":\"Are you the one who took the loan\",\"reply\":\"Nahi ji\"}],\"medium\":[{\"agent_question\":\"Can you please confirm your full name\",\"reply\":\"Nahi ji ye sahi number nahi hai aap galat call kar rahe ho\"},{\"agent_question\":\"May I know your current address for verification\",\"reply\":\"Mujhe lagta hai aapne galat shakhs ko call kiya hai\"},{\"agent_question\":\"Could you share the loan account number\",\"reply\":\"Mein is number par nahi rehata hoon ye galat hai\"},{\"agent_question\":\"Is this Rahul from Delhi\",\"reply\":\"Nahi ji main Rahul nahi hoon aapne galat number dial kiya hai\"},{\"agent_question\":\"Do you remember applying for the loan\",\"reply\":\"Main iss loan account se sambandhit nahi hoon aapne galti se call kar liya\"},{\"agent_question\":\"Can you tell me outstanding amount on your loan\",\"reply\":\"Ye meri jankari ka phone nahi hai aap galat shakhs se baat kar rahe ho\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 394,
+    "output_tokens": 543
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "batch_id": "en.banking.lost_card.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "lost_card",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "block my card"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "lost my card"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "card ending 4321"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "Do you want me to block your card now?",
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "What would you like me to do with the card?",
+      "requested_bucket": "short",
+      "text": "block the card"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i want to report my debit card lost please block it"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my atm card is missing since yesterday can you block it"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please block the card which ends with 6789 immediately"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i think my card got stolen last night please help"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you block my credit card lost while travelling in mumbai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please block my card and send me a replacement at my address"
+    },
+    {
+      "context": "Can you provide the card number or last four digits of the card?",
+      "requested_bucket": "medium",
+      "text": "the card number ends with 1234 same as mentioned on my last statement"
+    },
+    {
+      "context": "Are you sure you lost the card today or some earlier date?",
+      "requested_bucket": "medium",
+      "text": "yes i am sure it was lost this morning and i did not use after that"
+    },
+    {
+      "context": "Whose card do you want to block exactly?",
+      "requested_bucket": "medium",
+      "text": "please block the card held under the name of rajesh kumar as soon as possible"
+    },
+    {
+      "context": "Can you tell when and where you last saw your card?",
+      "requested_bucket": "medium",
+      "text": "my card was lost maybe at the market near my house in delhi yesterday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "it looks like i have lost my debit card somewhere in the city yesterday i want it blocked immediately and also want to know the process for a replacement"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "my credit card was stolen from my bag while travelling on the local bus last evening please block it and tell me what documents are needed for a new card"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i have been trying to locate my wallet all morning but no luck i suspect the card inside is lost so please block the card linked to account number nine four five six seven eight two three four if possible"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i want to report the losing of my bank card used for online transactions yesterday afternoon to ensure no unauthorized payments get through please block it"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "the atm card has been missing since monday and this is causing trouble with my payments please block the card ending 5643 and confirm once done"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "could you please block my stolen card which was last used on the twenty second of this month so that no one can misuse it thanks"
+    },
+    {
+      "context": "Have you checked when the card was last used before reporting it lost?",
+      "requested_bucket": "long",
+      "text": "the card was last used at a grocery store on the sixteenth of january and then i noticed it missing so please block it immediately"
+    },
+    {
+      "context": "Can you specify when and where you lost the card?",
+      "requested_bucket": "long",
+      "text": "i lost my credit card near the office in andheri west yesterday evening and i want it blocked to avoid unauthorized charges"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1141749952,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: lost_card - reports a lost or stolen card and wants it blocked\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"block my card\"},{\"text\":\"lost my card\"}, {\"text\":\"card ending 4321\"},{\"text\":\"yes please\"}],\"short_with_context\":[{\"text\":\"yes please\",\"context\":\"Do you want me to block your card now?\"},{\"text\":\"block the card\",\"context\":\"What would you like me to do with the card?\"}],\"medium\":[{\"text\":\"i want to report my debit card lost please block it\"},{\"text\":\"my atm card is missing since yesterday can you block it\"},{\"text\":\"please block the card which ends with 6789 immediately\"},{\"text\":\"i think my card got stolen last night please help\"},{\"text\":\"can you block my credit card lost while travelling in mumbai\"},{\"text\":\"please block my card and send me a replacement at my address\"}],\"medium_with_context\":[{\"text\":\"the card number ends with 1234 same as mentioned on my last statement\",\"context\":\"Can you provide the card number or last four digits of the card?\"},{\"text\":\"yes i am sure it was lost this morning and i did not use after that\",\"context\":\"Are you sure you lost the card today or some earlier date?\"},{\"text\":\"please block the card held under the name of rajesh kumar as soon as possible\",\"context\":\"Whose card do you want to block exactly?\"},{\"text\":\"my card was lost maybe at the market near my house in delhi yesterday\",\"context\":\"Can you tell when and where you last saw your card?\"}],\"long\":[{\"text\":\"it looks like i have lost my debit card somewhere in the city yesterday i want it blocked immediately and also want to know the process for a replacement\"},{\"text\":\"my credit card was stolen from my bag while travelling on the local bus last evening please block it and tell me what documents are needed for a new card\"},{\"text\":\"i have been trying to locate my wallet all morning but no luck i suspect the card inside is lost so please block the card linked to account number nine four five six seven eight two three four if possible\"},{\"text\":\"i want to report the losing of my bank card used for online transactions yesterday afternoon to ensure no unauthorized payments get through please block it\"},{\"text\":\"the atm card has been missing since monday and this is causing trouble with my payments please block the card ending 5643 and confirm once done\"},{\"text\":\"could you please block my stolen card which was last used on the twenty second of this month so that no one can misuse it thanks\"}],\"long_with_context\":[{\"text\":\"the card was last used at a grocery store on the sixteenth of january and then i noticed it missing so please block it immediately\",\"context\":\"Have you checked when the card was last used before reporting it lost?\"},{\"text\":\"i lost my credit card near the office in andheri west yesterday evening and i want it blocked to avoid unauthorized charges\",\"context\":\"Can you specify when and where you lost the card?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 588,
+    "output_tokens": 599
+  }
+}

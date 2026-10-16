@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.collections.payment_link.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "payment_link",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "पैसे भेजो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "जल्दी लिंक दो"
+    },
+    {
+      "context": "क्या आप payment link चाहते हैं?",
+      "requested_bucket": "short",
+      "text": "हाँ सर"
+    },
+    {
+      "context": "कब तक payment कर पाएंगे?",
+      "requested_bucket": "short",
+      "text": "कल तक"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर payment link कहाँ से मिलेगा मुझे जल्दी बताइए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैडम कैसे pay करना है ये बताइए मुझे"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "पैसा भेजने का तरीका बताइए payment link भेज दीजिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "प्लीज़ payment के लिए मुझे एक link भेजो जल्दी"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मेरे account में balance क्यों नही दिख रहा payment के बाद"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "payment करने के बाद confirmation का message कब आएगा"
+    },
+    {
+      "context": "किस नंबर से payment करना चाहते हैं आप?",
+      "requested_bucket": "medium",
+      "text": "सर किस नंबर पे payment करना है ये बताइए"
+    },
+    {
+      "context": "कितनी राशि का payment link चाहिए आपको?",
+      "requested_bucket": "medium",
+      "text": "मैडम इस amount का payment link भेज दीजिए प्लीज़"
+    },
+    {
+      "context": "क्या कोई technical समस्या आ रही है payment में?",
+      "requested_bucket": "medium",
+      "text": "पैसा transfer करने में दिक्कत आ रही है link दो फिर"
+    },
+    {
+      "context": "क्या आप bank account details के लिए पूछ रहे हैं?",
+      "requested_bucket": "medium",
+      "text": "payment के लिए bank account details चाहिए मुझे समझाओ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर payment link भेज दो ताकि मैं तुरंत अपना पैसा जमा कर सकूँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैडम payment कैसे करनी है मुझे पूरी process step by step बता दीजिए"
+    },
+    {
+      "context": "payment link मिल गया क्या अब आप payment कर पाए?",
+      "requested_bucket": "long",
+      "text": "सर payment की समस्या आ रही है link तो मिल गया पर payment नहीं हो रहा"
+    },
+    {
+      "context": "payment करने के बाद क्या आपको confirmation message मिला?",
+      "requested_bucket": "long",
+      "text": "मैडम payment पूरा करने के बाद मुझे confirmation message या email कब मिलेगा"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1196326438,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: payment_link - asks for a payment link or how to pay\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"पैसे भेजो\"},{\"text\":\"जल्दी लिंक दो\"}],\"short_with_context\":[{\"text\":\"हाँ सर\",\"context\":\"क्या आप payment link चाहते हैं?\"},{\"text\":\"कल तक\",\"context\":\"कब तक payment कर पाएंगे?\"}],\"medium\":[{\"text\":\"सर payment link कहाँ से मिलेगा मुझे जल्दी बताइए\"},{\"text\":\"मैडम कैसे pay करना है ये बताइए मुझे\"},{\"text\":\"पैसा भेजने का तरीका बताइए payment link भेज दीजिए\"},{\"text\":\"प्लीज़ payment के लिए मुझे एक link भेजो जल्दी\"},{\"text\":\"मेरे account में balance क्यों नही दिख रहा payment के बाद\"},{\"text\":\"payment करने के बाद confirmation का message कब आएगा\"}],\"medium_with_context\":[{\"text\":\"सर किस नंबर पे payment करना है ये बताइए\",\"context\":\"किस नंबर से payment करना चाहते हैं आप?\"},{\"text\":\"मैडम इस amount का payment link भेज दीजिए प्लीज़\",\"context\":\"कितनी राशि का payment link चाहिए आपको?\"},{\"text\":\"पैसा transfer करने में दिक्कत आ रही है link दो फिर\",\"context\":\"क्या कोई technical समस्या आ रही है payment में?\"},{\"text\":\"payment के लिए bank account details चाहिए मुझे समझाओ\",\"context\":\"क्या आप bank account details के लिए पूछ रहे हैं?\"}],\"long\":[{\"text\":\"सर payment link भेज दो ताकि मैं तुरंत अपना पैसा जमा कर सकूँ\"},{\"text\":\"मैडम payment कैसे करनी है मुझे पूरी process step by step बता दीजिए\"}],\"long_with_context\":[{\"text\":\"सर payment की समस्या आ रही है link तो मिल गया पर payment नहीं हो रहा\",\"context\":\"payment link मिल गया क्या अब आप payment कर पाए?\"},{\"text\":\"मैडम payment पूरा करने के बाद मुझे confirmation message या email कब मिलेगा\",\"context\":\"payment करने के बाद क्या आपको confirmation message मिला?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 683,
+    "output_tokens": 386
+  }
+}

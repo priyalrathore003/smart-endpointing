@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.banking.unauthorised_debit.numbers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "unauthorised_debit",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "paisa kat gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahi kiya maine"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "check karo jaldi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "naan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Did you authorize this transaction?",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Can you confirm your account number for me please?",
+      "requested_bucket": "short",
+      "text": "thik hai"
+    },
+    {
+      "context": "Please hold on while I check your account details.",
+      "requested_bucket": "short",
+      "text": "wait karo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account se paise kat gaye without transfer"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "ye amount five thousand rupees ka hai transaction"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "koi mera naam use karke payment kar raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "last week mein transaction hua hai fraud se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap meri complaint jaldi register kar sakte ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "phone number se call aayi transaction ke baad"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account number nine zero two one three four five six seven"
+    },
+    {
+      "context": "Did you authorize this transaction?",
+      "requested_bucket": "medium",
+      "text": "mainne ye transaction approve nahi kiya tha"
+    },
+    {
+      "context": "Please provide your account number.",
+      "requested_bucket": "medium",
+      "text": "mera account number nine zero one two three four five six seven"
+    },
+    {
+      "context": "Can you confirm the amount of the transaction?",
+      "requested_bucket": "medium",
+      "text": "payment to mera hi hai par amount match nahi karta"
+    },
+    {
+      "context": "Has this happened before with your account?",
+      "requested_bucket": "medium",
+      "text": "haan ye dobara aisa hua hai last month bhi hua tha"
+    },
+    {
+      "context": "Please provide the phone number from which you received the call.",
+      "requested_bucket": "medium",
+      "text": "123 four five six seven eight nine zero pe mujhe call aayi thi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera account se paise kat gaye but maine aisa koi payment nahi kiya hai woh transaction twenty five thousand rupees ka hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main apni mobile app mein dekha toh dekha ki date doh tarikh se paisa deduct ho raha hai lekin main uss din ghar par tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "please verify karo mera account number nine zero zero eight seven six five four three do din pehle kuch galat hua hai mujhe doubt hai ki fraud hai ye"
+    },
+    {
+      "context": "Can you tell me when the unauthorized transaction happened?",
+      "requested_bucket": "long",
+      "text": "mainne transfer nahi kiya ye transaction mera nahi hai exactly janm pehle hua tha aur amount bhi galat hai please rakeemand karo"
+    },
+    {
+      "context": "Did you receive any call or message regarding the transaction?",
+      "requested_bucket": "long",
+      "text": "mera phone number nine eight seven six five four three two one zero pe call aayi confirmation ke liye par mainne koi OTP nahi diya"
+    },
+    {
+      "context": "Can you provide your account number so I can check the transactions?",
+      "requested_bucket": "long",
+      "text": "please aap check karo mera account number one two three four five six seven eight nine pe recent transactions me kuch galat dikh raha hai mujhe turant help chahiye"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2943414120,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: unauthorised_debit - reports a transaction they did not make\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"paisa kat gaya\"},{\"text\":\"nahi kiya maine\"},{\"text\":\"check karo jaldi\"},{\"text\":\"haan ji\"},{\"text\":\"naan\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"haan ji\",\"context\":\"Did you authorize this transaction?\"},{\"text\":\"thik hai\",\"context\":\"Can you confirm your account number for me please?\"},{\"text\":\"wait karo\",\"context\":\"Please hold on while I check your account details.\"}],\"medium\":[{\"text\":\"mera account se paise kat gaye without transfer\"},{\"text\":\"ye amount five thousand rupees ka hai transaction\"},{\"text\":\"koi mera naam use karke payment kar raha hai\"},{\"text\":\"last week mein transaction hua hai fraud se\"},{\"text\":\"kya aap meri complaint jaldi register kar sakte ho\"},{\"text\":\"phone number se call aayi transaction ke baad\"},{\"text\":\"mera account number nine zero two one three four five six seven\"}],\"medium_with_context\":[{\"text\":\"mainne ye transaction approve nahi kiya tha\",\"context\":\"Did you authorize this transaction?\"},{\"text\":\"mera account number nine zero one two three four five six seven\",\"context\":\"Please provide your account number.\"},{\"text\":\"payment to mera hi hai par amount match nahi karta\",\"context\":\"Can you confirm the amount of the transaction?\"},{\"text\":\"haan ye dobara aisa hua hai last month bhi hua tha\",\"context\":\"Has this happened before with your account?\"},{\"text\":\"123 four five six seven eight nine zero pe mujhe call aayi thi\",\"context\":\"Please provide the phone number from which you received the call.\"}],\"long\":[{\"text\":\"mera account se paise kat gaye but maine aisa koi payment nahi kiya hai woh transaction twenty five thousand rupees ka hai\"},{\"text\":\"main apni mobile app mein dekha toh dekha ki date doh tarikh se paisa deduct ho raha hai lekin main uss din ghar par tha\"},{\"text\":\"please verify karo mera account number nine zero zero eight seven six five four three do din pehle kuch galat hua hai mujhe doubt hai ki fraud hai ye\"}],\"long_with_context\":[{\"text\":\"mainne transfer nahi kiya ye transaction mera nahi hai exactly janm pehle hua tha aur amount bhi galat hai please rakeemand karo\",\"context\":\"Can you tell me when the unauthorized transaction happened?\"},{\"text\":\"mera phone number nine eight seven six five four three two one zero pe call aayi confirmation ke liye par mainne koi OTP nahi diya\",\"context\":\"Did you receive any call or message regarding the transaction?\"},{\"text\":\"please aap check karo mera account number one two three four five six seven eight nine pe recent transactions me kuch galat dikh raha hai mujhe turant help chahiye\",\"context\":\"Can you provide your account number so I can check the transactions?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 608,
+    "output_tokens": 589
+  }
+}

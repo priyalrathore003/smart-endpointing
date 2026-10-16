@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.telecom.data_balance.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "data_balance",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "how much data"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "remaining validity"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yesterday"
+    },
+    {
+      "context": "How much data is left in your plan?",
+      "requested_bucket": "short",
+      "text": "five gigabytes"
+    },
+    {
+      "context": "What is the remaining validity of your plan?",
+      "requested_bucket": "short",
+      "text": "three days"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umm can you tell me how much data is left in my pack"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "actually I mean I want to know my internet balance right now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you please check how many gigs I have still available"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I think my data should be expiring next Tuesday no Wednesday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "how much data do I have remaining for this month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "like I need to know when my data plan expires exactly"
+    },
+    {
+      "context": "Can you please confirm your data balance?",
+      "requested_bucket": "medium",
+      "text": "so can you check my data balance for this current plan"
+    },
+    {
+      "context": "Do you want to know the data validity?",
+      "requested_bucket": "medium",
+      "text": "umm I am not sure but can you tell me my validity period"
+    },
+    {
+      "context": "How much data have you used so far?",
+      "requested_bucket": "medium",
+      "text": "please check my collected data so far I am not sure about it"
+    },
+    {
+      "context": "Are you checking data for today or tomorrow?",
+      "requested_bucket": "medium",
+      "text": "I want to confirm if I have any data left for tomorrow itself"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "umm actually I wanted to check my internet balance because I need to watch some videos today and want to be sure I have enough data left"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "can you please verify and tell me the remaining data in my prepaid pack and also tell me how many days of validity I have still remaining because I might recharge after that"
+    },
+    {
+      "context": "Why do you want to check your data balance today?",
+      "requested_bucket": "long",
+      "text": "I was asking about the data usage because I am planning to go on a trip next Friday no Saturday and I want to make sure my data is active till then"
+    },
+    {
+      "context": "What details do you want regarding your data balance?",
+      "requested_bucket": "long",
+      "text": "please help me find out exactly how much data is left in my account and also provide the expiry date because I think it will help me plan my usage better"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3945123,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: data_balance - asks how much data or validity is left\nLanguage: Indian English, Latin script.\nStyle for this batch: with fillers and hesitations (umm, uh, like, actually, I mean); at least a third include a self-correction ('Tuesday, no, Wednesday')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"how much data\"},{\"text\":\"remaining validity\"}, {\"text\":\"yes please\"},{\"text\":\"yesterday\"}],\"short_with_context\":[{\"text\":\"five gigabytes\",\"context\":\"How much data is left in your plan?\"},{\"text\":\"three days\",\"context\":\"What is the remaining validity of your plan?\"}],\"medium\":[{\"text\":\"umm can you tell me how much data is left in my pack\"},{\"text\":\"actually I mean I want to know my internet balance right now\"},{\"text\":\"can you please check how many gigs I have still available\"},{\"text\":\"I think my data should be expiring next Tuesday no Wednesday\"},{\"text\":\"how much data do I have remaining for this month\"},{\"text\":\"like I need to know when my data plan expires exactly\"}],\"medium_with_context\":[{\"text\":\"so can you check my data balance for this current plan\",\"context\":\"Can you please confirm your data balance?\"},{\"text\":\"umm I am not sure but can you tell me my validity period\",\"context\":\"Do you want to know the data validity?\"},{\"text\":\"please check my collected data so far I am not sure about it\",\"context\":\"How much data have you used so far?\"},{\"text\":\"I want to confirm if I have any data left for tomorrow itself\",\"context\":\"Are you checking data for today or tomorrow?\"}],\"long\":[{\"text\":\"umm actually I wanted to check my internet balance because I need to watch some videos today and want to be sure I have enough data left\"},{\"text\":\"can you please verify and tell me the remaining data in my prepaid pack and also tell me how many days of validity I have still remaining because I might recharge after that\"}],\"long_with_context\":[{\"text\":\"I was asking about the data usage because I am planning to go on a trip next Friday no Saturday and I want to make sure my data is active till then\",\"context\":\"Why do you want to check your data balance today?\"},{\"text\":\"please help me find out exactly how much data is left in my account and also provide the expiry date because I think it will help me plan my usage better\",\"context\":\"What details do you want regarding your data balance?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 587,
+    "output_tokens": 446
+  }
+}

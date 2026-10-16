@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.banking.lost_card.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "banking",
+  "intent": "lost_card",
+  "items": [
+    {
+      "context": "Can you please confirm your card number",
+      "requested_bucket": "short",
+      "text": "four five six seven nine eight seven six five four three two one two three four"
+    },
+    {
+      "context": "Whats your registered mobile number",
+      "requested_bucket": "short",
+      "text": "nine eight seven six five four three two one zero"
+    },
+    {
+      "context": "Have you reported this issue to the bank before",
+      "requested_bucket": "short",
+      "text": "no"
+    },
+    {
+      "context": "Do you want to block your card immediately",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Please tell me your account number",
+      "requested_bucket": "short",
+      "text": "one two three four five six seven eight nine zero"
+    },
+    {
+      "context": "Is this the debit card or credit card",
+      "requested_bucket": "short",
+      "text": "debit card"
+    },
+    {
+      "context": "When did you last use the card",
+      "requested_bucket": "short",
+      "text": "yesterday"
+    },
+    {
+      "context": "Are you currently in India",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Do you need a replacement card",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Was your card stolen or lost",
+      "requested_bucket": "short",
+      "text": "lost"
+    },
+    {
+      "context": "Have you noticed any fraudulent transactions",
+      "requested_bucket": "short",
+      "text": "no"
+    },
+    {
+      "context": "Can you provide your date of birth",
+      "requested_bucket": "short",
+      "text": "twenty third july nineteen eighty five"
+    },
+    {
+      "context": "Is the card linked to your savings account",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "Do you want us to send the new card to your registered address",
+      "requested_bucket": "short",
+      "text": "yes"
+    },
+    {
+      "context": "What time did you notice your card missing",
+      "requested_bucket": "medium",
+      "text": "I noticed my card missing since last evening when I tried to pay at the store"
+    },
+    {
+      "context": "Can you describe the last transaction you made on the card",
+      "requested_bucket": "medium",
+      "text": "The last transaction was at a grocery store around 5 pm yesterday"
+    },
+    {
+      "context": "Would you like to receive an SMS confirmation after blocking the card",
+      "requested_bucket": "medium",
+      "text": "Yes please send me an SMS confirmation on my registered mobile number"
+    },
+    {
+      "context": "Is there a possibility that your card was misplaced rather than stolen",
+      "requested_bucket": "medium",
+      "text": "Yes it might be misplaced as I have not seen it since yesterday evening"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3446601165,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: lost_card - reports a lost or stolen card and wants it blocked\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Can you please confirm your card number\",\"reply\":\"four five six seven nine eight seven six five four three two one two three four\"},{\"agent_question\":\"Whats your registered mobile number\",\"reply\":\"nine eight seven six five four three two one zero\"},{\"agent_question\":\"Have you reported this issue to the bank before\",\"reply\":\"no\"},{\"agent_question\":\"Do you want to block your card immediately\",\"reply\":\"yes\"},{\"agent_question\":\"Please tell me your account number\",\"reply\":\"one two three four five six seven eight nine zero\"},{\"agent_question\":\"Is this the debit card or credit card\",\"reply\":\"debit card\"},{\"agent_question\":\"When did you last use the card\",\"reply\":\"yesterday\"},{\"agent_question\":\"Are you currently in India\",\"reply\":\"yes\"},{\"agent_question\":\"Do you need a replacement card\",\"reply\":\"yes\"},{\"agent_question\":\"Was your card stolen or lost\",\"reply\":\"lost\"},{\"agent_question\":\"Have you noticed any fraudulent transactions\",\"reply\":\"no\"},{\"agent_question\":\"Can you provide your date of birth\",\"reply\":\"twenty third july nineteen eighty five\"},{\"agent_question\":\"Is the card linked to your savings account\",\"reply\":\"yes\"},{\"agent_question\":\"Do you want us to send the new card to your registered address\",\"reply\":\"yes\"}],\"medium\":[{\"agent_question\":\"What time did you notice your card missing\",\"reply\":\"I noticed my card missing since last evening when I tried to pay at the store\"},{\"agent_question\":\"Can you describe the last transaction you made on the card\",\"reply\":\"The last transaction was at a grocery store around 5 pm yesterday\"},{\"agent_question\":\"Would you like to receive an SMS confirmation after blocking the card\",\"reply\":\"Yes please send me an SMS confirmation on my registered mobile number\"},{\"agent_question\":\"Is there a possibility that your card was misplaced rather than stolen\",\"reply\":\"Yes it might be misplaced as I have not seen it since yesterday evening\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 368,
+    "output_tokens": 390
+  }
+}

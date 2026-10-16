@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.delivery.reschedule.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "reschedule",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "tomorrow afternoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "next monday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "evening please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "friday morning"
+    },
+    {
+      "context": "When would you like us to deliver your parcel?",
+      "requested_bucket": "short",
+      "text": "saturday evening"
+    },
+    {
+      "context": "What time do you prefer for your delivery?",
+      "requested_bucket": "short",
+      "text": "after 5 pm"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you please reschedule my delivery to next Wednesday morning?"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to postpone my delivery by two days to Friday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Is there any chance you could deliver the package on Sunday evening?"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you make the delivery after 6 pm instead of the morning?"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I need to shift delivery from Tuesday to Saturday due to work commitments"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Could you please deliver to my office in Andheri on Thursday morning"
+    },
+    {
+      "context": "Do you have a preferred time for delivery?",
+      "requested_bucket": "medium",
+      "text": "I want to receive the delivery late evening instead of the planned afternoon"
+    },
+    {
+      "context": "When should we schedule the delivery for you?",
+      "requested_bucket": "medium",
+      "text": "Can you change my delivery to next week Tuesday as I'm out of town?"
+    },
+    {
+      "context": "Which date do you want to reschedule your delivery to?",
+      "requested_bucket": "medium",
+      "text": "It would be better if you can deliver on the 25th December in the morning"
+    },
+    {
+      "context": "What timing works best for your delivery?",
+      "requested_bucket": "medium",
+      "text": "Can you bring it after 7 pm because I am not at home during daytime?"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Hello this is Ramesh from Powai I was expecting my parcel tomorrow but can you please reschedule it to next Thursday morning as I will not be available at home?"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "My name is Anjali and I live in Gurgaon I would like to change my delivery date from Monday to Saturday afternoon because I have a client meeting during the week"
+    },
+    {
+      "context": "Would you like to reschedule your delivery date or time?",
+      "requested_bucket": "long",
+      "text": "My delivery is scheduled for Friday but I wanted to check if it is possible to get it shifted to Sunday evening as I will be traveling on Friday"
+    },
+    {
+      "context": "Please provide the new date or time you want your delivery to be rescheduled to",
+      "requested_bucket": "long",
+      "text": "I have a package coming to my address in Banjara Hills I am not available this week so can you please deliver it after next Wednesday afternoon instead of the original date"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1173769766,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: reschedule - wants the delivery on a different day or time\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"tomorrow afternoon\"},{\"text\":\"next monday\"}, {\"text\":\"evening please\"}, {\"text\":\"friday morning\"}],\"short_with_context\":[{\"text\":\"saturday evening\",\"context\":\"When would you like us to deliver your parcel?\"},{\"text\":\"after 5 pm\",\"context\":\"What time do you prefer for your delivery?\"}],\"medium\":[{\"text\":\"Can you please reschedule my delivery to next Wednesday morning?\"},{\"text\":\"I want to postpone my delivery by two days to Friday\"},{\"text\":\"Is there any chance you could deliver the package on Sunday evening?\"},{\"text\":\"Can you make the delivery after 6 pm instead of the morning?\"},{\"text\":\"I need to shift delivery from Tuesday to Saturday due to work commitments\"},{\"text\":\"Could you please deliver to my office in Andheri on Thursday morning\"}],\"medium_with_context\":[{\"text\":\"I want to receive the delivery late evening instead of the planned afternoon\",\"context\":\"Do you have a preferred time for delivery?\"},{\"text\":\"Can you change my delivery to next week Tuesday as I'm out of town?\",\"context\":\"When should we schedule the delivery for you?\"},{\"text\":\"It would be better if you can deliver on the 25th December in the morning\",\"context\":\"Which date do you want to reschedule your delivery to?\"},{\"text\":\"Can you bring it after 7 pm because I am not at home during daytime?\",\"context\":\"What timing works best for your delivery?\"}],\"long\":[{\"text\":\"Hello this is Ramesh from Powai I was expecting my parcel tomorrow but can you please reschedule it to next Thursday morning as I will not be available at home?\"},{\"text\":\"My name is Anjali and I live in Gurgaon I would like to change my delivery date from Monday to Saturday afternoon because I have a client meeting during the week\"}],\"long_with_context\":[{\"text\":\"My delivery is scheduled for Friday but I wanted to check if it is possible to get it shifted to Sunday evening as I will be traveling on Friday\",\"context\":\"Would you like to reschedule your delivery date or time?\"},{\"text\":\"I have a package coming to my address in Banjara Hills I am not available this week so can you please deliver it after next Wednesday afternoon instead of the original date\",\"context\":\"Please provide the new date or time you want your delivery to be rescheduled to\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 568,
+    "output_tokens": 488
+  }
+}

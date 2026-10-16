@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.telecom.escalate_complaint.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "escalate_complaint",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "जल्दी बताओ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "क्या आपकी शिकायत सॉल्व हो गई?",
+      "requested_bucket": "short",
+      "text": "वो अभी तक नहीं हुआ"
+    },
+    {
+      "context": "क्या आपकी कॉल बैक हो गई?",
+      "requested_bucket": "short",
+      "text": "नहीं जी फिक्स करो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर पहले वाली complaint आज तक solve नहीं हुई है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैडम complaint escalate कर दो जल्दी से"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अच्छा इसमें refund कब मिलेगा मुझे बता दो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मंगलवार को बताया था पर बुधवार को भी नहीं हुआ कोई update"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "पिछली बार जो मामला था उसके बारे में कोई जवाब नहीं मिला अभी तक"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अम्म मेरा account बंद करने का request भी pending है अभी"
+    },
+    {
+      "context": "कृपया बताएं आपकी complaint कब दर्ज हुई थी?",
+      "requested_bucket": "medium",
+      "text": "जी ये complaint कब तक resolve करोगे आप लोग"
+    },
+    {
+      "context": "क्या आपके issue का कोई temporary समाधान दिया गया था?",
+      "requested_bucket": "medium",
+      "text": "पिछली बार जो issue था वो बिल्कुल वही रह गया अभी तक"
+    },
+    {
+      "context": "आप escalation चाहते हैं या नए complaint करना चाहते हैं?",
+      "requested_bucket": "medium",
+      "text": "प्लीज़ इस complaint को escalate करो अब और इंतजार नहीं होगा"
+    },
+    {
+      "context": "आपकी कॉल कितनी बार हुई है पिछले सप्ताह में?",
+      "requested_bucket": "medium",
+      "text": "मैंने बहुत call किया है पर कोई proper response नहीं मिला"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "देखो सर मैंने कल ही फोन किया था और कहा था कि मेरी problem अभी तक solve नहीं हुई है और अब मुझे कोई भी update नहीं मिल रहा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैडम ये complaint मैंने बहुत पहले दर्ज कराई थी महीने भर से follow up कर रहा हूँ पर अभी तक कोई सही जवाब नहीं मिला है मुझे escalate करना है"
+    },
+    {
+      "context": "क्या आप हमें बता सकते हैं कि आपका complaint कब दर्ज हुआ था?",
+      "requested_bucket": "long",
+      "text": "महोदय शिकायत तो मैने कई दिनों पहले दर्ज कराई थी लेकिन अब तक कोई action नहीं लिया गया है क्या आप इसे तुरंत escalate कर सकते हैं"
+    },
+    {
+      "context": "क्या आप escalate करना चाहते हैं या फिर नया complaint फाइल करेंगे?",
+      "requested_bucket": "long",
+      "text": "सर मेरा जो complaint था वो न सुलझा इसलिए मैं चाहता हूँ कि इसे higher official के पास forward किया जाए क्योंकि मैं बहुत परेशान हूँ"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 483563797,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: escalate_complaint - is unhappy that an earlier complaint was not solved and wants escalation\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with fillers and hesitations (अम्म, मतलब, वो, अच्छा, हाँ जी); at least a third include a self-correction ('मंगलवार, नहीं, बुधवार')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"जल्दी बताओ\"},{\"text\":\"हाँ जी\"}],\"short_with_context\":[{\"text\":\"वो अभी तक नहीं हुआ\",\"context\":\"क्या आपकी शिकायत सॉल्व हो गई?\"},{\"text\":\"नहीं जी फिक्स करो\",\"context\":\"क्या आपकी कॉल बैक हो गई?\"}],\"medium\":[{\"text\":\"सर पहले वाली complaint आज तक solve नहीं हुई है\"},{\"text\":\"मैडम complaint escalate कर दो जल्दी से\"},{\"text\":\"अच्छा इसमें refund कब मिलेगा मुझे बता दो\"},{\"text\":\"मंगलवार को बताया था पर बुधवार को भी नहीं हुआ कोई update\"},{\"text\":\"पिछली बार जो मामला था उसके बारे में कोई जवाब नहीं मिला अभी तक\"},{\"text\":\"अम्म मेरा account बंद करने का request भी pending है अभी\"}],\"medium_with_context\":[{\"text\":\"जी ये complaint कब तक resolve करोगे आप लोग\",\"context\":\"कृपया बताएं आपकी complaint कब दर्ज हुई थी?\"},{\"text\":\"पिछली बार जो issue था वो बिल्कुल वही रह गया अभी तक\",\"context\":\"क्या आपके issue का कोई temporary समाधान दिया गया था?\"},{\"text\":\"प्लीज़ इस complaint को escalate करो अब और इंतजार नहीं होगा\",\"context\":\"आप escalation चाहते हैं या नए complaint करना चाहते हैं?\"},{\"text\":\"मैंने बहुत call किया है पर कोई proper response नहीं मिला\",\"context\":\"आपकी कॉल कितनी बार हुई है पिछले सप्ताह में?\"}],\"long\":[{\"text\":\"देखो सर मैंने कल ही फोन किया था और कहा था कि मेरी problem अभी तक solve नहीं हुई है और अब मुझे कोई भी update नहीं मिल रहा\"},{\"text\":\"मैडम ये complaint मैंने बहुत पहले दर्ज कराई थी महीने भर से follow up कर रहा हूँ पर अभी तक कोई सही जवाब नहीं मिला है मुझे escalate करना है\"}],\"long_with_context\":[{\"text\":\"महोदय शिकायत तो मैने कई दिनों पहले दर्ज कराई थी लेकिन अब तक कोई action नहीं लिया गया है क्या आप इसे तुरंत escalate कर सकते हैं\",\"context\":\"क्या आप हमें बता सकते हैं कि आपका complaint कब दर्ज हुआ था?\"},{\"text\":\"सर मेरा जो complaint था वो न सुलझा इसलिए मैं चाहता हूँ कि इसे higher official के पास forward किया जाए क्योंकि मैं बहुत परेशान हूँ\",\"context\":\"क्या आप escalate करना चाहते हैं या फिर नया complaint फाइल करेंगे?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 721,
+    "output_tokens": 464
+  }
+}

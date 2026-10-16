@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.telecom.data_balance.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "data_balance",
+  "items": [
+    {
+      "context": "कितना डाटा बचा है अभी",
+      "requested_bucket": "short",
+      "text": "दीस गीगा"
+    },
+    {
+      "context": "आपका प्लान वैलिडिटी कब तक है",
+      "requested_bucket": "short",
+      "text": "पच्चीस तारीख तक"
+    },
+    {
+      "context": "आपका नंबर क्या है",
+      "requested_bucket": "short",
+      "text": "नौ आठ सात छः पाँच चार तीन दो"
+    },
+    {
+      "context": "क्या आप नया रिचार्ज करना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ सर"
+    },
+    {
+      "context": "डाटा बैलेंस चेक करने के लिए कहें क्या",
+      "requested_bucket": "short",
+      "text": "मساعدة"
+    },
+    {
+      "context": "क्या आप अपना अकाउंट नंबर बता सकते हैं",
+      "requested_bucket": "short",
+      "text": "नहीं सर"
+    },
+    {
+      "context": "आपको कॉल रीचार्ज चाहिए या इंटरनेट प्लान",
+      "requested_bucket": "short",
+      "text": "इंटरनेट प्लान"
+    },
+    {
+      "context": "क्या अभी कोई ऑफर एक्टिव है आपके नंबर पर",
+      "requested_bucket": "short",
+      "text": "नहीं मैडम"
+    },
+    {
+      "context": "कितना डाटा आपके प्लान में था",
+      "requested_bucket": "short",
+      "text": "बीस जीबी"
+    },
+    {
+      "context": "आपके प्लान की रिचार्ज वैधता कब तक है",
+      "requested_bucket": "short",
+      "text": "पंद्रह तारीख तक"
+    },
+    {
+      "context": "आप इंटरनेट कितनी बार इस्तेमाल करते हैं",
+      "requested_bucket": "short",
+      "text": "रोजाना कई बार"
+    },
+    {
+      "context": "क्या आप ऐसा प्लान लेना चाहते हैं जिसमें ज्यादा डाटा हो",
+      "requested_bucket": "short",
+      "text": "हाँ बिल्कुल"
+    },
+    {
+      "context": "आपका कनेक्शन पोस्टपेड है या प्रीपेड",
+      "requested_bucket": "short",
+      "text": "प्रीपेड"
+    },
+    {
+      "context": "क्या आपको SMS से डाटा बैलेंस पता करना है",
+      "requested_bucket": "short",
+      "text": "हाँ"
+    },
+    {
+      "context": "अब तक आप कितनी बार डाटा उपयोग कर चुके हैं",
+      "requested_bucket": "medium",
+      "text": "लगभग पंद्रह गीगा डाटा इस्तेमाल कर लिया हूँ"
+    },
+    {
+      "context": "आपको इस महीने कितने दिन के लिए वैलिडिटी चाहिए",
+      "requested_bucket": "medium",
+      "text": "कम से कम एक महीना वैलिडिटी चाहिए मुझे"
+    },
+    {
+      "context": "क्या आप अपना मोबाइल नंबर बताकर मदद लेना चाहेंगे",
+      "requested_bucket": "medium",
+      "text": "मेरे नंबर पर डाटा चेक कर दो सर एक बार"
+    },
+    {
+      "context": "आपके पास अभी कितना डाटा बचेगा मैसेज आने पर",
+      "requested_bucket": "medium",
+      "text": "जब भी मैसेज आता है तो हमेशा आठ से दस जीबी बचे होते हैं"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2517326504,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: data_balance - asks how much data or validity is left\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"कितना डाटा बचा है अभी\",\"reply\":\"दीस गीगा\"},{\"agent_question\":\"आपका प्लान वैलिडिटी कब तक है\",\"reply\":\"पच्चीस तारीख तक\"},{\"agent_question\":\"आपका नंबर क्या है\",\"reply\":\"नौ आठ सात छः पाँच चार तीन दो\"},{\"agent_question\":\"क्या आप नया रिचार्ज करना चाहते हैं\",\"reply\":\"हाँ सर\"},{\"agent_question\":\"डाटा बैलेंस चेक करने के लिए कहें क्या\",\"reply\":\"मساعدة\"},{\"agent_question\":\"क्या आप अपना अकाउंट नंबर बता सकते हैं\",\"reply\":\"नहीं सर\"},{\"agent_question\":\"आपको कॉल रीचार्ज चाहिए या इंटरनेट प्लान\",\"reply\":\"इंटरनेट प्लान\"},{\"agent_question\":\"क्या अभी कोई ऑफर एक्टिव है आपके नंबर पर\",\"reply\":\"नहीं मैडम\"},{\"agent_question\":\"कितना डाटा आपके प्लान में था\",\"reply\":\"बीस जीबी\"},{\"agent_question\":\"आपके प्लान की रिचार्ज वैधता कब तक है\",\"reply\":\"पंद्रह तारीख तक\"},{\"agent_question\":\"आप इंटरनेट कितनी बार इस्तेमाल करते हैं\",\"reply\":\"रोजाना कई बार\"},{\"agent_question\":\"क्या आप ऐसा प्लान लेना चाहते हैं जिसमें ज्यादा डाटा हो\",\"reply\":\"हाँ बिल्कुल\"},{\"agent_question\":\"आपका कनेक्शन पोस्टपेड है या प्रीपेड\",\"reply\":\"प्रीपेड\"},{\"agent_question\":\"क्या आपको SMS से डाटा बैलेंस पता करना है\",\"reply\":\"हाँ\"}],\"medium\":[{\"agent_question\":\"अब तक आप कितनी बार डाटा उपयोग कर चुके हैं\",\"reply\":\"लगभग पंद्रह गीगा डाटा इस्तेमाल कर लिया हूँ\"},{\"agent_question\":\"आपको इस महीने कितने दिन के लिए वैलिडिटी चाहिए\",\"reply\":\"कम से कम एक महीना वैलिडिटी चाहिए मुझे\"},{\"agent_question\":\"क्या आप अपना मोबाइल नंबर बताकर मदद लेना चाहेंगे\",\"reply\":\"मेरे नंबर पर डाटा चेक कर दो सर एक बार\"},{\"agent_question\":\"आपके पास अभी कितना डाटा बचेगा मैसेज आने पर\",\"reply\":\"जब भी मैसेज आता है तो हमेशा आठ से दस जीबी बचे होते हैं\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 496,
+    "output_tokens": 455
+  }
+}

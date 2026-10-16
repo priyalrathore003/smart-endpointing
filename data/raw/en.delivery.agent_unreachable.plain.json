@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.delivery.agent_unreachable.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "agent_unreachable",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "not answering"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "cant find address"
+    },
+    {
+      "context": "Is the delivery person answering your call?",
+      "requested_bucket": "short",
+      "text": "no response"
+    },
+    {
+      "context": "Did you check the address details with the delivery agent?",
+      "requested_bucket": "short",
+      "text": "address unclear"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the delivery person is not picking up my call since 20 minutes"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the person at the address says nobody came to deliver yet"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "they say they cannot locate the building even with clear instructions"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i have been waiting since morning but the agent is unreachable"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i tried calling multiple times but no one is answering the phone"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "delivery guy informed me he is lost and cant find the address properly"
+    },
+    {
+      "context": "Have you tried contacting the delivery person directly?",
+      "requested_bucket": "medium",
+      "text": "i have been trying to reach the delivery guy but he is not responding"
+    },
+    {
+      "context": "Did you confirm if the address details are accurate?",
+      "requested_bucket": "medium",
+      "text": "the delivery person says the address is not clear and cannot find it"
+    },
+    {
+      "context": "Did the delivery person report any issues?",
+      "requested_bucket": "medium",
+      "text": "someone at the location said there was no attempt to deliver today"
+    },
+    {
+      "context": "Are you able to get in touch with the delivery agent?",
+      "requested_bucket": "medium",
+      "text": "i keep calling but the delivery agent is not picking up the phone"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "the delivery agent has been unreachable all day and when i called there was no reply now i dont know when my parcel will be delivered"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i am at the address given but the delivery person says they cannot find where i am they keep calling but this is very confusing"
+    },
+    {
+      "context": "Have you tried speaking with the delivery person directly to resolve the issue?",
+      "requested_bucket": "long",
+      "text": "yes i called the delivery person as you suggested but they do not answer and even my phone calls are not going through to them so what should i do now"
+    },
+    {
+      "context": "Did the delivery person give any details about why they could not complete the delivery?",
+      "requested_bucket": "long",
+      "text": "the delivery guy told me on phone he is having trouble finding my street and is stuck somewhere else so the package wont reach me today i think"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2912453085,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: agent_unreachable - the delivery person is not answering or cannot find the address\nLanguage: Indian English, Latin script.\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"not answering\"},{\"text\":\"cant find address\"}],\"short_with_context\":[{\"text\":\"no response\",\"context\":\"Is the delivery person answering your call?\"},{\"text\":\"address unclear\",\"context\":\"Did you check the address details with the delivery agent?\"}],\"medium\":[{\"text\":\"the delivery person is not picking up my call since 20 minutes\"},{\"text\":\"the person at the address says nobody came to deliver yet\"},{\"text\":\"they say they cannot locate the building even with clear instructions\"},{\"text\":\"i have been waiting since morning but the agent is unreachable\"},{\"text\":\"i tried calling multiple times but no one is answering the phone\"},{\"text\":\"delivery guy informed me he is lost and cant find the address properly\"}],\"medium_with_context\":[{\"text\":\"i have been trying to reach the delivery guy but he is not responding\",\"context\":\"Have you tried contacting the delivery person directly?\"},{\"text\":\"the delivery person says the address is not clear and cannot find it\",\"context\":\"Did you confirm if the address details are accurate?\"},{\"text\":\"someone at the location said there was no attempt to deliver today\",\"context\":\"Did the delivery person report any issues?\"},{\"text\":\"i keep calling but the delivery agent is not picking up the phone\",\"context\":\"Are you able to get in touch with the delivery agent?\"}],\"long\":[{\"text\":\"the delivery agent has been unreachable all day and when i called there was no reply now i dont know when my parcel will be delivered\"},{\"text\":\"i am at the address given but the delivery person says they cannot find where i am they keep calling but this is very confusing\"}],\"long_with_context\":[{\"text\":\"yes i called the delivery person as you suggested but they do not answer and even my phone calls are not going through to them so what should i do now\",\"context\":\"Have you tried speaking with the delivery person directly to resolve the issue?\"},{\"text\":\"the delivery guy told me on phone he is having trouble finding my street and is stuck somewhere else so the package wont reach me today i think\",\"context\":\"Did the delivery person give any details about why they could not complete the delivery?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 562,
+    "output_tokens": 439
+  }
+}

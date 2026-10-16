@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.collections.financial_hardship.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "financial_hardship",
+  "items": [
+    {
+      "context": "Are you able to make a payment now",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Have you lost your job recently",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Is there any illness in the family",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Can you pay next week",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Will you need more time to pay",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Is this your first time facing financial difficulties",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Do you want to discuss a payment plan",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Can you pay some amount now",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Have you received any government support",
+      "requested_bucket": "short",
+      "text": "Not yet"
+    },
+    {
+      "context": "Will you be able to pay by this month",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Do you have any other income source",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Can you confirm your address",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Is your phone number still the same",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Will you contact us if your situation changes",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Can you tell me why you are unable to pay the dues right now",
+      "requested_bucket": "medium",
+      "text": "I have lost my job and have no income currently"
+    },
+    {
+      "context": "When do you think you might be able to start payments again",
+      "requested_bucket": "medium",
+      "text": "Probably after two months when I find a new job"
+    },
+    {
+      "context": "Are you receiving any medical treatment that is affecting your finances",
+      "requested_bucket": "medium",
+      "text": "Yes I am undergoing treatment and medical bills are high"
+    },
+    {
+      "context": "Would you like us to connect you with a financial advisor for assistance",
+      "requested_bucket": "medium",
+      "text": "Yes that would be helpful to manage my payments"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3845078566,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: financial_hardship - explains they cannot pay right now because of job loss, illness or similar\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Are you able to make a payment now\",\"reply\":\"No\"},{\"agent_question\":\"Have you lost your job recently\",\"reply\":\"Yes\"},{\"agent_question\":\"Is there any illness in the family\",\"reply\":\"Yes\"},{\"agent_question\":\"Can you pay next week\",\"reply\":\"No\"},{\"agent_question\":\"Will you need more time to pay\",\"reply\":\"Yes\"},{\"agent_question\":\"Is this your first time facing financial difficulties\",\"reply\":\"Yes\"},{\"agent_question\":\"Do you want to discuss a payment plan\",\"reply\":\"Yes\"},{\"agent_question\":\"Can you pay some amount now\",\"reply\":\"No\"},{\"agent_question\":\"Have you received any government support\",\"reply\":\"Not yet\"},{\"agent_question\":\"Will you be able to pay by this month\",\"reply\":\"No\"},{\"agent_question\":\"Do you have any other income source\",\"reply\":\"No\"},{\"agent_question\":\"Can you confirm your address\",\"reply\":\"Yes\"},{\"agent_question\":\"Is your phone number still the same\",\"reply\":\"Yes\"},{\"agent_question\":\"Will you contact us if your situation changes\",\"reply\":\"Yes\"}],\"medium\":[{\"agent_question\":\"Can you tell me why you are unable to pay the dues right now\",\"reply\":\"I have lost my job and have no income currently\"},{\"agent_question\":\"When do you think you might be able to start payments again\",\"reply\":\"Probably after two months when I find a new job\"},{\"agent_question\":\"Are you receiving any medical treatment that is affecting your finances\",\"reply\":\"Yes I am undergoing treatment and medical bills are high\"},{\"agent_question\":\"Would you like us to connect you with a financial advisor for assistance\",\"reply\":\"Yes that would be helpful to manage my payments\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 374,
+    "output_tokens": 336
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "batch_id": "en.delivery.wrong_or_damaged.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "wrong_or_damaged",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wrong item"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "damaged box"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "short_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "what was wrong with your order"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wrong product"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "medium"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "i received the wrong item in my recent order"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "the package was damaged when it arrived at my home"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "my order number is 456789 and the item is not correct"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "i ordered a blue shirt but got a red one instead"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "can you help me replace the damaged product i received"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "the delivery was delayed and the food was spoiled"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "medium_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "can you tell me what the problem is with the product i got"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "the item is broken and i want a refund or replacement"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "was the packaging damaged when you received it"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes the box was torn and the item inside was crushed"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "long"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "i expected to receive a laptop but they sent me a tablet instead which is very disappointing"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "the package was left outside in the rain and all the contents inside were soaked and cannot be used"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "long_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "can you describe the issue in detail with your delivered product"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "the wrong laptop model was sent to me i ordered a Dell but got an HP which is totally wrong"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "has the product suffered any damage during transit or delivery"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes the screen of the tablet they sent me is cracked and completely unusable"
+    },
+    {
+      "context": "what was wrong with your order",
+      "requested_bucket": "short",
+      "text": "wrong item"
+    },
+    {
+      "context": "did you find any issue with the packaging",
+      "requested_bucket": "short",
+      "text": "damaged box"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i received the wrong item in my recent order"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the package was damaged when it arrived at my home"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my order number is 456789 and the item is not correct"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i ordered a blue shirt but got a red one instead"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you help me replace the damaged product i received"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the delivery was delayed and the food was spoiled"
+    },
+    {
+      "context": "can you tell me what the problem is with the product i got",
+      "requested_bucket": "medium",
+      "text": "the item is broken and i want a refund or replacement"
+    },
+    {
+      "context": "was the packaging damaged when you received it",
+      "requested_bucket": "medium",
+      "text": "yes the box was torn and the item inside was crushed"
+    },
+    {
+      "context": "what was wrong with the delivery",
+      "requested_bucket": "medium",
+      "text": "the food was cold and the container was leaking"
+    },
+    {
+      "context": "can you tell me the issue with your clothes order",
+      "requested_bucket": "medium",
+      "text": "the shirt size is wrong and the color is not what i ordered"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i expected to receive a laptop but they sent me a tablet instead which is very disappointing"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "the package was left outside in the rain and all the contents inside were soaked and cannot be used"
+    },
+    {
+      "context": "can you describe the issue in detail with your delivered product",
+      "requested_bucket": "long",
+      "text": "the wrong laptop model was sent to me i ordered a Dell but got an HP which is totally wrong"
+    },
+    {
+      "context": "has the product suffered any damage during transit or delivery",
+      "requested_bucket": "long",
+      "text": "yes the screen of the tablet they sent me is cracked and completely unusable"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1713157431,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: wrong_or_damaged - received a wrong or damaged item\nLanguage: Indian English, Latin script.\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"wrong item\"},{\"text\":\"damaged box\"},{\"text\":\"short_with_context\"},{\"text\":\"what was wrong with your order\"},{\"text\":\"wrong product\"},{\"text\":\"medium\"},{\"text\":\"i received the wrong item in my recent order\"},{\"text\":\"the package was damaged when it arrived at my home\"},{\"text\":\"my order number is 456789 and the item is not correct\"},{\"text\":\"i ordered a blue shirt but got a red one instead\"},{\"text\":\"can you help me replace the damaged product i received\"},{\"text\":\"the delivery was delayed and the food was spoiled\"},{\"text\":\"medium_with_context\"},{\"text\":\"can you tell me what the problem is with the product i got\"},{\"text\":\"the item is broken and i want a refund or replacement\"},{\"text\":\"was the packaging damaged when you received it\"},{\"text\":\"yes the box was torn and the item inside was crushed\"},{\"text\":\"long\"},{\"text\":\"i expected to receive a laptop but they sent me a tablet instead which is very disappointing\"},{\"text\":\"the package was left outside in the rain and all the contents inside were soaked and cannot be used\"},{\"text\":\"long_with_context\"},{\"text\":\"can you describe the issue in detail with your delivered product\"},{\"text\":\"the wrong laptop model was sent to me i ordered a Dell but got an HP which is totally wrong\"},{\"text\":\"has the product suffered any damage during transit or delivery\"},{\"text\":\"yes the screen of the tablet they sent me is cracked and completely unusable\"}],\"short_with_context\":[{\"text\":\"wrong item\",\"context\":\"what was wrong with your order\"},{\"text\":\"damaged box\",\"context\":\"did you find any issue with the packaging\"}],\"medium\":[{\"text\":\"i received the wrong item in my recent order\"},{\"text\":\"the package was damaged when it arrived at my home\"},{\"text\":\"my order number is 456789 and the item is not correct\"},{\"text\":\"i ordered a blue shirt but got a red one instead\"},{\"text\":\"can you help me replace the damaged product i received\"},{\"text\":\"the delivery was delayed and the food was spoiled\"}],\"medium_with_context\":[{\"text\":\"the item is broken and i want a refund or replacement\",\"context\":\"can you tell me what the problem is with the product i got\"},{\"text\":\"yes the box was torn and the item inside was crushed\",\"context\":\"was the packaging damaged when you received it\"},{\"text\":\"the food was cold and the container was leaking\",\"context\":\"what was wrong with the delivery\"},{\"text\":\"the shirt size is wrong and the color is not what i ordered\",\"context\":\"can you tell me the issue with your clothes order\"}],\"long\":[{\"text\":\"i expected to receive a laptop but they sent me a tablet instead which is very disappointing\"},{\"text\":\"the package was left outside in the rain and all the contents inside were soaked and cannot be used\"}],\"long_with_context\":[{\"text\":\"the wrong laptop model was sent to me i ordered a Dell but got an HP which is totally wrong\",\"context\":\"can you describe the issue in detail with your delivered product\"},{\"text\":\"yes the screen of the tablet they sent me is cracked and completely unusable\",\"context\":\"has the product suffered any damage during transit or delivery\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 558,
+    "output_tokens": 653
+  }
+}

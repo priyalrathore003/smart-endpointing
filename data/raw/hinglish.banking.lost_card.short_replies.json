@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.banking.lost_card.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "banking",
+  "intent": "lost_card",
+  "items": [
+    {
+      "context": "Apka card kahan lost hua?",
+      "requested_bucket": "short",
+      "text": "Mumbai"
+    },
+    {
+      "context": "Apka card kis type ka hai",
+      "requested_bucket": "short",
+      "text": "Credit card"
+    },
+    {
+      "context": "Kya apka card abhi active hai",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Apko card block karna hai kya",
+      "requested_bucket": "short",
+      "text": "Ji haan"
+    },
+    {
+      "context": "Apka account number bata sakte hain",
+      "requested_bucket": "short",
+      "text": "1234567890"
+    },
+    {
+      "context": "Kya apne kisi ko card details di thi",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Card par likha naam kya hai",
+      "requested_bucket": "short",
+      "text": "Rahul Kumar"
+    },
+    {
+      "context": "Apka registered mobile number kya hai",
+      "requested_bucket": "short",
+      "text": "9876543210"
+    },
+    {
+      "context": "Kya apne apna PIN kisi ko bataya tha",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Card par last transaction kab hua tha",
+      "requested_bucket": "short",
+      "text": "Kal"
+    },
+    {
+      "context": "Kya ap apne online banking use karte hain",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Apko kis branch ka card mila tha",
+      "requested_bucket": "short",
+      "text": "Andheri branch"
+    },
+    {
+      "context": "Apka date of birth kya hai",
+      "requested_bucket": "short",
+      "text": "15081990"
+    },
+    {
+      "context": "Kya apke card se paise kat gaye hain",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Apke card ki expiry date kya hai",
+      "requested_bucket": "short",
+      "text": "12 slash 24"
+    },
+    {
+      "context": "Apka email id kya hai",
+      "requested_bucket": "short",
+      "text": "rahul dot kumar at email dot com"
+    },
+    {
+      "context": "Apka aadhaar number chahiye hume",
+      "requested_bucket": "short",
+      "text": "234512345123"
+    },
+    {
+      "context": "Kya apne card ko internationally use kiya tha",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kab se apka card missing hai",
+      "requested_bucket": "medium",
+      "text": "Pichle do din se dhundh nahi pa raha hoon"
+    },
+    {
+      "context": "Kya apne apne card ki report police mein diye hai",
+      "requested_bucket": "medium",
+      "text": "Haan ji kal report kar diya tha main"
+    },
+    {
+      "context": "Apne card se last transaction kis din kiya tha",
+      "requested_bucket": "medium",
+      "text": "Do din pehle shopping mall me kiya tha"
+    },
+    {
+      "context": "Kya apne apne account me suspicious activity dekhi hai",
+      "requested_bucket": "medium",
+      "text": "Haan kuch ajeeb transaction dekhe hain kal"
+    },
+    {
+      "context": "Ap chahte hain ki hum apka card turant block kar dein",
+      "requested_bucket": "medium",
+      "text": "Ji haan jaldi block kar dijiye please"
+    },
+    {
+      "context": "Kya apko naya card chahiye hamare dwara bhejne ke liye",
+      "requested_bucket": "medium",
+      "text": "Haan ji naya card bhej dijiye kripya"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1525602228,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: lost_card - reports a lost or stolen card and wants it blocked\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Apka card kahan lost hua?\",\"reply\":\"Mumbai\"},{\"agent_question\":\"Apka card kis type ka hai\",\"reply\":\"Credit card\"},{\"agent_question\":\"Kya apka card abhi active hai\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Apko card block karna hai kya\",\"reply\":\"Ji haan\"},{\"agent_question\":\"Apka account number bata sakte hain\",\"reply\":\"1234567890\"},{\"agent_question\":\"Kya apne kisi ko card details di thi\",\"reply\":\"Nahi\"},{\"agent_question\":\"Card par likha naam kya hai\",\"reply\":\"Rahul Kumar\"},{\"agent_question\":\"Apka registered mobile number kya hai\",\"reply\":\"9876543210\"},{\"agent_question\":\"Kya apne apna PIN kisi ko bataya tha\",\"reply\":\"Nahi\"},{\"agent_question\":\"Card par last transaction kab hua tha\",\"reply\":\"Kal\"},{\"agent_question\":\"Kya ap apne online banking use karte hain\",\"reply\":\"Haan\"},{\"agent_question\":\"Apko kis branch ka card mila tha\",\"reply\":\"Andheri branch\"},{\"agent_question\":\"Apka date of birth kya hai\",\"reply\":\"15081990\"},{\"agent_question\":\"Kya apke card se paise kat gaye hain\",\"reply\":\"Nahi\"},{\"agent_question\":\"Apke card ki expiry date kya hai\",\"reply\":\"12 slash 24\"},{\"agent_question\":\"Apka email id kya hai\",\"reply\":\"rahul dot kumar at email dot com\"},{\"agent_question\":\"Apka aadhaar number chahiye hume\",\"reply\":\"234512345123\"},{\"agent_question\":\"Kya apne card ko internationally use kiya tha\",\"reply\":\"Nahi\"}],\"medium\":[{\"agent_question\":\"Kab se apka card missing hai\",\"reply\":\"Pichle do din se dhundh nahi pa raha hoon\"},{\"agent_question\":\"Kya apne apne card ki report police mein diye hai\",\"reply\":\"Haan ji kal report kar diya tha main\"},{\"agent_question\":\"Apne card se last transaction kis din kiya tha\",\"reply\":\"Do din pehle shopping mall me kiya tha\"},{\"agent_question\":\"Kya apne apne account me suspicious activity dekhi hai\",\"reply\":\"Haan kuch ajeeb transaction dekhe hain kal\"},{\"agent_question\":\"Ap chahte hain ki hum apka card turant block kar dein\",\"reply\":\"Ji haan jaldi block kar dijiye please\"},{\"agent_question\":\"Kya apko naya card chahiye hamare dwara bhejne ke liye\",\"reply\":\"Haan ji naya card bhej dijiye kripya\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 533
+  }
+}

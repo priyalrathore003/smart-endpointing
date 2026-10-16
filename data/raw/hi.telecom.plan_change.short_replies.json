@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.telecom.plan_change.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "plan_change",
+  "items": [
+    {
+      "context": "आपका वर्तमान प्लान कौन सा है",
+      "requested_bucket": "short",
+      "text": "माय रिचार्ज प्लस"
+    },
+    {
+      "context": "क्या आप अपना प्लान बदलना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "आपको कौन सा प्लान चाहिए",
+      "requested_bucket": "short",
+      "text": "अन्लिमिटेड कॉल्स वाला"
+    },
+    {
+      "context": "आप प्लान कब से बदलना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "अभी"
+    },
+    {
+      "context": "क्या आप नया प्लान तुरंत एक्टिवेट करना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "हां सर"
+    },
+    {
+      "context": "आपका मोबाइल नंबर बताइए",
+      "requested_bucket": "short",
+      "text": "९८७६५४३२१०"
+    },
+    {
+      "context": "क्या आप प्रीपेड यूजर हैं",
+      "requested_bucket": "short",
+      "text": "जी हाँ"
+    },
+    {
+      "context": "आपके पास कितनी डेटा जरूरत है",
+      "requested_bucket": "short",
+      "text": "दो जीबी"
+    },
+    {
+      "context": "क्या आप घर में इंटरनेट भी लेना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "नहीं"
+    },
+    {
+      "context": "प्लान में कॉलिंग की लिमिट चाहिए कितनी",
+      "requested_bucket": "short",
+      "text": "अनलिमिटेड"
+    },
+    {
+      "context": "क्या आप रिचार्ज अमाउंट का पता लगाना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ"
+    },
+    {
+      "context": "क्या आपको एसएमएस प्लान भी चाहिए",
+      "requested_bucket": "short",
+      "text": "नहीं"
+    },
+    {
+      "context": "क्या आपके अकाउंट में बैलेंस है",
+      "requested_bucket": "short",
+      "text": "१५० रुपये"
+    },
+    {
+      "context": "क्या आप नया प्लान कॉन्फर्म करना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "ठीक है"
+    },
+    {
+      "context": "आपको कौन सा नया प्लान डिटेल में बताऊं",
+      "requested_bucket": "medium",
+      "text": "सर कृपया अनलिमिटेड कॉलिंग वाला प्लान समझाइए"
+    },
+    {
+      "context": "जब प्लान बदलेंगे तो किस दिन एक्टिव होगा",
+      "requested_bucket": "medium",
+      "text": "कल तक नया प्लान एक्टिव हो जाएगा सर"
+    },
+    {
+      "context": "क्या आप मंथली या डेली प्लान लेना चाहेंगे",
+      "requested_bucket": "medium",
+      "text": "मंथली प्लान ही ठीक रहेगा ज्यादा बचत होगी"
+    },
+    {
+      "context": "क्या आपके पुराने प्लान का कोई रिफंड मिलेगा",
+      "requested_bucket": "medium",
+      "text": "नहीं सर रिफंड का कोई ऑप्शन नहीं होता"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 4050821332,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: plan_change - wants to change or understand a plan\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"आपका वर्तमान प्लान कौन सा है\",\"reply\":\"माय रिचार्ज प्लस\"},{\"agent_question\":\"क्या आप अपना प्लान बदलना चाहते हैं\",\"reply\":\"हाँ जी\"},{\"agent_question\":\"आपको कौन सा प्लान चाहिए\",\"reply\":\"अन्लिमिटेड कॉल्स वाला\"},{\"agent_question\":\"आप प्लान कब से बदलना चाहते हैं\",\"reply\":\"अभी\"},{\"agent_question\":\"क्या आप नया प्लान तुरंत एक्टिवेट करना चाहते हैं\",\"reply\":\"हां सर\"},{\"agent_question\":\"आपका मोबाइल नंबर बताइए\",\"reply\":\"९८७६५४३२१०\"},{\"agent_question\":\"क्या आप प्रीपेड यूजर हैं\",\"reply\":\"जी हाँ\"},{\"agent_question\":\"आपके पास कितनी डेटा जरूरत है\",\"reply\":\"दो जीबी\"},{\"agent_question\":\"क्या आप घर में इंटरनेट भी लेना चाहते हैं\",\"reply\":\"नहीं\"},{\"agent_question\":\"प्लान में कॉलिंग की लिमिट चाहिए कितनी\",\"reply\":\"अनलिमिटेड\"},{\"agent_question\":\"क्या आप रिचार्ज अमाउंट का पता लगाना चाहते हैं\",\"reply\":\"हाँ\"},{\"agent_question\":\"क्या आपको एसएमएस प्लान भी चाहिए\",\"reply\":\"नहीं\"},{\"agent_question\":\"क्या आपके अकाउंट में बैलेंस है\",\"reply\":\"१५० रुपये\"},{\"agent_question\":\"क्या आप नया प्लान कॉन्फर्म करना चाहते हैं\",\"reply\":\"ठीक है\"}],\"medium\":[{\"agent_question\":\"आपको कौन सा नया प्लान डिटेल में बताऊं\",\"reply\":\"सर कृपया अनलिमिटेड कॉलिंग वाला प्लान समझाइए\"},{\"agent_question\":\"जब प्लान बदलेंगे तो किस दिन एक्टिव होगा\",\"reply\":\"कल तक नया प्लान एक्टिव हो जाएगा सर\"},{\"agent_question\":\"क्या आप मंथली या डेली प्लान लेना चाहेंगे\",\"reply\":\"मंथली प्लान ही ठीक रहेगा ज्यादा बचत होगी\"},{\"agent_question\":\"क्या आपके पुराने प्लान का कोई रिफंड मिलेगा\",\"reply\":\"नहीं सर रिफंड का कोई ऑप्शन नहीं होता\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 495,
+    "output_tokens": 425
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.collections.promise_to_pay.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "promise_to_pay",
+  "items": [
+    {
+      "context": "कब तक भुगतान कर पाएंगे आप",
+      "requested_bucket": "short",
+      "text": "कल तक"
+    },
+    {
+      "context": "आज कितना पैसा जमा कर सकते हैं",
+      "requested_bucket": "short",
+      "text": "पाँच सौ"
+    },
+    {
+      "context": "क्या आप इस हफ्ते payment कर पाएंगे",
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "प्लान बनाकर बताएंगे कब जमा करोगे",
+      "requested_bucket": "short",
+      "text": "अभी नहीं"
+    },
+    {
+      "context": "पैसे भेजे कहां से करने हैं",
+      "requested_bucket": "short",
+      "text": "नेट बैंकिंग से"
+    },
+    {
+      "context": "क्या अभी पेमेंट करोगे",
+      "requested_bucket": "short",
+      "text": "नहीं अभी"
+    },
+    {
+      "context": "अगला पेमेंट कब करोगे",
+      "requested_bucket": "short",
+      "text": "दस तारीख"
+    },
+    {
+      "context": "प्लीज बता सकते हैं कितनी राशि जमा करोगे",
+      "requested_bucket": "short",
+      "text": "तीन हजार"
+    },
+    {
+      "context": "आपका अकाउंट नंबर बता सकते हैं",
+      "requested_bucket": "short",
+      "text": "नहीं सर"
+    },
+    {
+      "context": "इस बार कब तक पेमेंट कर दोगे",
+      "requested_bucket": "short",
+      "text": "अगले हफ्ते"
+    },
+    {
+      "context": "क्या कोई दिक्कत है पेमेंट में",
+      "requested_bucket": "short",
+      "text": "हाँ जी कुछ"
+    },
+    {
+      "context": "अब तो पेमेंट कर देंगे ना",
+      "requested_bucket": "short",
+      "text": "ठीक है"
+    },
+    {
+      "context": "क्या हम कल कॉल करें तो पैसे मिलेंगे",
+      "requested_bucket": "short",
+      "text": "हाँ मिलेंगे"
+    },
+    {
+      "context": "आज पेमेंट की गुड़ ली है क्या",
+      "requested_bucket": "short",
+      "text": "जी हां"
+    },
+    {
+      "context": "कब तक पूरी राशि जमा करने का वादा कर सकते हैं",
+      "requested_bucket": "medium",
+      "text": "अगले सोमवार तक पूरा पैसा जमा कर दिया जाएगा प्लीज"
+    },
+    {
+      "context": "क्या आप ऑनलाइन payment करने में सक्षम हैं अभी",
+      "requested_bucket": "medium",
+      "text": "जी सर अभी फोन पे से पेमेंट कर सकते हैं दोपहर तक"
+    },
+    {
+      "context": "इस महीने की बाकी रकम कब तक देंगे आप",
+      "requested_bucket": "medium",
+      "text": "अगले चार दिन में पैसे भेज दूंगा सर कोई दिक्कत नहीं है"
+    },
+    {
+      "context": "क्या आप पूरा बैलेंस इस महीने अंत तक जमा कर पाएंगे",
+      "requested_bucket": "medium",
+      "text": "हाँ मैडम पूरा पैसा महीने के आखिर तक जमा कर दिया जाएगा"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2760947581,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: promise_to_pay - replies to a payment reminder with a date or amount they will pay\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"कब तक भुगतान कर पाएंगे आप\",\"reply\":\"कल तक\"},{\"agent_question\":\"आज कितना पैसा जमा कर सकते हैं\",\"reply\":\"पाँच सौ\"},{\"agent_question\":\"क्या आप इस हफ्ते payment कर पाएंगे\",\"reply\":\"हाँ जी\"},{\"agent_question\":\"प्लान बनाकर बताएंगे कब जमा करोगे\",\"reply\":\"अभी नहीं\"},{\"agent_question\":\"पैसे भेजे कहां से करने हैं\",\"reply\":\"नेट बैंकिंग से\"},{\"agent_question\":\"क्या अभी पेमेंट करोगे\",\"reply\":\"नहीं अभी\"},{\"agent_question\":\"अगला पेमेंट कब करोगे\",\"reply\":\"दस तारीख\"},{\"agent_question\":\"प्लीज बता सकते हैं कितनी राशि जमा करोगे\",\"reply\":\"तीन हजार\"},{\"agent_question\":\"आपका अकाउंट नंबर बता सकते हैं\",\"reply\":\"नहीं सर\"},{\"agent_question\":\"इस बार कब तक पेमेंट कर दोगे\",\"reply\":\"अगले हफ्ते\"},{\"agent_question\":\"क्या कोई दिक्कत है पेमेंट में\",\"reply\":\"हाँ जी कुछ\"},{\"agent_question\":\"अब तो पेमेंट कर देंगे ना\",\"reply\":\"ठीक है\"},{\"agent_question\":\"क्या हम कल कॉल करें तो पैसे मिलेंगे\",\"reply\":\"हाँ मिलेंगे\"},{\"agent_question\":\"आज पेमेंट की गुड़ ली है क्या\",\"reply\":\"जी हां\"}],\"medium\":[{\"agent_question\":\"कब तक पूरी राशि जमा करने का वादा कर सकते हैं\",\"reply\":\"अगले सोमवार तक पूरा पैसा जमा कर दिया जाएगा प्लीज\"},{\"agent_question\":\"क्या आप ऑनलाइन payment करने में सक्षम हैं अभी\",\"reply\":\"जी सर अभी फोन पे से पेमेंट कर सकते हैं दोपहर तक\"},{\"agent_question\":\"इस महीने की बाकी रकम कब तक देंगे आप\",\"reply\":\"अगले चार दिन में पैसे भेज दूंगा सर कोई दिक्कत नहीं है\"},{\"agent_question\":\"क्या आप पूरा बैलेंस इस महीने अंत तक जमा कर पाएंगे\",\"reply\":\"हाँ मैडम पूरा पैसा महीने के आखिर तक जमा कर दिया जाएगा\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 502,
+    "output_tokens": 415
+  }
+}

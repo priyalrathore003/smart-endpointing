@@ -1,0 +1,142 @@
+{
+  "batch_id": "en.delivery.cod_payment.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "cod_payment",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "not working"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "need help"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "tomorrow"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "card ending 4321"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "delivery tomorrow"
+    },
+    {
+      "context": "Can you tell me the payment method you want to use?",
+      "requested_bucket": "short",
+      "text": "no payment option"
+    },
+    {
+      "context": "Which payment option did you try to select?",
+      "requested_bucket": "short",
+      "text": "cash on delivery"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i tried to pay cash on delivery but it shows error"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you please check if cash on delivery is available in my area"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i want to pay at the door but it keeps asking online payment"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "delivery person didnt take money as i told them cash on delivery"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the website is not accepting cash on delivery as payment method"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i selected cash on delivery but it showed payment failed message"
+    },
+    {
+      "context": "Are you trying to pay cash on delivery or prepaid?",
+      "requested_bucket": "medium",
+      "text": "yes i want to pay after receiving the package"
+    },
+    {
+      "context": "What problem are you facing with cash on delivery?",
+      "requested_bucket": "medium",
+      "text": "the system denied cash on delivery on my order today"
+    },
+    {
+      "context": "Did you get any error message trying to pay cash on delivery?",
+      "requested_bucket": "medium",
+      "text": "i received message that cash on delivery is disabled for my order"
+    },
+    {
+      "context": "Can you provide your pincode to check payment options?",
+      "requested_bucket": "medium",
+      "text": "i want to confirm if cash on delivery is allowed for my pincode"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i was trying to select cash on delivery but it says payment method not available for your location please help"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "my delivery person refused cash payment even though i told him i want to pay cash on delivery at the time of delivery"
+    },
+    {
+      "context": "Can you explain what happened when you tried to pay cash on delivery?",
+      "requested_bucket": "long",
+      "text": "i tried paying cash on delivery but system redirected me to prepaid option what can be done now"
+    },
+    {
+      "context": "What issue are you facing when trying to pay cash on delivery?",
+      "requested_bucket": "long",
+      "text": "when i place order it shows cash on delivery as option but on checkout it does not accept cash payment"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1347634119,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cod_payment - has a problem with cash on delivery or payment at the door\nLanguage: Indian English, Latin script.\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"not working\"},{\"text\":\"need help\"},{\"text\":\"yes please\"},{\"text\":\"tomorrow\"},{\"text\":\"card ending 4321\"},{\"text\":\"delivery tomorrow\"}],\"short_with_context\":[{\"text\":\"no payment option\",\"context\":\"Can you tell me the payment method you want to use?\"},{\"text\":\"cash on delivery\",\"context\":\"Which payment option did you try to select?\"}],\"medium\":[{\"text\":\"i tried to pay cash on delivery but it shows error\"},{\"text\":\"can you please check if cash on delivery is available in my area\"},{\"text\":\"i want to pay at the door but it keeps asking online payment\"},{\"text\":\"delivery person didnt take money as i told them cash on delivery\"},{\"text\":\"the website is not accepting cash on delivery as payment method\"},{\"text\":\"i selected cash on delivery but it showed payment failed message\"}],\"medium_with_context\":[{\"text\":\"yes i want to pay after receiving the package\",\"context\":\"Are you trying to pay cash on delivery or prepaid?\"},{\"text\":\"the system denied cash on delivery on my order today\",\"context\":\"What problem are you facing with cash on delivery?\"},{\"text\":\"i received message that cash on delivery is disabled for my order\",\"context\":\"Did you get any error message trying to pay cash on delivery?\"},{\"text\":\"i want to confirm if cash on delivery is allowed for my pincode\",\"context\":\"Can you provide your pincode to check payment options?\"}],\"long\":[{\"text\":\"i was trying to select cash on delivery but it says payment method not available for your location please help\"},{\"text\":\"my delivery person refused cash payment even though i told him i want to pay cash on delivery at the time of delivery\"}],\"long_with_context\":[{\"text\":\"i tried paying cash on delivery but system redirected me to prepaid option what can be done now\",\"context\":\"Can you explain what happened when you tried to pay cash on delivery?\"},{\"text\":\"when i place order it shows cash on delivery as option but on checkout it does not accept cash payment\",\"context\":\"What issue are you facing when trying to pay cash on delivery?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 562,
+    "output_tokens": 432
+  }
+}

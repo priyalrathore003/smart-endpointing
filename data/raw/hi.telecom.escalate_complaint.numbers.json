@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.telecom.escalate_complaint.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "escalate_complaint",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "जल्दी बताओ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "यह अभी तक ठीक नहीं हुआ"
+    },
+    {
+      "context": "क्या आपकी शिकायत समाधान हो गई है?",
+      "requested_bucket": "short",
+      "text": "अभी तक नहीं"
+    },
+    {
+      "context": "क्या आप फिर से अपनी समस्या बताना चाहेंगे?",
+      "requested_bucket": "short",
+      "text": "फिर से शिकायत कर रहा हूँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर पहले बोला था कि नेटवर्क ठीक कर देंगे पर अभी भी दिक्कत है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैडम मेरी कॉल बार बार कट जाती है और इंटरनेट बिल्कुल काम नहीं करता"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "क्या ये रिफंड का काम होगा या फिर मुझे चिल्लाना पड़ेगा फिर से"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैंने दस दिन पहले शिकायत की थी उसके बाद से कोई कॉल भी नहीं आया"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "कस्टमर केयर को कई बार जॉब किया लेकिन कोई फायदा नहीं हुआ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे फोन नंबर दर्ज करवाना है जिसकी शिकायत दर्ज कराई है"
+    },
+    {
+      "context": "आपकी समस्या कितनी गंभीर है जिससे हम समझ सकें?",
+      "requested_bucket": "medium",
+      "text": "प्लीज़ जल्दी करें वरना मैं कंपनी बदल लूंगा"
+    },
+    {
+      "context": "क्या आप अपने अकाउंट नंबर बताना चाहेंगे?",
+      "requested_bucket": "medium",
+      "text": "मेरे अकाउंट में जो कॉल रिकार्ड हुई है सब गलत दिख रही हैं"
+    },
+    {
+      "context": "आपके रिफंड के बारे में जानकारी चाहिए क्या?",
+      "requested_bucket": "medium",
+      "text": "मुझे ५०० रुपये का रिफंड कब मिलेगा ये समझाइए"
+    },
+    {
+      "context": "आपकी शिकायत की प्रगति के संबंध में क्या जानना चाहते हैं?",
+      "requested_bucket": "medium",
+      "text": "क्या आप मुझे मेरे प्रोसेस की स्टेटस बता सकते हैं अभी तक"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मुझे लगता है कि आपके सिस्टम में कुछ गड़बड़ है क्योंकि मैंने कई बार कॉल किया लेकिन कोई भी सही जवाब नहीं मिला"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "अगर तीन दिन के अंदर मेरी शिकायत का समाधान नहीं हुआ तो मैं फिर से उच्च अधिकारियों से बात करूंगा यह बात याद रखिए"
+    },
+    {
+      "context": "आपकी शिकायत कब दर्ज कराई गई थी बताइए?",
+      "requested_bucket": "long",
+      "text": "मैंने शिकायत दर्ज कराई थी पांच दिन पहले लेकिन अभी भी मुझे कोई कॉल बैक नहीं मिला"
+    },
+    {
+      "context": "आपको अपनी शिकायत के लंबित रहने पर क्या कहना है?",
+      "requested_bucket": "long",
+      "text": "कृपया मेरी शिकायत अब तक क्यों लंबित है मैं रोजाना परेशान हो रहा हूँ"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3966188177,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: escalate_complaint - is unhappy that an earlier complaint was not solved and wants escalation\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"जल्दी बताओ\"},{\"text\":\"यह अभी तक ठीक नहीं हुआ\"}],\"short_with_context\":[{\"text\":\"अभी तक नहीं\",\"context\":\"क्या आपकी शिकायत समाधान हो गई है?\"},{\"text\":\"फिर से शिकायत कर रहा हूँ\",\"context\":\"क्या आप फिर से अपनी समस्या बताना चाहेंगे?\"}],\"medium\":[{\"text\":\"सर पहले बोला था कि नेटवर्क ठीक कर देंगे पर अभी भी दिक्कत है\"},{\"text\":\"मैडम मेरी कॉल बार बार कट जाती है और इंटरनेट बिल्कुल काम नहीं करता\"},{\"text\":\"क्या ये रिफंड का काम होगा या फिर मुझे चिल्लाना पड़ेगा फिर से\"},{\"text\":\"मैंने दस दिन पहले शिकायत की थी उसके बाद से कोई कॉल भी नहीं आया\"},{\"text\":\"कस्टमर केयर को कई बार जॉब किया लेकिन कोई फायदा नहीं हुआ\"},{\"text\":\"मुझे फोन नंबर दर्ज करवाना है जिसकी शिकायत दर्ज कराई है\"}],\"medium_with_context\":[{\"text\":\"प्लीज़ जल्दी करें वरना मैं कंपनी बदल लूंगा\",\"context\":\"आपकी समस्या कितनी गंभीर है जिससे हम समझ सकें?\"},{\"text\":\"मेरे अकाउंट में जो कॉल रिकार्ड हुई है सब गलत दिख रही हैं\",\"context\":\"क्या आप अपने अकाउंट नंबर बताना चाहेंगे?\"},{\"text\":\"मुझे ५०० रुपये का रिफंड कब मिलेगा ये समझाइए\",\"context\":\"आपके रिफंड के बारे में जानकारी चाहिए क्या?\"},{\"text\":\"क्या आप मुझे मेरे प्रोसेस की स्टेटस बता सकते हैं अभी तक\",\"context\":\"आपकी शिकायत की प्रगति के संबंध में क्या जानना चाहते हैं?\"}],\"long\":[{\"text\":\"मुझे लगता है कि आपके सिस्टम में कुछ गड़बड़ है क्योंकि मैंने कई बार कॉल किया लेकिन कोई भी सही जवाब नहीं मिला\"},{\"text\":\"अगर तीन दिन के अंदर मेरी शिकायत का समाधान नहीं हुआ तो मैं फिर से उच्च अधिकारियों से बात करूंगा यह बात याद रखिए\"}],\"long_with_context\":[{\"text\":\"मैंने शिकायत दर्ज कराई थी पांच दिन पहले लेकिन अभी भी मुझे कोई कॉल बैक नहीं मिला\",\"context\":\"आपकी शिकायत कब दर्ज कराई गई थी बताइए?\"},{\"text\":\"कृपया मेरी शिकायत अब तक क्यों लंबित है मैं रोजाना परेशान हो रहा हूँ\",\"context\":\"आपको अपनी शिकायत के लंबित रहने पर क्या कहना है?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 716,
+    "output_tokens": 480
+  }
+}

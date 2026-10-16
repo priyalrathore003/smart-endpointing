@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.delivery.wrong_or_damaged.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "delivery",
+  "intent": "wrong_or_damaged",
+  "items": [
+    {
+      "context": "Can you tell me what item you received?",
+      "requested_bucket": "short",
+      "text": "I got a steel plate"
+    },
+    {
+      "context": "Is the item damaged or wrong?",
+      "requested_bucket": "short",
+      "text": "It is damaged"
+    },
+    {
+      "context": "Did you receive the order today?",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Can you share your order ID please?",
+      "requested_bucket": "short",
+      "text": "It is 456789"
+    },
+    {
+      "context": "Do you want a replacement or refund?",
+      "requested_bucket": "short",
+      "text": "Replacement please"
+    },
+    {
+      "context": "Where is the item right now?",
+      "requested_bucket": "short",
+      "text": "At home"
+    },
+    {
+      "context": "Have you checked the package thoroughly?",
+      "requested_bucket": "short",
+      "text": "Yes I did"
+    },
+    {
+      "context": "Can you describe the damage?",
+      "requested_bucket": "short",
+      "text": "The glass is broken"
+    },
+    {
+      "context": "Is the wrong item sealed or opened?",
+      "requested_bucket": "short",
+      "text": "It is opened"
+    },
+    {
+      "context": "Did you receive all items in your order?",
+      "requested_bucket": "short",
+      "text": "No one item missing"
+    },
+    {
+      "context": "Are you available for a pickup tomorrow?",
+      "requested_bucket": "short",
+      "text": "Tomorrow afternoon"
+    },
+    {
+      "context": "Have you tried contacting the delivery person?",
+      "requested_bucket": "short",
+      "text": "No I have not"
+    },
+    {
+      "context": "What color was the item you received?",
+      "requested_bucket": "short",
+      "text": "It was blue"
+    },
+    {
+      "context": "Can you send a photo of the product?",
+      "requested_bucket": "short",
+      "text": "I will send now"
+    },
+    {
+      "context": "When did you receive the wrong or damaged item?",
+      "requested_bucket": "medium",
+      "text": "I received it yesterday evening around 7 pm"
+    },
+    {
+      "context": "Can you explain what is wrong with the product?",
+      "requested_bucket": "medium",
+      "text": "The battery does not charge even after plugging in"
+    },
+    {
+      "context": "What is your preferred resolution for this issue?",
+      "requested_bucket": "medium",
+      "text": "I would like a full refund if possible please"
+    },
+    {
+      "context": "Have you received similar incorrect items before?",
+      "requested_bucket": "medium",
+      "text": "No this is the first time it happened to me"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1825489297,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: wrong_or_damaged - received a wrong or damaged item\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Can you tell me what item you received?\",\"reply\":\"I got a steel plate\"},{\"agent_question\":\"Is the item damaged or wrong?\",\"reply\":\"It is damaged\"},{\"agent_question\":\"Did you receive the order today?\",\"reply\":\"Yes\"},{\"agent_question\":\"Can you share your order ID please?\",\"reply\":\"It is 456789\"},{\"agent_question\":\"Do you want a replacement or refund?\",\"reply\":\"Replacement please\"},{\"agent_question\":\"Where is the item right now?\",\"reply\":\"At home\"},{\"agent_question\":\"Have you checked the package thoroughly?\",\"reply\":\"Yes I did\"},{\"agent_question\":\"Can you describe the damage?\",\"reply\":\"The glass is broken\"},{\"agent_question\":\"Is the wrong item sealed or opened?\",\"reply\":\"It is opened\"},{\"agent_question\":\"Did you receive all items in your order?\",\"reply\":\"No one item missing\"},{\"agent_question\":\"Are you available for a pickup tomorrow?\",\"reply\":\"Tomorrow afternoon\"},{\"agent_question\":\"Have you tried contacting the delivery person?\",\"reply\":\"No I have not\"},{\"agent_question\":\"What color was the item you received?\",\"reply\":\"It was blue\"},{\"agent_question\":\"Can you send a photo of the product?\",\"reply\":\"I will send now\"}],\"medium\":[{\"agent_question\":\"When did you receive the wrong or damaged item?\",\"reply\":\"I received it yesterday evening around 7 pm\"},{\"agent_question\":\"Can you explain what is wrong with the product?\",\"reply\":\"The battery does not charge even after plugging in\"},{\"agent_question\":\"What is your preferred resolution for this issue?\",\"reply\":\"I would like a full refund if possible please\"},{\"agent_question\":\"Have you received similar incorrect items before?\",\"reply\":\"No this is the first time it happened to me\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 366,
+    "output_tokens": 363
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.telecom.roaming.numbers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "telecom",
+  "intent": "roaming",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "activate roaming"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "international roaming"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "national roaming chahiye"
+    },
+    {
+      "context": "Kya aap international roaming activate karna chahte hain?",
+      "requested_bucket": "short",
+      "text": "haan bilkul"
+    },
+    {
+      "context": "Kya aapko apne plan me national roaming add karni hai?",
+      "requested_bucket": "short",
+      "text": "ji han"
+    },
+    {
+      "context": "Kya aap apne current number par roaming activate karna chahte hain?",
+      "requested_bucket": "short",
+      "text": "haa theek hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera number pe international roaming activate kar do please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine agle mahine ke liye national roaming ka plan lena hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap mujhe batayenge ki roaming charges kya honge"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "international roaming ke liye kaun se documents chahiye mujhe"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera phone number hai nine eight seven six five four three two one zero"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main UK ja raha hu to kya mera phone waha bhi chalega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account number two three four five six seven eight nine zero one two"
+    },
+    {
+      "context": "Kya aap mujhe batayenge ki aap kis desh me ja rahe hain?",
+      "requested_bucket": "medium",
+      "text": "haan ji mera sim London jaayega aur roaming chahiye"
+    },
+    {
+      "context": "Mujhe aapka phone number milega?",
+      "requested_bucket": "medium",
+      "text": "mera number par international roaming activate kar dijiye please"
+    },
+    {
+      "context": "Aap Dubai ja rahe hain na, tabhi toh roaming chahiye?",
+      "requested_bucket": "medium",
+      "text": "main Dubai jaana hu aur roaming plan activate karna hai"
+    },
+    {
+      "context": "Kya aap payment mode bata sakte hain?",
+      "requested_bucket": "medium",
+      "text": "mere account se paise kat kar roaming activate karo"
+    },
+    {
+      "context": "Kya aapko apne current plan me national roaming add karni hai?",
+      "requested_bucket": "medium",
+      "text": "kya aap mujhe national roaming ka plan details bhej sakte hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main agle hafte India se bahar ja raha hu to mera international roaming activate karwa dena"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera account number two three four five six seven eight nine zero one two hai aur mujhe turant roaming chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera phone mein sim inserted hai number eight seven six five four three two one zero nine eight aur roaming enable karna hai"
+    },
+    {
+      "context": "Aap kis desh me international roaming activate karwana chahenge?",
+      "requested_bucket": "long",
+      "text": "ji sir main apna international roaming activate karwana chahta hu Switzerland ke trip ke liye"
+    },
+    {
+      "context": "Kya aap apne national roaming ki request confirm kar sakte hain?",
+      "requested_bucket": "long",
+      "text": "bilkul sir mujhe apne Delhi number par national roaming activate karwana hai aap help karenge?"
+    },
+    {
+      "context": "Kya aap apna phone number confirm kar sakte hain taaki main activate karu?",
+      "requested_bucket": "long",
+      "text": "mera phone number nine eight seven six five four three two one zero hai aur mujhe turant roaming activate karna hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 187356025,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: roaming - wants to activate international or national roaming\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"activate roaming\"},{\"text\":\"international roaming\"},{\"text\":\"national roaming chahiye\"}],\"short_with_context\":[{\"text\":\"haan bilkul\",\"context\":\"Kya aap international roaming activate karna chahte hain?\"},{\"text\":\"ji han\",\"context\":\"Kya aapko apne plan me national roaming add karni hai?\"},{\"text\":\"haa theek hai\",\"context\":\"Kya aap apne current number par roaming activate karna chahte hain?\"}],\"medium\":[{\"text\":\"mera number pe international roaming activate kar do please\"},{\"text\":\"maine agle mahine ke liye national roaming ka plan lena hai\"},{\"text\":\"kya aap mujhe batayenge ki roaming charges kya honge\"},{\"text\":\"international roaming ke liye kaun se documents chahiye mujhe\"},{\"text\":\"mera phone number hai nine eight seven six five four three two one zero\"},{\"text\":\"main UK ja raha hu to kya mera phone waha bhi chalega\"},{\"text\":\"mera account number two three four five six seven eight nine zero one two\"}],\"medium_with_context\":[{\"text\":\"haan ji mera sim London jaayega aur roaming chahiye\",\"context\":\"Kya aap mujhe batayenge ki aap kis desh me ja rahe hain?\"},{\"text\":\"mera number par international roaming activate kar dijiye please\",\"context\":\"Mujhe aapka phone number milega?\"},{\"text\":\"main Dubai jaana hu aur roaming plan activate karna hai\",\"context\":\"Aap Dubai ja rahe hain na, tabhi toh roaming chahiye?\"},{\"text\":\"mere account se paise kat kar roaming activate karo\",\"context\":\"Kya aap payment mode bata sakte hain?\"},{\"text\":\"kya aap mujhe national roaming ka plan details bhej sakte hain\",\"context\":\"Kya aapko apne current plan me national roaming add karni hai?\"}],\"long\":[{\"text\":\"main agle hafte India se bahar ja raha hu to mera international roaming activate karwa dena\"},{\"text\":\"mera account number two three four five six seven eight nine zero one two hai aur mujhe turant roaming chahiye\"},{\"text\":\"mera phone mein sim inserted hai number eight seven six five four three two one zero nine eight aur roaming enable karna hai\"}],\"long_with_context\":[{\"text\":\"ji sir main apna international roaming activate karwana chahta hu Switzerland ke trip ke liye\",\"context\":\"Aap kis desh me international roaming activate karwana chahenge?\"},{\"text\":\"bilkul sir mujhe apne Delhi number par national roaming activate karwana hai aap help karenge?\",\"context\":\"Kya aap apne national roaming ki request confirm kar sakte hain?\"},{\"text\":\"mera phone number nine eight seven six five four three two one zero hai aur mujhe turant roaming activate karna hai\",\"context\":\"Kya aap apna phone number confirm kar sakte hain taaki main activate karu?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 604,
+    "output_tokens": 619
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.delivery.change_address.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "delivery",
+  "intent": "change_address",
+  "items": [
+    {
+      "context": "नया पता बताइए",
+      "requested_bucket": "short",
+      "text": "मलाड वेस्ट"
+    },
+    {
+      "context": "क्या आपका नंबर वही है",
+      "requested_bucket": "short",
+      "text": "हाँ जी वही है"
+    },
+    {
+      "context": "आप किस दिन डिलीवरी चाहते हैं",
+      "requested_bucket": "short",
+      "text": "कल सुबह"
+    },
+    {
+      "context": "क्या आप landmark बदलना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ बदलना है"
+    },
+    {
+      "context": "डिलीवरी टाइम क्या होगा",
+      "requested_bucket": "short",
+      "text": "शाम को आठ बजे"
+    },
+    {
+      "context": "क्या आपको parcel मिला था पहले",
+      "requested_bucket": "short",
+      "text": "नहीं अभी मैगज़ीन है"
+    },
+    {
+      "context": "क्या आप address में फ्लैट नंबर जोड़ेंगे",
+      "requested_bucket": "short",
+      "text": "हाँ जरूर"
+    },
+    {
+      "context": "ठीक है मैं नोट करता हूँ",
+      "requested_bucket": "short",
+      "text": "ठीक है सर"
+    },
+    {
+      "context": "हम रजिस्टर नंबर ले सकते हैं",
+      "requested_bucket": "short",
+      "text": "नहीं चाहिए"
+    },
+    {
+      "context": "आपका पुराना पता क्या था",
+      "requested_bucket": "short",
+      "text": "वीरेनडस टावर"
+    },
+    {
+      "context": "कोई अन्य instruction देना है",
+      "requested_bucket": "short",
+      "text": "नहीं अभी नहीं"
+    },
+    {
+      "context": "क्या आप COD payment करेंगे",
+      "requested_bucket": "short",
+      "text": "नहीं prepaid है"
+    },
+    {
+      "context": "डिलीवरी पर कौन मिलेगा",
+      "requested_bucket": "short",
+      "text": "मैं खुद"
+    },
+    {
+      "context": "address जल्दी confirm करदेंगे",
+      "requested_bucket": "short",
+      "text": "हाँ जी तुरंत"
+    },
+    {
+      "context": "पता विस्तार से बताइए",
+      "requested_bucket": "medium",
+      "text": "हमारा नया पता कमला मिल अपार्टमेंट नंबर 302"
+    },
+    {
+      "context": "landmark क्या होगा नया",
+      "requested_bucket": "medium",
+      "text": "पास में बड़ा मॉल है उसके सामने"
+    },
+    {
+      "context": "address change क्यों किया है",
+      "requested_bucket": "medium",
+      "text": "पहले वाले पते पर कोई नहीं मिलता था"
+    },
+    {
+      "context": "कब तक डिलीवरी चाहिए आपको",
+      "requested_bucket": "medium",
+      "text": "कल दोपहर तक कर देना प्लीज़"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3434454032,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: change_address - wants to change the delivery address or landmark\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"नया पता बताइए\",\"reply\":\"मलाड वेस्ट\"},{\"agent_question\":\"क्या आपका नंबर वही है\",\"reply\":\"हाँ जी वही है\"},{\"agent_question\":\"आप किस दिन डिलीवरी चाहते हैं\",\"reply\":\"कल सुबह\"},{\"agent_question\":\"क्या आप landmark बदलना चाहते हैं\",\"reply\":\"हाँ बदलना है\"},{\"agent_question\":\"डिलीवरी टाइम क्या होगा\",\"reply\":\"शाम को आठ बजे\"},{\"agent_question\":\"क्या आपको parcel मिला था पहले\",\"reply\":\"नहीं अभी मैगज़ीन है\"},{\"agent_question\":\"क्या आप address में फ्लैट नंबर जोड़ेंगे\",\"reply\":\"हाँ जरूर\"},{\"agent_question\":\"ठीक है मैं नोट करता हूँ\",\"reply\":\"ठीक है सर\"},{\"agent_question\":\"हम रजिस्टर नंबर ले सकते हैं\",\"reply\":\"नहीं चाहिए\"},{\"agent_question\":\"आपका पुराना पता क्या था\",\"reply\":\"वीरेनडस टावर\"},{\"agent_question\":\"कोई अन्य instruction देना है\",\"reply\":\"नहीं अभी नहीं\"},{\"agent_question\":\"क्या आप COD payment करेंगे\",\"reply\":\"नहीं prepaid है\"},{\"agent_question\":\"डिलीवरी पर कौन मिलेगा\",\"reply\":\"मैं खुद\"},{\"agent_question\":\"address जल्दी confirm करदेंगे\",\"reply\":\"हाँ जी तुरंत\"}],\"medium\":[{\"agent_question\":\"पता विस्तार से बताइए\",\"reply\":\"हमारा नया पता कमला मिल अपार्टमेंट नंबर 302\"},{\"agent_question\":\"landmark क्या होगा नया\",\"reply\":\"पास में बड़ा मॉल है उसके सामने\"},{\"agent_question\":\"address change क्यों किया है\",\"reply\":\"पहले वाले पते पर कोई नहीं मिलता था\"},{\"agent_question\":\"कब तक डिलीवरी चाहिए आपको\",\"reply\":\"कल दोपहर तक कर देना प्लीज़\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 496,
+    "output_tokens": 351
+  }
+}

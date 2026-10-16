@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.delivery.cod_payment.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "delivery",
+  "intent": "cod_payment",
+  "items": [
+    {
+      "context": "पैसे कब देने थे आपको",
+      "requested_bucket": "short",
+      "text": "आज देना था"
+    },
+    {
+      "context": "कैश ऑन डिलीवरी है कि कार्ड से",
+      "requested_bucket": "short",
+      "text": "कैश ऑन डिलीवरी है"
+    },
+    {
+      "context": "पैसे रीफंड चाहिए क्या",
+      "requested_bucket": "short",
+      "text": "हाँ चाहिए"
+    },
+    {
+      "context": "पैसा आपने दिया था या नहीं",
+      "requested_bucket": "short",
+      "text": "अभी नहीं दिया"
+    },
+    {
+      "context": "कोई दूसरी payment method चाहिए",
+      "requested_bucket": "short",
+      "text": "नहीं चाहिए"
+    },
+    {
+      "context": "डिलीवरी कब करनी है",
+      "requested_bucket": "short",
+      "text": "कल करनी है"
+    },
+    {
+      "context": "पैसे पास कौन देगा",
+      "requested_bucket": "short",
+      "text": "मैं ही दूंगा"
+    },
+    {
+      "context": "मुझे ऑर्डर नंबर बताइए",
+      "requested_bucket": "short",
+      "text": "1234567"
+    },
+    {
+      "context": "पैसा कितना हुआ कुल",
+      "requested_bucket": "short",
+      "text": "पाँच सौ रुपए"
+    },
+    {
+      "context": "डिलीवरी एजेंट कोई प्रॉब्लम तो नहीं था",
+      "requested_bucket": "short",
+      "text": "नहीं था"
+    },
+    {
+      "context": "क्या घर पर कोई था जब डिलीवरी आई",
+      "requested_bucket": "short",
+      "text": "हाँ जी था"
+    },
+    {
+      "context": "पैमेंट जबरदस्ती नहीं करनी तो",
+      "requested_bucket": "short",
+      "text": "ठीक है"
+    },
+    {
+      "context": "पैसा कन्फर्म करवा लूं",
+      "requested_bucket": "short",
+      "text": "कन्फर्म करो"
+    },
+    {
+      "context": "पैसे जल्दी वापस चाहिए तो",
+      "requested_bucket": "short",
+      "text": "कल तक मिलेगा"
+    },
+    {
+      "context": "क्यों पैसे दे पाने में दिक्कत हो रही है",
+      "requested_bucket": "medium",
+      "text": "सर अभी पैसे साथ नहीं हैं इसलिए दे नहीं पा रहा हूँ"
+    },
+    {
+      "context": "क्या आप कार्ड से पेमेंट करना चाहेंगे",
+      "requested_bucket": "medium",
+      "text": "अभी कार्ड साथ नहीं है इसलिए बाद में करना होगा"
+    },
+    {
+      "context": "डिलीवरी पर्सल कब तक मिलेगा आपको",
+      "requested_bucket": "medium",
+      "text": "कल तक घर पर मिल जाएगा कोई दिक्कत नहीं होगी"
+    },
+    {
+      "context": "पैसा वापस लेने में कितना समय लगेगा आपको",
+      "requested_bucket": "medium",
+      "text": "दो से तीन दिन में पैसा वापस मिल जाएगा सर"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3173641406,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cod_payment - has a problem with cash on delivery or payment at the door\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"पैसे कब देने थे आपको\",\"reply\":\"आज देना था\"},{\"agent_question\":\"कैश ऑन डिलीवरी है कि कार्ड से\",\"reply\":\"कैश ऑन डिलीवरी है\"},{\"agent_question\":\"पैसे रीफंड चाहिए क्या\",\"reply\":\"हाँ चाहिए\"},{\"agent_question\":\"पैसा आपने दिया था या नहीं\",\"reply\":\"अभी नहीं दिया\"},{\"agent_question\":\"कोई दूसरी payment method चाहिए\",\"reply\":\"नहीं चाहिए\"},{\"agent_question\":\"डिलीवरी कब करनी है\",\"reply\":\"कल करनी है\"},{\"agent_question\":\"पैसे पास कौन देगा\",\"reply\":\"मैं ही दूंगा\"},{\"agent_question\":\"मुझे ऑर्डर नंबर बताइए\",\"reply\":\"1234567\"},{\"agent_question\":\"पैसा कितना हुआ कुल\",\"reply\":\"पाँच सौ रुपए\"},{\"agent_question\":\"डिलीवरी एजेंट कोई प्रॉब्लम तो नहीं था\",\"reply\":\"नहीं था\"},{\"agent_question\":\"क्या घर पर कोई था जब डिलीवरी आई\",\"reply\":\"हाँ जी था\"},{\"agent_question\":\"पैमेंट जबरदस्ती नहीं करनी तो\",\"reply\":\"ठीक है\"},{\"agent_question\":\"पैसा कन्फर्म करवा लूं\",\"reply\":\"कन्फर्म करो\"},{\"agent_question\":\"पैसे जल्दी वापस चाहिए तो\",\"reply\":\"कल तक मिलेगा\"}],\"medium\":[{\"agent_question\":\"क्यों पैसे दे पाने में दिक्कत हो रही है\",\"reply\":\"सर अभी पैसे साथ नहीं हैं इसलिए दे नहीं पा रहा हूँ\"},{\"agent_question\":\"क्या आप कार्ड से पेमेंट करना चाहेंगे\",\"reply\":\"अभी कार्ड साथ नहीं है इसलिए बाद में करना होगा\"},{\"agent_question\":\"डिलीवरी पर्सल कब तक मिलेगा आपको\",\"reply\":\"कल तक घर पर मिल जाएगा कोई दिक्कत नहीं होगी\"},{\"agent_question\":\"पैसा वापस लेने में कितना समय लगेगा आपको\",\"reply\":\"दो से तीन दिन में पैसा वापस मिल जाएगा सर\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 500,
+    "output_tokens": 391
+  }
+}

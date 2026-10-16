@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.delivery.wrong_or_damaged.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "wrong_or_damaged",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yeh galat hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "damage ho gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahin yeh sahi nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "pakka nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "bhool gaye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "sahi product bhejo"
+    },
+    {
+      "context": "Please confirm if you received the correct item?",
+      "requested_bucket": "short",
+      "text": "nahi yeh sahi nahi"
+    },
+    {
+      "context": "Is the item damaged or wrong?",
+      "requested_bucket": "short",
+      "text": "damage ho gaya"
+    },
+    {
+      "context": "What can we do to resolve this issue for you?",
+      "requested_bucket": "short",
+      "text": "jaldi fix karo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Maine jo mobile order kiya tha woh bilkul alag aaya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Kal hi order kiya tha phone case par yeh cracked hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Mujhe galat product mila hai mera address delhi mein hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Order number 4532 ka lipstick bilkul chhota aur damaged hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Maine Vishal Nagar Mumbai me order kiya tha par saman match nahi karta"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Nayi car battery mangayi thi par purani aur kharaab battery aa gayi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Parcel open kiya to andar ka item pura tutcha hua tha jaisan ki gir gaya ho"
+    },
+    {
+      "context": "Could you please tell me what exactly is wrong with your order?",
+      "requested_bucket": "medium",
+      "text": "Maine order diya tha cotton shirt par synthetic shirt mila hai"
+    },
+    {
+      "context": "When did you receive the delivery?",
+      "requested_bucket": "medium",
+      "text": "Order aaj subah mila par content galat hai jisme mera naam bhi nahi tha"
+    },
+    {
+      "context": "Can you describe the problem with the item you received?",
+      "requested_bucket": "medium",
+      "text": "Bilkul alag product bheja gaya hai instead of headphones ek charger aya hai"
+    },
+    {
+      "context": "What product did you order, and what did you get instead?",
+      "requested_bucket": "medium",
+      "text": "Maine red color book manga tha par black color aaya hai meri address lekar check karo"
+    },
+    {
+      "context": "Please provide the order number and issue details.",
+      "requested_bucket": "medium",
+      "text": "Mere order number 9821 mein jo external hard drive aayi hai woh damage hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Main Rahul Singh hoon aur maine apne ghar ke liye Mumbai mein 15 April ko order kiya tha lekin delivery mein galti ho gayi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Jab mera parcel Kali Dilli ke address se aaya toh laptop ke jagah mujhe ek tablet mila jo ki mujhe chahiye nahi tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Main Priya Sharma Kolkata se bol rahi hoon mera order address pe theek se deliver nahi hua aur jo bhi product mila woh pura kharab tha"
+    },
+    {
+      "context": "Can you confirm your delivery location and product issue details once more?",
+      "requested_bucket": "long",
+      "text": "Maine aapko pehle bataya tha ki mera order Mumbai me deliver hua tha par product damage tha thoda fast replacement chahiye"
+    },
+    {
+      "context": "Please provide your name and explain the issue with the received product.",
+      "requested_bucket": "long",
+      "text": "Main Neha Kapoor hoon aur main Delhi se hu maine ek dress order ki thi lekin galat size aaya hai aur thoda phat hua bhi hai"
+    },
+    {
+      "context": "Could you please tell me your order number and describe the problem you're facing with the delivery?",
+      "requested_bucket": "long",
+      "text": "Order number 112233 ke under jo sofa mujhe 5 din pehle mila woh purana aur damage condition mein hai main iska replacement chahti hoon"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 751315367,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: wrong_or_damaged - received a wrong or damaged item\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"yeh galat hai\"},{\"text\":\"damage ho gaya\"},{\"text\":\"nahin yeh sahi nahi\"},{\"text\":\"pakka nahi\"},{\"text\":\"bhool gaye\"},{\"text\":\"sahi product bhejo\"}],\"short_with_context\":[{\"text\":\"nahi yeh sahi nahi\",\"context\":\"Please confirm if you received the correct item?\"},{\"text\":\"damage ho gaya\",\"context\":\"Is the item damaged or wrong?\"},{\"text\":\"jaldi fix karo\",\"context\":\"What can we do to resolve this issue for you?\"}],\"medium\":[{\"text\":\"Maine jo mobile order kiya tha woh bilkul alag aaya hai\"},{\"text\":\"Kal hi order kiya tha phone case par yeh cracked hai\"},{\"text\":\"Mujhe galat product mila hai mera address delhi mein hai\"},{\"text\":\"Order number 4532 ka lipstick bilkul chhota aur damaged hai\"},{\"text\":\"Maine Vishal Nagar Mumbai me order kiya tha par saman match nahi karta\"},{\"text\":\"Nayi car battery mangayi thi par purani aur kharaab battery aa gayi hai\"},{\"text\":\"Parcel open kiya to andar ka item pura tutcha hua tha jaisan ki gir gaya ho\"}],\"medium_with_context\":[{\"text\":\"Maine order diya tha cotton shirt par synthetic shirt mila hai\",\"context\":\"Could you please tell me what exactly is wrong with your order?\"},{\"text\":\"Order aaj subah mila par content galat hai jisme mera naam bhi nahi tha\",\"context\":\"When did you receive the delivery?\"},{\"text\":\"Bilkul alag product bheja gaya hai instead of headphones ek charger aya hai\",\"context\":\"Can you describe the problem with the item you received?\"},{\"text\":\"Maine red color book manga tha par black color aaya hai meri address lekar check karo\",\"context\":\"What product did you order, and what did you get instead?\"},{\"text\":\"Mere order number 9821 mein jo external hard drive aayi hai woh damage hai\",\"context\":\"Please provide the order number and issue details.\"}],\"long\":[{\"text\":\"Main Rahul Singh hoon aur maine apne ghar ke liye Mumbai mein 15 April ko order kiya tha lekin delivery mein galti ho gayi hai\"},{\"text\":\"Jab mera parcel Kali Dilli ke address se aaya toh laptop ke jagah mujhe ek tablet mila jo ki mujhe chahiye nahi tha\"},{\"text\":\"Main Priya Sharma Kolkata se bol rahi hoon mera order address pe theek se deliver nahi hua aur jo bhi product mila woh pura kharab tha\"}],\"long_with_context\":[{\"text\":\"Maine aapko pehle bataya tha ki mera order Mumbai me deliver hua tha par product damage tha thoda fast replacement chahiye\",\"context\":\"Can you confirm your delivery location and product issue details once more?\"},{\"text\":\"Main Neha Kapoor hoon aur main Delhi se hu maine ek dress order ki thi lekin galat size aaya hai aur thoda phat hua bhi hai\",\"context\":\"Please provide your name and explain the issue with the received product.\"},{\"text\":\"Order number 112233 ke under jo sofa mujhe 5 din pehle mila woh purana aur damage condition mein hai main iska replacement chahti hoon\",\"context\":\"Could you please tell me your order number and describe the problem you're facing with the delivery?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 587,
+    "output_tokens": 696
+  }
+}

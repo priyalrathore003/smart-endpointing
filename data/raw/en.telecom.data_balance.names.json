@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.telecom.data_balance.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "data_balance",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "how much data left"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "validity details please"
+    },
+    {
+      "context": "Can you please tell me your city name for the account?",
+      "requested_bucket": "short",
+      "text": "hyderabad"
+    },
+    {
+      "context": "May I have your full name please?",
+      "requested_bucket": "short",
+      "text": "john smith"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you tell me my remaining data balance for this month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i want to know how many gb of data is left till next recharge"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please check my data validity and remaining balance for this connection"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "could you provide the expiry date of my data pack currently active"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "how much data is still available on my number ending with 5621"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can i get information on when my data plan will expire exactly"
+    },
+    {
+      "context": "Please provide your phone number to check your data balance",
+      "requested_bucket": "medium",
+      "text": "my number is 9876543210 can you check remaining data balance"
+    },
+    {
+      "context": "Where are you located currently for accurate data information?",
+      "requested_bucket": "medium",
+      "text": "i am in chandigarh what is the remaining data on this sim"
+    },
+    {
+      "context": "Could you specify your city for checking the data pack validity?",
+      "requested_bucket": "medium",
+      "text": "please tell me validity of my current data plan in delhi"
+    },
+    {
+      "context": "Please confirm your full name for account verification",
+      "requested_bucket": "medium",
+      "text": "my name is anita verma please check how much data i have left"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "my name is rahul from mumbai can you please tell me how many gb of data i have left including the bonus data"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i recharged on 15th april with the monthly plan so please tell me the exact date my data will expire this month"
+    },
+    {
+      "context": "Could you provide details about your last recharge for checking data balance?",
+      "requested_bucket": "long",
+      "text": "i recharged my sim last week with the new data pack so how much data is remaining now including rollover data"
+    },
+    {
+      "context": "Please specify your location and number details to provide data validity information",
+      "requested_bucket": "long",
+      "text": "what is the validity of the current data pack on my number as i live in bengaluru and need to know expiry date"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2595275481,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: data_balance - asks how much data or validity is left\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"how much data left\"},{\"text\":\"validity details please\"}],\"short_with_context\":[{\"text\":\"hyderabad\",\"context\":\"Can you please tell me your city name for the account?\"},{\"text\":\"john smith\",\"context\":\"May I have your full name please?\"}],\"medium\":[{\"text\":\"can you tell me my remaining data balance for this month\"},{\"text\":\"i want to know how many gb of data is left till next recharge\"},{\"text\":\"please check my data validity and remaining balance for this connection\"},{\"text\":\"could you provide the expiry date of my data pack currently active\"},{\"text\":\"how much data is still available on my number ending with 5621\"},{\"text\":\"can i get information on when my data plan will expire exactly\"}],\"medium_with_context\":[{\"text\":\"my number is 9876543210 can you check remaining data balance\",\"context\":\"Please provide your phone number to check your data balance\"},{\"text\":\"i am in chandigarh what is the remaining data on this sim\",\"context\":\"Where are you located currently for accurate data information?\"},{\"text\":\"please tell me validity of my current data plan in delhi\",\"context\":\"Could you specify your city for checking the data pack validity?\"},{\"text\":\"my name is anita verma please check how much data i have left\",\"context\":\"Please confirm your full name for account verification\"}],\"long\":[{\"text\":\"my name is rahul from mumbai can you please tell me how many gb of data i have left including the bonus data\"},{\"text\":\"i recharged on 15th april with the monthly plan so please tell me the exact date my data will expire this month\"}],\"long_with_context\":[{\"text\":\"i recharged my sim last week with the new data pack so how much data is remaining now including rollover data\",\"context\":\"Could you provide details about your last recharge for checking data balance?\"},{\"text\":\"what is the validity of the current data pack on my number as i live in bengaluru and need to know expiry date\",\"context\":\"Please specify your location and number details to provide data validity information\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 567,
+    "output_tokens": 431
+  }
+}

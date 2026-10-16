@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.banking.failed_upi_refund.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "banking",
+  "intent": "failed_upi_refund",
+  "items": [
+    {
+      "context": "Aapka account number kya hai",
+      "requested_bucket": "short",
+      "text": "6214981234"
+    },
+    {
+      "context": "Transaction kab hua tha",
+      "requested_bucket": "short",
+      "text": "kal shaam"
+    },
+    {
+      "context": "Kitni rakam debit hui thi",
+      "requested_bucket": "short",
+      "text": "paanch hazaar"
+    },
+    {
+      "context": "Aapne kis UPI id se transaction kiya",
+      "requested_bucket": "short",
+      "text": "gmail ke upar"
+    },
+    {
+      "context": "Transaction failed hone ka message aaya kya",
+      "requested_bucket": "short",
+      "text": "haan aaya"
+    },
+    {
+      "context": "Kya aapke pass transaction ka screenshot hai",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Payment kis merchant ko hua tha",
+      "requested_bucket": "short",
+      "text": "amazon"
+    },
+    {
+      "context": "Aapka registered mobile number bata sakte hain",
+      "requested_bucket": "short",
+      "text": "9876543210"
+    },
+    {
+      "context": "Kya paise wapas nahi aaye hain",
+      "requested_bucket": "short",
+      "text": "nahi wapas aaye"
+    },
+    {
+      "context": "Account ki branch kaha hai",
+      "requested_bucket": "short",
+      "text": "delhi"
+    },
+    {
+      "context": "Kya aapne apna UPI PIN check kiya hai",
+      "requested_bucket": "short",
+      "text": "haan check kiya"
+    },
+    {
+      "context": "Kitni der pehle payment attempt kiya tha",
+      "requested_bucket": "short",
+      "text": "do ghante pehle"
+    },
+    {
+      "context": "Kya aapke account me koi deduction hua hai",
+      "requested_bucket": "short",
+      "text": "haan hua hai"
+    },
+    {
+      "context": "Kya transaction ki details aapke pass hai",
+      "requested_bucket": "short",
+      "text": "haan hai"
+    },
+    {
+      "context": "Kya aapne doosri payment try kiya hai",
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": "Kya aapko OTP mila tha",
+      "requested_bucket": "short",
+      "text": "haan mila tha"
+    },
+    {
+      "context": "Aapka bank ka naam kya hai",
+      "requested_bucket": "short",
+      "text": "state bank"
+    },
+    {
+      "context": "Kya chargeback request bhejni hai",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Refund ke liye form bharna hoga kya aapko",
+      "requested_bucket": "medium",
+      "text": "haan please mujhe form bhej do"
+    },
+    {
+      "context": "Transaction ID share kar sakte hain",
+      "requested_bucket": "medium",
+      "text": "haan ji 435678912345"
+    },
+    {
+      "context": "Aapne kaunse UPI app ka use kiya tha",
+      "requested_bucket": "medium",
+      "text": "phonepe se payment ki thi"
+    },
+    {
+      "context": "Problem kabstart hui jab paisa debit hua",
+      "requested_bucket": "medium",
+      "text": "jab paise kat gaye transfer nahi hua"
+    },
+    {
+      "context": "Kya aapne bank se confirm kiya ki paise cut gye hain",
+      "requested_bucket": "medium",
+      "text": "haan bank ne confirmation diya hai paisa debit hua hai"
+    },
+    {
+      "context": "Aap kis date tak refund chahte hain",
+      "requested_bucket": "medium",
+      "text": "kal tak agar ho jaye to acha rahega"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1511562171,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: failed_upi_refund - a UPI or online payment failed but money was debited; wants a refund\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Aapka account number kya hai\",\"reply\":\"6214981234\"},{\"agent_question\":\"Transaction kab hua tha\",\"reply\":\"kal shaam\"},{\"agent_question\":\"Kitni rakam debit hui thi\",\"reply\":\"paanch hazaar\"},{\"agent_question\":\"Aapne kis UPI id se transaction kiya\",\"reply\":\"gmail ke upar\"},{\"agent_question\":\"Transaction failed hone ka message aaya kya\",\"reply\":\"haan aaya\"},{\"agent_question\":\"Kya aapke pass transaction ka screenshot hai\",\"reply\":\"haan ji\"},{\"agent_question\":\"Payment kis merchant ko hua tha\",\"reply\":\"amazon\"},{\"agent_question\":\"Aapka registered mobile number bata sakte hain\",\"reply\":\"9876543210\"},{\"agent_question\":\"Kya paise wapas nahi aaye hain\",\"reply\":\"nahi wapas aaye\"},{\"agent_question\":\"Account ki branch kaha hai\",\"reply\":\"delhi\"},{\"agent_question\":\"Kya aapne apna UPI PIN check kiya hai\",\"reply\":\"haan check kiya\"},{\"agent_question\":\"Kitni der pehle payment attempt kiya tha\",\"reply\":\"do ghante pehle\"},{\"agent_question\":\"Kya aapke account me koi deduction hua hai\",\"reply\":\"haan hua hai\"},{\"agent_question\":\"Kya transaction ki details aapke pass hai\",\"reply\":\"haan hai\"},{\"agent_question\":\"Kya aapne doosri payment try kiya hai\",\"reply\":\"abhi nahi\"},{\"agent_question\":\"Kya aapko OTP mila tha\",\"reply\":\"haan mila tha\"},{\"agent_question\":\"Aapka bank ka naam kya hai\",\"reply\":\"state bank\"},{\"agent_question\":\"Kya chargeback request bhejni hai\",\"reply\":\"haan ji\"}],\"medium\":[{\"agent_question\":\"Refund ke liye form bharna hoga kya aapko\",\"reply\":\"haan please mujhe form bhej do\"},{\"agent_question\":\"Transaction ID share kar sakte hain\",\"reply\":\"haan ji 435678912345\"},{\"agent_question\":\"Aapne kaunse UPI app ka use kiya tha\",\"reply\":\"phonepe se payment ki thi\"},{\"agent_question\":\"Problem kabstart hui jab paisa debit hua\",\"reply\":\"jab paise kat gaye transfer nahi hua\"},{\"agent_question\":\"Kya aapne bank se confirm kiya ki paise cut gye hain\",\"reply\":\"haan bank ne confirmation diya hai paisa debit hua hai\"},{\"agent_question\":\"Aap kis date tak refund chahte hain\",\"reply\":\"kal tak agar ho jaye to acha rahega\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 404,
+    "output_tokens": 513
+  }
+}

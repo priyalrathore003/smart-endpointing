@@ -1,0 +1,252 @@
+{
+  "batch_id": "hinglish.banking.lost_card.plain",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "lost_card",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mera card kho gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "block kar do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "sabka blocked hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "short_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan sahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "zikar nahi karna"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "samajh gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "medium_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai aapka naam batayein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "asli customer hu main"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "account number batayein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "transaction hua hai kya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mai card block karna chahta hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "phone number confirm karein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kabhi card block kiya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "long_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mera card kal perdu ho gaya hai aur main use block karwana chahta hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kya aap apna registered mobile number confirm kar sakte ho jisse main aapki madad kar saku"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "pandit ji ka account number hai aur unka card kho gaya hai please block kar dena"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "long_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "main apna card kho gaya hai aur mujhe usko turant block karna hai warna paise chala jaega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "meri wife ka card kal chori ho gaya hai aur main usko block karwana chahta hu aap madad karo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mujhe apna debit card block karna hai kyunki woh kahi kho gaya hai aur main unsafe feel kar raha hu"
+    },
+    {
+      "context": "kya aap apna card khoya hai",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "aap kya karwana chahte hain",
+      "requested_bucket": "short",
+      "text": "block kar do"
+    },
+    {
+      "context": "kab se problem hai aapko",
+      "requested_bucket": "short",
+      "text": "kal block kara tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera debit card kal se nahi mil raha hai please block kar do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "card block kar do mera naam sunil hai aur Mumbai se hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main apna card kho chuka hu isliye usse turant block karwana chahta hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap mere account ka card jaldi block kar sakte ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera last transaction check karna tha aur card bhi block karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please mera card block kar do mere paisa safe rahna chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kaise pata chalega ki mera card block ho gaya hai"
+    },
+    {
+      "context": "kab se aapka card lost hai",
+      "requested_bucket": "medium",
+      "text": "mera card kal kho gaya hai is wajah se main usko block karwana chahta hu"
+    },
+    {
+      "context": "kya aap naye registered number se baat kar rahe hain",
+      "requested_bucket": "medium",
+      "text": "main apne registered number se call kar raha hu please meri madad karen"
+    },
+    {
+      "context": "kya aap apne address confirm karenge",
+      "requested_bucket": "medium",
+      "text": "mera card Mumbai mein kho gaya hai aur usse block karwana bahut zaroori hai"
+    },
+    {
+      "context": "kya aap apna card number batayenge",
+      "requested_bucket": "medium",
+      "text": "aap block kar dijiye mera card khoya hua hai mujhe paise chori hone ka dar hai"
+    },
+    {
+      "context": "aapka naam kya hai",
+      "requested_bucket": "medium",
+      "text": "mera naam Ravi hai aur main apne card ko turant block karna chahta hu kyunki woh kho gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera debit card kal se missing hai main uss card ko block karwana chahta hu jaldi se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "please mera card block kar do kyunki mera doubt hai ki koi mere account se paise nikal raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine apna card recent transaction ke baad kho diya hai main turant usse block karwana chahta hu"
+    },
+    {
+      "context": "aapka card kho gaya hai kya main provide karun procedure",
+      "requested_bucket": "long",
+      "text": "mera card chori ho gaya hai abhi main usko turant blocked karwana chahta hu kyunki mujhe paise bachane hai"
+    },
+    {
+      "context": "aapko apna card block karwana hai kya",
+      "requested_bucket": "long",
+      "text": "main apne credit card ko block karna chahta hu kyunki woh mere bag me se khoya hai aur mujhe smoking lag raha hai ki misuse ho raha hoga isliye"
+    },
+    {
+      "context": "kab se aapka card kho gaya hai",
+      "requested_bucket": "long",
+      "text": "kal se mera card missing hai main usko blocked karwana chahta hu warna uss card se unauthorized transaction ho sakte hain aap madad karo jaldi se"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2315324307,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: lost_card - reports a lost or stolen card and wants it blocked\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: plain and direct\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"mera card kho gaya\"},{\"text\":\"block kar do\"},{\"text\":\"sabka blocked hai\"},{\"text\":\"short_with_context\"},{\"text\":\"haan sahi hai\"},{\"text\":\"zikar nahi karna\"},{\"text\":\"samajh gaya\"},{\"text\":\"medium_with_context\"},{\"text\":\"theek hai aapka naam batayein\"},{\"text\":\"asli customer hu main\"},{\"text\":\"account number batayein\"},{\"text\":\"transaction hua hai kya\"},{\"text\":\"mai card block karna chahta hu\"},{\"text\":\"phone number confirm karein\"},{\"text\":\"kabhi card block kiya hai\"},{\"text\":\"long_with_context\"},{\"text\":\"mera card kal perdu ho gaya hai aur main use block karwana chahta hu\"},{\"text\":\"kya aap apna registered mobile number confirm kar sakte ho jisse main aapki madad kar saku\"},{\"text\":\"pandit ji ka account number hai aur unka card kho gaya hai please block kar dena\"},{\"text\":\"long_with_context\"},{\"text\":\"main apna card kho gaya hai aur mujhe usko turant block karna hai warna paise chala jaega\"},{\"text\":\"meri wife ka card kal chori ho gaya hai aur main usko block karwana chahta hu aap madad karo\"},{\"text\":\"mujhe apna debit card block karna hai kyunki woh kahi kho gaya hai aur main unsafe feel kar raha hu\"}],\"short_with_context\":[{\"text\":\"haan ji\",\"context\":\"kya aap apna card khoya hai\"},{\"text\":\"block kar do\",\"context\":\"aap kya karwana chahte hain\"},{\"text\":\"kal block kara tha\",\"context\":\"kab se problem hai aapko\"}],\"medium\":[{\"text\":\"mera debit card kal se nahi mil raha hai please block kar do\"},{\"text\":\"card block kar do mera naam sunil hai aur Mumbai se hu\"},{\"text\":\"main apna card kho chuka hu isliye usse turant block karwana chahta hu\"},{\"text\":\"kya aap mere account ka card jaldi block kar sakte ho\"},{\"text\":\"mera last transaction check karna tha aur card bhi block karna hai\"},{\"text\":\"please mera card block kar do mere paisa safe rahna chahiye\"},{\"text\":\"kaise pata chalega ki mera card block ho gaya hai\"}],\"medium_with_context\":[{\"text\":\"mera card kal kho gaya hai is wajah se main usko block karwana chahta hu\",\"context\":\"kab se aapka card lost hai\"},{\"text\":\"main apne registered number se call kar raha hu please meri madad karen\",\"context\":\"kya aap naye registered number se baat kar rahe hain\"},{\"text\":\"mera card Mumbai mein kho gaya hai aur usse block karwana bahut zaroori hai\",\"context\":\"kya aap apne address confirm karenge\"},{\"text\":\"aap block kar dijiye mera card khoya hua hai mujhe paise chori hone ka dar hai\",\"context\":\"kya aap apna card number batayenge\"},{\"text\":\"mera naam Ravi hai aur main apne card ko turant block karna chahta hu kyunki woh kho gaya\",\"context\":\"aapka naam kya hai\"}],\"long\":[{\"text\":\"mera debit card kal se missing hai main uss card ko block karwana chahta hu jaldi se\"},{\"text\":\"please mera card block kar do kyunki mera doubt hai ki koi mere account se paise nikal raha hai\"},{\"text\":\"maine apna card recent transaction ke baad kho diya hai main turant usse block karwana chahta hu\"}],\"long_with_context\":[{\"text\":\"mera card chori ho gaya hai abhi main usko turant blocked karwana chahta hu kyunki mujhe paise bachane hai\",\"context\":\"aapka card kho gaya hai kya main provide karun procedure\"},{\"text\":\"main apne credit card ko block karna chahta hu kyunki woh mere bag me se khoya hai aur mujhe smoking lag raha hai ki misuse ho raha hoga isliye\",\"context\":\"aapko apna card block karwana hai kya\"},{\"text\":\"kal se mera card missing hai main usko blocked karwana chahta hu warna uss card se unauthorized transaction ho sakte hain aap madad karo jaldi se\",\"context\":\"kab se aapka card kho gaya hai\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 580,
+    "output_tokens": 896
+  }
+}

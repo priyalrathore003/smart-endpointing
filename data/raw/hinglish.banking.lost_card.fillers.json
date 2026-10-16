@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.banking.lost_card.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "lost_card",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "What do you want us to do with your lost card?",
+      "requested_bucket": "short",
+      "text": "block kar do"
+    },
+    {
+      "context": "Can you confirm the status of your card?",
+      "requested_bucket": "short",
+      "text": "ekdam kho gaya"
+    },
+    {
+      "context": "Have you found your lost card?",
+      "requested_bucket": "short",
+      "text": "nahi mila abhi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera card kho gaya hai please usko block kar dijiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "haan ji mera card kal raat ko ghar par tha par ab nahi mil raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "woh thati jo mera credit card hai usko turant block kar do"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "matlab maine apna debit card kahin rakh diya shayad"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera atm card kisi ne chura liya hai is wajah se block karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha haan ji mera card Wednesday ko kho gaya nahi Tuesday se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please mujhe mera card ka replacement bhejna hai jaldi se"
+    },
+    {
+      "context": "What action would you like to take regarding your lost card?",
+      "requested_bucket": "medium",
+      "text": "haan ji please mera card block kar do jaldi"
+    },
+    {
+      "context": "Can you confirm how your card was lost?",
+      "requested_bucket": "medium",
+      "text": "mera card galti se kahin gir gaya lagta hai"
+    },
+    {
+      "context": "Has your lost card been misused in any transaction?",
+      "requested_bucket": "medium",
+      "text": "nahi abhi tak kisi ne use kiya nahi hai abhi tak"
+    },
+    {
+      "context": "When was the last time you used your card?",
+      "requested_bucket": "medium",
+      "text": "mera card Monday ko last use hua tha subah"
+    },
+    {
+      "context": "Do you want to apply for a replacement card now?",
+      "requested_bucket": "medium",
+      "text": "haan ji mujhe naye card ke liye apply karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera debit card kal sham ko bazar mein gir gaya aur ab tak nahi mila please usko turant block kar dijiye taaki koi kabhi misuse na kar sake"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "haan mera card chura liya hai kisi ne main soch raha tha ki shayad phone pe karu lekin mujhe lagta hai ki ise turant block karna bahut zaroori hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "accha mujhe yaad aaya mera card last week Thursday ko use hua tha main thoda late bol raha hun sorry lekin mujhe ye card block karna hai aur replacement chahiye"
+    },
+    {
+      "context": "Can you tell me more about when and where you lost your card?",
+      "requested_bucket": "long",
+      "text": "mera credit card kal raat ko cab mein chhut gaya tha mujhe turant ise block karna hai aur naye card ke liye form bharna hai"
+    },
+    {
+      "context": "Did you misplace the card at home or elsewhere?",
+      "requested_bucket": "long",
+      "text": "haan ji maine kal apne dost ke ghar me rakh kar bhool gaya tha soch raha tha free mil jayega lekin ab mile nahi isliye card ko block karana achha rahega"
+    },
+    {
+      "context": "When did you last use your card before noticing it was lost?",
+      "requested_bucket": "long",
+      "text": "matlab mera card Tuesday ko bank mein use hua tha par uske baad jab mai wapas aaya to nahi mila mujhe turant block karwana hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2289878965,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: lost_card - reports a lost or stolen card and wants it blocked\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal tak\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"block kar do\",\"context\":\"What do you want us to do with your lost card?\"},{\"text\":\"ekdam kho gaya\",\"context\":\"Can you confirm the status of your card?\"},{\"text\":\"nahi mila abhi\",\"context\":\"Have you found your lost card?\"}],\"medium\":[{\"text\":\"mera card kho gaya hai please usko block kar dijiye\"},{\"text\":\"haan ji mera card kal raat ko ghar par tha par ab nahi mil raha\"},{\"text\":\"woh thati jo mera credit card hai usko turant block kar do\"},{\"text\":\"matlab maine apna debit card kahin rakh diya shayad\"},{\"text\":\"mera atm card kisi ne chura liya hai is wajah se block karna hai\"},{\"text\":\"accha haan ji mera card Wednesday ko kho gaya nahi Tuesday se\"},{\"text\":\"please mujhe mera card ka replacement bhejna hai jaldi se\"}],\"medium_with_context\":[{\"text\":\"haan ji please mera card block kar do jaldi\",\"context\":\"What action would you like to take regarding your lost card?\"},{\"text\":\"mera card galti se kahin gir gaya lagta hai\",\"context\":\"Can you confirm how your card was lost?\"},{\"text\":\"nahi abhi tak kisi ne use kiya nahi hai abhi tak\",\"context\":\"Has your lost card been misused in any transaction?\"},{\"text\":\"mera card Monday ko last use hua tha subah\",\"context\":\"When was the last time you used your card?\"},{\"text\":\"haan ji mujhe naye card ke liye apply karna hai\",\"context\":\"Do you want to apply for a replacement card now?\"}],\"long\":[{\"text\":\"mera debit card kal sham ko bazar mein gir gaya aur ab tak nahi mila please usko turant block kar dijiye taaki koi kabhi misuse na kar sake\"},{\"text\":\"haan mera card chura liya hai kisi ne main soch raha tha ki shayad phone pe karu lekin mujhe lagta hai ki ise turant block karna bahut zaroori hai\"},{\"text\":\"accha mujhe yaad aaya mera card last week Thursday ko use hua tha main thoda late bol raha hun sorry lekin mujhe ye card block karna hai aur replacement chahiye\"}],\"long_with_context\":[{\"text\":\"mera credit card kal raat ko cab mein chhut gaya tha mujhe turant ise block karna hai aur naye card ke liye form bharna hai\",\"context\":\"Can you tell me more about when and where you lost your card?\"},{\"text\":\"haan ji maine kal apne dost ke ghar me rakh kar bhool gaya tha soch raha tha free mil jayega lekin ab mile nahi isliye card ko block karana achha rahega\",\"context\":\"Did you misplace the card at home or elsewhere?\"},{\"text\":\"matlab mera card Tuesday ko bank mein use hua tha par uske baad jab mai wapas aaya to nahi mila mujhe turant block karwana hai\",\"context\":\"When did you last use your card before noticing it was lost?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 611,
+    "output_tokens": 664
+  }
+}

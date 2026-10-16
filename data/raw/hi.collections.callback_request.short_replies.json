@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.collections.callback_request.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "callback_request",
+  "items": [
+    {
+      "context": "क्या अभी कॉल कर सकते हैं",
+      "requested_bucket": "short",
+      "text": "नहीं अभी परेशान हूँ"
+    },
+    {
+      "context": "कब कॉल करना सही रहेगा",
+      "requested_bucket": "short",
+      "text": "कल दोपहर"
+    },
+    {
+      "context": "क्या आप अपना account नंबर बताएंगे",
+      "requested_bucket": "short",
+      "text": "फिलहाल नहीं"
+    },
+    {
+      "context": "आपको कॉल बैक कब चाहिए",
+      "requested_bucket": "short",
+      "text": "सवेरे 10 बजे"
+    },
+    {
+      "context": "क्या अभी पैसा जमा कर पाएंगे",
+      "requested_bucket": "short",
+      "text": "अभी नहीं"
+    },
+    {
+      "context": "कॉल बैक का समय क्या है",
+      "requested_bucket": "short",
+      "text": "शाम 5 बजे"
+    },
+    {
+      "context": "क्या कॉल बैक के लिए दूसरा नंबर देना चाहेंगे",
+      "requested_bucket": "short",
+      "text": "हाँ दूसरा नंबर"
+    },
+    {
+      "context": "उस नंबर पर कॉल करें",
+      "requested_bucket": "short",
+      "text": "ठीक है"
+    },
+    {
+      "context": "आपका नाम बताएं",
+      "requested_bucket": "short",
+      "text": "राहुल कुमार"
+    },
+    {
+      "context": "क्या हम अभी बात करें",
+      "requested_bucket": "short",
+      "text": "थोड़ी देर बाद"
+    },
+    {
+      "context": "आपका पता क्या है",
+      "requested_bucket": "short",
+      "text": "दिल्ली में रहता हूँ"
+    },
+    {
+      "context": "कैसी परेशानियाँ हो रही हैं",
+      "requested_bucket": "short",
+      "text": "पैसे का इंतजाम नहीं"
+    },
+    {
+      "context": "OTP मिल गया क्या",
+      "requested_bucket": "short",
+      "text": "हाँ मिल गया"
+    },
+    {
+      "context": "पेटीएम से पेमेंट कर पाएंगे",
+      "requested_bucket": "short",
+      "text": "कल तक कर दूंगा"
+    },
+    {
+      "context": "कब आपके लिए कॉल करना अच्छा रहेगा",
+      "requested_bucket": "medium",
+      "text": "आप कल शाम 6 बजे कॉल कर लेना प्लीज"
+    },
+    {
+      "context": "क्या आप पैसा भेजने की कोशिश करेंगे अब",
+      "requested_bucket": "medium",
+      "text": "नहीं अभी थोड़ा इंतजार कर लीजिए सर"
+    },
+    {
+      "context": "क्या आपका कोई और नंबर है कॉल बैक के लिए",
+      "requested_bucket": "medium",
+      "text": "हाँ जी मेरा दूसरा नंबर भी वही है जो पहले बताया था"
+    },
+    {
+      "context": "क्या आप टाइम पर पैसे जमा कर पाएंगे या फिर एक्सटेंड चाहिए",
+      "requested_bucket": "medium",
+      "text": "मैं कोशिश करूँगा कल तक पैसा जमा कर दूं लेकिन थोड़ा टाइम चाहिए"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 4265261718,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: callback_request - asks the agent to call back at another time\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"क्या अभी कॉल कर सकते हैं\",\"reply\":\"नहीं अभी परेशान हूँ\"},{\"agent_question\":\"कब कॉल करना सही रहेगा\",\"reply\":\"कल दोपहर\"},{\"agent_question\":\"क्या आप अपना account नंबर बताएंगे\",\"reply\":\"फिलहाल नहीं\"},{\"agent_question\":\"आपको कॉल बैक कब चाहिए\",\"reply\":\"सवेरे 10 बजे\"},{\"agent_question\":\"क्या अभी पैसा जमा कर पाएंगे\",\"reply\":\"अभी नहीं\"},{\"agent_question\":\"कॉल बैक का समय क्या है\",\"reply\":\"शाम 5 बजे\"},{\"agent_question\":\"क्या कॉल बैक के लिए दूसरा नंबर देना चाहेंगे\",\"reply\":\"हाँ दूसरा नंबर\"},{\"agent_question\":\"उस नंबर पर कॉल करें\",\"reply\":\"ठीक है\"},{\"agent_question\":\"आपका नाम बताएं\",\"reply\":\"राहुल कुमार\"},{\"agent_question\":\"क्या हम अभी बात करें\",\"reply\":\"थोड़ी देर बाद\"},{\"agent_question\":\"आपका पता क्या है\",\"reply\":\"दिल्ली में रहता हूँ\"},{\"agent_question\":\"कैसी परेशानियाँ हो रही हैं\",\"reply\":\"पैसे का इंतजाम नहीं\"},{\"agent_question\":\"OTP मिल गया क्या\",\"reply\":\"हाँ मिल गया\"},{\"agent_question\":\"पेटीएम से पेमेंट कर पाएंगे\",\"reply\":\"कल तक कर दूंगा\"}],\"medium\":[{\"agent_question\":\"कब आपके लिए कॉल करना अच्छा रहेगा\",\"reply\":\"आप कल शाम 6 बजे कॉल कर लेना प्लीज\"},{\"agent_question\":\"क्या आप पैसा भेजने की कोशिश करेंगे अब\",\"reply\":\"नहीं अभी थोड़ा इंतजार कर लीजिए सर\"},{\"agent_question\":\"क्या आपका कोई और नंबर है कॉल बैक के लिए\",\"reply\":\"हाँ जी मेरा दूसरा नंबर भी वही है जो पहले बताया था\"},{\"agent_question\":\"क्या आप टाइम पर पैसे जमा कर पाएंगे या फिर एक्सटेंड चाहिए\",\"reply\":\"मैं कोशिश करूँगा कल तक पैसा जमा कर दूं लेकिन थोड़ा टाइम चाहिए\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 497,
+    "output_tokens": 387
+  }
+}

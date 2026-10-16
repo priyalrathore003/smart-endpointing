@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.banking.loan_emi_query.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "loan_emi_query",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "पैमेंट कब है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "इएमआई कितनी है"
+    },
+    {
+      "context": "क्या आप अपना loan account नंबर बता सकते हैं?",
+      "requested_bucket": "short",
+      "text": "हां सर"
+    },
+    {
+      "context": "क्या आपने अभी तक इएमआई का payment किया है?",
+      "requested_bucket": "short",
+      "text": "नहीं मैडम"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझको मेरे होम लोन की अगली इएमआई की डेट बताओ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर मेरी लोन इएमआई कितनी कटती है हर महीने"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "प्लीज मेरे personal loan का अगला payment कब है बता दो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "क्या आप मेरा लोन बैलेंस भी चेक कर सकते हो अभी"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैडम मेरा कार लोन का इएमआई amount जल्दी बताओ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे ये बताओ की EMI कब तक deducted होगी बैंक से"
+    },
+    {
+      "context": "क्या आप इएमआई payment के लिए मदद चाहते हैं?",
+      "requested_bucket": "medium",
+      "text": "मेरी लोन इएमआई missed हो गयी थी क्या penalty लगेगी"
+    },
+    {
+      "context": "क्या आपने आखिरी इएमआई के लिए payment किया था?",
+      "requested_bucket": "medium",
+      "text": "मैंने अभी तक इएमआई का payment नहीं किया है"
+    },
+    {
+      "context": "आपको किस लोन की EMI date पूछनी है?",
+      "requested_bucket": "medium",
+      "text": "मुझे पता करना है की मेरा लोन किस तारीख को due होता है"
+    },
+    {
+      "context": "क्या आपकी लोन इएमआई हर महीने ऑटो डेबिट होती है?",
+      "requested_bucket": "medium",
+      "text": "मेरे अकाउंट से आज इएमआई डिडक्शन हुआ है क्या"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर मेरी जरुरत है की आप मुझे मेरे education loan की अगली EMI की तारीख और amount जल्दी बता दो मुझे जल्दी payment करना है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैं जानना चाहता हूँ की पिछले महीने मेरी लोन की EMI कटनी थी या नहीं और अगर कट गयी तो कितनी रकम थी और कब डिडक्ट हुई"
+    },
+    {
+      "context": "आपको अपने लोन की अगली EMI due date के बारे में जानना है क्या?",
+      "requested_bucket": "long",
+      "text": "क्या मेरी अगली emi १० तारीख को due है या उसके बाद भी कुछ समय मिलेगा भुगतान के लिए"
+    },
+    {
+      "context": "क्या आप पिछले महीने के EMI deduction की जानकारी चाहते हैं?",
+      "requested_bucket": "long",
+      "text": "मेरी query है की पिछले महीने मेरा EMI due था पर पैसा अभी तक कटा नहीं क्या आप आज की विवरण दे सकते हैं"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1894683207,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: loan_emi_query - asks about a loan EMI amount, due date or a deduction\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"पैमेंट कब है\"},{\"text\":\"इएमआई कितनी है\"}],\"short_with_context\":[{\"text\":\"हां सर\",\"context\":\"क्या आप अपना loan account नंबर बता सकते हैं?\"},{\"text\":\"नहीं मैडम\",\"context\":\"क्या आपने अभी तक इएमआई का payment किया है?\"}],\"medium\":[{\"text\":\"मुझको मेरे होम लोन की अगली इएमआई की डेट बताओ\"},{\"text\":\"सर मेरी लोन इएमआई कितनी कटती है हर महीने\"},{\"text\":\"प्लीज मेरे personal loan का अगला payment कब है बता दो\"},{\"text\":\"क्या आप मेरा लोन बैलेंस भी चेक कर सकते हो अभी\"},{\"text\":\"मैडम मेरा कार लोन का इएमआई amount जल्दी बताओ\"},{\"text\":\"मुझे ये बताओ की EMI कब तक deducted होगी बैंक से\"}],\"medium_with_context\":[{\"text\":\"मेरी लोन इएमआई missed हो गयी थी क्या penalty लगेगी\",\"context\":\"क्या आप इएमआई payment के लिए मदद चाहते हैं?\"},{\"text\":\"मैंने अभी तक इएमआई का payment नहीं किया है\",\"context\":\"क्या आपने आखिरी इएमआई के लिए payment किया था?\"},{\"text\":\"मुझे पता करना है की मेरा लोन किस तारीख को due होता है\",\"context\":\"आपको किस लोन की EMI date पूछनी है?\"},{\"text\":\"मेरे अकाउंट से आज इएमआई डिडक्शन हुआ है क्या\",\"context\":\"क्या आपकी लोन इएमआई हर महीने ऑटो डेबिट होती है?\"}],\"long\":[{\"text\":\"सर मेरी जरुरत है की आप मुझे मेरे education loan की अगली EMI की तारीख और amount जल्दी बता दो मुझे जल्दी payment करना है\"},{\"text\":\"मैं जानना चाहता हूँ की पिछले महीने मेरी लोन की EMI कटनी थी या नहीं और अगर कट गयी तो कितनी रकम थी और कब डिडक्ट हुई\"}],\"long_with_context\":[{\"text\":\"क्या मेरी अगली emi १० तारीख को due है या उसके बाद भी कुछ समय मिलेगा भुगतान के लिए\",\"context\":\"आपको अपने लोन की अगली EMI due date के बारे में जानना है क्या?\"},{\"text\":\"मेरी query है की पिछले महीने मेरा EMI due था पर पैसा अभी तक कटा नहीं क्या आप आज की विवरण दे सकते हैं\",\"context\":\"क्या आप पिछले महीने के EMI deduction की जानकारी चाहते हैं?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 688,
+    "output_tokens": 493
+  }
+}

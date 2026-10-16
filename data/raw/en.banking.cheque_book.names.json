@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.banking.cheque_book.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "cheque_book",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "cheque book"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "please issue new"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "deliver it here"
+    },
+    {
+      "context": "How many cheque leaves do you want in the new book?",
+      "requested_bucket": "short",
+      "text": "five cheque leaves"
+    },
+    {
+      "context": "Can you confirm the branch address for delivery?",
+      "requested_bucket": "short",
+      "text": "branch address"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I need a new cheque book delivered to my home address in Pune"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please send the cheque book to my registered address in Delhi by next week"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "How long will it take to get a new cheque book in Hyderabad"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to know the status of my cheque book request for account ending 4321"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you arrange for fast delivery of a cheque book to my address in Chennai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "My name is Rakesh Sharma and I want a cheque book for my savings account"
+    },
+    {
+      "context": "Where should we deliver the cheque book?",
+      "requested_bucket": "medium",
+      "text": "My address is 45 MG Road Bangalore can you deliver there"
+    },
+    {
+      "context": "Would you like the cheque book delivered or self collected?",
+      "requested_bucket": "medium",
+      "text": "I prefer to collect it from the branch if that is possible"
+    },
+    {
+      "context": "How many leaves would you like in the cheque book?",
+      "requested_bucket": "medium",
+      "text": "The cheque leaves count should be 25 in the book"
+    },
+    {
+      "context": "Please provide the delivery address for the cheque book",
+      "requested_bucket": "medium",
+      "text": "I live in Sector 17 Chandigarh I want it sent there"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "My account number is 987654 and I live in Salt Lake Kolkata I want a cheque book with 50 leaves as soon as possible"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I requested a new cheque book two weeks ago but have not received any update I want to check the delivery status for my account in Mumbai branch"
+    },
+    {
+      "context": "Is there any urgency for your cheque book request?",
+      "requested_bucket": "long",
+      "text": "The cheque book is required urgently because I have to issue multiple payments for my business in Gurgaon can you expedite the process"
+    },
+    {
+      "context": "Is your current address same as the one registered with us?",
+      "requested_bucket": "long",
+      "text": "I recently shifted to a new house in Indore and the registered address is not updated can I get the cheque book delivered to my current residence"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2287491049,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: cheque_book - requests a new cheque book or asks about its delivery\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"cheque book\"},{\"text\":\"please issue new\"},{\"text\":\"yes please\"},{\"text\":\"deliver it here\"}],\"short_with_context\":[{\"text\":\"five cheque leaves\",\"context\":\"How many cheque leaves do you want in the new book?\"},{\"text\":\"branch address\",\"context\":\"Can you confirm the branch address for delivery?\"}],\"medium\":[{\"text\":\"I need a new cheque book delivered to my home address in Pune\"},{\"text\":\"Please send the cheque book to my registered address in Delhi by next week\"},{\"text\":\"How long will it take to get a new cheque book in Hyderabad\"},{\"text\":\"I want to know the status of my cheque book request for account ending 4321\"},{\"text\":\"Can you arrange for fast delivery of a cheque book to my address in Chennai\"},{\"text\":\"My name is Rakesh Sharma and I want a cheque book for my savings account\"}],\"medium_with_context\":[{\"text\":\"My address is 45 MG Road Bangalore can you deliver there\",\"context\":\"Where should we deliver the cheque book?\"},{\"text\":\"I prefer to collect it from the branch if that is possible\",\"context\":\"Would you like the cheque book delivered or self collected?\"},{\"text\":\"The cheque leaves count should be 25 in the book\",\"context\":\"How many leaves would you like in the cheque book?\"},{\"text\":\"I live in Sector 17 Chandigarh I want it sent there\",\"context\":\"Please provide the delivery address for the cheque book\"}],\"long\":[{\"text\":\"My account number is 987654 and I live in Salt Lake Kolkata I want a cheque book with 50 leaves as soon as possible\"},{\"text\":\"I requested a new cheque book two weeks ago but have not received any update I want to check the delivery status for my account in Mumbai branch\"}],\"long_with_context\":[{\"text\":\"The cheque book is required urgently because I have to issue multiple payments for my business in Gurgaon can you expedite the process\",\"context\":\"Is there any urgency for your cheque book request?\"},{\"text\":\"I recently shifted to a new house in Indore and the registered address is not updated can I get the cheque book delivered to my current residence\",\"context\":\"Is your current address same as the one registered with us?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 569,
+    "output_tokens": 455
+  }
+}

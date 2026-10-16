@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.collections.callback_request.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "callback_request",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "कल सुबह"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "इसी नंबर पर कॉल करो"
+    },
+    {
+      "context": "आपको कब कॉल करना है सर?",
+      "requested_bucket": "short",
+      "text": "कल दोपहर ठीक रहेगा"
+    },
+    {
+      "context": "कोल्बा इलाके में पिकअप कब चाहिए?",
+      "requested_bucket": "short",
+      "text": "शाम तक कर देना प्लीज"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर मेरे ऑफिस से कॉल कर लेना दोपहर बाद"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैडम मैंने आज नहीं सुन पाई आप बाद में रिप्लाई देना"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "प्लीज मेरे ऑफिस वाले नंबर पर एक बार बाद में बात करो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "स्कूल के पास देख लेना मुझे कल सुबह कॉल कर लेना"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "क्या आप कल दोपहर तक फोन कर सकते हो मेरे घर पर"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैं अभी नहीं रुक पाऊंगा आपको चार बजे के बाद कॉल कर लेना"
+    },
+    {
+      "context": "आपको पूरी जानकारी कब हासिल करनी है?",
+      "requested_bucket": "medium",
+      "text": "मैं शाम को कॉल पर बात कर सकता हूँ आपका समय कब है"
+    },
+    {
+      "context": "पार्टिकलर दिन और टाइम बताइए जब कॉल कर सकें?",
+      "requested_bucket": "medium",
+      "text": "जल्दी करने की जरूरत है क्या मैं कल सुबह कॉल कर लूंगा"
+    },
+    {
+      "context": "क्या आप किसी स्पेसिफिक नंबर पर कॉल करवा सकते हैं?",
+      "requested_bucket": "medium",
+      "text": "मेरा देसी नंबर पर कॉल कर लेना कल सुबह ठीक रहेगा"
+    },
+    {
+      "context": "कॉल समय में क्या कोई विशेष आवश्यकता है?",
+      "requested_bucket": "medium",
+      "text": "काम से बाहर हूँ अभी आप दोपहर बाद कॉल करो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैडम मैं अभी ऑफलाइन हूँ इसलिए आप मुझे शाम के छह बजे के बाद कॉल कर लेना"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर ब्रिजकॉल के रास्ते से अपना केस क्लियर करना पड़ेगा आप कल सुबह कॉल कर लेना"
+    },
+    {
+      "context": "मुझे बताइए आप किस टाइम कॉल रिसीव कर सकते हैं?",
+      "requested_bucket": "long",
+      "text": "मैं अभी बाहर हूँ घर पर कॉल मत करना नतीजा साफ नहीं होगा आप रात को दस बजे कॉल कर देना"
+    },
+    {
+      "context": "फॉलोअप के लिए सबसे अच्छा समय क्या होगा?",
+      "requested_bucket": "long",
+      "text": "आपके कॉल के बाद मैं ऑफिस पहुँचना चाहता हूँ तो आप मेरे नंबर पर सुबह आठ बजे कॉल कर लेना"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3614730152,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: callback_request - asks the agent to call back at another time\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"कल सुबह\"},{\"text\":\"इसी नंबर पर कॉल करो\"}],\"short_with_context\":[{\"text\":\"कल दोपहर ठीक रहेगा\",\"context\":\"आपको कब कॉल करना है सर?\"},{\"text\":\"शाम तक कर देना प्लीज\",\"context\":\"कोल्बा इलाके में पिकअप कब चाहिए?\"}],\"medium\":[{\"text\":\"सर मेरे ऑफिस से कॉल कर लेना दोपहर बाद\"},{\"text\":\"मैडम मैंने आज नहीं सुन पाई आप बाद में रिप्लाई देना\"},{\"text\":\"प्लीज मेरे ऑफिस वाले नंबर पर एक बार बाद में बात करो\"},{\"text\":\"स्कूल के पास देख लेना मुझे कल सुबह कॉल कर लेना\"},{\"text\":\"क्या आप कल दोपहर तक फोन कर सकते हो मेरे घर पर\"},{\"text\":\"मैं अभी नहीं रुक पाऊंगा आपको चार बजे के बाद कॉल कर लेना\"}],\"medium_with_context\":[{\"text\":\"मैं शाम को कॉल पर बात कर सकता हूँ आपका समय कब है\",\"context\":\"आपको पूरी जानकारी कब हासिल करनी है?\"},{\"text\":\"जल्दी करने की जरूरत है क्या मैं कल सुबह कॉल कर लूंगा\",\"context\":\"पार्टिकलर दिन और टाइम बताइए जब कॉल कर सकें?\"},{\"text\":\"मेरा देसी नंबर पर कॉल कर लेना कल सुबह ठीक रहेगा\",\"context\":\"क्या आप किसी स्पेसिफिक नंबर पर कॉल करवा सकते हैं?\"},{\"text\":\"काम से बाहर हूँ अभी आप दोपहर बाद कॉल करो\",\"context\":\"कॉल समय में क्या कोई विशेष आवश्यकता है?\"}],\"long\":[{\"text\":\"मैडम मैं अभी ऑफलाइन हूँ इसलिए आप मुझे शाम के छह बजे के बाद कॉल कर लेना\"},{\"text\":\"सर ब्रिजकॉल के रास्ते से अपना केस क्लियर करना पड़ेगा आप कल सुबह कॉल कर लेना\"}],\"long_with_context\":[{\"text\":\"मैं अभी बाहर हूँ घर पर कॉल मत करना नतीजा साफ नहीं होगा आप रात को दस बजे कॉल कर देना\",\"context\":\"मुझे बताइए आप किस टाइम कॉल रिसीव कर सकते हैं?\"},{\"text\":\"आपके कॉल के बाद मैं ऑफिस पहुँचना चाहता हूँ तो आप मेरे नंबर पर सुबह आठ बजे कॉल कर लेना\",\"context\":\"फॉलोअप के लिए सबसे अच्छा समय क्या होगा?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 692,
+    "output_tokens": 453
+  }
+}

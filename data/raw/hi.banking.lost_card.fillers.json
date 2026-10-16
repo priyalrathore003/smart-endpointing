@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.banking.lost_card.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "banking",
+  "intent": "lost_card",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "जल्दी प्लीज़"
+    },
+    {
+      "context": "क्या आप कार्ड ब्लॉक करना चाहते हैं?",
+      "requested_bucket": "short",
+      "text": "हाँ ठीक है"
+    },
+    {
+      "context": "आपका कार्ड कब खोया था?",
+      "requested_bucket": "short",
+      "text": "हां तुरंत"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर मेरा कार्ड खो गया है आप ब्लॉक कर दो प्लीज"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अच्छा मैडम कार्ड चोरी हो गया था मैं रिपोर्ट करना चाहता हूँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मंगलवार नहीं बुधवार को कार्ड खो गया था जल्दी ब्लॉक कर दो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मेरा ATM कार्ड गुम हो गया है क्या आप मदद कर सकते हो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अम्म मेरा कार्ड तो चोरी हो गया और मैं उसे तुरंत ब्लॉक करना चाहता हूँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "वो मेरा कार्ड सुबह से नहीं मिल रहा है कृपया ब्लॉक कर दो"
+    },
+    {
+      "context": "कृपया अपनी बैंक डिटेल बताएं जिससे मैं मदद कर सकूं",
+      "requested_bucket": "medium",
+      "text": "हां सर मेरी बैंक डीटेल्स तो आपके पास हैं अब कार्ड ब्लॉक कर दो"
+    },
+    {
+      "context": "आपका कार्ड कहां खोया गया था और कब?",
+      "requested_bucket": "medium",
+      "text": "मैंने कल ही मुंबई में कार्ड खो दिया था जल्दी से ब्लॉक कर दो"
+    },
+    {
+      "context": "क्या आप कार्ड तुरंत ब्लॉक करना चाहते हैं?",
+      "requested_bucket": "medium",
+      "text": "हां प्लीज मेरा कार्ड तुरंत ब्लॉक करो कोई misuse न हो"
+    },
+    {
+      "context": "आपका कार्ड कहां खोया और किस दिन?",
+      "requested_bucket": "medium",
+      "text": "मेरा कार्ड डॉक्टर साहब के क्लीनिक में खो गया था पोलेट जल्दी ब्लॉक कर दो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर मेरा कार्ड कल से मेरे पास नहीं है और मैंने उसे हर जगह ढूंढा पर नहीं मिला करा देना ब्लॉक"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मुझे लगता है कोई मेरा कार्ड चुरा ले गया है तो इसलिए मैं आपका नंबर ढूंढ के फोन कर रहा हूं ताकि कार्ड कहीं गलत तरीके से इस्तेमाल न हो"
+    },
+    {
+      "context": "आप कृपया पूरी घटना बताएं और कार्ड खोने की तारीख बताएं",
+      "requested_bucket": "long",
+      "text": "सर यह कार्ड मेरी वॉलेट में था पर जैसे मैं बाजार गया तो वो वहां से गायब था कृपया फटाफट ब्लॉक करो नहीं तो बड़ा प्रॉब्लम हो जाएगा"
+    },
+    {
+      "context": "क्या आप बताना चाहेंगे कार्ड खोने की सही तारीख?",
+      "requested_bucket": "long",
+      "text": "मेरा कार्ड कल मंगलवार नहीं बुधवार को खो गया था और मैंने तुरंत आपके कस्टमर केयर को कॉल किया था थोड़ा इंतजार करो वापिस मुझे कॉल करना था"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1513677357,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: lost_card - reports a lost or stolen card and wants it blocked\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with fillers and hesitations (अम्म, मतलब, वो, अच्छा, हाँ जी); at least a third include a self-correction ('मंगलवार, नहीं, बुधवार')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"हाँ जी\"},{\"text\":\"जल्दी प्लीज़\"}],\"short_with_context\":[{\"text\":\"हाँ ठीक है\",\"context\":\"क्या आप कार्ड ब्लॉक करना चाहते हैं?\"},{\"text\":\"हां तुरंत\",\"context\":\"आपका कार्ड कब खोया था?\"}],\"medium\":[{\"text\":\"सर मेरा कार्ड खो गया है आप ब्लॉक कर दो प्लीज\"},{\"text\":\"अच्छा मैडम कार्ड चोरी हो गया था मैं रिपोर्ट करना चाहता हूँ\"},{\"text\":\"मंगलवार नहीं बुधवार को कार्ड खो गया था जल्दी ब्लॉक कर दो\"},{\"text\":\"मेरा ATM कार्ड गुम हो गया है क्या आप मदद कर सकते हो\"},{\"text\":\"अम्म मेरा कार्ड तो चोरी हो गया और मैं उसे तुरंत ब्लॉक करना चाहता हूँ\"},{\"text\":\"वो मेरा कार्ड सुबह से नहीं मिल रहा है कृपया ब्लॉक कर दो\"}],\"medium_with_context\":[{\"text\":\"हां सर मेरी बैंक डीटेल्स तो आपके पास हैं अब कार्ड ब्लॉक कर दो\",\"context\":\"कृपया अपनी बैंक डिटेल बताएं जिससे मैं मदद कर सकूं\"},{\"text\":\"मैंने कल ही मुंबई में कार्ड खो दिया था जल्दी से ब्लॉक कर दो\",\"context\":\"आपका कार्ड कहां खोया गया था और कब?\"},{\"text\":\"हां प्लीज मेरा कार्ड तुरंत ब्लॉक करो कोई misuse न हो\",\"context\":\"क्या आप कार्ड तुरंत ब्लॉक करना चाहते हैं?\"},{\"text\":\"मेरा कार्ड डॉक्टर साहब के क्लीनिक में खो गया था पोलेट जल्दी ब्लॉक कर दो\",\"context\":\"आपका कार्ड कहां खोया और किस दिन?\"}],\"long\":[{\"text\":\"सर मेरा कार्ड कल से मेरे पास नहीं है और मैंने उसे हर जगह ढूंढा पर नहीं मिला करा देना ब्लॉक\"},{\"text\":\"मुझे लगता है कोई मेरा कार्ड चुरा ले गया है तो इसलिए मैं आपका नंबर ढूंढ के फोन कर रहा हूं ताकि कार्ड कहीं गलत तरीके से इस्तेमाल न हो\"}],\"long_with_context\":[{\"text\":\"सर यह कार्ड मेरी वॉलेट में था पर जैसे मैं बाजार गया तो वो वहां से गायब था कृपया फटाफट ब्लॉक करो नहीं तो बड़ा प्रॉब्लम हो जाएगा\",\"context\":\"आप कृपया पूरी घटना बताएं और कार्ड खोने की तारीख बताएं\"},{\"text\":\"मेरा कार्ड कल मंगलवार नहीं बुधवार को खो गया था और मैंने तुरंत आपके कस्टमर केयर को कॉल किया था थोड़ा इंतजार करो वापिस मुझे कॉल करना था\",\"context\":\"क्या आप बताना चाहेंगे कार्ड खोने की सही तारीख?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 717,
+    "output_tokens": 518
+  }
+}

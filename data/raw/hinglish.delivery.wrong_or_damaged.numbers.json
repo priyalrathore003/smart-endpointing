@@ -1,0 +1,162 @@
+{
+  "batch_id": "hinglish.delivery.wrong_or_damaged.numbers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "wrong_or_damaged",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "item galat hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "damage ho gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wrong order mila"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahi chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "change karna hai"
+    },
+    {
+      "context": "Kya aap item ka status batayenge?",
+      "requested_bucket": "short",
+      "text": "nahi item sahi nahi hai"
+    },
+    {
+      "context": "Aapko kya karna hai iss order ke saath?",
+      "requested_bucket": "short",
+      "text": "use replace karwana hai"
+    },
+    {
+      "context": "Aap kya chahenge is galat delivery ke liye?",
+      "requested_bucket": "short",
+      "text": "mujhe refund chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera order number 1 2 3 4 5 tha aur galat item aaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "jo product bheja gaya vo pura damage tha door ke paas"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "order cancel karna hai kyunki item totally wrong tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera address 2 3 5 B Sector 5 Chandigarh hai lekin yeh galat jagah pahucha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya main item wapas kar sakta hu aur refund aa jayega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera phone number 9 8 7 6 5 4 3 2 1 0 hai us pe call kijiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "23 april ko order kiya tha par delivery me galti hui hai"
+    },
+    {
+      "context": "Kya aap ne item receive kar liya hai?",
+      "requested_bucket": "medium",
+      "text": "item box me pura toot gaya tha aur use main use nahi kar sakta"
+    },
+    {
+      "context": "Aapko jo product chahiye tha wo kya hai?",
+      "requested_bucket": "medium",
+      "text": "galat product mila mujhe laptop ki jagah mouse mila"
+    },
+    {
+      "context": "Kya aap apna order number confirm kar sakte hain?",
+      "requested_bucket": "medium",
+      "text": "order number 4 5 6 7 8 9 hai mera ye galat shipment raha"
+    },
+    {
+      "context": "Aap chahte hain ki hum kya karein?",
+      "requested_bucket": "medium",
+      "text": "mujhe refund chahiye ya phir naya item bhej do"
+    },
+    {
+      "context": "Aapka delivery address kya tha?",
+      "requested_bucket": "medium",
+      "text": "mera address sahi de diya tha lekin order dusre ghar chala gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera order number 9 8 7 6 5 tha jisme ki apple watch aani thi par ek broken pen bhej diya gaya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine apna phone number 8 7 6 5 4 3 2 1 0 9 diya tha par aaj tak kisi ne call nahi kiya meri problem ko leke"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "22 march ko order kiya tha aur mujhe chocolate order karni thi magar galat jagah lipstick bhej di gayi hai main ise accept nahi kar raha hu"
+    },
+    {
+      "context": "Kya aap apna order detail mujhe de sakte hain?",
+      "requested_bucket": "long",
+      "text": "maine 1 2 3 4 5 order kiya tha fish ke liye aur mujhe chicken mila hai ye galti sudharni hogi"
+    },
+    {
+      "context": "Kya aap humse contact karne ki koshish ki thi?",
+      "requested_bucket": "long",
+      "text": "aapke dwara bheja gaya product mera phone number 9 1 2 3 4 5 6 7 8 9 par call karne ke baad bhi replace nahi hua"
+    },
+    {
+      "context": "Kya aap delivery address confirm karenge?",
+      "requested_bucket": "long",
+      "text": "delivery boy ne mere ghar ka address galat likh diya tha jiske karan mera saman kisi aur jagah pahucha hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 952005373,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: wrong_or_damaged - received a wrong or damaged item\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"item galat hai\"},{\"text\":\"damage ho gaya\"},{\"text\":\"wrong order mila\"},{\"text\":\"nahi chahiye\"},{\"text\":\"change karna hai\"}],\"short_with_context\":[{\"text\":\"nahi item sahi nahi hai\",\"context\":\"Kya aap item ka status batayenge?\"},{\"text\":\"use replace karwana hai\",\"context\":\"Aapko kya karna hai iss order ke saath?\"},{\"text\":\"mujhe refund chahiye\",\"context\":\"Aap kya chahenge is galat delivery ke liye?\"}],\"medium\":[{\"text\":\"mera order number 1 2 3 4 5 tha aur galat item aaya\"},{\"text\":\"jo product bheja gaya vo pura damage tha door ke paas\"},{\"text\":\"order cancel karna hai kyunki item totally wrong tha\"},{\"text\":\"mera address 2 3 5 B Sector 5 Chandigarh hai lekin yeh galat jagah pahucha\"},{\"text\":\"kya main item wapas kar sakta hu aur refund aa jayega\"},{\"text\":\"mera phone number 9 8 7 6 5 4 3 2 1 0 hai us pe call kijiye\"},{\"text\":\"23 april ko order kiya tha par delivery me galti hui hai\"}],\"medium_with_context\":[{\"text\":\"item box me pura toot gaya tha aur use main use nahi kar sakta\",\"context\":\"Kya aap ne item receive kar liya hai?\"},{\"text\":\"galat product mila mujhe laptop ki jagah mouse mila\",\"context\":\"Aapko jo product chahiye tha wo kya hai?\"},{\"text\":\"order number 4 5 6 7 8 9 hai mera ye galat shipment raha\",\"context\":\"Kya aap apna order number confirm kar sakte hain?\"},{\"text\":\"mujhe refund chahiye ya phir naya item bhej do\",\"context\":\"Aap chahte hain ki hum kya karein?\"},{\"text\":\"mera address sahi de diya tha lekin order dusre ghar chala gaya\",\"context\":\"Aapka delivery address kya tha?\"}],\"long\":[{\"text\":\"mera order number 9 8 7 6 5 tha jisme ki apple watch aani thi par ek broken pen bhej diya gaya hai\"},{\"text\":\"maine apna phone number 8 7 6 5 4 3 2 1 0 9 diya tha par aaj tak kisi ne call nahi kiya meri problem ko leke\"},{\"text\":\"22 march ko order kiya tha aur mujhe chocolate order karni thi magar galat jagah lipstick bhej di gayi hai main ise accept nahi kar raha hu\"}],\"long_with_context\":[{\"text\":\"maine 1 2 3 4 5 order kiya tha fish ke liye aur mujhe chicken mila hai ye galti sudharni hogi\",\"context\":\"Kya aap apna order detail mujhe de sakte hain?\"},{\"text\":\"aapke dwara bheja gaya product mera phone number 9 1 2 3 4 5 6 7 8 9 par call karne ke baad bhi replace nahi hua\",\"context\":\"Kya aap humse contact karne ki koshish ki thi?\"},{\"text\":\"delivery boy ne mere ghar ka address galat likh diya tha jiske karan mera saman kisi aur jagah pahucha hai\",\"context\":\"Kya aap delivery address confirm karenge?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 606,
+    "output_tokens": 734
+  }
+}

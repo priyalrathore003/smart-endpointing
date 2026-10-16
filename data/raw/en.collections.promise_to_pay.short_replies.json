@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.collections.promise_to_pay.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "promise_to_pay",
+  "items": [
+    {
+      "context": "When will you be able to pay?",
+      "requested_bucket": "short",
+      "text": "Tomorrow"
+    },
+    {
+      "context": "Can you pay the full amount today?",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "What is the amount you can pay now?",
+      "requested_bucket": "short",
+      "text": "Five thousand"
+    },
+    {
+      "context": "Will you clear the dues by this month end?",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Are you making payment today?",
+      "requested_bucket": "short",
+      "text": "Okay"
+    },
+    {
+      "context": "Can you promise a payment date?",
+      "requested_bucket": "short",
+      "text": "Next Friday"
+    },
+    {
+      "context": "How much can you pay right now?",
+      "requested_bucket": "short",
+      "text": "Two thousand"
+    },
+    {
+      "context": "Is this a good time to pay?",
+      "requested_bucket": "short",
+      "text": "Later"
+    },
+    {
+      "context": "Will you pay online or cash?",
+      "requested_bucket": "short",
+      "text": "Online"
+    },
+    {
+      "context": "Can you commit to a payment date?",
+      "requested_bucket": "short",
+      "text": "By Monday"
+    },
+    {
+      "context": "Are you ready to pay a part today?",
+      "requested_bucket": "short",
+      "text": "Sure"
+    },
+    {
+      "context": "When would you send the payment?",
+      "requested_bucket": "short",
+      "text": "After two days"
+    },
+    {
+      "context": "Can I note a payment date?",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Do you agree to pay by next week?",
+      "requested_bucket": "short",
+      "text": "Okay"
+    },
+    {
+      "context": "When exactly can we expect your payment?",
+      "requested_bucket": "medium",
+      "text": "I will try to pay by the end of this week"
+    },
+    {
+      "context": "Can you confirm the amount you will pay today?",
+      "requested_bucket": "medium",
+      "text": "I can pay ten thousand rupees today only"
+    },
+    {
+      "context": "Could you tell me the day you will make the payment?",
+      "requested_bucket": "medium",
+      "text": "I will make the payment by coming Wednesday"
+    },
+    {
+      "context": "Is it possible for you to clear the balance this month?",
+      "requested_bucket": "medium",
+      "text": "Yes I am planning to clear it by the 25 th"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2969750741,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: promise_to_pay - replies to a payment reminder with a date or amount they will pay\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"When will you be able to pay?\",\"reply\":\"Tomorrow\"},{\"agent_question\":\"Can you pay the full amount today?\",\"reply\":\"No\"},{\"agent_question\":\"What is the amount you can pay now?\",\"reply\":\"Five thousand\"},{\"agent_question\":\"Will you clear the dues by this month end?\",\"reply\":\"Yes\"},{\"agent_question\":\"Are you making payment today?\",\"reply\":\"Okay\"},{\"agent_question\":\"Can you promise a payment date?\",\"reply\":\"Next Friday\"},{\"agent_question\":\"How much can you pay right now?\",\"reply\":\"Two thousand\"},{\"agent_question\":\"Is this a good time to pay?\",\"reply\":\"Later\"},{\"agent_question\":\"Will you pay online or cash?\",\"reply\":\"Online\"},{\"agent_question\":\"Can you commit to a payment date?\",\"reply\":\"By Monday\"},{\"agent_question\":\"Are you ready to pay a part today?\",\"reply\":\"Sure\"},{\"agent_question\":\"When would you send the payment?\",\"reply\":\"After two days\"},{\"agent_question\":\"Can I note a payment date?\",\"reply\":\"Yes\"},{\"agent_question\":\"Do you agree to pay by next week?\",\"reply\":\"Okay\"}],\"medium\":[{\"agent_question\":\"When exactly can we expect your payment?\",\"reply\":\"I will try to pay by the end of this week\"},{\"agent_question\":\"Can you confirm the amount you will pay today?\",\"reply\":\"I can pay ten thousand rupees today only\"},{\"agent_question\":\"Could you tell me the day you will make the payment?\",\"reply\":\"I will make the payment by coming Wednesday\"},{\"agent_question\":\"Is it possible for you to clear the balance this month?\",\"reply\":\"Yes I am planning to clear it by the 25 th\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 372,
+    "output_tokens": 348
+  }
+}

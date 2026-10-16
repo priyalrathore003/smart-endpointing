@@ -1,0 +1,162 @@
+{
+  "batch_id": "en.telecom.plan_change.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "plan_change",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "change plan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "upgrade to 499"
+    },
+    {
+      "context": "Would you like to change your current plan now?",
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "When do you want the new plan activation?",
+      "requested_bucket": "short",
+      "text": "tomorrow morning"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you tell me the benefits of the 299 recharge plan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to switch my plan to something with more data"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Is there any daily data limit on your 399 plan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "How much will it cost to upgrade my current 199 plan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please help me understand the new prepaid plans available this month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I am interested in a plan that offers both calls and internet for 599"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to check my current plan details and expiry date"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can you tell me if the unlimited calling is really unlimited on 249 plan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I would like to know the roaming charges on my existing plan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "My plan is ending next week I want to upgrade to one with more validity"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Tell me the process to change my plan without visiting any store"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "How much data will I get daily on the 349 plan"
+    },
+    {
+      "context": "Are you looking for information on data or SMS limits?",
+      "requested_bucket": "medium",
+      "text": "I want to check how many SMS I can send on this plan"
+    },
+    {
+      "context": "Are you interested in individual plans or family/group plans?",
+      "requested_bucket": "medium",
+      "text": "Please tell me if there is a family plan available"
+    },
+    {
+      "context": "Do you want plans with additional benefits like OTT subscriptions?",
+      "requested_bucket": "medium",
+      "text": "I need to know if the new plan has free subscription to any streaming app"
+    },
+    {
+      "context": "Would you like a comparison between our mid-range prepaid plans?",
+      "requested_bucket": "medium",
+      "text": "Can you explain the difference between the 299 and 399 recharge plans"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I would like to change my current prepaid plan to a postpaid one please guide me through the steps and charges involved"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "My existing plan is not sufficient for my data usage I want to upgrade to a higher data plan effective from next billing cycle"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Are there any special offers if I switch to the 499 plan before this month ends as I heard some discounted rates"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "If I change my plan today will I get to use the remaining data balance from my current plan or will it be lost"
+    },
+    {
+      "context": "Would you prefer to upgrade your plan online or offline at a store?",
+      "requested_bucket": "long",
+      "text": "Is it possible to upgrade my plan via the app or do I need to visit a retail outlet for that process"
+    },
+    {
+      "context": "If you want to switch to a business plan, do you need help with required documents?",
+      "requested_bucket": "long",
+      "text": "What documents or information will I need to provide if I decide to change my prepaid plan to a business plan"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 397147054,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: plan_change - wants to change or understand a plan\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"change plan\"},{\"text\":\"upgrade to 499\"}],\"short_with_context\":[{\"text\":\"yes please\",\"context\":\"Would you like to change your current plan now?\"},{\"text\":\"tomorrow morning\",\"context\":\"When do you want the new plan activation?\"}],\"medium\":[{\"text\":\"Can you tell me the benefits of the 299 recharge plan\"},{\"text\":\"I want to switch my plan to something with more data\"},{\"text\":\"Is there any daily data limit on your 399 plan\"},{\"text\":\"How much will it cost to upgrade my current 199 plan\"},{\"text\":\"Please help me understand the new prepaid plans available this month\"},{\"text\":\"I am interested in a plan that offers both calls and internet for 599\"},{\"text\":\"I want to check my current plan details and expiry date\"},{\"text\":\"Can you tell me if the unlimited calling is really unlimited on 249 plan\"},{\"text\":\"I would like to know the roaming charges on my existing plan\"},{\"text\":\"My plan is ending next week I want to upgrade to one with more validity\"},{\"text\":\"Tell me the process to change my plan without visiting any store\"},{\"text\":\"How much data will I get daily on the 349 plan\"}],\"medium_with_context\":[{\"text\":\"I want to check how many SMS I can send on this plan\",\"context\":\"Are you looking for information on data or SMS limits?\"},{\"text\":\"Please tell me if there is a family plan available\",\"context\":\"Are you interested in individual plans or family/group plans?\"},{\"text\":\"I need to know if the new plan has free subscription to any streaming app\",\"context\":\"Do you want plans with additional benefits like OTT subscriptions?\"},{\"text\":\"Can you explain the difference between the 299 and 399 recharge plans\",\"context\":\"Would you like a comparison between our mid-range prepaid plans?\"}],\"long\":[{\"text\":\"I would like to change my current prepaid plan to a postpaid one please guide me through the steps and charges involved\"},{\"text\":\"My existing plan is not sufficient for my data usage I want to upgrade to a higher data plan effective from next billing cycle\"},{\"text\":\"Are there any special offers if I switch to the 499 plan before this month ends as I heard some discounted rates\"},{\"text\":\"If I change my plan today will I get to use the remaining data balance from my current plan or will it be lost\"}],\"long_with_context\":[{\"text\":\"Is it possible to upgrade my plan via the app or do I need to visit a retail outlet for that process\",\"context\":\"Would you prefer to upgrade your plan online or offline at a store?\"},{\"text\":\"What documents or information will I need to provide if I decide to change my prepaid plan to a business plan\",\"context\":\"If you want to switch to a business plan, do you need help with required documents?\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 585,
+    "output_tokens": 578
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.collections.ask_extension.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "collections",
+  "intent": "ask_extension",
+  "items": [
+    {
+      "context": "क्या आप payment को split करना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ जरूर"
+    },
+    {
+      "context": "कितना extension चाहिए आपको",
+      "requested_bucket": "short",
+      "text": "दो दिन"
+    },
+    {
+      "context": "क्या आप पूरी रकम एक साथ जमा कर पाएंगे",
+      "requested_bucket": "short",
+      "text": "शायद नहीं"
+    },
+    {
+      "context": "आप कितनी राशि जमा कर पाएंगे अभी",
+      "requested_bucket": "short",
+      "text": "पांच हजार"
+    },
+    {
+      "context": "क्या आप कल payment कर सकेंगे",
+      "requested_bucket": "short",
+      "text": "हूँ जी"
+    },
+    {
+      "context": "क्या आप installment में payment करना चाहेंगे",
+      "requested_bucket": "short",
+      "text": "हाँ"
+    },
+    {
+      "context": "extension for payment चाहिए आपको",
+      "requested_bucket": "short",
+      "text": "एक हफ्ता"
+    },
+    {
+      "context": "क्या आपको किसी तरह की मदद चाहिए payment के लिए",
+      "requested_bucket": "short",
+      "text": "नहीं"
+    },
+    {
+      "context": "कृपया बताएं कब payment कर पाएंगे",
+      "requested_bucket": "short",
+      "text": "अभी नहीं"
+    },
+    {
+      "context": "क्या आप payment के लिए कोई दिन और बता सकते हैं",
+      "requested_bucket": "short",
+      "text": "कल तक"
+    },
+    {
+      "context": "क्या आपको payment में कुछ problem है",
+      "requested_bucket": "short",
+      "text": "थोड़ा problem है"
+    },
+    {
+      "context": "क्या आप partial payment कर सकते हैं",
+      "requested_bucket": "short",
+      "text": "सिर्फ दो हजार"
+    },
+    {
+      "context": "कृपया payment के लिए preferred date बताएं",
+      "requested_bucket": "short",
+      "text": "दस तारीख"
+    },
+    {
+      "context": "क्या आप अभी payment कर पाएंगे",
+      "requested_bucket": "short",
+      "text": "नहीं"
+    },
+    {
+      "context": "आपको कितना extension चाहिए payment के लिए",
+      "requested_bucket": "medium",
+      "text": "सर दो दिन का extension मिल जाए तो अच्छा रहेगा"
+    },
+    {
+      "context": "क्या आप partial payment करना चाहते हैं या पूरा करना है",
+      "requested_bucket": "medium",
+      "text": "मैं partial payment करना चाहता हूँ पच्चीस सौ अभी दे सकता हूँ"
+    },
+    {
+      "context": "आप कब तक payment complete कर पाएंगे",
+      "requested_bucket": "medium",
+      "text": "अगले हफ्ते के अंत तक पूरा payment कर दूंगा मैं"
+    },
+    {
+      "context": "क्या आप payment में कुछ help चाहते हैं मैं arrange कर देता हूँ",
+      "requested_bucket": "medium",
+      "text": "जी हाँ अगर कुछ आसान तरीका हो तो बताइए"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 847587410,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: ask_extension - asks for more time or to split the payment\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"क्या आप payment को split करना चाहते हैं\",\"reply\":\"हाँ जरूर\"},{\"agent_question\":\"कितना extension चाहिए आपको\",\"reply\":\"दो दिन\"},{\"agent_question\":\"क्या आप पूरी रकम एक साथ जमा कर पाएंगे\",\"reply\":\"शायद नहीं\"},{\"agent_question\":\"आप कितनी राशि जमा कर पाएंगे अभी\",\"reply\":\"पांच हजार\"},{\"agent_question\":\"क्या आप कल payment कर सकेंगे\",\"reply\":\"हूँ जी\"},{\"agent_question\":\"क्या आप installment में payment करना चाहेंगे\",\"reply\":\"हाँ\"},{\"agent_question\":\"extension for payment चाहिए आपको\",\"reply\":\"एक हफ्ता\"},{\"agent_question\":\"क्या आपको किसी तरह की मदद चाहिए payment के लिए\",\"reply\":\"नहीं\"},{\"agent_question\":\"कृपया बताएं कब payment कर पाएंगे\",\"reply\":\"अभी नहीं\"},{\"agent_question\":\"क्या आप payment के लिए कोई दिन और बता सकते हैं\",\"reply\":\"कल तक\"},{\"agent_question\":\"क्या आपको payment में कुछ problem है\",\"reply\":\"थोड़ा problem है\"},{\"agent_question\":\"क्या आप partial payment कर सकते हैं\",\"reply\":\"सिर्फ दो हजार\"},{\"agent_question\":\"कृपया payment के लिए preferred date बताएं\",\"reply\":\"दस तारीख\"},{\"agent_question\":\"क्या आप अभी payment कर पाएंगे\",\"reply\":\"नहीं\"}],\"medium\":[{\"agent_question\":\"आपको कितना extension चाहिए payment के लिए\",\"reply\":\"सर दो दिन का extension मिल जाए तो अच्छा रहेगा\"},{\"agent_question\":\"क्या आप partial payment करना चाहते हैं या पूरा करना है\",\"reply\":\"मैं partial payment करना चाहता हूँ पच्चीस सौ अभी दे सकता हूँ\"},{\"agent_question\":\"आप कब तक payment complete कर पाएंगे\",\"reply\":\"अगले हफ्ते के अंत तक पूरा payment कर दूंगा मैं\"},{\"agent_question\":\"क्या आप payment में कुछ help चाहते हैं मैं arrange कर देता हूँ\",\"reply\":\"जी हाँ अगर कुछ आसान तरीका हो तो बताइए\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 497,
+    "output_tokens": 384
+  }
+}

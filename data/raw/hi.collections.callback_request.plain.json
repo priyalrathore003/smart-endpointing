@@ -1,0 +1,142 @@
+{
+  "batch_id": "hi.collections.callback_request.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "callback_request",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "कल ठीक रहेगा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "थोड़ा बाद में"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "कल तक"
+    },
+    {
+      "context": "अभी कॉल करना ठीक रहेगा?",
+      "requested_bucket": "short",
+      "text": "بعد میں کال کر لینا"
+    },
+    {
+      "context": "आप अभी बात कर सकते हैं?",
+      "requested_bucket": "short",
+      "text": "शाम को कर लेंगे"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर थोड़े बाद में कॉल कर लेना प्लीज़"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मैडम आज का टाइमफ्रेम बताइए कॉल के लिए"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "थोड़ा इंतजार कर लीजिए मैं वापस कॉल करूँगा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "कृपया शाम को कोई फोन कर सके तो अच्छा रहेगा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अभी कुछ प्रॉब्लम है बाद में कॉल कर लेंगे प्लीज़"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "एक काम कीजिए शाम के बारह बजे कॉल कर लेना"
+    },
+    {
+      "context": "कॉल अभी कर लें क्या?",
+      "requested_bucket": "medium",
+      "text": "अभी कॉल कर पाते तो ठीक था पर कुछ काम है"
+    },
+    {
+      "context": "अभी बात कर सकते हैं क्या?",
+      "requested_bucket": "medium",
+      "text": "शाम छह बजे के बाद वापस कॉल कर लेंगे प्लीज़"
+    },
+    {
+      "context": "कब आपको वापस कॉल करें?",
+      "requested_bucket": "medium",
+      "text": "आज नहीं तो कल दोपहर में कॉल कर लेना आवश्यक है"
+    },
+    {
+      "context": "आप कब कॉल कराना चाहेंगे?",
+      "requested_bucket": "medium",
+      "text": "थोड़े घंटे बाद मुझे कॉल कर लीजिएगा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर मेरे पास अभी पैसा नहीं है थोड़ा बाद में कॉल करूंगा ताकि सही से बात हो सके"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मैडम अभी घर में कोई नहीं है बाद में किसी ने कॉल किया तो वह सही से नहीं संभाल पाएगा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "अगर आप अभी कॉल करेंगे तो मेरी स्थिति खराब हो जाएगी थोड़ा समय दे दीजिए प्लीज़"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "पैसे का इंतजाम अभी नहीं हुआ है इसलिए बेहतर होगा कि आप बाद में कॉल कर लें इंतजार करेंगे"
+    },
+    {
+      "context": "फिलहाल आप बात कर सकते हैं क्या?",
+      "requested_bucket": "long",
+      "text": "अभी कॉल करना मुश्किल है क्योंकि घर पर बच्चे सो रहे हैं आप शाम को कॉल करें प्लीज़"
+    },
+    {
+      "context": "कब बात करना सही रहेगा?",
+      "requested_bucket": "long",
+      "text": "अभी ऑफिस में मीटिंग में हूँ इसलिए मैं बात नहीं कर सकता आप कृपया शाम 7 बजे कॉल कर लें"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2405684094,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: callback_request - asks the agent to call back at another time\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"कल ठीक रहेगा\"},{\"text\":\"थोड़ा बाद में\"},{\"text\": \"हाँ जी\"},{\"text\":\"कल तक\"}],\"short_with_context\":[{\"text\":\"بعد میں کال کر لینا\",\"context\":\"अभी कॉल करना ठीक रहेगा?\"},{\"text\":\"शाम को कर लेंगे\",\"context\":\"आप अभी बात कर सकते हैं?\"}],\"medium\":[{\"text\":\"सर थोड़े बाद में कॉल कर लेना प्लीज़\"},{\"text\":\"मैडम आज का टाइमफ्रेम बताइए कॉल के लिए\"},{\"text\":\"थोड़ा इंतजार कर लीजिए मैं वापस कॉल करूँगा\"},{\"text\":\"कृपया शाम को कोई फोन कर सके तो अच्छा रहेगा\"},{\"text\":\"अभी कुछ प्रॉब्लम है बाद में कॉल कर लेंगे प्लीज़\"},{\"text\":\"एक काम कीजिए शाम के बारह बजे कॉल कर लेना\"}],\"medium_with_context\":[{\"text\":\"अभी कॉल कर पाते तो ठीक था पर कुछ काम है\",\"context\":\"कॉल अभी कर लें क्या?\"},{\"text\":\"शाम छह बजे के बाद वापस कॉल कर लेंगे प्लीज़\",\"context\":\"अभी बात कर सकते हैं क्या?\"},{\"text\":\"आज नहीं तो कल दोपहर में कॉल कर लेना आवश्यक है\",\"context\":\"कब आपको वापस कॉल करें?\"},{\"text\":\"थोड़े घंटे बाद मुझे कॉल कर लीजिएगा\",\"context\":\"आप कब कॉल कराना चाहेंगे?\"}],\"long\":[{\"text\":\"सर मेरे पास अभी पैसा नहीं है थोड़ा बाद में कॉल करूंगा ताकि सही से बात हो सके\"},{\"text\":\"मैडम अभी घर में कोई नहीं है बाद में किसी ने कॉल किया तो वह सही से नहीं संभाल पाएगा\"},{\"text\":\"अगर आप अभी कॉल करेंगे तो मेरी स्थिति खराब हो जाएगी थोड़ा समय दे दीजिए प्लीज़\"},{\"text\":\"पैसे का इंतजाम अभी नहीं हुआ है इसलिए बेहतर होगा कि आप बाद में कॉल कर लें इंतजार करेंगे\"}],\"long_with_context\":[{\"text\":\"अभी कॉल करना मुश्किल है क्योंकि घर पर बच्चे सो रहे हैं आप शाम को कॉल करें प्लीज़\",\"context\":\"फिलहाल आप बात कर सकते हैं क्या?\"},{\"text\":\"अभी ऑफिस में मीटिंग में हूँ इसलिए मैं बात नहीं कर सकता आप कृपया शाम 7 बजे कॉल कर लें\",\"context\":\"कब बात करना सही रहेगा?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 683,
+    "output_tokens": 477
+  }
+}

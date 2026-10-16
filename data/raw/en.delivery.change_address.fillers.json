@@ -1,0 +1,147 @@
+{
+  "batch_id": "en.delivery.change_address.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "change_address",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "change address"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "new landmark"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "tomorrow"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "card ending 4321"
+    },
+    {
+      "context": "Can you please provide the new delivery location?",
+      "requested_bucket": "short",
+      "text": "near the park"
+    },
+    {
+      "context": "Where should we update your delivery address to?",
+      "requested_bucket": "short",
+      "text": "main road"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umm I want to change my delivery address to the new place"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "actually the landmark should be more clearly mentioned like near the hospital"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I mean the delivery was supposed to come Tuesday no I think Wednesday now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "like can you please update the address to building number 23 in sector 7"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "uh I want to change the address from old town to green valley please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please make sure delivery is done near the big temple on the main road"
+    },
+    {
+      "context": "Where exactly do you want us to deliver the order?",
+      "requested_bucket": "medium",
+      "text": "yes I need to change it to house number 45 in phase two"
+    },
+    {
+      "context": "Could you specify a landmark for easier delivery?",
+      "requested_bucket": "medium",
+      "text": "uh the new landmark is the bakery next to the metro station"
+    },
+    {
+      "context": "Can I have the full updated address please?",
+      "requested_bucket": "medium",
+      "text": "please update the address to 14b third cross street in jayanagar"
+    },
+    {
+      "context": "Is there any change in the delivery location for this order?",
+      "requested_bucket": "medium",
+      "text": "actually delivery should be done at my office not home today"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I was expecting the package at my home but can you please change it to my office address instead"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "the delivery has to be changed from the old apartment complex to the new house near the shopping mall"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I want to update the address because I moved recently from sector 9 to sector 12 so please change"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "can you please deliver it to the plot number 18 which is near the main city hospital instead of before"
+    },
+    {
+      "context": "Can you confirm the current delivery address for the order?",
+      "requested_bucket": "long",
+      "text": "Um so actually the package should be delivered to my parents place which is in the same city but different area"
+    },
+    {
+      "context": "Is the current delivery address correct or do you want to change it?",
+      "requested_bucket": "long",
+      "text": "yeah I want to correct the delivery address because it was mistakenly given as my previous office here in the city"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2895245147,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: change_address - wants to change the delivery address or landmark\nLanguage: Indian English, Latin script.\nStyle for this batch: with fillers and hesitations (umm, uh, like, actually, I mean); at least a third include a self-correction ('Tuesday, no, Wednesday')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"change address\"},{\"text\":\"new landmark\"},{\"text\":\"yes please\"},{\"text\":\"tomorrow\"},{\"text\":\"card ending 4321\"}],\"short_with_context\":[{\"text\":\"near the park\",\"context\":\"Can you please provide the new delivery location?\"},{\"text\":\"main road\",\"context\":\"Where should we update your delivery address to?\"}],\"medium\":[{\"text\":\"umm I want to change my delivery address to the new place\"},{\"text\":\"actually the landmark should be more clearly mentioned like near the hospital\"},{\"text\":\"I mean the delivery was supposed to come Tuesday no I think Wednesday now\"},{\"text\":\"like can you please update the address to building number 23 in sector 7\"},{\"text\":\"uh I want to change the address from old town to green valley please\"},{\"text\":\"please make sure delivery is done near the big temple on the main road\"}],\"medium_with_context\":[{\"text\":\"yes I need to change it to house number 45 in phase two\",\"context\":\"Where exactly do you want us to deliver the order?\"},{\"text\":\"uh the new landmark is the bakery next to the metro station\",\"context\":\"Could you specify a landmark for easier delivery?\"},{\"text\":\"please update the address to 14b third cross street in jayanagar\",\"context\":\"Can I have the full updated address please?\"},{\"text\":\"actually delivery should be done at my office not home today\",\"context\":\"Is there any change in the delivery location for this order?\"}],\"long\":[{\"text\":\"I was expecting the package at my home but can you please change it to my office address instead\"},{\"text\":\"the delivery has to be changed from the old apartment complex to the new house near the shopping mall\"},{\"text\":\"I want to update the address because I moved recently from sector 9 to sector 12 so please change\"},{\"text\":\"can you please deliver it to the plot number 18 which is near the main city hospital instead of before\"}],\"long_with_context\":[{\"text\":\"Um so actually the package should be delivered to my parents place which is in the same city but different area\",\"context\":\"Can you confirm the current delivery address for the order?\"},{\"text\":\"yeah I want to correct the delivery address because it was mistakenly given as my previous office here in the city\",\"context\":\"Is the current delivery address correct or do you want to change it?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 587,
+    "output_tokens": 482
+  }
+}

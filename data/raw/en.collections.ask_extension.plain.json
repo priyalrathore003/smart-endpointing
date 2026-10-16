@@ -1,0 +1,132 @@
+{
+  "batch_id": "en.collections.ask_extension.plain",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "ask_extension",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "need more time"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "split payment"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "next month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "partial payment"
+    },
+    {
+      "context": "Would you like an extension for your payment?",
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "How much amount do you want to pay now?",
+      "requested_bucket": "short",
+      "text": "twenty thousand"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Can I get an extension to pay my dues next month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I want to split the total amount into two installments"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Is it possible to extend the payment deadline by fifteen days"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I am unable to pay the entire amount right now"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Please help me in paying half the amount today"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Is there a way to pay the balance after one week"
+    },
+    {
+      "context": "Do you want to pay the full amount or a partial amount?",
+      "requested_bucket": "medium",
+      "text": "I cannot pay the full owed amount today"
+    },
+    {
+      "context": "How much amount will you pay now?",
+      "requested_bucket": "medium",
+      "text": "I want to pay ten thousand now and the rest later"
+    },
+    {
+      "context": "What date can you make the payment?",
+      "requested_bucket": "medium",
+      "text": "Could you allow me to pay by the end of this month"
+    },
+    {
+      "context": "May I ask why you need an extension?",
+      "requested_bucket": "medium",
+      "text": "I need more time because of some financial issues"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Due to some unexpected expenses I am unable to clear the full payment before the due date so please give me an extension"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I want to split the payment into two parts so I can pay half now and the remaining amount after two weeks"
+    },
+    {
+      "context": "Can you explain why you are asking for an extension?",
+      "requested_bucket": "long",
+      "text": "I have a salary delay this month so can you please extend my payment deadline by ten days"
+    },
+    {
+      "context": "What is the reason for your payment delay?",
+      "requested_bucket": "long",
+      "text": "I am travelling for work and will receive the funds late so kindly let me pay the balance next month"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 853779241,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: ask_extension - asks for more time or to split the payment\nLanguage: Indian English, Latin script.\nStyle for this batch: plain and direct\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"need more time\"},{\"text\":\"split payment\"}, \n{\"text\":\"next month\"},{\"text\":\"partial payment\"}], \n\"short_with_context\":[{\"text\":\"yes please\",\"context\":\"Would you like an extension for your payment?\"}, \n{\"text\":\"twenty thousand\",\"context\":\"How much amount do you want to pay now?\"}], \n\"medium\":[{\"text\":\"Can I get an extension to pay my dues next month\"}, \n{\"text\":\"I want to split the total amount into two installments\"}, \n{\"text\":\"Is it possible to extend the payment deadline by fifteen days\"}, \n{\"text\":\"I am unable to pay the entire amount right now\"}, \n{\"text\":\"Please help me in paying half the amount today\"}, \n{\"text\":\"Is there a way to pay the balance after one week\"}], \n\"medium_with_context\":[{\"text\":\"I cannot pay the full owed amount today\",\"context\":\"Do you want to pay the full amount or a partial amount?\"}, \n{\"text\":\"I want to pay ten thousand now and the rest later\",\"context\":\"How much amount will you pay now?\"}, \n{\"text\":\"Could you allow me to pay by the end of this month\",\"context\":\"What date can you make the payment?\"}, \n{\"text\":\"I need more time because of some financial issues\",\"context\":\"May I ask why you need an extension?\"}], \n\"long\":[{\"text\":\"Due to some unexpected expenses I am unable to clear the full payment before the due date so please give me an extension\"}, \n{\"text\":\"I want to split the payment into two parts so I can pay half now and the remaining amount after two weeks\"}], \n\"long_with_context\":[{\"text\":\"I have a salary delay this month so can you please extend my payment deadline by ten days\",\"context\":\"Can you explain why you are asking for an extension?\"}, \n{\"text\":\"I am travelling for work and will receive the funds late so kindly let me pay the balance next month\",\"context\":\"What is the reason for your payment delay?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 559,
+    "output_tokens": 423
+  }
+}

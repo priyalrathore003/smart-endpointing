@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.delivery.where_is_order.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "delivery",
+  "intent": "where_is_order",
+  "items": [
+    {
+      "context": "aapka order number kya hai",
+      "requested_bucket": "short",
+      "text": "mera order number 12345 hai"
+    },
+    {
+      "context": "kab order diya tha aapne",
+      "requested_bucket": "short",
+      "text": "kal"
+    },
+    {
+      "context": "delivery address confirm kar dijiye",
+      "requested_bucket": "short",
+      "text": "meri gali number 5 hai"
+    },
+    {
+      "context": "payment ho gaya tha na",
+      "requested_bucket": "short",
+      "text": "haan ho gaya"
+    },
+    {
+      "context": "phone number confirm karenge",
+      "requested_bucket": "short",
+      "text": "mera number 9876543210 hai"
+    },
+    {
+      "context": "aapka naam kya hai",
+      "requested_bucket": "short",
+      "text": "mera naam Rahul hai"
+    },
+    {
+      "context": "order ka status check karna hai",
+      "requested_bucket": "short",
+      "text": "abhi nahi mila"
+    },
+    {
+      "context": "tracking number dijiye",
+      "requested_bucket": "short",
+      "text": "tracking 789012 hai"
+    },
+    {
+      "context": "order kis courier se gaya hai",
+      "requested_bucket": "short",
+      "text": "delhivery"
+    },
+    {
+      "context": "order cancel karna hai kya",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "delivery kab tak hone wali hai",
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": "kya courier ne contact kiya tha",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "parcel ka size kya hai",
+      "requested_bucket": "short",
+      "text": "medium"
+    },
+    {
+      "context": "aapki location share karenge",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "aapka email kya hai",
+      "requested_bucket": "short",
+      "text": "mera email xyz@gmail.com hai"
+    },
+    {
+      "context": "aapke paas koi receipt hai",
+      "requested_bucket": "short",
+      "text": "haan"
+    },
+    {
+      "context": "order kis din place kiya tha",
+      "requested_bucket": "short",
+      "text": "do din pehle"
+    },
+    {
+      "context": "kya aap address change karna chahte hain",
+      "requested_bucket": "short",
+      "text": "nahi"
+    },
+    {
+      "context": "aapko order mil gaya hai kya",
+      "requested_bucket": "medium",
+      "text": "nahi abhi tak delivery nahi hui hai"
+    },
+    {
+      "context": "kya aap batayenge ki order kab aayega",
+      "requested_bucket": "medium",
+      "text": "wo kal tak aa jana chahiye"
+    },
+    {
+      "context": "kya parcel aapke poore address par hai",
+      "requested_bucket": "medium",
+      "text": "haan poora address likha hua hai"
+    },
+    {
+      "context": "aapne payment kaise kiya tha",
+      "requested_bucket": "medium",
+      "text": "maine online net banking se kiya tha"
+    },
+    {
+      "context": "kya aap order receive karne ke liye available hain",
+      "requested_bucket": "medium",
+      "text": "haan main ghar par hi hoon aaj"
+    },
+    {
+      "context": "kya courier person ne contact kiya tha aapko",
+      "requested_bucket": "medium",
+      "text": "haan usne kal phone kiya tha par main busy tha"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1252233425,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: where_is_order - asks where their order or parcel is\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"aapka order number kya hai\",\"reply\":\"mera order number 12345 hai\"},{\"agent_question\":\"kab order diya tha aapne\",\"reply\":\"kal\"},{\"agent_question\":\"delivery address confirm kar dijiye\",\"reply\":\"meri gali number 5 hai\"},{\"agent_question\":\"payment ho gaya tha na\",\"reply\":\"haan ho gaya\"},{\"agent_question\":\"phone number confirm karenge\",\"reply\":\"mera number 9876543210 hai\"},{\"agent_question\":\"aapka naam kya hai\",\"reply\":\"mera naam Rahul hai\"},{\"agent_question\":\"order ka status check karna hai\",\"reply\":\"abhi nahi mila\"},{\"agent_question\":\"tracking number dijiye\",\"reply\":\"tracking 789012 hai\"},{\"agent_question\":\"order kis courier se gaya hai\",\"reply\":\"delhivery\"},{\"agent_question\":\"order cancel karna hai kya\",\"reply\":\"nahi\"},{\"agent_question\":\"delivery kab tak hone wali hai\",\"reply\":\"kal tak\"},{\"agent_question\":\"kya courier ne contact kiya tha\",\"reply\":\"haan ji\"},{\"agent_question\":\"parcel ka size kya hai\",\"reply\":\"medium\"},{\"agent_question\":\"aapki location share karenge\",\"reply\":\"haan\"},{\"agent_question\":\"aapka email kya hai\",\"reply\":\"mera email xyz@gmail.com hai\"},{\"agent_question\":\"aapke paas koi receipt hai\",\"reply\":\"haan\"},{\"agent_question\":\"order kis din place kiya tha\",\"reply\":\"do din pehle\"},{\"agent_question\":\"kya aap address change karna chahte hain\",\"reply\":\"nahi\"}],\"medium\":[{\"agent_question\":\"aapko order mil gaya hai kya\",\"reply\":\"nahi abhi tak delivery nahi hui hai\"},{\"agent_question\":\"kya aap batayenge ki order kab aayega\",\"reply\":\"wo kal tak aa jana chahiye\"},{\"agent_question\":\"kya parcel aapke poore address par hai\",\"reply\":\"haan poora address likha hua hai\"},{\"agent_question\":\"aapne payment kaise kiya tha\",\"reply\":\"maine online net banking se kiya tha\"},{\"agent_question\":\"kya aap order receive karne ke liye available hain\",\"reply\":\"haan main ghar par hi hoon aaj\"},{\"agent_question\":\"kya courier person ne contact kiya tha aapko\",\"reply\":\"haan usne kal phone kiya tha par main busy tha\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 393,
+    "output_tokens": 478
+  }
+}

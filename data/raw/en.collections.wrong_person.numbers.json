@@ -1,0 +1,177 @@
+{
+  "batch_id": "en.collections.wrong_person.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "wrong_person",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "not my number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wrong person"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "no"
+    },
+    {
+      "context": "Can you please confirm your account number",
+      "requested_bucket": "short",
+      "text": "not my account"
+    },
+    {
+      "context": "Is this the phone number registered with us",
+      "requested_bucket": "short",
+      "text": "wrong contact"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "this is not the right number you are looking for"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I think you have the wrong person on this line"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the account you are referring to does not belong to me"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my phone number is different from the one you called"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "sorry but I never received any loan or credit from you"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please check your details you are calling the wrong customer"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I am not sure why I am getting calls about this amount"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the last payment you mentioned is not from my account"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "that loan account belongs to some other person not me"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I have no outstanding dues with your company at all"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I live in Bangalore but your records show a different state"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the person you want must have a different phone number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I think you might have dialed the wrong phone number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "this person is not known to me or anyone in my family"
+    },
+    {
+      "context": "Could you please confirm your account number",
+      "requested_bucket": "medium",
+      "text": "sorry but this account number does not match with mine"
+    },
+    {
+      "context": "Are you the account holder for loan number 9876 5432 1098",
+      "requested_bucket": "medium",
+      "text": "no I am not the person associated with the loan account"
+    },
+    {
+      "context": "Have you taken any loan from us",
+      "requested_bucket": "medium",
+      "text": "I am getting calls but I have no loans with your company"
+    },
+    {
+      "context": "Is this the phone number linked to your account",
+      "requested_bucket": "medium",
+      "text": "the number you called is not registered under my name"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "My name is Rahul Sharma and I have never applied for any loan under that account number mentioned"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I live in Hyderabad and I believe your records have the wrong person because I never got contacted for any dues"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "The phone number you are trying to reach belongs to my neighbor but I am not the person responsible for any payment"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I am very sure that this is a misunderstanding because I never applied for a credit card or used the services you mentioned"
+    },
+    {
+      "context": "Can you confirm if you have any outstanding loan with us",
+      "requested_bucket": "long",
+      "text": "I have not taken any loan from your bank or any other financial institution recently so this might be a mistake"
+    },
+    {
+      "context": "We have a pending payment of 15000 on account number 1234 5678 9012",
+      "requested_bucket": "long",
+      "text": "This is not my account and the billing address you mentioned does not match mine at all so please check your database"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 699048569,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: wrong_person - says the agent has the wrong person or number\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"not my number\"},{\"text\":\"wrong person\"},{\"text\":\"no\"}],\"short_with_context\":[{\"text\":\"not my account\",\"context\":\"Can you please confirm your account number\"},{\"text\":\"wrong contact\",\"context\":\"Is this the phone number registered with us\"}],\"medium\":[{\"text\":\"this is not the right number you are looking for\"},{\"text\":\"I think you have the wrong person on this line\"},{\"text\":\"the account you are referring to does not belong to me\"},{\"text\":\"my phone number is different from the one you called\"},{\"text\":\"sorry but I never received any loan or credit from you\"},{\"text\":\"please check your details you are calling the wrong customer\"},{\"text\":\"I am not sure why I am getting calls about this amount\"},{\"text\":\"the last payment you mentioned is not from my account\"},{\"text\":\"that loan account belongs to some other person not me\"},{\"text\":\"I have no outstanding dues with your company at all\"},{\"text\":\"I live in Bangalore but your records show a different state\"},{\"text\":\"the person you want must have a different phone number\"},{\"text\":\"I think you might have dialed the wrong phone number\"},{\"text\":\"this person is not known to me or anyone in my family\"}],\"medium_with_context\":[{\"text\":\"sorry but this account number does not match with mine\",\"context\":\"Could you please confirm your account number\"},{\"text\":\"no I am not the person associated with the loan account\",\"context\":\"Are you the account holder for loan number 9876 5432 1098\"},{\"text\":\"I am getting calls but I have no loans with your company\",\"context\":\"Have you taken any loan from us\"},{\"text\":\"the number you called is not registered under my name\",\"context\":\"Is this the phone number linked to your account\"}],\"long\":[{\"text\":\"My name is Rahul Sharma and I have never applied for any loan under that account number mentioned\"},{\"text\":\"I live in Hyderabad and I believe your records have the wrong person because I never got contacted for any dues\"},{\"text\":\"The phone number you are trying to reach belongs to my neighbor but I am not the person responsible for any payment\"},{\"text\":\"I am very sure that this is a misunderstanding because I never applied for a credit card or used the services you mentioned\"}],\"long_with_context\":[{\"text\":\"I have not taken any loan from your bank or any other financial institution recently so this might be a mistake\",\"context\":\"Can you confirm if you have any outstanding loan with us\"},{\"text\":\"This is not my account and the billing address you mentioned does not match mine at all so please check your database\",\"context\":\"We have a pending payment of 15000 on account number 1234 5678 9012\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 587,
+    "output_tokens": 558
+  }
+}

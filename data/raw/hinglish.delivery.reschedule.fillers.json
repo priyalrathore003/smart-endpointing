@@ -1,0 +1,172 @@
+{
+  "batch_id": "hinglish.delivery.reschedule.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "delivery",
+  "intent": "reschedule",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal chalega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji thik hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "shaam ko theek hai"
+    },
+    {
+      "context": "Kab chahiye delivery aapko?",
+      "requested_bucket": "short",
+      "text": "aaj nahi kal kar dena"
+    },
+    {
+      "context": "Delivery timing me kya change karna hai?",
+      "requested_bucket": "short",
+      "text": "subah me hi karna please"
+    },
+    {
+      "context": "Kya timing shift karna chahte hain?",
+      "requested_bucket": "short",
+      "text": "haan thoda der se"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "matlab delivery Friday ko chahiye abhi nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "Woh mera address change karna hai bas"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha delivery time ko badal ke shaam kar dena"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "haan Tuesday nahi Monday ko karna tha delivery"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "delivery kal bhejna tha lekin aaj bhej do please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "actually, mujhe delivery mid day se late afternoon karni hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "delivery ko thoda late shaam ka karna hai"
+    },
+    {
+      "context": "Aap kis din delivery chahte hain?",
+      "requested_bucket": "medium",
+      "text": "haan Monday ko chahiye delivery abhi nahi"
+    },
+    {
+      "context": "Delivery ka time aapko kab chahiye?",
+      "requested_bucket": "medium",
+      "text": "matlab mujhe apni delivery ko shaam wale time me shift karna hai"
+    },
+    {
+      "context": "Kya delivery date change karni hai?",
+      "requested_bucket": "medium",
+      "text": "haan ji delivery Friday ke bajay Saturday ko kar dena please"
+    },
+    {
+      "context": "Delivery ka time change karna hai?",
+      "requested_bucket": "medium",
+      "text": "Woh kal 4 baje ka time tha delivery ka usko badalna hai"
+    },
+    {
+      "context": "Delivery time me kya change karna hai?",
+      "requested_bucket": "medium",
+      "text": "delivery thoda late karna hai matlab raat 7 baje ke baad"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Umm mera order jo Saturday ko tha woh Sunday ko shift karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "matlab mujhe apni delivery ko Thursday se Wednesday pe le aana hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "haan ji delivery ka time morning se shift karke afternoon karna hai please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "delivery originally Tuesday ko tha lekin ab mera schedule change ho gaya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kal dost ke ghar pe delivery karwani thi par ab uske ghar nahi jana hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera waha par nahi hona delivery ke time to usko badal dena"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mein thoda Monday ko chahunga delivery agar possible ho toh"
+    },
+    {
+      "context": "Kya aap address change karna chahte hain ya time?",
+      "requested_bucket": "long",
+      "text": "haan ji mera delivery address toh sahi hai bas timing ko adjust karna hai"
+    },
+    {
+      "context": "Kya delivery date change karni hai?",
+      "requested_bucket": "long",
+      "text": "matlab kaafi urgent hai delivery ki date change karni hai kal se pehle ke liye"
+    },
+    {
+      "context": "Aapko delivery kaunsi date par chahiye?",
+      "requested_bucket": "long",
+      "text": "woh Wednesday ka confirmation tha lekin ab mujhe Monday ko karana padega"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 364945933,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: reschedule - wants the delivery on a different day or time\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"kal chalega\"},{\"text\":\"haan ji thik hai\"},{\"text\":\"shaam ko theek hai\"}],\"short_with_context\":[{\"text\":\"aaj nahi kal kar dena\",\"context\":\"Kab chahiye delivery aapko?\"},{\"text\":\"subah me hi karna please\",\"context\":\"Delivery timing me kya change karna hai?\"},{\"text\":\"haan thoda der se\",\"context\":\"Kya timing shift karna chahte hain?\"}],\"medium\":[{\"text\":\"matlab delivery Friday ko chahiye abhi nahi\"},{\"text\":\"Woh mera address change karna hai bas\"},{\"text\":\"accha delivery time ko badal ke shaam kar dena\"},{\"text\":\"haan Tuesday nahi Monday ko karna tha delivery\"},{\"text\":\"delivery kal bhejna tha lekin aaj bhej do please\"},{\"text\":\"actually, mujhe delivery mid day se late afternoon karni hai\"},{\"text\":\"delivery ko thoda late shaam ka karna hai\"}],\"medium_with_context\":[{\"text\":\"haan Monday ko chahiye delivery abhi nahi\",\"context\":\"Aap kis din delivery chahte hain?\"},{\"text\":\"matlab mujhe apni delivery ko shaam wale time me shift karna hai\",\"context\":\"Delivery ka time aapko kab chahiye?\"},{\"text\":\"haan ji delivery Friday ke bajay Saturday ko kar dena please\",\"context\":\"Kya delivery date change karni hai?\"},{\"text\":\"Woh kal 4 baje ka time tha delivery ka usko badalna hai\",\"context\":\"Delivery ka time change karna hai?\"},{\"text\":\"delivery thoda late karna hai matlab raat 7 baje ke baad\",\"context\":\"Delivery time me kya change karna hai?\"}],\"long\":[{\"text\":\"Umm mera order jo Saturday ko tha woh Sunday ko shift karna hai\"},{\"text\":\"matlab mujhe apni delivery ko Thursday se Wednesday pe le aana hai\"},{\"text\":\"haan ji delivery ka time morning se shift karke afternoon karna hai please\"},{\"text\":\"delivery originally Tuesday ko tha lekin ab mera schedule change ho gaya hai\"},{\"text\":\"kal dost ke ghar pe delivery karwani thi par ab uske ghar nahi jana hai\"},{\"text\":\"mera waha par nahi hona delivery ke time to usko badal dena\"},{\"text\":\"mein thoda Monday ko chahunga delivery agar possible ho toh\"}],\"long_with_context\":[{\"text\":\"haan ji mera delivery address toh sahi hai bas timing ko adjust karna hai\",\"context\":\"Kya aap address change karna chahte hain ya time?\"},{\"text\":\"matlab kaafi urgent hai delivery ki date change karni hai kal se pehle ke liye\",\"context\":\"Kya delivery date change karni hai?\"},{\"text\":\"woh Wednesday ka confirmation tha lekin ab mujhe Monday ko karana padega\",\"context\":\"Aapko delivery kaunsi date par chahiye?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 610,
+    "output_tokens": 606
+  }
+}

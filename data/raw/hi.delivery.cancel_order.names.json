@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.delivery.cancel_order.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "delivery",
+  "intent": "cancel_order",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "हाँ सर"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "जल्दी प्लीज़"
+    },
+    {
+      "context": "कहां से डिलीवरी करानी है?",
+      "requested_bucket": "short",
+      "text": "मार्केट रोड पर"
+    },
+    {
+      "context": "कब तक कैंसल चाहिए?",
+      "requested_bucket": "short",
+      "text": "कल दोपहर तक"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे कल से आई हुई parcel कैंसल करना है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "वो ऑर्डर मुंबई के लिंक रोड पर था प्लीज़ कैंसल कर दो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "रिफंड कब मिलेगा मुझे जल्दी बताओ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "इस बार डिलीवरी बहुत लेट हुई इसलिए कैंसल कर रहा हूँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "क्या ये ऑर्डर कैंसल होने के बाद पैसा वापस मिलेगा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मेरा नाम पूजा है और ऑर्डर नंबर 12345 कैंसल करो"
+    },
+    {
+      "context": "कृपया अपना नाम और ऑर्डर डिटेल बताएं",
+      "requested_bucket": "medium",
+      "text": "मेरा नाम राहुल है ये कैंसल करना है"
+    },
+    {
+      "context": "कहां से ऑर्डर किया था क्या प्रॉडक्ट था?",
+      "requested_bucket": "medium",
+      "text": "डिलीवरी रुकवाना है और रिफंड भी चाहिए"
+    },
+    {
+      "context": "क्या आप पता बताना चाहेंगे जहां से डिलीवरी होनी थी?",
+      "requested_bucket": "medium",
+      "text": "इस पता से आया था इंडिया गेट नई दिल्ली"
+    },
+    {
+      "context": "कब और क्या ऑर्डर किया था हमें बताइए",
+      "requested_bucket": "medium",
+      "text": "मैंने आज सुबह ऑर्डर किया था जल्दी कैंसल करो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "मेरा नाम संजय है और मैंने कल राजपुर रोड, देहरादून के लिए parcel भेजा था मुझे उसका ऑर्डर कैंसल करना है क्योंकि मुझे जल्दी उस चीज़ की ज़रूरत नहीं है अब"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "ऑर्डर नंबर 78910 कैंसल करना है जो मैंने 15 तारीख को मुंबई के लिंक रोड से माँगा था मैं वहाँ नहीं रह रहा इसलिए जल्दी से कैंसल कर दो और रिफंड भी देना"
+    },
+    {
+      "context": "कैंसल प्रक्रिया में कितना समय लगेगा आपको बताना होगा?",
+      "requested_bucket": "long",
+      "text": "जी सर मैंने अभी अभी आप से कहा कि मुझे कैंसल कब तक मिलेगा जल्द बताएं मुझे पैसा वापस चाहिए"
+    },
+    {
+      "context": "ऑर्डर के बारे में कुछ विवरण दीजिए जिससे हम आपकी मदद कर सकें",
+      "requested_bucket": "long",
+      "text": "मैडम मैं उस ऑर्डर को कैंसल करना चाहता हूँ जो ग्रेटर नोएडा के सेक्टर 62 के लिए था मुझे वहाँ बदलाव करना पड़ेगा इस कारण से"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2633411666,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cancel_order - wants to cancel an order\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"हाँ सर\"},{\"text\":\"जल्दी प्लीज़\"}],\"short_with_context\":[{\"text\":\"मार्केट रोड पर\",\"context\":\"कहां से डिलीवरी करानी है?\"},{\"text\":\"कल दोपहर तक\",\"context\":\"कब तक कैंसल चाहिए?\"}],\"medium\":[{\"text\":\"मुझे कल से आई हुई parcel कैंसल करना है\"},{\"text\":\"वो ऑर्डर मुंबई के लिंक रोड पर था प्लीज़ कैंसल कर दो\"},{\"text\":\"रिफंड कब मिलेगा मुझे जल्दी बताओ\"},{\"text\":\"इस बार डिलीवरी बहुत लेट हुई इसलिए कैंसल कर रहा हूँ\"},{\"text\":\"क्या ये ऑर्डर कैंसल होने के बाद पैसा वापस मिलेगा\"},{\"text\":\"मेरा नाम पूजा है और ऑर्डर नंबर 12345 कैंसल करो\"}],\"medium_with_context\":[{\"text\":\"मेरा नाम राहुल है ये कैंसल करना है\",\"context\":\"कृपया अपना नाम और ऑर्डर डिटेल बताएं\"},{\"text\":\"डिलीवरी रुकवाना है और रिफंड भी चाहिए\",\"context\":\"कहां से ऑर्डर किया था क्या प्रॉडक्ट था?\"},{\"text\":\"इस पता से आया था इंडिया गेट नई दिल्ली\",\"context\":\"क्या आप पता बताना चाहेंगे जहां से डिलीवरी होनी थी?\"},{\"text\":\"मैंने आज सुबह ऑर्डर किया था जल्दी कैंसल करो\",\"context\":\"कब और क्या ऑर्डर किया था हमें बताइए\"}],\"long\":[{\"text\":\"मेरा नाम संजय है और मैंने कल राजपुर रोड, देहरादून के लिए parcel भेजा था मुझे उसका ऑर्डर कैंसल करना है क्योंकि मुझे जल्दी उस चीज़ की ज़रूरत नहीं है अब\"},{\"text\":\"ऑर्डर नंबर 78910 कैंसल करना है जो मैंने 15 तारीख को मुंबई के लिंक रोड से माँगा था मैं वहाँ नहीं रह रहा इसलिए जल्दी से कैंसल कर दो और रिफंड भी देना\"}],\"long_with_context\":[{\"text\":\"जी सर मैंने अभी अभी आप से कहा कि मुझे कैंसल कब तक मिलेगा जल्द बताएं मुझे पैसा वापस चाहिए\",\"context\":\"कैंसल प्रक्रिया में कितना समय लगेगा आपको बताना होगा?\"},{\"text\":\"मैडम मैं उस ऑर्डर को कैंसल करना चाहता हूँ जो ग्रेटर नोएडा के सेक्टर 62 के लिए था मुझे वहाँ बदलाव करना पड़ेगा इस कारण से\",\"context\":\"ऑर्डर के बारे में कुछ विवरण दीजिए जिससे हम आपकी मदद कर सकें\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 688,
+    "output_tokens": 514
+  }
+}

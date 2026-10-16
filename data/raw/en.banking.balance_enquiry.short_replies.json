@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.banking.balance_enquiry.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "banking",
+  "intent": "balance_enquiry",
+  "items": [
+    {
+      "context": "Please provide your account number",
+      "requested_bucket": "short",
+      "text": "My account number is 123456789"
+    },
+    {
+      "context": "What is your registered mobile number",
+      "requested_bucket": "short",
+      "text": "The number is 9876543210"
+    },
+    {
+      "context": "Can you confirm your date of birth",
+      "requested_bucket": "short",
+      "text": "It is 15 March 1985"
+    },
+    {
+      "context": "Which account do you want to check balance for",
+      "requested_bucket": "short",
+      "text": "Savings account"
+    },
+    {
+      "context": "Would you like to know your last transaction details",
+      "requested_bucket": "short",
+      "text": "Yes please"
+    },
+    {
+      "context": "Do you want to hear the balance for your checking account",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Please confirm your full name",
+      "requested_bucket": "short",
+      "text": "My name is Rahul Sharma"
+    },
+    {
+      "context": "Should I send the balance details via SMS",
+      "requested_bucket": "short",
+      "text": "No thanks"
+    },
+    {
+      "context": "Would you like the balance in rupees",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Are you enquiring about your current balance",
+      "requested_bucket": "short",
+      "text": "Current balance"
+    },
+    {
+      "context": "Is this your primary account",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Do you have any pending transactions",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Would you like transaction details for the past week",
+      "requested_bucket": "short",
+      "text": "Last week"
+    },
+    {
+      "context": "Have you updated your KYC recently",
+      "requested_bucket": "short",
+      "text": "Yes updated"
+    },
+    {
+      "context": "Can you tell me your account type please",
+      "requested_bucket": "medium",
+      "text": "I have a savings account with your bank and want balance"
+    },
+    {
+      "context": "What date should I check your statements from",
+      "requested_bucket": "medium",
+      "text": "Please check transactions from first of this month"
+    },
+    {
+      "context": "Do you want the balance including recent deposits",
+      "requested_bucket": "medium",
+      "text": "Yes I want the balance including the last deposit made"
+    },
+    {
+      "context": "Would you like me to list recent transactions or just balance",
+      "requested_bucket": "medium",
+      "text": "Please list recent transactions along with the current balance"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2077855016,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: balance_enquiry - asks for their account balance or recent transactions\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Please provide your account number\",\"reply\":\"My account number is 123456789\"},{\"agent_question\":\"What is your registered mobile number\",\"reply\":\"The number is 9876543210\"},{\"agent_question\":\"Can you confirm your date of birth\",\"reply\":\"It is 15 March 1985\"},{\"agent_question\":\"Which account do you want to check balance for\",\"reply\":\"Savings account\"},{\"agent_question\":\"Would you like to know your last transaction details\",\"reply\":\"Yes please\"},{\"agent_question\":\"Do you want to hear the balance for your checking account\",\"reply\":\"Yes\"},{\"agent_question\":\"Please confirm your full name\",\"reply\":\"My name is Rahul Sharma\"},{\"agent_question\":\"Should I send the balance details via SMS\",\"reply\":\"No thanks\"},{\"agent_question\":\"Would you like the balance in rupees\",\"reply\":\"Yes\"},{\"agent_question\":\"Are you enquiring about your current balance\",\"reply\":\"Current balance\"},{\"agent_question\":\"Is this your primary account\",\"reply\":\"Yes\"},{\"agent_question\":\"Do you have any pending transactions\",\"reply\":\"No\"},{\"agent_question\":\"Would you like transaction details for the past week\",\"reply\":\"Last week\"},{\"agent_question\":\"Have you updated your KYC recently\",\"reply\":\"Yes updated\"}],\"medium\":[{\"agent_question\":\"Can you tell me your account type please\",\"reply\":\"I have a savings account with your bank and want balance\"},{\"agent_question\":\"What date should I check your statements from\",\"reply\":\"Please check transactions from first of this month\"},{\"agent_question\":\"Do you want the balance including recent deposits\",\"reply\":\"Yes I want the balance including the last deposit made\"},{\"agent_question\":\"Would you like me to list recent transactions or just balance\",\"reply\":\"Please list recent transactions along with the current balance\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 367,
+    "output_tokens": 356
+  }
+}

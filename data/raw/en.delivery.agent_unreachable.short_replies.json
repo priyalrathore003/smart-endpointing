@@ -1,0 +1,142 @@
+{
+  "batch_id": "en.delivery.agent_unreachable.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "delivery",
+  "intent": "agent_unreachable",
+  "items": [
+    {
+      "context": "Can you tell me your location again",
+      "requested_bucket": "short",
+      "text": "Near the old bus stop"
+    },
+    {
+      "context": "Is the address correct in the app",
+      "requested_bucket": "short",
+      "text": "Yes it is"
+    },
+    {
+      "context": "Have you checked if your phone is reachable",
+      "requested_bucket": "short",
+      "text": "Yes it is reachable"
+    },
+    {
+      "context": "Are you available right now to guide the delivery boy",
+      "requested_bucket": "short",
+      "text": "Yes I am"
+    },
+    {
+      "context": "Can you provide any landmark nearby",
+      "requested_bucket": "short",
+      "text": "Next to the pharmacy"
+    },
+    {
+      "context": "Is there a security guard at your building",
+      "requested_bucket": "short",
+      "text": "No there is not"
+    },
+    {
+      "context": "Can you describe your house color",
+      "requested_bucket": "short",
+      "text": "Its white"
+    },
+    {
+      "context": "Are you able to hear any doorbell",
+      "requested_bucket": "short",
+      "text": "No I dont hear any"
+    },
+    {
+      "context": "Is delivery boys phone reachable to you",
+      "requested_bucket": "short",
+      "text": "No he is not answering"
+    },
+    {
+      "context": "Can you ask the delivery person to call you again",
+      "requested_bucket": "short",
+      "text": "Okay I will"
+    },
+    {
+      "context": "Are you in a gated community",
+      "requested_bucket": "short",
+      "text": "Yes we are"
+    },
+    {
+      "context": "Is your phone switched on",
+      "requested_bucket": "short",
+      "text": "Yes it is on"
+    },
+    {
+      "context": "Is your address on main road",
+      "requested_bucket": "short",
+      "text": "No it is inside"
+    },
+    {
+      "context": "Can you see the delivery boy around you",
+      "requested_bucket": "short",
+      "text": "No I cannot see"
+    },
+    {
+      "context": "Is the delivery person nearby",
+      "requested_bucket": "short",
+      "text": "Not yet received"
+    },
+    {
+      "context": "Have you checked for any calls or messages from delivery boy",
+      "requested_bucket": "short",
+      "text": "Yes I checked"
+    },
+    {
+      "context": "Are there any nearby shops to your address",
+      "requested_bucket": "short",
+      "text": "Yes there is a grocery store"
+    },
+    {
+      "context": "Can you give me your flat or apartment number",
+      "requested_bucket": "short",
+      "text": "Its flat number twelve"
+    },
+    {
+      "context": "Can you describe your location so delivery can find you",
+      "requested_bucket": "medium",
+      "text": "Its near the big park close to the hospital on main road"
+    },
+    {
+      "context": "Is there any specific landmark to help the delivery person find you",
+      "requested_bucket": "medium",
+      "text": "Yes there is a big red temple right opposite my house building"
+    },
+    {
+      "context": "Have you tried calling the delivery person yourself",
+      "requested_bucket": "medium",
+      "text": "Yes I called but he didnt answer my phone calls at all"
+    },
+    {
+      "context": "Are you in a secure location where delivery can be left or must be handed over",
+      "requested_bucket": "medium",
+      "text": "I need the delivery handover personally because its a valuable item"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3384837143,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: agent_unreachable - the delivery person is not answering or cannot find the address\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Can you tell me your location again\",\"reply\":\"Near the old bus stop\"},{\"agent_question\":\"Is the address correct in the app\",\"reply\":\"Yes it is\"},{\"agent_question\":\"Have you checked if your phone is reachable\",\"reply\":\"Yes it is reachable\"},{\"agent_question\":\"Are you available right now to guide the delivery boy\",\"reply\":\"Yes I am\"},{\"agent_question\":\"Can you provide any landmark nearby\",\"reply\":\"Next to the pharmacy\"},{\"agent_question\":\"Is there a security guard at your building\",\"reply\":\"No there is not\"},{\"agent_question\":\"Can you describe your house color\",\"reply\":\"Its white\"},{\"agent_question\":\"Are you able to hear any doorbell\",\"reply\":\"No I dont hear any\"},{\"agent_question\":\"Is delivery boys phone reachable to you\",\"reply\":\"No he is not answering\"},{\"agent_question\":\"Can you ask the delivery person to call you again\",\"reply\":\"Okay I will\"},{\"agent_question\":\"Are you in a gated community\",\"reply\":\"Yes we are\"},{\"agent_question\":\"Is your phone switched on\",\"reply\":\"Yes it is on\"},{\"agent_question\":\"Is your address on main road\",\"reply\":\"No it is inside\"},{\"agent_question\":\"Can you see the delivery boy around you\",\"reply\":\"No I cannot see\"},{\"agent_question\":\"Is the delivery person nearby\",\"reply\":\"Not yet received\"},{\"agent_question\":\"Have you checked for any calls or messages from delivery boy\",\"reply\":\"Yes I checked\"},{\"agent_question\":\"Are there any nearby shops to your address\",\"reply\":\"Yes there is a grocery store\"},{\"agent_question\":\"Can you give me your flat or apartment number\",\"reply\":\"Its flat number twelve\"}],\"medium\":[{\"agent_question\":\"Can you describe your location so delivery can find you\",\"reply\":\"Its near the big park close to the hospital on main road\"},{\"agent_question\":\"Is there any specific landmark to help the delivery person find you\",\"reply\":\"Yes there is a big red temple right opposite my house building\"},{\"agent_question\":\"Have you tried calling the delivery person yourself\",\"reply\":\"Yes I called but he didnt answer my phone calls at all\"},{\"agent_question\":\"Are you in a secure location where delivery can be left or must be handed over\",\"reply\":\"I need the delivery handover personally because its a valuable item\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 370,
+    "output_tokens": 461
+  }
+}

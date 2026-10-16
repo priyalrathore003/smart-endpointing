@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.collections.financial_hardship.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "financial_hardship",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahi abhi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "delay ho raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "mujhe paise nahi hai"
+    },
+    {
+      "context": "Kya aap abhi payment kar sakte hain?",
+      "requested_bucket": "short",
+      "text": "kya abhi payment kar payenge"
+    },
+    {
+      "context": "Kab tak payment kar paayenge?",
+      "requested_bucket": "short",
+      "text": "thoda waqt chahiye"
+    },
+    {
+      "context": "Kab tak aapki payment possible hogi?",
+      "requested_bucket": "short",
+      "text": "mujhe samay chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera naukri chala gaya abhi paise nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main beemaar hoon isliye payment nahi kar pa raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "agar thoda waqt mil jaaye to paisa de dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera address delhi mein hai aur mai unemployed hoon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kiraye ke liye bhi paise kam pad rahe hain is waqt"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "meri tabiyat kharab hai is wajah se delay ho raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "doctor ne kaha hai thik hone mein thoda waqt lagega"
+    },
+    {
+      "context": "Kya aap apne system se payment kar pa rahe hain?",
+      "requested_bucket": "medium",
+      "text": "mai aapke system se pay kar pa raha nahi hoon"
+    },
+    {
+      "context": "Kya aapke paas kaam abhi hai payment ke liye?",
+      "requested_bucket": "medium",
+      "text": "job chala gaya hai isliye payment abhi mumkin nahi"
+    },
+    {
+      "context": "Kya aapne koi financial support lene ki koshish ki hai?",
+      "requested_bucket": "medium",
+      "text": "maine apply bhi kiya tha loan ke liye par reject ho gaya"
+    },
+    {
+      "context": "Kya aap physically fit hai payment karne ke liye?",
+      "requested_bucket": "medium",
+      "text": "main kal se beemaar hoon doctor ke pass hoon abhi bhi"
+    },
+    {
+      "context": "Aapka current location kya hai payment ke liye?",
+      "requested_bucket": "medium",
+      "text": "main Gurgaon se hoon paise bhejne mein problem aa rahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera office band ho gaya hai aur mera income source khatam ho gaya hai isliye abhi payment nahi kar sakta"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mai kuch mahino se beemaar hoon doctor ne kaha hai rest lena zaroori hai aur is wajah se paisa nahi bhej pa raha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "pichle mahine mera accident ho gaya tha us wajah se hospital ke kharche badh gaye aur abhi paise nahi hai payment karne ke liye"
+    },
+    {
+      "context": "Aap ki current financial situation kya hai payment ke liye?",
+      "requested_bucket": "long",
+      "text": "mujhe thodi madad chahiye kyuki meri naukri chali gayi hai main payment abhi turant nahi kar sakta"
+    },
+    {
+      "context": "Kya aapke paas koi medical certificate ya documents hai?",
+      "requested_bucket": "long",
+      "text": "main Aligarh me rehta hoon aur meri health problem ki wajah se main apni salary nahi le pa raha hu"
+    },
+    {
+      "context": "Kya aap thoda aur time le sakte hain payment ke liye?",
+      "requested_bucket": "long",
+      "text": "meri tabiyat bahut kharab thi isliye main apni salary lene ka kaam nahi kar paya abhi payment mein thodi der rahegi"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1617425696,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: financial_hardship - explains they cannot pay right now because of job loss, illness or similar\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"nahi abhi\"},{\"text\":\"delay ho raha hai\"},{\"text\":\"mujhe paise nahi hai\"}],\"short_with_context\":[{\"text\":\"kya abhi payment kar payenge\",\"context\":\"Kya aap abhi payment kar sakte hain?\"},{\"text\":\"thoda waqt chahiye\",\"context\":\"Kab tak payment kar paayenge?\"},{\"text\":\"mujhe samay chahiye\",\"context\":\"Kab tak aapki payment possible hogi?\"}],\"medium\":[{\"text\":\"mera naukri chala gaya abhi paise nahi hai\"},{\"text\":\"main beemaar hoon isliye payment nahi kar pa raha\"},{\"text\":\"agar thoda waqt mil jaaye to paisa de dunga\"},{\"text\":\"mera address delhi mein hai aur mai unemployed hoon\"},{\"text\":\"kiraye ke liye bhi paise kam pad rahe hain is waqt\"},{\"text\":\"meri tabiyat kharab hai is wajah se delay ho raha\"},{\"text\":\"doctor ne kaha hai thik hone mein thoda waqt lagega\"}],\"medium_with_context\":[{\"text\":\"mai aapke system se pay kar pa raha nahi hoon\",\"context\":\"Kya aap apne system se payment kar pa rahe hain?\"},{\"text\":\"job chala gaya hai isliye payment abhi mumkin nahi\",\"context\":\"Kya aapke paas kaam abhi hai payment ke liye?\"},{\"text\":\"maine apply bhi kiya tha loan ke liye par reject ho gaya\",\"context\":\"Kya aapne koi financial support lene ki koshish ki hai?\"},{\"text\":\"main kal se beemaar hoon doctor ke pass hoon abhi bhi\",\"context\":\"Kya aap physically fit hai payment karne ke liye?\"},{\"text\":\"main Gurgaon se hoon paise bhejne mein problem aa rahi hai\",\"context\":\"Aapka current location kya hai payment ke liye?\"}],\"long\":[{\"text\":\"mera office band ho gaya hai aur mera income source khatam ho gaya hai isliye abhi payment nahi kar sakta\"},{\"text\":\"mai kuch mahino se beemaar hoon doctor ne kaha hai rest lena zaroori hai aur is wajah se paisa nahi bhej pa raha\"},{\"text\":\"pichle mahine mera accident ho gaya tha us wajah se hospital ke kharche badh gaye aur abhi paise nahi hai payment karne ke liye\"}],\"long_with_context\":[{\"text\":\"mujhe thodi madad chahiye kyuki meri naukri chali gayi hai main payment abhi turant nahi kar sakta\",\"context\":\"Aap ki current financial situation kya hai payment ke liye?\"},{\"text\":\"main Aligarh me rehta hoon aur meri health problem ki wajah se main apni salary nahi le pa raha hu\",\"context\":\"Kya aapke paas koi medical certificate ya documents hai?\"},{\"text\":\"meri tabiyat bahut kharab thi isliye main apni salary lene ka kaam nahi kar paya abhi payment mein thodi der rahegi\",\"context\":\"Kya aap thoda aur time le sakte hain payment ke liye?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 595,
+    "output_tokens": 658
+  }
+}

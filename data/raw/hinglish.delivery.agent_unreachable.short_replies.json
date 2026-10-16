@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.delivery.agent_unreachable.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "delivery",
+  "intent": "agent_unreachable",
+  "items": [
+    {
+      "context": "Kya delivery address confirm kar sakte hain",
+      "requested_bucket": "short",
+      "text": "Haan ji sahi hai"
+    },
+    {
+      "context": "Kya aap delivery boy se baat kar pa rahe hain",
+      "requested_bucket": "short",
+      "text": "Nahi bilkul nahi"
+    },
+    {
+      "context": "Kya aap address dubara bata sakte hain",
+      "requested_bucket": "short",
+      "text": "Wahi purana hi hai"
+    },
+    {
+      "context": "Aapka phone network sahi hai na",
+      "requested_bucket": "short",
+      "text": "Haan ji bilkul"
+    },
+    {
+      "context": "Kya delivery boy ne apni location share ki hai",
+      "requested_bucket": "short",
+      "text": "Nahi vo nahi kiya"
+    },
+    {
+      "context": "Kya aap se delivery boy ne contact kiya",
+      "requested_bucket": "short",
+      "text": "Nahi ab tak nahi"
+    },
+    {
+      "context": "Aap ghar par hain kya",
+      "requested_bucket": "short",
+      "text": "Haan main yahan hoon"
+    },
+    {
+      "context": "Kya address mein koi mistake ho sakti hai",
+      "requested_bucket": "short",
+      "text": "Nahi address bilkul sahi hai"
+    },
+    {
+      "context": "Aap thodi der ruk sakte hain",
+      "requested_bucket": "short",
+      "text": "Theek hai rukta hoon"
+    },
+    {
+      "context": "Kya delivery boy ko phir se call karna chahenge",
+      "requested_bucket": "short",
+      "text": "Haan chaliye"
+    },
+    {
+      "context": "Kya aapka phone silent mode mein hai kya",
+      "requested_bucket": "short",
+      "text": "Nahi rings kar raha hai"
+    },
+    {
+      "context": "Delivery boy ka naam aapke paas hai",
+      "requested_bucket": "short",
+      "text": "Haan naam mujhe mila"
+    },
+    {
+      "context": "Kya main aapki location share karu delivery boy ko",
+      "requested_bucket": "short",
+      "text": "Ji haan karein"
+    },
+    {
+      "context": "Apka address building naam sahi hai",
+      "requested_bucket": "short",
+      "text": "Haan bilkul sahi"
+    },
+    {
+      "context": "Kya aapko delivery ki timing badalni hai",
+      "requested_bucket": "short",
+      "text": "Nahi mujhe timing okay hai"
+    },
+    {
+      "context": "Kya aapke paas order ID hai",
+      "requested_bucket": "short",
+      "text": "Haan mere paas hai"
+    },
+    {
+      "context": "Kya aap ghar par kisi aur se baat kar ke bata sakte hain",
+      "requested_bucket": "short",
+      "text": "Haan kar leta hoon"
+    },
+    {
+      "context": "Kya main delivery boy ko aapke samne bhej doon",
+      "requested_bucket": "short",
+      "text": "Theek hai bhej dijiye"
+    },
+    {
+      "context": "Kya aap mujhe thoda detail mein address bata sakte hain",
+      "requested_bucket": "medium",
+      "text": "Haan ji main gate ke baad first right lena hai"
+    },
+    {
+      "context": "Kya aap delivery boy se baat kar ke confirm kar sakte hain",
+      "requested_bucket": "medium",
+      "text": "Thoda ruk jaiye main abhi baat karta hoon"
+    },
+    {
+      "context": "Kya delivery boy ko aap location GPS se share karna chahenge",
+      "requested_bucket": "medium",
+      "text": "Ji haan bilkul main location share karta hoon abhi"
+    },
+    {
+      "context": "Kya aapne phir se delivery boy ko call kiya hai",
+      "requested_bucket": "medium",
+      "text": "Haan ji main do baar call kar chuka hoon"
+    },
+    {
+      "context": "Kya main aapke liye alternate contact number note karu",
+      "requested_bucket": "medium",
+      "text": "Haan please mera dusra number note kar lijiye"
+    },
+    {
+      "context": "Kya aap confirm kar sakte hain ki address ke aas paas koi landmark hai",
+      "requested_bucket": "medium",
+      "text": "Haan ji sadak ke samne ek bada mandir hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3575749689,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: agent_unreachable - the delivery person is not answering or cannot find the address\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Kya delivery address confirm kar sakte hain\",\"reply\":\"Haan ji sahi hai\"},{\"agent_question\":\"Kya aap delivery boy se baat kar pa rahe hain\",\"reply\":\"Nahi bilkul nahi\"},{\"agent_question\":\"Kya aap address dubara bata sakte hain\",\"reply\":\"Wahi purana hi hai\"},{\"agent_question\":\"Aapka phone network sahi hai na\",\"reply\":\"Haan ji bilkul\"},{\"agent_question\":\"Kya delivery boy ne apni location share ki hai\",\"reply\":\"Nahi vo nahi kiya\"},{\"agent_question\":\"Kya aap se delivery boy ne contact kiya\",\"reply\":\"Nahi ab tak nahi\"},{\"agent_question\":\"Aap ghar par hain kya\",\"reply\":\"Haan main yahan hoon\"},{\"agent_question\":\"Kya address mein koi mistake ho sakti hai\",\"reply\":\"Nahi address bilkul sahi hai\"},{\"agent_question\":\"Aap thodi der ruk sakte hain\",\"reply\":\"Theek hai rukta hoon\"},{\"agent_question\":\"Kya delivery boy ko phir se call karna chahenge\",\"reply\":\"Haan chaliye\"},{\"agent_question\":\"Kya aapka phone silent mode mein hai kya\",\"reply\":\"Nahi rings kar raha hai\"},{\"agent_question\":\"Delivery boy ka naam aapke paas hai\",\"reply\":\"Haan naam mujhe mila\"},{\"agent_question\":\"Kya main aapki location share karu delivery boy ko\",\"reply\":\"Ji haan karein\"},{\"agent_question\":\"Apka address building naam sahi hai\",\"reply\":\"Haan bilkul sahi\"},{\"agent_question\":\"Kya aapko delivery ki timing badalni hai\",\"reply\":\"Nahi mujhe timing okay hai\"},{\"agent_question\":\"Kya aapke paas order ID hai\",\"reply\":\"Haan mere paas hai\"},{\"agent_question\":\"Kya aap ghar par kisi aur se baat kar ke bata sakte hain\",\"reply\":\"Haan kar leta hoon\"},{\"agent_question\":\"Kya main delivery boy ko aapke samne bhej doon\",\"reply\":\"Theek hai bhej dijiye\"}],\"medium\":[{\"agent_question\":\"Kya aap mujhe thoda detail mein address bata sakte hain\",\"reply\":\"Haan ji main gate ke baad first right lena hai\"},{\"agent_question\":\"Kya aap delivery boy se baat kar ke confirm kar sakte hain\",\"reply\":\"Thoda ruk jaiye main abhi baat karta hoon\"},{\"agent_question\":\"Kya delivery boy ko aap location GPS se share karna chahenge\",\"reply\":\"Ji haan bilkul main location share karta hoon abhi\"},{\"agent_question\":\"Kya aapne phir se delivery boy ko call kiya hai\",\"reply\":\"Haan ji main do baar call kar chuka hoon\"},{\"agent_question\":\"Kya main aapke liye alternate contact number note karu\",\"reply\":\"Haan please mera dusra number note kar lijiye\"},{\"agent_question\":\"Kya aap confirm kar sakte hain ki address ke aas paas koi landmark hai\",\"reply\":\"Haan ji sadak ke samne ek bada mandir hai\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 397,
+    "output_tokens": 651
+  }
+}

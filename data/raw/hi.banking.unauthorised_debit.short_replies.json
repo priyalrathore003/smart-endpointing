@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.banking.unauthorised_debit.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "banking",
+  "intent": "unauthorised_debit",
+  "items": [
+    {
+      "context": "आप कौन सा अकाउंट यूज कर रहे हैं",
+      "requested_bucket": "short",
+      "text": "सैलरी अकाउंट"
+    },
+    {
+      "context": "ट्रांजैक्शन की तारीख याद है आपको",
+      "requested_bucket": "short",
+      "text": "कल"
+    },
+    {
+      "context": "कितनी राशि डेबिट हुई है",
+      "requested_bucket": "short",
+      "text": "दो हजार"
+    },
+    {
+      "context": "क्या ये पेमेंट आपने किया था",
+      "requested_bucket": "short",
+      "text": "नहीं जी"
+    },
+    {
+      "context": "आपका फोन नंबर बताइए",
+      "requested_bucket": "short",
+      "text": "९८७६५४३२१०"
+    },
+    {
+      "context": "क्या आप ऑनलाइन बैंकिंग यूज करते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ जी"
+    },
+    {
+      "context": "ये ट्रांजैक्शन किस दिन हुआ था",
+      "requested_bucket": "short",
+      "text": "पिछले हफ्ते"
+    },
+    {
+      "context": "क्या आपको OTP मिला था",
+      "requested_bucket": "short",
+      "text": "अभी नहीं"
+    },
+    {
+      "context": "इस ट्रांजैक्शन का नंबर बताएं",
+      "requested_bucket": "short",
+      "text": "मुझे नहीं पता"
+    },
+    {
+      "context": "क्या आपने किसी और को फोन किया था",
+      "requested_bucket": "short",
+      "text": "नहीं"
+    },
+    {
+      "context": "आपका पता अपडेट है क्या",
+      "requested_bucket": "short",
+      "text": "हाँ अपडेट है"
+    },
+    {
+      "context": "क्या आप रिफंड चाहते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ प्लीज"
+    },
+    {
+      "context": "आपके पास कोई SMS आया था",
+      "requested_bucket": "short",
+      "text": "हाँ आया था"
+    },
+    {
+      "context": "ट्रांजैक्शन किस अकाउंट में हुआ",
+      "requested_bucket": "short",
+      "text": "सेविंग्स अकाउंट"
+    },
+    {
+      "context": "आपने इस पेमेंट को अपने आप किया था क्या",
+      "requested_bucket": "medium",
+      "text": "नहीं मैडम ये पेमेंट मैंने बिल्कुल किया नहीं है मुझे परेशानी हो रही है"
+    },
+    {
+      "context": "आपका किस दिन ये समस्या पहली बार आई",
+      "requested_bucket": "medium",
+      "text": "ये प्रॉब्लम कल सुबह अचानक से शुरू हुई थी और अब तक बनी हुई है"
+    },
+    {
+      "context": "क्या आपने अपने मोबाइल पर कोई suspicious link क्लिक किया था",
+      "requested_bucket": "medium",
+      "text": "नहीं सर मैं हमेशा सावधान रहता हूँ और कोई लिंक क्लिक नहीं किया मैंने"
+    },
+    {
+      "context": "क्या आप चाहेंगे कि हम इस पैसे को वापस करें",
+      "requested_bucket": "medium",
+      "text": "हाँ सर प्लीज जल्दी से पैसे वापस कर दीजिए मुझे बहुत जरूरत है"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3975110751,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: unauthorised_debit - reports a transaction they did not make\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"आप कौन सा अकाउंट यूज कर रहे हैं\",\"reply\":\"सैलरी अकाउंट\"},{\"agent_question\":\"ट्रांजैक्शन की तारीख याद है आपको\",\"reply\":\"कल\"},{\"agent_question\":\"कितनी राशि डेबिट हुई है\",\"reply\":\"दो हजार\"},{\"agent_question\":\"क्या ये पेमेंट आपने किया था\",\"reply\":\"नहीं जी\"},{\"agent_question\":\"आपका फोन नंबर बताइए\",\"reply\":\"९८७६५४३२१०\"},{\"agent_question\":\"क्या आप ऑनलाइन बैंकिंग यूज करते हैं\",\"reply\":\"हाँ जी\"},{\"agent_question\":\"ये ट्रांजैक्शन किस दिन हुआ था\",\"reply\":\"पिछले हफ्ते\"},{\"agent_question\":\"क्या आपको OTP मिला था\",\"reply\":\"अभी नहीं\"},{\"agent_question\":\"इस ट्रांजैक्शन का नंबर बताएं\",\"reply\":\"मुझे नहीं पता\"},{\"agent_question\":\"क्या आपने किसी और को फोन किया था\",\"reply\":\"नहीं\"},{\"agent_question\":\"आपका पता अपडेट है क्या\",\"reply\":\"हाँ अपडेट है\"},{\"agent_question\":\"क्या आप रिफंड चाहते हैं\",\"reply\":\"हाँ प्लीज\"},{\"agent_question\":\"आपके पास कोई SMS आया था\",\"reply\":\"हाँ आया था\"},{\"agent_question\":\"ट्रांजैक्शन किस अकाउंट में हुआ\",\"reply\":\"सेविंग्स अकाउंट\"}],\"medium\":[{\"agent_question\":\"आपने इस पेमेंट को अपने आप किया था क्या\",\"reply\":\"नहीं मैडम ये पेमेंट मैंने बिल्कुल किया नहीं है मुझे परेशानी हो रही है\"},{\"agent_question\":\"आपका किस दिन ये समस्या पहली बार आई\",\"reply\":\"ये प्रॉब्लम कल सुबह अचानक से शुरू हुई थी और अब तक बनी हुई है\"},{\"agent_question\":\"क्या आपने अपने मोबाइल पर कोई suspicious link क्लिक किया था\",\"reply\":\"नहीं सर मैं हमेशा सावधान रहता हूँ और कोई लिंक क्लिक नहीं किया मैंने\"},{\"agent_question\":\"क्या आप चाहेंगे कि हम इस पैसे को वापस करें\",\"reply\":\"हाँ सर प्लीज जल्दी से पैसे वापस कर दीजिए मुझे बहुत जरूरत है\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 498,
+    "output_tokens": 419
+  }
+}

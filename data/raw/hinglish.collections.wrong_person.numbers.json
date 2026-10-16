@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.collections.wrong_person.numbers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "wrong_person",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "ye mera number nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "galat banda hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "main nahi hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahi ye mera account nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "galti ho gayi hogi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "main alag insaan hu"
+    },
+    {
+      "context": "kya aap apna account number bata sakte hain",
+      "requested_bucket": "short",
+      "text": "main nahi hu"
+    },
+    {
+      "context": "kya aapka phone number confirm kar sakte hain",
+      "requested_bucket": "short",
+      "text": "ye mera number nahi hai"
+    },
+    {
+      "context": "kya aap apna poora naam batayenge",
+      "requested_bucket": "short",
+      "text": "galat banda hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "nahi ji main us aadmi ko nahi janta"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "ye number galat dial hua lagta hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera naam is se match nahi karta"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap check kar sakte hain ki number theek hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main to Delhi me rehta hu ye number Mumbai ka lag raha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "koi aur hai shayad jo ye call receive kar raha ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main is service ka istemal nahi karta"
+    },
+    {
+      "context": "kya ye phone number aapka khud ka hai",
+      "requested_bucket": "medium",
+      "text": "nahi ji ye number mera nahi hai"
+    },
+    {
+      "context": "kya aap payment ke baare mein baat kar rahe hain",
+      "requested_bucket": "medium",
+      "text": "mujhe lagta hai aapne galat number dial kar liya hai"
+    },
+    {
+      "context": "kya aap apna account number confirm kar sakte hain",
+      "requested_bucket": "medium",
+      "text": "main kisi aur account ke baare mein soch raha hoga shayad"
+    },
+    {
+      "context": "kya aap mujhe poora address bata sakte hain",
+      "requested_bucket": "medium",
+      "text": "main us aadmi ka naam janta nahi jisko aap call karna chahte hain"
+    },
+    {
+      "context": "kya aap mujhe transaction ID de sakte hain",
+      "requested_bucket": "medium",
+      "text": "mujhe lagta nahi main wo insaan hu jiska naam aapne bataya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main Mumbai me rehta hu aur yeh jo number hai wo Pune ka lag raha hai shayad aapne galat number dial kiya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera naam Ravi Sharma hai lekin yeh jis aadmi se baat ho rahi hai wo uss naam ka nahi lagta"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya aap confirm kar sakte hain ki aap jis customer ko call kar rahe hain wo main hun ya nahi kyunki mujhe koi lena dena nahi hai"
+    },
+    {
+      "context": "aapka registered account number kya hai",
+      "requested_bucket": "long",
+      "text": "main nahi janta ki aap kiske baare mein baat kar rahe hain kyunki yeh mera account number nahi hai"
+    },
+    {
+      "context": "kya aapke paas mera recent transaction details hain",
+      "requested_bucket": "long",
+      "text": "kya aap dobara check karenge kyunki main kisi bhi loan related ya collection wali cheez mein involved nahi hu"
+    },
+    {
+      "context": "kya aap apna naam aur address bata sakte hain",
+      "requested_bucket": "long",
+      "text": "agar aap mujhe mera account number confirm kar denge to main aapki help kar sakta hu lekin lagta nahi yeh mera number hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 3421949128,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: wrong_person - says the agent has the wrong person or number\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"ye mera number nahi hai\"},{\"text\":\"galat banda hai\"},{\"text\":\"main nahi hu\"},{\"text\":\"nahi ye mera account nahi hai\"},{\"text\":\"galti ho gayi hogi\"},{\"text\":\"main alag insaan hu\"}],\"short_with_context\":[{\"text\":\"main nahi hu\",\"context\":\"kya aap apna account number bata sakte hain\"},{\"text\":\"ye mera number nahi hai\",\"context\":\"kya aapka phone number confirm kar sakte hain\"},{\"text\":\"galat banda hai\",\"context\":\"kya aap apna poora naam batayenge\"}],\"medium\":[{\"text\":\"nahi ji main us aadmi ko nahi janta\"},{\"text\":\"ye number galat dial hua lagta hai\"},{\"text\":\"mera naam is se match nahi karta\"},{\"text\":\"kya aap check kar sakte hain ki number theek hai\"},{\"text\":\"main to Delhi me rehta hu ye number Mumbai ka lag raha hai\"},{\"text\":\"koi aur hai shayad jo ye call receive kar raha ho\"},{\"text\":\"main is service ka istemal nahi karta\"}],\"medium_with_context\":[{\"text\":\"nahi ji ye number mera nahi hai\",\"context\":\"kya ye phone number aapka khud ka hai\"},{\"text\":\"mujhe lagta hai aapne galat number dial kar liya hai\",\"context\":\"kya aap payment ke baare mein baat kar rahe hain\"},{\"text\":\"main kisi aur account ke baare mein soch raha hoga shayad\",\"context\":\"kya aap apna account number confirm kar sakte hain\"},{\"text\":\"main us aadmi ka naam janta nahi jisko aap call karna chahte hain\",\"context\":\"kya aap mujhe poora address bata sakte hain\"},{\"text\":\"mujhe lagta nahi main wo insaan hu jiska naam aapne bataya\",\"context\":\"kya aap mujhe transaction ID de sakte hain\"}],\"long\":[{\"text\":\"main Mumbai me rehta hu aur yeh jo number hai wo Pune ka lag raha hai shayad aapne galat number dial kiya\"},{\"text\":\"mera naam Ravi Sharma hai lekin yeh jis aadmi se baat ho rahi hai wo uss naam ka nahi lagta\"},{\"text\":\"kya aap confirm kar sakte hain ki aap jis customer ko call kar rahe hain wo main hun ya nahi kyunki mujhe koi lena dena nahi hai\"}],\"long_with_context\":[{\"text\":\"main nahi janta ki aap kiske baare mein baat kar rahe hain kyunki yeh mera account number nahi hai\",\"context\":\"aapka registered account number kya hai\"},{\"text\":\"kya aap dobara check karenge kyunki main kisi bhi loan related ya collection wali cheez mein involved nahi hu\",\"context\":\"kya aapke paas mera recent transaction details hain\"},{\"text\":\"agar aap mujhe mera account number confirm kar denge to main aapki help kar sakta hu lekin lagta nahi yeh mera number hai\",\"context\":\"kya aap apna naam aur address bata sakte hain\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 607,
+    "output_tokens": 655
+  }
+}

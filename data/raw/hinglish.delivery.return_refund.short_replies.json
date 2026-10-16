@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.delivery.return_refund.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "delivery",
+  "intent": "return_refund",
+  "items": [
+    {
+      "context": "Kya aapke paas order number hai",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kab order place kiya tha aapne",
+      "requested_bucket": "short",
+      "text": "Kal"
+    },
+    {
+      "context": "Kya item damage tha",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya aapne payment kar diya tha",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kya refund chahiye aapko",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya item abhi aapke paas hai",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya aap return pickup schedule karna chahte hain",
+      "requested_bucket": "short",
+      "text": "Theek hai"
+    },
+    {
+      "context": "Kya aapne customer care ko call kiya tha pehle",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Aapke paas payment receipt hai kya",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Kya aapko replacement chahiye",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kitne din pehle order receive hua tha",
+      "requested_bucket": "short",
+      "text": "Do din"
+    },
+    {
+      "context": "Aapne refund mode ke baare mein socha hai",
+      "requested_bucket": "short",
+      "text": "Bank transfer"
+    },
+    {
+      "context": "Kya aapko delivery address confirm karna hai",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya order account se deduct hua tha",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Kya item original packaging mein hai",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya aapne order track kiya tha",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Kab tak aap refund chahte hain",
+      "requested_bucket": "short",
+      "text": "Jaldi"
+    },
+    {
+      "context": "Kya aapke telefon par confirmation SMS aaya tha",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya aap thoda detail mein batayenge ki problem kya hai",
+      "requested_bucket": "medium",
+      "text": "Item kharab tha aur kaam nahi kar raha"
+    },
+    {
+      "context": "Kya aapne product open kiya tha ya sealing intact hai",
+      "requested_bucket": "medium",
+      "text": "Sealing khul gayi thi jab parcel mila"
+    },
+    {
+      "context": "Aapko kis type ka refund chahiye cash back ya wallet mein",
+      "requested_bucket": "medium",
+      "text": "Mujhe bank account mein refund chahiye please"
+    },
+    {
+      "context": "Kya aapne order ke liye payment online kiya tha ya cash on delivery",
+      "requested_bucket": "medium",
+      "text": "Mainne online payment credit card se ki thi"
+    },
+    {
+      "context": "Kya aapke paas proof of purchase ya invoice hai",
+      "requested_bucket": "medium",
+      "text": "Haan invoice mere paas hai email mein"
+    },
+    {
+      "context": "Kya aap item ko replace karwana chahte hain ya pura paisa wapas chahiye",
+      "requested_bucket": "medium",
+      "text": "Main paisa wapas chahata hoon abhi"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 812106762,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: return_refund - wants to return an item or asks about a refund\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Kya aapke paas order number hai\",\"reply\":\"Haan\"},{\"agent_question\":\"Kab order place kiya tha aapne\",\"reply\":\"Kal\"},{\"agent_question\":\"Kya item damage tha\",\"reply\":\"Haan\"},{\"agent_question\":\"Kya aapne payment kar diya tha\",\"reply\":\"Nahi\"},{\"agent_question\":\"Kya refund chahiye aapko\",\"reply\":\"Haan\"},{\"agent_question\":\"Kya item abhi aapke paas hai\",\"reply\":\"Haan\"},{\"agent_question\":\"Kya aap return pickup schedule karna chahte hain\",\"reply\":\"Theek hai\"},{\"agent_question\":\"Kya aapne customer care ko call kiya tha pehle\",\"reply\":\"Nahi\"},{\"agent_question\":\"Aapke paas payment receipt hai kya\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Kya aapko replacement chahiye\",\"reply\":\"Nahi\"},{\"agent_question\":\"Kitne din pehle order receive hua tha\",\"reply\":\"Do din\"},{\"agent_question\":\"Aapne refund mode ke baare mein socha hai\",\"reply\":\"Bank transfer\"},{\"agent_question\":\"Kya aapko delivery address confirm karna hai\",\"reply\":\"Haan\"},{\"agent_question\":\"Kya order account se deduct hua tha\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Kya item original packaging mein hai\",\"reply\":\"Haan\"},{\"agent_question\":\"Kya aapne order track kiya tha\",\"reply\":\"Nahi\"},{\"agent_question\":\"Kab tak aap refund chahte hain\",\"reply\":\"Jaldi\"},{\"agent_question\":\"Kya aapke telefon par confirmation SMS aaya tha\",\"reply\":\"Haan\"}],\"medium\":[{\"agent_question\":\"Kya aap thoda detail mein batayenge ki problem kya hai\",\"reply\":\"Item kharab tha aur kaam nahi kar raha\"},{\"agent_question\":\"Kya aapne product open kiya tha ya sealing intact hai\",\"reply\":\"Sealing khul gayi thi jab parcel mila\"},{\"agent_question\":\"Aapko kis type ka refund chahiye cash back ya wallet mein\",\"reply\":\"Mujhe bank account mein refund chahiye please\"},{\"agent_question\":\"Kya aapne order ke liye payment online kiya tha ya cash on delivery\",\"reply\":\"Mainne online payment credit card se ki thi\"},{\"agent_question\":\"Kya aapke paas proof of purchase ya invoice hai\",\"reply\":\"Haan invoice mere paas hai email mein\"},{\"agent_question\":\"Kya aap item ko replace karwana chahte hain ya pura paisa wapas chahiye\",\"reply\":\"Main paisa wapas chahata hoon abhi\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 396,
+    "output_tokens": 544
+  }
+}

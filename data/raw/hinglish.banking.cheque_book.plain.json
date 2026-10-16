@@ -1,0 +1,167 @@
+{
+  "batch_id": "hinglish.banking.cheque_book.plain",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "cheque_book",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "cheque book chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kab milega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "cancel karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "hao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "nahi mil gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "abhi batao"
+    },
+    {
+      "context": "When do you need the cheque book?",
+      "requested_bucket": "short",
+      "text": "jaldi bhejo"
+    },
+    {
+      "context": "Do you want to update your address before dispatch?",
+      "requested_bucket": "short",
+      "text": "address change karna hai"
+    },
+    {
+      "context": "Should I check the status of your cheque book delivery?",
+      "requested_bucket": "short",
+      "text": "delivery confirm karo"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera cheque book last month request kiya tha vo abhi tak nahi mila"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya main naye branch address par cheque book bhejwa sakta hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please bataye mera current cheque book delivery ka status kya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine cheque book order kiya tha par ab tak dispatch confirmation nahi aaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap mujhe bata sakte hain ki mera cheque book kab tak milega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mere account me naye check books ke liye kitna time lagta hai generally"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya cheque book ki delivery address proof verify hone ke baad hi hoti hai"
+    },
+    {
+      "context": "Do you want to request a new cheque book?",
+      "requested_bucket": "medium",
+      "text": "haan mujhe nayi cheque book chahiye please bhej do"
+    },
+    {
+      "context": "Has your address changed recently?",
+      "requested_bucket": "medium",
+      "text": "mera address change hua hai to us par bhejna hai please"
+    },
+    {
+      "context": "When did you place the order for the cheque book?",
+      "requested_bucket": "medium",
+      "text": "maine ek hafta pehle order diya tha but abhi tak delivery nahi hui"
+    },
+    {
+      "context": "Do you want to collect the cheque book from branch or get it delivered?",
+      "requested_bucket": "medium",
+      "text": "kya main apne branch se bhi cheque book le sakta hu ya delivery hi hoti hai"
+    },
+    {
+      "context": "Do you want me to check the delivery status of your cheque book?",
+      "requested_bucket": "medium",
+      "text": "kya aap mujhe tracking kar ke bata sakte hain ki cheque book kaha tak pahucha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine pichle mahine apne account ke liye cheque book ka order diya tha lekin abhi tak use receive nahi kiya hu"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya aap mujhe batayenge ki mera cheque book kab tak dispatch ho kar mere address par pahucha diya jayega"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera address change hua tha isliye main sure karna chahta hu ki cheque book mere naye address par hi bheja jaye"
+    },
+    {
+      "context": "Please tell me why your cheque book has not been delivered yet?",
+      "requested_bucket": "long",
+      "text": "main cheque book ke liye call kar raha hu kyunki maine order diya tha aur use deliver nahi kiya gaya hai"
+    },
+    {
+      "context": "Are you planning to pick up the cheque book from branch or want home delivery?",
+      "requested_bucket": "long",
+      "text": "kya mujhe apke branch se cheque book lene ke liye appointment lena padega ya bina appointment ke aa sakta hu"
+    },
+    {
+      "context": "Can you please confirm your full name and account type for cheque book request?",
+      "requested_bucket": "long",
+      "text": "mera naam Rajesh Kumar hai aur main nayi cheque book ke liye apply karna chahta hu apne current account ke liye"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2131912559,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: cheque_book - requests a new cheque book or asks about its delivery\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: plain and direct\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"cheque book chahiye\"},{\"text\":\"kab milega\"},{\"text\":\"cancel karna hai\"},{\"text\":\"hao\"},{\"text\":\"nahi mil gaya\"},{\"text\":\"abhi batao\"}],\"short_with_context\":[{\"text\":\"jaldi bhejo\",\"context\":\"When do you need the cheque book?\"},{\"text\":\"address change karna hai\",\"context\":\"Do you want to update your address before dispatch?\"},{\"text\":\"delivery confirm karo\",\"context\":\"Should I check the status of your cheque book delivery?\"}],\"medium\":[{\"text\":\"mera cheque book last month request kiya tha vo abhi tak nahi mila\"},{\"text\":\"kya main naye branch address par cheque book bhejwa sakta hu\"},{\"text\":\"please bataye mera current cheque book delivery ka status kya hai\"},{\"text\":\"maine cheque book order kiya tha par ab tak dispatch confirmation nahi aaya\"},{\"text\":\"kya aap mujhe bata sakte hain ki mera cheque book kab tak milega\"},{\"text\":\"mere account me naye check books ke liye kitna time lagta hai generally\"},{\"text\":\"kya cheque book ki delivery address proof verify hone ke baad hi hoti hai\"}],\"medium_with_context\":[{\"text\":\"haan mujhe nayi cheque book chahiye please bhej do\",\"context\":\"Do you want to request a new cheque book?\"},{\"text\":\"mera address change hua hai to us par bhejna hai please\",\"context\":\"Has your address changed recently?\"},{\"text\":\"maine ek hafta pehle order diya tha but abhi tak delivery nahi hui\",\"context\":\"When did you place the order for the cheque book?\"},{\"text\":\"kya main apne branch se bhi cheque book le sakta hu ya delivery hi hoti hai\",\"context\":\"Do you want to collect the cheque book from branch or get it delivered?\"},{\"text\":\"kya aap mujhe tracking kar ke bata sakte hain ki cheque book kaha tak pahucha hai\",\"context\":\"Do you want me to check the delivery status of your cheque book?\"}],\"long\":[{\"text\":\"maine pichle mahine apne account ke liye cheque book ka order diya tha lekin abhi tak use receive nahi kiya hu\"},{\"text\":\"kya aap mujhe batayenge ki mera cheque book kab tak dispatch ho kar mere address par pahucha diya jayega\"},{\"text\":\"mera address change hua tha isliye main sure karna chahta hu ki cheque book mere naye address par hi bheja jaye\"}],\"long_with_context\":[{\"text\":\"main cheque book ke liye call kar raha hu kyunki maine order diya tha aur use deliver nahi kiya gaya hai\",\"context\":\"Please tell me why your cheque book has not been delivered yet?\"},{\"text\":\"kya mujhe apke branch se cheque book lene ke liye appointment lena padega ya bina appointment ke aa sakta hu\",\"context\":\"Are you planning to pick up the cheque book from branch or want home delivery?\"},{\"text\":\"mera naam Rajesh Kumar hai aur main nayi cheque book ke liye apply karna chahta hu apne current account ke liye\",\"context\":\"Can you please confirm your full name and account type for cheque book request?\"}]}",
+  "style": "plain",
+  "usage": {
+    "input_tokens": 580,
+    "output_tokens": 658
+  }
+}

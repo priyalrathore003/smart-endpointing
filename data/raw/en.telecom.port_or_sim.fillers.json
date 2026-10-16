@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.telecom.port_or_sim.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "port_or_sim",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "next wednesday"
+    },
+    {
+      "context": "What service do you require today porting or sim replacement?",
+      "requested_bucket": "short",
+      "text": "sim swap"
+    },
+    {
+      "context": "When do you want to start the porting process?",
+      "requested_bucket": "short",
+      "text": "immediate port"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umm I want to change my sim but keep the same number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "actually can you help me port my number to another network"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I need to swap my sim card because the old one is not working"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "uh I mean I want to port my number to a new operator on Wednesday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you please tell me the procedure for porting my number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I changed my mind I want to do a sim replacement instead of porting"
+    },
+    {
+      "context": "Which city are you currently using your number in?",
+      "requested_bucket": "medium",
+      "text": "I want to port my number to a different provider from Mumbai"
+    },
+    {
+      "context": "What is the reason for your sim replacement request?",
+      "requested_bucket": "medium",
+      "text": "umm I think I want to swap my sim because it got damaged"
+    },
+    {
+      "context": "When would you like to start the porting process?",
+      "requested_bucket": "medium",
+      "text": "actually I want to port my number but not before next Friday"
+    },
+    {
+      "context": "Do you want to do porting or sim replacement for your 5G number?",
+      "requested_bucket": "medium",
+      "text": "I mean can you explain how I can do sim replacement for my 5g number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "so like I tried calling last week to port my number but I forgot the procedure and now I want to start it on Wednesday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "umm I want to replace my sim because the new features are not working on my old sim plus I might shift to another city soon"
+    },
+    {
+      "context": "Which network do you wish to port your number to and do you have the required documents?",
+      "requested_bucket": "long",
+      "text": "I would like to port my number to Vodafone but I am not sure about the documents needed could you please help"
+    },
+    {
+      "context": "Can you confirm if you want to do a sim swap and do you want the process explained for online option?",
+      "requested_bucket": "long",
+      "text": "actually the sim card got damaged last night and I dont have time to visit the store so can you guide me how to swap it online"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2376730567,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: port_or_sim - wants to port the number, replace or swap a SIM\nLanguage: Indian English, Latin script.\nStyle for this batch: with fillers and hesitations (umm, uh, like, actually, I mean); at least a third include a self-correction ('Tuesday, no, Wednesday')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"yes please\"},{\"text\":\"next wednesday\"}],\"short_with_context\":[{\"text\":\"sim swap\",\"context\":\"What service do you require today porting or sim replacement?\"},{\"text\":\"immediate port\",\"context\":\"When do you want to start the porting process?\"}],\"medium\":[{\"text\":\"umm I want to change my sim but keep the same number\"},{\"text\":\"actually can you help me port my number to another network\"},{\"text\":\"I need to swap my sim card because the old one is not working\"},{\"text\":\"uh I mean I want to port my number to a new operator on Wednesday\"},{\"text\":\"can you please tell me the procedure for porting my number\"},{\"text\":\"I changed my mind I want to do a sim replacement instead of porting\"}],\"medium_with_context\":[{\"text\":\"I want to port my number to a different provider from Mumbai\",\"context\":\"Which city are you currently using your number in?\"},{\"text\":\"umm I think I want to swap my sim because it got damaged\",\"context\":\"What is the reason for your sim replacement request?\"},{\"text\":\"actually I want to port my number but not before next Friday\",\"context\":\"When would you like to start the porting process?\"},{\"text\":\"I mean can you explain how I can do sim replacement for my 5g number\",\"context\":\"Do you want to do porting or sim replacement for your 5G number?\"}],\"long\":[{\"text\":\"so like I tried calling last week to port my number but I forgot the procedure and now I want to start it on Wednesday\"},{\"text\":\"umm I want to replace my sim because the new features are not working on my old sim plus I might shift to another city soon\"}],\"long_with_context\":[{\"text\":\"I would like to port my number to Vodafone but I am not sure about the documents needed could you please help\",\"context\":\"Which network do you wish to port your number to and do you have the required documents?\"},{\"text\":\"actually the sim card got damaged last night and I dont have time to visit the store so can you guide me how to swap it online\",\"context\":\"Can you confirm if you want to do a sim swap and do you want the process explained for online option?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 591,
+    "output_tokens": 463
+  }
+}

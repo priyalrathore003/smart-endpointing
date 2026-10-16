@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.banking.login_otp_problem.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "banking",
+  "intent": "login_otp_problem",
+  "items": [
+    {
+      "context": "Kya aapko OTP mil raha hai",
+      "requested_bucket": "short",
+      "text": "Nahi mil raha"
+    },
+    {
+      "context": "Aapka registered mobile number kya hai",
+      "requested_bucket": "short",
+      "text": "Naya number hai"
+    },
+    {
+      "context": "Aap mobile banking use kar rahe ho ya net banking",
+      "requested_bucket": "short",
+      "text": "Mobile banking"
+    },
+    {
+      "context": "Kya aapne latest app update kiya hai",
+      "requested_bucket": "short",
+      "text": "Haan update kiya"
+    },
+    {
+      "context": "Kya aapke phone me network theek hai",
+      "requested_bucket": "short",
+      "text": "Network weak hai"
+    },
+    {
+      "context": "Kya aapke phone me koi notification blocked hai",
+      "requested_bucket": "short",
+      "text": "Haan blocked hai"
+    },
+    {
+      "context": "Kya OTP SMS spam me chala gaya",
+      "requested_bucket": "short",
+      "text": "Nahi gaya"
+    },
+    {
+      "context": "Kya aap phone restart kar ke try karenge",
+      "requested_bucket": "short",
+      "text": "Abhi karunga"
+    },
+    {
+      "context": "Kya aap alternate number try kar sakte hain",
+      "requested_bucket": "short",
+      "text": "Nahi kar sakta"
+    },
+    {
+      "context": "Kya OTP ka time expire ho gaya hai",
+      "requested_bucket": "short",
+      "text": "Ho gaya"
+    },
+    {
+      "context": "Kya aapne correct mobile number dala hai",
+      "requested_bucket": "short",
+      "text": "Haan dala tha"
+    },
+    {
+      "context": "Kya aapke phone me message memory full hai",
+      "requested_bucket": "short",
+      "text": "Lagta hai full hai"
+    },
+    {
+      "context": "Kya aap kisi aur device se login kar rahe hain",
+      "requested_bucket": "short",
+      "text": "Nahi kar raha"
+    },
+    {
+      "context": "Kya aap internet data use kar rahe hain",
+      "requested_bucket": "short",
+      "text": "Wi Fi use kar raha"
+    },
+    {
+      "context": "Kya aap app me login karne ka sahi tarika samjhe",
+      "requested_bucket": "short",
+      "text": "Haan samjha"
+    },
+    {
+      "context": "Kya SMS service provider se koi issue hai",
+      "requested_bucket": "short",
+      "text": "Pata nahi"
+    },
+    {
+      "context": "Kya aapka bank account active hai",
+      "requested_bucket": "short",
+      "text": "Active hai"
+    },
+    {
+      "context": "Kya OTP kabhi aata haan kabhi nahi",
+      "requested_bucket": "short",
+      "text": "Kabhi nahi aata"
+    },
+    {
+      "context": "Kya aap mujhe OTP receive hone ka time bata sakte hain",
+      "requested_bucket": "medium",
+      "text": "Usually do minute se jyada wait karta hoon par nahi aata"
+    },
+    {
+      "context": "Aap kis problem ka samna kar rahe hain jab login karte hain",
+      "requested_bucket": "medium",
+      "text": "OTP nahi aa raha isliye login nahi kar pa raha hoon"
+    },
+    {
+      "context": "Kya aapko recent me app ke sath koi error message aaya hai",
+      "requested_bucket": "medium",
+      "text": "Ha error aata hai OTP bhejne me problem hai"
+    },
+    {
+      "context": "Kya aapke phone me recent me koi app install hua hai jo message block karta ho",
+      "requested_bucket": "medium",
+      "text": "Haan kuch naya install kiya hai sms manager app"
+    },
+    {
+      "context": "Kya aapka phone dual sim hai aur kaunse number par OTP aata hai",
+      "requested_bucket": "medium",
+      "text": "Dual sim hai par OTP naya sim par nahi aata"
+    },
+    {
+      "context": "Kya aapne apna phone restart kar ke phir try kiya hai OTP ke liye",
+      "requested_bucket": "medium",
+      "text": "Haan, phone restart kar ke do baar try kiya par OTP nahi mila"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 877243530,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: login_otp_problem - cannot log in to net or mobile banking or is not receiving the OTP\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Kya aapko OTP mil raha hai\",\"reply\":\"Nahi mil raha\"},{\"agent_question\":\"Aapka registered mobile number kya hai\",\"reply\":\"Naya number hai\"},{\"agent_question\":\"Aap mobile banking use kar rahe ho ya net banking\",\"reply\":\"Mobile banking\"},{\"agent_question\":\"Kya aapne latest app update kiya hai\",\"reply\":\"Haan update kiya\"},{\"agent_question\":\"Kya aapke phone me network theek hai\",\"reply\":\"Network weak hai\"},{\"agent_question\":\"Kya aapke phone me koi notification blocked hai\",\"reply\":\"Haan blocked hai\"},{\"agent_question\":\"Kya OTP SMS spam me chala gaya\",\"reply\":\"Nahi gaya\"},{\"agent_question\":\"Kya aap phone restart kar ke try karenge\",\"reply\":\"Abhi karunga\"},{\"agent_question\":\"Kya aap alternate number try kar sakte hain\",\"reply\":\"Nahi kar sakta\"},{\"agent_question\":\"Kya OTP ka time expire ho gaya hai\",\"reply\":\"Ho gaya\"},{\"agent_question\":\"Kya aapne correct mobile number dala hai\",\"reply\":\"Haan dala tha\"},{\"agent_question\":\"Kya aapke phone me message memory full hai\",\"reply\":\"Lagta hai full hai\"},{\"agent_question\":\"Kya aap kisi aur device se login kar rahe hain\",\"reply\":\"Nahi kar raha\"},{\"agent_question\":\"Kya aap internet data use kar rahe hain\",\"reply\":\"Wi Fi use kar raha\"},{\"agent_question\":\"Kya aap app me login karne ka sahi tarika samjhe\",\"reply\":\"Haan samjha\"},{\"agent_question\":\"Kya SMS service provider se koi issue hai\",\"reply\":\"Pata nahi\"},{\"agent_question\":\"Kya aapka bank account active hai\",\"reply\":\"Active hai\"},{\"agent_question\":\"Kya OTP kabhi aata haan kabhi nahi\",\"reply\":\"Kabhi nahi aata\"}],\"medium\":[{\"agent_question\":\"Kya aap mujhe OTP receive hone ka time bata sakte hain\",\"reply\":\"Usually do minute se jyada wait karta hoon par nahi aata\"},{\"agent_question\":\"Aap kis problem ka samna kar rahe hain jab login karte hain\",\"reply\":\"OTP nahi aa raha isliye login nahi kar pa raha hoon\"},{\"agent_question\":\"Kya aapko recent me app ke sath koi error message aaya hai\",\"reply\":\"Ha error aata hai OTP bhejne me problem hai\"},{\"agent_question\":\"Kya aapke phone me recent me koi app install hua hai jo message block karta ho\",\"reply\":\"Haan kuch naya install kiya hai sms manager app\"},{\"agent_question\":\"Kya aapka phone dual sim hai aur kaunse number par OTP aata hai\",\"reply\":\"Dual sim hai par OTP naya sim par nahi aata\"},{\"agent_question\":\"Kya aapne apna phone restart kar ke phir try kiya hai OTP ke liye\",\"reply\":\"Haan, phone restart kar ke do baar try kiya par OTP nahi mila\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 401,
+    "output_tokens": 625
+  }
+}

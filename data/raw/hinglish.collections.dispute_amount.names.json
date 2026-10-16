@@ -1,0 +1,182 @@
+{
+  "batch_id": "hinglish.collections.dispute_amount.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "dispute_amount",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "galat amount"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "thik nahi hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "extra charge"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wrong bill"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kya yeh fine hai"
+    },
+    {
+      "context": "Please tell me the issue with your outstanding amount",
+      "requested_bucket": "short",
+      "text": "galat amount"
+    },
+    {
+      "context": "Is the charged amount showing incorrectly in your account?",
+      "requested_bucket": "short",
+      "text": "thik nahi hai"
+    },
+    {
+      "context": "Have you noticed any extra charges on your bill?",
+      "requested_bucket": "short",
+      "text": "extra charge"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera bill amount galat dikh raha hai noida se hu main"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main RPG nagar se bol raha hu charge jyada lagaya gaya hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account se paise kat gaye but transfer nahi hua hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "usa road par mera payment galat calculate hua hai please check karein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "yeh amount January ka hai lekin maine us mahine payment kar diya tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera naam Amit Singh hai bill par galat address likha hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "gaurav park main mera account se extra charge lag raha hai mujhe samajh nahi aaya"
+    },
+    {
+      "context": "Can you confirm the total outstanding you are seeing?",
+      "requested_bucket": "medium",
+      "text": "maine incorrect due amount dekha hai aap bata sakte ho kya hai yeh"
+    },
+    {
+      "context": "Could you specify the location linked to the disputed bill?",
+      "requested_bucket": "medium",
+      "text": "Main Paharganj, Delhi se phone kar raha hu ye payment sahi nahi lag raha"
+    },
+    {
+      "context": "Are you saying the same month's charges are repeated?",
+      "requested_bucket": "medium",
+      "text": "Is bill me August mahine ka charge do baar hai kya ye galat hai?"
+    },
+    {
+      "context": "Is there an issue with your account name details?",
+      "requested_bucket": "medium",
+      "text": "Main Ravi Kumar bol raha hu mera naam galat likha hai account me"
+    },
+    {
+      "context": "Is the fine amount disputed or completely incorrect?",
+      "requested_bucket": "medium",
+      "text": "Yeh jo fine lagaya hai Dehradun branch ne wo galat hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Main Anjali Verma Delhi se baat kar rahi hu mera outstanding amount galat dikh raha hai mujhe January mahine ka double charge laga hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Namaste main Sunil Patil Mumbai se hu mera account number 987654321 me jo June ka bill hai wo mujhe sahi nahi lag raha please check karein"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Mujhe lagta hai ki mere account me kuch extra charges add kar diye gaye hain main Padma Nagar se hu aur maine time pe payment kiya tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Mera naam Rahul Mehta hai aur main New Delhi ka rehne wala hu mujhe lag raha hai ki is mahine ka outstanding charge sahi nahi hai mujhe confirm karna tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Main Shruti Sharma Bangalore se hu aur mera account number 123456 me jo bhi amount dikh raha hai wo sahi nahi lagta kyunki maine pehle hi pura payment kiya tha"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Main Deepak Joshi Jaipur se hu aur maine notice kiya ki mere account me kuch galat fees add hui hain mujhe pata karna hai ki ye sach hai ya nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "Namaste main Rajesh Kumar hu aur mera bill Hyderabad branch se aaya jis me claimed charges galat hain please help mujhe ye confirm karna hai"
+    },
+    {
+      "context": "Can you describe the issue with the current outstanding amount?",
+      "requested_bucket": "long",
+      "text": "Mujhe aapke system me lag raha hai ki mera outstanding amount galat hai please mujhe bata sakte ho kya January ka charge double laga hai"
+    },
+    {
+      "context": "Have you checked the charges related to your branch billing?",
+      "requested_bucket": "long",
+      "text": "Maine apna bill closely dekha hai joh Noida branch se mila hai usme kuch charges inaccurately add kiye gaye hain kya aap help kar sakte hain?"
+    },
+    {
+      "context": "Do you see any unusual charges on your account summary?",
+      "requested_bucket": "long",
+      "text": "Kya aap confirm kar sakte hain ki mere account me extra charge Kyun aa gaya hai main Lucknow se baat kar raha hoon aur mujhe lagta hai yeh galat charge hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 4263900446,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: dispute_amount - says the outstanding amount or a charge is wrong\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"galat amount\"},{\"text\":\"thik nahi hai\"},{\"text\":\"extra charge\"},{\"text\":\"wrong bill\"},{\"text\":\"kya yeh fine hai\"}],\"short_with_context\":[{\"text\":\"galat amount\",\"context\":\"Please tell me the issue with your outstanding amount\"},{\"text\":\"thik nahi hai\",\"context\":\"Is the charged amount showing incorrectly in your account?\"},{\"text\":\"extra charge\",\"context\":\"Have you noticed any extra charges on your bill?\"}],\"medium\":[{\"text\":\"mera bill amount galat dikh raha hai noida se hu main\"},{\"text\":\"main RPG nagar se bol raha hu charge jyada lagaya gaya hai\"},{\"text\":\"mera account se paise kat gaye but transfer nahi hua hai\"},{\"text\":\"usa road par mera payment galat calculate hua hai please check karein\"},{\"text\":\"yeh amount January ka hai lekin maine us mahine payment kar diya tha\"},{\"text\":\"mera naam Amit Singh hai bill par galat address likha hai\"},{\"text\":\"gaurav park main mera account se extra charge lag raha hai mujhe samajh nahi aaya\"}],\"medium_with_context\":[{\"text\":\"maine incorrect due amount dekha hai aap bata sakte ho kya hai yeh\",\"context\":\"Can you confirm the total outstanding you are seeing?\"},{\"text\":\"Main Paharganj, Delhi se phone kar raha hu ye payment sahi nahi lag raha\",\"context\":\"Could you specify the location linked to the disputed bill?\"},{\"text\":\"Is bill me August mahine ka charge do baar hai kya ye galat hai?\",\"context\":\"Are you saying the same month's charges are repeated?\"},{\"text\":\"Main Ravi Kumar bol raha hu mera naam galat likha hai account me\",\"context\":\"Is there an issue with your account name details?\"},{\"text\":\"Yeh jo fine lagaya hai Dehradun branch ne wo galat hai\",\"context\":\"Is the fine amount disputed or completely incorrect?\"}],\"long\":[{\"text\":\"Main Anjali Verma Delhi se baat kar rahi hu mera outstanding amount galat dikh raha hai mujhe January mahine ka double charge laga hai\"},{\"text\":\"Namaste main Sunil Patil Mumbai se hu mera account number 987654321 me jo June ka bill hai wo mujhe sahi nahi lag raha please check karein\"},{\"text\":\"Mujhe lagta hai ki mere account me kuch extra charges add kar diye gaye hain main Padma Nagar se hu aur maine time pe payment kiya tha\"},{\"text\":\"Mera naam Rahul Mehta hai aur main New Delhi ka rehne wala hu mujhe lag raha hai ki is mahine ka outstanding charge sahi nahi hai mujhe confirm karna tha\"},{\"text\":\"Main Shruti Sharma Bangalore se hu aur mera account number 123456 me jo bhi amount dikh raha hai wo sahi nahi lagta kyunki maine pehle hi pura payment kiya tha\"},{\"text\":\"Main Deepak Joshi Jaipur se hu aur maine notice kiya ki mere account me kuch galat fees add hui hain mujhe pata karna hai ki ye sach hai ya nahi\"},{\"text\":\"Namaste main Rajesh Kumar hu aur mera bill Hyderabad branch se aaya jis me claimed charges galat hain please help mujhe ye confirm karna hai\"}],\"long_with_context\":[{\"text\":\"Mujhe aapke system me lag raha hai ki mera outstanding amount galat hai please mujhe bata sakte ho kya January ka charge double laga hai\",\"context\":\"Can you describe the issue with the current outstanding amount?\"},{\"text\":\"Maine apna bill closely dekha hai joh Noida branch se mila hai usme kuch charges inaccurately add kiye gaye hain kya aap help kar sakte hain?\",\"context\":\"Have you checked the charges related to your branch billing?\"},{\"text\":\"Kya aap confirm kar sakte hain ki mere account me extra charge Kyun aa gaya hai main Lucknow se baat kar raha hoon aur mujhe lagta hai yeh galat charge hai\",\"context\":\"Do you see any unusual charges on your account summary?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 588,
+    "output_tokens": 841
+  }
+}

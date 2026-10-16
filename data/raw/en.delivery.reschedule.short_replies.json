@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.delivery.reschedule.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "delivery",
+  "intent": "reschedule",
+  "items": [
+    {
+      "context": "When would you like to reschedule the delivery?",
+      "requested_bucket": "short",
+      "text": "Tomorrow morning"
+    },
+    {
+      "context": "Can I know your preferred delivery date?",
+      "requested_bucket": "short",
+      "text": "Next Monday"
+    },
+    {
+      "context": "Would you like the delivery in the afternoon or evening?",
+      "requested_bucket": "short",
+      "text": "Evening please"
+    },
+    {
+      "context": "Is Friday okay for the rescheduled delivery?",
+      "requested_bucket": "short",
+      "text": "Yes that works"
+    },
+    {
+      "context": "Do you want to pick a new time slot?",
+      "requested_bucket": "short",
+      "text": "Yes please"
+    },
+    {
+      "context": "Should we deliver the package on Saturday?",
+      "requested_bucket": "short",
+      "text": "No Sunday"
+    },
+    {
+      "context": "Do you want to keep the same address for reschedule?",
+      "requested_bucket": "short",
+      "text": "Yes same address"
+    },
+    {
+      "context": "Would you like the delivery before 5 pm?",
+      "requested_bucket": "short",
+      "text": "Yes before 5"
+    },
+    {
+      "context": "Can you receive the delivery after 6 pm?",
+      "requested_bucket": "short",
+      "text": "No not after 6"
+    },
+    {
+      "context": "Do you want to confirm delivery for next week?",
+      "requested_bucket": "short",
+      "text": "By Friday"
+    },
+    {
+      "context": "Is 3 PM delivery slot good for you?",
+      "requested_bucket": "short",
+      "text": "Okay 3 PM"
+    },
+    {
+      "context": "Please tell me the reschedule date again?",
+      "requested_bucket": "short",
+      "text": "Fifteenth of March"
+    },
+    {
+      "context": "Would you like to reschedule for today itself?",
+      "requested_bucket": "short",
+      "text": "Not today"
+    },
+    {
+      "context": "Shall I update the delivery time to 10 AM?",
+      "requested_bucket": "short",
+      "text": "That is fine"
+    },
+    {
+      "context": "What day and time works best for your rescheduled delivery?",
+      "requested_bucket": "medium",
+      "text": "I will be available on Tuesday afternoon after 2 PM"
+    },
+    {
+      "context": "Can you specify any particular date by which you want the delivery?",
+      "requested_bucket": "medium",
+      "text": "Yes please deliver it by the 20th of this month"
+    },
+    {
+      "context": "Would you prefer the delivery in the morning or evening now?",
+      "requested_bucket": "medium",
+      "text": "I would prefer the delivery sometime between 10 AM and 12 PM"
+    },
+    {
+      "context": "Do you want to change the delivery address or just reschedule the time?",
+      "requested_bucket": "medium",
+      "text": "No change in address just want the delivery next week on Wednesday"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 4030701467,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: reschedule - wants the delivery on a different day or time\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"When would you like to reschedule the delivery?\",\"reply\":\"Tomorrow morning\"},{\"agent_question\":\"Can I know your preferred delivery date?\",\"reply\":\"Next Monday\"},{\"agent_question\":\"Would you like the delivery in the afternoon or evening?\",\"reply\":\"Evening please\"},{\"agent_question\":\"Is Friday okay for the rescheduled delivery?\",\"reply\":\"Yes that works\"},{\"agent_question\":\"Do you want to pick a new time slot?\",\"reply\":\"Yes please\"},{\"agent_question\":\"Should we deliver the package on Saturday?\",\"reply\":\"No Sunday\"},{\"agent_question\":\"Do you want to keep the same address for reschedule?\",\"reply\":\"Yes same address\"},{\"agent_question\":\"Would you like the delivery before 5 pm?\",\"reply\":\"Yes before 5\"},{\"agent_question\":\"Can you receive the delivery after 6 pm?\",\"reply\":\"No not after 6\"},{\"agent_question\":\"Do you want to confirm delivery for next week?\",\"reply\":\"By Friday\"},{\"agent_question\":\"Is 3 PM delivery slot good for you?\",\"reply\":\"Okay 3 PM\"},{\"agent_question\":\"Please tell me the reschedule date again?\",\"reply\":\"Fifteenth of March\"},{\"agent_question\":\"Would you like to reschedule for today itself?\",\"reply\":\"Not today\"},{\"agent_question\":\"Shall I update the delivery time to 10 AM?\",\"reply\":\"That is fine\"}],\"medium\":[{\"agent_question\":\"What day and time works best for your rescheduled delivery?\",\"reply\":\"I will be available on Tuesday afternoon after 2 PM\"},{\"agent_question\":\"Can you specify any particular date by which you want the delivery?\",\"reply\":\"Yes please deliver it by the 20th of this month\"},{\"agent_question\":\"Would you prefer the delivery in the morning or evening now?\",\"reply\":\"I would prefer the delivery sometime between 10 AM and 12 PM\"},{\"agent_question\":\"Do you want to change the delivery address or just reschedule the time?\",\"reply\":\"No change in address just want the delivery next week on Wednesday\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 367,
+    "output_tokens": 417
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "batch_id": "hinglish.banking.balance_enquiry.names",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "banking",
+  "intent": "balance_enquiry",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kitna balance hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "recent transaction"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "thik hai"
+    },
+    {
+      "context": "kitna balance hai aapke account me abhi",
+      "requested_bucket": "short",
+      "text": "5000 rupaye"
+    },
+    {
+      "context": "kya aapko apne recent transactions chahiye",
+      "requested_bucket": "short",
+      "text": "haan bilkul"
+    },
+    {
+      "context": "abhi account me kitne paise hain",
+      "requested_bucket": "short",
+      "text": "jo bhi balance hai"
+    },
+    {
+      "context": "do you want to know your last three transactions",
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "kya main aapki madad abhi karun",
+      "requested_bucket": "short",
+      "text": "abhi nahi"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera account balance bata do please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "main patna se hoon mera account check karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap mere last five transactions dikha sakte ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mujhe apne savings account ka balance chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kal se meri salary nahi aayi hai account me"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera naam Ravi Kumar hai account number ke sath"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "account balance 10000 ke neeche batao agar ho to"
+    },
+    {
+      "context": "aapko apne account balance ki jankari chahiye?",
+      "requested_bucket": "medium",
+      "text": "mera account balance kya hai abhi?"
+    },
+    {
+      "context": "kya aapko recent transactions chahiye account ke?",
+      "requested_bucket": "medium",
+      "text": "last 10 din ke transactions bhejo mujhe"
+    },
+    {
+      "context": "kya main aapke branch ki jankari de sakta hoon?",
+      "requested_bucket": "medium",
+      "text": "mujhe apne Mumbai branch ke account details chahiye"
+    },
+    {
+      "context": "kripya apna account number batayen please",
+      "requested_bucket": "medium",
+      "text": "mera account number 123456789 hai verify kar lo"
+    },
+    {
+      "context": "kya aapke account me koi suspicious activity to nahi hui?",
+      "requested_bucket": "medium",
+      "text": "kal mere account se 2000 rupaye katiye gaye the"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera account balance bataiye last mahine ke transactions ke saath please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main noida se bol raha hoon mera account check kar ke batayen na"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera naam Anjali Sharma hai mera account number 987654321 hai please balance batao"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya aap mere Delhi branch ke account me paise aane ka status bata sakte hain"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera credit card se paise kat gaye lekin transaction mujhe samajh nahi aaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "kya aap mujhe apne bank ki mobile app se balance check karne ka process bata sakte hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main recently Bangalore se Pune shift hua hoon mera account balance check karna tha"
+    },
+    {
+      "context": "aap apne current account balance ki jankari lena chahte hain?",
+      "requested_bucket": "long",
+      "text": "mera account balance kya hai aaj ke date tak? mai Chandigarh me hoon"
+    },
+    {
+      "context": "kitne mahine ke transactions ki aapko zarurat hai?",
+      "requested_bucket": "long",
+      "text": "main Mumbai se call kar raha hoon mujhe apne last 6 mahine ke transactions chahiye"
+    },
+    {
+      "context": "kya aapke account me koi suspicious transaction hua hai?",
+      "requested_bucket": "long",
+      "text": "kya aap Mumbai branch ke mere account me koi unusual transaction dikhate hain"
+    },
+    {
+      "context": "kya aap recent transactions dekhna chahte hain?",
+      "requested_bucket": "long",
+      "text": "kal mera bank account se paise tanpa kisi transaction ke kat gaye the"
+    },
+    {
+      "context": "kya aap apna address update karwana chahte hain?",
+      "requested_bucket": "long",
+      "text": "main apni address change karwana chahta hoon Kolkata ka mera account Mumbai branch ka hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 795144176,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: balance_enquiry - asks for their account balance or recent transactions\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"kitna balance hai\"},{\"text\":\"recent transaction\"},{\"text\":\"haan ji\"}, \n          {\"text\":\"kal tak\"},{\"text\":\"theek hai\"},{\"text\":\"thik hai\"}],\n \"short_with_context\":[{\"text\":\"5000 rupaye\",\"context\":\"kitna balance hai aapke account me abhi\"},\n                      {\"text\":\"haan bilkul\",\"context\":\"kya aapko apne recent transactions chahiye\"},\n                      {\"text\":\"jo bhi balance hai\",\"context\":\"abhi account me kitne paise hain\"},\n                      {\"text\":\"yes please\",\"context\":\"do you want to know your last three transactions\"},\n                      {\"text\":\"abhi nahi\",\"context\":\"kya main aapki madad abhi karun\"}],\n \"medium\":[{\"text\":\"mera account balance bata do please\"},{\"text\":\"main patna se hoon mera account check karna hai\"},{\"text\":\"kya aap mere last five transactions dikha sakte ho\"},{\"text\":\"mujhe apne savings account ka balance chahiye\"},{\"text\":\"kal se meri salary nahi aayi hai account me\"},{\"text\":\"mera naam Ravi Kumar hai account number ke sath\"},{\"text\":\"account balance 10000 ke neeche batao agar ho to\"}],\n \"medium_with_context\":[{\"text\":\"mera account balance kya hai abhi?\",\"context\":\"aapko apne account balance ki jankari chahiye?\"},\n                       {\"text\":\"last 10 din ke transactions bhejo mujhe\",\"context\":\"kya aapko recent transactions chahiye account ke?\"},\n                       {\"text\":\"mujhe apne Mumbai branch ke account details chahiye\",\"context\":\"kya main aapke branch ki jankari de sakta hoon?\"},\n                       {\"text\":\"mera account number 123456789 hai verify kar lo\",\"context\":\"kripya apna account number batayen please\"},\n                       {\"text\":\"kal mere account se 2000 rupaye katiye gaye the\",\"context\":\"kya aapke account me koi suspicious activity to nahi hui?\"}],\n \"long\":[{\"text\":\"mera account balance bataiye last mahine ke transactions ke saath please\"},{\"text\":\"main noida se bol raha hoon mera account check kar ke batayen na\"},{\"text\":\"mera naam Anjali Sharma hai mera account number 987654321 hai please balance batao\"},\n         {\"text\":\"kya aap mere Delhi branch ke account me paise aane ka status bata sakte hain\"},{\"text\":\"mera credit card se paise kat gaye lekin transaction mujhe samajh nahi aaya\"},{\"text\":\"kya aap mujhe apne bank ki mobile app se balance check karne ka process bata sakte hai\"},{\"text\":\"main recently Bangalore se Pune shift hua hoon mera account balance check karna tha\"}],\n \"long_with_context\":[{\"text\":\"mera account balance kya hai aaj ke date tak? mai Chandigarh me hoon\",\"context\":\"aap apne current account balance ki jankari lena chahte hain?\"},\n                      {\"text\":\"main Mumbai se call kar raha hoon mujhe apne last 6 mahine ke transactions chahiye\",\"context\":\"kitne mahine ke transactions ki aapko zarurat hai?\"},\n                      {\"text\":\"kya aap Mumbai branch ke mere account me koi unusual transaction dikhate hain\",\"context\":\"kya aapke account me koi suspicious transaction hua hai?\"},\n                      {\"text\":\"kal mera bank account se paise tanpa kisi transaction ke kat gaye the\",\"context\":\"kya aap recent transactions dekhna chahte hain?\"},\n                      {\"text\":\"main apni address change karwana chahta hoon Kolkata ka mera account Mumbai branch ka hai\",\"context\":\"kya aap apna address update karwana chahte hain?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 588,
+    "output_tokens": 791
+  }
+}

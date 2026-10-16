@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.collections.dispute_amount.fillers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "dispute_amount",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "नहीं सही है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "थोड़ा कम बता रहे हो"
+    },
+    {
+      "context": "क्या आप बताना चाहेंगे कि क्या समस्या है?",
+      "requested_bucket": "short",
+      "text": "गलत है यह बात"
+    },
+    {
+      "context": "आपकी शिकायत क्या है कृपया बताएं?",
+      "requested_bucket": "short",
+      "text": "कोई गलती है यहाँ"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "सर उस पैसे का चार्ज गलत दिखा रहा है मेरी बात सुनो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "मुझे लगता है कि मेरा outstanding बिल ठीक नहीं है अभी देखो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "वो जो amount बताया है वह बिलकुल ठीक नहीं है मुझे चेक करना है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "देखो मैडम मेरा payment तो पूरा हो गया था फिर भी पैसे क्यों मांग रहे हो"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "तुम्हारा जो total balance है वह मेरे हिसाब से ज्यादा लगाया है थोड़ा"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "अच्छा ये जो penalty लगाई है वो गलत है मेरे हिसाब से मुझे ज्यादा चार्ज किया गया"
+    },
+    {
+      "context": "क्या आपने payment किया था इस अकाउंट पर?",
+      "requested_bucket": "medium",
+      "text": "अरे नहीं सर बिल में जो मैंने pay किया था वो add नहीं हुआ है"
+    },
+    {
+      "context": "क्या आप अपना due amount चेक करवा सकते हैं?",
+      "requested_bucket": "medium",
+      "text": "मेरा जो due amount है ये पूरी तरह सही नहीं लग रहा है।"
+    },
+    {
+      "context": "क्या आपके account में double charge हो गया है?",
+      "requested_bucket": "medium",
+      "text": "सर मुझसे गलती से double charge लग गया है कृपया देख लो"
+    },
+    {
+      "context": "आपका payment कब हुआ था?",
+      "requested_bucket": "medium",
+      "text": "मंगलवार को pay किया था मैडम नहीं बुधवार को payment ट्रांजेक्शन हुआ था"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "देखो सर मैं खुद बैंक गया था और वहाँ पे confirmation भी मिला था कि payment clear हो चुका है इसलिए जो charge लग रहा है वो गलत है"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "सर मेरी बात सुनिए देखो ये जो outstanding amount दिखा रहे हो ये मेरा नहीं हो सकता क्योंकि मैंने पिछली बार पूरा भुगतान कर दिया था फिर भी पैसे माँग रहे हो"
+    },
+    {
+      "context": "क्या आप बता सकते हैं आपने payment कब किया था?",
+      "requested_bucket": "long",
+      "text": "मुझे ऐसा लग रहा है कि जो amount आप ने बताया है उसमें mistake है क्योंकि मैंने १० दिनों पहले ही मेरा पूरा payment कर दिया था"
+    },
+    {
+      "context": "क्या आप कह सकते हैं कि amount के मामले में कोई गलती है?",
+      "requested_bucket": "long",
+      "text": "सर झूठ नहीं बोल रहा हूँ मैं मानता हूँ कि कभी गलती हो सकती है लेकिन इस बार मैंने जितना कहा है उससे ज्यादा charge लग रहा है"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "615aa9302f2856a0",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 864304782,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: dispute_amount - says the outstanding amount or a charge is wrong\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\nStyle for this batch: with fillers and hesitations (अम्म, मतलब, वो, अच्छा, हाँ जी); at least a third include a self-correction ('मंगलवार, नहीं, बुधवार')\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"text\":\"नहीं सही है\"},{\"text\":\"थोड़ा कम बता रहे हो\"}],\"short_with_context\":[{\"text\":\"गलत है यह बात\",\"context\":\"क्या आप बताना चाहेंगे कि क्या समस्या है?\"},{\"text\":\"कोई गलती है यहाँ\",\"context\":\"आपकी शिकायत क्या है कृपया बताएं?\"}],\"medium\":[{\"text\":\"सर उस पैसे का चार्ज गलत दिखा रहा है मेरी बात सुनो\"},{\"text\":\"मुझे लगता है कि मेरा outstanding बिल ठीक नहीं है अभी देखो\"},{\"text\":\"वो जो amount बताया है वह बिलकुल ठीक नहीं है मुझे चेक करना है\"},{\"text\":\"देखो मैडम मेरा payment तो पूरा हो गया था फिर भी पैसे क्यों मांग रहे हो\"},{\"text\":\"तुम्हारा जो total balance है वह मेरे हिसाब से ज्यादा लगाया है थोड़ा\"},{\"text\":\"अच्छा ये जो penalty लगाई है वो गलत है मेरे हिसाब से मुझे ज्यादा चार्ज किया गया\"}],\"medium_with_context\":[{\"text\":\"अरे नहीं सर बिल में जो मैंने pay किया था वो add नहीं हुआ है\",\"context\":\"क्या आपने payment किया था इस अकाउंट पर?\"},{\"text\":\"मेरा जो due amount है ये पूरी तरह सही नहीं लग रहा है।\",\"context\":\"क्या आप अपना due amount चेक करवा सकते हैं?\"},{\"text\":\"सर मुझसे गलती से double charge लग गया है कृपया देख लो\",\"context\":\"क्या आपके account में double charge हो गया है?\"},{\"text\":\"मंगलवार को pay किया था मैडम नहीं बुधवार को payment ट्रांजेक्शन हुआ था\",\"context\":\"आपका payment कब हुआ था?\"}],\"long\":[{\"text\":\"देखो सर मैं खुद बैंक गया था और वहाँ पे confirmation भी मिला था कि payment clear हो चुका है इसलिए जो charge लग रहा है वो गलत है\"},{\"text\":\"सर मेरी बात सुनिए देखो ये जो outstanding amount दिखा रहे हो ये मेरा नहीं हो सकता क्योंकि मैंने पिछली बार पूरा भुगतान कर दिया था फिर भी पैसे माँग रहे हो\"}],\"long_with_context\":[{\"text\":\"मुझे ऐसा लग रहा है कि जो amount आप ने बताया है उसमें mistake है क्योंकि मैंने १० दिनों पहले ही मेरा पूरा payment कर दिया था\",\"context\":\"क्या आप बता सकते हैं आपने payment कब किया था?\"},{\"text\":\"सर झूठ नहीं बोल रहा हूँ मैं मानता हूँ कि कभी गलती हो सकती है लेकिन इस बार मैंने जितना कहा है उससे ज्यादा charge लग रहा है\",\"context\":\"क्या आप कह सकते हैं कि amount के मामले में कोई गलती है?\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 716,
+    "output_tokens": 520
+  }
+}

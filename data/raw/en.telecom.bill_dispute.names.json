@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.telecom.bill_dispute.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "bill_dispute",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "wrong bill"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "dispute charge"
+    },
+    {
+      "context": "Can you tell me the nature of your complaint?",
+      "requested_bucket": "short",
+      "text": "incorrect amount"
+    },
+    {
+      "context": "What issue are you facing with your postpaid bill?",
+      "requested_bucket": "short",
+      "text": "extra calls"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my bill for Mumbai number is showing some extra charges"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "there is a mobile data charge that I did not use in my bill"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "hello I want to check the charges applied on my postpaid line in Bangalore"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you verify the Rs 1200 call charge for last month in Delhi account"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "I think my phone bill for May month is incorrect due to roaming charges"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please review my Hyderabad postpaid statement for the unusual voice charges"
+    },
+    {
+      "context": "Can you explain the problem with your bill?",
+      "requested_bucket": "medium",
+      "text": "the bill amount seems much higher than usual this month"
+    },
+    {
+      "context": "What details do you want me to verify on your bill?",
+      "requested_bucket": "medium",
+      "text": "I want you to check the call details for the number in Chennai"
+    },
+    {
+      "context": "Are there specific call timings you want to dispute?",
+      "requested_bucket": "medium",
+      "text": "I am sure I did not make calls after 10 pm but got charged"
+    },
+    {
+      "context": "What exactly do you want us to review in your billing?",
+      "requested_bucket": "medium",
+      "text": "please check the payment history and the additional fees levied this month"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "I just received my April postpaid mobile bill from my Pune number and there are unexplained international call charges of Rs 1500 which I never made"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "The phone bill I got from my postpaid account registered in Kolkata has extra subscription fees for content services that I did not subscribe for this month"
+    },
+    {
+      "context": "Can you tell me about any unexpected charges on your latest bill?",
+      "requested_bucket": "long",
+      "text": "I see an extra charge of Rs 500 for SMS services in my Hyderabad bill why was this added without my consent"
+    },
+    {
+      "context": "Are there roaming charges that you believe are incorrect on your bill?",
+      "requested_bucket": "long",
+      "text": "There are roaming charges applied on my number from Mumbai although I have not traveled anywhere out of town last month please help rectify this"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1510416625,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: bill_dispute - says a postpaid bill or charge is wrong\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"wrong bill\"},{\"text\":\"dispute charge\"}],\"short_with_context\":[{\"text\":\"incorrect amount\",\"context\":\"Can you tell me the nature of your complaint?\"},{\"text\":\"extra calls\",\"context\":\"What issue are you facing with your postpaid bill?\"}],\"medium\":[{\"text\":\"my bill for Mumbai number is showing some extra charges\"},{\"text\":\"there is a mobile data charge that I did not use in my bill\"},{\"text\":\"hello I want to check the charges applied on my postpaid line in Bangalore\"},{\"text\":\"can you verify the Rs 1200 call charge for last month in Delhi account\"},{\"text\":\"I think my phone bill for May month is incorrect due to roaming charges\"},{\"text\":\"please review my Hyderabad postpaid statement for the unusual voice charges\"}],\"medium_with_context\":[{\"text\":\"the bill amount seems much higher than usual this month\",\"context\":\"Can you explain the problem with your bill?\"},{\"text\":\"I want you to check the call details for the number in Chennai\",\"context\":\"What details do you want me to verify on your bill?\"},{\"text\":\"I am sure I did not make calls after 10 pm but got charged\",\"context\":\"Are there specific call timings you want to dispute?\"},{\"text\":\"please check the payment history and the additional fees levied this month\",\"context\":\"What exactly do you want us to review in your billing?\"}],\"long\":[{\"text\":\"I just received my April postpaid mobile bill from my Pune number and there are unexplained international call charges of Rs 1500 which I never made\"},{\"text\":\"The phone bill I got from my postpaid account registered in Kolkata has extra subscription fees for content services that I did not subscribe for this month\"}],\"long_with_context\":[{\"text\":\"I see an extra charge of Rs 500 for SMS services in my Hyderabad bill why was this added without my consent\",\"context\":\"Can you tell me about any unexpected charges on your latest bill?\"},{\"text\":\"There are roaming charges applied on my number from Mumbai although I have not traveled anywhere out of town last month please help rectify this\",\"context\":\"Are there roaming charges that you believe are incorrect on your bill?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 569,
+    "output_tokens": 446
+  }
+}

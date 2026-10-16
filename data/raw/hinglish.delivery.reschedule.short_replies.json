@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.delivery.reschedule.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 6,
+    "short": 18
+  },
+  "context_count_requested": 24,
+  "domain": "delivery",
+  "intent": "reschedule",
+  "items": [
+    {
+      "context": "Apko delivery kab chahiye?",
+      "requested_bucket": "short",
+      "text": "Kal subah"
+    },
+    {
+      "context": "Kya aap delivery date change karna chahte hain?",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Kitne baje delivery karwana pasand karenge?",
+      "requested_bucket": "short",
+      "text": "Shaam ko"
+    },
+    {
+      "context": "Aapke liye kaunsa din theek rahega?",
+      "requested_bucket": "short",
+      "text": "Agla hafta"
+    },
+    {
+      "context": "Kya aap delivery samay badalna chahte hain?",
+      "requested_bucket": "short",
+      "text": "Haan"
+    },
+    {
+      "context": "Kya main delivery ka samay aapke liye set kar doon?",
+      "requested_bucket": "short",
+      "text": "Theek hai"
+    },
+    {
+      "context": "Aapko delivery kis din chahiye?",
+      "requested_bucket": "short",
+      "text": "Aaj nahi"
+    },
+    {
+      "context": "Delivery ki timing kya hogi?",
+      "requested_bucket": "short",
+      "text": "Dopahar mein"
+    },
+    {
+      "context": "Aapke address par kya delivery karni hai?",
+      "requested_bucket": "short",
+      "text": "Wahi address hai"
+    },
+    {
+      "context": "Kya delivery ko raat ko schedule karen?",
+      "requested_bucket": "short",
+      "text": "Nahi zarurat"
+    },
+    {
+      "context": "Delivery ki date confirm karen?",
+      "requested_bucket": "short",
+      "text": "Dusri tareekh"
+    },
+    {
+      "context": "Aapka order kab tak chahiye?",
+      "requested_bucket": "short",
+      "text": "Agla haft"
+    },
+    {
+      "context": "Kya delivery ko badalna hai?",
+      "requested_bucket": "short",
+      "text": "Haan ji"
+    },
+    {
+      "context": "Aapko order receive karna kab pasand hai?",
+      "requested_bucket": "short",
+      "text": "Subah 9 baje"
+    },
+    {
+      "context": "Kya aap delivery ko postpone karna chahenge?",
+      "requested_bucket": "short",
+      "text": "Haan thoda din"
+    },
+    {
+      "context": "Kya aap address change karenge?",
+      "requested_bucket": "short",
+      "text": "Nahi"
+    },
+    {
+      "context": "Aap delivery ke liye meal pickup time kya dena chahenge?",
+      "requested_bucket": "short",
+      "text": "4 baje"
+    },
+    {
+      "context": "Kya aapko delivery samay ke baare mein kuch aur batana hai?",
+      "requested_bucket": "short",
+      "text": "Abhi nahi"
+    },
+    {
+      "context": "Aapko delivery kab tak chahiye agar reschedule karna ho?",
+      "requested_bucket": "medium",
+      "text": "Kal tak ho jaye to theek rahega"
+    },
+    {
+      "context": "Kaunsa din aapke liye convenient rahega delivery ke liye?",
+      "requested_bucket": "medium",
+      "text": "Agla shanivaar achha rahega mujhe"
+    },
+    {
+      "context": "Aapko kis time slot mein delivery chahiye?",
+      "requested_bucket": "medium",
+      "text": "Shaam ko 6 se 8 baje ke beech"
+    },
+    {
+      "context": "Kya aap delivery ki date badal kar kisi aur din karna chahenge?",
+      "requested_bucket": "medium",
+      "text": "Haan kal ki bajaye parson kar dena"
+    },
+    {
+      "context": "Kya delivery ke liye koi specific timing chahiye aapko?",
+      "requested_bucket": "medium",
+      "text": "Subah 10 baje ke aas paas theek rahega"
+    },
+    {
+      "context": "Aap delivery reschedule karna chahenge to kaunsi timing suitable hogi?",
+      "requested_bucket": "medium",
+      "text": "Raat ko 9 baje tak kar dena"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2157845076,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: reschedule - wants the delivery on a different day or time\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 24 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 18 pairs whose reply is 1-4 words,\n- \"medium\": exactly 6 pairs whose reply is 5-12 words.\nAt least 8 replies must be complete answers that could also be the start of a longer\none, such as 'haan ji', 'theek hai', 'kal tak', 'abhi nahi', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Apko delivery kab chahiye?\",\"reply\":\"Kal subah\"},{\"agent_question\":\"Kya aap delivery date change karna chahte hain?\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Kitne baje delivery karwana pasand karenge?\",\"reply\":\"Shaam ko\"},{\"agent_question\":\"Aapke liye kaunsa din theek rahega?\",\"reply\":\"Agla hafta\"},{\"agent_question\":\"Kya aap delivery samay badalna chahte hain?\",\"reply\":\"Haan\"},{\"agent_question\":\"Kya main delivery ka samay aapke liye set kar doon?\",\"reply\":\"Theek hai\"},{\"agent_question\":\"Aapko delivery kis din chahiye?\",\"reply\":\"Aaj nahi\"},{\"agent_question\":\"Delivery ki timing kya hogi?\",\"reply\":\"Dopahar mein\"},{\"agent_question\":\"Aapke address par kya delivery karni hai?\",\"reply\":\"Wahi address hai\"},{\"agent_question\":\"Kya delivery ko raat ko schedule karen?\",\"reply\":\"Nahi zarurat\"},{\"agent_question\":\"Delivery ki date confirm karen?\",\"reply\":\"Dusri tareekh\"},{\"agent_question\":\"Aapka order kab tak chahiye?\",\"reply\":\"Agla haft\"},{\"agent_question\":\"Kya delivery ko badalna hai?\",\"reply\":\"Haan ji\"},{\"agent_question\":\"Aapko order receive karna kab pasand hai?\",\"reply\":\"Subah 9 baje\"},{\"agent_question\":\"Kya aap delivery ko postpone karna chahenge?\",\"reply\":\"Haan thoda din\"},{\"agent_question\":\"Kya aap address change karenge?\",\"reply\":\"Nahi\"},{\"agent_question\":\"Aap delivery ke liye meal pickup time kya dena chahenge?\",\"reply\":\"4 baje\"},{\"agent_question\":\"Kya aapko delivery samay ke baare mein kuch aur batana hai?\",\"reply\":\"Abhi nahi\"}],\"medium\":[{\"agent_question\":\"Aapko delivery kab tak chahiye agar reschedule karna ho?\",\"reply\":\"Kal tak ho jaye to theek rahega\"},{\"agent_question\":\"Kaunsa din aapke liye convenient rahega delivery ke liye?\",\"reply\":\"Agla shanivaar achha rahega mujhe\"},{\"agent_question\":\"Aapko kis time slot mein delivery chahiye?\",\"reply\":\"Shaam ko 6 se 8 baje ke beech\"},{\"agent_question\":\"Kya aap delivery ki date badal kar kisi aur din karna chahenge?\",\"reply\":\"Haan kal ki bajaye parson kar dena\"},{\"agent_question\":\"Kya delivery ke liye koi specific timing chahiye aapko?\",\"reply\":\"Subah 10 baje ke aas paas theek rahega\"},{\"agent_question\":\"Aap delivery reschedule karna chahenge to kaunsi timing suitable hogi?\",\"reply\":\"Raat ko 9 baje tak kar dena\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 394,
+    "output_tokens": 621
+  }
+}

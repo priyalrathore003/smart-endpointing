@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.telecom.bill_dispute.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "bill_dispute",
+  "items": [
+    {
+      "context": "क्या आप अपना मोबाइल नंबर बताना चाहेंगे",
+      "requested_bucket": "short",
+      "text": "हाँ जी ९८७६५४३२१०"
+    },
+    {
+      "context": "आपका बिल तारीख क्या है",
+      "requested_bucket": "short",
+      "text": "पिछले महीने का"
+    },
+    {
+      "context": "क्या आप कनेक्शन पोस्टपेड है",
+      "requested_bucket": "short",
+      "text": "हाँ जी बिल्कुल"
+    },
+    {
+      "context": "कितनी रकम बिल में चुकानी है",
+      "requested_bucket": "short",
+      "text": "चार हज़ार रुपए"
+    },
+    {
+      "context": "क्या आप बिल को डाउनलोड कर पाए",
+      "requested_bucket": "short",
+      "text": "हाँ जी कर लिया"
+    },
+    {
+      "context": "क्या यह पहली बार ऐसा हुआ है",
+      "requested_bucket": "short",
+      "text": "नहीं ऐसा अक्सर होता है"
+    },
+    {
+      "context": "आप बिल के किस हिस्से से असहमत हैं",
+      "requested_bucket": "short",
+      "text": "डेटा चार्ज गलत है"
+    },
+    {
+      "context": "क्या आप हालिया रिचार्ज के बारे में बोलेंगे",
+      "requested_bucket": "short",
+      "text": "नहीं कोई रिचार्ज नहीं किया"
+    },
+    {
+      "context": "क्या आप सेलुलर डेटा उपयोग चेक किया",
+      "requested_bucket": "short",
+      "text": "हाँ देखा बहुत ज़्यादा है"
+    },
+    {
+      "context": "क्या आप चाहे तो रिफंड भी मांग सकते हैं",
+      "requested_bucket": "short",
+      "text": "हाँ काश मिल जाए"
+    },
+    {
+      "context": "क्या आपने इस नंबर से पिछले बिल का भुगतान किया",
+      "requested_bucket": "short",
+      "text": "हां जी हमेशा करता हूँ"
+    },
+    {
+      "context": "क्या पिछले महीने कोई पैक बदला है",
+      "requested_bucket": "short",
+      "text": "नहीं कुछ बदला नहीं"
+    },
+    {
+      "context": "क्या बिल में कोई अतिरिक्त कॉल चार्ज दिख रहा है",
+      "requested_bucket": "short",
+      "text": "हाँ जी कई कॉल्स का है"
+    },
+    {
+      "context": "क्या आप बिल की कॉपी ईमेल पर भेजना चाहेंगे",
+      "requested_bucket": "short",
+      "text": "अच्छा ठीक है भेज दो"
+    },
+    {
+      "context": "आपको बिल में क्या समस्या लगती है",
+      "requested_bucket": "medium",
+      "text": "सर बिल में जो डेटा चार्ज है वह बहुत ज्यादा है और सही नहीं लग रहा"
+    },
+    {
+      "context": "क्या आपने कभी कस्टमर केयर से इस बारे में बात की",
+      "requested_bucket": "medium",
+      "text": "हाँ कुछ दिन पहले बताया था लेकिन कोई सुधार नहीं हुआ"
+    },
+    {
+      "context": "बिल डिस्प्यूट के लिए आप क्या करते देखना चाहते हैं",
+      "requested_bucket": "medium",
+      "text": "प्लीज़ जल्दी से मेरा बिल चेक करें और गलत चार्ज वापस करें"
+    },
+    {
+      "context": "क्या आप अपनी आखिरी पेमेंट डेट बता सकते हैं",
+      "requested_bucket": "medium",
+      "text": "पिछली माह की पंद्रह तारीख को पेमेंट किया था"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 3447754994,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: bill_dispute - says a postpaid bill or charge is wrong\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"क्या आप अपना मोबाइल नंबर बताना चाहेंगे\",\"reply\":\"हाँ जी ९८७६५४३२१०\"},{\"agent_question\":\"आपका बिल तारीख क्या है\",\"reply\":\"पिछले महीने का\"},{\"agent_question\":\"क्या आप कनेक्शन पोस्टपेड है\",\"reply\":\"हाँ जी बिल्कुल\"},{\"agent_question\":\"कितनी रकम बिल में चुकानी है\",\"reply\":\"चार हज़ार रुपए\"},{\"agent_question\":\"क्या आप बिल को डाउनलोड कर पाए\",\"reply\":\"हाँ जी कर लिया\"},{\"agent_question\":\"क्या यह पहली बार ऐसा हुआ है\",\"reply\":\"नहीं ऐसा अक्सर होता है\"},{\"agent_question\":\"आप बिल के किस हिस्से से असहमत हैं\",\"reply\":\"डेटा चार्ज गलत है\"},{\"agent_question\":\"क्या आप हालिया रिचार्ज के बारे में बोलेंगे\",\"reply\":\"नहीं कोई रिचार्ज नहीं किया\"},{\"agent_question\":\"क्या आप सेलुलर डेटा उपयोग चेक किया\",\"reply\":\"हाँ देखा बहुत ज़्यादा है\"},{\"agent_question\":\"क्या आप चाहे तो रिफंड भी मांग सकते हैं\",\"reply\":\"हाँ काश मिल जाए\"},{\"agent_question\":\"क्या आपने इस नंबर से पिछले बिल का भुगतान किया\",\"reply\":\"हां जी हमेशा करता हूँ\"},{\"agent_question\":\"क्या पिछले महीने कोई पैक बदला है\",\"reply\":\"नहीं कुछ बदला नहीं\"},{\"agent_question\":\"क्या बिल में कोई अतिरिक्त कॉल चार्ज दिख रहा है\",\"reply\":\"हाँ जी कई कॉल्स का है\"},{\"agent_question\":\"क्या आप बिल की कॉपी ईमेल पर भेजना चाहेंगे\",\"reply\":\"अच्छा ठीक है भेज दो\"}],\"medium\":[{\"agent_question\":\"आपको बिल में क्या समस्या लगती है\",\"reply\":\"सर बिल में जो डेटा चार्ज है वह बहुत ज्यादा है और सही नहीं लग रहा\"},{\"agent_question\":\"क्या आपने कभी कस्टमर केयर से इस बारे में बात की\",\"reply\":\"हाँ कुछ दिन पहले बताया था लेकिन कोई सुधार नहीं हुआ\"},{\"agent_question\":\"बिल डिस्प्यूट के लिए आप क्या करते देखना चाहते हैं\",\"reply\":\"प्लीज़ जल्दी से मेरा बिल चेक करें और गलत चार्ज वापस करें\"},{\"agent_question\":\"क्या आप अपनी आखिरी पेमेंट डेट बता सकते हैं\",\"reply\":\"पिछली माह की पंद्रह तारीख को पेमेंट किया था\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 498,
+    "output_tokens": 469
+  }
+}

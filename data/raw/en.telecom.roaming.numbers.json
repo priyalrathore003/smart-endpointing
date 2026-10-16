@@ -1,0 +1,177 @@
+{
+  "batch_id": "en.telecom.roaming.numbers",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "telecom",
+  "intent": "roaming",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "activate roaming"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "international roaming"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "short_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "national roaming"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "medium_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "i want to activate roaming for my number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "can you please confirm your account number"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "what is the duration for roaming you want"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "how much will the roaming charges be"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "long_with_context"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "i am travelling to usa from 10th april to 25th april can you activate international roaming for this period"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "please tell me if any documents are required to activate national roaming for my phone number with account id ending 6721"
+    },
+    {
+      "context": "would you like to activate international or national roaming",
+      "requested_bucket": "short",
+      "text": "yes please"
+    },
+    {
+      "context": "which roaming service do you want to activate national or international",
+      "requested_bucket": "short",
+      "text": "national roaming"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i want to activate national roaming from next monday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my mobile number is nine eight seven six five four three two one zero"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you please activate international roaming on my account before first of may"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i need roaming for six months while i am in dubai starting seventh june"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please activate international roaming for my sim card ending 1234"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "what is the additional charge for roaming with my current prepaid plan"
+    },
+    {
+      "context": "can you please tell me the reason for roaming activation",
+      "requested_bucket": "medium",
+      "text": "i will be travelling abroad next week so i want to activate international roaming"
+    },
+    {
+      "context": "can you please provide your phone number to proceed",
+      "requested_bucket": "medium",
+      "text": "my phone number is nine one two three four five six seven eight nine zero"
+    },
+    {
+      "context": "what should be the start and end date for the roaming service",
+      "requested_bucket": "medium",
+      "text": "please activate roaming from the first of august to the thirty first of august"
+    },
+    {
+      "context": "please confirm your account number for verification",
+      "requested_bucket": "medium",
+      "text": "my account number is six seven eight nine zero one two three four five six"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "i am going to visit singapore from second june to twentieth june so i want to activate international roaming on my existing prepaid sim card"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "can you please activate national roaming on my postpaid connection since i will be travelling across india from first may to fifteenth may this year"
+    },
+    {
+      "context": "can you please tell me the dates and destination for international roaming",
+      "requested_bucket": "long",
+      "text": "i am travelling to usa for two weeks starting from 15th april can you activate international roaming for this period"
+    },
+    {
+      "context": "do you have any documents ready for activating roaming or need information about required documents",
+      "requested_bucket": "long",
+      "text": "what documents or details are required to activate national roaming on my account number ending with 9876"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 1455684195,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: roaming - wants to activate international or national roaming\nLanguage: Indian English, Latin script.\nStyle for this batch: with numbers (account and phone numbers, OTPs, amounts, dates) written as numerals, with long numbers spaced in groups the way people say them\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"activate roaming\"},{\"text\":\"international roaming\"},{\"text\":\"short_with_context\"},{\"text\":\"yes please\"},{\"text\":\"national roaming\"},{\"text\":\"medium_with_context\"},{\"text\":\"i want to activate roaming for my number\"},{\"text\":\"can you please confirm your account number\"},{\"text\":\"what is the duration for roaming you want\"},{\"text\":\"how much will the roaming charges be\"},{\"text\":\"long_with_context\"},{\"text\":\"i am travelling to usa from 10th april to 25th april can you activate international roaming for this period\"},{\"text\":\"please tell me if any documents are required to activate national roaming for my phone number with account id ending 6721\"}],\"short_with_context\":[{\"text\":\"yes please\",\"context\":\"would you like to activate international or national roaming\"},{\"text\":\"national roaming\",\"context\":\"which roaming service do you want to activate national or international\"}],\"medium\":[{\"text\":\"i want to activate national roaming from next monday\"},{\"text\":\"my mobile number is nine eight seven six five four three two one zero\"},{\"text\":\"can you please activate international roaming on my account before first of may\"},{\"text\":\"i need roaming for six months while i am in dubai starting seventh june\"},{\"text\":\"please activate international roaming for my sim card ending 1234\"},{\"text\":\"what is the additional charge for roaming with my current prepaid plan\"}],\"medium_with_context\":[{\"text\":\"i will be travelling abroad next week so i want to activate international roaming\",\"context\":\"can you please tell me the reason for roaming activation\"},{\"text\":\"my phone number is nine one two three four five six seven eight nine zero\",\"context\":\"can you please provide your phone number to proceed\"},{\"text\":\"please activate roaming from the first of august to the thirty first of august\",\"context\":\"what should be the start and end date for the roaming service\"},{\"text\":\"my account number is six seven eight nine zero one two three four five six\",\"context\":\"please confirm your account number for verification\"}],\"long\":[{\"text\":\"i am going to visit singapore from second june to twentieth june so i want to activate international roaming on my existing prepaid sim card\"},{\"text\":\"can you please activate national roaming on my postpaid connection since i will be travelling across india from first may to fifteenth may this year\"}],\"long_with_context\":[{\"text\":\"i am travelling to usa for two weeks starting from 15th april can you activate international roaming for this period\",\"context\":\"can you please tell me the dates and destination for international roaming\"},{\"text\":\"what documents or details are required to activate national roaming on my account number ending with 9876\",\"context\":\"do you have any documents ready for activating roaming or need information about required documents\"}]}",
+  "style": "numbers",
+  "usage": {
+    "input_tokens": 584,
+    "output_tokens": 550
+  }
+}

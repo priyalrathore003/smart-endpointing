@@ -12,13 +12,18 @@ __pycache__/
 # Run outputs and generated data (manifests and datasheets are committed explicitly)
 runs/
 mlruns/
-data/raw/
+# Raw LLM responses are committed (they cost money and the processed data rebuilds from
+# them); logs and anything else in data/raw stay out.
+data/raw/*
+!data/raw/*.json
+!data/raw/spend.jsonl
 data/raw_pilot_v0/
 data/raw_pilot_v1/
 data/raw_pilot_v2/
 data/raw_pilot_v3/
 data/raw_pilot_v4/
 data/processed/
+data/manifests/pilot*.json
 *.wav
 *.onnx
 

@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.telecom.escalate_complaint.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "telecom",
+  "intent": "escalate_complaint",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Can you please confirm your complaint ID",
+      "requested_bucket": "short",
+      "text": "thik hai"
+    },
+    {
+      "context": "Do you have your registered mobile number handy",
+      "requested_bucket": "short",
+      "text": "wait a minute"
+    },
+    {
+      "context": "Are you able to access your account online",
+      "requested_bucket": "short",
+      "text": "ji haan"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera complaint solve nahi hua ab kya karna hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "maine pehle bhi call kiya tha par koi action nahi liya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "woh last week ka issue hai jo ab tak pending hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha matlab aapko complaint escalate karna hai right"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera bill galat aya hai aur payment bhi deduct ho gaya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "kya aap mujhe escalation process samjha sakte ho"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mera naam Rahul Sharma hai aur account number 1234 hai"
+    },
+    {
+      "context": "When did you first report this issue",
+      "requested_bucket": "medium",
+      "text": "maine Tuesday ko call kiya tha nahi Wednesday ko"
+    },
+    {
+      "context": "Have you received any update regarding the complaint",
+      "requested_bucket": "medium",
+      "text": "abhi tak koi update nahi aaya hai problem pe"
+    },
+    {
+      "context": "May I know your location and network status",
+      "requested_bucket": "medium",
+      "text": "main Delhi se bol raha hoon aur network bahut slow hai"
+    },
+    {
+      "context": "Would you like to escalate this complaint to a senior agent",
+      "requested_bucket": "medium",
+      "text": "main chahata hoon ki aap mujhe higher authority se baat karwao"
+    },
+    {
+      "context": "Are you facing any urgent issues with your account status",
+      "requested_bucket": "medium",
+      "text": "haan mujhe lagta hai mera account block hone wala hai ab"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "maine kal apne complaint ko register karwaya tha par aaj tak koi response nahi mila mujhe thoda sa help chahiye"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "mera payment deduct ho gaya hai lekin mujhe service activate nahi hui hai is baare mein kuch bata sakte hain kya"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "main kaafi baar phone kar chuka hoon aur bar bar wait karna pad raha hai tab bhi solution nahi mil raha mujhe escalation chahiye"
+    },
+    {
+      "context": "Can you please describe the problem you are facing with your connection",
+      "requested_bucket": "long",
+      "text": "maine pehle bataya tha ki mera net band hai par abhi tak koi technician bhi nahi aaya"
+    },
+    {
+      "context": "What issues are you facing with your latest bill",
+      "requested_bucket": "long",
+      "text": "main frustrated hoon kyunki mera bill galat aaya hai aur payment bhi double deduct ho gaya hai"
+    },
+    {
+      "context": "Would you like me to escalate your complaint to the higher authority",
+      "requested_bucket": "long",
+      "text": "kya aap mere complaint ko escalate kar sakte hain kyunki iska solution ab tak nahi mila hai"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2595390703,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: escalate_complaint - is unhappy that an earlier complaint was not solved and wants escalation\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal tak\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"thik hai\",\"context\":\"Can you please confirm your complaint ID\"},{\"text\":\"wait a minute\",\"context\":\"Do you have your registered mobile number handy\"},{\"text\":\"ji haan\",\"context\":\"Are you able to access your account online\"}],\"medium\":[{\"text\":\"mera complaint solve nahi hua ab kya karna hai\"},{\"text\":\"maine pehle bhi call kiya tha par koi action nahi liya\"},{\"text\":\"woh last week ka issue hai jo ab tak pending hai\"},{\"text\":\"accha matlab aapko complaint escalate karna hai right\"},{\"text\":\"mera bill galat aya hai aur payment bhi deduct ho gaya\"},{\"text\":\"kya aap mujhe escalation process samjha sakte ho\"},{\"text\":\"mera naam Rahul Sharma hai aur account number 1234 hai\"}],\"medium_with_context\":[{\"text\":\"maine Tuesday ko call kiya tha nahi Wednesday ko\",\"context\":\"When did you first report this issue\"},{\"text\":\"abhi tak koi update nahi aaya hai problem pe\",\"context\":\"Have you received any update regarding the complaint\"},{\"text\":\"main Delhi se bol raha hoon aur network bahut slow hai\",\"context\":\"May I know your location and network status\"},{\"text\":\"main chahata hoon ki aap mujhe higher authority se baat karwao\",\"context\":\"Would you like to escalate this complaint to a senior agent\"},{\"text\":\"haan mujhe lagta hai mera account block hone wala hai ab\",\"context\":\"Are you facing any urgent issues with your account status\"}],\"long\":[{\"text\":\"maine kal apne complaint ko register karwaya tha par aaj tak koi response nahi mila mujhe thoda sa help chahiye\"},{\"text\":\"mera payment deduct ho gaya hai lekin mujhe service activate nahi hui hai is baare mein kuch bata sakte hain kya\"},{\"text\":\"main kaafi baar phone kar chuka hoon aur bar bar wait karna pad raha hai tab bhi solution nahi mil raha mujhe escalation chahiye\"}],\"long_with_context\":[{\"text\":\"maine pehle bataya tha ki mera net band hai par abhi tak koi technician bhi nahi aaya\",\"context\":\"Can you please describe the problem you are facing with your connection\"},{\"text\":\"main frustrated hoon kyunki mera bill galat aaya hai aur payment bhi double deduct ho gaya hai\",\"context\":\"What issues are you facing with your latest bill\"},{\"text\":\"kya aap mere complaint ko escalate kar sakte hain kyunki iska solution ab tak nahi mila hai\",\"context\":\"Would you like me to escalate your complaint to the higher authority\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 615,
+    "output_tokens": 551
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.banking.unauthorised_debit.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "banking",
+  "intent": "unauthorised_debit",
+  "items": [
+    {
+      "context": "Can you confirm your account number please",
+      "requested_bucket": "short",
+      "text": "Yes its 1234567890"
+    },
+    {
+      "context": "Have you checked your recent transactions",
+      "requested_bucket": "short",
+      "text": "No not yet"
+    },
+    {
+      "context": "Did you authorize this transaction",
+      "requested_bucket": "short",
+      "text": "No I did not"
+    },
+    {
+      "context": "When did you notice the unauthorized debit",
+      "requested_bucket": "short",
+      "text": "Yesterday"
+    },
+    {
+      "context": "Is the transaction amount correct",
+      "requested_bucket": "short",
+      "text": "No it is not"
+    },
+    {
+      "context": "Have you shared your card details recently",
+      "requested_bucket": "short",
+      "text": "No I have not"
+    },
+    {
+      "context": "Do you remember the merchant name shown",
+      "requested_bucket": "short",
+      "text": "No I dont"
+    },
+    {
+      "context": "Have you changed your online banking password",
+      "requested_bucket": "short",
+      "text": "Not yet"
+    },
+    {
+      "context": "Can you tell me the transaction date",
+      "requested_bucket": "short",
+      "text": "Last week"
+    },
+    {
+      "context": "Are you currently holding the debit card with you",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Was there a suspicious login on your account",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Have you informed the police about this",
+      "requested_bucket": "short",
+      "text": "Not yet"
+    },
+    {
+      "context": "Would you like to block your debit card now",
+      "requested_bucket": "short",
+      "text": "Yes please"
+    },
+    {
+      "context": "Would you prefer to visit the branch or do it online",
+      "requested_bucket": "short",
+      "text": "Online"
+    },
+    {
+      "context": "Please describe the transaction you did not make",
+      "requested_bucket": "medium",
+      "text": "There is a withdrawal of five thousand rupees that I never did"
+    },
+    {
+      "context": "Can you tell me if you received any OTP recently",
+      "requested_bucket": "medium",
+      "text": "No I did not receive any OTP message on my phone"
+    },
+    {
+      "context": "How would you like us to proceed with this case",
+      "requested_bucket": "medium",
+      "text": "Please block my card and initiate a fraud investigation"
+    },
+    {
+      "context": "Do you know when exactly did you last use your card",
+      "requested_bucket": "medium",
+      "text": "I last used the card three days ago at a local store"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 1087186889,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: banking\nIntent: unauthorised_debit - reports a transaction they did not make\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Can you confirm your account number please\",\"reply\":\"Yes its 1234567890\"},{\"agent_question\":\"Have you checked your recent transactions\",\"reply\":\"No not yet\"},{\"agent_question\":\"Did you authorize this transaction\",\"reply\":\"No I did not\"},{\"agent_question\":\"When did you notice the unauthorized debit\",\"reply\":\"Yesterday\"},{\"agent_question\":\"Is the transaction amount correct\",\"reply\":\"No it is not\"},{\"agent_question\":\"Have you shared your card details recently\",\"reply\":\"No I have not\"},{\"agent_question\":\"Do you remember the merchant name shown\",\"reply\":\"No I dont\"},{\"agent_question\":\"Have you changed your online banking password\",\"reply\":\"Not yet\"},{\"agent_question\":\"Can you tell me the transaction date\",\"reply\":\"Last week\"},{\"agent_question\":\"Are you currently holding the debit card with you\",\"reply\":\"Yes\"},{\"agent_question\":\"Was there a suspicious login on your account\",\"reply\":\"No\"},{\"agent_question\":\"Have you informed the police about this\",\"reply\":\"Not yet\"},{\"agent_question\":\"Would you like to block your debit card now\",\"reply\":\"Yes please\"},{\"agent_question\":\"Would you prefer to visit the branch or do it online\",\"reply\":\"Online\"}],\"medium\":[{\"agent_question\":\"Please describe the transaction you did not make\",\"reply\":\"There is a withdrawal of five thousand rupees that I never did\"},{\"agent_question\":\"Can you tell me if you received any OTP recently\",\"reply\":\"No I did not receive any OTP message on my phone\"},{\"agent_question\":\"How would you like us to proceed with this case\",\"reply\":\"Please block my card and initiate a fraud investigation\"},{\"agent_question\":\"Do you know when exactly did you last use your card\",\"reply\":\"I last used the card three days ago at a local store\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 368,
+    "output_tokens": 358
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "batch_id": "en.delivery.change_address.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "delivery",
+  "intent": "change_address",
+  "items": [
+    {
+      "context": "What is the new delivery address",
+      "requested_bucket": "short",
+      "text": "Noida sector 18"
+    },
+    {
+      "context": "Can you give me the updated landmark",
+      "requested_bucket": "short",
+      "text": "Near big mall"
+    },
+    {
+      "context": "Do you want to change the address now",
+      "requested_bucket": "short",
+      "text": "Yes please"
+    },
+    {
+      "context": "Is the new address permanent",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Should I update your phone number too",
+      "requested_bucket": "short",
+      "text": "No thanks"
+    },
+    {
+      "context": "Can I have the postal code",
+      "requested_bucket": "short",
+      "text": "110075"
+    },
+    {
+      "context": "Is it okay to deliver after 5 pm",
+      "requested_bucket": "short",
+      "text": "Yes"
+    },
+    {
+      "context": "Do you want us to deliver tomorrow",
+      "requested_bucket": "short",
+      "text": "Tomorrow evening"
+    },
+    {
+      "context": "Is the building name changed",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "Can you repeat the street name",
+      "requested_bucket": "short",
+      "text": "Main road"
+    },
+    {
+      "context": "Is this address easier for you",
+      "requested_bucket": "short",
+      "text": "Much easier"
+    },
+    {
+      "context": "Will someone be available to receive",
+      "requested_bucket": "short",
+      "text": "Yes definitely"
+    },
+    {
+      "context": "Should I keep the old address as backup",
+      "requested_bucket": "short",
+      "text": "No need"
+    },
+    {
+      "context": "Can you confirm the city name",
+      "requested_bucket": "short",
+      "text": "Gurgaon"
+    },
+    {
+      "context": "Please provide the full new address",
+      "requested_bucket": "medium",
+      "text": "I want it delivered to 45 park street near city center"
+    },
+    {
+      "context": "Can you explain the landmark in detail",
+      "requested_bucket": "medium",
+      "text": "It is the big red building beside the post office"
+    },
+    {
+      "context": "How soon do you want the delivery at the new address",
+      "requested_bucket": "medium",
+      "text": "Please update it for delivery by this Saturday evening"
+    },
+    {
+      "context": "Do you need to change the contact number with address",
+      "requested_bucket": "medium",
+      "text": "Yes my new phone number is 9876543210"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 358921887,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: change_address - wants to change the delivery address or landmark\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"What is the new delivery address\",\"reply\":\"Noida sector 18\"},{\"agent_question\":\"Can you give me the updated landmark\",\"reply\":\"Near big mall\"},{\"agent_question\":\"Do you want to change the address now\",\"reply\":\"Yes please\"},{\"agent_question\":\"Is the new address permanent\",\"reply\":\"Yes\"},{\"agent_question\":\"Should I update your phone number too\",\"reply\":\"No thanks\"},{\"agent_question\":\"Can I have the postal code\",\"reply\":\"110075\"},{\"agent_question\":\"Is it okay to deliver after 5 pm\",\"reply\":\"Yes\"},{\"agent_question\":\"Do you want us to deliver tomorrow\",\"reply\":\"Tomorrow evening\"},{\"agent_question\":\"Is the building name changed\",\"reply\":\"No\"},{\"agent_question\":\"Can you repeat the street name\",\"reply\":\"Main road\"},{\"agent_question\":\"Is this address easier for you\",\"reply\":\"Much easier\"},{\"agent_question\":\"Will someone be available to receive\",\"reply\":\"Yes definitely\"},{\"agent_question\":\"Should I keep the old address as backup\",\"reply\":\"No need\"},{\"agent_question\":\"Can you confirm the city name\",\"reply\":\"Gurgaon\"}],\"medium\":[{\"agent_question\":\"Please provide the full new address\",\"reply\":\"I want it delivered to 45 park street near city center\"},{\"agent_question\":\"Can you explain the landmark in detail\",\"reply\":\"It is the big red building beside the post office\"},{\"agent_question\":\"How soon do you want the delivery at the new address\",\"reply\":\"Please update it for delivery by this Saturday evening\"},{\"agent_question\":\"Do you need to change the contact number with address\",\"reply\":\"Yes my new phone number is 9876543210\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 366,
+    "output_tokens": 333
+  }
+}

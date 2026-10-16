@@ -1,0 +1,152 @@
+{
+  "batch_id": "hinglish.collections.promise_to_pay.fillers",
+  "bucket_counts_requested": {
+    "long": 6,
+    "medium": 12,
+    "short": 6
+  },
+  "context_count_requested": 11,
+  "domain": "collections",
+  "intent": "promise_to_pay",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": "Kab tak payment kar denge aap?",
+      "requested_bucket": "short",
+      "text": "kal tak"
+    },
+    {
+      "context": "Kya aap paise transfer kar payenge aaj?",
+      "requested_bucket": "short",
+      "text": "haan ji"
+    },
+    {
+      "context": "Aapko kitna time chahiye payment ke liye?",
+      "requested_bucket": "short",
+      "text": "theek hai"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "umm main kal tak definitely payment kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "theek hai matlab payment weekend tak kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "mujhe thoda waqt chahiye uske baad pay karunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "accha ji thoda intazaar kar lo kal tak kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "ji haan paise Wednesday ko transfer kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "woh actually thoda dikkat hai par Friday tak kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "haani main Tuesday nahi Wednesday ko payment bhej dunga"
+    },
+    {
+      "context": "haan ji kal tak payment kar dunga bilkul",
+      "requested_bucket": "medium",
+      "text": "kal tak payment kar payenge aap"
+    },
+    {
+      "context": "thoda aur din dijiyega next week tak kar dunga",
+      "requested_bucket": "medium",
+      "text": "aapko kitna time chahiye payment ke liye"
+    },
+    {
+      "context": "aaj nahi matlab kal tak kar dunga aapko confirm karta hoon",
+      "requested_bucket": "medium",
+      "text": "kya aap paise transfer kar payenge aaj"
+    },
+    {
+      "context": "mmm Thursday ko paisa transfer karna ho jayega",
+      "requested_bucket": "medium",
+      "text": "payment karne ke liye kab ready honge"
+    },
+    {
+      "context": "sorry Tuesday nahi Friday ko payment kar dunga",
+      "requested_bucket": "medium",
+      "text": "kab tak paise bhejenge aap"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "apologies mujhe thoda waqt chahiye paise jama karne mein kal tak kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "actually thoda busy hoon iss hafta paisa bhejna Thursday tak confirm kar dunga"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "haani please meri taraf se dus din aur de do payment ka arrangement kar dunga"
+    },
+    {
+      "context": "ji main thoda financial issue mein hoon par agle hafte Tuesday tak payment kar dunga",
+      "requested_bucket": "long",
+      "text": "aap payment kab karenge"
+    },
+    {
+      "context": "haan ji thoda dikat hai par weekend tak pura payment clear kar dunga",
+      "requested_bucket": "long",
+      "text": "payment karne mein problem hai kya"
+    },
+    {
+      "context": "accha ji Thursday nahi Friday tak paise transfer kar dunga yakin dilaata hoon",
+      "requested_bucket": "long",
+      "text": "kab tak paisa bhej paayenge"
+    }
+  ],
+  "language": "hinglish",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 24,
+  "prompt_shape": "turns",
+  "prompt_version": "4f583d63fe2afa2d",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2396155797,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: promise_to_pay - replies to a payment reminder with a date or amount they will pay\nLanguage: Hindi-English code-mixed, entirely in Latin script (e.g. 'mera account se paise kat gaye but transfer nahi hua').\nStyle for this batch: with fillers and hesitations (umm, matlab, woh, accha, haan ji); at least a third include a self-correction ('Tuesday, nahi, Wednesday')\n\nWrite exactly 24 different customer turns in these six groups:\n- \"short\": exactly 3 turns of 1-4 words (for example 'haan ji', 'kal tak', 'theek hai'),\n- \"short_with_context\": exactly 3 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 7 turns of 5-12 words,\n- \"medium_with_context\": exactly 5 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 3 turns of 13-30 words,\n- \"long_with_context\": exactly 3 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"haan ji\"},{\"text\":\"kal tak\"},{\"text\":\"theek hai\"}],\"short_with_context\":[{\"text\":\"kal tak\",\"context\":\"Kab tak payment kar denge aap?\"},{\"text\":\"haan ji\",\"context\":\"Kya aap paise transfer kar payenge aaj?\"},{\"text\":\"theek hai\",\"context\":\"Aapko kitna time chahiye payment ke liye?\"}],\"medium\":[{\"text\":\"umm main kal tak definitely payment kar dunga\"},{\"text\":\"theek hai matlab payment weekend tak kar dunga\"},{\"text\":\"mujhe thoda waqt chahiye uske baad pay karunga\"},{\"text\":\"accha ji thoda intazaar kar lo kal tak kar dunga\"},{\"text\":\"ji haan paise Wednesday ko transfer kar dunga\"},{\"text\":\"woh actually thoda dikkat hai par Friday tak kar dunga\"},{\"text\":\"haani main Tuesday nahi Wednesday ko payment bhej dunga\"}],\"medium_with_context\":[{\"text\":\"kal tak payment kar payenge aap\",\"context\":\"haan ji kal tak payment kar dunga bilkul\"},{\"text\":\"aapko kitna time chahiye payment ke liye\",\"context\":\"thoda aur din dijiyega next week tak kar dunga\"},{\"text\":\"kya aap paise transfer kar payenge aaj\",\"context\":\"aaj nahi matlab kal tak kar dunga aapko confirm karta hoon\"},{\"text\":\"payment karne ke liye kab ready honge\",\"context\":\"mmm Thursday ko paisa transfer karna ho jayega\"},{\"text\":\"kab tak paise bhejenge aap\",\"context\":\"sorry Tuesday nahi Friday ko payment kar dunga\"}],\"long\":[{\"text\":\"apologies mujhe thoda waqt chahiye paise jama karne mein kal tak kar dunga\"},{\"text\":\"actually thoda busy hoon iss hafta paisa bhejna Thursday tak confirm kar dunga\"},{\"text\":\"haani please meri taraf se dus din aur de do payment ka arrangement kar dunga\"}],\"long_with_context\":[{\"text\":\"aap payment kab karenge\",\"context\":\"ji main thoda financial issue mein hoon par agle hafte Tuesday tak payment kar dunga\"},{\"text\":\"payment karne mein problem hai kya\",\"context\":\"haan ji thoda dikat hai par weekend tak pura payment clear kar dunga\"},{\"text\":\"kab tak paisa bhej paayenge\",\"context\":\"accha ji Thursday nahi Friday tak paise transfer kar dunga yakin dilaata hoon\"}]}",
+  "style": "fillers",
+  "usage": {
+    "input_tokens": 615,
+    "output_tokens": 516
+  }
+}

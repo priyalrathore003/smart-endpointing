@@ -1,0 +1,147 @@
+{
+  "batch_id": "en.collections.promise_to_pay.names",
+  "bucket_counts_requested": {
+    "long": 4,
+    "medium": 10,
+    "short": 4
+  },
+  "context_count_requested": 8,
+  "domain": "collections",
+  "intent": "promise_to_pay",
+  "items": [
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "pay by friday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "next week"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "fifty percent"
+    },
+    {
+      "context": null,
+      "requested_bucket": "short",
+      "text": "sunday"
+    },
+    {
+      "context": "When will you be able to make the payment?",
+      "requested_bucket": "short",
+      "text": "tomorrow"
+    },
+    {
+      "context": "How much can you pay right now?",
+      "requested_bucket": "short",
+      "text": "two thousand"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i will clear the dues by 15th March"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "can you give me one more week for the payment"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "my address is 23 b charter road mumbai i will pay soon"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "the payment will be done by next tuesday evening"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "i promise to pay full amount by 10th april"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "please note i will submit payment from delhi branch by friday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "let me pay five thousand rupees by this saturday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "plan to make partial payment of seven thousand this week"
+    },
+    {
+      "context": null,
+      "requested_bucket": "medium",
+      "text": "will arrange the funds by 20th march and pay immediately"
+    },
+    {
+      "context": "How much can you pay right now?",
+      "requested_bucket": "medium",
+      "text": "i can pay two thousand before 5 pm today"
+    },
+    {
+      "context": "When do you think you can clear the amount?",
+      "requested_bucket": "medium",
+      "text": "i will be able to pay the balance by end of this month"
+    },
+    {
+      "context": "Can you confirm the date of your payment?",
+      "requested_bucket": "medium",
+      "text": "i will pay full amount via online transfer on 5th june"
+    },
+    {
+      "context": "What amount will you be able to pay by next week?",
+      "requested_bucket": "medium",
+      "text": "please note i will send five thousand rupees by next wednesday"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "this is ram from hyderabad my current outstanding is difficult to pay in lump sum but i can clear half of it by 30th april"
+    },
+    {
+      "context": null,
+      "requested_bucket": "long",
+      "text": "my name is sneha patel from ahmedabad i will make the payment of the full amount including interest by the first week of june please bear with me"
+    },
+    {
+      "context": "By when do you think you will be able to pay the outstanding amount?",
+      "requested_bucket": "long",
+      "text": "i am sorry for delay said by agent we understand your situation so by what date can you make the payment we assure to pay by the 3rd of may as i will receive salary by then"
+    },
+    {
+      "context": "Can you specify when we might expect your payment?",
+      "requested_bucket": "long",
+      "text": "agent says your payment is overdue by two months please confirm payment date i will send five thousand rupees from my bank account on monday next week and try to settle the balance soon"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "turns",
+  "prompt_version": "6695823f47c9f718",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "turns",
+    "seed": 2402608568,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: collections\nIntent: promise_to_pay - replies to a payment reminder with a date or amount they will pay\nLanguage: Indian English, Latin script.\nStyle for this batch: with names, addresses or places; some phrased as questions\n\nWrite exactly 18 different customer turns in these six groups:\n- \"short\": exactly 2 turns of 1-4 words (for example 'yes please', 'tomorrow', 'card ending 4321'),\n- \"short_with_context\": exactly 2 turns of 1-4 words, each with the agent's question before it,\n- \"medium\": exactly 6 turns of 5-12 words,\n- \"medium_with_context\": exactly 4 turns of 5-12 words, each with the agent's question before it,\n- \"long\": exactly 2 turns of 13-30 words,\n- \"long_with_context\": exactly 2 turns of 13-30 words, each with the agent's question before it.\nIn the *_with_context groups, \"context\" is the question the agent asked just before that turn.\nVary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.\nReturn JSON: {\"short\": [{\"text\": \"...\"}, ...], \"short_with_context\": [{\"text\": \"...\", \"context\": \"...\"}, ...],\n\"medium\": [...], \"medium_with_context\": [...], \"long\": [...], \"long_with_context\": [...]}\nEvery turn and question must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"text\":\"pay by friday\"},{\"text\":\"next week\"},{\"text\":\"fifty percent\"},{\"text\":\"sunday\"}],\"short_with_context\":[{\"text\":\"tomorrow\",\"context\":\"When will you be able to make the payment?\"},{\"text\":\"two thousand\",\"context\":\"How much can you pay right now?\"}],\"medium\":[{\"text\":\"i will clear the dues by 15th March\"},{\"text\":\"can you give me one more week for the payment\"},{\"text\":\"my address is 23 b charter road mumbai i will pay soon\"},{\"text\":\"the payment will be done by next tuesday evening\"},{\"text\":\"i promise to pay full amount by 10th april\"},{\"text\":\"please note i will submit payment from delhi branch by friday\"},{\"text\":\"let me pay five thousand rupees by this saturday\"},{\"text\":\"plan to make partial payment of seven thousand this week\"},{\"text\":\"will arrange the funds by 20th march and pay immediately\"}],\"medium_with_context\":[{\"text\":\"i can pay two thousand before 5 pm today\",\"context\":\"How much can you pay right now?\"},{\"text\":\"i will be able to pay the balance by end of this month\",\"context\":\"When do you think you can clear the amount?\"},{\"text\":\"i will pay full amount via online transfer on 5th june\",\"context\":\"Can you confirm the date of your payment?\"},{\"text\":\"please note i will send five thousand rupees by next wednesday\",\"context\":\"What amount will you be able to pay by next week?\"}],\"long\":[{\"text\":\"this is ram from hyderabad my current outstanding is difficult to pay in lump sum but i can clear half of it by 30th april\"},{\"text\":\"my name is sneha patel from ahmedabad i will make the payment of the full amount including interest by the first week of june please bear with me\"}],\"long_with_context\":[{\"text\":\"i am sorry for delay said by agent we understand your situation so by what date can you make the payment we assure to pay by the 3rd of may as i will receive salary by then\",\"context\":\"By when do you think you will be able to pay the outstanding amount?\"},{\"text\":\"agent says your payment is overdue by two months please confirm payment date i will send five thousand rupees from my bank account on monday next week and try to settle the balance soon\",\"context\":\"Can you specify when we might expect your payment?\"}]}",
+  "style": "names",
+  "usage": {
+    "input_tokens": 573,
+    "output_tokens": 502
+  }
+}

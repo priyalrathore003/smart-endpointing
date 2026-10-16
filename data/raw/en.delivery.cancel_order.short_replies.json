@@ -1,0 +1,127 @@
+{
+  "batch_id": "en.delivery.cancel_order.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "delivery",
+  "intent": "cancel_order",
+  "items": [
+    {
+      "context": "Can I have your order number please",
+      "requested_bucket": "short",
+      "text": "Order number is six seven eight nine"
+    },
+    {
+      "context": "What is the reason for cancellation",
+      "requested_bucket": "short",
+      "text": "Changed my mind"
+    },
+    {
+      "context": "Do you want to cancel the entire order",
+      "requested_bucket": "short",
+      "text": "Yes please"
+    },
+    {
+      "context": "When did you place the order",
+      "requested_bucket": "short",
+      "text": "Yesterday evening"
+    },
+    {
+      "context": "Do you want a refund or replacement",
+      "requested_bucket": "short",
+      "text": "Refund"
+    },
+    {
+      "context": "Is the delivery address correct",
+      "requested_bucket": "short",
+      "text": "Yes it is"
+    },
+    {
+      "context": "Have you received the order yet",
+      "requested_bucket": "short",
+      "text": "No not yet"
+    },
+    {
+      "context": "Would you like to place a new order",
+      "requested_bucket": "short",
+      "text": "No thanks"
+    },
+    {
+      "context": "Can I confirm your registered phone number",
+      "requested_bucket": "short",
+      "text": "Nine eight seven six five four three two one"
+    },
+    {
+      "context": "Do you need assistance with anything else",
+      "requested_bucket": "short",
+      "text": "No just cancellation"
+    },
+    {
+      "context": "Are you expecting the order today",
+      "requested_bucket": "short",
+      "text": "Tomorrow morning"
+    },
+    {
+      "context": "Is there any specific issue with the product",
+      "requested_bucket": "short",
+      "text": "No issue"
+    },
+    {
+      "context": "Have you contacted the delivery person",
+      "requested_bucket": "short",
+      "text": "Not yet"
+    },
+    {
+      "context": "Would you like to save this cancellation for future",
+      "requested_bucket": "short",
+      "text": "No"
+    },
+    {
+      "context": "When would you like the refund processed",
+      "requested_bucket": "short",
+      "text": "As soon as possible"
+    },
+    {
+      "context": "Can you tell me why you want to cancel the order",
+      "requested_bucket": "medium",
+      "text": "I found the item cheaper on another app so want to cancel"
+    },
+    {
+      "context": "Do you want me to help with returning the product",
+      "requested_bucket": "medium",
+      "text": "Yes please I would like assistance with the return process"
+    },
+    {
+      "context": "If you change your mind when can we deliver again",
+      "requested_bucket": "medium",
+      "text": "Maybe next week if the product is still available then"
+    },
+    {
+      "context": "Would you prefer store credit instead of a refund",
+      "requested_bucket": "medium",
+      "text": "No I prefer refund because I want to shop elsewhere this time"
+    }
+  ],
+  "language": "en",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 736532855,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: delivery\nIntent: cancel_order - wants to cancel an order\nLanguage: Indian English, Latin script.\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'yes', 'okay', 'tomorrow', 'by friday', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Latin script."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"Can I have your order number please\",\"reply\":\"Order number is six seven eight nine\"},{\"agent_question\":\"What is the reason for cancellation\",\"reply\":\"Changed my mind\"},{\"agent_question\":\"Do you want to cancel the entire order\",\"reply\":\"Yes please\"},{\"agent_question\":\"When did you place the order\",\"reply\":\"Yesterday evening\"},{\"agent_question\":\"Do you want a refund or replacement\",\"reply\":\"Refund\"},{\"agent_question\":\"Is the delivery address correct\",\"reply\":\"Yes it is\"},{\"agent_question\":\"Have you received the order yet\",\"reply\":\"No not yet\"},{\"agent_question\":\"Would you like to place a new order\",\"reply\":\"No thanks\"},{\"agent_question\":\"Can I confirm your registered phone number\",\"reply\":\"Nine eight seven six five four three two one\"},{\"agent_question\":\"Do you need assistance with anything else\",\"reply\":\"No just cancellation\"},{\"agent_question\":\"Are you expecting the order today\",\"reply\":\"Tomorrow morning\"},{\"agent_question\":\"Is there any specific issue with the product\",\"reply\":\"No issue\"},{\"agent_question\":\"Have you contacted the delivery person\",\"reply\":\"Not yet\"},{\"agent_question\":\"Would you like to save this cancellation for future\",\"reply\":\"No\"},{\"agent_question\":\"When would you like the refund processed\",\"reply\":\"As soon as possible\"}],\"medium\":[{\"agent_question\":\"Can you tell me why you want to cancel the order\",\"reply\":\"I found the item cheaper on another app so want to cancel\"},{\"agent_question\":\"Do you want me to help with returning the product\",\"reply\":\"Yes please I would like assistance with the return process\"},{\"agent_question\":\"If you change your mind when can we deliver again\",\"reply\":\"Maybe next week if the product is still available then\"},{\"agent_question\":\"Would you prefer store credit instead of a refund\",\"reply\":\"No I prefer refund because I want to shop elsewhere this time\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 363,
+    "output_tokens": 375
+  }
+}

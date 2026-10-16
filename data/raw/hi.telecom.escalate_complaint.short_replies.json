@@ -1,0 +1,122 @@
+{
+  "batch_id": "hi.telecom.escalate_complaint.short_replies",
+  "bucket_counts_requested": {
+    "long": 0,
+    "medium": 4,
+    "short": 14
+  },
+  "context_count_requested": 18,
+  "domain": "telecom",
+  "intent": "escalate_complaint",
+  "items": [
+    {
+      "context": "आपका नाम क्या है",
+      "requested_bucket": "short",
+      "text": "राहुल शर्मा"
+    },
+    {
+      "context": "कौन सा complaint किया था आपने",
+      "requested_bucket": "short",
+      "text": "नेट कनेक्शन"
+    },
+    {
+      "context": "कब complaint किया था आपने",
+      "requested_bucket": "short",
+      "text": "पिछले हफ्ते"
+    },
+    {
+      "context": "क्या complaint अभी भी है",
+      "requested_bucket": "short",
+      "text": "हाँ अभी भी है"
+    },
+    {
+      "context": "क्या आप escalation करना चाहते हैं",
+      "requested_bucket": "short",
+      "text": "जी हाँ बताइए"
+    },
+    {
+      "context": "आपका contact नंबर बताइए",
+      "requested_bucket": "short",
+      "text": "९८७६५४३२१०"
+    },
+    {
+      "context": "आपका क्षेत्र कौन सा है",
+      "requested_bucket": "short",
+      "text": "दिल्ली का नॉर्थ एरिया"
+    },
+    {
+      "context": "क्या previous response मिला था",
+      "requested_bucket": "short",
+      "text": "मिल गया था"
+    },
+    {
+      "context": "क्या solution satisfactory था",
+      "requested_bucket": "short",
+      "text": "नहीं था"
+    },
+    {
+      "context": "क्या payment हुआ था",
+      "requested_bucket": "short",
+      "text": "हाँ हुआ था"
+    },
+    {
+      "context": "क्या balance चेक किया था",
+      "requested_bucket": "short",
+      "text": "हाँ चेक कर लिया"
+    },
+    {
+      "context": "आप कितनी बार call कर चुके हैं",
+      "requested_bucket": "short",
+      "text": "तीन बार"
+    },
+    {
+      "context": "क्या network issue हो रहा है अभी भी",
+      "requested_bucket": "short",
+      "text": "हाँ हो रहा है"
+    },
+    {
+      "context": "क्या phone model बताइए",
+      "requested_bucket": "short",
+      "text": "सैमसंग"
+    },
+    {
+      "context": "आपका complaint कब तक resolve होना चाहिए था",
+      "requested_bucket": "medium",
+      "text": "कल तक तो ठीक हो जाना चाहिए था सर लेकिन अभी तक problem है"
+    },
+    {
+      "context": "आपको क्या परेशानी हो रही है नेटवर्क में",
+      "requested_bucket": "medium",
+      "text": "इन्टरनेट बिल्कुल धीमा चल रहा है और कॉल भी कटती रहती हैं बार बार"
+    },
+    {
+      "context": "क्या आपने कोई दूसरी complaint भी raise की है इस issue पर",
+      "requested_bucket": "medium",
+      "text": "हाँ दूसरी complaint भी की थी लेकिन कोई proper response नहीं मिला अभी तक सर"
+    },
+    {
+      "context": "आप क्यों चाहते हैं कि आपकी complaint escalate की जाए",
+      "requested_bucket": "medium",
+      "text": "पहली complaint का resolution नहीं हुआ तो मैं समझता हूं कि escalation जरूरी है जल्दी से हो जाए"
+    }
+  ],
+  "language": "hi",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "n_requested": 18,
+  "prompt_shape": "pairs",
+  "prompt_version": "2fb546be4c8b2d7c",
+  "request": {
+    "max_completion_tokens": 2000,
+    "response_format": "pairs",
+    "seed": 2588389657,
+    "system": "You write realistic things that customers say to a voice agent on a phone call in India.\nWrite what the customer says out loud, as speech recognition would transcribe it:\nnatural spoken word order, fillers kept, no punctuation needed.\nEach utterance is one complete customer turn: the customer has finished speaking\nand is waiting for the agent to reply.",
+    "temperature": 1.0,
+    "user": "Domain: telecom\nIntent: escalate_complaint - is unhappy that an earlier complaint was not solved and wants escalation\nLanguage: Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. Each utterance stays on one topic (no account number in a delivery query). Devanagari script. Write most English loanwords in Devanagari as people say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun in Latin script, as in real chats (parcel, account, OTP, payment).\n\nThe voice agent has just asked the customer a question, and the customer replies.\nWrite exactly 18 different (agent_question, reply) pairs. agent_question is one short question\nthe agent asks during this call; reply is the customer's complete answer to it.\n- \"short\": exactly 14 pairs whose reply is 1-4 words,\n- \"medium\": exactly 4 pairs whose reply is 5-12 words.\nAt least 6 replies must be complete answers that could also be the start of a longer\none, such as 'हाँ जी', 'ठीक है', 'कल तक', 'अभी नहीं', or a bare number (an amount, a date, an OTP).\nVary the questions. Do not number them.\nReturn JSON: {\"short\": [{\"agent_question\": \"...\", \"reply\": \"...\"}, ...], \"medium\": [...]}\nEvery question and reply must be in Devanagari script, apart from that occasional English noun."
+  },
+  "response_text": "{\"short\":[{\"agent_question\":\"आपका नाम क्या है\",\"reply\":\"राहुल शर्मा\"},{\"agent_question\":\"कौन सा complaint किया था आपने\",\"reply\":\"नेट कनेक्शन\"},{\"agent_question\":\"कब complaint किया था आपने\",\"reply\":\"पिछले हफ्ते\"},{\"agent_question\":\"क्या complaint अभी भी है\",\"reply\":\"हाँ अभी भी है\"},{\"agent_question\":\"क्या आप escalation करना चाहते हैं\",\"reply\":\"जी हाँ बताइए\"},{\"agent_question\":\"आपका contact नंबर बताइए\",\"reply\":\"९८७६५४३२१०\"},{\"agent_question\":\"आपका क्षेत्र कौन सा है\",\"reply\":\"दिल्ली का नॉर्थ एरिया\"},{\"agent_question\":\"क्या previous response मिला था\",\"reply\":\"मिल गया था\"},{\"agent_question\":\"क्या solution satisfactory था\",\"reply\":\"नहीं था\"},{\"agent_question\":\"क्या payment हुआ था\",\"reply\":\"हाँ हुआ था\"},{\"agent_question\":\"क्या balance चेक किया था\",\"reply\":\"हाँ चेक कर लिया\"},{\"agent_question\":\"आप कितनी बार call कर चुके हैं\",\"reply\":\"तीन बार\"},{\"agent_question\":\"क्या network issue हो रहा है अभी भी\",\"reply\":\"हाँ हो रहा है\"},{\"agent_question\":\"क्या phone model बताइए\",\"reply\":\"सैमसंग\"}],\"medium\":[{\"agent_question\":\"आपका complaint कब तक resolve होना चाहिए था\",\"reply\":\"कल तक तो ठीक हो जाना चाहिए था सर लेकिन अभी तक problem है\"},{\"agent_question\":\"आपको क्या परेशानी हो रही है नेटवर्क में\",\"reply\":\"इन्टरनेट बिल्कुल धीमा चल रहा है और कॉल भी कटती रहती हैं बार बार\"},{\"agent_question\":\"क्या आपने कोई दूसरी complaint भी raise की है इस issue पर\",\"reply\":\"हाँ दूसरी complaint भी की थी लेकिन कोई proper response नहीं मिला अभी तक सर\"},{\"agent_question\":\"आप क्यों चाहते हैं कि आपकी complaint escalate की जाए\",\"reply\":\"पहली complaint का resolution नहीं हुआ तो मैं समझता हूं कि escalation जरूरी है जल्दी से हो जाए\"}]}",
+  "style": "short_replies",
+  "usage": {
+    "input_tokens": 502,
+    "output_tokens": 394
+  }
+}
