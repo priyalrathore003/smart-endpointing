@@ -9,8 +9,10 @@ Exact counts, file hashes, drop counts and label-conflict rates are in
   2026-10-16). The snapshot was still served then, at $0.40 / $1.60 per 1M input / output tokens.
   If it is retired, the raw responses in `data/raw/` are still the dataset; regenerating would need
   a new model and a new data version.
-- **Prompts:** in `src/endpointing/data/prompts.py`. The manifest records their hash
-  (`raw.prompt_versions`), and a build refuses raw data that mixes versions. Filler and
+- **Prompts:** in `src/endpointing/data/prompts.py`. There are two shapes (turns and short-reply pairs),
+  each with its own hash. The manifest records the hash per shape (`raw.prompt_versions`), a build refuses
+  raw data that mixes versions within a shape, and the generator refuses to reuse a cached batch made
+  with an older prompt. Filler and
   self-correction examples are given per language, in that language's script.
 - **Prompt history:** in pilot v0, the Hindi prompt used Latin-script filler examples, and the model
   answered in Hinglish (18 of 18 in one batch). In pilot v1, there were no short turns and no code-mixed Hindi.
@@ -19,8 +21,13 @@ Exact counts, file hashes, drop counts and label-conflict rates are in
 - **Content:** what customers say to a support voice agent in India. Four domains (banking,
   collections, delivery, telecom), with 8 intents each and 5 styles: plain, fillers and
   self-corrections, numbers, names/places, and **short replies**. Short replies are
-  (agent_question, reply) pairs; the question is kept in the row's `context` field, which is null
-  for the other styles.
+  (agent_question, reply) pairs; the question is kept in the row's `context` field.
+- **Context on turns:** for about 30% of turn-style utterances (exactly round(0.3 n) per call), the
+  model also writes the agent question that came just before. Those turns are truncated as usual,
+  so their prefixes are NOT_END rows *with* context. Without this, context would appear almost
+  only on (mostly END) short replies, and a model could learn "question present means END".
+  The manifest's `context_balance` reports P(END | context) and P(END | no context) per language,
+  and **the build fails if the gap is over 15 points**.
 - **Length buckets:** every turn prompt asks for exact counts: 25% short (1-4 words), 50% medium
   (5-12) and 25% long (13-30). Short replies ask for 75% of 1-4 words and 25% of 5-12, with at least a
   third ambiguous ("haan ji", "theek hai", "kal tak", a bare number). The manifest reports the
@@ -50,8 +57,11 @@ Exact counts, file hashes, drop counts and label-conflict rates are in
 3. **Deduplicate:** turns are compared by text plus agent question, so "haan ji" answering two different
    questions is kept twice. Exact duplicates are removed everywhere; near-duplicates (word 3-gram
    Jaccard ≥ 0.8) are removed within each domain/intent/language group.
-4. **Spell digits:** about 25% of digit runs are rewritten digit by digit ("four two" / "चार दो" /
-   "char do"), seeded. These rows are tagged `digits_spelled`.
+4. **Spell digits:** about 25% of identifier-like digit runs are rewritten digit by digit ("four two" /
+   "चार दो" / "char do"), seeded. These rows are tagged `digits_spelled`. A run qualifies only if it has
+   4+ digits (phone, account, OTP, order ID) and is not a date (a month or date word next to it, or a
+   dd mm [yy]yy shape) or an amount (a currency or amount word next to it). "30 अप्रैल" and "5000 rupees"
+   are never spelled out.
 5. **Split** by generation batch, 80/10/10 per language. A batch's utterances and all their prefixes
    are in exactly one split.
 6. **Truncate:** each complete utterance becomes one **END** row. Prefixes cut at word boundaries are
@@ -74,7 +84,9 @@ Latin-script word; the tag is on all of its rows), `end_on_hard_negative` (END r
 
 `heuristic_complete` is a rule, not a label:
 - **Hindi and Hinglish:** the prefix ends on a verb-final form (है, हुआ, होगा, मिलेगा, दें, दूंगा, सकते हो… /
-  hai, hua, hoga, milega, dein, dunga, karunga, sakte ho…) or on a negation (पता नहीं, pata nahi).
+  hai, hua, hoga, milega, dein, dunga, karunga, sakte ho…), on a negation (पता नहीं, pata nahi), or on an
+  imperative (बताओ, बताइए, करो, दो, करें, करिए / batao, karo, do, kariye, dijiye). A prefix whose last word is
+  inside a number is never tagged, because "दो"/"do" is also the digit two.
 - **English:** the prefix ends on a listed final word, or it has at least 3 words and ends on a content
   word (not a function word, filler or number).
 - **Never:** a prefix that ends on a hard negative.
