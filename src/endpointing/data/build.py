@@ -1,5 +1,9 @@
 """Raw LLM responses -> labelled, deduplicated, split dataset + manifest. No API calls.
 
+Besides the train/dev/test files, the build writes analysis/all_prefixes.jsonl (every
+word boundary of every utterance, flagged `sampled`). It is for analysis only: never train
+on it. It is listed in the manifest but not part of data_hash.
+
 Order matters: normalise -> drop (empty, wrong script in text or question) -> dedup -> spell digits -> split -> truncate.
 Dedup runs before digit spelling so a random spelling can't hide a duplicate.
 """
@@ -16,11 +20,11 @@ from .conflicts import label_conflicts
 from .dedup import Deduplicator
 from .digits import DigitSpeller
 from .leakage import check_leakage
-from .manifest import build_manifest, example_record, write_jsonl, write_manifest
+from .manifest import build_manifest, example_record, sha256_file, write_jsonl, write_manifest
 from .script import script_ok
 from .split import BatchSplitter
-from .truncate import TruncationConfig, Truncator
-from .types import Source, Split, Style, Utterance, dedup_key
+from .truncate import AllHardPlusRandom, TruncationConfig, Truncator
+from .types import Example, Label, Source, Split, Style, Utterance, dedup_key
 
 
 class LeakageError(RuntimeError):
@@ -32,11 +36,22 @@ class BuildConfig:
     seed: int = 0
     spell_prob: float = 0.25
     dedup_threshold: float = 0.8
-    max_random_prefixes: int = 3
+    max_prefixes: int = 3
+    tail_share: float = 0.3
 
 
 def utterance_id(key: str) -> str:
     return hashlib.sha1(key.encode()).hexdigest()[:12]
+
+
+def sampling_stats(examples: list[Example]) -> dict:
+    """END:NOT_END ratio and the share of NOT_END prefixes that are only 1-2 words long."""
+    end = sum(ex.label is Label.END for ex in examples)
+    not_end = [ex for ex in examples if ex.label is Label.NOT_END]
+    stubs = sum(ex.k <= 2 for ex in not_end)
+    return {"END": end, "NOT_END": len(not_end),
+            "not_end_per_end": round(len(not_end) / end, 3) if end else None,
+            "share_1_2_word_prefixes": round(stubs / len(not_end), 4) if not_end else None}
 
 
 def _length_report(cleaned: list[tuple[Utterance, str | None]]) -> dict:
@@ -90,8 +105,12 @@ def build(raw_dir: Path, data_root: Path, name: str, config: BuildConfig = Build
     utts = [speller.apply(u) for u in kept]
 
     split_of = BatchSplitter().assign(u.source for u in utts)
-    truncator = Truncator(TruncationConfig(max_random_prefixes=config.max_random_prefixes), config.seed)
+    tconfig = TruncationConfig(max_prefixes=config.max_prefixes, tail_share=config.tail_share)
+    truncator = Truncator(tconfig, config.seed)
     rows = [(split_of[u.source.batch_id], ex) for u in utts for ex in truncator.examples(u)]
+    old_scheme = Truncator(tconfig, config.seed, sampler=AllHardPlusRandom(), reply_sampler=AllHardPlusRandom())
+    every = [(split_of[u.source.batch_id], ex) for u in utts for ex in truncator.all_prefixes(u)]
+    sampled_keys = {(ex.utterance_id, ex.k) for _, ex in rows}
 
     leakage = check_leakage(rows, config.dedup_threshold)
     if not leakage.ok:
@@ -104,7 +123,26 @@ def build(raw_dir: Path, data_root: Path, name: str, config: BuildConfig = Build
         write_jsonl(path, (example_record(s, ex) for s, ex in rows if s is split))
         files.append(path)
 
+    analysis_path = out_dir / "analysis" / "all_prefixes.jsonl"
+    n_every = write_jsonl(analysis_path, ({**example_record(s, ex), "sampled": (ex.utterance_id, ex.k) in sampled_keys}
+                                          for s, ex in every))
+
+    def by_group(examples: list[Example]) -> dict:
+        is_reply = lambda ex: ex.source.style is Style.SHORT_REPLIES
+        return {"all": sampling_stats(examples),
+                "turns": sampling_stats([ex for ex in examples if not is_reply(ex)]),
+                "short_replies": sampling_stats([ex for ex in examples if is_reply(ex)])}
+
     manifest = build_manifest(name, Path(data_root), files, rows, {
+        "analysis_files": [{"path": str(analysis_path.relative_to(data_root)), "sha256": sha256_file(analysis_path),
+                            "rows": n_every, "note": "every word boundary; analysis only, never train on it"}],
+        "prefix_sampling": {
+            "scheme": f"capped: <= {config.max_prefixes} NOT_END per utterance (hard-negative/filler, "
+                      f"last {int(config.tail_share * 100)}% of words, random); short replies: hard-negative only",
+            "after": by_group([ex for _, ex in rows]),
+            "before_all_hard_plus_3_random": by_group([ex for u in utts for ex in old_scheme.examples(u)]),
+            "every_boundary": by_group([ex for _, ex in every]),
+        },
         "build_config": asdict(config),
         "generation": generation_meta or {},
         "raw": {"batches": len(raws), "prompt_versions": versions,

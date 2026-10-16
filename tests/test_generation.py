@@ -307,3 +307,23 @@ def test_build_refuses_mixed_prompt_versions(tmp_path):
     path.write_text(json.dumps({**raw, "prompt_version": "old"}))
     with pytest.raises(ValueError, match="mixes prompt versions"):
         build(tmp_path / "raw", tmp_path, "x", BuildConfig())
+
+
+def test_build_caps_prefixes_in_every_split_and_writes_analysis_file(tmp_path):
+    m = run_pilot_build(tmp_path)
+    rows = [json.loads(l) for split in ("train", "dev", "test")
+            for l in (tmp_path / "processed" / "pilot" / f"{split}.jsonl").read_text().splitlines()]
+    per_utt = Counter(r["utterance_id"] for r in rows if r["label"] == "NOT_END")
+    assert max(per_utt.values()) <= 3
+    assert all(r["prefix_of_reply"] == (r["style"] == "short_replies" and r["label"] == "NOT_END") for r in rows)
+
+    analysis = tmp_path / "processed" / "pilot" / "analysis" / "all_prefixes.jsonl"
+    every = [json.loads(l) for l in analysis.read_text().splitlines()]
+    assert sum(r["sampled"] for r in every) == len(rows) and len(every) > len(rows)
+    assert m["analysis_files"][0]["rows"] == len(every)
+    assert all(f["path"] != m["analysis_files"][0]["path"] for f in m["files"])   # not in data_hash
+
+    ps = m["prefix_sampling"]
+    assert ps["after"]["all"]["END"] == ps["before_all_hard_plus_3_random"]["all"]["END"]
+    assert ps["after"]["all"]["NOT_END"] <= ps["before_all_hard_plus_3_random"]["all"]["NOT_END"]
+    assert ps["every_boundary"]["all"]["NOT_END"] >= ps["before_all_hard_plus_3_random"]["all"]["NOT_END"]

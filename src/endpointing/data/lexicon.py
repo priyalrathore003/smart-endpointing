@@ -54,6 +54,13 @@ VERB_FINAL: dict[Language, frozenset[tuple[str, ...]]] = {
                            "here", "again", "already", "sir", "madam"]),
 }
 
+# Hesitation sounds. Most are hard negatives too; this list adds the pure fillers.
+FILLERS: dict[Language, frozenset[tuple[str, ...]]] = {
+    Language.EN: _phrases(["um", "uh", "umm", "hmm", "er", "erm"]),
+    Language.HI: _phrases(["अम्म", "उम्म", "हम्म", "अं"]),
+    Language.HINGLISH: _phrases(["um", "umm", "uh", "hmm", "hmmm", "arey", "arre"]),
+}
+
 DIGIT_WORDS: dict[Language, tuple[str, ...]] = {
     Language.EN: tuple(normalize(w) for w in "zero one two three four five six seven eight nine".split()),
     Language.HI: tuple(normalize(w) for w in "ज़ीरो एक दो तीन चार पाँच छह सात आठ नौ".split()),
@@ -76,7 +83,7 @@ EN_NUMBER_WORDS: frozenset[str] = _words("""
     hundred thousand lakh lakhs crore crores
     """.split())
 
-_MAX_PHRASE = max(len(p) for table in (HARD_NEGATIVES, VERB_FINAL) for ps in table.values() for p in ps)
+_MAX_PHRASE = max(len(p) for table in (HARD_NEGATIVES, VERB_FINAL, FILLERS) for ps in table.values() for p in ps)
 
 
 def _ends_with(tokens: Sequence[str], phrases: frozenset[tuple[str, ...]]) -> bool:
@@ -85,6 +92,10 @@ def _ends_with(tokens: Sequence[str], phrases: frozenset[tuple[str, ...]]) -> bo
 
 def ends_with_hard_negative(tokens: Sequence[str], language: Language) -> bool:
     return _ends_with(tokens, HARD_NEGATIVES[language])
+
+
+def ends_with_filler(tokens: Sequence[str], language: Language) -> bool:
+    return _ends_with(tokens, FILLERS[language])
 
 
 def heuristic_complete(tokens: Sequence[str], language: Language) -> bool:

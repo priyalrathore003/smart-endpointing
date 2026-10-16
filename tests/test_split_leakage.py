@@ -87,7 +87,7 @@ def test_label_conflicts_counted_per_language():
     utts = [make_utt("haan", language=Language.HINGLISH, batch_id="b1"),
             make_utt("haan mera number hai 98765", language=Language.HINGLISH, batch_id="b2"),
             make_utt("yes", batch_id="b3")]
-    exs = [ex for u in utts for ex in Truncator(seed=0).examples(u)]
+    exs = [ex for u in utts for ex in Truncator(seed=0).all_prefixes(u)]
     exs = [e for e in exs if e.k in (1, e.n)]          # keep "haan" both as END and as a prefix
     rep = label_conflicts(exs)
     assert rep["by_language"]["hinglish"]["conflicting_texts"] == 1

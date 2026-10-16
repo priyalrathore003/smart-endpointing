@@ -111,6 +111,7 @@ class Example:
     short: bool
     code_mixed: bool
     end_on_hard_negative: bool
+    prefix_of_reply: bool
     context: Optional[str] = None
 
     @property

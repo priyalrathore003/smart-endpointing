@@ -117,9 +117,16 @@ def test_invalid_spell_prob():
 
 # --- truncation --------------------------------------------------------------
 
+def utt_for(text, lang=EN, spell=0.0, **kw):
+    return DigitSpeller(spell_prob=spell).apply(make_utt(text, language=lang, **kw))
+
+
 def rows_for(text, lang=EN, spell=0.0, **cfg):
-    utt = DigitSpeller(spell_prob=spell).apply(make_utt(text, language=lang))
-    return Truncator(TruncationConfig(**cfg)).examples(utt)
+    return Truncator(TruncationConfig(**cfg)).examples(utt_for(text, lang, spell))
+
+
+def all_rows_for(text, lang=EN, spell=0.0):
+    return Truncator().all_prefixes(utt_for(text, lang, spell))
 
 
 def test_end_row_is_the_full_utterance():
@@ -128,17 +135,69 @@ def test_end_row_is_the_full_utterance():
     assert len(ends) == 1 and ends[0].text == "i want to check my balance please" and ends[0].k == ends[0].n
 
 
-def test_prefix_count_and_labels():
-    rows = rows_for("i want to check my balance please")   # hard negative only at "to"
+def test_capped_sampler_keeps_anchor_tail_and_random():
+    text = "i want to check my balance please and then block the old card today"   # n = 14
+    rows = rows_for(text)
     not_end = [r for r in rows if r.label is Label.NOT_END]
-    assert len(not_end) == 1 + 3                            # all hard + 3 random
-    assert all(r.k < r.n for r in not_end)
-    assert len({r.k for r in rows}) == len(rows)            # no duplicate cuts
+    assert len(not_end) == 3 and len({r.k for r in rows}) == len(rows)
+    assert sum(r.hard_negative for r in not_end) >= 1                      # one hard-negative anchor
+    assert any(r.k >= 10 for r in not_end)                                 # ceil(14 * 0.7) = 10
 
 
-def test_every_hard_negative_prefix_is_kept():
-    rows = rows_for("umm and so because i mean the thing", max_random_prefixes=0)
+def test_capped_sampler_anchors_on_a_pure_filler():
+    rows = rows_for("hmm mera card block karna hai please jaldi", lang=HG)   # "hmm" is a filler only
+    assert any(r.k == 1 for r in rows if r.label is Label.NOT_END)
+
+
+def test_cap_holds_for_many_hard_negatives():
+    rows = rows_for("umm and so because i mean the thing and then the other")
+    assert sum(r.label is Label.NOT_END for r in rows) == 3
+
+
+def test_cap_zero_keeps_only_end():
+    assert [r.label for r in rows_for("i want to check my balance please", max_prefixes=0)] == [Label.END]
+
+
+def test_two_word_utterance_has_one_possible_prefix():
+    rows = rows_for("block card")
+    assert [(r.k, r.label) for r in rows] == [(1, Label.NOT_END), (2, Label.END)]
+
+
+def test_all_prefixes_has_every_boundary():
+    rows = all_rows_for("umm and so because i mean the thing")
+    assert [r.k for r in rows] == list(range(1, 9))
     assert sorted(r.k for r in rows if r.hard_negative) == [1, 2, 3, 4, 6, 7]
+
+
+def test_old_scheme_is_still_available_for_comparison():
+    from endpointing.data.truncate import AllHardPlusRandom
+    utt = utt_for("umm and so because i mean the thing")
+    rows = Truncator(sampler=AllHardPlusRandom()).examples(utt)
+    assert sum(r.label is Label.NOT_END for r in rows) == 6 + 1           # every hard negative + 1 left
+
+
+# --- short replies -----------------------------------------------------------
+
+def reply_rows(reply, question, lang=HG):
+    utt = DigitSpeller(0.0).apply(make_utt(reply, language=lang, context=question, style="short_replies"))
+    return Truncator().examples(utt)
+
+
+def test_short_reply_keeps_only_hard_negative_prefixes_and_tags_them():
+    rows = reply_rows("haan ji kal tak kar dunga aur baaki monday ko", "payment kab tak karenge")
+    not_end = [r for r in rows if r.label is Label.NOT_END]
+    assert not_end and all(r.hard_negative and r.prefix_of_reply for r in not_end)   # only "...aur"
+    assert [r.text for r in not_end] == ["haan ji kal tak kar dunga aur"]
+    assert not any(r.prefix_of_reply for r in rows if r.label is Label.END)
+
+
+def test_short_reply_without_hard_negative_gives_only_end():
+    rows = reply_rows("kal shaam tak", "delivery kab chahiye")
+    assert [r.label for r in rows] == [Label.END] and rows[0].context == "delivery kab chahiye"
+
+
+def test_turn_prefixes_are_not_prefix_of_reply():
+    assert not any(r.prefix_of_reply for r in rows_for("i want to check my balance please"))
 
 
 def test_one_word_utterance_gives_only_end():
@@ -147,7 +206,7 @@ def test_one_word_utterance_gives_only_end():
 
 
 def test_digits_mid_and_spelled_tags():
-    rows = rows_for("my number is 98765 43210", spell=1.0, max_random_prefixes=20)
+    rows = all_rows_for("my number is 98765 43210", spell=1.0)
     by_k = {r.k: r for r in rows}
     assert by_k[3].hard_negative and not by_k[3].has_digits
     assert by_k[5].digits_mid and by_k[5].digits_spelled and by_k[5].label is Label.NOT_END
@@ -170,7 +229,9 @@ def test_example_rejects_invalid_states():
 
 def test_invalid_config():
     with pytest.raises(ValueError):
-        TruncationConfig(max_random_prefixes=-1)
+        TruncationConfig(max_prefixes=-1)
+    with pytest.raises(ValueError):
+        TruncationConfig(tail_share=0)
 
 
 def test_code_mixed_tag_is_utterance_level_and_hindi_only():
@@ -181,7 +242,7 @@ def test_code_mixed_tag_is_utterance_level_and_hindi_only():
 
 
 def test_complete_utterance_ending_on_hard_negative_stays_end_and_is_tagged():
-    rows = rows_for("i did not make this payment and i did not do that", max_random_prefixes=20)
+    rows = all_rows_for("i did not make this payment and i did not do that")
     end = [r for r in rows if r.label is Label.END]
     assert len(end) == 1 and end[0].end_on_hard_negative and not end[0].hard_negative
     assert not any(r.end_on_hard_negative for r in rows if r.label is Label.NOT_END)
