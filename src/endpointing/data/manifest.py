@@ -13,7 +13,8 @@ from typing import Iterable, Sequence
 
 from .types import Example, Split
 
-SLICES = ("hard_negative", "heuristic_complete", "has_digits", "digits_mid", "digits_spelled", "short")
+SLICES = ("hard_negative", "heuristic_complete", "has_digits", "digits_mid", "digits_spelled", "short",
+          "code_mixed")
 
 
 def example_record(split: Split, ex: Example) -> dict:

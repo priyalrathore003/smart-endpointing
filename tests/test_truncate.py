@@ -139,3 +139,10 @@ def test_example_rejects_invalid_states():
 def test_invalid_config():
     with pytest.raises(ValueError):
         TruncationConfig(max_random_prefixes=-1)
+
+
+def test_code_mixed_tag_is_utterance_level_and_hindi_only():
+    hi_rows = rows_for("मेरा parcel कहां तक पहुंचा है", lang=HI)
+    assert hi_rows and all(r.code_mixed for r in hi_rows)
+    assert not any(r.code_mixed for r in rows_for("मेरा पार्सल कहां तक पहुंचा है", lang=HI))
+    assert not any(r.code_mixed for r in rows_for("mera parcel kahan hai", lang=HG))

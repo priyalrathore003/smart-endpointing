@@ -17,9 +17,10 @@ from .digits import DigitSpeller
 from .leakage import check_leakage
 from .lexicon import ends_with_hard_negative
 from .manifest import build_manifest, example_record, write_jsonl, write_manifest
+from .script import script_ok
 from .split import BatchSplitter
 from .truncate import TruncationConfig, Truncator
-from .types import Language, Source, Split, Utterance
+from .types import Source, Split, Utterance
 
 
 class LeakageError(RuntimeError):
@@ -32,18 +33,6 @@ class BuildConfig:
     spell_prob: float = 0.25
     dedup_threshold: float = 0.8
     max_random_prefixes: int = 3
-
-
-def _is_devanagari(ch: str) -> bool:
-    return "ऀ" <= ch <= "ॿ"
-
-
-def script_ok(text: str, language: Language) -> bool:
-    """Hindi must contain no Latin letters; English and Hinglish no Devanagari.
-    Keeps the language slices clean. Digits and letter-free text pass."""
-    if language is Language.HI:
-        return not any("a" <= c <= "z" for c in text)
-    return not any(_is_devanagari(c) for c in text)
 
 
 def utterance_id(text: str) -> str:

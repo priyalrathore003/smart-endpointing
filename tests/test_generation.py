@@ -188,7 +188,13 @@ def test_build_uses_the_shared_normaliser():
 @pytest.mark.parametrize("text, lang, ok", [
     ("मेरा कार्ड खो गया", Language.HI, True), ("mera card", Language.HI, False),
     ("mera card", Language.HINGLISH, True), ("मेरा card", Language.HINGLISH, False),
-    ("98765", Language.HI, True), ("मेरा ओटीपी 1234 hai", Language.HI, False),
+    ("98765", Language.HI, True),
+    ("मेरा parcel कहां तक पहुंचा है", Language.HI, True),        # 1 of 6 tokens Latin
+    ("मेरा parcel status बताओ", Language.HI, False),             # 2 of 4 (50%)
+    ("मेरा ओटीपी नहीं आया yaar", Language.HI, True),             # 1 of 5 (20%)
+    ("आज ओटीपी नहीं yaar", Language.HI, True),                   # exactly 25% is allowed
+    ("haan matlab main tuesday ko payment kar dunga", Language.HI, False),   # wholly Latin
+    ("", Language.HI, True),
 ])
 def test_script_check(text, lang, ok):
     assert script_ok(text, lang) is ok

@@ -12,6 +12,7 @@ import random
 from dataclasses import dataclass
 
 from .lexicon import ends_with_hard_negative, heuristic_complete
+from .script import is_code_mixed
 from .types import Example, Label, Utterance
 
 
@@ -59,4 +60,5 @@ class Truncator:
             has_digits=_overlaps(utt.digit_spans, k),
             digits_mid=_inside(utt.digit_spans, k),
             digits_spelled=_overlaps(utt.spelled_spans, k),
-            short=n <= self.config.short_max_words)
+            short=n <= self.config.short_max_words,
+            code_mixed=is_code_mixed(tokens, utt.source.language))

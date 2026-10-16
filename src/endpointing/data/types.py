@@ -89,6 +89,7 @@ class Example:
     digits_mid: bool
     digits_spelled: bool
     short: bool
+    code_mixed: bool
 
     def __post_init__(self) -> None:
         if not 1 <= self.k <= self.n:

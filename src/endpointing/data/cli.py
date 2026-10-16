@@ -113,9 +113,10 @@ def cmd_sample(args) -> int:
     for lang in Language:
         pool = [r for r in rows if r["language"] == lang.value]
         print(f"\n=== {lang.value}: {min(args.per_language, len(pool))} of {len(pool)} rows ===")
-        print(f"{'label':8} {'h_comp':6} {'spelled':7}  text")
+        print(f"{'label':8} {'h_comp':6} {'spelled':7} {'c_mixed':7}  text")
         for r in sorted(rng.sample(pool, min(args.per_language, len(pool))), key=lambda r: r["label"]):
-            print(f"{r['label']:8} {str(r['heuristic_complete']):6} {str(r['digits_spelled']):7}  {r['text']}")
+            print(f"{r['label']:8} {str(r['heuristic_complete']):6} {str(r['digits_spelled']):7} "
+                  f"{str(r['code_mixed']):7}  {r['text']}")
     return 0
 
 
