@@ -76,13 +76,16 @@ def parse_response(text: str, style: Style) -> list[GeneratedItem]:
         return items
     items = []
     for bucket in ("short", "medium", "long"):
-        turns = data.get(bucket)
-        if not isinstance(turns, list) or not all(isinstance(x, dict) for x in turns):
-            raise ValueError(f"{bucket} must be a list of {{text, context}} objects")
-        for x in turns:
-            text, ctx = x.get("text"), x.get("context")
-            if not isinstance(text, str) or not isinstance(ctx, str):
-                raise ValueError("text and context must be strings")
-            if text.strip():
-                items.append(GeneratedItem(text.strip(), ctx.strip() or None, bucket))
+        for group, needs_context in ((bucket, False), (f"{bucket}_with_context", True)):
+            turns = data.get(group)
+            if not isinstance(turns, list) or not all(isinstance(x, dict) for x in turns):
+                raise ValueError(f"{group} must be a list of objects")
+            for x in turns:
+                text, ctx = x.get("text"), x.get("context", "") if needs_context else ""
+                if not isinstance(text, str) or not isinstance(ctx, str):
+                    raise ValueError("text and context must be strings")
+                if needs_context and "context" not in x:
+                    raise ValueError(f"{group} items need a context")
+                if text.strip():
+                    items.append(GeneratedItem(text.strip(), ctx.strip() or None, bucket))
     return items

@@ -104,8 +104,9 @@ def build(raw_dir: Path, data_root: Path, name: str, config: BuildConfig = Build
           generation_meta: dict | None = None) -> dict:
     raws = load_raw(raw_dir)
     versions_by_shape: dict[str, set[str]] = defaultdict(set)
-    for r in raws:
-        versions_by_shape[r.get("prompt_shape", "turns")].add(r["prompt_version"])
+    for r in raws:   # turns are versioned per language, short-reply pairs per shape
+        shape = r.get("prompt_shape", "turns")
+        versions_by_shape[f"turns/{r['language']}" if shape == "turns" else shape].add(r["prompt_version"])
     mixed = {s: sorted(v) for s, v in versions_by_shape.items() if len(v) > 1}
     if mixed:
         raise ValueError(f"raw data mixes prompt versions {mixed}; regenerate or move the old batches")

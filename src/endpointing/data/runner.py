@@ -56,7 +56,7 @@ class BatchRunner:
                 todo.append(spec)
                 continue
             cached_version = json.loads(path.read_text(encoding="utf-8"))["prompt_version"]
-            (summary.cached if cached_version == prompt_version(shape_of(spec.style)) else stale).append(spec)
+            (summary.cached if cached_version == self._version(spec) else stale).append(spec)
         if stale:   # never mix prompt versions silently; checked before any call is made
             raise StaleCacheError(f"{len(stale)} cached batches were made with an older prompt, e.g. "
                                   f"{stale[0].batch_id}; move them aside before generating")
@@ -65,6 +65,11 @@ class BatchRunner:
             for batch_id, outcome in pool.map(self._run_one, todo):
                 getattr(summary, outcome).append(batch_id)
         return summary
+
+    @staticmethod
+    def _version(spec: BatchSpec) -> str:
+        shape = shape_of(spec.style)
+        return prompt_version(shape, spec.language if shape == "turns" else None)
 
     def _run_one(self, spec: BatchSpec) -> tuple[str, str]:
         prompt = render(spec)
@@ -94,7 +99,7 @@ class BatchRunner:
             "batch_id": spec.batch_id, "language": spec.language.value, "domain": spec.domain.value,
             "intent": spec.intent, "style": spec.style.value, "n_requested": spec.n,
             "bucket_counts_requested": spec.bucket_counts(),
-            "prompt_version": prompt_version(shape_of(spec.style)), "prompt_shape": shape_of(spec.style),
+            "prompt_version": self._version(spec), "prompt_shape": shape_of(spec.style),
             "context_count_requested": spec.context_count(), "model": completion.model,
             "request": {"system": prompt.system, "user": prompt.user, "seed": seed,
                         "response_format": prompt.response_format["json_schema"]["name"],

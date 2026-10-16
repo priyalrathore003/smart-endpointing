@@ -14,7 +14,7 @@ from dataclasses import dataclass
 from .catalogue import (AMBIGUOUS_REPLY_EXAMPLES, CONTEXT_SHARE_TURNS, FILLER_EXAMPLES, INTENTS, LANGUAGE_INSTRUCTIONS,
                         SCRIPT_NAMES, SELF_CORRECTION_EXAMPLES, SHORT_EXAMPLES, STYLE_INSTRUCTIONS,
                         BatchSpec)
-from .types import Style
+from .types import Language, Style
 
 SYSTEM_PROMPT = """\
 You write realistic things that customers say to a voice agent on a phone call in India.
@@ -29,14 +29,17 @@ Intent: {intent} - {intent_description}
 Language: {language_instruction}
 Style for this batch: {style_instruction}
 
-Write exactly {n} different customer turns:
-- exactly {short} short turns of 1-4 words (for example {short_examples}),
-- exactly {medium} medium turns of 5-12 words,
-- exactly {long} long turns of 13-30 words.
-For exactly {with_context} of the turns, spread over the three lengths, also write in "context" the
-question the agent asked just before that turn; for every other turn "context" is "".
+Write exactly {n} different customer turns in these six groups:
+- "short": exactly {short_plain} turns of 1-4 words (for example {short_examples}),
+- "short_with_context": exactly {short_ctx} turns of 1-4 words, each with the agent's question before it,
+- "medium": exactly {medium_plain} turns of 5-12 words,
+- "medium_with_context": exactly {medium_ctx} turns of 5-12 words, each with the agent's question before it,
+- "long": exactly {long_plain} turns of 13-30 words,
+- "long_with_context": exactly {long_ctx} turns of 13-30 words, each with the agent's question before it.
+In the *_with_context groups, "context" is the question the agent asked just before that turn.
 Vary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.
-Return JSON: {{"short": [{{"text": "...", "context": "..."}}, ...], "medium": [...], "long": [...]}}
+Return JSON: {{"short": [{{"text": "..."}}, ...], "short_with_context": [{{"text": "...", "context": "..."}}, ...],
+"medium": [...], "medium_with_context": [...], "long": [...], "long_with_context": [...]}}
 Every turn and question must be in {script}."""
 
 PAIRS_TEMPLATE = """\
@@ -62,10 +65,14 @@ def _schema(name: str, properties: dict) -> dict:
         "additionalProperties": False}}}
 
 
-_TURNS = {"type": "array", "items": {
+_PLAIN = {"type": "array", "items": {
+    "type": "object", "properties": {"text": {"type": "string"}}, "required": ["text"], "additionalProperties": False}}
+_WITH_CONTEXT = {"type": "array", "items": {
     "type": "object", "properties": {"text": {"type": "string"}, "context": {"type": "string"}},
     "required": ["context", "text"], "additionalProperties": False}}
-TURNS_FORMAT = _schema("turns", {"short": _TURNS, "medium": _TURNS, "long": _TURNS})
+# Turns with a question get their own arrays: asked in prose, pilot v4 got 2-11 questions for 5 requested.
+TURN_GROUPS = ("short", "short_with_context", "medium", "medium_with_context", "long", "long_with_context")
+TURNS_FORMAT = _schema("turns", {g: _WITH_CONTEXT if g.endswith("_with_context") else _PLAIN for g in TURN_GROUPS})
 _PAIRS = {"type": "array", "items": {
     "type": "object", "properties": {"agent_question": {"type": "string"}, "reply": {"type": "string"}},
     "required": ["agent_question", "reply"], "additionalProperties": False}}
@@ -92,8 +99,10 @@ def render(spec: BatchSpec) -> Prompt:
         return Prompt(SYSTEM_PROMPT, user, PAIRS_FORMAT)
     style = STYLE_INSTRUCTIONS[spec.style].format(
         fillers=FILLER_EXAMPLES[spec.language], correction=SELF_CORRECTION_EXAMPLES[spec.language])
+    plan = {f"{b}_{kind}": v for b, (plain, ctx) in spec.turn_plan().items()
+            for kind, v in (("plain", plain), ("ctx", ctx))}
     user = TURNS_TEMPLATE.format(style_instruction=style, short_examples=SHORT_EXAMPLES[spec.language],
-                                 with_context=spec.context_count(), **common)
+                                 **plan, **common)
     return Prompt(SYSTEM_PROMPT, user, TURNS_FORMAT)
 
 
@@ -104,10 +113,13 @@ def shape_of(style: Style) -> str:
     return "pairs" if style is Style.SHORT_REPLIES else "turns"
 
 
-def prompt_version(shape: str) -> str:
-    """Hash of everything that goes into prompts of one shape."""
+def prompt_version(shape: str, language: Language | None = None) -> str:
+    """Hash of everything that goes into prompts of one shape. Turn prompts are versioned per
+    language (their context share is per language); short-reply prompts are not."""
     if shape not in SHAPES:
         raise ValueError(f"unknown prompt shape {shape!r}")
+    if shape == "turns" and language is None:
+        raise ValueError("turn prompt versions are per language")
     common = [("languages", LANGUAGE_INSTRUCTIONS), ("scripts", SCRIPT_NAMES)]
     own = ([("styles", STYLE_INSTRUCTIONS), ("fillers", FILLER_EXAMPLES), ("corrections", SELF_CORRECTION_EXAMPLES),
             ("short", SHORT_EXAMPLES)] if shape == "turns" else [("ambiguous", AMBIGUOUS_REPLY_EXAMPLES)])
@@ -115,7 +127,8 @@ def prompt_version(shape: str) -> str:
     for name, table in common + own:
         tables[name] = {k.value: v for k, v in table.items()}
     template, fmt = (TURNS_TEMPLATE, TURNS_FORMAT) if shape == "turns" else (PAIRS_TEMPLATE, PAIRS_FORMAT)
-    extra = {"context_share_turns": CONTEXT_SHARE_TURNS} if shape == "turns" else {}
+    extra = {"language": language.value, "context_share_turns": CONTEXT_SHARE_TURNS[language]} \
+        if shape == "turns" else {}
     payload = json.dumps({"system": SYSTEM_PROMPT, "template": template, "format": fmt, **tables, **extra},
                          sort_keys=True, ensure_ascii=False)
     return hashlib.sha256(payload.encode()).hexdigest()[:16]

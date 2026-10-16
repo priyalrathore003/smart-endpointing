@@ -139,7 +139,10 @@ PILOT_BATCH_IDS: tuple[str, ...] = (
     "hinglish.delivery.change_address.names",
 )
 
-CONTEXT_SHARE_TURNS = 0.3   # share of turn-style utterances that also get the preceding agent question
+# Share of turn-style utterances that also get the preceding agent question. Pilot v4 at 0.3:
+# Hindi's P(END) gap with vs without context was 16.9 points (limit 15). Per language so one
+# language can be raised without regenerating the others.
+CONTEXT_SHARE_TURNS: dict[Language, float] = {Language.EN: 0.45, Language.HI: 0.45, Language.HINGLISH: 0.45}
 
 
 @dataclass(frozen=True)
@@ -169,7 +172,17 @@ class BatchSpec:
 
     def context_count(self) -> int:
         """How many items come with the agent's preceding question."""
-        return self.n if self.style is Style.SHORT_REPLIES else round(self.n * CONTEXT_SHARE_TURNS)
+        return self.n if self.style is Style.SHORT_REPLIES else round(self.n * CONTEXT_SHARE_TURNS[self.language])
+
+    def turn_plan(self) -> dict[str, tuple[int, int]]:
+        """Per length bucket: (turns without a question, turns with one). The questions are spread
+        over the buckets in proportion to their size (largest remainder), so the totals are exact."""
+        counts, total = self.bucket_counts(), self.context_count()
+        exact = {b: counts[b] * total / self.n for b in counts}
+        with_ctx = {b: int(exact[b]) for b in counts}
+        for b in sorted(counts, key=lambda b: exact[b] - int(exact[b]), reverse=True)[:total - sum(with_ctx.values())]:
+            with_ctx[b] += 1
+        return {b: (counts[b] - with_ctx[b], with_ctx[b]) for b in ("short", "medium", "long")}
 
 
 def plan_batches() -> list[BatchSpec]:

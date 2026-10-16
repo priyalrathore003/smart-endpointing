@@ -50,9 +50,10 @@ class FakeGenerator:
         if response_format["json_schema"]["name"] == "pairs":
             body = {"short": [{"agent_question": q, "reply": r} for q, r in FAKE_PAIRS[lang]], "medium": []}
         else:
-            turns = [{"text": x, "context": "aapki kya madad karun" if i == 0 else ""}
-                     for i, x in enumerate(FAKE_TURNS[lang])]
-            body = {"short": turns[:1], "medium": turns[1:], "long": []}
+            first, rest = FAKE_TURNS[lang][0], FAKE_TURNS[lang][1:]
+            body = {"short": [], "short_with_context": [{"text": first, "context": "aapki kya madad karun"}],
+                    "medium": [{"text": x} for x in rest], "medium_with_context": [],
+                    "long": [], "long_with_context": []}
         text = "not json" if bad else json.dumps(body, ensure_ascii=False)
         return Completion(text=text, input_tokens=400, output_tokens=600, model=self.model)
 
@@ -81,11 +82,30 @@ def test_pilot_has_the_full_runs_turn_to_reply_mix_in_every_language():
         assert styles.count(Style.SHORT_REPLIES) == 1 and len(styles) == 5      # 4 turn batches : 1
 
 
-@pytest.mark.parametrize("style, n, expected", [(Style.PLAIN, 18, 5), (Style.NAMES, 24, 7),
+@pytest.mark.parametrize("style, n, expected", [(Style.PLAIN, 18, 8), (Style.NAMES, 24, 11),
                                                 (Style.SHORT_REPLIES, 18, 18)])
 def test_context_count(style, n, expected):
     spec = next(s for s in plan_batches() if s.style is style and s.n == n)
     assert spec.context_count() == expected
+
+
+@pytest.mark.parametrize("n, expected", [
+    (18, {"short": (2, 2), "medium": (6, 4), "long": (2, 2)}),     # 8 questions: 1.78 / 4.44 / 1.78
+    (24, {"short": (3, 3), "medium": (7, 5), "long": (3, 3)}),     # 11 questions: 2.75 / 5.5 / 2.75
+])
+def test_turn_plan_spreads_questions_exactly(n, expected):
+    spec = next(s for s in plan_batches() if s.style is Style.PLAIN and s.n == n)
+    plan = spec.turn_plan()
+    assert plan == expected
+    assert sum(c for _, c in plan.values()) == spec.context_count()
+    assert {b: p + c for b, (p, c) in plan.items()} == {b: spec.bucket_counts()[b] for b in plan}
+
+
+def test_turn_plan_with_a_raised_share(monkeypatch):
+    import endpointing.data.catalogue as catalogue
+    monkeypatch.setitem(catalogue.CONTEXT_SHARE_TURNS, Language.HI, 0.55)
+    spec = next(s for s in plan_batches() if s.style is Style.PLAIN and s.language is Language.HI)
+    assert spec.context_count() == 10 and sum(c for _, c in spec.turn_plan().values()) == 10
 
 
 @pytest.mark.parametrize("style, n, expected", [
@@ -109,10 +129,12 @@ def test_turn_prompt_asks_for_exact_counts_with_examples_in_script():
     spec = next(s for s in plan_batches() if s.batch_id == "hi.delivery.where_is_order.numbers")
     p = render(spec)
     assert "complete customer turn" in p.system and p.response_format["json_schema"]["name"] == "turns"
-    assert "exactly 4 short turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है')" in p.user
-    assert "exactly 10 medium" in p.user and "exactly 4 long" in p.user
+    assert '"short": exactly 2 turns of 1-4 words (for example \'हाँ जी\', \'कल तक\', \'ठीक है\')' in p.user
     assert "1 in 4 turns keep one common English noun" in p.user
-    assert 'For exactly 5 of the turns, spread over the three lengths, also write in "context"' in p.user
+    assert '"short_with_context": exactly 2 turns of 1-4 words' in p.user
+    assert '"medium": exactly 6 turns of 5-12 words' in p.user and '"long_with_context": exactly 2' in p.user
+    assert set(p.response_format["json_schema"]["schema"]["required"]) == {
+        "short", "short_with_context", "medium", "medium_with_context", "long", "long_with_context"}
     assert "Colloquial spoken Hindi" in p.user and "कृपया" in p.user and "one topic" in p.user
 
 
@@ -125,22 +147,33 @@ def test_short_reply_prompt_asks_for_pairs_and_ambiguous_replies():
     assert "bare number" in p.user
 
 
-def test_prompt_versions_are_per_shape_and_stable():
-    assert prompt_version("turns") == prompt_version("turns") and len(prompt_version("pairs")) == 16
-    assert prompt_version("turns") != prompt_version("pairs")
+def test_prompt_versions_are_per_shape_and_turns_per_language(monkeypatch):
+    import endpointing.data.catalogue as catalogue
+    hi, en = prompt_version("turns", Language.HI), prompt_version("turns", Language.EN)
+    assert hi == prompt_version("turns", Language.HI) and len(prompt_version("pairs")) == 16
+    assert len({hi, en, prompt_version("pairs")}) == 3
+    pairs_before = prompt_version("pairs")
+    monkeypatch.setitem(catalogue.CONTEXT_SHARE_TURNS, Language.HI, 0.55)
+    assert prompt_version("turns", Language.HI) != hi                  # only Hindi turns change
+    assert prompt_version("turns", Language.EN) == en and prompt_version("pairs") == pairs_before
     assert shape_of(Style.SHORT_REPLIES) == "pairs" and shape_of(Style.PLAIN) == "turns"
-    with pytest.raises(ValueError):
-        prompt_version("other")
+    for bad in [("other", None), ("turns", None)]:
+        with pytest.raises(ValueError):
+            prompt_version(*bad)
 
 
 # --- parsing and money -------------------------------------------------------
 
+TURNS_OK = {"short": [{"text": " haan ji "}, {"text": ""}],
+            "short_with_context": [{"text": "kal tak", "context": "kab tak karenge?"}],
+            "medium": [{"text": "a b c d e"}], "medium_with_context": [{"text": "x y z a b", "context": "  "}],
+            "long": [], "long_with_context": []}
+
+
 def test_parse_turns():
-    items = parse_response('{"short": [{"text": " haan ji ", "context": "kal tak karenge?"},'
-                           ' {"text": "", "context": ""}],'
-                           ' "medium": [{"text": "a b c d e", "context": "  "}], "long": []}', Style.PLAIN)
-    assert items == [GeneratedItem("haan ji", "kal tak karenge?", "short"),
-                     GeneratedItem("a b c d e", None, "medium")]
+    items = parse_response(json.dumps(TURNS_OK), Style.PLAIN)
+    assert items == [GeneratedItem("haan ji", None, "short"), GeneratedItem("kal tak", "kab tak karenge?", "short"),
+                     GeneratedItem("a b c d e", None, "medium"), GeneratedItem("x y z a b", None, "medium")]
 
 
 def test_parse_pairs():
@@ -155,8 +188,9 @@ def test_parse_pairs():
 @pytest.mark.parametrize("bad, style", [
     ("not json", Style.PLAIN), ("[]", Style.PLAIN), ('{"short": [], "medium": []}', Style.PLAIN),
     ('{"short": [1], "medium": [], "long": []}', Style.PLAIN),
-    ('{"short": ["plain string"], "medium": [], "long": []}', Style.PLAIN),
-    ('{"short": [{"text": "x"}], "medium": [], "long": []}', Style.PLAIN),
+    (json.dumps({**TURNS_OK, "short": ["plain string"]}), Style.PLAIN),
+    (json.dumps({**TURNS_OK, "short_with_context": [{"text": "x"}]}), Style.PLAIN),
+    (json.dumps({k: v for k, v in TURNS_OK.items() if k != "long_with_context"}), Style.PLAIN),
     ('{"short": "x", "medium": []}', Style.SHORT_REPLIES),
     ('{"short": [{"reply": 3, "agent_question": "q"}], "medium": []}', Style.SHORT_REPLIES),
     ('{"pairs": []}', Style.SHORT_REPLIES), ('{"short": [], "long": []}', Style.SHORT_REPLIES),
@@ -198,8 +232,8 @@ def test_runner_writes_raw_and_caches(tmp_path):
     raw = json.loads((tmp_path / "raw" / f"{PILOT_BATCH_IDS[0]}.json").read_text())
     assert [i["text"] for i in raw["items"]] == [t.strip() for t in FAKE_TURNS["en"]]
     assert raw["items"][0]["context"] == "aapki kya madad karun" and raw["items"][1]["context"] is None
-    assert raw["prompt_version"] == prompt_version("turns") and raw["prompt_shape"] == "turns"
-    assert raw["bucket_counts_requested"]["short"] == 4 and raw["context_count_requested"] == 5
+    assert raw["prompt_version"] == prompt_version("turns", Language.EN) and raw["prompt_shape"] == "turns"
+    assert raw["bucket_counts_requested"]["short"] == 4 and raw["context_count_requested"] == 8
     pairs = json.loads((tmp_path / "raw" / "hinglish.delivery.reschedule.short_replies.json").read_text())
     assert pairs["items"][0] == {"text": "haan ji", "context": "kya aap kal payment karenge",
                                  "requested_bucket": "short"}
