@@ -48,7 +48,7 @@ class FakeGenerator:
             self.bad_left -= int(bad)
         lang = "hi" if "Devanagari" in user else "hinglish" if "code-mixed" in user else "en"
         if response_format["json_schema"]["name"] == "pairs":
-            body = {"pairs": [{"agent_question": q, "reply": r} for q, r in FAKE_PAIRS[lang]]}
+            body = {"short": [{"agent_question": q, "reply": r} for q, r in FAKE_PAIRS[lang]], "medium": []}
         else:
             body = {"short": FAKE_TURNS[lang][:1], "medium": FAKE_TURNS[lang][1:], "long": []}
         text = "not json" if bad else json.dumps(body, ensure_ascii=False)
@@ -102,13 +102,14 @@ def test_turn_prompt_asks_for_exact_counts_with_examples_in_script():
     assert "exactly 4 short turns of 1-4 words (for example 'हाँ जी', 'कल तक', 'ठीक है')" in p.user
     assert "exactly 10 medium" in p.user and "exactly 4 long" in p.user
     assert "1 in 4 turns keep one common English noun" in p.user
+    assert "Colloquial spoken Hindi" in p.user and "कृपया" in p.user and "one topic" in p.user
 
 
 def test_short_reply_prompt_asks_for_pairs_and_ambiguous_replies():
     spec = next(s for s in plan_batches() if s.batch_id == "hinglish.delivery.reschedule.short_replies")
     p = render(spec)
     assert p.response_format["json_schema"]["name"] == "pairs"
-    assert "exactly 18 replies of 1-4 words" in p.user and "exactly 6 replies of 5-12 words" in p.user
+    assert "exactly 18 pairs whose reply is 1-4 words" in p.user and "exactly 6 pairs whose reply is 5-12" in p.user
     assert "At least 8 replies" in p.user and "'haan ji', 'theek hai', 'kal tak'" in p.user
     assert "bare number" in p.user
 
@@ -125,16 +126,20 @@ def test_parse_turns():
 
 
 def test_parse_pairs():
-    items = parse_response('{"pairs": [{"agent_question": "kab tak?", "reply": "kal tak"},'
-                           ' {"agent_question": "", "reply": "x"}]}', Style.SHORT_REPLIES)
-    assert items == [GeneratedItem("kal tak", "kab tak?", None)]
+    items = parse_response('{"short": [{"agent_question": "kab tak?", "reply": "kal tak"},'
+                           ' {"agent_question": "", "reply": "x"}],'
+                           ' "medium": [{"agent_question": "q", "reply": "kal shaam tak kar dunga sir"}]}',
+                           Style.SHORT_REPLIES)
+    assert items == [GeneratedItem("kal tak", "kab tak?", "short"),
+                     GeneratedItem("kal shaam tak kar dunga sir", "q", "medium")]
 
 
 @pytest.mark.parametrize("bad, style", [
     ("not json", Style.PLAIN), ("[]", Style.PLAIN), ('{"short": [], "medium": []}', Style.PLAIN),
     ('{"short": [1], "medium": [], "long": []}', Style.PLAIN),
-    ('{"pairs": "x"}', Style.SHORT_REPLIES), ('{"pairs": [{"reply": 3, "agent_question": "q"}]}', Style.SHORT_REPLIES),
-    ('{"short": [], "medium": [], "long": []}', Style.SHORT_REPLIES),
+    ('{"short": "x", "medium": []}', Style.SHORT_REPLIES),
+    ('{"short": [{"reply": 3, "agent_question": "q"}], "medium": []}', Style.SHORT_REPLIES),
+    ('{"pairs": []}', Style.SHORT_REPLIES), ('{"short": [], "long": []}', Style.SHORT_REPLIES),
 ])
 def test_parse_rejects_wrong_shapes(bad, style):
     with pytest.raises(ValueError):
@@ -175,7 +180,7 @@ def test_runner_writes_raw_and_caches(tmp_path):
     assert raw["prompt_version"] == prompt_version() and raw["bucket_counts_requested"]["short"] == 4
     pairs = json.loads((tmp_path / "raw" / "hinglish.delivery.reschedule.short_replies.json").read_text())
     assert pairs["items"][0] == {"text": "haan ji", "context": "kya aap kal payment karenge",
-                                 "requested_bucket": None}
+                                 "requested_bucket": "short"}
     s2 = BatchRunner(gen, l, tmp_path / "raw").run(pilot_batches())
     assert len(s2.cached) == 8 and gen.calls == 8
     assert l.spent == 8 * GPT_41_MINI.cost(400, 600)

@@ -21,7 +21,7 @@ class Completion:
 class GeneratedItem:
     text: str
     context: Optional[str]            # the agent's question, for short replies
-    requested_bucket: Optional[str]   # length bucket asked for; None for short replies
+    requested_bucket: Optional[str]   # length bucket the model put it in
 
 
 class UtteranceGenerator(Protocol):
@@ -68,16 +68,17 @@ def parse_response(text: str, style: Style) -> list[GeneratedItem]:
     if not isinstance(data, dict):
         raise ValueError("response must be a JSON object")
     if style is Style.SHORT_REPLIES:
-        pairs = data.get("pairs")
-        if not isinstance(pairs, list) or not all(isinstance(p, dict) for p in pairs):
-            raise ValueError("response must be {\"pairs\": [{\"agent_question\", \"reply\"}, ...]}")
         items = []
-        for p in pairs:
-            q, r = p.get("agent_question"), p.get("reply")
-            if not isinstance(q, str) or not isinstance(r, str):
-                raise ValueError("agent_question and reply must be strings")
-            if q.strip() and r.strip():
-                items.append(GeneratedItem(r.strip(), q.strip(), None))
+        for bucket in ("short", "medium"):
+            pairs = data.get(bucket)
+            if not isinstance(pairs, list) or not all(isinstance(p, dict) for p in pairs):
+                raise ValueError(f"{bucket} must be a list of {{agent_question, reply}} objects")
+            for p in pairs:
+                q, r = p.get("agent_question"), p.get("reply")
+                if not isinstance(q, str) or not isinstance(r, str):
+                    raise ValueError("agent_question and reply must be strings")
+                if q.strip() and r.strip():
+                    items.append(GeneratedItem(r.strip(), q.strip(), bucket))
         return items
     items = []
     for bucket in ("short", "medium", "long"):

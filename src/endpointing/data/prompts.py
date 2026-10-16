@@ -43,12 +43,12 @@ Language: {language_instruction}
 The voice agent has just asked the customer a question, and the customer replies.
 Write exactly {n} different (agent_question, reply) pairs. agent_question is one short question
 the agent asks during this call; reply is the customer's complete answer to it.
-- exactly {short} replies of 1-4 words,
-- exactly {medium} replies of 5-12 words.
+- "short": exactly {short} pairs whose reply is 1-4 words,
+- "medium": exactly {medium} pairs whose reply is 5-12 words.
 At least {ambiguous} replies must be complete answers that could also be the start of a longer
 one, such as {ambiguous_examples}, or a bare number (an amount, a date, an OTP).
 Vary the questions. Do not number them.
-Return JSON: {{"pairs": [{{"agent_question": "...", "reply": "..."}}, ...]}}
+Return JSON: {{"short": [{{"agent_question": "...", "reply": "..."}}, ...], "medium": [...]}}
 Every question and reply must be in {script}."""
 
 
@@ -60,9 +60,11 @@ def _schema(name: str, properties: dict) -> dict:
 
 _STRINGS = {"type": "array", "items": {"type": "string"}}
 TURNS_FORMAT = _schema("turns", {"short": _STRINGS, "medium": _STRINGS, "long": _STRINGS})
-PAIRS_FORMAT = _schema("pairs", {"pairs": {"type": "array", "items": {
+_PAIRS = {"type": "array", "items": {
     "type": "object", "properties": {"agent_question": {"type": "string"}, "reply": {"type": "string"}},
-    "required": ["agent_question", "reply"], "additionalProperties": False}}})
+    "required": ["agent_question", "reply"], "additionalProperties": False}}
+# One array per length bucket, as for turns: in pilot v2 a single list got 8 short / 10 medium in Hindi.
+PAIRS_FORMAT = _schema("pairs", {"short": _PAIRS, "medium": _PAIRS})
 
 
 @dataclass(frozen=True)

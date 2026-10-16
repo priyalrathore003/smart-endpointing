@@ -55,7 +55,10 @@ INTENTS: dict[Domain, dict[str, str]] = {
 
 LANGUAGE_INSTRUCTIONS: dict[Language, str] = {
     Language.EN: "Indian English, Latin script.",
-    Language.HI: ("Hindi in Devanagari script. Write most English loanwords in Devanagari as people "
+    Language.HI: ("Colloquial spoken Hindi as on a real phone call, not written or formal Hindi. "
+                  "Avoid कृपया, श्रीमान, रकम, जमा; callers say सर, मैडम, प्लीज़, जल्दी, पैसा. "
+                  "Each utterance stays on one topic (no account number in a delivery query). "
+                  "Devanagari script. Write most English loanwords in Devanagari as people "
                   "say them (डिलीवरी, रिफंड), but in about 1 in 4 turns keep one common English noun "
                   "in Latin script, as in real chats (parcel, account, OTP, payment)."),
     Language.HINGLISH: ("Hindi-English code-mixed, entirely in Latin script "
