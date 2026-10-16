@@ -45,6 +45,14 @@ class Source:
     intent: str
     style: Style
 
+    def __post_init__(self) -> None:
+        # Coerce plain strings (e.g. read back from JSON); unknown values raise ValueError.
+        object.__setattr__(self, "language", Language(self.language))
+        object.__setattr__(self, "domain", Domain(self.domain))
+        object.__setattr__(self, "style", Style(self.style))
+        if not self.batch_id or not self.intent:
+            raise ValueError("batch_id and intent must be non-empty")
+
 
 @dataclass(frozen=True)
 class Utterance:

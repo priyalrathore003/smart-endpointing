@@ -57,3 +57,13 @@ def test_normalize_is_defined_only_in_endpointing_text():
                     isinstance(node.value, ast.Name) and node.value.id == "unicodedata":
                 offenders.append(f"{path.name}: unicodedata.normalize")
     assert offenders == []
+
+
+def test_source_coerces_strings_and_rejects_unknown_values():
+    from endpointing.data.types import Language, Source
+    s = Source(batch_id="b", language="hi", domain="banking", intent="x", style="plain")
+    assert s.language is Language.HI
+    with pytest.raises(ValueError):
+        Source(batch_id="b", language="tamil", domain="banking", intent="x", style="plain")
+    with pytest.raises(ValueError):
+        Source(batch_id="", language="hi", domain="banking", intent="x", style="plain")
