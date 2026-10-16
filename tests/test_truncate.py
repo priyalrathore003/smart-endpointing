@@ -62,6 +62,18 @@ def test_hard_negative_endings(text, lang, expected):
     ("otp abhi tak aaya nahi", HG, True),
     ("हो", HI, False),                                 # "हो" alone is not "सकते हो"
     ("नहीं तो", HI, False),                            # hard negative wins
+    # imperatives
+    ("मेरा डिलीवरी स्टेटस बताओ", HI, True),
+    ("जल्दी बताइए", HI, True),
+    ("ट्रैक कर दो", HI, True),
+    ("ठीक है चेक करो", HI, True),
+    ("कृपया चेक करें", HI, True),
+    ("एक बार देख करिए", HI, True),
+    ("status batao", HG, True),
+    ("jaldi check karo", HG, True),
+    ("refund de do", HG, True),
+    ("ek baar dekh kariye", HG, True),
+    ("link bhej dijiye", HG, True),
     # English structural rule
     ("i want to report an unauthorized transfer", EN, True),
     ("there is a debit of four thousand rupees", EN, True),
@@ -277,3 +289,12 @@ def test_complete_utterance_ending_on_hard_negative_stays_end_and_is_tagged():
 
 def test_ordinary_end_row_is_not_tagged():
     assert not any(r.end_on_hard_negative for r in rows_for("please block my card"))
+
+
+def test_spelled_two_is_not_the_imperative_do():
+    rows = Truncator().all_prefixes(DigitSpeller(1.0).apply(make_utt("otp 4242 hai", language=HG)))
+    by_text = {r.text: r for r in rows}
+    assert by_text["otp char do"].heuristic_complete is False             # "do" = two, inside the number
+    assert by_text["otp char do char do hai"].heuristic_complete is True
+    hi = Truncator().all_prefixes(DigitSpeller(1.0).apply(make_utt("ओटीपी 4242 है", language=HI)))
+    assert not any(r.heuristic_complete for r in hi if r.text.endswith("दो"))

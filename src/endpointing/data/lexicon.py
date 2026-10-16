@@ -5,7 +5,9 @@ HARD_NEGATIVES: a prefix ending in one of these is almost never a finished turn.
 
 VERB_FINAL: a prefix ending in one of these words or phrases *looks* finished (Hindi is
 verb-final). Negation-final endings ("पता नहीं", "aaya nahi") count too: in Hindi a
-sentence often ends on its negation. This drives the `heuristic_complete` tag only. It is not a label; it lets us count
+sentence often ends on its negation. Imperatives (बताओ, कर दो / batao, kar do) count too;
+"दो"/"do" is also the number two, so the truncator ignores endings inside a digit run.
+This drives the `heuristic_complete` tag only. It is not a label; it lets us count
 NOT_END prefixes that a reader would call complete.
 
 English has no sentence-final word class, so it also gets a structural rule:
@@ -43,12 +45,14 @@ VERB_FINAL: dict[Language, frozenset[tuple[str, ...]]] = {
                            "हूं", "थी", "थे", "गई", "गए", "रहा", "रही", "रहे",
                            "हुआ", "होगा", "मिलेगा", "दें",
                            "दूंगा", "दूँगा", "करूंगा", "करूँगा", "सकते हो",
-                           "नहीं", "नही"]),
+                           "नहीं", "नही",
+                           "बताओ", "बताइए", "करो", "दो", "करें", "करिए"]),
     Language.HINGLISH: _phrases(["hoon", "hain", "dijiye", "gaya", "raha", "karo",
                                  "hu", "hun", "hai", "dijie", "gayi", "gaye", "rahi", "rahe", "tha", "thi",
                                  "hua", "hui", "hue", "hoga", "milega", "dein",
                                  "dunga", "karunga", "sakte ho",
-                                 "nahi", "nahin", "nai"]),
+                                 "nahi", "nahin", "nai",
+                                 "batao", "karo", "do", "kariye", "dijiye"]),
     Language.EN: _phrases(["please", "now", "today", "tomorrow", "yesterday", "yet", "it", "me", "them",
                            "him", "her", "us", "done", "ok", "okay", "yes", "no", "thanks", "there",
                            "here", "again", "already", "sir", "madam"]),

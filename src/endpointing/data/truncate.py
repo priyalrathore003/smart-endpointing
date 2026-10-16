@@ -91,6 +91,11 @@ def _inside(spans: tuple[tuple[int, int], ...], k: int) -> bool:
     return any(s < k < e for s, e in spans)
 
 
+def _ends_in(spans: tuple[tuple[int, int], ...], k: int) -> bool:
+    """True if the k-th token (the last one of the prefix) belongs to a span."""
+    return any(s < k <= e for s, e in spans)
+
+
 def _overlaps(spans: tuple[tuple[int, int], ...], k: int) -> bool:
     """True if the first k tokens include part of a span."""
     return any(s < k for s, _ in spans)
@@ -121,7 +126,8 @@ class Truncator:
             utterance_id=utt.utterance_id, source=utt.source, text=" ".join(tokens[:k]), context=utt.context,
             label=Label.END if k == n else Label.NOT_END, k=k, n=n,
             hard_negative=k < n and ends_with_hard_negative(tokens[:k], lang),
-            heuristic_complete=heuristic_complete(tokens[:k], lang),
+            # "char do" (four two) is a number, not the imperative "do"
+            heuristic_complete=heuristic_complete(tokens[:k], lang) and not _ends_in(utt.digit_spans, k),
             has_digits=_overlaps(utt.digit_spans, k),
             digits_mid=_inside(utt.digit_spans, k),
             digits_spelled=_overlaps(utt.spelled_spans, k),
