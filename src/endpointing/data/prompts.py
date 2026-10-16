@@ -1,7 +1,9 @@
 """Prompt templates for utterance generation. Their hash is recorded with every raw response.
 
-Two shapes:
-- turns: one complete customer turn each, requested per length bucket;
+Two shapes, each with its own prompt version, so changing one does not invalidate the other:
+- turns: one complete customer turn each, requested per length bucket; about 30% also
+  carry the agent question that came just before (`context`), so that context is not
+  a give-away for END (short replies are almost all END);
 - short replies: (agent_question, reply) pairs; the question becomes the row's `context`.
 """
 
@@ -9,7 +11,7 @@ import hashlib
 import json
 from dataclasses import dataclass
 
-from .catalogue import (AMBIGUOUS_REPLY_EXAMPLES, FILLER_EXAMPLES, INTENTS, LANGUAGE_INSTRUCTIONS,
+from .catalogue import (AMBIGUOUS_REPLY_EXAMPLES, CONTEXT_SHARE_TURNS, FILLER_EXAMPLES, INTENTS, LANGUAGE_INSTRUCTIONS,
                         SCRIPT_NAMES, SELF_CORRECTION_EXAMPLES, SHORT_EXAMPLES, STYLE_INSTRUCTIONS,
                         BatchSpec)
 from .types import Style
@@ -31,9 +33,11 @@ Write exactly {n} different customer turns:
 - exactly {short} short turns of 1-4 words (for example {short_examples}),
 - exactly {medium} medium turns of 5-12 words,
 - exactly {long} long turns of 13-30 words.
+For exactly {with_context} of the turns, spread over the three lengths, also write in "context" the
+question the agent asked just before that turn; for every other turn "context" is "".
 Vary people, amounts, dates, names and places. Do not number them. Do not start two turns the same way.
-Return JSON: {{"short": [...], "medium": [...], "long": [...]}}
-Every turn must be in {script}."""
+Return JSON: {{"short": [{{"text": "...", "context": "..."}}, ...], "medium": [...], "long": [...]}}
+Every turn and question must be in {script}."""
 
 PAIRS_TEMPLATE = """\
 Domain: {domain}
@@ -58,8 +62,10 @@ def _schema(name: str, properties: dict) -> dict:
         "additionalProperties": False}}}
 
 
-_STRINGS = {"type": "array", "items": {"type": "string"}}
-TURNS_FORMAT = _schema("turns", {"short": _STRINGS, "medium": _STRINGS, "long": _STRINGS})
+_TURNS = {"type": "array", "items": {
+    "type": "object", "properties": {"text": {"type": "string"}, "context": {"type": "string"}},
+    "required": ["context", "text"], "additionalProperties": False}}
+TURNS_FORMAT = _schema("turns", {"short": _TURNS, "medium": _TURNS, "long": _TURNS})
 _PAIRS = {"type": "array", "items": {
     "type": "object", "properties": {"agent_question": {"type": "string"}, "reply": {"type": "string"}},
     "required": ["agent_question", "reply"], "additionalProperties": False}}
@@ -86,18 +92,30 @@ def render(spec: BatchSpec) -> Prompt:
         return Prompt(SYSTEM_PROMPT, user, PAIRS_FORMAT)
     style = STYLE_INSTRUCTIONS[spec.style].format(
         fillers=FILLER_EXAMPLES[spec.language], correction=SELF_CORRECTION_EXAMPLES[spec.language])
-    user = TURNS_TEMPLATE.format(style_instruction=style, short_examples=SHORT_EXAMPLES[spec.language], **common)
+    user = TURNS_TEMPLATE.format(style_instruction=style, short_examples=SHORT_EXAMPLES[spec.language],
+                                 with_context=spec.context_count(), **common)
     return Prompt(SYSTEM_PROMPT, user, TURNS_FORMAT)
 
 
-def prompt_version() -> str:
+SHAPES = ("turns", "pairs")
+
+
+def shape_of(style: Style) -> str:
+    return "pairs" if style is Style.SHORT_REPLIES else "turns"
+
+
+def prompt_version(shape: str) -> str:
+    """Hash of everything that goes into prompts of one shape."""
+    if shape not in SHAPES:
+        raise ValueError(f"unknown prompt shape {shape!r}")
+    common = [("languages", LANGUAGE_INSTRUCTIONS), ("scripts", SCRIPT_NAMES)]
+    own = ([("styles", STYLE_INSTRUCTIONS), ("fillers", FILLER_EXAMPLES), ("corrections", SELF_CORRECTION_EXAMPLES),
+            ("short", SHORT_EXAMPLES)] if shape == "turns" else [("ambiguous", AMBIGUOUS_REPLY_EXAMPLES)])
     tables = {"intents": {d.value: i for d, i in INTENTS.items()}}
-    for name, table in [("languages", LANGUAGE_INSTRUCTIONS), ("styles", STYLE_INSTRUCTIONS),
-                        ("fillers", FILLER_EXAMPLES), ("corrections", SELF_CORRECTION_EXAMPLES),
-                        ("scripts", SCRIPT_NAMES), ("short", SHORT_EXAMPLES),
-                        ("ambiguous", AMBIGUOUS_REPLY_EXAMPLES)]:
+    for name, table in common + own:
         tables[name] = {k.value: v for k, v in table.items()}
-    payload = json.dumps({"system": SYSTEM_PROMPT, "turns": TURNS_TEMPLATE, "pairs": PAIRS_TEMPLATE,
-                          "formats": [TURNS_FORMAT, PAIRS_FORMAT], **tables},
+    template, fmt = (TURNS_TEMPLATE, TURNS_FORMAT) if shape == "turns" else (PAIRS_TEMPLATE, PAIRS_FORMAT)
+    extra = {"context_share_turns": CONTEXT_SHARE_TURNS} if shape == "turns" else {}
+    payload = json.dumps({"system": SYSTEM_PROMPT, "template": template, "format": fmt, **tables, **extra},
                          sort_keys=True, ensure_ascii=False)
     return hashlib.sha256(payload.encode()).hexdigest()[:16]

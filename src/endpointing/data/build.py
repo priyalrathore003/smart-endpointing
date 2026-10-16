@@ -31,6 +31,10 @@ class LeakageError(RuntimeError):
     pass
 
 
+class ContextBalanceError(RuntimeError):
+    pass
+
+
 @dataclass(frozen=True)
 class BuildConfig:
     seed: int = 0
@@ -38,6 +42,7 @@ class BuildConfig:
     dedup_threshold: float = 0.8
     max_prefixes: int = 3
     tail_share: float = 0.3
+    max_context_gap: float = 0.15   # |P(END | context) - P(END | no context)| allowed per language
 
 
 def utterance_id(key: str) -> str:
@@ -52,6 +57,25 @@ def sampling_stats(examples: list[Example]) -> dict:
     return {"END": end, "NOT_END": len(not_end),
             "not_end_per_end": round(len(not_end) / end, 3) if end else None,
             "share_1_2_word_prefixes": round(stubs / len(not_end), 4) if not_end else None}
+
+
+def context_balance(examples: list[Example], max_gap: float) -> dict:
+    """P(END) for rows with and without an agent question, per language. If the gap is large,
+    a model can learn "question present -> END" instead of reading the text."""
+    def p_end(rows: list[Example]) -> dict:
+        return {"rows": len(rows),
+                "p_end": round(sum(r.label is Label.END for r in rows) / len(rows), 4) if rows else None}
+
+    out: dict = {"max_gap": max_gap, "by_language": {}, "failed": []}
+    for lang in sorted({ex.source.language.value for ex in examples}):
+        rows = [ex for ex in examples if ex.source.language.value == lang]
+        with_c, without = p_end([r for r in rows if r.context]), p_end([r for r in rows if not r.context])
+        gap = (round(abs(with_c["p_end"] - without["p_end"]), 4)
+               if with_c["p_end"] is not None and without["p_end"] is not None else None)
+        out["by_language"][lang] = {"with_context": with_c, "without_context": without, "gap": gap}
+        if gap is not None and gap > max_gap:
+            out["failed"].append(lang)
+    return out
 
 
 def _length_report(cleaned: list[tuple[Utterance, str | None]]) -> dict:
@@ -79,9 +103,13 @@ def load_raw(raw_dir: Path) -> list[dict]:
 def build(raw_dir: Path, data_root: Path, name: str, config: BuildConfig = BuildConfig(),
           generation_meta: dict | None = None) -> dict:
     raws = load_raw(raw_dir)
-    versions = sorted({r["prompt_version"] for r in raws})
-    if len(versions) > 1:
-        raise ValueError(f"raw data mixes prompt versions {versions}; regenerate or move the old batches")
+    versions_by_shape: dict[str, set[str]] = defaultdict(set)
+    for r in raws:
+        versions_by_shape[r.get("prompt_shape", "turns")].add(r["prompt_version"])
+    mixed = {s: sorted(v) for s, v in versions_by_shape.items() if len(v) > 1}
+    if mixed:
+        raise ValueError(f"raw data mixes prompt versions {mixed}; regenerate or move the old batches")
+    versions = {s: next(iter(v)) for s, v in sorted(versions_by_shape.items())}
     raw_by_lang: Counter = Counter()
     drops: dict[str, Counter] = defaultdict(Counter)
     cleaned: list[tuple[Utterance, str | None]] = []
@@ -133,7 +161,10 @@ def build(raw_dir: Path, data_root: Path, name: str, config: BuildConfig = Build
                 "turns": sampling_stats([ex for ex in examples if not is_reply(ex)]),
                 "short_replies": sampling_stats([ex for ex in examples if is_reply(ex)])}
 
+    balance = context_balance([ex for _, ex in rows], config.max_context_gap)
+
     manifest = build_manifest(name, Path(data_root), files, rows, {
+        "context_balance": balance,
         "analysis_files": [{"path": str(analysis_path.relative_to(data_root)), "sha256": sha256_file(analysis_path),
                             "rows": n_every, "note": "every word boundary; analysis only, never train on it"}],
         "prefix_sampling": {
@@ -159,4 +190,7 @@ def build(raw_dir: Path, data_root: Path, name: str, config: BuildConfig = Build
         "leakage_checks": "passed",
     })
     write_manifest(Path(data_root) / "manifests" / f"{name}.json", manifest)
+    if balance["failed"]:   # manifest is written first so the numbers can be inspected
+        raise ContextBalanceError(f"P(END) gap with vs without context is over {config.max_context_gap} "
+                                  f"for {balance['failed']}: {balance['by_language']}")
     return manifest

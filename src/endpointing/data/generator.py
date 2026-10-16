@@ -20,7 +20,7 @@ class Completion:
 @dataclass(frozen=True)
 class GeneratedItem:
     text: str
-    context: Optional[str]            # the agent's question, for short replies
+    context: Optional[str]            # the agent's preceding question, if given
     requested_bucket: Optional[str]   # length bucket the model put it in
 
 
@@ -53,12 +53,6 @@ class OpenAIGenerator:
                           output_tokens=resp.usage.completion_tokens, model=resp.model)
 
 
-def _strings(value, what: str) -> list[str]:
-    if not isinstance(value, list) or not all(isinstance(x, str) for x in value):
-        raise ValueError(f"{what} must be a list of strings")
-    return value
-
-
 def parse_response(text: str, style: Style) -> list[GeneratedItem]:
     """Raw JSON response -> items. Raises ValueError if the shape is wrong. Empty strings are skipped."""
     try:
@@ -82,7 +76,13 @@ def parse_response(text: str, style: Style) -> list[GeneratedItem]:
         return items
     items = []
     for bucket in ("short", "medium", "long"):
-        for s in _strings(data.get(bucket), bucket):
-            if s.strip():
-                items.append(GeneratedItem(s.strip(), None, bucket))
+        turns = data.get(bucket)
+        if not isinstance(turns, list) or not all(isinstance(x, dict) for x in turns):
+            raise ValueError(f"{bucket} must be a list of {{text, context}} objects")
+        for x in turns:
+            text, ctx = x.get("text"), x.get("context")
+            if not isinstance(text, str) or not isinstance(ctx, str):
+                raise ValueError("text and context must be strings")
+            if text.strip():
+                items.append(GeneratedItem(text.strip(), ctx.strip() or None, bucket))
     return items

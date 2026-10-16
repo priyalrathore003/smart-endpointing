@@ -128,7 +128,18 @@ PILOT_BATCH_IDS: tuple[str, ...] = (
     "en.telecom.data_balance.short_replies",
     "hi.collections.promise_to_pay.short_replies",
     "hinglish.delivery.reschedule.short_replies",
+    # More turn batches so the pilot has the full run's 4 turn batches per short-reply
+    # batch in each language; the context-balance check depends on that mix.
+    "en.delivery.reschedule.plain",
+    "en.collections.promise_to_pay.fillers",
+    "en.telecom.bill_dispute.names",
+    "hi.banking.lost_card.plain",
+    "hi.telecom.no_network.names",
+    "hinglish.collections.ask_extension.plain",
+    "hinglish.delivery.change_address.names",
 )
+
+CONTEXT_SHARE_TURNS = 0.3   # share of turn-style utterances that also get the preceding agent question
 
 
 @dataclass(frozen=True)
@@ -155,6 +166,10 @@ class BatchSpec:
             return {"short": self.n - medium, "medium": medium, "long": 0}
         short = long = round(self.n / 4)
         return {"short": short, "medium": self.n - short - long, "long": long}
+
+    def context_count(self) -> int:
+        """How many items come with the agent's preceding question."""
+        return self.n if self.style is Style.SHORT_REPLIES else round(self.n * CONTEXT_SHARE_TURNS)
 
 
 def plan_batches() -> list[BatchSpec]:

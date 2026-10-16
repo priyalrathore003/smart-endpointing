@@ -15,9 +15,13 @@ from typing import Sequence
 from .budget import SpendLedger
 from .catalogue import BatchSpec
 from .generator import UtteranceGenerator, parse_response
-from .prompts import prompt_version, render
+from .prompts import prompt_version, render, shape_of
 
 WORST_CASE_INPUT_TOKENS = 1500   # rendered prompts are ~400 tokens; this is a safe ceiling
+
+
+class StaleCacheError(RuntimeError):
+    pass
 
 
 @dataclass
@@ -45,9 +49,17 @@ class BatchRunner:
 
     def run(self, specs: Sequence[BatchSpec]) -> RunSummary:
         summary = RunSummary()
-        todo = []
+        todo, stale = [], []
         for spec in specs:
-            (summary.cached if self.raw_path(spec).exists() else todo).append(spec)
+            path = self.raw_path(spec)
+            if not path.exists():
+                todo.append(spec)
+                continue
+            cached_version = json.loads(path.read_text(encoding="utf-8"))["prompt_version"]
+            (summary.cached if cached_version == prompt_version(shape_of(spec.style)) else stale).append(spec)
+        if stale:   # never mix prompt versions silently; checked before any call is made
+            raise StaleCacheError(f"{len(stale)} cached batches were made with an older prompt, e.g. "
+                                  f"{stale[0].batch_id}; move them aside before generating")
         summary.cached = [s.batch_id for s in summary.cached]
         with ThreadPoolExecutor(max_workers=self.workers) as pool:
             for batch_id, outcome in pool.map(self._run_one, todo):
@@ -82,7 +94,8 @@ class BatchRunner:
             "batch_id": spec.batch_id, "language": spec.language.value, "domain": spec.domain.value,
             "intent": spec.intent, "style": spec.style.value, "n_requested": spec.n,
             "bucket_counts_requested": spec.bucket_counts(),
-            "prompt_version": prompt_version(), "model": completion.model,
+            "prompt_version": prompt_version(shape_of(spec.style)), "prompt_shape": shape_of(spec.style),
+            "context_count_requested": spec.context_count(), "model": completion.model,
             "request": {"system": prompt.system, "user": prompt.user, "seed": seed,
                         "response_format": prompt.response_format["json_schema"]["name"],
                         "temperature": self.generator.temperature,

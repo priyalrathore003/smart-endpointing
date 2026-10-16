@@ -22,7 +22,7 @@ from .budget import GPT_41_MINI, SpendLedger
 from .build import BuildConfig, build
 from .catalogue import BatchSpec, pilot_batches, plan_batches
 from .generator import MODEL, OpenAIGenerator
-from .prompts import prompt_version
+from .prompts import SHAPES, prompt_version
 from .runner import BatchRunner
 from .types import Language
 
@@ -95,12 +95,13 @@ def cmd_generate(args) -> int:
 
 def cmd_build(args) -> int:
     raw_dir, _ = _paths(args.data_dir)
-    meta = {"model": MODEL, "prompt_version": prompt_version(),
+    meta = {"model": MODEL, "prompt_versions_current": {s: prompt_version(s) for s in SHAPES},
             "pricing_usd_per_million": {"input": str(GPT_41_MINI.input_per_million),
                                         "output": str(GPT_41_MINI.output_per_million)}}
     m = build(raw_dir, args.data_dir, args.name, BuildConfig(), meta)
     print(json.dumps({k: m[k] for k in ("data_hash", "raw", "drops", "dedup", "utterances_by_language",
-                                        "utterances_by_style", "length_buckets", "batches_by_split",
+                                        "utterances_by_style", "length_buckets", "context_balance",
+                                        "batches_by_split",
                                         "label_conflicts", "counts")},
                      indent=2, ensure_ascii=False))
     return 0
