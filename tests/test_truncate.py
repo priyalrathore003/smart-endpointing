@@ -51,6 +51,17 @@ def test_hard_negative_endings(text, lang, expected):
     ("refund kab tak hoga", HG, True),
     ("naya card kab milega", HG, True),
     ("link bhej dein", HG, True),
+    # future first person, "sakte ho", negation-final endings
+    ("मैं कल तक पूरा पैसा दे दूंगा", HI, True),
+    ("main kal tak payment kar dunga", HG, True),
+    ("main shaam tak transfer karunga", HG, True),
+    ("क्या आप मेरा पार्सल ट्रैक कर सकते हो", HI, True),
+    ("kya aap mera parcel track kar sakte ho", HG, True),
+    ("पता नहीं", HI, True),
+    ("pata nahi", HG, True),
+    ("otp abhi tak aaya nahi", HG, True),
+    ("हो", HI, False),                                 # "हो" alone is not "सकते हो"
+    ("नहीं तो", HI, False),                            # hard negative wins
     # English structural rule
     ("i want to report an unauthorized transfer", EN, True),
     ("there is a debit of four thousand rupees", EN, True),

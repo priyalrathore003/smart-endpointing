@@ -3,8 +3,9 @@
 HARD_NEGATIVES: a prefix ending in one of these is almost never a finished turn.
 "na" and "hai" are left out on purpose: they often end complete Hindi sentences.
 
-VERB_FINAL: a prefix ending in one of these *looks* finished (Hindi is verb-final).
-This drives the `heuristic_complete` tag only. It is not a label; it lets us count
+VERB_FINAL: a prefix ending in one of these words or phrases *looks* finished (Hindi is
+verb-final). Negation-final endings ("पता नहीं", "aaya nahi") count too: in Hindi a
+sentence often ends on its negation. This drives the `heuristic_complete` tag only. It is not a label; it lets us count
 NOT_END prefixes that a reader would call complete.
 
 English has no sentence-final word class, so it also gets a structural rule:
@@ -37,17 +38,20 @@ HARD_NEGATIVES: dict[Language, frozenset[tuple[str, ...]]] = {
         "mera number hai", "amount hai"]),
 }
 
-VERB_FINAL: dict[Language, frozenset[str]] = {
-    # Requested forms first, then common spelling/inflection variants of the same verbs.
-    Language.HI: _words(["है", "था", "चाहिए", "किया", "हूँ", "हैं", "दीजिए", "गया",
-                         "हूं", "थी", "थे", "गई", "गए", "रहा", "रही", "रहे",
-                         "हुआ", "होगा", "मिलेगा", "दें"]),
-    Language.HINGLISH: _words(["hoon", "hain", "dijiye", "gaya", "raha", "karo",
-                               "hu", "hun", "hai", "dijie", "gayi", "gaye", "rahi", "rahe", "tha", "thi",
-                               "hua", "hui", "hue", "hoga", "milega", "dein"]),
-    Language.EN: _words(["please", "now", "today", "tomorrow", "yesterday", "yet", "it", "me", "them",
-                         "him", "her", "us", "done", "ok", "okay", "yes", "no", "thanks", "there",
-                         "here", "again", "already", "sir", "madam"]),
+VERB_FINAL: dict[Language, frozenset[tuple[str, ...]]] = {
+    Language.HI: _phrases(["है", "था", "चाहिए", "किया", "हूँ", "हैं", "दीजिए", "गया",
+                           "हूं", "थी", "थे", "गई", "गए", "रहा", "रही", "रहे",
+                           "हुआ", "होगा", "मिलेगा", "दें",
+                           "दूंगा", "दूँगा", "करूंगा", "करूँगा", "सकते हो",
+                           "नहीं", "नही"]),
+    Language.HINGLISH: _phrases(["hoon", "hain", "dijiye", "gaya", "raha", "karo",
+                                 "hu", "hun", "hai", "dijie", "gayi", "gaye", "rahi", "rahe", "tha", "thi",
+                                 "hua", "hui", "hue", "hoga", "milega", "dein",
+                                 "dunga", "karunga", "sakte ho",
+                                 "nahi", "nahin", "nai"]),
+    Language.EN: _phrases(["please", "now", "today", "tomorrow", "yesterday", "yet", "it", "me", "them",
+                           "him", "her", "us", "done", "ok", "okay", "yes", "no", "thanks", "there",
+                           "here", "again", "already", "sir", "madam"]),
 }
 
 DIGIT_WORDS: dict[Language, tuple[str, ...]] = {
@@ -72,20 +76,23 @@ EN_NUMBER_WORDS: frozenset[str] = _words("""
     hundred thousand lakh lakhs crore crores
     """.split())
 
-_MAX_PHRASE = max(len(p) for ps in HARD_NEGATIVES.values() for p in ps)
+_MAX_PHRASE = max(len(p) for table in (HARD_NEGATIVES, VERB_FINAL) for ps in table.values() for p in ps)
+
+
+def _ends_with(tokens: Sequence[str], phrases: frozenset[tuple[str, ...]]) -> bool:
+    return any(tuple(tokens[-m:]) in phrases for m in range(1, min(_MAX_PHRASE, len(tokens)) + 1))
 
 
 def ends_with_hard_negative(tokens: Sequence[str], language: Language) -> bool:
-    phrases = HARD_NEGATIVES[language]
-    return any(tuple(tokens[-m:]) in phrases for m in range(1, min(_MAX_PHRASE, len(tokens)) + 1))
+    return _ends_with(tokens, HARD_NEGATIVES[language])
 
 
 def heuristic_complete(tokens: Sequence[str], language: Language) -> bool:
     """True if the text ends like a finished sentence and not like a hard negative."""
     if not tokens or ends_with_hard_negative(tokens, language):
         return False
-    last = tokens[-1]
-    if last in VERB_FINAL[language]:
+    if _ends_with(tokens, VERB_FINAL[language]):
         return True
+    last = tokens[-1]
     return language is Language.EN and len(tokens) >= 3 and last not in EN_NON_FINAL \
         and last not in EN_NUMBER_WORDS and not last.isdigit()
