@@ -86,14 +86,40 @@ def test_digit_runs():
 
 
 @pytest.mark.parametrize("lang, expected", [
-    (EN, "otp is four two"),
-    (HG, "otp is char do"),
-    (HI, "otp is चार दो"),
+    (EN, "otp is four two four two"),
+    (HG, "otp is char do char do"),
+    (HI, "otp is चार दो चार दो"),
 ])
 def test_spelling_per_language(lang, expected):
-    out = DigitSpeller(spell_prob=1.0).apply(make_utt("otp is 42", language=lang))
+    out = DigitSpeller(spell_prob=1.0).apply(make_utt("otp is 4242", language=lang))
     assert out.text == expected
-    assert out.digit_spans == out.spelled_spans == ((2, 4),)
+    assert out.digit_spans == out.spelled_spans == ((2, 6),)
+
+
+@pytest.mark.parametrize("text, lang", [
+    ("30 अप्रैल तक पैसा दे दूंगा", HI),                    # date: month word
+    ("payment 15 march ko karunga", HG),                  # date: month word, < 4 digits anyway
+    ("i paid on 05 05 2024", EN),                          # date shape dd mm yyyy
+    ("2024 april se pending hai", HG),                     # year next to a month
+    ("5000 rupees were debited", EN),                      # amount: currency after
+    ("rs 12000 kat gaye", HG),                             # amount: currency before
+    ("1500 रुपए कट गए", HI),
+    ("20 हजार बाकी है", HI),                                # amount word
+    ("otp 452 hai", HG),                                   # only 3 digits
+])
+def test_dates_amounts_and_short_numbers_are_never_spelled(text, lang):
+    out = DigitSpeller(spell_prob=1.0).apply(make_utt(text, language=lang))
+    assert out.text == make_utt(text, language=lang).text and out.spelled_spans == ()
+    assert out.digit_spans                                 # still recorded for digits_mid / has_digits
+
+
+@pytest.mark.parametrize("text, lang, expected", [
+    ("mera number 98765 43210 hai", HG, "mera number nau aath saat chhe paanch char teen do ek zero hai"),
+    ("otp 4521 bataya", HG, "otp char paanch do ek bataya"),
+    ("order id 778899 hai", EN, "order id seven seven eight eight nine nine hai"),
+])
+def test_identifiers_of_four_plus_digits_are_spelled(text, lang, expected):
+    assert DigitSpeller(spell_prob=1.0).apply(make_utt(text, language=lang)).text == expected
 
 
 def test_spell_prob_zero_keeps_digits_but_records_spans():
@@ -103,7 +129,7 @@ def test_spell_prob_zero_keeps_digits_but_records_spans():
 
 
 def test_spelling_rate_is_about_a_quarter_and_deterministic():
-    utts = [make_utt(f"otp {i} please") for i in range(2000)]
+    utts = [make_utt(f"otp {i} please") for i in range(1000, 3000)]
     speller = DigitSpeller(spell_prob=0.25, seed=7)
     spelled = [bool(speller.apply(u).spelled_spans) for u in utts]
     assert 0.22 < sum(spelled) / len(spelled) < 0.28

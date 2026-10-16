@@ -61,6 +61,21 @@ FILLERS: dict[Language, frozenset[tuple[str, ...]]] = {
     Language.HINGLISH: _phrases(["um", "umm", "uh", "hmm", "hmmm", "arey", "arre"]),
 }
 
+# Context words that mark a digit run as a date or an amount. Those are never spelled digit
+# by digit: people say "thirty april" or "five thousand", not "three zero" or "five zero zero zero".
+DATE_WORDS: frozenset[str] = _words("""
+    january february march april may june july august september october november december
+    jan feb mar apr jun jul aug sep sept oct nov dec date tarikh taarikh tareekh
+    जनवरी फरवरी फ़रवरी मार्च अप्रैल मई जून जुलाई अगस्त सितंबर सितम्बर अक्टूबर नवंबर नवम्बर दिसंबर दिसम्बर
+    तारीख तारीख़ डेट
+    """.split())
+
+AMOUNT_WORDS: frozenset[str] = _words("""
+    rs inr rupee rupees rupaye rupaiye rupay rupiya rupya rupaiya paise
+    hundred thousand lakh lakhs crore crores hazaar hazar hajar sau
+    रुपए रुपये रुपया रूपए रूपये रुपयों रु पैसे हजार हज़ार लाख करोड़ सौ
+    """.split())
+
 DIGIT_WORDS: dict[Language, tuple[str, ...]] = {
     Language.EN: tuple(normalize(w) for w in "zero one two three four five six seven eight nine".split()),
     Language.HI: tuple(normalize(w) for w in "ज़ीरो एक दो तीन चार पाँच छह सात आठ नौ".split()),
